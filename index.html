@@ -1,1 +1,822 @@
-a
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BAFRAS Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:54px;font-size:16px}
+
+:root{
+  --gold:#1A7A5A;
+  --gold-bright:#22A57C;
+  --gold-dim:rgba(26,122,90,0.16);
+  --gold-border:rgba(26,122,90,0.42);
+  --bg:#0E2B25;
+  --bg-lift:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.13);
+  --warm:#ECECE7;
+  --muted:rgba(236,236,231,0.70);
+  --ink:#0E2B25;
+  --max:1120px;
+  --pad:clamp(1.5rem,5vw,3rem);
+}
+
+/* ── Grain ─────────────────────────────────────────── */
+body{
+  background:#0E2B25;
+  background-image:
+    radial-gradient(ellipse 180% 50% at 50% 0%, #123832 0%, #0F2E28 20%, #0E2B25 48%, #0C2620 100%);
+  color:var(--warm);
+  font-family:'Inter',sans-serif;
+  font-weight:300;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;
+  z-index:9999;opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;
+}
+
+/* ── Typography ─────────────────────────────────────── */
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;font-weight:600;line-height:1.15}
+.mono{font-family:'Inter',sans-serif}
+
+/* ── Utility ────────────────────────────────────────── */
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.gold-line{display:block;width:32px;height:1px;background:var(--gold);margin:.65rem 0 0}
+.gold-line--center{margin:.65rem auto 0}
+
+/* ═══════════════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════════════════ */
+#site-nav{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(9,28,24,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--gold-border);
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;padding:0 var(--pad);
+  height:54px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;
+}
+.nav-logo{
+  font-family:'Montserrat',sans-serif;font-weight:600;
+  font-size:.92rem;letter-spacing:.16em;color:var(--warm);
+  text-decoration:none;line-height:1;
+  display:flex;align-items:center;
+}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center;height:100%}
+.nav-links a{
+  font-family:'Inter',sans-serif;font-size:.58rem;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;
+  transition:color .2s;line-height:1;
+  display:flex;align-items:center;
+}
+.nav-links a:hover{color:var(--gold-bright)}
+.nav-lang{
+  display:flex;align-items:center;gap:.45rem;
+  font-family:'Inter',sans-serif;font-size:.58rem;
+  letter-spacing:2px;line-height:1;
+}
+.nav-lang a{color:var(--muted);text-decoration:none;transition:color .2s;line-height:1}
+.nav-lang a:hover,.nav-lang a.active{color:var(--gold-bright)}
+.nav-lang .sep{width:1px;height:9px;background:rgba(255,255,255,0.15);flex-shrink:0}
+.nav-right{display:flex;align-items:center;gap:2rem;height:100%}
+
+/* Mobile hamburger */
+.nav-toggle{
+  display:none;background:none;border:none;
+  cursor:pointer;padding:.3rem;color:var(--warm);
+  align-items:center;justify-content:center;
+}
+.nav-toggle svg{display:block}
+#mobile-menu{
+  display:none;
+  position:fixed;inset:0;z-index:10000;
+  background:rgba(9,28,24,0.97);
+  flex-direction:column;justify-content:center;align-items:center;gap:2.5rem;
+}
+#mobile-menu.open{display:flex}
+#mobile-menu a{
+  font-family:'Montserrat',sans-serif;font-weight:500;
+  font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--warm);text-decoration:none;transition:color .2s;
+}
+#mobile-menu a:hover{color:var(--gold-bright)}
+.menu-close{
+  position:absolute;top:1rem;right:1.5rem;
+  background:none;border:none;color:var(--muted);cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:2px;padding:.5rem;
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+}
+
+/* ═══════════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════════════ */
+#hero{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center;text-align:center;padding:2.5rem var(--pad);min-height:calc(100vh - 54px);background:transparent;position:relative;}
+#hero::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-border),transparent);
+}
+.hero-logo{
+  width:clamp(110px,12vw,150px);margin:0 auto;display:block;
+  opacity:.96;
+  filter:brightness(0) invert(1);
+  animation:logoIn 1.1s .1s cubic-bezier(.16,1,.3,1) both;
+}
+.hero-eyebrow{
+  font-family:'Inter',sans-serif;font-size:.62rem;
+  letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-bright);margin-bottom:0;
+  animation:fadeUp .9s .4s cubic-bezier(.16,1,.3,1) both;
+}
+.hero-title{
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:clamp(2.8rem,7.5vw,5.8rem);
+  letter-spacing:.02em;line-height:1.05;
+  color:var(--warm);margin-bottom:0;
+  animation:fadeUp .9s .55s cubic-bezier(.16,1,.3,1) both;
+}
+.hero-title .accent{
+  color:var(--gold-bright);font-weight:600;
+}
+.hero-sub{
+  font-size:1rem;color:var(--muted);max-width:520px;
+  animation:fadeUp .9s .7s cubic-bezier(.16,1,.3,1) both;
+  margin-bottom:0;
+}
+.hero-scroll{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-family:'Inter',sans-serif;font-size:.58rem;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;
+  animation:fadeUp .9s .85s cubic-bezier(.16,1,.3,1) both;
+  transition:color .25s;
+}
+.hero-scroll:hover{color:var(--gold-bright)}
+.hero-scroll svg{animation:bounceY 2s 2s ease-in-out infinite}
+
+/* ═══════════════════════════════════════════════════════
+   SECTIONS
+════════════════════════════════════════════════════════ */
+section:not(#hero){padding:6rem 0;border-top:1px solid var(--border);background:linear-gradient(180deg,rgba(26,122,90,0.05) 0%,transparent 100%)}
+.section-title{
+  font-family:'Montserrat',sans-serif;font-weight:600;
+  font-size:clamp(1.9rem,3.8vw,2.8rem);
+  letter-spacing:.06em;text-transform:uppercase;
+  text-align:center;margin-bottom:4rem;
+}
+.section-title::after{
+  content:'';display:block;width:32px;height:1px;
+  background:var(--gold-bright);margin:.7rem auto 0;
+}
+
+/* ═══════════════════════════════════════════════════════
+   QUIÉNES SOMOS
+════════════════════════════════════════════════════════ */
+#quienes-somos .intro-text{
+  max-width:680px;margin:0 auto 5rem;
+}
+#quienes-somos .intro-text p{
+  font-size:1.02rem;line-height:1.9;
+  color:rgba(236,236,231,.78);margin-bottom:1.6rem;
+}
+#quienes-somos strong{color:var(--warm);font-weight:500}
+
+/* Team cards */
+.team-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;
+  border:1px solid var(--border);border-radius:3px;overflow:hidden;
+}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr}}
+.team-card{
+  padding:2.4rem 2rem;background:var(--bg-lift);
+  border-right:1px solid var(--border);
+  display:flex;flex-direction:column;gap:1.4rem;
+  transition:background .35s;
+}
+.team-card:last-child{border-right:none}
+.team-card:hover{background:rgba(255,255,255,.055)}
+.team-card-top{display:flex;align-items:center;gap:1.4rem}
+.team-photo{
+  width:88px;height:88px;border-radius:50%;object-fit:cover;flex-shrink:0;
+  border:1px solid var(--gold-border);
+  box-shadow:0 0 0 5px var(--gold-dim);
+  transition:transform .45s cubic-bezier(.16,1,.3,1),border-color .4s;
+}
+.team-photo:hover{transform:scale(1.06);border-color:var(--gold-bright)}
+.team-photo-placeholder{
+  width:88px;height:88px;border-radius:50%;flex-shrink:0;
+  border:1px dashed var(--gold-border);
+  box-shadow:0 0 0 5px var(--gold-dim);
+  background:rgba(26,122,90,.12);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Montserrat',sans-serif;font-weight:600;font-size:1.4rem;
+  color:var(--gold-bright);
+  transition:transform .45s cubic-bezier(.16,1,.3,1),border-color .4s;
+}
+.team-photo-placeholder:hover{transform:scale(1.06);border-color:var(--gold-bright)}
+.team-card h3{
+  font-family:'Montserrat',sans-serif;font-weight:600;
+  font-size:1.28rem;letter-spacing:.01em;color:var(--warm);
+  margin-bottom:.15rem;
+}
+.team-card .role{
+  font-family:'Inter',sans-serif;font-size:.58rem;
+  letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-bright);
+}
+.team-card p{
+  font-size:.88rem;line-height:1.85;color:var(--muted);
+}
+.team-card p.placeholder{
+  font-style:italic;color:rgba(236,236,231,.45);
+}
+.team-link{
+  display:inline-flex;align-items:center;gap:.5rem;margin-top:.5rem;
+  font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+  border:1px solid rgba(255,255,255,.16);border-radius:2px;
+  padding:.45rem 1.1rem;transition:border-color .25s,color .25s;
+  align-self:flex-start;
+}
+.team-link:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+.team-link.is-placeholder{opacity:.5;cursor:default;pointer-events:none;border-style:dashed}
+
+/* ═══════════════════════════════════════════════════════
+   SERVICIOS — numbered editorial grid
+════════════════════════════════════════════════════════ */
+.services-lead{
+  max-width:640px;margin:0 auto 4rem;text-align:center;
+  font-size:.97rem;line-height:1.9;color:var(--muted);
+}
+.services-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;border:1px solid var(--border);
+  border-radius:3px;overflow:hidden;
+  counter-reset:svc;
+}
+@media(max-width:680px){.services-grid{grid-template-columns:1fr}}
+.svc-card{
+  counter-increment:svc;
+  background:var(--bg-lift);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;transition:background .35s;
+  display:flex;flex-direction:column;
+}
+.svc-card:nth-child(2n){border-right:none}
+.svc-card:nth-last-child(-n+2){border-bottom:none}
+@media(max-width:680px){
+  .svc-card{border-right:none}
+  .svc-card:nth-last-child(-n+2){border-bottom:1px solid var(--border)}
+  .svc-card:last-child{border-bottom:none}
+}
+.svc-card:hover{background:rgba(255,255,255,.058)}
+.svc-img-wrap{position:relative;overflow:hidden}
+.svc-img{
+  width:100%;height:190px;object-fit:cover;display:block;
+  filter:brightness(.65) saturate(.75);
+  transition:transform .7s cubic-bezier(.16,1,.3,1),filter .4s;
+}
+.svc-card:hover .svc-img{transform:scale(1.04);filter:brightness(.82) saturate(1)}
+.svc-num{
+  position:absolute;bottom:-.15rem;right:1rem;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:4.6rem;line-height:1;
+  color:var(--gold-bright);opacity:.2;pointer-events:none;
+  transition:opacity .35s;
+}
+.svc-card:hover .svc-num{opacity:.38}
+.svc-body{padding:1.7rem 1.8rem 1.6rem;flex:1}
+.svc-card h3{
+  font-family:'Montserrat',sans-serif;font-weight:600;
+  font-size:1.12rem;letter-spacing:.01em;color:var(--warm);
+}
+.svc-card h3::after{
+  content:'';display:block;width:20px;height:1px;
+  background:var(--gold-bright);margin-top:.5rem;
+  transition:width .3s;
+}
+.svc-card:hover h3::after{width:36px}
+.svc-card p{
+  font-size:.87rem;line-height:1.85;
+  color:var(--muted);margin-top:.9rem;hyphens:auto;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PROYECTOS
+════════════════════════════════════════════════════════ */
+#proyectos{text-align:center}
+.badge-pending{
+  display:inline-block;
+  font-family:'Inter',sans-serif;font-size:.58rem;
+  letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold-bright);opacity:.65;
+  border:1px solid var(--gold-border);
+  padding:.65rem 1.8rem;border-radius:2px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CONTACTO — split layout
+════════════════════════════════════════════════════════ */
+.contact-wrap{
+  display:grid;
+  grid-template-columns:1fr 1.6fr;
+  gap:5rem;align-items:stretch;
+}
+@media(max-width:768px){.contact-wrap{grid-template-columns:1fr;gap:3rem}}
+.contact-left{}
+.contact-label{
+  font-family:'Inter',sans-serif;font-size:.57rem;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold-bright);display:block;margin-bottom:1.4rem;
+}
+.contact-statement{
+  font-family:'Montserrat',sans-serif;font-weight:500;
+  font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.25;
+  color:var(--warm);margin-bottom:1.8rem;
+}
+.contact-statement .accent{color:var(--gold-bright);font-weight:600}
+.contact-left>p{font-size:.93rem;line-height:1.88;color:var(--muted)}
+/* Form */
+.form-field{margin-bottom:1.4rem}
+.form-field label{
+  font-family:'Inter',sans-serif;font-size:.55rem;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--muted);display:block;margin-bottom:.5rem;
+}
+.form-field input,
+.form-field textarea{
+  width:100%;background:rgba(255,255,255,.04);
+  border:1px solid var(--border);border-radius:2px;
+  color:var(--warm);font-family:'Inter',sans-serif;
+  font-size:.95rem;font-weight:300;
+  padding:.75rem 1rem;outline:none;
+  transition:border-color .3s,box-shadow .3s;
+}
+.form-field textarea{min-height:130px;resize:vertical}
+        .form-field:last-of-type{flex:1;display:flex;flex-direction:column;margin-bottom:0}
+        .form-field:last-of-type textarea{flex:1;resize:none;min-height:80px}
+.form-field input:focus,
+.form-field textarea:focus{
+  border-color:var(--gold-border);
+  box-shadow:0 0 0 3px rgba(26,122,90,.14);
+}
+.form-submit{
+  font-family:'Inter',sans-serif;font-size:.58rem;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;
+  background:transparent;border:1px solid var(--gold-bright);
+  color:var(--gold-bright);padding:.9rem 2.5rem;
+  border-radius:2px;cursor:pointer;margin-top:1.4rem;
+  transition:background .3s,color .3s,box-shadow .3s;
+}
+.form-submit:hover{
+  background:var(--gold-bright);color:var(--ink);
+  box-shadow:0 0 28px rgba(26,122,90,.35);
+}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════════════════ */
+footer{
+  border-top:1px solid var(--border);
+  padding:1.6rem var(--pad);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.3rem;
+}
+.footer-text{
+  font-family:'Inter',sans-serif;font-size:.52rem;
+  letter-spacing:2px;text-transform:uppercase;
+  color:rgba(236,236,231,.45);text-align:center;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL REVEAL
+════════════════════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.r2{transition-delay:.12s}.r3{transition-delay:.22s}.r4{transition-delay:.32s}
+
+/* ═══════════════════════════════════════════════════════
+   KEYFRAMES
+════════════════════════════════════════════════════════ */
+@keyframes logoIn{from{opacity:0;transform:translateY(-10px)}to{opacity:.96;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bounceY{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+        .contact-divider{width:100%;height:1px;background:var(--border);margin:1.6rem 0}
+        .contact-numbers{display:flex;flex-direction:column;gap:1.2rem}
+        .contact-person-name{font-family:'Inter',sans-serif;font-size:.54rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.5rem}
+        .contact-number-row{display:flex;align-items:center;gap:.9rem}
+        .contact-number{font-family:'Montserrat',sans-serif;font-weight:500;font-size:1.08rem;color:var(--warm);text-decoration:none;letter-spacing:.01em;transition:color .2s}
+        .contact-number:hover{color:var(--gold-bright)}
+        .contact-icons{display:flex;gap:.45rem}
+        .contact-icon{width:32px;height:32px;border-radius:2px;border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:border-color .25s,background .25s}
+        .contact-icon:hover{border-color:var(--gold-bright);background:rgba(26,122,90,.12)}
+        .contact-icon svg{width:13px;height:13px;fill:rgba(236,236,231,.5);transition:fill .25s}
+        .contact-icon:hover svg{fill:var(--gold-bright)}
+        .contact-pending{font-family:'Inter',sans-serif;font-size:.8rem;color:rgba(236,236,231,.45);font-style:italic;margin-top:.15rem}
+
+        .form-success{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:3rem 2rem;gap:1rem}
+        .form-success-icon{font-size:2.5rem;color:var(--gold-bright);line-height:1}
+        .form-success-title{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:600;color:var(--warm);letter-spacing:.02em}
+        .form-success-text{font-family:'Inter',sans-serif;font-size:.9rem;color:var(--muted);line-height:1.8;max-width:320px}
+
+        /* ── Rotating subtitle ── */
+        .hero-sub-wrap{position:relative;min-height:3.4rem;width:clamp(280px,55vw,580px);}
+        .hero-sub-item{position:absolute;top:0;left:0;width:100%;font-size:1rem;color:var(--muted);line-height:1.7;text-align:center;opacity:0;transition:opacity 1s ease;pointer-events:none;}
+        .hero-sub-item.active{opacity:1;pointer-events:auto}
+        
+        /* ── MOBILE ONLY ── */
+        @media(max-width:768px){
+          /* Hero spacing */
+          #hero{padding:1rem var(--pad) 1.5rem}
+          .hero-logo{width:clamp(80px,28vw,110px);margin-bottom:0.6rem}
+          .hero-eyebrow{font-size:0.48rem;margin-bottom:0.7rem}
+          .hero-title{font-size:clamp(2.1rem,10.5vw,3.6rem);margin-bottom:0.5rem}
+          .hero-sub-wrap{min-height:4.5rem;width:88vw}
+          .hero-sub-item{font-size:0.82rem;line-height:1.55}
+          .hero-scroll{margin-top:0.5rem}
+          /* Mobile lang bar inside menu */
+          .mobile-lang-bar{
+            display:flex;align-items:center;gap:0.6rem;
+            margin-top:1.5rem;
+            font-family:'Inter',sans-serif;
+            font-size:0.65rem;letter-spacing:3px;
+          }
+          .mobile-lang-bar a{color:rgba(236,236,231,0.45);text-decoration:none;transition:color .2s}
+          .mobile-lang-bar a:hover,.mobile-lang-bar a.active{color:var(--gold-bright)}
+          .mobile-lang-bar .sep{width:1px;height:9px;background:rgba(255,255,255,0.2)}
+        }
+        
+          /* Lang visible on mobile nav */
+          @media(max-width:768px){
+            .nav-lang{display:flex;gap:.35rem;font-size:.5rem;letter-spacing:1.5px}
+            .nav-lang .sep{height:7px}
+            .nav-toggle{margin-left:.5rem}
+          }
+        
+          /* ── Mobile hero compact ── */
+          @media(max-width:768px){
+            body{
+              background-image:radial-gradient(ellipse 250% 40% at 50% 0%, #16453b 0%, #123832 18%, #0E2B25 38%, #0C2620 100%);
+            }
+            #hero{
+              justify-content:flex-start;
+              padding-top:5.5rem;
+              gap:2.8rem;
+            }
+            .hero-logo{margin-bottom:0 !important}
+            .hero-eyebrow{margin-bottom:0 !important}
+            .hero-title{margin-bottom:0 !important}
+            .hero-sub-wrap{margin-top:0;min-height:3.6rem}
+            .hero-scroll{margin-top:0.3rem}
+          }
+        </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="javascript:window.scrollTo(0,0)" class="nav-logo">BAFRAS</a>
+    <ul class="nav-links">
+      <li><a href="#quienes-somos">Quiénes Somos</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href="./index.html" class="active">ES</a><span class="sep"></span>
+        <a href="ca/index.html">CA</a><span class="sep"></span>
+        <a href="en/index.html">EN</a><span class="sep"></span>
+        <a href="de/index.html">DE</a>
+      </div>
+      <button class="nav-toggle" id="menu-btn" aria-label="Menú">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+          <rect width="20" height="1.5" rx=".75" fill="currentColor"/>
+          <rect y="6" width="14" height="1.5" rx=".75" fill="currentColor"/>
+          <rect y="12" width="20" height="1.5" rx=".75" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <button class="menu-close mono" id="menu-close">✕ CERRAR</button>
+  <a href="#quienes-somos" class="mobile-link">Quiénes Somos</a>
+  <a href="#servicios" class="mobile-link">Servicios</a>
+  <a href="#proyectos" class="mobile-link">Proyectos</a>
+  <a href="#contacto" class="mobile-link">Contacto</a>
+  <div class="mobile-lang-bar">
+    <a href="./index.html" class="active">ES</a>
+    <span class="sep"></span>
+    <a href="ca/index.html">CA</a>
+    <span class="sep"></span>
+    <a href="en/index.html">EN</a>
+    <span class="sep"></span>
+    <a href="de/index.html">DE</a>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <img src="images/logo.png" alt="BAFRAS Engineering" class="hero-logo"/>
+  <p class="hero-eyebrow">Ingeniería Industrial · Mallorca</p>
+  <h1 class="hero-title">BAFRAS<br/><span class="accent">ENGINEERING</span></h1>
+  <div class="hero-sub-wrap"><p class="hero-sub-item active">Un estudio de ingeniería integral — del concepto a la puesta en marcha.</p><p class="hero-sub-item">Una firma d'enginyeria industrial — del concepte a la posada en marxa.</p><p class="hero-sub-item">A firm providing comprehensive engineering solutions — from concept to commissioning.</p><p class="hero-sub-item">Ein Ingenieurbüro für umfassende Lösungen — vom Konzept bis zur Inbetriebnahme.</p></div>
+  <a href="#quienes-somos" class="hero-scroll">
+    DESCUBRIR
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <path d="M6 1v10M1 7l5 5 5-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</section>
+
+<!-- ── QUIÉNES SOMOS ── -->
+<section id="quienes-somos">
+  <div class="container">
+    <h2 class="section-title reveal">Quiénes Somos</h2>
+    <div class="intro-text">
+      <p class="reveal r2"><strong>BAFRAS Engineering</strong> es un estudio de ingeniería industrial fundado en Mallorca con un único objetivo: entregar <strong>proyectos de la máxima calidad</strong> con un servicio <strong>eficiente, cercano y de alto valor.</strong></p>
+      <p class="reveal r3">Somos Murti Bär, Àngel Frau y Amin Asbai, socios fundadores de BAFRAS Engineering. Combinamos rigor técnico, atención al detalle y una visión clara del futuro: la <strong>digitalización de la industria</strong>.</p>
+      <p class="reveal r4">Nuestra forma de trabajar es sencilla pero exigente: escuchamos al cliente, diseñamos soluciones a medida y las ejecutamos con la mejor tecnología disponible.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-card-top">
+          <img src="images/murti.png" alt="Murti Bär" class="team-photo"/>
+          <div>
+            <h3>Murti Bär</h3>
+            <span class="role">Ingeniero Industrial</span>
+          </div>
+        </div>
+        <p>4 años de experiencia en investigación y desarrollo de redes energéticas, con enfoque en sistemas fotovoltaicos, baterías, eficiencia energética y digitalización de procesos.</p>
+        <a href="https://www.linkedin.com/in/murti-b%C3%A4r/" target="_blank" class="team-link">LinkedIn →</a>
+      </div>
+      <div class="team-card">
+        <div class="team-card-top">
+          <img src="images/angel.png" alt="Àngel Frau" class="team-photo"/>
+          <div>
+            <h3>Àngel Frau</h3>
+            <span class="role">Ingeniero Industrial</span>
+          </div>
+        </div>
+        <p>Con 7 años de experiencia liderando proyectos integrales de ingeniería, desde el diseño conceptual hasta la ejecución y puesta en marcha. Apasionado por la transformación digital en el sector.</p>
+        <a href="https://es.linkedin.com/in/angel-frau-40b999179" target="_blank" class="team-link">LinkedIn →</a>
+      </div>
+      <div class="team-card">
+        <div class="team-card-top">
+          <div class="team-photo-placeholder">AA</div>
+          <div>
+            <h3>Amin Asbai</h3>
+            <span class="role">Socio Fundador</span>
+          </div>
+        </div>
+        <p class="placeholder">[Añadir biografía breve: experiencia, especialidad y enfoque de trabajo de Amin.]</p>
+        <a href="https://www.linkedin.com/in/amin-asbai-8723b422a/" target="_blank" class="team-link">LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section id="servicios">
+  <div class="container">
+    <h2 class="section-title reveal">Servicios</h2>
+    <p class="services-lead reveal r2">Servicios completos de ingeniería industrial y consultoría técnica. Cubrimos todas las fases del proyecto, desde la concepción hasta la optimización continua.</p>
+    <div class="services-grid">
+      <div class="svc-card reveal r2">
+        <div class="svc-img-wrap">
+          <img src="images/servicios1.jpg" alt="" class="svc-img"/>
+          <span class="svc-num">01</span>
+        </div>
+        <div class="svc-body">
+          <h3>Ingeniería y Consultoría Técnica</h3>
+          <p>Planificación, diseño, cálculo y redacción de estudios, informes, memorias, anteproyectos y proyectos completos. Dirección, supervisión, asistencia técnica y puesta en marcha.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal r3">
+        <div class="svc-img-wrap">
+          <img src="images/servicios2.jpg" alt="" class="svc-img"/>
+          <span class="svc-num">02</span>
+        </div>
+        <div class="svc-body">
+          <h3>Ingeniería de Instalaciones y Sistemas</h3>
+          <p>Instalaciones eléctricas, térmicas, climatización y ventilación. Energías renovables, eficiencia energética, automatización, control y monitorización de sistemas.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal r2">
+        <div class="svc-img-wrap">
+          <img src="images/servicios3.png" alt="" class="svc-img"/>
+          <span class="svc-num">03</span>
+        </div>
+        <div class="svc-body">
+          <h3>Gestión de Proyectos y Contratación</h3>
+          <p>Project management, coordinación técnica, soporte en licitaciones, elaboración de pliegos, mediciones, presupuestos y apoyo a la dirección facultativa.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal r3">
+        <div class="svc-img-wrap">
+          <img src="images/servicios4.jpg" alt="" class="svc-img"/>
+          <span class="svc-num">04</span>
+        </div>
+        <div class="svc-body">
+          <h3>I+D+i y Transformación Digital</h3>
+          <p>Investigación, desarrollo e innovación. Soluciones tecnológicas: software, inteligencia artificial, análisis predictivo, modelización avanzada y optimización algorítmica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROYECTOS ── -->
+<section id="proyectos">
+  <div class="container">
+    <h2 class="section-title reveal">Proyectos</h2>
+    <div class="reveal r2">
+      <span class="badge-pending">En elaboración</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section id="contacto">
+  <div class="container">
+    <h2 class="section-title reveal">Contacto</h2>
+    <div class="contact-wrap">
+      <div class="reveal r2">
+        <span class="contact-label">Hablemos</span>
+        <p class="contact-statement">Cada proyecto empieza con una <span class="accent">conversación.</span></p>
+        <p>Responderemos en un máximo de 24–48 horas laborables con información clara y profesional.</p>
+        <div class="contact-divider"></div>
+        <div class="contact-numbers">
+          <div class="contact-person">
+            <span class="contact-person-name">Àngel Frau</span>
+            <div class="contact-number-row">
+              <a href="tel:+34685526899" class="contact-number">+34 685 52 68 99</a>
+              <div class="contact-icons">
+                <a href="tel:+34685526899" class="contact-icon" title="Llamar">
+                  <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                </a>
+                <a href="https://wa.me/34685526899" target="_blank" class="contact-icon" title="WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-person">
+            <span class="contact-person-name">Murti Bär</span>
+            <div class="contact-number-row">
+              <a href="tel:+34610903179" class="contact-number">+34 610 90 31 79</a>
+              <div class="contact-icons">
+                <a href="tel:+34610903179" class="contact-icon" title="Llamar">
+                  <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                </a>
+                <a href="https://wa.me/34610903179" target="_blank" class="contact-icon" title="WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-person">
+            <span class="contact-person-name">Amin Asbai</span>
+            <p class="contact-pending">Contacto directo — próximamente</p>
+          </div>
+        </div>
+      </div>
+      <form id="contact-form" class="reveal r3" style="display:flex;flex-direction:column;height:100%;gap:0">
+        <div class="form-field">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" autocomplete="name"/>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email"/>
+        </div>
+        <div class="form-field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Enviar consulta</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-text">© 2026 BAFRAS Engineering</p><p class="footer-text" style="margin-top:.25rem">All Rights Reserved</p>
+</footer>
+
+<script>
+// Mobile menu
+var btn=document.getElementById('menu-btn');
+var menu=document.getElementById('mobile-menu');
+var cls=document.getElementById('menu-close');
+function openMenu(){menu.classList.add('open');document.body.style.overflow='hidden';}
+function closeMenu(){menu.classList.remove('open');document.body.style.overflow='';}
+btn.addEventListener('click',openMenu);
+cls.addEventListener('click',closeMenu);
+document.querySelectorAll('.mobile-link').forEach(function(a){
+  a.addEventListener('click',closeMenu);
+});
+
+// Scroll reveal
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+// Nav active link on scroll
+var sections=document.querySelectorAll('section[id]');
+var navLinks=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',function(){
+  var pos=window.scrollY+120;
+  sections.forEach(function(s){
+    if(pos>=s.offsetTop&&pos<s.offsetTop+s.offsetHeight){
+      navLinks.forEach(function(a){
+        a.style.color=a.getAttribute('href')==='#'+s.id?'var(--gold-bright)':'';
+      });
+    }
+  });
+},{passive:true});
+
+// Form — stay on page, no Formspree redirect
+var contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = contactForm.querySelector('.form-submit');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    try {
+      var res = await fetch('https://formspree.io/f/xzdqdonb', {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.innerHTML = '<div class="form-success"><p class="form-success-icon">✓</p><p class="form-success-title">Mensaje recibido</p><p class="form-success-text">Os responderemos en un máximo de 24–48 horas laborables.</p></div>';
+      } else {
+        btn.textContent = 'Error — inténtalo de nuevo';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.textContent = 'Error — inténtalo de nuevo';
+      btn.disabled = false;
+    }
+  });
+}
+
+        // Rotating subtitle — fade every 3s
+        (function(){
+            var items = document.querySelectorAll('.hero-sub-item');
+            if(items.length < 2) return;
+            var idx = 0;
+            setInterval(function(){
+                items[idx].classList.remove('active');
+                idx = (idx + 1) % items.length;
+                items[idx].classList.add('active');
+            }, 3000);
+        })();
+        
+        // Smooth slow scroll for DESCUBRIR and nav links
+        document.querySelectorAll('a[href^="#"]').forEach(function(a){
+            a.addEventListener('click', function(e){
+                var target = document.querySelector(this.getAttribute('href'));
+                if(!target) return;
+                e.preventDefault();
+                var start = window.scrollY;
+                var end = target.getBoundingClientRect().top + window.scrollY - 54;
+                var duration = 1200;
+                var startTime = null;
+                function ease(t){ return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+                function step(ts){
+                    if(!startTime) startTime = ts;
+                    var progress = Math.min((ts-startTime)/duration, 1);
+                    window.scrollTo(0, start + (end-start)*ease(progress));
+                    if(progress < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            });
+        });
+        </script>
+</body>
+</html>
