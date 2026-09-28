@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca</title>
-<meta name="description" content="Infraestructura, energía y sistemas digitales en un mismo despacho de ingeniería en Mallorca.">
+<meta name="description" content="Infraestructura, energía y sistemas digitales en un mismo despacho de ingeniería en Mallorca. Instalaciones MEP, fotovoltaica, automatización e IA.">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTMgNDY4Ij48ZyBvcGFjaXR5PSIxLjAiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDQ2OC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiMwRTJCMjUiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0yMDczIDQ1OTIgbC0xODMgLTg2IC0yIC0xMTU0IC0zIC0xMTU0IC00MTYgLTI0NyBjLTIyOSAtMTM1IC02NTMKLTM4OCAtOTQyIC01NjEgbC01MjcgLTMxNSAwIC0yNTggYzAgLTI1OSAwIC0yNTkgMzMgLTIzOSAzMCAxOCAyNzUgMTY0IDEyMjIKNzI1IDIwNCAxMjEgNDY1IDI3NiA1ODAgMzQ0IDExNiA2OCAyMTggMTMyIDIyNyAxNDEgOSA5IDYyIDgyIDExNyAxNjIgbDEwMQoxNDUgMCAxMjkzIGMwIDEwMjcgLTMgMTI5MiAtMTIgMTI5MSAtNyAwIC05NSAtMzkgLTE5NSAtODd6IE0yNjQzIDMzOTMgbC0xCi0xMjg3IDYxIC05MCBjMzMgLTUwIDg0IC0xMjMgMTEzIC0xNjMgNTkgLTc5IDI4IC01OSA3ODkgLTUwOCAxMTAgLTY1IDI1OQotMTUzIDMzMCAtMTk1IDM2OSAtMjE5IDY5NyAtNDEzIDgzOCAtNDk2IGwxNTcgLTkzIDAgMjU4IDAgMjU3IC0zMDcgMTg0CmMtNzgyIDQ2NiAtMTEzNiA2NzYgLTEzNTAgODAwIGwtMjMyIDEzNSAtMSAxMTUxIGMwIDkwOSAtMyAxMTU0IC0xMiAxMTYxIC0xOAoxNCAtMzYyIDE3MyAtMzc0IDE3MyAtNiAwIC0xMCAtNDczIC0xMSAtMTI4N3ogTTE3MTUgMTI0MSBjLTk3MyAtNTgwIC0xMDgyCi02NDUgLTEzMjUgLTc4OSAtMTM1IC04MCAtMjUxIC0xNTAgLTI1NyAtMTU2IC0xMCAtOSAzMSAtNDQgMTY4IC0xNTAgOTkgLTc2CjE4OSAtMTQwIDE5OSAtMTQzIDEyIC0zIDU1IDE2IDExMiA0OSA1ODggMzQ1IDEzMDEgNzY1IDE2MzAgOTYwIDExOSA3MCAyMjEKMTI4IDIyNyAxMjggMTMgMCA3OTkgLTQ2MSAxNzM0IC0xMDE2IDExNCAtNjggMjE0IC0xMjQgMjIzIC0xMjQgMTQgMCAzNzYgMjc0CjM4MiAyODggMiA3IC04OTkgNTQ5IC0xNzEzIDEwMzEgLTM3OSAyMjQgLTM3OSAyMjQgLTUyMCAyMTMgLTk3IC05IC0xNjAgLTkKLTIwNSAtMiAtMTQ1IDIyIC0xMDIgNDEgLTY1NSAtMjg5eiIvPgo8L2c+CjwvZz48L3N2Zz4=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,27 +74,34 @@ p{margin:0 0 1em}
 .cabecera .envoltura{display:flex;align-items:center;gap:24px;height:76px}
 .cabecera .marca{display:block;line-height:0;color:var(--pino)}
 .cabecera .marca svg{height:46px;width:auto;display:block}
-.nav{display:flex;gap:4px;margin-left:auto}
-.nav a{text-decoration:none;font-weight:500;font-size:.95rem;padding:8px 12px;border-radius:2px}
-.nav a:hover{background:var(--piedra)}
+.nav{margin-left:auto}
+.nav>ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;align-items:center}
+.nav li{position:relative}
+.nav a{display:block;text-decoration:none;font-weight:500;font-size:.95rem;padding:10px 12px;border-radius:2px}
+.nav>ul>li>a:hover,.nav li:focus-within>a{background:var(--piedra)}
 .nav a[aria-current="page"]{color:var(--verde);box-shadow:inset 0 -2px 0 var(--verde)}
+.nav .sub{display:none;position:absolute;top:100%;left:0;min-width:250px;background:var(--papel);border:1px solid var(--linea);border-top:3px solid var(--verde);padding:8px;list-style:none;margin:0;box-shadow:0 12px 30px rgba(14,43,37,.12)}
+.nav li:hover>.sub,.nav li:focus-within>.sub{display:block}
+.nav .sub a{padding:10px 12px;font-weight:400}
+.nav .sub a:hover{background:var(--piedra)}
+.nav .cta a{background:var(--verde);color:#fff;margin-left:8px}
+.nav .cta a:hover{background:var(--pino)}
+.nav .cta a[aria-current="page"]{box-shadow:none;background:var(--pino);color:#fff}
 .idiomas{display:flex;gap:2px;border-left:1px solid var(--linea);padding-left:16px}
 .idiomas button{font:500 .8rem/1 var(--texto);background:none;border:0;padding:8px 7px;color:var(--gris);cursor:pointer;border-radius:2px}
 .idiomas button[aria-pressed="true"]{color:var(--pino);background:var(--piedra)}
 .idiomas button:disabled{cursor:not-allowed;opacity:.55}
 .menu-boton{display:none;margin-left:auto;background:none;border:1.5px solid var(--tinta);border-radius:2px;font:500 .9rem/1 var(--texto);padding:10px 14px;cursor:pointer;color:var(--tinta)}
-@media (max-width:980px){
+@media (max-width:1100px){
   .menu-boton{display:block}
   .nav,.idiomas{display:none}
-  .cabecera.abierta .nav{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:76px;background:var(--papel);border-bottom:1px solid var(--linea);padding:12px clamp(20px,4vw,40px) 8px;gap:0}
-  .cabecera.abierta .nav a{padding:14px 0;border-bottom:1px solid var(--linea);font-size:1.05rem}
-  .cabecera.abierta .nav a[aria-current="page"]{box-shadow:none}
-  .cabecera.abierta .idiomas{display:flex;position:absolute;left:0;right:0;top:calc(76px + var(--alto-nav,0px));background:var(--papel);border:0;border-bottom:1px solid var(--linea);padding:10px clamp(20px,4vw,40px)}
+  .cabecera.abierta .nav{display:block;position:absolute;left:0;right:0;top:76px;background:var(--papel);border-bottom:1px solid var(--linea);padding:8px clamp(20px,4vw,40px) 16px;max-height:calc(100vh - 76px);overflow-y:auto}
+  .cabecera.abierta .nav>ul{display:block}
+  .cabecera.abierta .nav a{padding:13px 0;border-bottom:1px solid var(--linea);font-size:1.05rem;box-shadow:none}
+  .cabecera.abierta .nav .sub{display:block;position:static;border:0;box-shadow:none;padding:0 0 0 16px;min-width:0}
+  .cabecera.abierta .nav .sub a{font-size:.98rem;padding:10px 0;color:var(--gris)}
+  .cabecera.abierta .nav .cta a{margin:16px 0 0;text-align:center;border:0}
 }
-
-/* Páginas */
-.pagina{display:none}
-.pagina.activa{display:block}
 
 /* HERO */
 .hero{min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);display:flex;align-items:center;padding:56px 0 72px;overflow:hidden}
@@ -104,7 +111,7 @@ p{margin:0 0 1em}
 .simbolo{justify-self:end;width:min(100%,400px);color:var(--blanco)}
 .simbolo svg{width:100%;height:auto;display:block}
 @media (prefers-reduced-motion:no-preference){
-  .hero.animar .simbolo{animation:entra 1.1s cubic-bezier(.2,.7,.1,1) both}
+  .hero .simbolo{animation:entra 1.1s cubic-bezier(.2,.7,.1,1) both}
 }
 @keyframes entra{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
 @media (max-width:860px){
@@ -274,10 +281,54 @@ textarea{min-height:150px;resize:vertical}
 @media (max-width:760px){.pie .rejilla{grid-template-columns:1fr}}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---- Añadidos de la estructura del mapa ---- */
+.entradas{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.entrada{display:flex;flex-direction:column;text-decoration:none;background:var(--papel);border:1px solid var(--linea);border-top:3px solid var(--verde);padding:32px;min-height:260px;transition:border-color .2s}
+.entrada:hover{border-color:var(--verde)}
+.entrada h3{font-size:1.5rem;margin-bottom:12px}
+.entrada p{color:var(--gris)}
+.entrada .enlace{margin-top:auto;align-self:flex-start}
+@media (max-width:900px){.entradas{grid-template-columns:1fr}.entrada{min-height:0}}
+.sector-bloque{padding:48px 0;border-top:1px solid var(--linea)}
+.sector-bloque:first-of-type{border-top:0;padding-top:0}
+.sector-bloque .dos-col h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+.sector-bloque h4{margin:28px 0 12px}
+.sector-bloque h4:first-child{margin-top:0}
+.vinculos{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;padding:0;list-style:none}
+.vacio-estado{border:1.5px dashed var(--piedra-verde);padding:32px;color:var(--tinta);background:transparent}
+.vacio-estado p:last-child{margin:0}
+.bloque-titulo{margin-bottom:8px}
+.valores{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.valores li{border-top:2px solid var(--verde);padding-top:16px}
+.valores h4{margin-bottom:6px}
+.valores p{margin:0;color:var(--gris);font-size:.95rem}
+@media (max-width:820px){.valores{grid-template-columns:1fr}}
+.piezas{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.piezas li{border:1px solid var(--linea);padding:20px;background:var(--papel)}
+.piezas h4{margin-bottom:6px}
+.piezas p{margin:0;color:var(--gris);font-size:.95rem}
+.etiqueta{display:inline-block;font-size:.78rem;font-weight:600;padding:3px 8px;background:var(--piedra);color:var(--pino);border-radius:2px;margin-bottom:10px}
+.ruta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:16px;color:var(--gris);font-size:.95rem}
+.ruta a{color:var(--tinta);font-weight:500}
+.ruta span[aria-hidden]{color:var(--piedra-verde)}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+@media (max-width:900px){.tres{grid-template-columns:1fr}}
+.foto-proyecto{aspect-ratio:16/7;margin-top:40px}
+
+.salto{position:absolute;left:-9999px;top:8px;background:var(--pino);color:#fff;padding:10px 16px;z-index:100}
+.salto:focus{left:8px}
+.socio .retrato{background:var(--pino);color:var(--blanco)}
+.via .quien .pend{white-space:nowrap}
+
+
+/* Páginas (una sola HTML) */
+.pagina{display:none}
+.pagina.activa{display:block}
+
 </style>
 </head>
 <body>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <!-- Kit vigente (00_KIT VIGENTE): símbolo y logo horizontal. Mismos trazados; el color viene de currentColor -->
@@ -358,14 +409,17 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
 
 <header class="cabecera" id="cabecera">
   <div class="envoltura">
-    <a class="marca" href="#inicio" aria-label="BAFRAS Engineering, inicio"><svg viewBox="0 0 1281 273" role="img" aria-hidden="true"><use href="#logo-h"/></svg></a>
+    <a class="marca" href="" aria-label="BAFRAS Engineering, inicio"><svg viewBox="0 0 1281 273" role="img" aria-hidden="true"><use href="#logo-h"/></svg></a>
     <button class="menu-boton" id="menuBoton" aria-expanded="false" aria-controls="nav">Menú</button>
     <nav class="nav" id="nav" aria-label="Principal">
-      <a href="#servicios">Servicios</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#sectores">Sectores</a>
-      <a href="#equipo">Equipo</a>
-      <a href="#contacto">Contacto</a>
+      <ul>
+        <li><a href="#/capacidades">Capacidades</a><ul class="sub"><li><a href="#/capacidades/infrastructure">Infrastructure</a></li><li><a href="#/capacidades/energy-systems">Energy Systems</a></li><li><a href="#/capacidades/digital-systems">Digital Systems</a></li><li><a href="#/capacidades@vision-de-sistema">Visión de sistema</a></li><li><a href="#/capacidades@metodologia">Metodología BAFRAS</a></li></ul></li>
+        <li><a href="#/sectores">Sectores</a><ul class="sub"><li><a href="#/sectores@hotelero">Hotelero / Hospitality</a></li><li><a href="#/sectores@industria">Industria</a></li><li><a href="#/sectores@terciario">Terciario</a></li><li><a href="#/sectores@deportivos">Centros deportivos</a></li><li><a href="#/sectores@infraestructura">Infraestructura</a></li><li><a href="#/sectores@publico">Sector público</a></li><li><a href="#/sectores@otros">Otros sectores</a></li></ul></li>
+        <li><a href="#/proyectos">Proyectos</a><ul class="sub"><li><a href="#/proyectos@proyectos-bafras">Proyectos BAFRAS</a></li><li><a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a></li></ul></li>
+        <li><a href="#/conocimiento">Conocimiento</a><ul class="sub"><li><a href="#/conocimiento@articulos-tecnicos">Artículos técnicos</a></li><li><a href="#/conocimiento@casos-de-estudio">Casos de estudio</a></li><li><a href="#/conocimiento@guias-tecnicas">Guías técnicas</a></li><li><a href="#/conocimiento@innovacion">Innovación</a></li></ul></li>
+        <li><a href="#/sobre-bafras">Sobre BAFRAS</a><ul class="sub"><li><a href="#/sobre-bafras@quienes-somos">Quiénes somos</a></li><li><a href="#/sobre-bafras@equipo">Equipo</a></li><li><a href="#/sobre-bafras@filosofia">Filosofía y valores</a></li></ul></li>
+        <li class="cta"><a href="#/contacto">Contacto</a></li>
+      </ul>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma">
       <button aria-pressed="true" lang="es">ES</button>
@@ -375,20 +429,16 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     </div>
   </div>
 </header>
-
 <main>
-
-<!-- ============ INICIO ============ -->
-<div class="pagina" data-pagina="inicio">
-
-  <section class="hero oscuro" id="hero">
+<div class="pagina" data-pagina="">
+<section class="hero oscuro">
     <div class="envoltura">
       <div>
         <h1>Infraestructura, energía y sistemas digitales en un mismo despacho.</h1>
         <p class="entradilla">Somos una ingeniería de Mallorca. Entendemos cada edificio, negocio o industria como un sistema completo y lo diseñamos para que funcione como tal.</p>
         <div class="botones">
-          <a class="boton lleno" href="#servicios">Ver qué hacemos</a>
-          <a class="boton" href="#contacto">Hablar con nosotros</a>
+          <a class="boton lleno" href="#/capacidades">Ver capacidades</a>
+          <a class="boton" href="#/contacto">Cuéntanos tu proyecto</a>
         </div>
       </div>
       <div class="simbolo" role="img" aria-label="Símbolo de BAFRAS Engineering">
@@ -396,198 +446,516 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       </div>
     </div>
   </section>
-
   <section class="bloque">
     <div class="envoltura">
-      <h2 class="prosa">Un edificio no es una suma de instalaciones. Es un sistema.</h2>
-      <p class="entradilla" style="margin-top:20px">Un hotel, una nave o un colegio combinan estructura, climatización, electricidad, generación, control y datos. Cuando cada parte la resuelve un equipo distinto, las decisiones no se hablan entre sí. Nosotros trabajamos las tres capas a la vez.</p>
-      <div class="capas">
-        <div class="capa">
-          <h3>La energía la alimenta</h3>
-          <p>Generación, suministro y consumo dimensionados para lo que el edificio necesita de verdad, no para lo que se instaló la última vez.</p>
-        </div>
-        <div class="capa">
-          <h3>Las instalaciones la hacen funcionar</h3>
-          <p>Electricidad, climatización y fontanería diseñadas para ejecutarse en obra sin sorpresas y para mantenerse después.</p>
-        </div>
-        <div class="capa">
-          <h3>El control la coordina</h3>
-          <p>Automatización y supervisión para ver qué pasa en tiempo real, detectar desviaciones y operar con menos coste.</p>
-        </div>
+      <h2>Empieza por donde te interese</h2>
+      <div class="entradas">
+        <a class="entrada" href="#/capacidades">
+          <h3>Por capacidad</h3>
+          <p>Infrastructure, Energy Systems y Digital Systems, trabajadas como un único sistema.</p>
+          <span class="enlace">Ver capacidades</span>
+        </a>
+        <a class="entrada" href="#/sectores">
+          <h3>Por sector</h3>
+          <p>Hotelero, industria, terciario, centros deportivos, infraestructura y sector público.</p>
+          <span class="enlace">Ver sectores</span>
+        </a>
+        <a class="entrada" href="#/proyectos">
+          <h3>Por proyecto</h3>
+          <p>Proyectos y experiencia del equipo, con nuestra participación concreta en cada uno.</p>
+          <span class="enlace">Ver proyectos</span>
+        </a>
       </div>
     </div>
   </section>
-
-  <section class="bloque oscuro">
-    <div class="envoltura">
-      <h2 class="prosa">Cómo queremos que se nos conozca</h2>
-      <dl class="compromisos">
-        <div><dt>Multidisciplinar</dt><dd>Infraestructura, energía, automatización y digitalización dentro de un mismo despacho.</dd></div>
-        <div><dt>Cercanía</dt><dd>Los tres socios estamos en cada proyecto y el cliente habla directamente con nosotros.</dd></div>
-        <div><dt>Rapidez</dt><dd>Respondemos rápido y resolvemos sin dar vueltas innecesarias.</dd></div>
-        <div><dt>Calidad</dt><dd>Entregamos proyectos revisados a fondo, aunque eso suponga dedicarles más horas.</dd></div>
-        <div><dt>Experiencia en obra</dt><dd>Sabemos cómo se ejecuta lo que dibujamos, porque hemos estado en obra.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="bloque">
-    <div class="envoltura">
-      <div class="cab-seccion">
-        <div>
-          <h2>Primero entendemos, después diseñamos</h2>
-          <p class="entradilla" style="margin-top:16px">No vendemos soluciones predeterminadas. Analizamos el sistema, decidimos qué tiene sentido hacer y lo acompañamos hasta que funciona.</p>
-        </div>
-      </div>
-      <ol class="metodo">
-        <li><h4>Datos</h4><p>Recogemos consumos, planos, estado real de las instalaciones y necesidades de uso.</p></li>
-        <li><h4>Diagnóstico</h4><p>Vemos cómo funciona hoy el conjunto y dónde falla.</p></li>
-        <li><h4>Oportunidades</h4><p>Identificamos dónde hay ahorro, riesgo o margen de mejora.</p></li>
-        <li><h4>Alternativas</h4><p>Comparamos opciones técnicas con sus costes y plazos.</p></li>
-        <li><h4>Decisión</h4><p>Elegimos contigo, con los números delante.</p></li>
-        <li><h4>Diseño</h4><p>Proyecto, planos y mediciones revisados antes de salir del despacho.</p></li>
-        <li><h4>Implantación</h4><p>Dirección y coordinación en obra hasta la puesta en marcha.</p></li>
-        <li><h4>Verificación</h4><p>Comprobamos que el resultado cumple lo previsto.</p></li>
-      </ol>
-      <p style="margin-top:28px;color:var(--gris)">Podemos entrar en una sola fase o llevar el proceso completo, llave en mano.</p>
-    </div>
-  </section>
-
-  <section class="bloque piedra">
-    <div class="envoltura">
-      <div class="cab-seccion">
-        <h2>Tres áreas, un solo equipo</h2>
-        <a class="enlace" href="#servicios">Todos los servicios</a>
-      </div>
-      <div class="pilares" id="pilaresInicio"></div>
-    </div>
-  </section>
-
-  <section class="bloque">
-    <div class="envoltura">
-      <div class="cab-seccion">
-        <div>
-          <h2>¿Encaja tu proyecto?</h2>
-          <p class="entradilla" style="margin-top:16px">Trabajamos con establecimientos medianos, industria y despachos de arquitectura en toda Mallorca.</p>
-        </div>
-        <a class="enlace" href="#sectores">Ver sectores</a>
-      </div>
-      <ul class="chips" style="margin-top:32px" id="chipsSectores"></ul>
-    </div>
-  </section>
-
   <section class="bloque oscuro banda">
     <div class="envoltura">
       <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
-      <a class="boton lleno" href="#contacto">Contactar</a>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
-
-<!-- ============ SERVICIOS ============ -->
-<div class="pagina" data-pagina="servicios">
-  <section class="bloque">
+<div class="pagina" data-pagina="capacidades">
+<section class="bloque">
     <div class="envoltura">
-      <h1>Servicios</h1>
-      <p class="entradilla" style="margin-top:24px">Tres áreas que se entienden mejor juntas. Puedes contratarnos para una de ellas o para el conjunto: el valor está en que las decisiones de energía, instalaciones y control se toman a la vez.</p>
-      <div class="pilares" id="pilaresServicios"></div>
-      <div class="alcance">
-        <div><h4>Una fase concreta</h4><p>Un estudio energético, un proyecto de instalaciones, una auditoría de control o la dirección de obra de algo ya diseñado.</p></div>
-        <div><h4>Llave en mano</h4><p>Desde el análisis inicial hasta la puesta en marcha y la verificación, con un único interlocutor.</p></div>
+      
+      <h1>Capacidades</h1>
+      <p class="entradilla" style="margin-top:24px">Tres áreas de ingeniería que se entienden mejor juntas. Puedes trabajar con una de ellas o con el conjunto: el valor está en que energía, instalaciones y control se diseñan a la vez.</p>
+    </div>
+  </section>
+  <section class="bloque misma" style="padding-top:0">
+    <div class="envoltura"><div class="pilares" style="margin-top:0"><a class="pilar" href="#/capacidades/infrastructure">
+        <h3>Infrastructure</h3>
+        <p>Diseño y dirección de las instalaciones MEP (mecánicas, eléctricas y de fontanería) que hacen funcionar un edificio, y acompañamiento en obra para que se ejecuten como se proyectaron.</p>
+        <ul><li>Instalaciones MEP</li><li>Planos y coordinación</li><li>Mediciones y presupuestos</li><li>Dirección y coordinación en obra</li></ul>
+        <span class="enlace">Ver Infrastructure</span>
+      </a><a class="pilar" href="#/capacidades/energy-systems">
+        <h3>Energy Systems</h3>
+        <p>Diseño e integración de sistemas energéticos para reducir costes, mejorar la eficiencia y adaptar el suministro a las necesidades operativas de cada cliente.</p>
+        <ul><li>Estudios energéticos</li><li>Fotovoltaica y generación</li><li>Comparativa de tecnologías</li><li>Marquesinas y puntos de carga</li></ul>
+        <span class="enlace">Ver Energy Systems</span>
+      </a><a class="pilar" href="#/capacidades/digital-systems">
+        <h3>Digital Systems</h3>
+        <p>Diseño e integración de sistemas de automatización, control y supervisión que permiten gestionar las instalaciones en tiempo real y detectar desviaciones operativas.</p>
+        <ul><li>Automatización y control</li><li>Centralización de instalaciones</li><li>Supervisión en tiempo real</li><li>Digitalización e IA</li></ul>
+        <span class="enlace">Ver Digital Systems</span>
+      </a></div></div>
+  </section>
+  <section class="bloque piedra" id="vision-de-sistema">
+    <div class="envoltura dos-col">
+      <h2>Visión de sistema</h2>
+      <div class="prosa">
+        <p class="entradilla" style="color:var(--tinta)">Un negocio, un edificio o una industria no son una suma de elementos independientes, sino un sistema completo que debe funcionar de manera sincronizada.</p>
+        <p>Los sistemas energéticos suministran la energía que necesitan las instalaciones. Las instalaciones MEP permiten que la actividad se desarrolle. Y los sistemas de control coordinan y optimizan su funcionamiento, facilitando también su operación y mantenimiento.</p>
+        <p style="margin:0">Esta visión integral permite mejorar el rendimiento, reducir costes operativos y asegurar que las soluciones responden a lo que el cliente necesita.</p>
       </div>
     </div>
   </section>
-</div>
-
-<!-- Detalles de servicio (se rellenan por script) -->
-<div class="pagina" data-pagina="servicios/infraestructura"></div>
-<div class="pagina" data-pagina="servicios/energia"></div>
-<div class="pagina" data-pagina="servicios/digital"></div>
-
-<!-- ============ PROYECTOS ============ -->
-<div class="pagina" data-pagina="proyectos">
-  <section class="bloque">
+  <section class="bloque" id="metodologia">
     <div class="envoltura">
-      <h1>Proyectos</h1>
-      <p class="entradilla" style="margin-top:24px">BAFRAS es una empresa nueva, pero sus socios no empiezan de cero. Para que quede claro qué es qué, separamos dos tipos de proyecto:</p>
-      <div class="claves">
-        <div class="clave"><span class="sello propio">Proyecto BAFRAS</span><p>Trabajos contratados y ejecutados por BAFRAS Engineering.</p></div>
-        <div class="clave"><span class="sello equipo">Experiencia del equipo</span><p>Proyectos en los que un socio participó antes de fundar BAFRAS, indicando su papel y la empresa en la que trabajaba.</p></div>
-      </div>
-      <div class="proyectos" id="listaProyectos"></div>
+      <h2>Metodología BAFRAS</h2>
+      <p class="entradilla" style="margin-top:16px">No vendemos soluciones predeterminadas. Primero comprendemos el sistema, determinamos qué tiene sentido hacer y desarrollamos después la solución adecuada, desde el análisis inicial hasta su implantación.</p>
+      <ol class="metodo"><li><h4>Datos</h4><p>Recogemos consumos, planos, estado real de las instalaciones y necesidades de uso.</p></li><li><h4>Diagnóstico</h4><p>Analizamos cómo funciona hoy el conjunto.</p></li><li><h4>Oportunidades</h4><p>Identificamos dónde hay margen de mejora.</p></li><li><h4>Alternativas</h4><p>Comparamos opciones técnicas.</p></li><li><h4>Decisión</h4><p>Elegimos con el cliente, con los datos delante.</p></li><li><h4>Diseño</h4><p>Proyecto, planos y mediciones, revisados antes de entregar.</p></li><li><h4>Implantación</h4><p>Dirección y coordinación en obra hasta la puesta en marcha.</p></li><li><h4>Verificación</h4><p>Comprobamos que el resultado cumple lo previsto.</p></li></ol>
+      <p style="margin-top:28px;color:var(--gris)">Podemos participar en una fase concreta del proyecto o encargarnos de todo el proceso, llave en mano.</p>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
-<div class="pagina" data-pagina="proyectos/formentor"></div>
-
-<!-- ============ SECTORES ============ -->
-<div class="pagina" data-pagina="sectores">
-  <section class="bloque">
+<div class="pagina" data-pagina="capacidades/infrastructure">
+<section class="bloque">
     <div class="envoltura">
-      <h1>Sectores</h1>
-      <p class="entradilla" style="margin-top:24px">Con qué clientes y en qué tipo de proyectos trabajamos. Si el tuyo no aparece, escríbenos igualmente: probablemente también podemos ayudarte.</p>
-            <div class="sectores" id="listaSectores"></div>
+      <p class="migas"><a href="#/capacidades">Capacidades</a> / Infrastructure</p>
+      <h1>Infrastructure</h1>
+      <p class="entradilla" style="margin-top:24px">Diseño y dirección de las instalaciones MEP (mecánicas, eléctricas y de fontanería) que hacen funcionar un edificio, y acompañamiento en obra para que se ejecuten como se proyectaron.</p>
     </div>
   </section>
-</div>
-
-<!-- ============ EQUIPO ============ -->
-<div class="pagina" data-pagina="equipo">
-  <section class="bloque">
-    <div class="envoltura">
-      <h1>Equipo</h1>
-      <p class="entradilla" style="margin-top:24px">Tres ingenieros que se conocieron en la universidad y han trabajado en campos distintos y complementarios. BAFRAS nace para juntar esas experiencias en un mismo despacho.</p>
-      <div class="socios">
-        <article class="socio">
-          <div class="retrato" aria-hidden="true">ÀF</div>
-          <div class="cuerpo">
-            <h3>Àngel Frau</h3>
-            <p class="rol">Infraestructura y ejecución de obra</p>
-            <p>Ingeniero industrial especializado en instalaciones MEP: climatización, electricidad y fontanería. Diseño, coordinación de instalaciones, mediciones y dirección en obra. <span class="pend">Añadir trayectoria y proyectos destacados.</span></p>
-            <div class="area">Área de Infraestructura</div>
-          </div>
-        </article>
-        <article class="socio">
-          <div class="retrato" aria-hidden="true">MB</div>
-          <div class="cuerpo">
-            <h3>Murti Bär</h3>
-            <p class="rol">Sistemas energéticos y digitalización</p>
-            <p>Estudio, diseño y optimización de sistemas de generación y consumo energético, e integración con sistemas digitales. <span class="pend">Añadir formación y trayectoria.</span></p>
-            <div class="area">Área de Energía</div>
-          </div>
-        </article>
-        <article class="socio">
-          <div class="retrato" aria-hidden="true">AA</div>
-          <div class="cuerpo">
-            <h3>Amin Asbai</h3>
-            <p class="rol">Automatización e inteligencia artificial</p>
-            <p>Sistemas de automatización, control y supervisión, y aplicación de IA a la operación de instalaciones. <span class="pend">Añadir formación y trayectoria.</span></p>
-            <div class="area">Área Digital</div>
-          </div>
-        </article>
-      </div>
+  <section class="bloque misma">
+    <div class="envoltura dos-col">
+      <h2>Qué hacemos</h2>
+      <ul class="lista-servicios"><li><h4>Proyecto de instalaciones MEP</h4><p>Diseño de las instalaciones mecánicas, eléctricas y de fontanería de edificios, negocios e instalaciones industriales.</p></li><li><h4>Planos y delineación</h4><p>Generación y revisión de planos, coordinados entre disciplinas.</p></li><li><h4>Coordinación de instalaciones</h4><p>Coordinamos los distintos sistemas entre sí para que el conjunto tenga sentido antes de llegar a obra.</p></li><li><h4>Mediciones</h4><p>Generación y control de mediciones.</p></li><li><h4>Coordinación y dirección en obra</h4><p>Seguimiento de la ejecución hasta que la instalación está en marcha.</p></li></ul>
     </div>
   </section>
   <section class="bloque piedra">
     <div class="envoltura dos-col">
-      <p class="cita">Preferimos dedicar más horas a revisar un proyecto que tener problemas cuando ya está en obra.</p>
-      <div class="prosa">
-        <p>No queremos una estructura grande en la que el cliente pase de mano en mano. Somos tres socios, cada uno con su especialidad, y los tres estamos implicados en los proyectos.</p>
-        <p>Nuestra forma de trabajar es sencilla: entender bien el proyecto, resolver los problemas y entregar un trabajo bien hecho. Queremos que esa exigencia se mantenga igual con poco o con mucho trabajo.</p>
-        <p style="margin:0"><a class="enlace" href="#contacto">Habla con nosotros</a></p>
+      <h2>Cómo lo enfocamos</h2>
+      <div>
+        <p class="entradilla" style="color:var(--tinta)">Haber trabajado directamente en obra nos da una visión práctica. No se trata solo de diseñar: se trata de que lo que dibujamos tenga sentido y pueda ejecutarse correctamente.</p>
+        <div class="responsable">
+          <div class="retrato" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">ÀF</div>
+          <div><h4>Àngel Frau</h4><p>Responsable de Infrastructure</p></div>
+        </div>
       </div>
     </div>
   </section>
-</div>
-
-<!-- ============ CONTACTO ============ -->
-<div class="pagina" data-pagina="contacto">
   <section class="bloque">
+    <div class="envoltura dos-col">
+      <h2>Capacidad, sector, evidencia</h2>
+      <div>
+        <h4 style="margin-bottom:12px">Sectores donde la aplicamos</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hotelero / Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@terciario">Terciario</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
+        <h4 style="margin:28px 0 12px">Evidencia</h4>
+        <p style="margin:0"><a class="enlace" href="#/proyectos">Proyectos y experiencia del equipo</a></p>
+        <h4 style="margin:28px 0 12px">Se entiende mejor con</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
     <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="capacidades/energy-systems">
+<section class="bloque">
+    <div class="envoltura">
+      <p class="migas"><a href="#/capacidades">Capacidades</a> / Energy Systems</p>
+      <h1>Energy Systems</h1>
+      <p class="entradilla" style="margin-top:24px">Diseño e integración de sistemas energéticos para reducir costes, mejorar la eficiencia y adaptar el suministro a las necesidades operativas de cada cliente.</p>
+    </div>
+  </section>
+  <section class="bloque misma">
+    <div class="envoltura dos-col">
+      <h2>Qué hacemos</h2>
+      <ul class="lista-servicios"><li><h4>Estudio y optimización energética</h4><p>Análisis del consumo de una instalación para reducir costes y mejorar su eficiencia.</p></li><li><h4>Generación y fotovoltaica</h4><p>Sistemas de generación, especialmente fotovoltaica, integrados con el resto de la instalación.</p></li><li><h4>Comparativa de tecnologías</h4><p>Alternativas como biomasa, bomba de calor o gas, comparadas para cada caso.</p></li><li><h4>Marquesinas fotovoltaicas y puntos de carga</h4><p>Infraestructura energética para aparcamientos, marinas y otros espacios abiertos.</p></li><li><h4>Adaptación del suministro</h4><p>El suministro se ajusta a las necesidades operativas reales del cliente.</p></li></ul>
+    </div>
+  </section>
+  <section class="bloque piedra">
+    <div class="envoltura dos-col">
+      <h2>Cómo lo enfocamos</h2>
+      <div>
+        <p class="entradilla" style="color:var(--tinta)">Una instalación eficiente depende de que energía, instalaciones y control trabajen de forma armónica. Por eso diseñamos la energía pensando en cómo se usa y se controla el edificio.</p>
+        <div class="responsable">
+          <div class="retrato" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">MB</div>
+          <div><h4>Murti Bär</h4><p>Responsable de Energy Systems</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bloque">
+    <div class="envoltura dos-col">
+      <h2>Capacidad, sector, evidencia</h2>
+      <div>
+        <h4 style="margin-bottom:12px">Sectores donde la aplicamos</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hotelero / Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
+        <h4 style="margin:28px 0 12px">Evidencia</h4>
+        <p style="margin:0"><a class="enlace" href="#/proyectos">Proyectos y experiencia del equipo</a></p>
+        <h4 style="margin:28px 0 12px">Se entiende mejor con</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="capacidades/digital-systems">
+<section class="bloque">
+    <div class="envoltura">
+      <p class="migas"><a href="#/capacidades">Capacidades</a> / Digital Systems</p>
+      <h1>Digital Systems</h1>
+      <p class="entradilla" style="margin-top:24px">Diseño e integración de sistemas de automatización, control y supervisión que permiten gestionar las instalaciones en tiempo real y detectar desviaciones operativas.</p>
+    </div>
+  </section>
+  <section class="bloque misma">
+    <div class="envoltura dos-col">
+      <h2>Qué hacemos</h2>
+      <ul class="lista-servicios"><li><h4>Automatización</h4><p>Desde la automatización de elementos concretos hasta sistemas completos de control de edificios.</p></li><li><h4>Centralización de instalaciones</h4><p>Sistemas de control comunes para complejos o agrupaciones de edificios.</p></li><li><h4>Supervisión y detección de desviaciones</h4><p>Gestión en tiempo real para optimizar el funcionamiento y detectar desviaciones operativas.</p></li><li><h4>Digitalización e inteligencia artificial</h4><p>Aplicación de estas tecnologías al funcionamiento y la gestión de edificios e instalaciones, y a procesos internos.</p></li></ul>
+    </div>
+  </section>
+  <section class="bloque piedra">
+    <div class="envoltura dos-col">
+      <h2>Cómo lo enfocamos</h2>
+      <div>
+        <p class="entradilla" style="color:var(--tinta)">Es el área con más recorrido por delante y una de las principales diferencias frente a una ingeniería más tradicional. Los sistemas de control coordinan y optimizan lo que diseñamos, y facilitan su operación y mantenimiento.</p>
+        <div class="responsable">
+          <div class="retrato" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">AA</div>
+          <div><h4>Amin Asbai</h4><p>Responsable de Digital Systems</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bloque">
+    <div class="envoltura dos-col">
+      <h2>Capacidad, sector, evidencia</h2>
+      <div>
+        <h4 style="margin-bottom:12px">Sectores donde la aplicamos</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hotelero / Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
+        <h4 style="margin:28px 0 12px">Evidencia</h4>
+        <p style="margin:0"><a class="enlace" href="#/proyectos">Proyectos y experiencia del equipo</a></p>
+        <h4 style="margin:28px 0 12px">Se entiende mejor con</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="sectores">
+<section class="bloque">
+    <div class="envoltura">
+      
+      <h1>Sectores</h1>
+      <p class="entradilla" style="margin-top:24px">Con qué clientes y en qué tipo de proyectos trabajamos. Empezamos por establecimientos y proyectos de tamaño medio y aspiramos a ir asumiendo proyectos cada vez mayores.</p>
+    </div>
+  </section>
+  <section class="bloque misma" style="padding-top:0">
+    <div class="envoltura"><div class="sector-bloque" id="hotelero">
+        <div class="dos-col">
+          <div><h2>Hotelero / Hospitality</h2><p style="margin-top:16px;color:var(--gris)">Hoteles y establecimientos de hospitalidad, donde climatización, electricidad, energía y control tienen que funcionar juntos.</p></div>
+          <div>
+            <h4>Ejemplos</h4>
+            <ul class="chips"><li>Hoteles</li></ul>
+            <h4>Capacidades que aplicamos</h4>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
+          </div>
+        </div>
+      </div><div class="sector-bloque" id="industria">
+        <div class="dos-col">
+          <div><h2>Industria</h2><p style="margin-top:16px;color:var(--gris)">Instalaciones industriales y del sector náutico, con necesidades de energía, instalaciones y control de procesos.</p></div>
+          <div>
+            <h4>Ejemplos</h4>
+            <ul class="chips"><li>Talleres y carpinterías</li><li>Naves industriales y almacenes</li><li>Frío industrial y cadena del frío</li><li>Industria agroalimentaria</li><li>Lavandería industrial</li><li>Astilleros y empresas de reparación y mantenimiento naval</li></ul>
+            <h4>Capacidades que aplicamos</h4>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
+          </div>
+        </div>
+      </div><div class="sector-bloque" id="terciario">
+        <div class="dos-col">
+          <div><h2>Terciario</h2><p style="margin-top:16px;color:var(--gris)">Establecimientos de servicios y comercio de tamaño medio.</p></div>
+          <div>
+            <h4>Ejemplos</h4>
+            <ul class="chips"><li>Oficinas</li><li>Comercios y edificios comerciales</li><li>Restaurantes</li><li>Supermercados independientes</li></ul>
+            <h4>Capacidades que aplicamos</h4>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li></ul>
+          </div>
+        </div>
+      </div><div class="sector-bloque" id="deportivos">
+        <div class="dos-col">
+          <div><h2>Centros deportivos</h2><p style="margin-top:16px;color:var(--gris)">Gimnasios y centros deportivos, con instalaciones de uso intensivo.</p></div>
+          <div>
+            <h4>Ejemplos</h4>
+            <ul class="chips"><li>Gimnasios</li><li>Centros deportivos</li></ul>
+            <h4>Capacidades que aplicamos</h4>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
+          </div>
+        </div>
+      </div><div class="sector-bloque" id="infraestructura">
+        <div class="dos-col">
+          <div><h2>Infraestructura</h2><p style="margin-top:16px;color:var(--gris)">Infraestructuras energéticas y de servicio.</p></div>
+          <div>
+            <h4>Ejemplos</h4>
+            <ul class="chips"><li>Puertos y marinas</li><li>Marquesinas fotovoltaicas</li><li>Aparcamientos descubiertos</li><li>Estaciones de bombeo</li><li>Puntos de carga eléctricos</li></ul>
+            <h4>Capacidades que aplicamos</h4>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li></ul>
+          </div>
+        </div>
+      </div><div class="sector-bloque" id="publico">
+        <div class="dos-col">
+          <div><h2>Sector público</h2><p style="margin-top:16px;color:var(--gris)">Administraciones y edificios públicos. Un despacho local, cercano y con capacidad de respuesta rápida.</p></div>
+          <div>
+            <h4>Ejemplos</h4>
+            <ul class="chips"><li>Ayuntamientos y administraciones locales</li><li>Colegios e institutos</li><li>Edificios públicos</li><li>Licitaciones que encajen con nuestra capacidad</li></ul>
+            <h4>Capacidades que aplicamos</h4>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
+          </div>
+        </div>
+      </div><div class="sector-bloque" id="otros">
+        <div class="dos-col">
+          <div><h2>Otros sectores</h2><p style="margin-top:16px;color:var(--gris)">Si tu proyecto no encaja en los anteriores, cuéntanoslo. Trabajamos también como apoyo de ingeniería dentro de proyectos de otros.</p></div>
+          <div>
+            <h4>Ejemplos</h4>
+            <ul class="chips"><li>Despachos de arquitectura</li><li>Promotores y constructores</li><li>Edificios residenciales</li></ul>
+            <h4>Capacidades que aplicamos</h4>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:8px">¿No ves tu caso? <a class="enlace" href="#/contacto">Cuéntanos tu proyecto</a>.</p>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="proyectos">
+<section class="bloque">
+    <div class="envoltura">
+      
+      <h1>Proyectos</h1>
+      <p class="entradilla" style="margin-top:24px">BAFRAS es una empresa nueva, pero sus socios no empiezan de cero. Para que quede claro qué es qué, separamos los proyectos de BAFRAS de la experiencia previa del equipo.</p>
+    </div>
+  </section>
+  <section class="bloque misma" style="padding-top:0" id="proyectos-bafras">
+    <div class="envoltura">
+      <h2>Proyectos BAFRAS</h2>
+      <p style="margin-top:12px;color:var(--gris)">Trabajos contratados y ejecutados por BAFRAS Engineering.</p>
+      <div class="vacio-estado" style="margin-top:24px">
+        <p><strong>Todavía no hay proyectos publicados con marca BAFRAS.</strong></p>
+        <p>Aparecerán aquí a medida que los ejecutemos, y sustituirán poco a poco a la experiencia previa del equipo.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bloque piedra" id="experiencia-del-equipo">
+    <div class="envoltura">
+      <h2>Experiencia del equipo</h2>
+      <p style="margin-top:12px">Proyectos en los que un socio participó antes de fundar BAFRAS. Indicamos siempre su papel y la empresa en la que trabajaba.</p>
+      <div class="proyectos">
+        <a class="proyecto" href="#/proyectos/experiencia-del-equipo/hotel-formentor">
+          <div class="foto"><svg viewBox="0 0 493 468"><use href="#isotipo"/></svg><span><span class="pend">Fotografía del proyecto</span></span></div>
+          <div class="cuerpo">
+            <span><span class="sello equipo">Experiencia del equipo</span></span>
+            <h3>Hotel Formentor</h3>
+            <p>Proyecto de un hotel en el que participó Àngel Frau antes de fundar BAFRAS.</p>
+            <p class="meta">Mallorca · Àngel Frau · Infrastructure</p>
+          </div>
+        </a>
+      </div>
+      <p style="margin-top:32px;color:var(--gris)">Preferimos pocos casos bien explicados a una lista larga sin contenido. Iremos añadiendo dos o tres por área.</p>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="proyectos/experiencia-del-equipo/hotel-formentor">
+<section class="bloque">
+    <div class="envoltura">
+      <p class="migas"><a href="#/proyectos">Proyectos</a> / <a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a> / Hotel Formentor</p>
+      <span class="sello equipo">Experiencia del equipo</span>
+      <h1 style="margin-top:16px">Hotel Formentor</h1>
+      <p class="entradilla" style="margin-top:16px"><span class="pend">Una o dos frases: qué era el proyecto y qué lo hacía exigente.</span></p>
+      <dl class="ficha">
+        <div><dt>Sector</dt><dd>Hotelero / Hospitality</dd></div>
+        <div><dt>Ubicación</dt><dd>Mallorca</dd></div>
+        <div><dt>Participación</dt><dd>Àngel Frau</dd></div>
+        <div><dt>Empresa en ese momento</dt><dd><span class="pend">Nombre de la empresa</span></dd></div>
+      </dl>
+      <div class="foto foto-proyecto"><svg viewBox="0 0 493 468"><use href="#isotipo"/></svg><span><span class="pend">Fotografía o plano del proyecto</span></span></div>
+    </div>
+  </section>
+  <section class="bloque misma">
+    <div class="envoltura dos-col">
+      <h2>El proyecto</h2>
+      <ul class="lista-servicios">
+        <li><h4>Contexto</h4><p><span class="pend">Qué se construía o reformaba, alcance y plazos.</span></p></li>
+        <li><h4>Solución técnica</h4><p><span class="pend">Instalaciones y sistemas principales.</span></p></li>
+        <li><h4>Responsabilidad</h4><p><span class="pend">Qué hizo Àngel en concreto: diseño, coordinación, mediciones, obra.</span></p></li>
+        <li><h4>Resultados</h4><p><span class="pend">Cifras o hitos que se puedan publicar.</span></p></li>
+      </ul>
+    </div>
+  </section>
+  <section class="bloque piedra">
+    <div class="envoltura dos-col">
+      <h2>Capacidades y sector</h2>
+      <div>
+        <h4 style="margin-bottom:12px">Capacidades aplicadas</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li></ul>
+        <h4 style="margin:28px 0 12px">Sector</h4>
+        <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hotelero / Hospitality</a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="conocimiento">
+<section class="bloque">
+    <div class="envoltura">
+      
+      <h1>Conocimiento</h1>
+      <p class="entradilla" style="margin-top:24px">Aquí demostramos lo que sabemos con contenido técnico: análisis, casos y guías que ayudan a decidir mejor antes de proyectar.</p>
+    </div>
+  </section>
+  <section class="bloque misma" style="padding-top:0">
+    <div class="envoltura"><div class="sector-bloque" id="articulos-tecnicos">
+        <h2>Artículos técnicos</h2>
+        <p style="margin-top:12px;color:var(--gris);max-width:62ch">Análisis técnicos para entender qué opción tiene sentido en cada caso.</p>
+        <ul class="piezas"><li><span class="etiqueta">En preparación</span><h4>Biomasa, bomba de calor o gas</h4><p>Comparativa de tecnologías de generación de calor.</p></li><li><span class="etiqueta">En preparación</span><h4>Curva de carga de un hotel u hospital</h4><p>Cómo se consume la energía en edificios de uso continuo.</p></li></ul>
+      </div><div class="sector-bloque" id="casos-de-estudio">
+        <h2>Casos de estudio</h2>
+        <p style="margin-top:12px;color:var(--gris);max-width:62ch">Proyectos explicados con datos: el problema, la solución y el resultado.</p>
+        <ul class="piezas"><li><span class="etiqueta">En preparación</span><h4>Pendiente de elegir</h4><p><span class="pend">Primer caso de estudio con datos medibles.</span></p></li></ul>
+      </div><div class="sector-bloque" id="guias-tecnicas">
+        <h2>Guías técnicas</h2>
+        <p style="margin-top:12px;color:var(--gris);max-width:62ch">Documentos prácticos para quien tiene que decidir o encargar un proyecto.</p>
+        <ul class="piezas"><li><span class="etiqueta">En preparación</span><h4>Pendiente de definir</h4><p><span class="pend">Primera guía técnica.</span></p></li></ul>
+      </div><div class="sector-bloque" id="innovacion">
+        <h2>Innovación</h2>
+        <p style="margin-top:12px;color:var(--gris);max-width:62ch">Digitalización, automatización e inteligencia artificial aplicadas a edificios e instalaciones.</p>
+        <ul class="piezas"><li><span class="etiqueta">En preparación</span><h4>Pendiente de definir</h4><p><span class="pend">Primer texto sobre automatización e IA.</span></p></li></ul>
+      </div></div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>¿Tienes una duda técnica sobre tu instalación?</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="sobre-bafras">
+<section class="bloque">
+    <div class="envoltura">
+      
+      <h1>Sobre BAFRAS</h1>
+      <p class="entradilla" style="margin-top:24px">Una ingeniería nueva con un equipo que no empieza de cero: tres socios con experiencia complementaria y una forma de trabajar muy clara.</p>
+    </div>
+  </section>
+  <section class="bloque misma" style="padding-top:0" id="quienes-somos">
+    <div class="envoltura dos-col">
+      <h2>Quiénes somos</h2>
+      <div class="prosa">
+        <p>BAFRAS nace de tres ingenieros que se conocieron en la universidad y que han trabajado después en ámbitos complementarios: infraestructura, energía, automatización y sistemas digitales.</p>
+        <p style="margin:0">Compartimos algo más que la formación: una apreciación común por la calidad y por el servicio al cliente. Por eso decidimos reunir esas experiencias en un único despacho.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bloque piedra" id="equipo">
+    <div class="envoltura">
+      <h2>Equipo</h2>
+      <p style="margin-top:12px">Los tres socios estamos involucrados en los proyectos y disponibles para el cliente.</p>
+      <div class="socios"><article class="socio">
+          <div class="retrato" aria-hidden="true">ÀF</div>
+          <div class="cuerpo">
+            <h3>Àngel Frau</h3>
+            <p class="rol">Infraestructura y ejecución de obra</p>
+            <p>Ingeniero industrial con experiencia en instalaciones MEP. Diseño, coordinación de instalaciones, mediciones y dirección en obra. <span class="pend">Añadir trayectoria.</span></p>
+            <div class="area"><a href="#/capacidades/infrastructure" style="text-decoration:none">Infrastructure</a></div>
+          </div>
+        </article><article class="socio">
+          <div class="retrato" aria-hidden="true">MB</div>
+          <div class="cuerpo">
+            <h3>Murti Bär</h3>
+            <p class="rol">Sistemas energéticos y digitalización</p>
+            <p>Estudio, diseño y optimización de sistemas energéticos y su integración con sistemas digitales. <span class="pend">Añadir trayectoria.</span></p>
+            <div class="area"><a href="#/capacidades/energy-systems" style="text-decoration:none">Energy Systems</a></div>
+          </div>
+        </article><article class="socio">
+          <div class="retrato" aria-hidden="true">AA</div>
+          <div class="cuerpo">
+            <h3>Amin Asbai</h3>
+            <p class="rol">Automatización e inteligencia artificial</p>
+            <p>Sistemas de automatización, control y supervisión, y aplicación de IA a la operación de instalaciones. <span class="pend">Añadir trayectoria.</span></p>
+            <div class="area"><a href="#/capacidades/digital-systems" style="text-decoration:none">Digital Systems</a></div>
+          </div>
+        </article></div>
+    </div>
+  </section>
+  <section class="bloque" id="filosofia">
+    <div class="envoltura">
+      <h2>Filosofía y valores</h2>
+      <p class="entradilla" style="margin-top:16px">Preferimos dedicar más horas a revisar un proyecto que tener problemas cuando ya está en obra. Y queremos que esa exigencia se mantenga igual con poco o con mucho trabajo.</p>
+      <ul class="valores">
+        <li><h4>Profesionalidad y seriedad</h4><p>En todos los aspectos del trabajo y del trato con el cliente.</p></li>
+        <li><h4>Puntualidad y rapidez</h4><p>Respondemos rápido y resolvemos los temas sin dar vueltas innecesarias.</p></li>
+        <li><h4>Proyectos de calidad</h4><p>Minimizamos los errores y buscamos entregas precisas y fiables, aunque eso implique dedicar más tiempo.</p></li>
+      </ul>
+      <p style="margin-top:32px"><a class="enlace" href="#/capacidades@metodologia">Cómo trabajamos: metodología BAFRAS</a></p>
+    </div>
+  </section>
+  <section class="bloque oscuro banda">
+    <div class="envoltura">
+      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
+    </div>
+  </section>
+</div>
+<div class="pagina" data-pagina="contacto">
+<section class="bloque">
+    <div class="envoltura">
+      
       <h1>Contacto</h1>
       <p class="entradilla" style="margin-top:24px">Llámanos, escríbenos por WhatsApp o déjanos tu consulta. Sin intermediarios: te responde directamente un socio.</p>
-      <div class="contacto">
-        <div class="vias">
+    </div>
+  </section>
+  <section class="bloque misma" style="padding-top:0">
+    <div class="envoltura">
+      <div class="contacto" style="margin-top:0">
+        <div class="vias" id="contacto-directo">
+          <h2 style="font-size:1.6rem;margin-bottom:4px">Contacto directo</h2>
           <div class="via general">
             <h3>info@bafras.com</h3>
             <span class="quien">Correo general del despacho</span>
@@ -595,22 +963,22 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           </div>
           <div class="via">
             <h3>Àngel Frau</h3>
-            <span class="quien">Infraestructura · <span class="pend">+34 600 000 000</span></span>
+            <span class="quien">Infrastructure · <span class="pend">+34 600 000 000</span></span>
             <div class="acciones"><a class="boton" href="tel:+34600000000">Llamar</a><a class="boton lleno" href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></div>
           </div>
           <div class="via">
             <h3>Murti Bär</h3>
-            <span class="quien">Energía · <span class="pend">+34 600 000 000</span></span>
+            <span class="quien">Energy Systems · <span class="pend">+34 600 000 000</span></span>
             <div class="acciones"><a class="boton" href="tel:+34600000000">Llamar</a><a class="boton lleno" href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></div>
           </div>
           <div class="via">
             <h3>Amin Asbai</h3>
-            <span class="quien">Digital · <span class="pend">+34 600 000 000</span></span>
+            <span class="quien">Digital Systems · <span class="pend">+34 600 000 000</span></span>
             <div class="acciones"><a class="boton" href="tel:+34600000000">Llamar</a><a class="boton lleno" href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></div>
           </div>
         </div>
-
         <form id="formulario" action="https://formsubmit.co/info@bafras.com" method="POST">
+          <h2 style="font-size:1.6rem;margin-bottom:4px" id="cuentanos-tu-proyecto">Cuéntanos tu proyecto</h2>
           <input type="hidden" name="_subject" value="Nueva consulta desde bafras.com">
           <input type="hidden" name="_template" value="table">
           <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -622,13 +990,13 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
             <label>Correo<input type="email" name="email" required autocomplete="email"></label>
             <label><span>Teléfono <span style="font-weight:400;color:var(--gris)">(opcional)</span></span><input type="tel" name="telefono" autocomplete="tel"></label>
           </div>
-          <label>¿Sobre qué área?
+          <label>¿Sobre qué capacidad?
             <select name="area">
               <option>Aún no lo sé</option>
-              <option>Infraestructura e instalaciones</option>
-              <option>Energía</option>
-              <option>Automatización y digital</option>
-              <option>Varias áreas</option>
+              <option>Infrastructure</option>
+              <option>Energy Systems</option>
+              <option>Digital Systems</option>
+              <option>Varias capacidades</option>
             </select>
           </label>
           <label>Cuéntanos el proyecto<textarea name="mensaje" required placeholder="Tipo de edificio o instalación, ubicación, qué necesitas y en qué plazo."></textarea></label>
@@ -640,9 +1008,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     </div>
   </section>
 </div>
-
 </main>
-
 <footer class="pie">
   <div class="envoltura">
     <div class="rejilla">
@@ -652,20 +1018,16 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <p><a href="mailto:info@bafras.com">info@bafras.com</a></p>
       </div>
       <div>
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="#servicios/infraestructura">Infraestructura</a></li>
-          <li><a href="#servicios/energia">Energía</a></li>
-          <li><a href="#servicios/digital">Digital</a></li>
-        </ul>
+        <h4>Capacidades</h4>
+        <ul><li><a href="#/capacidades/infrastructure">Infrastructure</a></li><li><a href="#/capacidades/energy-systems">Energy Systems</a></li><li><a href="#/capacidades/digital-systems">Digital Systems</a></li><li><a href="#/sectores">Sectores</a></li></ul>
       </div>
       <div>
         <h4>BAFRAS</h4>
         <ul>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#sectores">Sectores</a></li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#/proyectos">Proyectos</a></li>
+          <li><a href="#/conocimiento">Conocimiento</a></li>
+          <li><a href="#/sobre-bafras">Sobre BAFRAS</a></li>
+          <li><a href="#/contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -675,219 +1037,49 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     </div>
   </div>
 </footer>
-
 <script>
-/* ---------- Contenido ---------- */
-const AREAS = {
-  infraestructura: {
-    titulo:'Infraestructura', sub:'Instalaciones MEP y ejecución de obra',
-    resumen:'Proyectamos las instalaciones que hacen funcionar un edificio y las acompañamos en obra para que se ejecuten como se diseñaron.',
-    puntos:['Climatización y ventilación','Electricidad en baja tensión','Fontanería y saneamiento','Coordinación y dirección en obra'],
-    servicios:[
-      ['Proyecto de instalaciones','Climatización, ventilación, electricidad, fontanería y saneamiento, desde el anteproyecto hasta el proyecto de ejecución.'],
-      ['Planos y delineación','Generación y revisión de planos coordinados entre disciplinas, con estándares de dibujo propios.'],
-      ['Coordinación de instalaciones','Detectamos interferencias entre sistemas antes de que aparezcan en obra.'],
-      ['Mediciones y presupuestos','Generación y control de mediciones para licitar y seguir la obra con números fiables.'],
-      ['Dirección y coordinación en obra','Seguimiento de la ejecución, resolución de incidencias y puesta en marcha.']
-    ],
-    enfoque:'Haber trabajado en obra cambia cómo se proyecta. No basta con que el plano sea correcto: tiene que poder ejecutarse, mantenerse y entenderse por quien lo instala.',
-    sectores:['Hoteles','Centros deportivos','Colegios e institutos','Restaurantes y comercio','Despachos de arquitectura'],
-    socio:['ÀF','Àngel Frau','Responsable del área de Infraestructura']
-  },
-  energia: {
-    titulo:'Energía', sub:'Generación, suministro y eficiencia',
-    resumen:'Estudiamos cómo consume un edificio o una industria y diseñamos cómo debería generar y usar la energía para costar menos.',
-    puntos:['Fotovoltaica y autoconsumo','Estudios y auditorías energéticas','Optimización de consumos','Marquesinas FV y recarga de vehículos'],
-    servicios:[
-      ['Estudios energéticos','Análisis de consumos, curvas de carga y facturación para saber dónde se va la energía y cuánto cuesta.'],
-      ['Fotovoltaica y autoconsumo','Dimensionado, proyecto y legalización de instalaciones fotovoltaicas, incluidas marquesinas en aparcamientos.'],
-      ['Comparativa de tecnologías','Bomba de calor, biomasa, gas u otras alternativas comparadas con costes de inversión y de operación.'],
-      ['Optimización del suministro','Ajuste de potencias contratadas y del sistema energético a las necesidades operativas reales.'],
-      ['Puntos de recarga','Proyecto de infraestructura de recarga para vehículo eléctrico integrada con la instalación existente.']
-    ],
-    enfoque:'Una instalación energética no se diseña aislada. Depende de cómo se usa el edificio y de cómo se controla, por eso la trabajamos junto a las otras dos áreas.',
-    sectores:['Hoteles','Naves industriales','Frío industrial','Aparcamientos','Industria agroalimentaria'],
-    socio:['MB','Murti Bär','Responsable del área de Energía']
-  },
-  digital: {
-    titulo:'Digital', sub:'Automatización, control e inteligencia artificial',
-    resumen:'Diseñamos los sistemas que coordinan las instalaciones, permiten supervisarlas en tiempo real y detectan cuándo algo no funciona como debería.',
-    puntos:['Automatización y control','Gestión técnica centralizada','Supervisión y alarmas','Digitalización e IA'],
-    servicios:[
-      ['Automatización','Desde elementos concretos hasta sistemas completos de control de un edificio.'],
-      ['Gestión técnica centralizada','Un único sistema para climatización, iluminación, energía y otras instalaciones, también para varios edificios a la vez.'],
-      ['Supervisión y detección de desviaciones','Monitorización en tiempo real para anticipar averías y consumos anómalos.'],
-      ['Digitalización e IA','Aplicación de datos e inteligencia artificial a la operación de instalaciones y a procesos internos.']
-    ],
-    enfoque:'Es el área con más recorrido y una de las principales diferencias frente a una ingeniería tradicional: permite que lo que diseñamos siga funcionando bien después de la entrega.',
-    sectores:['Complejos y agrupaciones de edificios','Industria','Hoteles','Centros deportivos','Administración local'],
-    socio:['AA','Amin Asbai','Responsable del área Digital']
+(function(){
+  var TITULOS = {"": {"t": "BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca", "d": "Infraestructura, energía y sistemas digitales en un mismo despacho de ingeniería en Mallorca. Instalaciones MEP, fotovoltaica, automatización e IA."}, "capacidades": {"t": "Capacidades: Infrastructure, Energy Systems y Digital Systems · BAFRAS Engineering", "d": "Infraestructura e instalaciones MEP, sistemas energéticos y sistemas digitales integrados en un mismo despacho de ingeniería en Mallorca."}, "capacidades/infrastructure": {"t": "Infrastructure: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering", "d": "Diseño, coordinación y dirección de instalaciones MEP (climatización, electricidad y fontanería) en Mallorca. Ingeniería con experiencia real en obra."}, "capacidades/energy-systems": {"t": "Energy Systems: fotovoltaica y eficiencia energética en Mallorca · BAFRAS Engineering", "d": "Estudio, diseño y optimización de sistemas energéticos y generación fotovoltaica para reducir costes operativos en edificios e industria en Mallorca."}, "capacidades/digital-systems": {"t": "Digital Systems: automatización, control e IA para edificios · BAFRAS Engineering", "d": "Automatización, control y supervisión de instalaciones en tiempo real, con digitalización e inteligencia artificial, para edificios e industria en Mallorca."}, "sectores": {"t": "Sectores: hotelero, industria, terciario, deportivos y sector público · BAFRAS Engineering", "d": "Sectores en los que trabaja BAFRAS Engineering en Mallorca: hotelero, industria, terciario, centros deportivos, infraestructura y sector público."}, "proyectos": {"t": "Proyectos y experiencia del equipo · BAFRAS Engineering", "d": "Proyectos de BAFRAS Engineering y experiencia previa de sus socios en instalaciones, energía y sistemas digitales en Mallorca."}, "proyectos/experiencia-del-equipo/hotel-formentor": {"t": "Hotel Formentor · Experiencia del equipo · BAFRAS Engineering", "d": "Experiencia previa de Àngel Frau en un proyecto de hotel en Mallorca: instalaciones, coordinación y obra."}, "conocimiento": {"t": "Conocimiento técnico: artículos, casos de estudio y guías · BAFRAS Engineering", "d": "Artículos técnicos, casos de estudio, guías e innovación en instalaciones, energía y sistemas digitales para edificios e industria."}, "sobre-bafras": {"t": "Sobre BAFRAS: quiénes somos, equipo y filosofía · BAFRAS Engineering", "d": "BAFRAS Engineering nace de tres ingenieros con experiencia complementaria en infraestructura, energía y sistemas digitales, y una forma de trabajar basada en la calidad."}, "contacto": {"t": "Contacto · BAFRAS Engineering", "d": "Contacta con BAFRAS Engineering en Mallorca por teléfono, WhatsApp, correo o formulario. Te responde directamente uno de los socios."}};
+  var paginas = Array.prototype.slice.call(document.querySelectorAll('.pagina'));
+  var cab = document.getElementById('cabecera'), boton = document.getElementById('menuBoton');
+  var metaDesc = document.querySelector('meta[name="description"]');
+  function leer(){
+    var h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
+    var partes = h.split('@');
+    return { ruta: partes[0].replace(/\/$/, ''), ancla: partes[1] || '' };
   }
-};
-
-const SECTORES = [
-  ['Despachos de arquitectura','Ingeniería de instalaciones, energía y control para tus proyectos, con un solo interlocutor.',['infra','energia','digital'],true],
-  ['Centros deportivos y gimnasios','Climatización, ventilación, agua caliente y control de consumos en instalaciones de uso intensivo.',['infra','energia','digital']],
-  ['Colegios e institutos','Reformas de instalaciones, eficiencia energética y confort en las aulas.',['infra','energia']],
-  ['Naves industriales y almacenes','Instalaciones eléctricas, fotovoltaica y automatización de procesos.',['infra','energia','digital']],
-  ['Restaurantes y comercio','Climatización, extracción, electricidad y reducción de la factura energética.',['infra','energia']],
-  ['Hoteles','Sistemas completos de climatización, energía y gestión centralizada.',['infra','energia','digital']],
-  ['Frío industrial y agroalimentaria','Eficiencia en cámaras y procesos, supervisión de temperaturas y consumos.',['energia','digital']],
-  ['Sector náutico','Talleres, astilleros y marinas: instalaciones, energía y puntos de carga.',['infra','energia']],
-  ['Ayuntamientos','Un despacho local, cercano y con capacidad de respuesta para edificios e instalaciones municipales.',['infra','energia','digital']],
-  ['Promotores y constructores','Proyecto y coordinación de instalaciones para promociones residenciales y terciarias.',['infra']]
-];
-
-const PROYECTOS = [
-  {id:'formentor', tipo:'equipo', titulo:'Hotel Formentor', lugar:'Pollença, Mallorca', area:'infra',
-   texto:'Instalaciones de un hotel de lujo. Participación de Àngel Frau antes de fundar BAFRAS.',
-   meta:'Àngel Frau · Infraestructura'},
-  {vacio:true, area:'energia', titulo:'Caso de energía', texto:'Pendiente de elegir: un proyecto de fotovoltaica o estudio energético con resultados medibles.'},
-  {vacio:true, area:'digital', titulo:'Caso de automatización', texto:'Pendiente de elegir: un sistema de control o supervisión con datos antes y después.'}
-];
-
-/* ---------- Plantillas ---------- */
-
-function tarjetasPilares(){
-  return Object.entries(AREAS).map(([k,a])=>`
-    <a class="pilar" href="#servicios/${k}">
-      <h3>${a.titulo}</h3>
-      <p>${a.resumen}</p>
-      <ul>${a.puntos.map(p=>`<li>${p}</li>`).join('')}</ul>
-      <span class="enlace">Ver ${a.titulo.toLowerCase()}</span>
-    </a>`).join('');
-}
-document.getElementById('pilaresInicio').innerHTML = tarjetasPilares();
-document.getElementById('pilaresServicios').innerHTML = tarjetasPilares();
-
-for (const [k,a] of Object.entries(AREAS)){
-  const otras = Object.entries(AREAS).filter(([j])=>j!==k);
-  document.querySelector(`[data-pagina="servicios/${k}"]`).innerHTML = `
-  <section class="bloque">
-    <div class="envoltura">
-      <p class="migas"><a href="#servicios">Servicios</a> / ${a.titulo}</p>
-      <h1>${a.titulo}</h1>
-      <p class="entradilla" style="margin-top:20px">${a.resumen}</p>
-    </div>
-  </section>
-  <section class="bloque misma">
-    <div class="envoltura dos-col">
-      <h2>Qué hacemos</h2>
-      <ul class="lista-servicios">${a.servicios.map(([t,d])=>`<li><h4>${t}</h4><p>${d}</p></li>`).join('')}</ul>
-    </div>
-  </section>
-  <section class="bloque piedra">
-    <div class="envoltura dos-col">
-      <h2>Por qué con BAFRAS</h2>
-      <div>
-        <p class="entradilla" style="color:var(--tinta)">${a.enfoque}</p>
-        <h4 style="margin:32px 0 14px">Dónde lo aplicamos más</h4>
-        <ul class="chips">${a.sectores.map(s=>`<li>${s}</li>`).join('')}</ul>
-        <div class="responsable">
-          <div class="retrato" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">${a.socio[0]}</div>
-          <div><h4>${a.socio[1]}</h4><p>${a.socio[2]}</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bloque">
-    <div class="envoltura cab-seccion">
-      <div><h2>Se entiende mejor con las otras dos</h2>
-      <p class="entradilla" style="margin-top:12px">${otras.map(([j,o])=>`<a class="enlace" href="#servicios/${j}">${o.titulo}</a>`).join(' y ')}</p></div>
-      <a class="boton lleno" href="#contacto">Consultar un proyecto</a>
-    </div>
-  </section>`;
-}
-
-document.getElementById('listaProyectos').innerHTML = PROYECTOS.map(p=> p.vacio ? `
-  <div class="proyecto vacio">
-    <div class="foto"><svg viewBox="0 0 493 468"><use href="#isotipo"/></svg><span>Imagen pendiente</span></div>
-    <div class="cuerpo"><h3>${p.titulo}</h3><p>${p.texto}</p></div>
-  </div>` : `
-  <a class="proyecto" href="#proyectos/${p.id}">
-    <div class="foto"><svg viewBox="0 0 493 468"><use href="#isotipo"/></svg><span>Fotografía del proyecto</span></div>
-    <div class="cuerpo">
-      <span><span class="sello ${p.tipo==='propio'?'propio':'equipo'}">${p.tipo==='propio'?'Proyecto BAFRAS':'Experiencia del equipo'}</span></span>
-      <h3>${p.titulo}</h3><p>${p.texto}</p>
-      <p class="meta">${p.lugar} · ${p.meta}</p>
-    </div>
-  </a>`).join('');
-
-document.querySelector('[data-pagina="proyectos/formentor"]').innerHTML = `
-  <section class="bloque">
-    <div class="envoltura">
-      <p class="migas"><a href="#proyectos">Proyectos</a> / Hotel Formentor</p>
-      <span class="sello equipo">Experiencia del equipo</span>
-      <h1 style="margin-top:16px">Hotel Formentor</h1>
-      <p class="entradilla" style="margin-top:16px"><span class="pend">Una o dos frases: qué era el proyecto y qué lo hacía exigente.</span></p>
-      <dl class="ficha">
-        <div><dt>Ubicación</dt><dd>Pollença, Mallorca</dd></div>
-        <div><dt>Tipo</dt><dd>Hotel</dd></div>
-        <div><dt>Participación</dt><dd>Àngel Frau</dd></div>
-        <div><dt>Empresa en ese momento</dt><dd><span class="pend">Nombre de la empresa</span></dd></div>
-      </dl>
-      <div class="foto foto-grande"><svg viewBox="0 0 493 468"><use href="#isotipo"/></svg><span>Fotografía o plano del proyecto</span></div>
-    </div>
-  </section>
-  <section class="bloque misma">
-    <div class="envoltura dos-col">
-      <h2>El proyecto</h2>
-      <ul class="lista-servicios">
-        <li><h4>Contexto</h4><p><span class="pend">Qué se construía o reformaba, alcance y plazos.</span></p></li>
-        <li><h4>Instalaciones</h4><p><span class="pend">Sistemas principales: climatización, electricidad, fontanería, control…</span></p></li>
-        <li><h4>Qué hice yo</h4><p><span class="pend">Responsabilidad concreta de Àngel: diseño, coordinación, mediciones, obra.</span></p></li>
-        <li><h4>Resultado</h4><p><span class="pend">Cifras o hitos que se puedan publicar.</span></p></li>
-      </ul>
-    </div>
-  </section>`;
-
-document.getElementById('listaSectores').innerHTML = SECTORES.map(([t,d,areas,dest])=>`
-  <div class="sector${dest?' destacado':''}">
-    <h3>${t}</h3><p>${d}</p>
-    <p class="areas">${areas.map(a=>({infra:'Infraestructura',energia:'Energía',digital:'Digital'})[a]).join(' · ')}</p>
-  </div>`).join('');
-document.getElementById('chipsSectores').innerHTML = SECTORES.slice(0,8).map(s=>`<li>${s[0]}</li>`).join('');
-
-/* ---------- Navegación ---------- */
-const paginas = [...document.querySelectorAll('.pagina')];
-const cab = document.getElementById('cabecera'), menuBoton = document.getElementById('menuBoton');
-const titulos = {inicio:'BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca'};
-function mostrar(){
-  let ruta = decodeURIComponent(location.hash.slice(1)) || 'inicio';
-  if(!paginas.some(p=>p.dataset.pagina===ruta)) ruta='inicio';
-  paginas.forEach(p=>p.classList.toggle('activa', p.dataset.pagina===ruta));
-  const raiz = ruta.split('/')[0];
-  document.querySelectorAll('.nav a').forEach(a=>{
-    a.getAttribute('href')==='#'+raiz ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current');
+  function mostrar(){
+    var x = leer(), ruta = x.ruta;
+    if (!paginas.some(function(p){ return p.getAttribute('data-pagina') === ruta; })) ruta = '';
+    paginas.forEach(function(p){ p.classList.toggle('activa', p.getAttribute('data-pagina') === ruta); });
+    var raiz = ruta.split('/')[0];
+    document.querySelectorAll('.nav > ul > li > a').forEach(function(a){
+      var seg = (a.getAttribute('href') || '').replace(/^#\/?/, '').split('@')[0].split('/')[0];
+      if (seg && seg === raiz) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    var t = TITULOS[ruta] || TITULOS[''];
+    document.title = t.t; if (metaDesc) metaDesc.setAttribute('content', t.d);
+    var destino = x.ancla && document.querySelector('.pagina.activa #' + x.ancla);
+    if (destino) { destino.scrollIntoView(); } else { window.scrollTo(0, 0); }
+    cab.classList.remove('abierta'); if (boton) boton.setAttribute('aria-expanded', 'false');
+  }
+  window.addEventListener('hashchange', mostrar); mostrar();
+  if (boton) boton.addEventListener('click', function(){
+    var ab = cab.classList.toggle('abierta'); boton.setAttribute('aria-expanded', ab);
   });
-  const h1 = document.querySelector('.pagina.activa h1');
-  document.title = ruta==='inicio' ? titulos.inicio : (h1? h1.textContent+' · BAFRAS Engineering' : 'BAFRAS Engineering');
-  window.scrollTo(0,0);
-  cab.classList.remove('abierta'); menuBoton.setAttribute('aria-expanded','false');
-  if(ruta==='inicio'){ const h=document.getElementById('hero'); h.classList.remove('animar'); void h.offsetWidth; h.classList.add('animar'); }
-}
-addEventListener('hashchange', mostrar); mostrar();
-menuBoton.addEventListener('click',()=>{
-  const ab = cab.classList.toggle('abierta');
-  menuBoton.setAttribute('aria-expanded', ab);
-  cab.style.setProperty('--alto-nav', document.getElementById('nav').offsetHeight+'px');
-});
-document.getElementById('anio').textContent = new Date().getFullYear();
+  var an = document.getElementById('anio'); if (an) an.textContent = new Date().getFullYear();
+  var f = document.getElementById('formulario');
+  if (f) f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var aviso = document.getElementById('avisoForm'), btn = f.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Enviando…';
+    fetch('https://formsubmit.co/ajax/info@bafras.com', {method:'POST', headers:{'Accept':'application/json'}, body:new FormData(f)})
+      .then(function(r){ if(!r.ok) throw 0; aviso.textContent = 'Consulta enviada. Te responderemos lo antes posible.'; f.reset(); })
+      .catch(function(){ aviso.innerHTML = 'No se ha podido enviar. Escríbenos directamente a <a href="mailto:info@bafras.com">info@bafras.com</a>.'; })
+      .then(function(){ aviso.classList.add('visible'); btn.disabled = false; btn.textContent = 'Enviar consulta'; });
+  });
+})();
 
-/* ---------- Formulario ---------- */
-document.getElementById('formulario').addEventListener('submit', async e=>{
-  e.preventDefault();
-  const f=e.target, aviso=document.getElementById('avisoForm'), btn=f.querySelector('button');
-  btn.disabled=true; btn.textContent='Enviando…';
-  try{
-    const r = await fetch('https://formsubmit.co/ajax/info@bafras.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)});
-    if(!r.ok) throw 0;
-    aviso.textContent='Consulta enviada. Te responderemos lo antes posible.'; f.reset();
-  }catch(_){
-    aviso.innerHTML='No se ha podido enviar. Escríbenos directamente a <a href="mailto:info@bafras.com">info@bafras.com</a>.';
-  }
-  aviso.classList.add('visible'); btn.disabled=false; btn.textContent='Enviar consulta';
-});
 </script>
 </body>
 </html>
