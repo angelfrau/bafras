@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- BAFRAS web v9 · 28/09 12:22 -->
+<!-- BAFRAS web v9 · 28/09 12:34 -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -580,6 +580,11 @@ h3 + p{margin-top:6px}
 .version{opacity:1;color:var(--gris);font-size:.78rem}
 .flujo > .solo-lectores + *{margin-top:0}
 
+/* Retratos: sin fondos grises. Si no hay foto, verde oscuro con iniciales; con foto, recorte que prioriza la cara */
+.retrato,.responsable .retrato,.socio-largo .retrato{background:var(--pino);color:#fff}
+.retrato.con-foto{background:var(--pino);color:transparent}
+.retrato img{object-position:center 22%}
+
 
 /* Páginas (una sola HTML) */
 .pagina{display:none}
@@ -960,7 +965,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <div>
         <p class="entradilla" style="color:var(--tinta)">Haber trabajado directamente en obra nos da una visión práctica. No se trata solo de diseñar: se trata de que lo que dibujamos tenga sentido y pueda ejecutarse correctamente.</p>
         <div class="responsable">
-          <div class="retrato" aria-hidden="true" data-foto="angel" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">ÀF</div>
+          <div class="retrato" aria-hidden="true" data-foto="angel,Angel,angel-frau,angel_frau" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">ÀF</div>
           <div><h4 role="heading" aria-level="3">Àngel Frau</h4><p>Responsable de Infrastructure</p></div>
         </div>
       </div>
@@ -1010,7 +1015,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <div>
         <p class="entradilla" style="color:var(--tinta)">Una instalación energética no se diseña aislada. Depende de cómo se usa el edificio y de cómo se controla, por eso la trabajamos junto a las otras dos capacidades.</p>
         <div class="responsable">
-          <div class="retrato" aria-hidden="true" data-foto="murti" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">MB</div>
+          <div class="retrato" aria-hidden="true" data-foto="murti,Murti,murti-bar,murti_bar" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">MB</div>
           <div><h4 role="heading" aria-level="3">Murti Bär</h4><p>Responsable de Energy Systems</p></div>
         </div>
       </div>
@@ -1060,7 +1065,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <div>
         <p class="entradilla" style="color:var(--tinta)">Los sistemas de control coordinan y optimizan lo que diseñamos, y facilitan su operación y mantenimiento. Es una de las principales diferencias frente a una ingeniería más tradicional.</p>
         <div class="responsable">
-          <div class="retrato" aria-hidden="true" data-foto="amin" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">AA</div>
+          <div class="retrato" aria-hidden="true" data-foto="amin,Amin,amin-asbai,amin_asbai" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">AA</div>
           <div><h4 role="heading" aria-level="3">Amin Asbai</h4><p>Responsable de Digital Systems</p></div>
         </div>
       </div>
@@ -1392,16 +1397,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <h2>Equipo</h2>
       <p style="max-width:62ch">Los tres estamos involucrados en los proyectos y disponibles para el cliente.</p>
       <div class="socios-largos"><article class="socio-largo">
-          <div class="retrato" aria-hidden="true" data-foto="angel">ÀF</div>
-          <div>
-            <h3>Àngel Frau</h3>
-            <p class="rol">Infrastructure · MEP y ejecución de obra</p>
-            <p>Ingeniero MEP con siete años de experiencia en sistemas eléctricos, mecánicos, de fontanería y protección contra incendios para hoteles, colegios y residencial de alto nivel en Mallorca e Ibiza. Ha trabajado tanto en diseño como en construcción, liderando las instalaciones desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p><p>Su enfoque es hacer que la ingeniería funcione en el mundo real: diseños construibles, coordinación temprana y soluciones prácticas que equilibran rendimiento técnico, coste y plazo. Conoce también la economía del proyecto: análisis de ofertas, mediciones, certificaciones y valoración de modificados en proyectos de gran escala. Le interesan el diseño integrado de edificios, la ingeniería digital y unas instalaciones más eficientes, fiables y construibles.</p>
-            <ul class="chips" style="margin:16px 0"><li>7 años en MEP</li><li>Hoteles, colegios y residencial de alto nivel</li><li>Mallorca e Ibiza</li><li>Diseño y obra</li></ul>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="https://www.linkedin.com/in/angel-frau-40b999179/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
-          </div>
-        </article><article class="socio-largo">
-          <div class="retrato" aria-hidden="true" data-foto="murti">MB</div>
+          <div class="retrato" aria-hidden="true" data-foto="murti,Murti,murti-bar,murti_bar">MB</div>
           <div>
             <h3>Murti Bär</h3>
             <p class="rol">Energy Systems · energía, digitalización e IA aplicada</p>
@@ -1410,7 +1406,16 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
             <ul class="vinculos"><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="https://www.linkedin.com/in/murti-b%C3%A4r/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
           </div>
         </article><article class="socio-largo">
-          <div class="retrato" aria-hidden="true" data-foto="amin">AA</div>
+          <div class="retrato" aria-hidden="true" data-foto="angel,Angel,angel-frau,angel_frau">ÀF</div>
+          <div>
+            <h3>Àngel Frau</h3>
+            <p class="rol">Infrastructure · MEP y ejecución de obra</p>
+            <p>Ingeniero MEP con siete años de experiencia en sistemas eléctricos, mecánicos, de fontanería y protección contra incendios para hoteles, colegios y residencial de alto nivel en Mallorca e Ibiza. Ha trabajado tanto en diseño como en construcción, liderando las instalaciones desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p><p>Su enfoque es hacer que la ingeniería funcione en el mundo real: diseños construibles, coordinación temprana y soluciones prácticas que equilibran rendimiento técnico, coste y plazo. Conoce también la economía del proyecto: análisis de ofertas, mediciones, certificaciones y valoración de modificados en proyectos de gran escala. Le interesan el diseño integrado de edificios, la ingeniería digital y unas instalaciones más eficientes, fiables y construibles.</p>
+            <ul class="chips" style="margin:16px 0"><li>7 años en MEP</li><li>Hoteles, colegios y residencial de alto nivel</li><li>Mallorca e Ibiza</li><li>Diseño y obra</li></ul>
+            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="https://www.linkedin.com/in/angel-frau-40b999179/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
+          </div>
+        </article><article class="socio-largo">
+          <div class="retrato" aria-hidden="true" data-foto="amin,Amin,amin-asbai,amin_asbai">AA</div>
           <div>
             <h3>Amin Asbai</h3>
             <p class="rol">Digital Systems · automatización y control</p>
@@ -1533,7 +1538,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       </div>
     </div>
     <div class="legal">
-      <span>© <span id="anio">2026</span> BAFRAS Engineering S.L. · Mallorca · <span class="version">v9 · 28/09 12:22</span></span>
+      <span>© <span id="anio">2026</span> BAFRAS Engineering S.L. · Mallorca · <span class="version">v9 · 28/09 12:34</span></span>
       <span><a href="#" class="pend">Aviso legal</a> · <a href="#" class="pend">Privacidad</a> · <a href="#" class="pend">Cookies</a></span>
     </div>
   </div>
@@ -1590,13 +1595,15 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     var ab = cab.classList.toggle('abierta'); boton.setAttribute('aria-expanded', ab);
   });
   document.querySelectorAll('[data-foto]').forEach(function(caja){
-    var base = caja.getAttribute('data-foto'), exts = ['png', 'jpg', 'jpeg', 'webp'], i = 0;
+    var nombres = caja.getAttribute('data-foto').split(','), exts = ['png', 'jpg', 'jpeg', 'webp', 'PNG', 'JPG', 'JPEG'], cand = [];
+    nombres.forEach(function(n){ exts.forEach(function(e){ cand.push('/images/' + n + '.' + e); }); });
+    var i = 0;
     (function probar(){
-      if (i >= exts.length) return;
+      if (i >= cand.length) return;
       var im = new Image(); im.alt = '';
       im.onload = function(){ caja.classList.add('con-foto'); caja.appendChild(im); };
       im.onerror = probar;
-      im.src = '/images/' + base + '.' + exts[i++];
+      im.src = cand[i++];
     })();
   });
   var an = document.getElementById('anio'); if (an) an.textContent = new Date().getFullYear();
