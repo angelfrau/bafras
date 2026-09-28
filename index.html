@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- BAFRAS web v9 · 28/09 12:22 -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -536,6 +537,50 @@ h3 + p{margin-top:6px}
 .caso .enlace{margin-top:auto}
 
 
+/* =========================================================
+   V8 · foto del inicio uniforme (sin degradado lateral)
+   ========================================================= */
+.hero-bg::after{background:rgba(14,43,37,.5)}
+@media (max-width:860px){.hero-bg::after{background:rgba(14,43,37,.5)}}
+.hero h1,.hero .entradilla{text-shadow:0 1px 22px rgba(14,43,37,.5)}
+
+/* =========================================================
+   V8 · espacios más compactos y uniformes en TODAS las pestañas
+   sección 56-80px · cabecera de página → contenido 48px
+   título → texto 16px · texto → bloque 40px · bloque → enlace 32px
+   ========================================================= */
+:root{--sp-seccion:clamp(56px,6vw,80px)}
+.flujo > :is(.necesidades,.pilares,.fases,.cifras,.casos,.sect-cards,.audiencias,.socios-largos,.conexiones,.colab-teaser,.proyectos,.tres,.tres-cap,.vacio-estado,.claves,.metodo){margin-top:40px}
+.flujo > .mas{margin-top:32px}
+.flujo > .subtitulo{margin-top:48px}
+.flujo > .subtitulo + .cifras{margin-top:24px}
+.flujo > :is(.lema,.nota,.cadena){margin-top:28px}
+.flujo > .tres-cap{margin-top:28px}
+.bloque.cab{padding-top:64px;padding-bottom:0}
+.bloque.cab + .bloque{padding-top:48px}
+.pilar{min-height:0}
+.dos-col{gap:clamp(32px,5vw,72px)}
+.sector-bloque{padding:36px 0}
+.sector-bloque:first-of-type{padding-top:0}
+.lista-servicios li{padding:20px 0}
+.migas{margin-bottom:20px}
+.ficha{margin:32px 0}
+.pie{padding-top:48px}
+.pie .legal{margin-top:40px}
+.version{opacity:.55;font-size:.78rem}
+
+/* =========================================================
+   V8 · retratos con foto (si existe images/<nombre>.png|jpg)
+   ========================================================= */
+.retrato{position:relative;overflow:hidden}
+.retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.retrato.con-foto{color:transparent}
+.flujo > :first-child{margin-top:0}
+
+.version{opacity:1;color:var(--gris);font-size:.78rem}
+.flujo > .solo-lectores + *{margin-top:0}
+
+
 /* Páginas (una sola HTML) */
 .pagina{display:none}
 .pagina.activa{display:block}
@@ -638,7 +683,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <ul>
         <li><a href="#/capacidades">Capacidades</a><ul class="sub"><li><a href="#/capacidades/infrastructure">Infrastructure</a></li><li><a href="#/capacidades/energy-systems">Energy Systems</a></li><li><a href="#/capacidades/digital-systems">Digital Systems</a></li><li><a href="#/capacidades@vision-de-sistema">Visión de sistema</a></li><li><a href="#/capacidades@metodologia">Metodología BAFRAS</a></li></ul></li>
         <li><a href="#/sectores">Sectores</a><ul class="sub"><li><a href="#/sectores@hotelero">Hospitality</a></li><li><a href="#/sectores@industria">Industria</a></li><li><a href="#/sectores@deportivos">Centros deportivos</a></li><li><a href="#/sectores@terciario">Edificios y terciario</a></li><li><a href="#/sectores@infraestructura">Infraestructura</a></li><li><a href="#/sectores@publico">Sector público</a></li><li><a href="#/sectores@otros">Otros sectores</a></li></ul></li>
-        <li><a href="#/proyectos">Proyectos</a><ul class="sub"><li><a href="#/proyectos@proyectos-bafras">Proyectos BAFRAS</a></li><li><a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a></li></ul></li>
+        <li><a href="#/proyectos">Proyectos</a></li>
         <li><a href="#/conocimiento">Conocimiento</a><ul class="sub"><li><a href="#/conocimiento@articulos-tecnicos">Artículos técnicos</a></li><li><a href="#/conocimiento@casos-de-estudio">Casos de estudio</a></li><li><a href="#/conocimiento@guias-tecnicas">Guías técnicas</a></li><li><a href="#/conocimiento@innovacion">Innovación</a></li></ul></li>
         <li><a href="#/sobre-bafras">Sobre BAFRAS</a><ul class="sub"><li><a href="#/sobre-bafras@quienes-somos">Quiénes somos</a></li><li><a href="#/sobre-bafras@equipo">Equipo</a></li><li><a href="#/sobre-bafras@filosofia">Filosofía y valores</a></li></ul></li>
         <li class="cta"><a href="#/contacto">Contacto</a></li>
@@ -728,12 +773,12 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     </div>
   </section>
 
-  <section class="bloque oscuro" id="como-trabajamos">
+  <section class="bloque piedra" id="como-trabajamos">
     <div class="envoltura flujo">
       <h2 class="prosa">Primero entendemos. Después decidimos qué tiene sentido desarrollar.</h2>
       <p class="entradilla">No partimos de una tecnología ni de una solución predeterminada. Partimos del activo, de los datos disponibles, de sus condicionantes y del problema que debe resolverse.</p>
       <p style="max-width:62ch">Nuestro trabajo consiste en reducir progresivamente la incertidumbre hasta convertir una necesidad técnica en una decisión fundamentada y, cuando procede, en una solución definida para su implantación.</p>
-      <ol class="fases"><li><div class="fase-cab"><span class="n">1</span><h3>Entender</h3></div><p>Analizamos el activo y sus datos para saber cómo funciona y dónde está el problema.</p></li><li><div class="fase-cab"><span class="n">2</span><h3>Decidir</h3></div><p>Comparamos alternativas y elegimos con criterio qué tiene sentido hacer.</p></li><li><div class="fase-cab"><span class="n">3</span><h3>Desarrollar</h3></div><p>Diseñamos la solución y acompañamos su implantación hasta que funciona.</p></li><li><div class="fase-cab"><span class="n">4</span><h3>Verificar</h3></div><p>Comprobamos que el resultado es el esperado y buscamos nuevas mejoras.</p></li></ol>
+      <ol class="fases claro"><li><div class="fase-cab"><span class="n">1</span><h3>Entender</h3></div><p>Analizamos el activo y sus datos para saber cómo funciona y dónde está el problema.</p></li><li><div class="fase-cab"><span class="n">2</span><h3>Decidir</h3></div><p>Comparamos alternativas y elegimos con criterio qué tiene sentido hacer.</p></li><li><div class="fase-cab"><span class="n">3</span><h3>Desarrollar</h3></div><p>Diseñamos la solución y acompañamos su implantación hasta que funciona.</p></li><li><div class="fase-cab"><span class="n">4</span><h3>Verificar</h3></div><p>Comprobamos que el resultado es el esperado y buscamos nuevas mejoras.</p></li></ol>
       <p class="mas"><a class="enlace" href="#/capacidades@metodologia">Conoce cómo trabajamos</a></p>
     </div>
   </section>
@@ -754,7 +799,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     <div class="envoltura flujo">
       <h2 class="prosa">La capacidad se demuestra en proyectos reales.</h2>
       <p class="entradilla">Nuestra experiencia se ha construido trabajando sobre activos, instalaciones y sistemas reales, asumiendo responsabilidades técnicas dentro de proyectos donde ingeniería, ejecución y operación deben funcionar conjuntamente.</p>
-      <p style="max-width:62ch">Estos son algunos de los proyectos en los que han participado los socios a lo largo de su trayectoria, y que ayudan a entender las capacidades que hoy convergen en BAFRAS.</p>
+      <p style="max-width:62ch">Estos son algunos de los proyectos en los que ha participado el equipo a lo largo de su trayectoria, y que ayudan a entender las capacidades que hoy convergen en BAFRAS.</p>
       <div class="casos"><a class="caso" href="#/proyectos/experiencia-del-equipo/campus-universitario">
           <span class="caso-cat">Transición energética e integración de sistemas</span>
           <h3>Campus universitario · Solar fotovoltaica y almacenamiento</h3>
@@ -836,14 +881,14 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
 </div>
 <div class="pagina" data-pagina="capacidades">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       
       <h1>Capacidades</h1>
       <p class="entradilla">Tres capacidades para intervenir sobre un mismo sistema. Cada una responde a una dimensión diferente del activo y puede aplicarse de forma independiente o combinarse con las demás cuando el proyecto lo requiere.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0">
+  <section class="bloque misma">
     <div class="envoltura flujo"><h2 class="solo-lectores">Las tres capacidades</h2><div class="pilares sin-margen"><a class="pilar" href="#/capacidades/infrastructure">
         <h3>Infrastructure</h3>
         <p class="dimension">La infraestructura física y las instalaciones sobre las que funciona el activo.</p>
@@ -886,20 +931,20 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="capacidades/infrastructure">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       <p class="migas"><a href="#/capacidades">Capacidades</a> / Infrastructure</p>
       <h1>Infrastructure</h1>
       <p class="entradilla">La infraestructura física y las instalaciones sobre las que funciona el activo.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0">
+  <section class="bloque misma">
     <div class="envoltura dos-col">
       <h2>Qué hacemos</h2>
       <div>
@@ -915,7 +960,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <div>
         <p class="entradilla" style="color:var(--tinta)">Haber trabajado directamente en obra nos da una visión práctica. No se trata solo de diseñar: se trata de que lo que dibujamos tenga sentido y pueda ejecutarse correctamente.</p>
         <div class="responsable">
-          <div class="retrato" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">ÀF</div>
+          <div class="retrato" aria-hidden="true" data-foto="angel" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">ÀF</div>
           <div><h4 role="heading" aria-level="3">Àngel Frau</h4><p>Responsable de Infrastructure</p></div>
         </div>
       </div>
@@ -936,20 +981,20 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="capacidades/energy-systems">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       <p class="migas"><a href="#/capacidades">Capacidades</a> / Energy Systems</p>
       <h1>Energy Systems</h1>
       <p class="entradilla">Cómo se genera, distribuye, almacena y utiliza la energía.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0">
+  <section class="bloque misma">
     <div class="envoltura dos-col">
       <h2>Qué hacemos</h2>
       <div>
@@ -965,7 +1010,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <div>
         <p class="entradilla" style="color:var(--tinta)">Una instalación energética no se diseña aislada. Depende de cómo se usa el edificio y de cómo se controla, por eso la trabajamos junto a las otras dos capacidades.</p>
         <div class="responsable">
-          <div class="retrato" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">MB</div>
+          <div class="retrato" aria-hidden="true" data-foto="murti" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">MB</div>
           <div><h4 role="heading" aria-level="3">Murti Bär</h4><p>Responsable de Energy Systems</p></div>
         </div>
       </div>
@@ -986,20 +1031,20 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="capacidades/digital-systems">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       <p class="migas"><a href="#/capacidades">Capacidades</a> / Digital Systems</p>
       <h1>Digital Systems</h1>
       <p class="entradilla">Cómo se mide, controla y utiliza la información del sistema físico.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0">
+  <section class="bloque misma">
     <div class="envoltura dos-col">
       <h2>Qué hacemos</h2>
       <div>
@@ -1015,7 +1060,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <div>
         <p class="entradilla" style="color:var(--tinta)">Los sistemas de control coordinan y optimizan lo que diseñamos, y facilitan su operación y mantenimiento. Es una de las principales diferencias frente a una ingeniería más tradicional.</p>
         <div class="responsable">
-          <div class="retrato" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">AA</div>
+          <div class="retrato" aria-hidden="true" data-foto="amin" style="width:64px;height:64px;min-height:0;font-size:1.3rem;aspect-ratio:auto;flex:none">AA</div>
           <div><h4 role="heading" aria-level="3">Amin Asbai</h4><p>Responsable de Digital Systems</p></div>
         </div>
       </div>
@@ -1036,28 +1081,26 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="sectores">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       
       <h1>Sectores</h1>
       <p class="entradilla">Las necesidades cambian según el tipo de activo, su uso, sus instalaciones y su forma de operar. Aplicamos nuestras capacidades allí donde infraestructura, energía y sistemas técnicos tienen un impacto relevante sobre el funcionamiento, la inversión o la operación del activo.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0">
+  <section class="bloque misma">
     <div class="envoltura flujo"><div class="sector-bloque" id="hotelero">
         <div class="dos-col">
           <div><h2>Hospitality</h2><p style="color:var(--gris)">Hoteles, resorts y complejos turísticos.</p></div>
           <div>
             <h4 role="heading" aria-level="3">Ámbitos de trabajo</h4>
             <ul class="chips"><li>Instalaciones</li><li>Climatización</li><li>ACS</li><li>Agua</li><li>Energía</li><li>Electrificación</li><li>Generación y almacenamiento</li><li>Monitorización</li><li>Reformas</li><li>Optimización de activos</li></ul>
-            <h4 role="heading" aria-level="3">Capacidades que aplicamos</h4>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
           </div>
         </div>
       </div><div class="sector-bloque" id="industria">
@@ -1066,8 +1109,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <div>
             <h4 role="heading" aria-level="3">Ámbitos de trabajo</h4>
             <ul class="chips"><li>Infraestructura eléctrica</li><li>Energía</li><li>Climatización y refrigeración</li><li>Electrificación</li><li>Automatización</li><li>Control</li><li>Eficiencia</li><li>Ampliaciones</li><li>Nuevas inversiones</li></ul>
-            <h4 role="heading" aria-level="3">Capacidades que aplicamos</h4>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
           </div>
         </div>
       </div><div class="sector-bloque" id="deportivos">
@@ -1076,8 +1117,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <div>
             <h4 role="heading" aria-level="3">Ámbitos de trabajo</h4>
             <ul class="chips"><li>Instalaciones térmicas</li><li>Climatización</li><li>ACS</li><li>Piscinas</li><li>Electricidad</li><li>Agua</li><li>Energía</li><li>Control</li><li>Optimización operacional</li></ul>
-            <h4 role="heading" aria-level="3">Capacidades que aplicamos</h4>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
           </div>
         </div>
       </div><div class="sector-bloque" id="terciario">
@@ -1086,8 +1125,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <div>
             <h4 role="heading" aria-level="3">Ámbitos de trabajo</h4>
             <ul class="chips"><li>Instalaciones</li><li>Reformas</li><li>Electricidad</li><li>Climatización</li><li>Eficiencia energética</li><li>Generación distribuida</li><li>Automatización</li><li>Monitorización</li></ul>
-            <h4 role="heading" aria-level="3">Capacidades que aplicamos</h4>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
           </div>
         </div>
       </div><div class="sector-bloque" id="infraestructura">
@@ -1096,8 +1133,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <div>
             <h4 role="heading" aria-level="3">Ámbitos de trabajo</h4>
             <ul class="chips"><li>Infraestructura eléctrica</li><li>Generación</li><li>Almacenamiento</li><li>Movilidad eléctrica</li><li>Bombeo</li><li>Automatización</li><li>Monitorización</li><li>Integración de sistemas</li></ul>
-            <h4 role="heading" aria-level="3">Capacidades que aplicamos</h4>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
           </div>
         </div>
       </div><div class="sector-bloque" id="publico">
@@ -1106,8 +1141,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <div>
             <h4 role="heading" aria-level="3">Ámbitos de trabajo</h4>
             <ul class="chips"><li>Ayuntamientos y administraciones locales</li><li>Colegios e institutos</li><li>Edificios públicos</li><li>Licitaciones que encajen con nuestra capacidad</li></ul>
-            <h4 role="heading" aria-level="3">Capacidades que aplicamos</h4>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
           </div>
         </div>
       </div><div class="sector-bloque" id="otros">
@@ -1116,8 +1149,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <div>
             <h4 role="heading" aria-level="3">Ámbitos de trabajo</h4>
             <ul class="chips"><li>Naves y almacenes</li><li>Sector náutico</li><li>Comercio y restauración</li><li>Edificios residenciales</li></ul>
-            <h4 role="heading" aria-level="3">Capacidades que aplicamos</h4>
-            <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li></ul>
           </div>
         </div>
       </div>
@@ -1126,33 +1157,22 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="proyectos">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       
       <h1>Proyectos</h1>
-      <p class="entradilla">La capacidad se demuestra en proyectos reales. BAFRAS es una empresa nueva, pero sus socios no empiezan de cero: separamos siempre los proyectos de BAFRAS de la experiencia previa del equipo.</p>
+      <p class="entradilla">La capacidad se demuestra en proyectos reales. Estos son algunos de los proyectos en los que ha participado el equipo a lo largo de su trayectoria.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0" id="proyectos-bafras">
+  <section class="bloque misma" id="experiencia-del-equipo">
     <div class="envoltura flujo">
-      <h2>Proyectos BAFRAS</h2>
-      <p style="color:var(--gris)">Trabajos desarrollados directamente por BAFRAS Engineering.</p>
-      <div class="vacio-estado">
-        <p><strong>Todavía no hay proyectos publicados con marca BAFRAS.</strong></p>
-        <p>Aparecerán aquí a medida que los ejecutemos, y sustituirán poco a poco a la experiencia previa del equipo.</p>
-      </div>
-    </div>
-  </section>
-  <section class="bloque piedra" id="experiencia-del-equipo">
-    <div class="envoltura flujo">
-      <h2>Experiencia del equipo</h2>
-      <p style="max-width:62ch">Proyectos desarrollados por los socios durante su trayectoria profesional previa. Indicamos siempre quién participó y con qué responsabilidad.</p>
+      <h2 class="solo-lectores">Proyectos del equipo</h2>
       <div class="casos"><a class="caso" href="#/proyectos/experiencia-del-equipo/campus-universitario">
           <span class="caso-cat">Transición energética e integración de sistemas</span>
           <h3>Campus universitario · Solar fotovoltaica y almacenamiento</h3>
@@ -1178,18 +1198,17 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <p class="caso-caps">Energy Systems · Digital Systems</p>
           <span class="enlace">Ver proyecto</span>
         </a></div>
-      <p class="nota">Las cifras corresponden a la experiencia profesional previa de cada socio. <a class="enlace" href="#/sobre-bafras@equipo">Ver el perfil de cada uno</a>.</p>
     </div>
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="proyectos/experiencia-del-equipo/campus-universitario">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       <p class="migas"><a href="#/proyectos">Proyectos</a> / Campus universitario · Solar fotovoltaica y almacenamiento</p>
       <h1>Campus universitario · Solar fotovoltaica y almacenamiento</h1>
@@ -1226,13 +1245,13 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       <p class="migas"><a href="#/proyectos">Proyectos</a> / Hoteles, colegios y residencial de alto nivel</p>
       <h1>Hoteles, colegios y residencial de alto nivel</h1>
@@ -1269,13 +1288,13 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="proyectos/experiencia-del-equipo/energia-offshore-internacional">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       <p class="migas"><a href="#/proyectos">Proyectos</a> / Proyecto energético internacional</p>
       <h1>Proyecto energético internacional</h1>
@@ -1312,20 +1331,20 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="conocimiento">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       
       <h1>Conocimiento</h1>
       <p class="entradilla">Aquí demostramos lo que sabemos con contenido técnico: análisis, casos y guías que ayudan a decidir mejor antes de proyectar.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0">
+  <section class="bloque misma">
     <div class="envoltura flujo"><div class="sector-bloque" id="articulos-tecnicos">
         <h2>Artículos técnicos</h2>
         <p style="color:var(--gris);max-width:62ch">Análisis técnicos para entender qué opción tiene sentido en cada caso.</p>
@@ -1352,14 +1371,14 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
 </div>
 <div class="pagina" data-pagina="sobre-bafras">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       
       <h1>Sobre BAFRAS</h1>
       <p class="entradilla">Experiencia que converge en BAFRAS: tres trayectorias profesionales complementarias y una misma forma de trabajar.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0" id="quienes-somos">
+  <section class="bloque misma" id="quienes-somos">
     <div class="envoltura dos-col">
       <h2>Quiénes somos</h2>
       <div class="prosa">
@@ -1371,9 +1390,9 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   <section class="bloque piedra" id="equipo">
     <div class="envoltura flujo">
       <h2>Equipo</h2>
-      <p style="max-width:62ch">Los tres socios estamos involucrados en los proyectos y disponibles para el cliente.</p>
+      <p style="max-width:62ch">Los tres estamos involucrados en los proyectos y disponibles para el cliente.</p>
       <div class="socios-largos"><article class="socio-largo">
-          <div class="retrato" aria-hidden="true">ÀF</div>
+          <div class="retrato" aria-hidden="true" data-foto="angel">ÀF</div>
           <div>
             <h3>Àngel Frau</h3>
             <p class="rol">Infrastructure · MEP y ejecución de obra</p>
@@ -1382,7 +1401,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
             <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="https://www.linkedin.com/in/angel-frau-40b999179/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
           </div>
         </article><article class="socio-largo">
-          <div class="retrato" aria-hidden="true">MB</div>
+          <div class="retrato" aria-hidden="true" data-foto="murti">MB</div>
           <div>
             <h3>Murti Bär</h3>
             <p class="rol">Energy Systems · energía, digitalización e IA aplicada</p>
@@ -1391,7 +1410,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
             <ul class="vinculos"><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="https://www.linkedin.com/in/murti-b%C3%A4r/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
           </div>
         </article><article class="socio-largo">
-          <div class="retrato" aria-hidden="true">AA</div>
+          <div class="retrato" aria-hidden="true" data-foto="amin">AA</div>
           <div>
             <h3>Amin Asbai</h3>
             <p class="rol">Digital Systems · automatización y control</p>
@@ -1416,20 +1435,20 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   </section>
   <section class="bloque oscuro banda">
     <div class="envoltura flujo">
-      <h2>Cuéntanos qué necesitas. Te responde uno de los socios.</h2>
+      <h2>Cuéntanos qué necesitas.</h2>
       <a class="boton lleno" href="#/contacto">Cuéntanos tu proyecto</a>
     </div>
   </section>
 </div>
 <div class="pagina" data-pagina="contacto">
-<section class="bloque">
+<section class="bloque cab">
     <div class="envoltura flujo">
       
       <h1>Contacto</h1>
-      <p class="entradilla">Cuéntanos brevemente el proyecto, el activo o la necesidad técnica. Analizaremos el contexto y veremos cómo podemos aportar valor desde BAFRAS. Te responde directamente uno de los socios.</p>
+      <p class="entradilla">Cuéntanos brevemente el proyecto, el activo o la necesidad técnica. Analizaremos el contexto y veremos cómo podemos aportar valor desde BAFRAS.</p>
     </div>
   </section>
-  <section class="bloque misma" style="padding-top:0">
+  <section class="bloque misma">
     <div class="envoltura flujo">
       <div class="contacto" style="margin-top:0">
         <div class="vias" id="contacto-directo">
@@ -1514,14 +1533,14 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       </div>
     </div>
     <div class="legal">
-      <span>© <span id="anio">2026</span> BAFRAS Engineering S.L. · Mallorca</span>
+      <span>© <span id="anio">2026</span> BAFRAS Engineering S.L. · Mallorca · <span class="version">v9 · 28/09 12:22</span></span>
       <span><a href="#" class="pend">Aviso legal</a> · <a href="#" class="pend">Privacidad</a> · <a href="#" class="pend">Cookies</a></span>
     </div>
   </div>
 </footer>
 <script>
 (function(){
-  var TITULOS = {"": {"t": "BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca", "d": "Infrastructure, Energy Systems y Digital Systems en un mismo despacho de ingeniería en Mallorca. Instalaciones, energía fotovoltaica y almacenamiento, automatización y datos."}, "capacidades": {"t": "Capacidades: Infrastructure, Energy Systems y Digital Systems · BAFRAS Engineering", "d": "Infraestructura e instalaciones, sistemas energéticos y sistemas digitales integrados en un mismo despacho de ingeniería en Mallorca."}, "capacidades/infrastructure": {"t": "Infrastructure: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering", "d": "Diseño, coordinación y dirección de instalaciones eléctricas y térmicas, reformas y ampliaciones en Mallorca. Ingeniería con experiencia real en obra."}, "capacidades/energy-systems": {"t": "Energy Systems: fotovoltaica, almacenamiento y eficiencia energética en Mallorca · BAFRAS Engineering", "d": "Estudio, diseño y optimización de sistemas energéticos: generación fotovoltaica, almacenamiento BESS, electrificación y eficiencia para edificios e industria en Mallorca."}, "capacidades/digital-systems": {"t": "Digital Systems: automatización, control y datos para edificios e industria · BAFRAS Engineering", "d": "Monitorización, automatización, BMS/SCADA e integración de sistemas para edificios e industria en Mallorca, con análisis de datos y herramientas digitales de ingeniería."}, "sectores": {"t": "Sectores: hospitality, industria, centros deportivos, terciario e infraestructura · BAFRAS Engineering", "d": "Sectores en los que trabaja BAFRAS Engineering en Mallorca: hospitality, industria, centros deportivos, edificios y terciario, infraestructura y sector público."}, "proyectos": {"t": "Proyectos y experiencia del equipo · BAFRAS Engineering", "d": "Proyectos de BAFRAS Engineering y experiencia previa de sus socios en energía fotovoltaica y almacenamiento, instalaciones MEP y automatización."}, "proyectos/experiencia-del-equipo/campus-universitario": {"t": "Campus universitario · Solar fotovoltaica y almacenamiento · BAFRAS Engineering", "d": "Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctr"}, "proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial": {"t": "Hoteles, colegios y residencial de alto nivel · BAFRAS Engineering", "d": "Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios en hoteles, colegios y residencial de alto nivel, desde la ingeniería y la"}, "proyectos/experiencia-del-equipo/energia-offshore-internacional": {"t": "Proyecto energético internacional · BAFRAS Engineering", "d": "Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y "}, "conocimiento": {"t": "Conocimiento técnico: artículos, casos de estudio y guías · BAFRAS Engineering", "d": "Artículos técnicos, casos de estudio, guías e innovación en instalaciones, energía y sistemas digitales para edificios e industria."}, "sobre-bafras": {"t": "Sobre BAFRAS: quiénes somos, equipo y filosofía · BAFRAS Engineering", "d": "BAFRAS Engineering reúne tres trayectorias complementarias en instalaciones MEP, sistemas energéticos y automatización, con experiencia en proyectos de distinta escala."}, "contacto": {"t": "Contacto · BAFRAS Engineering", "d": "Contacta con BAFRAS Engineering en Mallorca por correo o formulario. Te responde directamente uno de los socios."}};
+  var TITULOS = {"": {"t": "BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca", "d": "Infrastructure, Energy Systems y Digital Systems en un mismo despacho de ingeniería en Mallorca. Instalaciones, energía fotovoltaica y almacenamiento, automatización y datos."}, "capacidades": {"t": "Capacidades: Infrastructure, Energy Systems y Digital Systems · BAFRAS Engineering", "d": "Infraestructura e instalaciones, sistemas energéticos y sistemas digitales integrados en un mismo despacho de ingeniería en Mallorca."}, "capacidades/infrastructure": {"t": "Infrastructure: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering", "d": "Diseño, coordinación y dirección de instalaciones eléctricas y térmicas, reformas y ampliaciones en Mallorca. Ingeniería con experiencia real en obra."}, "capacidades/energy-systems": {"t": "Energy Systems: fotovoltaica, almacenamiento y eficiencia energética en Mallorca · BAFRAS Engineering", "d": "Estudio, diseño y optimización de sistemas energéticos: generación fotovoltaica, almacenamiento BESS, electrificación y eficiencia para edificios e industria en Mallorca."}, "capacidades/digital-systems": {"t": "Digital Systems: automatización, control y datos para edificios e industria · BAFRAS Engineering", "d": "Monitorización, automatización, BMS/SCADA e integración de sistemas para edificios e industria en Mallorca, con análisis de datos y herramientas digitales de ingeniería."}, "sectores": {"t": "Sectores: hospitality, industria, centros deportivos, terciario e infraestructura · BAFRAS Engineering", "d": "Sectores en los que trabaja BAFRAS Engineering en Mallorca: hospitality, industria, centros deportivos, edificios y terciario, infraestructura y sector público."}, "proyectos": {"t": "Proyectos y experiencia del equipo · BAFRAS Engineering", "d": "Proyectos y experiencia del equipo de BAFRAS Engineering en energía fotovoltaica y almacenamiento, instalaciones MEP y automatización."}, "proyectos/experiencia-del-equipo/campus-universitario": {"t": "Campus universitario · Solar fotovoltaica y almacenamiento · BAFRAS Engineering", "d": "Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctr"}, "proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial": {"t": "Hoteles, colegios y residencial de alto nivel · BAFRAS Engineering", "d": "Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios en hoteles, colegios y residencial de alto nivel, desde la ingeniería y la"}, "proyectos/experiencia-del-equipo/energia-offshore-internacional": {"t": "Proyecto energético internacional · BAFRAS Engineering", "d": "Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y "}, "conocimiento": {"t": "Conocimiento técnico: artículos, casos de estudio y guías · BAFRAS Engineering", "d": "Artículos técnicos, casos de estudio, guías e innovación en instalaciones, energía y sistemas digitales para edificios e industria."}, "sobre-bafras": {"t": "Sobre BAFRAS: quiénes somos, equipo y filosofía · BAFRAS Engineering", "d": "BAFRAS Engineering reúne tres trayectorias complementarias en instalaciones MEP, sistemas energéticos y automatización, con experiencia en proyectos de distinta escala."}, "contacto": {"t": "Contacto · BAFRAS Engineering", "d": "Contacta con BAFRAS Engineering en Mallorca por correo o formulario."}};
   var paginas = Array.prototype.slice.call(document.querySelectorAll('.pagina'));
   var cab = document.getElementById('cabecera'), boton = document.getElementById('menuBoton');
   var metaDesc = document.querySelector('meta[name="description"]');
@@ -1569,6 +1588,16 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
   window.addEventListener('hashchange', mostrar); mostrar();
   if (boton) boton.addEventListener('click', function(){
     var ab = cab.classList.toggle('abierta'); boton.setAttribute('aria-expanded', ab);
+  });
+  document.querySelectorAll('[data-foto]').forEach(function(caja){
+    var base = caja.getAttribute('data-foto'), exts = ['png', 'jpg', 'jpeg', 'webp'], i = 0;
+    (function probar(){
+      if (i >= exts.length) return;
+      var im = new Image(); im.alt = '';
+      im.onload = function(){ caja.classList.add('con-foto'); caja.appendChild(im); };
+      im.onerror = probar;
+      im.src = '/images/' + base + '.' + exts[i++];
+    })();
   });
   var an = document.getElementById('anio'); if (an) an.textContent = new Date().getFullYear();
   var f = document.getElementById('formulario');
