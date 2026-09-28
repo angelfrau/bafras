@@ -41,12 +41,12 @@ a{color:inherit}
 h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.18;margin:0;letter-spacing:-.015em}
 h1{font-size:clamp(2.3rem,5.2vw,4.1rem);font-weight:400}
 h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:400}
-h3{font-size:1.4rem}
-h4{font-size:1.1rem}
+h3{font-size:1.25rem}
+h4{font-size:1.05rem}
 p{margin:0 0 1.1em}
 .envoltura{max-width:var(--ancho);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 .prosa{max-width:62ch}
-.entradilla{font-size:1.2rem;color:var(--gris);max-width:58ch}
+.entradilla{font-size:1.25rem;color:var(--gris);max-width:58ch}
 .oscuro,.oscuro-txt{color:var(--blanco)}
 .oscuro{background:var(--pino)}
 .oscuro .entradilla,.oscuro-txt .entradilla{color:var(--gris-claro)}
@@ -100,16 +100,18 @@ p{margin:0 0 1.1em}
   .cabecera.abierta .nav>ul{display:block}
   .cabecera.abierta .nav a{padding:13px 0;border-bottom:1px solid var(--linea);font-size:1.05rem;box-shadow:none}
   .cabecera.abierta .nav .sub{display:block;position:static;border:0;box-shadow:none;padding:0 0 0 16px;min-width:0}
-  .cabecera.abierta .nav .sub a{font-size:.98rem;padding:10px 0;color:var(--gris)}
+  .cabecera.abierta .nav .sub a{font-size:.95rem;padding:10px 0;color:var(--gris)}
   .cabecera.abierta .nav .cta a{margin:16px 0 0;text-align:center;border:0}
 }
 
 /* HERO */
 .hero{min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);display:flex;align-items:center;padding:56px 0 72px;overflow:hidden;position:relative;background-color:var(--pino)}
-.hero-bg{position:absolute;inset:0;background:url("/images/bafras_transicion_energetica.jpg") center/cover no-repeat;opacity:.52;z-index:0}
+.hero-bg{position:absolute;inset:0;background:url("/images/bafras_transicion_energetica.jpg") center/cover no-repeat;z-index:0}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,43,37,.9) 0%,rgba(14,43,37,.72) 34%,rgba(14,43,37,.18) 68%,rgba(14,43,37,.04) 100%)}
+@media (max-width:860px){.hero-bg::after{background:linear-gradient(180deg,rgba(14,43,37,.9) 0%,rgba(14,43,37,.74) 52%,rgba(14,43,37,.12) 100%)}}
 .hero>.envoltura{position:relative;z-index:1}
 .hero .simbolo{position:relative;z-index:1}
-.hero .envoltura{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;width:100%}
+.hero .envoltura{display:grid;grid-template-columns:minmax(0,640px);gap:48px;align-items:center;width:100%}
 .hero h1{font-size:clamp(2.1rem,4.4vw,3.6rem);font-weight:400;max-width:17ch}
 .hero .entradilla{margin-top:24px}
 .simbolo{justify-self:end;width:min(100%,400px);color:var(--blanco)}
@@ -139,7 +141,7 @@ p{margin:0 0 1.1em}
 /* Compromisos */
 .compromisos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px 32px;margin-top:48px}
 @media (min-width:1000px){.compromisos{grid-template-columns:repeat(5,1fr)}}
-.compromisos dt{font-family:var(--display);font-size:1.35rem;font-weight:500;margin-bottom:8px;padding-top:16px;border-top:2px solid var(--piedra-verde)}
+.compromisos dt{font-family:var(--display);font-size:1.25rem;font-weight:500;margin-bottom:8px;padding-top:16px;border-top:2px solid var(--piedra-verde)}
 .compromisos dd{margin:0;color:var(--gris-claro)}
 
 /* Método */
@@ -160,9 +162,9 @@ p{margin:0 0 1.1em}
 .pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .pilar{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linea);padding:32px;text-decoration:none;min-height:360px;transition:border-color .2s}
 .pilar:hover{border-color:var(--verde)}
-.pilar h3{font-size:1.3rem;margin-bottom:10px;padding-top:0}
+.pilar h3{font-size:1.25rem;margin-bottom:10px;padding-top:0}
 .pilar{border-top:3px solid var(--verde)}
-.pilar p{color:var(--gris);font-size:.97rem;line-height:1.7}
+.pilar p{color:var(--gris);font-size:.95rem;line-height:1.7}
 .pilar ul{list-style:none;padding:0;margin:0 0 24px;font-size:.95rem}
 .pilar li{padding:7px 0;border-top:1px solid var(--linea)}
 .pilar .enlace{margin-top:auto;align-self:flex-start}
@@ -174,7 +176,7 @@ p{margin:0 0 1.1em}
 @media (max-width:700px){.alcance{grid-template-columns:1fr}}
 
 /* Página de detalle */
-.migas{font-size:.9rem;color:var(--gris);margin-bottom:28px}
+.migas{font-size:.95rem;color:var(--gris);margin-bottom:28px}
 .migas a{text-decoration:none;border-bottom:1px solid var(--linea)}
 .dos-col{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,6vw,96px);align-items:start}
 .dos-col h2{position:sticky;top:110px}
@@ -185,7 +187,7 @@ p{margin:0 0 1.1em}
 .lista-servicios h4{margin-bottom:6px}
 .lista-servicios p{margin:0;color:var(--gris)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.chips li{border:1px solid var(--linea);padding:6px 12px;font-size:.92rem;background:#fff}
+.chips li{border:1px solid var(--linea);padding:6px 12px;font-size:.95rem;background:#fff}
 .responsable{display:flex;gap:20px;align-items:center;margin-top:32px;padding:24px;background:#fff;border:1px solid var(--linea)}
 .responsable p{margin:0;color:var(--gris)}
 
@@ -193,19 +195,19 @@ p{margin:0 0 1.1em}
 .claves{display:flex;flex-wrap:wrap;gap:24px 40px;margin-top:32px}
 .clave{display:flex;gap:12px;align-items:baseline;max-width:44ch}
 .clave p{margin:0;color:var(--gris);font-size:.95rem}
-.sello{display:inline-block;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:2px;white-space:nowrap}
+.sello{display:inline-block;font-size:.85rem;font-weight:600;padding:4px 10px;border-radius:2px;white-space:nowrap}
 .sello.propio{background:var(--verde);color:#fff}
 .sello.equipo{background:var(--piedra);color:var(--pino);border:1px solid var(--linea)}
 .proyectos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .proyecto{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--linea);transition:border-color .2s}
 a.proyecto:hover{border-color:var(--verde)}
-.foto{aspect-ratio:4/3;background:var(--pino);display:grid;place-items:center;color:var(--gris-claro);font-size:.9rem;position:relative;overflow:hidden}
+.foto{aspect-ratio:4/3;background:var(--pino);display:grid;place-items:center;color:var(--gris-claro);font-size:.95rem;position:relative;overflow:hidden}
 .foto svg{position:absolute;width:70%;color:var(--piedra-verde);opacity:.28}
 .foto span{position:relative}
 .proyecto .cuerpo{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
-.proyecto h3{font-size:1.3rem}
+.proyecto h3{font-size:1.25rem}
 .proyecto p{margin:0;color:var(--gris);font-size:.95rem}
-.proyecto .meta{font-size:.88rem;color:var(--gris);margin-top:auto;padding-top:12px;border-top:1px solid var(--linea)}
+.proyecto .meta{font-size:.85rem;color:var(--gris);margin-top:auto;padding-top:12px;border-top:1px solid var(--linea)}
 .proyecto.vacio{border-style:dashed;background:transparent}
 .proyecto.vacio .foto{background:var(--piedra);color:var(--tinta)}
 @media (max-width:900px){.proyectos{grid-template-columns:1fr 1fr}}
@@ -222,7 +224,7 @@ a.proyecto:hover{border-color:var(--verde)}
 .sectores{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0;margin-top:48px;border-top:1px solid var(--linea);border-left:1px solid var(--linea)}
 .sector{padding:28px;border-right:1px solid var(--linea);border-bottom:1px solid var(--linea);background:var(--papel)}
 .piedra .sector{background:transparent}
-.sector h3{font-size:1.2rem;margin-bottom:8px}
+.sector h3{font-size:1.25rem;margin-bottom:8px}
 .sector p{margin:0 0 14px;color:var(--gris);font-size:.95rem}
 .sector p.areas{margin:0;font-size:.85rem;font-weight:500;color:var(--verde)}
 .sector.destacado p.areas{color:var(--verde-claro)}
@@ -237,7 +239,7 @@ a.proyecto:hover{border-color:var(--verde)}
 .socio h3{margin-bottom:4px}
 .socio .rol{color:var(--verde);font-weight:500;margin-bottom:14px}
 .socio p{color:var(--gris);font-size:.95rem}
-.socio .area{font-size:.9rem;font-weight:500;color:var(--verde);padding-top:14px;border-top:1px solid var(--linea)}
+.socio .area{font-size:.95rem;font-weight:500;color:var(--verde);padding-top:14px;border-top:1px solid var(--linea)}
 @media (max-width:900px){.socios{grid-template-columns:1fr} .socio{display:grid;grid-template-columns:160px 1fr} .retrato{aspect-ratio:auto;min-height:160px}}
 @media (max-width:520px){.socio{display:block} .retrato{aspect-ratio:3/2}}
 .cita{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:400;line-height:1.3;max-width:30ch;margin:0}
@@ -247,10 +249,10 @@ a.proyecto:hover{border-color:var(--verde)}
 @media (max-width:860px){.contacto{grid-template-columns:1fr}}
 .vias{display:flex;flex-direction:column;gap:16px}
 .via{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;padding:20px 24px;background:#fff;border:1px solid var(--linea)}
-.via h3{font-size:1.15rem}
-.via .quien{color:var(--gris);font-size:.9rem;grid-column:1}
+.via h3{font-size:1.05rem}
+.via .quien{color:var(--gris);font-size:.95rem;grid-column:1}
 .via .acciones{grid-row:1/3;grid-column:2;display:flex;gap:8px}
-.via .acciones a{padding:10px 14px;font-size:.9rem}
+.via .acciones a{padding:10px 14px;font-size:.95rem}
 .via.general{background:var(--pino);color:#fff;border-color:var(--pino)}
 .via.general .quien{color:var(--gris-claro)}
 @media (max-width:520px){.via{grid-template-columns:1fr} .via .acciones{grid-row:auto;grid-column:1;margin-top:10px}}
@@ -273,7 +275,7 @@ textarea{min-height:150px;resize:vertical}
 .banda h2{max-width:22ch}
 
 /* Pie */
-.pie{background:var(--papel);color:var(--tinta);padding:56px 0 32px;font-size:.93rem;border-top:1px solid var(--linea)}
+.pie{background:var(--papel);color:var(--tinta);padding:56px 0 32px;font-size:.95rem;border-top:1px solid var(--linea)}
 .pie .rejilla{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
 .pie .logo-pie{display:block;height:56px;width:auto;margin-bottom:20px;color:var(--pino)}
 .pie .pie-t{color:var(--pino);font-size:1rem;font-weight:500;letter-spacing:0;margin-bottom:12px}
@@ -289,7 +291,7 @@ textarea{min-height:150px;resize:vertical}
 .entradas{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .entrada{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--linea);border-top:3px solid var(--verde);padding:32px;min-height:260px;transition:border-color .2s}
 .entrada:hover{border-color:var(--verde)}
-.entrada h3{font-size:1.5rem;margin-bottom:12px}
+.entrada h3{font-size:1.25rem;margin-bottom:12px}
 .entrada p{color:var(--gris)}
 .entrada .enlace{margin-top:auto;align-self:flex-start}
 @media (max-width:900px){.entradas{grid-template-columns:1fr}.entrada{min-height:0}}
@@ -311,7 +313,7 @@ textarea{min-height:150px;resize:vertical}
 .piezas li{border:1px solid var(--linea);padding:20px;background:#fff}
 .piezas h4{margin-bottom:6px}
 .piezas p{margin:0;color:var(--gris);font-size:.95rem}
-.etiqueta{display:inline-block;font-size:.78rem;font-weight:600;padding:3px 8px;background:var(--piedra);color:var(--pino);border-radius:2px;margin-bottom:10px}
+.etiqueta{display:inline-block;font-size:.85rem;font-weight:600;padding:3px 8px;background:var(--piedra);color:var(--pino);border-radius:2px;margin-bottom:10px}
 .ruta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:16px;color:var(--gris);font-size:.95rem}
 .ruta a{color:var(--tinta);font-weight:500}
 .ruta span[aria-hidden]{color:var(--piedra-verde)}
@@ -334,14 +336,14 @@ textarea{min-height:150px;resize:vertical}
 @media (max-width:760px){.problemas{grid-template-columns:1fr}}
 .pasos{list-style:none;padding:0;margin:40px 0 0;display:flex;flex-wrap:wrap;gap:10px 0;counter-reset:paso}
 .pasos li{counter-increment:paso;display:flex;align-items:center;font-size:.95rem;color:var(--gris)}
-.pasos li::before{content:counter(paso);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--pino);color:#fff;font-size:.78rem;font-weight:600;margin-right:8px;flex:none}
+.pasos li::before{content:counter(paso);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--pino);color:#fff;font-size:.85rem;font-weight:600;margin-right:8px;flex:none}
 .pasos li:not(:last-child)::after{content:"→";margin:0 10px;color:var(--verde);font-size:1rem}
 @media (max-width:760px){.pasos{flex-direction:column;gap:8px}.pasos li::after{display:none}}
 .socios-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
 .socio-mini{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--linea);padding:20px;text-decoration:none;transition:border-color .2s}
 .socio-mini:hover{border-color:var(--verde)}
-.socio-mini .ini{flex:none;width:52px;height:52px;display:grid;place-items:center;background:var(--pino);color:#fff;font-family:var(--display);font-size:1.1rem}
-.socio-mini .rol-mini{color:var(--gris);font-size:.9rem}
+.socio-mini .ini{flex:none;width:52px;height:52px;display:grid;place-items:center;background:var(--pino);color:#fff;font-family:var(--display);font-size:1.05rem}
+.socio-mini .rol-mini{color:var(--gris);font-size:.95rem}
 @media (max-width:900px){.socios-mini{grid-template-columns:1fr}}
 .compromisos.claros{grid-template-columns:repeat(3,1fr)}
 .compromisos.claros dt{border-top-color:var(--verde)}
@@ -363,11 +365,11 @@ textarea{min-height:150px;resize:vertical}
 .necesidad{grid-column:span 2;background:#fff;border:1px solid var(--linea);border-top:3px solid var(--verde);padding:26px}
 .necesidad:nth-child(4){grid-column:2 / span 2}
 .necesidad:nth-child(5){grid-column:4 / span 2}
-.necesidad h3{font-size:1.2rem;margin-bottom:10px}
+.necesidad h3{font-size:1.25rem;margin-bottom:10px}
 .necesidad p{margin:0;color:var(--gris);font-size:.95rem}
 @media (max-width:900px){.necesidades{grid-template-columns:1fr}.necesidad,.necesidad:nth-child(4),.necesidad:nth-child(5){grid-column:auto}}
 .colab-teaser{margin-top:48px;padding:32px;background:var(--pino);color:#fff;display:grid;gap:12px}
-.colab-teaser h3{font-size:1.4rem}
+.colab-teaser h3{font-size:1.25rem}
 .colab-teaser p{margin:0;color:var(--gris-claro);max-width:70ch}
 .colab-teaser .enlace{justify-self:start;border-color:var(--gris-claro);color:#fff}
 .pilar .dimension{font-weight:500;color:var(--tinta)}
@@ -380,8 +382,8 @@ textarea{min-height:150px;resize:vertical}
 .grupos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:36px;border-top:1px solid var(--linea);padding-top:28px}
 .grupo{border-left:3px solid var(--verde);padding-left:14px}
 .grupo h3{font-size:1.05rem;font-weight:600;margin-bottom:4px}
-.grupo .pasos-g{font-size:.83rem;font-weight:500;color:var(--verde);margin-bottom:6px}
-.grupo p:last-child{margin:0;font-size:.9rem;color:var(--gris);line-height:1.6}
+.grupo .pasos-g{font-size:.85rem;font-weight:500;color:var(--verde);margin-bottom:6px}
+.grupo p:last-child{margin:0;font-size:.95rem;color:var(--gris);line-height:1.6}
 .grupos.claro .pasos-g{color:var(--verde)}
 .grupos.claro .grupo p:last-child{color:var(--gris)}
 @media (max-width:900px){.grupos{grid-template-columns:1fr 1fr}}
@@ -389,36 +391,36 @@ textarea{min-height:150px;resize:vertical}
 .cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:24px}
 .cifra{border-top:3px solid var(--verde);padding-top:16px}
 .cifra .num{font-family:var(--display);font-size:clamp(2rem,3.6vw,2.8rem);font-weight:400;line-height:1.1;margin:0 0 8px;color:var(--pino)}
-.cifra h3{font-size:1.1rem;margin-bottom:6px}
-.cifra p:last-child{margin:0;color:var(--gris);font-size:.93rem}
+.cifra h3{font-size:1.05rem;margin-bottom:6px}
+.cifra p:last-child{margin:0;color:var(--gris);font-size:.95rem}
 @media (max-width:900px){.cifras{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.cifras{grid-template-columns:1fr}}
-.nota{font-size:.88rem;color:var(--gris);max-width:80ch;margin-top:32px;margin-bottom:0}
+.nota{font-size:.85rem;color:var(--gris);max-width:80ch;margin-top:32px;margin-bottom:0}
 .nota .sello{margin-right:4px}
 .casos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
 .caso{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--linea);border-top:3px solid var(--verde);padding:28px;text-decoration:none;transition:border-color .2s}
 .caso:hover{border-color:var(--verde)}
-.caso h3{font-size:1.15rem;font-weight:500}
-.caso p{margin:0;font-size:.93rem;line-height:1.65}
+.caso h3{font-size:1.05rem;font-weight:500}
+.caso p{margin:0;font-size:.95rem;line-height:1.65}
 .caso-cat{font-size:.85rem;font-weight:500;color:var(--verde)}
 .caso-lugar{color:var(--gris)}
 .caso-metricas{font-weight:500;color:var(--pino);padding-top:12px;border-top:1px solid var(--linea)}
-.caso-caps{color:var(--gris);font-size:.88rem!important}
+.caso-caps{color:var(--gris);font-size:.85rem!important}
 .caso .sello{align-self:flex-start;margin-top:auto}
 .caso .enlace{align-self:flex-start}
 @media (max-width:1000px){.casos{grid-template-columns:1fr}}
 .sect-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
 .sect-card{display:block;background:#fff;border:1px solid var(--linea);padding:26px;text-decoration:none;transition:border-color .2s}
 .sect-card:hover{border-color:var(--verde)}
-.sect-card h3{font-size:1.3rem;margin-bottom:6px}
+.sect-card h3{font-size:1.25rem;margin-bottom:6px}
 .sect-card .sub{color:var(--tinta);margin-bottom:12px;font-size:.95rem}
 .sect-card .tags-linea{margin:0}
 @media (max-width:900px){.sect-cards{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.sect-cards{grid-template-columns:1fr}}
 .audiencias{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
 .audiencia{background:#fff;border:1px solid var(--linea);padding:24px}
-.audiencia h3{font-size:1.15rem;margin-bottom:8px}
-.audiencia p{margin:0;color:var(--gris);font-size:.94rem}
+.audiencia h3{font-size:1.05rem;margin-bottom:8px}
+.audiencia p{margin:0;color:var(--gris);font-size:.95rem}
 @media (max-width:900px){.audiencias{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.audiencias{grid-template-columns:1fr}}
 .socios-largos{display:grid;gap:24px;margin-top:40px}
@@ -431,11 +433,74 @@ textarea{min-height:150px;resize:vertical}
 
 .solo-lectores{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
+/* Método: cuatro fases */
+.fases{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative}
+.fases::before{content:"";position:absolute;left:20px;right:20px;top:20px;height:2px;background:var(--verde)}
+.fases li{position:relative;padding-top:0}
+.fases .n{position:relative;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--verde);color:#fff;font-weight:500;margin-bottom:20px}
+.fases h3{margin-bottom:4px}
+.fases .sub{color:var(--verde-claro);font-size:.85rem;margin-bottom:10px}
+.fases li p:last-child{margin:0;font-size:.95rem}
+.oscuro .fases::before{background:var(--piedra-verde)}
+.oscuro .fases .n{background:#fff;color:var(--pino)}
+.oscuro .fases li p:last-child{color:var(--gris-claro)}
+.fases.claro .sub{color:var(--verde)}
+.fases.claro li p:last-child{color:var(--gris)}
+@media (max-width:900px){
+  .fases{grid-template-columns:1fr;gap:28px;padding-left:0}
+  .fases::before{left:19px;right:auto;top:20px;bottom:20px;width:2px;height:auto}
+  .fases li{padding-left:64px}
+  .fases .n{position:absolute;left:0;top:0;margin:0}
+}
+.caso-dest{font-weight:500;color:var(--tinta)}
+
+/* Escala única: títulos de tarjeta, texto de tarjeta, etiquetas */
+.pilar h3,.caso h3,.necesidad h3,.sect-card h3,.audiencia h3,.problema h3,.entrada h3,.via h3,.cifra h3,.conexiones h3,.colab-teaser h3,.fases h3,.socio-largo h3,.exp-card h3,.responsable h4,.compromisos dt{font-size:1.25rem;font-weight:500;line-height:1.3;letter-spacing:-.01em}
+.pilar p,.caso p,.necesidad p,.sect-card p,.audiencia p,.cifra p,.conexiones p,.colab-teaser p,.socio-largo p,.lista-servicios p,.valores p,.piezas p{font-size:.95rem}
+.pilar .dimension{font-weight:500}
+.tags-linea,.caso-lugar,.caso-caps,.caso-cat,.nota,.migas,.aviso,.ficha dt,.chips li,.sello,.etiqueta{font-size:.85rem}
+.h-etq{font-weight:500}
+h4{font-size:1.0625rem;font-weight:500}
+.entradilla{font-size:1.25rem}
+.lema{font-size:1.25rem;font-weight:500}
+.tres-cap p{font-size:1.25rem}
+
+/* Interlineado */
+body{line-height:1.7}
+p,li,dd,dt,label{line-height:1.65}
+h1{line-height:1.08}
+h2{line-height:1.18}
+h3,h4{line-height:1.3}
+.entradilla{line-height:1.55;margin-bottom:0}
+.tags-linea,.caso p,.pilar p,.necesidad p,.sect-card p,.audiencia p,.cifra p,.socio-largo p,.lista-servicios p,.valores p,.piezas p,.fases li p{line-height:1.6}
+.nota,.migas,.chips li,.aviso{line-height:1.55}
+h2 + p, h2 + .entradilla{margin-top:16px}
+h3 + p{margin-top:6px}
+.pilar h3,.caso h3,.necesidad h3,.sect-card h3,.audiencia h3{margin-bottom:8px}
+.pilar p,.caso p,.necesidad p,.audiencia p{margin-bottom:.8em}
+.caso{gap:8px}
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+.sello{font-weight:500}
+.pasos li::before{font-weight:500}
+
+/* Párrafos que acompañan a la entradilla: mismo tono */
+.entradilla + p{color:var(--gris)}
+.oscuro .entradilla + p{color:var(--gris-claro)}
+
 
 /* Páginas (una sola HTML) */
 .pagina{display:none}
-.pagina.activa{display:block;animation:aparecePag .3s ease both}
-@keyframes aparecePag{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.pagina.activa{display:block}
+main{transition:opacity .22s ease}
+main.saliendo{opacity:0}
+@media (prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:vtSale .28s ease both}
+  ::view-transition-new(root){animation:vtEntra .55s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes vtSale{to{opacity:0}}
+  @keyframes vtEntra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
 
 </style>
 <noscript><style>.pagina{display:block!important}</style></noscript>
@@ -554,9 +619,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <a class="boton" href="#/contacto">Hablemos de tu proyecto</a>
         </div>
       </div>
-      <div class="simbolo" role="img" aria-label="Símbolo de BAFRAS Engineering">
-        <svg viewBox="0 0 493 468" aria-hidden="true"><use href="#isotipo"/></svg>
-      </div>
     </div>
   </section>
 
@@ -566,9 +628,9 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <p class="entradilla" style="margin-top:20px">Un edificio, una industria o una infraestructura no funcionan como una suma de instalaciones independientes. Estructura, instalaciones, energía, automatización, datos y operación forman parte de un mismo sistema, y las decisiones sobre un elemento condicionan al resto.</p>
       <p class="prosa" style="margin-top:8px">En BAFRAS analizamos estas relaciones para entender cómo funciona el activo, identificar dónde actuar y desarrollar soluciones coherentes con el conjunto.</p>
       <div class="tres-cap">
-        <p><a href="#/@capacidades">Infrastructure</a></p>
-        <p><a href="#/@capacidades">Energy Systems</a></p>
-        <p><a href="#/@capacidades">Digital Systems</a></p>
+        <p><a href="#/@tres-capacidades">Infrastructure</a></p>
+        <p><a href="#/@tres-capacidades">Energy Systems</a></p>
+        <p><a href="#/@tres-capacidades">Digital Systems</a></p>
       </div>
       <p class="lema">Tres capacidades complementarias. Una ingeniería. Un sistema.</p>
     </div>
@@ -589,7 +651,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     </div>
   </section>
 
-  <section class="bloque">
+  <section class="bloque" id="tres-capacidades">
     <div class="envoltura">
       <h2 class="prosa">Tres capacidades para intervenir sobre un mismo sistema.</h2>
       <p class="entradilla" style="margin-top:16px">BAFRAS combina capacidades en infraestructura, sistemas energéticos y sistemas digitales. Cada una responde a una dimensión diferente del activo y puede aplicarse de forma independiente o combinarse con las demás cuando el proyecto lo requiere.</p>
@@ -625,8 +687,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <h2 class="prosa">Primero entendemos. Después decidimos qué tiene sentido desarrollar.</h2>
       <p class="entradilla" style="margin-top:16px">No partimos de una tecnología ni de una solución predeterminada. Partimos del activo, de los datos disponibles, de sus condicionantes y del problema que debe resolverse.</p>
       <p style="margin-top:8px;max-width:62ch">Nuestro trabajo consiste en reducir progresivamente la incertidumbre hasta convertir una necesidad técnica en una decisión fundamentada y, cuando procede, en una solución definida para su implantación.</p>
-      <ol class="pasos"><li>Datos</li><li>Diagnóstico</li><li>Oportunidades</li><li>Alternativas</li><li>Decisión</li><li>Diseño</li><li>Implantación</li><li>Verificación</li></ol><div class="grupos"><div class="grupo"><h3>Entender</h3><p class="pasos-g">Datos · Diagnóstico</p><p>Recopilamos información, analizamos el activo y determinamos cómo funciona, qué condicionantes existen y dónde se encuentran las causas del problema.</p></div><div class="grupo"><h3>Decidir</h3><p class="pasos-g">Oportunidades · Alternativas · Decisión</p><p>Identificamos posibles actuaciones, dimensionamos y comparamos alternativas y aportamos criterios técnicos, operativos y económicos para decidir qué tiene sentido desarrollar.</p></div><div class="grupo"><h3>Desarrollar</h3><p class="pasos-g">Diseño · Implantación</p><p>Convertimos la decisión en ingeniería técnicamente definida y acompañamos su implantación coordinándonos con los agentes necesarios para llevar la solución al activo real.</p></div><div class="grupo"><h3>Verificar</h3><p class="pasos-g">Verificación</p><p>Comprobamos el comportamiento de la solución y utilizamos la información disponible para evaluar resultados y detectar nuevas oportunidades de mejora.</p></div></div>
-      <p class="lema">Entender, decidir, desarrollar, verificar.</p>
+      <ol class="fases"><li><span class="n">1</span><h3>Entender</h3><p class="sub">Datos · Diagnóstico</p><p>Recopilamos información, analizamos el activo y determinamos cómo funciona, qué condicionantes existen y dónde se encuentran las causas del problema.</p></li><li><span class="n">2</span><h3>Decidir</h3><p class="sub">Oportunidades · Alternativas · Decisión</p><p>Identificamos posibles actuaciones, dimensionamos y comparamos alternativas y aportamos criterios técnicos, operativos y económicos para decidir qué tiene sentido desarrollar.</p></li><li><span class="n">3</span><h3>Desarrollar</h3><p class="sub">Diseño · Implantación</p><p>Convertimos la decisión en ingeniería técnicamente definida y acompañamos su implantación coordinándonos con los agentes necesarios para llevar la solución al activo real.</p></li><li><span class="n">4</span><h3>Verificar</h3><p class="sub">Verificación</p><p>Comprobamos el comportamiento de la solución y utilizamos la información disponible para evaluar resultados y detectar nuevas oportunidades de mejora.</p></li></ol>
       <p style="margin-top:20px;margin-bottom:0"><a class="enlace" href="#/capacidades@metodologia">Conoce cómo trabajamos</a></p>
     </div>
   </section>
@@ -650,9 +711,10 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <p style="margin-top:8px;max-width:62ch">Estos son algunos de los proyectos que ayudan a entender las capacidades que hoy convergen en BAFRAS.</p>
       <div class="casos"><a class="caso" href="#/proyectos/experiencia-del-equipo/campus-universitario">
           <span class="caso-cat">Transición energética e integración de sistemas</span>
-          <h3>Campus universitario · Sistema energético fotovoltaico integrado</h3>
+          <h3>Campus universitario · Solar fotovoltaica y almacenamiento</h3>
           <p class="caso-lugar">Mallorca</p>
           <p>Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctrica, monitorización y gestión avanzada de la energía.</p>
+          
           <p class="caso-metricas">~7,4 MWp FV · +10 MWh BESS · V2G · AMI · SCADA · VPP</p>
           <p class="caso-caps">Energy Systems · Digital Systems · Infrastructure</p>
           <span class="enlace">Ver proyecto</span>
@@ -660,8 +722,9 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <span class="caso-cat">Instalaciones, construcción y obra</span>
           <h3>Hoteles, colegios y residencial de alto nivel</h3>
           <p class="caso-lugar">Mallorca e Ibiza</p>
-          <p>Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. Proyectos destacados: Hotel Formentor (Mallorca), Colegio Montesión (Palma) y Villa Nusret (Ibiza).</p>
-          <p class="caso-metricas">7 años · MEP · Diseño y Obra · mediciones y certificación</p>
+          <p>Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios en hoteles, colegios y residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p>
+          <p class="caso-dest">Hotel Formentor · Montesión · NUSRET</p>
+          <p class="caso-metricas">7 años · MEP · Diseño y obra · Mediciones y certificación</p>
           <p class="caso-caps">Infrastructure</p>
           <span class="enlace">Ver proyecto</span>
         </a><a class="caso" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">
@@ -669,12 +732,13 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <h3>Proyecto energético internacional</h3>
           <p class="caso-lugar">Eólica marina · internacional</p>
           <p>Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y energéticos internacionales.</p>
+          
           <p class="caso-metricas">+2 GW instalados · Dogger Bank A (1,2 GW) · Vineyard Wind 1 (806 MW)</p>
           <p class="caso-caps">Energy Systems · Digital Systems</p>
           <span class="enlace">Ver proyecto</span>
         </a></div>
-      <p class="nota"><span class="sello propio">Proyecto BAFRAS</span> identifica trabajos desarrollados directamente por BAFRAS. <span class="sello equipo">Experiencia del equipo</span> identifica proyectos desarrollados por sus miembros durante su trayectoria profesional previa.</p>
-      <p style="margin-top:24px;margin-bottom:0"><a class="enlace" href="#/proyectos">Explorar proyectos y experiencia</a></p>
+      <p class="nota">Estos proyectos son experiencia del equipo, desarrollada por los socios antes de fundar BAFRAS. Los proyectos de BAFRAS se identifican de forma diferenciada.</p>
+      <p style="margin-top:24px;margin-bottom:0"><a class="enlace" href="#/proyectos">Explorar proyectos</a></p>
     </div>
   </section>
 
@@ -774,8 +838,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     <div class="envoltura">
       <h2 class="prosa">Metodología BAFRAS</h2>
       <p class="entradilla" style="margin-top:16px">Primero entendemos. Después decidimos qué tiene sentido desarrollar. No partimos de una tecnología ni de una solución predeterminada: partimos del activo, de los datos disponibles, de sus condicionantes y del problema que debe resolverse.</p>
-      <ol class="pasos claro"><li>Datos</li><li>Diagnóstico</li><li>Oportunidades</li><li>Alternativas</li><li>Decisión</li><li>Diseño</li><li>Implantación</li><li>Verificación</li></ol><div class="grupos claro"><div class="grupo"><h3>Entender</h3><p class="pasos-g">Datos · Diagnóstico</p><p>Recopilamos información, analizamos el activo y determinamos cómo funciona, qué condicionantes existen y dónde se encuentran las causas del problema.</p></div><div class="grupo"><h3>Decidir</h3><p class="pasos-g">Oportunidades · Alternativas · Decisión</p><p>Identificamos posibles actuaciones, dimensionamos y comparamos alternativas y aportamos criterios técnicos, operativos y económicos para decidir qué tiene sentido desarrollar.</p></div><div class="grupo"><h3>Desarrollar</h3><p class="pasos-g">Diseño · Implantación</p><p>Convertimos la decisión en ingeniería técnicamente definida y acompañamos su implantación coordinándonos con los agentes necesarios para llevar la solución al activo real.</p></div><div class="grupo"><h3>Verificar</h3><p class="pasos-g">Verificación</p><p>Comprobamos el comportamiento de la solución y utilizamos la información disponible para evaluar resultados y detectar nuevas oportunidades de mejora.</p></div></div>
-      <p class="lema" style="color:var(--tinta)">Entender, decidir, desarrollar, verificar.</p>
+      <ol class="fases claro"><li><span class="n">1</span><h3>Entender</h3><p class="sub">Datos · Diagnóstico</p><p>Recopilamos información, analizamos el activo y determinamos cómo funciona, qué condicionantes existen y dónde se encuentran las causas del problema.</p></li><li><span class="n">2</span><h3>Decidir</h3><p class="sub">Oportunidades · Alternativas · Decisión</p><p>Identificamos posibles actuaciones, dimensionamos y comparamos alternativas y aportamos criterios técnicos, operativos y económicos para decidir qué tiene sentido desarrollar.</p></li><li><span class="n">3</span><h3>Desarrollar</h3><p class="sub">Diseño · Implantación</p><p>Convertimos la decisión en ingeniería técnicamente definida y acompañamos su implantación coordinándonos con los agentes necesarios para llevar la solución al activo real.</p></li><li><span class="n">4</span><h3>Verificar</h3><p class="sub">Verificación</p><p>Comprobamos el comportamiento de la solución y utilizamos la información disponible para evaluar resultados y detectar nuevas oportunidades de mejora.</p></li></ol>
     </div>
   </section>
   <section class="bloque oscuro banda">
@@ -822,7 +885,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <h4 role="heading" aria-level="3" style="margin-bottom:12px">Sectores donde la aplicamos</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@terciario">Edificios y terciario</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Evidencia</h4>
-        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Sistema energético fotovoltaico integrado</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">Hoteles, colegios y residencial de alto nivel</a></li></ul>
+        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Solar fotovoltaica y almacenamiento</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">Hoteles, colegios y residencial de alto nivel</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Se entiende mejor con</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
       </div>
@@ -872,7 +935,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <h4 role="heading" aria-level="3" style="margin-bottom:12px">Sectores donde la aplicamos</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@terciario">Edificios y terciario</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Evidencia</h4>
-        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Sistema energético fotovoltaico integrado</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
+        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Solar fotovoltaica y almacenamiento</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Se entiende mejor con</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
       </div>
@@ -922,7 +985,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <h4 role="heading" aria-level="3" style="margin-bottom:12px">Sectores donde la aplicamos</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@terciario">Edificios y terciario</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Evidencia</h4>
-        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Sistema energético fotovoltaico integrado</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
+        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Solar fotovoltaica y almacenamiento</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Se entiende mejor con</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
       </div>
@@ -1049,9 +1112,10 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <p style="margin-top:12px;max-width:62ch">Proyectos desarrollados por los socios durante su trayectoria profesional previa. Indicamos siempre quién participó y con qué responsabilidad.</p>
       <div class="casos"><a class="caso" href="#/proyectos/experiencia-del-equipo/campus-universitario">
           <span class="caso-cat">Transición energética e integración de sistemas</span>
-          <h3>Campus universitario · Sistema energético fotovoltaico integrado</h3>
+          <h3>Campus universitario · Solar fotovoltaica y almacenamiento</h3>
           <p class="caso-lugar">Mallorca</p>
           <p>Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctrica, monitorización y gestión avanzada de la energía.</p>
+          
           <p class="caso-metricas">~7,4 MWp FV · +10 MWh BESS · V2G · AMI · SCADA · VPP</p>
           <p class="caso-caps">Energy Systems · Digital Systems · Infrastructure</p>
           <span class="enlace">Ver proyecto</span>
@@ -1059,8 +1123,9 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <span class="caso-cat">Instalaciones, construcción y obra</span>
           <h3>Hoteles, colegios y residencial de alto nivel</h3>
           <p class="caso-lugar">Mallorca e Ibiza</p>
-          <p>Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. Proyectos destacados: Hotel Formentor (Mallorca), Colegio Montesión (Palma) y Villa Nusret (Ibiza).</p>
-          <p class="caso-metricas">7 años · MEP · Diseño y Obra · mediciones y certificación</p>
+          <p>Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios en hoteles, colegios y residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p>
+          <p class="caso-dest">Hotel Formentor · Montesión · NUSRET</p>
+          <p class="caso-metricas">7 años · MEP · Diseño y obra · Mediciones y certificación</p>
           <p class="caso-caps">Infrastructure</p>
           <span class="enlace">Ver proyecto</span>
         </a><a class="caso" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">
@@ -1068,6 +1133,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <h3>Proyecto energético internacional</h3>
           <p class="caso-lugar">Eólica marina · internacional</p>
           <p>Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y energéticos internacionales.</p>
+          
           <p class="caso-metricas">+2 GW instalados · Dogger Bank A (1,2 GW) · Vineyard Wind 1 (806 MW)</p>
           <p class="caso-caps">Energy Systems · Digital Systems</p>
           <span class="enlace">Ver proyecto</span>
@@ -1085,9 +1151,8 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
 <div class="pagina" data-pagina="proyectos/experiencia-del-equipo/campus-universitario">
 <section class="bloque">
     <div class="envoltura">
-      <p class="migas"><a href="#/proyectos">Proyectos</a> / <a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a> / Campus universitario · Sistema energético fotovoltaico integrado</p>
-      <span class="sello equipo">Experiencia del equipo</span>
-      <h1 style="margin-top:16px">Campus universitario · Sistema energético fotovoltaico integrado</h1>
+      <p class="migas"><a href="#/proyectos">Proyectos</a> / Campus universitario · Solar fotovoltaica y almacenamiento</p>
+      <h1>Campus universitario · Solar fotovoltaica y almacenamiento</h1>
       <p class="entradilla" style="margin-top:16px">Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctrica, monitorización y gestión avanzada de la energía.</p>
       <dl class="ficha">
         <div><dt>Ubicación</dt><dd>Mallorca</dd></div>
@@ -1101,6 +1166,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     <div class="envoltura dos-col">
       <h2>El proyecto</h2>
       <ul class="lista-servicios">
+        
         <li><h4 role="heading" aria-level="3">Datos clave</h4><p>~7,4 MWp FV · +10 MWh BESS · V2G · AMI · SCADA · VPP</p></li>
         <li><h4 role="heading" aria-level="3">Responsabilidad</h4><p>Lideró el desarrollo técnico del programa, combinando ingeniería de infraestructura (fotovoltaica, BESS, HVAC/BMS, redes de distribución de media tensión) con herramientas de gestión energética digital.</p></li>
         <li><h4 role="heading" aria-level="3">Resultado</h4><p>El programa habilitó 18 M€ de financiación pública en el marco de NextGenerationEU / PITEIB.</p></li>
@@ -1129,10 +1195,9 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
 <div class="pagina" data-pagina="proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">
 <section class="bloque">
     <div class="envoltura">
-      <p class="migas"><a href="#/proyectos">Proyectos</a> / <a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a> / Hoteles, colegios y residencial de alto nivel</p>
-      <span class="sello equipo">Experiencia del equipo</span>
-      <h1 style="margin-top:16px">Hoteles, colegios y residencial de alto nivel</h1>
-      <p class="entradilla" style="margin-top:16px">Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. Proyectos destacados: Hotel Formentor (Mallorca), Colegio Montesión (Palma) y Villa Nusret (Ibiza).</p>
+      <p class="migas"><a href="#/proyectos">Proyectos</a> / Hoteles, colegios y residencial de alto nivel</p>
+      <h1>Hoteles, colegios y residencial de alto nivel</h1>
+      <p class="entradilla" style="margin-top:16px">Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios en hoteles, colegios y residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p>
       <dl class="ficha">
         <div><dt>Ubicación</dt><dd>Mallorca e Ibiza</dd></div>
         <div><dt>Participación</dt><dd>Àngel Frau</dd></div>
@@ -1145,7 +1210,8 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     <div class="envoltura dos-col">
       <h2>El proyecto</h2>
       <ul class="lista-servicios">
-        <li><h4 role="heading" aria-level="3">Datos clave</h4><p>7 años · MEP · Diseño y Obra · mediciones y certificación</p></li>
+        <li><h4 role="heading" aria-level="3">Proyectos destacados</h4><p>Hotel Formentor · Montesión · NUSRET. <span class="pend">Importe de las instalaciones de cada uno y tipo de proyecto (Montesión).</span></p></li>
+        <li><h4 role="heading" aria-level="3">Datos clave</h4><p>7 años · MEP · Diseño y obra · Mediciones y certificación</p></li>
         <li><h4 role="heading" aria-level="3">Responsabilidad</h4><p>Lideró las instalaciones desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. En proyectos de gran escala, también análisis de ofertas, mediciones, certificaciones y valoración de modificados.</p></li>
         <li><h4 role="heading" aria-level="3">Resultado</h4><p><span class="pend">Cifras o hitos que se puedan publicar.</span></p></li>
         <li><h4 role="heading" aria-level="3">Contexto</h4><p><span class="pend">Cliente, alcance y plazos, si se pueden publicar.</span></p></li>
@@ -1173,15 +1239,14 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
 <div class="pagina" data-pagina="proyectos/experiencia-del-equipo/energia-offshore-internacional">
 <section class="bloque">
     <div class="envoltura">
-      <p class="migas"><a href="#/proyectos">Proyectos</a> / <a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a> / Proyecto energético internacional</p>
-      <span class="sello equipo">Experiencia del equipo</span>
-      <h1 style="margin-top:16px">Proyecto energético internacional</h1>
+      <p class="migas"><a href="#/proyectos">Proyectos</a> / Proyecto energético internacional</p>
+      <h1>Proyecto energético internacional</h1>
       <p class="entradilla" style="margin-top:16px">Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y energéticos internacionales.</p>
       <dl class="ficha">
         <div><dt>Ubicación</dt><dd>Eólica marina · internacional</dd></div>
         <div><dt>Participación</dt><dd>Amin Asbai</dd></div>
         <div><dt>Capacidades</dt><dd>Energy Systems, Digital Systems</dd></div>
-        <div><dt>Empresa</dt><dd>MG Motor · División de automatización</dd></div>
+        <div><dt>Empresa</dt><dd>MG Motors</dd></div>
       </dl>
     </div>
   </section>
@@ -1189,6 +1254,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     <div class="envoltura dos-col">
       <h2>El proyecto</h2>
       <ul class="lista-servicios">
+        
         <li><h4 role="heading" aria-level="3">Datos clave</h4><p>+2 GW instalados · Dogger Bank A (1,2 GW) · Vineyard Wind 1 (806 MW)</p></li>
         <li><h4 role="heading" aria-level="3">Responsabilidad</h4><p>Diseño, desarrollo y puesta en marcha de sistemas de automatización y eléctricos en entornos offshore exigentes, con foco en fiabilidad, integración de sistemas y rendimiento operativo.</p></li>
         <li><h4 role="heading" aria-level="3">Resultado</h4><p><span class="pend">Cifras o hitos que se puedan publicar.</span></p></li>
@@ -1275,7 +1341,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
             <h3>Àngel Frau</h3>
             <p class="rol">Infrastructure · MEP y ejecución de obra</p>
             <p>Ingeniero MEP con siete años de experiencia en sistemas eléctricos, mecánicos, de fontanería y protección contra incendios para hoteles, colegios y residencial de alto nivel en Mallorca e Ibiza. Ha trabajado tanto en diseño como en construcción, liderando las instalaciones desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p><p>Su enfoque es hacer que la ingeniería funcione en el mundo real: diseños construibles, coordinación temprana y soluciones prácticas que equilibran rendimiento técnico, coste y plazo. Conoce también la economía del proyecto: análisis de ofertas, mediciones, certificaciones y valoración de modificados en proyectos de gran escala. Le interesan el diseño integrado de edificios, la ingeniería digital y unas instalaciones más eficientes, fiables y construibles.</p>
-            <ul class="chips" style="margin:16px 0"><li>7 años en MEP</li><li>Hoteles, colegios y residencial de alto nivel</li><li>Mallorca e Ibiza</li><li>Diseño y Obra</li></ul>
+            <ul class="chips" style="margin:16px 0"><li>7 años en MEP</li><li>Hoteles, colegios y residencial de alto nivel</li><li>Mallorca e Ibiza</li><li>Diseño y obra</li></ul>
             <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="https://www.linkedin.com/in/angel-frau-40b999179/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
           </div>
         </article><article class="socio-largo">
@@ -1418,7 +1484,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
 </footer>
 <script>
 (function(){
-  var TITULOS = {"": {"t": "BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca", "d": "Infrastructure, Energy Systems y Digital Systems en un mismo despacho de ingeniería en Mallorca. Instalaciones, energía fotovoltaica y almacenamiento, automatización y datos."}, "capacidades": {"t": "Capacidades: Infrastructure, Energy Systems y Digital Systems · BAFRAS Engineering", "d": "Infraestructura e instalaciones, sistemas energéticos y sistemas digitales integrados en un mismo despacho de ingeniería en Mallorca."}, "capacidades/infrastructure": {"t": "Infrastructure: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering", "d": "Diseño, coordinación y dirección de instalaciones eléctricas y térmicas, reformas y ampliaciones en Mallorca. Ingeniería con experiencia real en obra."}, "capacidades/energy-systems": {"t": "Energy Systems: fotovoltaica, almacenamiento y eficiencia energética en Mallorca · BAFRAS Engineering", "d": "Estudio, diseño y optimización de sistemas energéticos: generación fotovoltaica, almacenamiento BESS, electrificación y eficiencia para edificios e industria en Mallorca."}, "capacidades/digital-systems": {"t": "Digital Systems: automatización, control y datos para edificios e industria · BAFRAS Engineering", "d": "Monitorización, automatización, BMS/SCADA e integración de sistemas para edificios e industria en Mallorca, con análisis de datos y herramientas digitales de ingeniería."}, "sectores": {"t": "Sectores: hospitality, industria, centros deportivos, terciario e infraestructura · BAFRAS Engineering", "d": "Sectores en los que trabaja BAFRAS Engineering en Mallorca: hospitality, industria, centros deportivos, edificios y terciario, infraestructura y sector público."}, "proyectos": {"t": "Proyectos y experiencia del equipo · BAFRAS Engineering", "d": "Proyectos de BAFRAS Engineering y experiencia previa de sus socios en energía fotovoltaica y almacenamiento, instalaciones MEP y automatización."}, "proyectos/experiencia-del-equipo/campus-universitario": {"t": "Campus universitario · Sistema energético fotovoltaico integrado · Experiencia del equipo · BAFRAS Engineering", "d": "Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctr"}, "proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial": {"t": "Hoteles, colegios y residencial de alto nivel · Experiencia del equipo · BAFRAS Engineering", "d": "Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alt"}, "proyectos/experiencia-del-equipo/energia-offshore-internacional": {"t": "Proyecto energético internacional · Experiencia del equipo · BAFRAS Engineering", "d": "Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y "}, "conocimiento": {"t": "Conocimiento técnico: artículos, casos de estudio y guías · BAFRAS Engineering", "d": "Artículos técnicos, casos de estudio, guías e innovación en instalaciones, energía y sistemas digitales para edificios e industria."}, "sobre-bafras": {"t": "Sobre BAFRAS: quiénes somos, equipo y filosofía · BAFRAS Engineering", "d": "BAFRAS Engineering reúne tres trayectorias complementarias en instalaciones MEP, sistemas energéticos y automatización, con experiencia en proyectos de distinta escala."}, "contacto": {"t": "Contacto · BAFRAS Engineering", "d": "Contacta con BAFRAS Engineering en Mallorca por teléfono, WhatsApp, correo o formulario. Te responde directamente uno de los socios."}};
+  var TITULOS = {"": {"t": "BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca", "d": "Infrastructure, Energy Systems y Digital Systems en un mismo despacho de ingeniería en Mallorca. Instalaciones, energía fotovoltaica y almacenamiento, automatización y datos."}, "capacidades": {"t": "Capacidades: Infrastructure, Energy Systems y Digital Systems · BAFRAS Engineering", "d": "Infraestructura e instalaciones, sistemas energéticos y sistemas digitales integrados en un mismo despacho de ingeniería en Mallorca."}, "capacidades/infrastructure": {"t": "Infrastructure: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering", "d": "Diseño, coordinación y dirección de instalaciones eléctricas y térmicas, reformas y ampliaciones en Mallorca. Ingeniería con experiencia real en obra."}, "capacidades/energy-systems": {"t": "Energy Systems: fotovoltaica, almacenamiento y eficiencia energética en Mallorca · BAFRAS Engineering", "d": "Estudio, diseño y optimización de sistemas energéticos: generación fotovoltaica, almacenamiento BESS, electrificación y eficiencia para edificios e industria en Mallorca."}, "capacidades/digital-systems": {"t": "Digital Systems: automatización, control y datos para edificios e industria · BAFRAS Engineering", "d": "Monitorización, automatización, BMS/SCADA e integración de sistemas para edificios e industria en Mallorca, con análisis de datos y herramientas digitales de ingeniería."}, "sectores": {"t": "Sectores: hospitality, industria, centros deportivos, terciario e infraestructura · BAFRAS Engineering", "d": "Sectores en los que trabaja BAFRAS Engineering en Mallorca: hospitality, industria, centros deportivos, edificios y terciario, infraestructura y sector público."}, "proyectos": {"t": "Proyectos y experiencia del equipo · BAFRAS Engineering", "d": "Proyectos de BAFRAS Engineering y experiencia previa de sus socios en energía fotovoltaica y almacenamiento, instalaciones MEP y automatización."}, "proyectos/experiencia-del-equipo/campus-universitario": {"t": "Campus universitario · Solar fotovoltaica y almacenamiento · BAFRAS Engineering", "d": "Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctr"}, "proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial": {"t": "Hoteles, colegios y residencial de alto nivel · BAFRAS Engineering", "d": "Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios en hoteles, colegios y residencial de alto nivel, desde la ingeniería y la"}, "proyectos/experiencia-del-equipo/energia-offshore-internacional": {"t": "Proyecto energético internacional · BAFRAS Engineering", "d": "Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y "}, "conocimiento": {"t": "Conocimiento técnico: artículos, casos de estudio y guías · BAFRAS Engineering", "d": "Artículos técnicos, casos de estudio, guías e innovación en instalaciones, energía y sistemas digitales para edificios e industria."}, "sobre-bafras": {"t": "Sobre BAFRAS: quiénes somos, equipo y filosofía · BAFRAS Engineering", "d": "BAFRAS Engineering reúne tres trayectorias complementarias en instalaciones MEP, sistemas energéticos y automatización, con experiencia en proyectos de distinta escala."}, "contacto": {"t": "Contacto · BAFRAS Engineering", "d": "Contacta con BAFRAS Engineering en Mallorca por correo o formulario. Te responde directamente uno de los socios."}};
   var paginas = Array.prototype.slice.call(document.querySelectorAll('.pagina'));
   var cab = document.getElementById('cabecera'), boton = document.getElementById('menuBoton');
   var metaDesc = document.querySelector('meta[name="description"]');
@@ -1427,9 +1493,13 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     var partes = h.split('@');
     return { ruta: partes[0].replace(/\/$/, ''), ancla: partes[1] || '' };
   }
-  function mostrar(){
-    var x = leer(), ruta = x.ruta;
-    if (!paginas.some(function(p){ return p.getAttribute('data-pagina') === ruta; })) ruta = '';
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function irAAncla(id, suave){
+    var el = id && document.querySelector('.pagina.activa #' + id);
+    if (el) { el.scrollIntoView({behavior: suave && !reduce ? 'smooth' : 'instant', block: 'start'}); return true; }
+    return false;
+  }
+  function aplicar(ruta){
     paginas.forEach(function(p){ p.classList.toggle('activa', p.getAttribute('data-pagina') === ruta); });
     var raiz = ruta.split('/')[0];
     document.querySelectorAll('.nav > ul > li > a').forEach(function(a){
@@ -1438,9 +1508,26 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     });
     var t = TITULOS[ruta] || TITULOS[''];
     document.title = t.t; if (metaDesc) metaDesc.setAttribute('content', t.d);
-    var destino = x.ancla && document.querySelector('.pagina.activa #' + x.ancla);
-    if (destino) { destino.scrollIntoView(); } else { window.scrollTo(0, 0); }
+  }
+  function mostrar(){
+    var x = leer(), ruta = x.ruta;
+    if (!paginas.some(function(p){ return p.getAttribute('data-pagina') === ruta; })) ruta = '';
     cab.classList.remove('abierta'); if (boton) boton.setAttribute('aria-expanded', 'false');
+    var actual = document.querySelector('.pagina.activa');
+    var misma = actual && actual.getAttribute('data-pagina') === ruta;
+    if (misma) {                                   // mismo apartado: desplazamiento suave, sin recargar
+      if (!irAAncla(x.ancla, true)) window.scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+      return;
+    }
+    function cambiar(){ aplicar(ruta); window.scrollTo({top: 0, behavior: 'instant'}); if (x.ancla) irAAncla(x.ancla, false); }
+    if (reduce || !actual) { cambiar(); return; }
+    if (document.startViewTransition) {            // fundido cruzado nativo
+      document.startViewTransition(cambiar);
+    } else {                                       // respaldo: sale, cambia, entra
+      var main = document.querySelector('main');
+      main.classList.add('saliendo');
+      setTimeout(function(){ cambiar(); main.classList.remove('saliendo'); }, 220);
+    }
   }
   window.addEventListener('hashchange', mostrar); mostrar();
   if (boton) boton.addEventListener('click', function(){
