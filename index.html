@@ -33,17 +33,17 @@
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--papel);color:var(--tinta);font:400 17px/1.65 var(--texto);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--papel);color:var(--tinta);font:400 17px/1.75 var(--texto);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--verde);outline-offset:3px}
 .oscuro :focus-visible,.oscuro-txt :focus-visible{outline-color:var(--gris-claro)}
-h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.14;margin:0;letter-spacing:-.02em}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.18;margin:0;letter-spacing:-.015em}
 h1{font-size:clamp(2.3rem,5.2vw,4.1rem);font-weight:400}
 h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:400}
 h3{font-size:1.4rem}
 h4{font-size:1.1rem}
-p{margin:0 0 1em}
+p{margin:0 0 1.1em}
 .envoltura{max-width:var(--ancho);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 .prosa{max-width:62ch}
 .entradilla{font-size:1.2rem;color:var(--gris);max-width:58ch}
@@ -106,7 +106,7 @@ p{margin:0 0 1em}
 
 /* HERO */
 .hero{min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);display:flex;align-items:center;padding:56px 0 72px;overflow:hidden;position:relative;background-color:var(--pino)}
-.hero-bg{position:absolute;inset:0;background:url("/images/bafras_transicion_energetica.jpg") center/cover no-repeat;opacity:.38;z-index:0}
+.hero-bg{position:absolute;inset:0;background:url("/images/bafras_transicion_energetica.jpg") center/cover no-repeat;opacity:.52;z-index:0}
 .hero>.envoltura{position:relative;z-index:1}
 .hero .simbolo{position:relative;z-index:1}
 .hero .envoltura{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;width:100%}
@@ -160,9 +160,9 @@ p{margin:0 0 1em}
 .pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .pilar{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linea);padding:32px;text-decoration:none;min-height:360px;transition:border-color .2s}
 .pilar:hover{border-color:var(--verde)}
-.pilar h3{font-size:1.6rem;margin-bottom:12px;padding-top:0}
+.pilar h3{font-size:1.3rem;margin-bottom:10px;padding-top:0}
 .pilar{border-top:3px solid var(--verde)}
-.pilar p{color:var(--gris)}
+.pilar p{color:var(--gris);font-size:.97rem;line-height:1.7}
 .pilar ul{list-style:none;padding:0;margin:0 0 24px;font-size:.95rem}
 .pilar li{padding:7px 0;border-top:1px solid var(--linea)}
 .pilar .enlace{margin-top:auto;align-self:flex-start}
@@ -332,10 +332,11 @@ textarea{min-height:150px;resize:vertical}
 .problema p{color:var(--gris);margin-bottom:18px}
 .problema .enlace{margin-top:auto;align-self:flex-start}
 @media (max-width:760px){.problemas{grid-template-columns:1fr}}
-.pasos{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:paso}
-.pasos li{counter-increment:paso;border-top:2px solid var(--piedra-verde);padding-top:14px;font-family:var(--display);font-size:1.15rem;font-weight:500}
-.pasos li::before{content:counter(paso);display:block;font-size:.85rem;font-weight:400;color:var(--gris-claro);margin-bottom:6px}
-@media (max-width:760px){.pasos{grid-template-columns:repeat(2,1fr)}}
+.pasos{list-style:none;padding:0;margin:40px 0 0;display:flex;flex-wrap:wrap;gap:10px 0;counter-reset:paso}
+.pasos li{counter-increment:paso;display:flex;align-items:center;font-size:.95rem;color:var(--gris)}
+.pasos li::before{content:counter(paso);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--pino);color:#fff;font-size:.78rem;font-weight:600;margin-right:8px;flex:none}
+.pasos li:not(:last-child)::after{content:"→";margin:0 10px;color:var(--verde);font-size:1rem}
+@media (max-width:760px){.pasos{flex-direction:column;gap:8px}.pasos li::after{display:none}}
 .socios-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
 .socio-mini{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--linea);padding:20px;text-decoration:none;transition:border-color .2s}
 .socio-mini:hover{border-color:var(--verde)}
@@ -370,17 +371,18 @@ textarea{min-height:150px;resize:vertical}
 .colab-teaser p{margin:0;color:var(--gris-claro);max-width:70ch}
 .colab-teaser .enlace{justify-self:start;border-color:var(--gris-claro);color:#fff}
 .pilar .dimension{font-weight:500;color:var(--tinta)}
-.tags-linea{font-size:.88rem;color:var(--gris);margin:0 0 20px}
+.tags-linea{font-size:.85rem;color:var(--gris);margin:0 0 14px;line-height:1.7}
 .conexiones{margin-top:48px;padding:32px;border-left:4px solid var(--verde);background:var(--piedra);max-width:80ch}
 .conexiones h3{margin-bottom:12px}
 .conexiones p{color:var(--tinta)}
 .pasos.claro li{border-top-color:var(--verde)}
 .pasos.claro li::before{color:var(--gris)}
-.grupos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
-.grupo h3{font-size:1.3rem;margin-bottom:4px}
-.grupo .pasos-g{font-size:.88rem;color:var(--gris-claro);margin-bottom:10px}
-.grupo p:last-child{margin:0;font-size:.95rem;color:var(--gris-claro)}
-.grupos.claro .pasos-g{color:var(--verde);font-weight:500}
+.grupos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:36px;border-top:1px solid var(--linea);padding-top:28px}
+.grupo{border-left:3px solid var(--verde);padding-left:14px}
+.grupo h3{font-size:1.05rem;font-weight:600;margin-bottom:4px}
+.grupo .pasos-g{font-size:.83rem;font-weight:500;color:var(--verde);margin-bottom:6px}
+.grupo p:last-child{margin:0;font-size:.9rem;color:var(--gris);line-height:1.6}
+.grupos.claro .pasos-g{color:var(--verde)}
 .grupos.claro .grupo p:last-child{color:var(--gris)}
 @media (max-width:900px){.grupos{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.grupos{grid-template-columns:1fr}}
@@ -396,8 +398,8 @@ textarea{min-height:150px;resize:vertical}
 .casos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
 .caso{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--linea);border-top:3px solid var(--verde);padding:28px;text-decoration:none;transition:border-color .2s}
 .caso:hover{border-color:var(--verde)}
-.caso h3{font-size:1.3rem}
-.caso p{margin:0;font-size:.95rem}
+.caso h3{font-size:1.15rem;font-weight:500}
+.caso p{margin:0;font-size:.93rem;line-height:1.65}
 .caso-cat{font-size:.85rem;font-weight:500;color:var(--verde)}
 .caso-lugar{color:var(--gris)}
 .caso-metricas{font-weight:500;color:var(--pino);padding-top:12px;border-top:1px solid var(--linea)}
@@ -432,7 +434,8 @@ textarea{min-height:150px;resize:vertical}
 
 /* Páginas (una sola HTML) */
 .pagina{display:none}
-.pagina.activa{display:block}
+.pagina.activa{display:block;animation:aparecePag .3s ease both}
+@keyframes aparecePag{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
 </style>
 <noscript><style>.pagina{display:block!important}</style></noscript>
@@ -545,7 +548,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     <div class="envoltura">
       <div>
         <h1>Infraestructura, energía y sistemas digitales en un mismo despacho.</h1>
-        <p class="entradilla">BAFRAS es una ingeniería multidisciplinar en Mallorca que integra infraestructura, sistemas energéticos y sistemas digitales para abordar edificios, negocios e instalaciones industriales de forma global.</p>
+        <p class="entradilla">BAFRAS es una ingeniería multidisciplinar en Mallorca que integra infraestructura, sistemas energéticos y sistemas digitales para abordar edificios, negocios e instalaciones industriales.</p>
         <div class="botones">
           <a class="boton lleno" href="#/capacidades">Explorar capacidades</a>
           <a class="boton" href="#/contacto">Hablemos de tu proyecto</a>
@@ -563,12 +566,11 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <p class="entradilla" style="margin-top:20px">Un edificio, una industria o una infraestructura no funcionan como una suma de instalaciones independientes. Estructura, instalaciones, energía, automatización, datos y operación forman parte de un mismo sistema, y las decisiones sobre un elemento condicionan al resto.</p>
       <p class="prosa" style="margin-top:8px">En BAFRAS analizamos estas relaciones para entender cómo funciona el activo, identificar dónde actuar y desarrollar soluciones coherentes con el conjunto.</p>
       <div class="tres-cap">
-        <p><a href="#/capacidades/infrastructure">Infrastructure</a></p>
-        <p><a href="#/capacidades/energy-systems">Energy Systems</a></p>
-        <p><a href="#/capacidades/digital-systems">Digital Systems</a></p>
+        <p><a href="#/@capacidades">Infrastructure</a></p>
+        <p><a href="#/@capacidades">Energy Systems</a></p>
+        <p><a href="#/@capacidades">Digital Systems</a></p>
       </div>
       <p class="lema">Tres capacidades complementarias. Una ingeniería. Un sistema.</p>
-      <p style="margin-top:20px;margin-bottom:0"><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></p>
     </div>
   </section>
 
@@ -648,21 +650,19 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <p style="margin-top:8px;max-width:62ch">Estos son algunos de los proyectos que ayudan a entender las capacidades que hoy convergen en BAFRAS.</p>
       <div class="casos"><a class="caso" href="#/proyectos/experiencia-del-equipo/campus-universitario">
           <span class="caso-cat">Transición energética e integración de sistemas</span>
-          <h3>Campus universitario</h3>
+          <h3>Campus universitario · Sistema energético fotovoltaico integrado</h3>
           <p class="caso-lugar">Mallorca</p>
           <p>Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctrica, monitorización y gestión avanzada de la energía.</p>
           <p class="caso-metricas">~7,4 MWp FV · +10 MWh BESS · V2G · AMI · SCADA · VPP</p>
           <p class="caso-caps">Energy Systems · Digital Systems · Infrastructure</p>
-          <span class="sello equipo">Experiencia del equipo</span>
           <span class="enlace">Ver proyecto</span>
         </a><a class="caso" href="#/proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">
           <span class="caso-cat">Instalaciones, construcción y obra</span>
           <h3>Hoteles, colegios y residencial de alto nivel</h3>
           <p class="caso-lugar">Mallorca e Ibiza</p>
-          <p>Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p>
-          <p class="caso-metricas">7 años · MEP · diseño y obra · mediciones y certificación</p>
+          <p>Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. Proyectos destacados: Hotel Formentor (Mallorca), Colegio Montesión (Palma) y Villa Nusret (Ibiza).</p>
+          <p class="caso-metricas">7 años · MEP · Diseño y Obra · mediciones y certificación</p>
           <p class="caso-caps">Infrastructure</p>
-          <span class="sello equipo">Experiencia del equipo</span>
           <span class="enlace">Ver proyecto</span>
         </a><a class="caso" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">
           <span class="caso-cat">Sistemas eléctricos, control y automatización</span>
@@ -671,7 +671,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <p>Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y energéticos internacionales.</p>
           <p class="caso-metricas">+2 GW instalados · Dogger Bank A (1,2 GW) · Vineyard Wind 1 (806 MW)</p>
           <p class="caso-caps">Energy Systems · Digital Systems</p>
-          <span class="sello equipo">Experiencia del equipo</span>
           <span class="enlace">Ver proyecto</span>
         </a></div>
       <p class="nota"><span class="sello propio">Proyecto BAFRAS</span> identifica trabajos desarrollados directamente por BAFRAS. <span class="sello equipo">Experiencia del equipo</span> identifica proyectos desarrollados por sus miembros durante su trayectoria profesional previa.</p>
@@ -823,7 +822,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <h4 role="heading" aria-level="3" style="margin-bottom:12px">Sectores donde la aplicamos</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@terciario">Edificios y terciario</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Evidencia</h4>
-        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">Hoteles, colegios y residencial de alto nivel</a></li></ul>
+        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Sistema energético fotovoltaico integrado</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">Hoteles, colegios y residencial de alto nivel</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Se entiende mejor con</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
       </div>
@@ -873,7 +872,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <h4 role="heading" aria-level="3" style="margin-bottom:12px">Sectores donde la aplicamos</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@terciario">Edificios y terciario</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Evidencia</h4>
-        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
+        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Sistema energético fotovoltaico integrado</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Se entiende mejor con</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/digital-systems">Digital Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
       </div>
@@ -923,7 +922,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <h4 role="heading" aria-level="3" style="margin-bottom:12px">Sectores donde la aplicamos</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/sectores@hotelero">Hospitality</a></li><li><a class="enlace" href="#/sectores@industria">Industria</a></li><li><a class="enlace" href="#/sectores@deportivos">Centros deportivos</a></li><li><a class="enlace" href="#/sectores@terciario">Edificios y terciario</a></li><li><a class="enlace" href="#/sectores@infraestructura">Infraestructura</a></li><li><a class="enlace" href="#/sectores@publico">Sector público</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Evidencia</h4>
-        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
+        <ul class="vinculos"><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/campus-universitario">Campus universitario · Sistema energético fotovoltaico integrado</a></li><li><a class="enlace" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">Proyecto energético internacional</a></li></ul>
         <h4 role="heading" aria-level="3" style="margin:28px 0 12px">Se entiende mejor con</h4>
         <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="#/capacidades/energy-systems">Energy Systems</a></li><li><a class="enlace" href="#/capacidades@vision-de-sistema">Visión de sistema</a></li></ul>
       </div>
@@ -1050,21 +1049,19 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <p style="margin-top:12px;max-width:62ch">Proyectos desarrollados por los socios durante su trayectoria profesional previa. Indicamos siempre quién participó y con qué responsabilidad.</p>
       <div class="casos"><a class="caso" href="#/proyectos/experiencia-del-equipo/campus-universitario">
           <span class="caso-cat">Transición energética e integración de sistemas</span>
-          <h3>Campus universitario</h3>
+          <h3>Campus universitario · Sistema energético fotovoltaico integrado</h3>
           <p class="caso-lugar">Mallorca</p>
           <p>Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctrica, monitorización y gestión avanzada de la energía.</p>
           <p class="caso-metricas">~7,4 MWp FV · +10 MWh BESS · V2G · AMI · SCADA · VPP</p>
           <p class="caso-caps">Energy Systems · Digital Systems · Infrastructure</p>
-          <span class="sello equipo">Experiencia del equipo</span>
           <span class="enlace">Ver proyecto</span>
         </a><a class="caso" href="#/proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial">
           <span class="caso-cat">Instalaciones, construcción y obra</span>
           <h3>Hoteles, colegios y residencial de alto nivel</h3>
           <p class="caso-lugar">Mallorca e Ibiza</p>
-          <p>Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p>
-          <p class="caso-metricas">7 años · MEP · diseño y obra · mediciones y certificación</p>
+          <p>Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. Proyectos destacados: Hotel Formentor (Mallorca), Colegio Montesión (Palma) y Villa Nusret (Ibiza).</p>
+          <p class="caso-metricas">7 años · MEP · Diseño y Obra · mediciones y certificación</p>
           <p class="caso-caps">Infrastructure</p>
-          <span class="sello equipo">Experiencia del equipo</span>
           <span class="enlace">Ver proyecto</span>
         </a><a class="caso" href="#/proyectos/experiencia-del-equipo/energia-offshore-internacional">
           <span class="caso-cat">Sistemas eléctricos, control y automatización</span>
@@ -1073,7 +1070,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
           <p>Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y energéticos internacionales.</p>
           <p class="caso-metricas">+2 GW instalados · Dogger Bank A (1,2 GW) · Vineyard Wind 1 (806 MW)</p>
           <p class="caso-caps">Energy Systems · Digital Systems</p>
-          <span class="sello equipo">Experiencia del equipo</span>
           <span class="enlace">Ver proyecto</span>
         </a></div>
       <p class="nota">Las cifras corresponden a la experiencia profesional previa de cada socio. <a class="enlace" href="#/sobre-bafras@equipo">Ver el perfil de cada uno</a>.</p>
@@ -1089,15 +1085,15 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
 <div class="pagina" data-pagina="proyectos/experiencia-del-equipo/campus-universitario">
 <section class="bloque">
     <div class="envoltura">
-      <p class="migas"><a href="#/proyectos">Proyectos</a> / <a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a> / Campus universitario</p>
+      <p class="migas"><a href="#/proyectos">Proyectos</a> / <a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a> / Campus universitario · Sistema energético fotovoltaico integrado</p>
       <span class="sello equipo">Experiencia del equipo</span>
-      <h1 style="margin-top:16px">Campus universitario</h1>
+      <h1 style="margin-top:16px">Campus universitario · Sistema energético fotovoltaico integrado</h1>
       <p class="entradilla" style="margin-top:16px">Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctrica, monitorización y gestión avanzada de la energía.</p>
       <dl class="ficha">
         <div><dt>Ubicación</dt><dd>Mallorca</dd></div>
         <div><dt>Participación</dt><dd>Murti Bär</dd></div>
         <div><dt>Capacidades</dt><dd>Energy Systems, Digital Systems, Infrastructure</dd></div>
-        <div><dt>Empresa en ese momento</dt><dd><span class="pend">Nombre de la empresa</span></dd></div>
+        <div><dt>Empresa</dt><dd>Universitat de les Illes Balears · Departamento de Ingeniería</dd></div>
       </dl>
     </div>
   </section>
@@ -1136,12 +1132,12 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
       <p class="migas"><a href="#/proyectos">Proyectos</a> / <a href="#/proyectos@experiencia-del-equipo">Experiencia del equipo</a> / Hoteles, colegios y residencial de alto nivel</p>
       <span class="sello equipo">Experiencia del equipo</span>
       <h1 style="margin-top:16px">Hoteles, colegios y residencial de alto nivel</h1>
-      <p class="entradilla" style="margin-top:16px">Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p>
+      <p class="entradilla" style="margin-top:16px">Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alto nivel, desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. Proyectos destacados: Hotel Formentor (Mallorca), Colegio Montesión (Palma) y Villa Nusret (Ibiza).</p>
       <dl class="ficha">
         <div><dt>Ubicación</dt><dd>Mallorca e Ibiza</dd></div>
         <div><dt>Participación</dt><dd>Àngel Frau</dd></div>
         <div><dt>Capacidades</dt><dd>Infrastructure</dd></div>
-        <div><dt>Empresa en ese momento</dt><dd><span class="pend">Nombre de la empresa</span></dd></div>
+        <div><dt>Empresa</dt><dd>Constructora San José</dd></div>
       </dl>
     </div>
   </section>
@@ -1149,7 +1145,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
     <div class="envoltura dos-col">
       <h2>El proyecto</h2>
       <ul class="lista-servicios">
-        <li><h4 role="heading" aria-level="3">Datos clave</h4><p>7 años · MEP · diseño y obra · mediciones y certificación</p></li>
+        <li><h4 role="heading" aria-level="3">Datos clave</h4><p>7 años · MEP · Diseño y Obra · mediciones y certificación</p></li>
         <li><h4 role="heading" aria-level="3">Responsabilidad</h4><p>Lideró las instalaciones desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque. En proyectos de gran escala, también análisis de ofertas, mediciones, certificaciones y valoración de modificados.</p></li>
         <li><h4 role="heading" aria-level="3">Resultado</h4><p><span class="pend">Cifras o hitos que se puedan publicar.</span></p></li>
         <li><h4 role="heading" aria-level="3">Contexto</h4><p><span class="pend">Cliente, alcance y plazos, si se pueden publicar.</span></p></li>
@@ -1185,7 +1181,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
         <div><dt>Ubicación</dt><dd>Eólica marina · internacional</dd></div>
         <div><dt>Participación</dt><dd>Amin Asbai</dd></div>
         <div><dt>Capacidades</dt><dd>Energy Systems, Digital Systems</dd></div>
-        <div><dt>Empresa en ese momento</dt><dd><span class="pend">Nombre de la empresa</span></dd></div>
+        <div><dt>Empresa</dt><dd>MG Motor · División de automatización</dd></div>
       </dl>
     </div>
   </section>
@@ -1279,7 +1275,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
             <h3>Àngel Frau</h3>
             <p class="rol">Infrastructure · MEP y ejecución de obra</p>
             <p>Ingeniero MEP con siete años de experiencia en sistemas eléctricos, mecánicos, de fontanería y protección contra incendios para hoteles, colegios y residencial de alto nivel en Mallorca e Ibiza. Ha trabajado tanto en diseño como en construcción, liderando las instalaciones desde la ingeniería y la coordinación hasta la ejecución en obra, la puesta en marcha y el arranque.</p><p>Su enfoque es hacer que la ingeniería funcione en el mundo real: diseños construibles, coordinación temprana y soluciones prácticas que equilibran rendimiento técnico, coste y plazo. Conoce también la economía del proyecto: análisis de ofertas, mediciones, certificaciones y valoración de modificados en proyectos de gran escala. Le interesan el diseño integrado de edificios, la ingeniería digital y unas instalaciones más eficientes, fiables y construibles.</p>
-            <ul class="chips" style="margin:16px 0"><li>7 años en MEP</li><li>Hoteles, colegios y residencial de alto nivel</li><li>Mallorca e Ibiza</li><li>Diseño y obra</li></ul>
+            <ul class="chips" style="margin:16px 0"><li>7 años en MEP</li><li>Hoteles, colegios y residencial de alto nivel</li><li>Mallorca e Ibiza</li><li>Diseño y Obra</li></ul>
             <ul class="vinculos"><li><a class="enlace" href="#/capacidades/infrastructure">Infrastructure</a></li><li><a class="enlace" href="https://www.linkedin.com/in/angel-frau-40b999179/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
           </div>
         </article><article class="socio-largo">
@@ -1339,21 +1335,6 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
             <h3>info@bafras.com</h3>
             <span class="quien">Correo general del despacho</span>
             <div class="acciones"><a class="boton lleno" href="mailto:info@bafras.com">Escribir</a></div>
-          </div>
-          <div class="via">
-            <h3>Àngel Frau</h3>
-            <span class="quien">Infrastructure · <span class="pend">+34 600 000 000</span></span>
-            <div class="acciones"><a class="boton" href="tel:+34600000000">Llamar</a><a class="boton lleno" href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></div>
-          </div>
-          <div class="via">
-            <h3>Murti Bär</h3>
-            <span class="quien">Energy Systems · <span class="pend">+34 600 000 000</span></span>
-            <div class="acciones"><a class="boton" href="tel:+34600000000">Llamar</a><a class="boton lleno" href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></div>
-          </div>
-          <div class="via">
-            <h3>Amin Asbai</h3>
-            <span class="quien">Digital Systems · <span class="pend">+34 600 000 000</span></span>
-            <div class="acciones"><a class="boton" href="tel:+34600000000">Llamar</a><a class="boton lleno" href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></div>
           </div>
         </div>
         <form id="formulario" action="https://formsubmit.co/info@bafras.com" method="POST">
@@ -1437,7 +1418,7 @@ l-493 -2 0 -530 0 -530 145 0 145 0 0 395 0 395 423 2 422 3 0 133 c0 133 0
 </footer>
 <script>
 (function(){
-  var TITULOS = {"": {"t": "BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca", "d": "Infrastructure, Energy Systems y Digital Systems en un mismo despacho de ingeniería en Mallorca. Instalaciones, energía fotovoltaica y almacenamiento, automatización y datos."}, "capacidades": {"t": "Capacidades: Infrastructure, Energy Systems y Digital Systems · BAFRAS Engineering", "d": "Infraestructura e instalaciones, sistemas energéticos y sistemas digitales integrados en un mismo despacho de ingeniería en Mallorca."}, "capacidades/infrastructure": {"t": "Infrastructure: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering", "d": "Diseño, coordinación y dirección de instalaciones eléctricas y térmicas, reformas y ampliaciones en Mallorca. Ingeniería con experiencia real en obra."}, "capacidades/energy-systems": {"t": "Energy Systems: fotovoltaica, almacenamiento y eficiencia energética en Mallorca · BAFRAS Engineering", "d": "Estudio, diseño y optimización de sistemas energéticos: generación fotovoltaica, almacenamiento BESS, electrificación y eficiencia para edificios e industria en Mallorca."}, "capacidades/digital-systems": {"t": "Digital Systems: automatización, control y datos para edificios e industria · BAFRAS Engineering", "d": "Monitorización, automatización, BMS/SCADA e integración de sistemas para edificios e industria en Mallorca, con análisis de datos y herramientas digitales de ingeniería."}, "sectores": {"t": "Sectores: hospitality, industria, centros deportivos, terciario e infraestructura · BAFRAS Engineering", "d": "Sectores en los que trabaja BAFRAS Engineering en Mallorca: hospitality, industria, centros deportivos, edificios y terciario, infraestructura y sector público."}, "proyectos": {"t": "Proyectos y experiencia del equipo · BAFRAS Engineering", "d": "Proyectos de BAFRAS Engineering y experiencia previa de sus socios en energía fotovoltaica y almacenamiento, instalaciones MEP y automatización."}, "proyectos/experiencia-del-equipo/campus-universitario": {"t": "Campus universitario · Experiencia del equipo · BAFRAS Engineering", "d": "Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctr"}, "proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial": {"t": "Hoteles, colegios y residencial de alto nivel · Experiencia del equipo · BAFRAS Engineering", "d": "Instalaciones eléctricas, mecánicas, de fontanería y protección contra incendios, desde la ingeniería y la coordinación hasta la ejecución en obra, la pues"}, "proyectos/experiencia-del-equipo/energia-offshore-internacional": {"t": "Proyecto energético internacional · Experiencia del equipo · BAFRAS Engineering", "d": "Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y "}, "conocimiento": {"t": "Conocimiento técnico: artículos, casos de estudio y guías · BAFRAS Engineering", "d": "Artículos técnicos, casos de estudio, guías e innovación en instalaciones, energía y sistemas digitales para edificios e industria."}, "sobre-bafras": {"t": "Sobre BAFRAS: quiénes somos, equipo y filosofía · BAFRAS Engineering", "d": "BAFRAS Engineering reúne tres trayectorias complementarias en instalaciones MEP, sistemas energéticos y automatización, con experiencia en proyectos de distinta escala."}, "contacto": {"t": "Contacto · BAFRAS Engineering", "d": "Contacta con BAFRAS Engineering en Mallorca por teléfono, WhatsApp, correo o formulario. Te responde directamente uno de los socios."}};
+  var TITULOS = {"": {"t": "BAFRAS Engineering · Ingeniería multidisciplinar en Mallorca", "d": "Infrastructure, Energy Systems y Digital Systems en un mismo despacho de ingeniería en Mallorca. Instalaciones, energía fotovoltaica y almacenamiento, automatización y datos."}, "capacidades": {"t": "Capacidades: Infrastructure, Energy Systems y Digital Systems · BAFRAS Engineering", "d": "Infraestructura e instalaciones, sistemas energéticos y sistemas digitales integrados en un mismo despacho de ingeniería en Mallorca."}, "capacidades/infrastructure": {"t": "Infrastructure: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering", "d": "Diseño, coordinación y dirección de instalaciones eléctricas y térmicas, reformas y ampliaciones en Mallorca. Ingeniería con experiencia real en obra."}, "capacidades/energy-systems": {"t": "Energy Systems: fotovoltaica, almacenamiento y eficiencia energética en Mallorca · BAFRAS Engineering", "d": "Estudio, diseño y optimización de sistemas energéticos: generación fotovoltaica, almacenamiento BESS, electrificación y eficiencia para edificios e industria en Mallorca."}, "capacidades/digital-systems": {"t": "Digital Systems: automatización, control y datos para edificios e industria · BAFRAS Engineering", "d": "Monitorización, automatización, BMS/SCADA e integración de sistemas para edificios e industria en Mallorca, con análisis de datos y herramientas digitales de ingeniería."}, "sectores": {"t": "Sectores: hospitality, industria, centros deportivos, terciario e infraestructura · BAFRAS Engineering", "d": "Sectores en los que trabaja BAFRAS Engineering en Mallorca: hospitality, industria, centros deportivos, edificios y terciario, infraestructura y sector público."}, "proyectos": {"t": "Proyectos y experiencia del equipo · BAFRAS Engineering", "d": "Proyectos de BAFRAS Engineering y experiencia previa de sus socios en energía fotovoltaica y almacenamiento, instalaciones MEP y automatización."}, "proyectos/experiencia-del-equipo/campus-universitario": {"t": "Campus universitario · Sistema energético fotovoltaico integrado · Experiencia del equipo · BAFRAS Engineering", "d": "Desarrollo de un sistema energético distribuido que integra generación fotovoltaica, almacenamiento energético, infraestructura eléctrica, movilidad eléctr"}, "proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial": {"t": "Hoteles, colegios y residencial de alto nivel · Experiencia del equipo · BAFRAS Engineering", "d": "Instalaciones MEP (electricidad, climatización, fontanería y protección contra incendios) en hoteles de gran escala, colegios y vivienda residencial de alt"}, "proyectos/experiencia-del-equipo/energia-offshore-internacional": {"t": "Proyecto energético internacional · Experiencia del equipo · BAFRAS Engineering", "d": "Participación en proyectos energéticos de gran escala vinculados a sistemas eléctricos, automatización y control, desarrollados en entornos industriales y "}, "conocimiento": {"t": "Conocimiento técnico: artículos, casos de estudio y guías · BAFRAS Engineering", "d": "Artículos técnicos, casos de estudio, guías e innovación en instalaciones, energía y sistemas digitales para edificios e industria."}, "sobre-bafras": {"t": "Sobre BAFRAS: quiénes somos, equipo y filosofía · BAFRAS Engineering", "d": "BAFRAS Engineering reúne tres trayectorias complementarias en instalaciones MEP, sistemas energéticos y automatización, con experiencia en proyectos de distinta escala."}, "contacto": {"t": "Contacto · BAFRAS Engineering", "d": "Contacta con BAFRAS Engineering en Mallorca por teléfono, WhatsApp, correo o formulario. Te responde directamente uno de los socios."}};
   var paginas = Array.prototype.slice.call(document.querySelectorAll('.pagina'));
   var cab = document.getElementById('cabecera'), boton = document.getElementById('menuBoton');
   var metaDesc = document.querySelector('meta[name="description"]');
