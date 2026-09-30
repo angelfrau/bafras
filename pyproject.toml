@@ -1,0 +1,9 @@
+[project]
+name = "bafras-site"
+version = "0.5.0"
+description = "Static website tooling for BAFRAS.com"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

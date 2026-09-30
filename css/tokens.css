@@ -1,0 +1,21 @@
+:root{
+  /* Paleta del kit BAFRAS_Visual_Assets_Reference_v1 */
+  --pino:#0E2B25;        /* Deep Green */
+  --verde:#1A7A5A;       /* BAFRAS Green */
+  --piedra-verde:#4F7B6E;/* Stone Green */
+  --tinta:#2A2A2A;       /* Graphite */
+  --gris-claro:#E6E6E6;  /* Light Gray */
+  --blanco:#FFFFFF;
+  /* Alias usados en la maqueta */
+  --pino-2:var(--pino); --pino-3:var(--piedra-verde);
+  --verde-claro:var(--gris-claro);
+  --beige:#ECE8DD; --beige-claro:#F7F5F0; --beige-linea:#D8D2C3;   /* beige de la primera propuesta: se recupera */
+  --piedra:var(--beige); --papel:var(--beige-claro); --linea:var(--beige-linea);
+  --gris:#4A5550;
+  --display:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --texto:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --ancho:1180px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
