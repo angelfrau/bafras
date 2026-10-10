@@ -205,6 +205,8 @@ body {
 .cuerpo .total td { font-weight: 700; background: var(--beige); border-bottom: 0; }
 .cuerpo .resumen { width: 110mm; margin-left: auto; }
 .cuerpo .bloque-resumen { break-inside: avoid; }
+.cuerpo .bloque-resumen h2 { margin-top: 10mm; }
+.cuerpo .resumen { margin-top: 7mm; }
 .cuerpo .c-cod { width: 19mm; }
 .cuerpo .c-ud { width: 11mm; }
 .cuerpo .c-cant { width: 16mm; }

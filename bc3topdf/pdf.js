@@ -249,14 +249,14 @@
     filas.push({ t1: 'IVA ' + r.ivaPct + ' %', t2: BC3.euros(r.iva), negrita: false, fondo: null, filete: true });
     filas.push({ t1: 'Total con IVA', t2: BC3.euros(r.total), negrita: true, fondo: PAL.beige, filete: false });
 
-    var total = 7 * MM + lhT + 1.3 * MM + 2 * MM + CAB;
+    var total = 10 * MM + lhT + 8 * MM + CAB;
     filas.forEach(function (f) { total += alturaFila(entradasRes(ctx, f), f.filete); });
-    if (ctx.y + total > LIMITE) nuevaPagina(ctx); else ctx.y += 7 * MM;
+    if (ctx.y + total > LIMITE) nuevaPagina(ctx); else ctx.y += 10 * MM;
 
     escribir(ctx, 'Resumen', LAT, bl(ctx.y, lhT, 10.5), ctx.b, 10.5, PAL.pino);
     ctx.y += lhT;
     filete(ctx, LAT, LAT + ANCHO, ctx.y + 1.15 * MM, 0.3 * MM, PAL.linea);
-    ctx.y += 1.3 * MM + 2 * MM;
+    ctx.y += 8 * MM; // aire entre el filete del resumen y la tabla (antes 3,3 mm)
     cabecera(ctx, xRes, [{ w: 84 * MM, alin: 'L', t: 'Capítulo' }, { w: 26 * MM, alin: 'C', t: 'Importe (€)' }]);
     filas.forEach(function (f) {
       var e = entradasRes(ctx, f);
@@ -272,11 +272,13 @@
       ctx.y += lhT;
     });
     ctx.y += 1 * MM;
-    var meta = 'Revisión ' + m.rev + ' · ' + m.fecha + ' · Precios de venta en euros · Cliente: ' + m.cliente;
-    envolver(ctx.r, meta, 8.5, ANCHO).forEach(function (l) {
-      asegurar(ctx, lhM, null);
-      escribir(ctx, l, LAT, bl(ctx.y, lhM, 8.5), ctx.r, 8.5, PAL.gris);
-      ctx.y += lhM;
+    // Cabecera del cuerpo: cliente y revisión · fecha, cada uno en su línea (el título va arriba).
+    ['Cliente: ' + m.cliente, 'Revisión ' + m.rev + ' · ' + m.fecha].forEach(function (dato) {
+      envolver(ctx.r, dato, 8.5, ANCHO).forEach(function (l) {
+        asegurar(ctx, lhM, null);
+        escribir(ctx, l, LAT, bl(ctx.y, lhM, 8.5), ctx.r, 8.5, PAL.gris);
+        ctx.y += lhM;
+      });
     });
     ctx.y += 5 * MM;
     r.capitulos.forEach(function (c) { capitulo(ctx, c, 2); });
