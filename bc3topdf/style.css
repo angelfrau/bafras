@@ -1,0 +1,242 @@
+/* BAFRAS · BC3 a PDF. Web en Inter con la paleta de bafras.com; documento en Arial (plantilla de presupuesto). */
+:root {
+  --beige: #ECE8DD;
+  --papel: #F7F5F0;
+  --pino: #0E2B25;
+  --verde: #1A7A5A;
+  --tinta: #2A2A2A;
+  --gris: #4A5550;
+  --gris-suave: #7A8580;
+  --linea: #D8D2C3;
+}
+
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ---------- web ---------- */
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 28px;
+  background: #fff;
+  border-bottom: 1px solid var(--linea);
+}
+.cabecera img { height: 34px; width: auto; display: block; }
+.cabecera span { color: var(--gris); font-size: 14px; }
+
+.contenedor { max-width: 780px; margin: 0 auto; padding: 32px 16px 60px; }
+
+.panel {
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: 14px;
+  padding: 28px;
+}
+.panel h1 { font-size: 24px; font-weight: 600; color: var(--pino); margin: 0 0 6px; letter-spacing: -0.01em; }
+.lead { color: var(--gris); margin: 0 0 22px; font-size: 14.5px; }
+
+.soltar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 26px 16px;
+  border: 1.5px dashed var(--linea);
+  border-radius: 12px;
+  background: var(--papel);
+  cursor: pointer;
+  text-align: center;
+  transition: background .15s, border-color .15s;
+}
+.soltar:hover, .soltar.activa { background: var(--beige); border-color: var(--verde); }
+.soltar input { display: none; }
+.soltar-titulo { font-weight: 600; color: var(--pino); }
+.soltar-sub { font-size: 13px; color: var(--gris); }
+
+.campos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; margin-top: 20px; }
+.campos .ancho { grid-column: 1 / -1; }
+.campos label { display: block; font-size: 13px; font-weight: 500; color: var(--gris); margin-bottom: 5px; }
+.campos input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--linea);
+  border-radius: 9px;
+  background: #fff;
+  font: inherit;
+  color: var(--tinta);
+}
+.campos input:focus { outline: 2px solid var(--verde); outline-offset: 0; border-color: transparent; }
+
+.opcionales { border: 1px dashed var(--linea); border-radius: 10px; padding: 10px 14px; }
+.opcionales summary { cursor: pointer; font-size: 13px; color: var(--gris); font-weight: 500; }
+.opcionales .interior { margin-top: 12px; }
+
+.acciones { display: flex; gap: 10px; align-items: center; margin-top: 22px; flex-wrap: wrap; }
+.boton {
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--pino);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.boton:hover:not(:disabled) { background: var(--verde); }
+.boton:disabled { background: #B9C2BE; cursor: default; }
+.boton.secundario { background: var(--verde); }
+.estado { font-size: 13.5px; color: var(--gris); }
+.estado.error { color: #9B2C2C; }
+.nota { font-size: 12.5px; color: var(--gris-suave); margin: 16px 0 0; }
+
+.vista { margin-top: 28px; }
+.vista:empty { display: none; }
+
+/* ---------- portada: plantilla de presupuesto BAFRAS (fondo beige, logo, título, datos 2×2) ---------- */
+.portada {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto 24px;
+  background: var(--beige);
+  color: var(--pino);
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(14, 43, 37, .18);
+  break-after: page;
+}
+.p-logo { position: absolute; top: 47.33mm; left: 38mm; width: 134mm; height: auto; display: block; }
+.p-medio {
+  position: absolute;
+  top: 121.55mm;
+  left: 0;
+  right: 0;
+  height: 140.07mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2.05mm;
+}
+.p-etiqueta {
+  margin: 0 0 4mm;
+  font: 700 10.5pt/1.3 Arial, "Liberation Sans", Helvetica, sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gris-suave);
+}
+.p-titulo {
+  margin: 0 auto;
+  max-width: 160mm;
+  font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--pino);
+}
+.p-titulo.t1 { font-size: 38pt; line-height: 1.05; }
+.p-titulo.t2 { font-size: 37pt; line-height: 1.05; }
+.p-titulo.t3 { font-size: 35pt; line-height: 1.05; }
+.p-titulo.t4 { font-size: 30pt; line-height: .95; }
+.p-datos {
+  position: absolute;
+  top: 275.52mm;
+  left: 30mm;
+  width: 150mm;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20mm;
+  row-gap: 2.5mm;
+  font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
+}
+.p-datos div { text-align: center; }
+.p-datos dt {
+  margin: 0 0 1.2mm;
+  font: 700 6.5pt/1.2 Arial, "Liberation Sans", Helvetica, sans-serif;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gris-suave);
+}
+.p-datos dd { margin: 0; font: 10pt/1.2 Arial, "Liberation Sans", Helvetica, sans-serif; color: var(--pino); }
+
+/* ---------- cuerpo del presupuesto (A4) ---------- */
+.cuerpo {
+  font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
+  font-size: 9pt;
+  line-height: 1.35;
+  color: var(--tinta);
+}
+.cuerpo h1 { font-size: 15pt; color: var(--pino); margin: 0 0 1mm; }
+.cuerpo .meta { font-size: 8.5pt; color: var(--gris); margin: 0 0 5mm; }
+.cuerpo h2 {
+  font-size: 10.5pt;
+  color: var(--pino);
+  margin: 7mm 0 2mm;
+  padding-bottom: 1mm;
+  border-bottom: .3mm solid var(--linea);
+  break-after: avoid;
+}
+.cuerpo h3 { font-size: 9pt; color: var(--verde); margin: 4mm 0 1.5mm; break-after: avoid; }
+.cuerpo table { width: 100%; border-collapse: collapse; font-size: 8.5pt; }
+.cuerpo th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--pino);
+  padding: 1.2mm 1.5mm;
+  border-bottom: .4mm solid var(--pino);
+}
+.cuerpo td { vertical-align: top; padding: 1.6mm 1.5mm; border-bottom: .2mm solid var(--linea); }
+.cuerpo tr { break-inside: avoid; }
+.cuerpo .c { text-align: center; }
+.cuerpo .cod { color: var(--gris); font-size: 7.5pt; white-space: nowrap; }
+.cuerpo .desc strong { display: block; color: var(--pino); font-size: 8.5pt; }
+.cuerpo .desc span { display: block; margin-top: .6mm; font-size: 7.8pt; color: var(--tinta); }
+.cuerpo .subtotal td { font-weight: 700; background: var(--papel); }
+.cuerpo .total td { font-weight: 700; background: var(--beige); border-bottom: 0; }
+.cuerpo .resumen { width: 110mm; margin-left: auto; }
+.cuerpo .bloque-resumen { break-inside: avoid; }
+.cuerpo .c-cod { width: 19mm; }
+.cuerpo .c-ud { width: 11mm; }
+.cuerpo .c-cant { width: 16mm; }
+.cuerpo .c-pre { width: 22mm; }
+.cuerpo .c-imp { width: 26mm; }
+
+.cuerpo.hoja {
+  width: 210mm;
+  margin: 0 auto 24px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(14, 43, 37, .18);
+  padding: 16mm 16mm 18mm;
+}
+
+/* ---------- impresión ---------- */
+@page {
+  size: A4;
+  margin: 22mm 16mm 20mm;
+  @bottom-left { content: "BAFRAS Engineering"; font: 7.5pt Arial, sans-serif; color: #4A5550; }
+  @bottom-right { content: "Página " counter(page) " de " counter(pages); font: 7.5pt Arial, sans-serif; color: #4A5550; }
+}
+/* La portada es la primera página: sin márgenes ni pies. */
+@page :first {
+  size: A4;
+  margin: 0;
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@media print {
+  body { background: none; }
+  .cabecera, .contenedor > .panel { display: none; }
+  .contenedor { max-width: none; padding: 0; }
+  .vista { margin: 0; }
+  .portada { margin: 0; box-shadow: none; }
+  .cuerpo.hoja { width: auto; margin: 0; padding: 0; box-shadow: none; background: none; }
+}
