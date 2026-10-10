@@ -1,0 +1,7 @@
+fontkit (paquete @pdf-lib/fontkit 1.1.1), archivo vendor/fontkit.umd.min.js.
+
+Licencia declarada en el paquete: MIT.
+Repositorio de origen: https://github.com/Hopding/fontkit
+
+Pendiente: copiar aquí el texto completo de la licencia MIT tal como aparece en el
+repositorio (no se pudo descargar desde el entorno de trabajo).

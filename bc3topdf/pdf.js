@@ -32,12 +32,14 @@
     return BC3.euros(Math.round(r * 100));
   }
 
-  function logoBytes() {
-    var b64 = String(window.BAFRAS_LOGO_PNG || '').split(',')[1] || '';
+  // Bytes de un data: URI en base64 (el logotipo y las fuentes van incrustados en la página).
+  function bytesDe(uri) {
+    var b64 = String(uri || '').split(',')[1] || '';
     var bin = atob(b64), out = new Uint8Array(bin.length);
     for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
     return out;
   }
+  function logoBytes() { return bytesDe(window.BAFRAS_LOGO_PNG); }
 
   function rgb(hex) {
     var n = parseInt(hex.slice(1), 16);
@@ -348,13 +350,17 @@
 
   // r: resultado de BC3.calcular (precios de venta). m: datos de portada del formulario.
   function generar(r, m) {
-    if (!window.PDFLib) return Promise.reject(new Error('no se cargó la librería del PDF'));
+    if (!window.PDFLib || !window.fontkit || !window.BAFRAS_FUENTES) {
+      return Promise.reject(new Error('no se cargaron las librerías del PDF'));
+    }
     var PL = window.PDFLib;
     return PL.PDFDocument.create().then(function (doc) {
-      // En pdf-lib, incrustar fuentes e imágenes devuelve promesas.
+      // Fuentes incrustadas (Liberation Sans, métricas de Arial). Con las fuentes estándar, cada visor
+      // sustituye la letra por la suya: el € de los encabezados se veía mal en el móvil.
+      doc.registerFontkit(window.fontkit);
       return Promise.all([
-        doc.embedFont(PL.StandardFonts.Helvetica),
-        doc.embedFont(PL.StandardFonts.HelveticaBold),
+        doc.embedFont(bytesDe(window.BAFRAS_FUENTES.regular), { subset: true }),
+        doc.embedFont(bytesDe(window.BAFRAS_FUENTES.bold), { subset: true }),
         doc.embedPng(logoBytes())
       ]).then(function (v) {
         var ctx = { doc: doc, r: v[0], b: v[1] };
