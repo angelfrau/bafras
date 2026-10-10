@@ -164,6 +164,9 @@
     datos = null;
     $('generar').disabled = true;
     $('imprimir').hidden = true;
+    $('descargar').hidden = true;
+    listo = null;
+    generacion++;
     $('archivo').textContent = f.name;
     estado('Leyendo el BC3…');
     f.arrayBuffer().then(function (buf) {
@@ -194,6 +197,28 @@
     if (this.files[0]) cargar(this.files[0]);
   });
 
+  var generacion = 0; // una vista previa antigua no sobrescribe a la nueva
+  var listo = null;   // { bytes, nombre } del último PDF preparado
+
+  function descargarArchivo(bytes, nombre) {
+    var url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = nombre;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 60000);
+  }
+
+  // Presupuesto_<cliente>_rev<revisión>.pdf, sin tildes ni espacios.
+  function nombreArchivo(m) {
+    var base = (m.cliente || m.titulo || 'presupuesto').normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^A-Za-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+    var rev = (m.rev || '01').replace(/[^A-Za-z0-9]+/g, '');
+    return 'Presupuesto_' + (base || 'presupuesto') + '_rev' + rev + '.pdf';
+  }
+
   $('generar').addEventListener('click', function () {
     if (!datos) return;
     if (!$('formulario').reportValidity()) return;
@@ -204,13 +229,33 @@
     }
     var r = BC3.calcular(datos, 1, iva); // precios de venta tal cual vienen en el BC3
     var m = leerCampos();
+    var id = ++generacion;
+    listo = null;
+    $('descargar').hidden = true;
     $('vista').style.setProperty('--zoom', '1'); // se mide a escala 1 y después se ajusta
     $('vista').innerHTML = portadaHtml(m) + cuerpoHtml(r, m);
     ajustarTitulo();
     ajustarZoom();
     $('imprimir').hidden = false;
-    estado('Listo: ' + r.numPartidas + ' partidas. Venta sin IVA ' + BC3.euros(r.subtotal) +
-      ' €; con IVA ' + BC3.euros(r.total) + ' €.');
+    var resumen = 'Listo: ' + r.numPartidas + ' partidas. Venta sin IVA ' + BC3.euros(r.subtotal) +
+      ' €; con IVA ' + BC3.euros(r.total) + ' €.';
+    estado(resumen + ' Preparando el PDF…');
+    window.BC3PDF.generar(r, m).then(function (bytes) {
+      if (id !== generacion) return;
+      listo = { bytes: bytes, nombre: nombreArchivo(m) };
+      $('descargar').hidden = false;
+      estado(resumen + ' PDF listo para descargar.');
+    }).catch(function (e) {
+      if (id !== generacion) return;
+      estado('No se pudo preparar el PDF: ' + e.message, true);
+    });
+  });
+
+  // Se descarga en el mismo gesto del usuario: el PDF ya está preparado.
+  $('descargar').addEventListener('click', function () {
+    if (!listo) return;
+    descargarArchivo(listo.bytes, listo.nombre);
+    estado('Descarga iniciada: ' + listo.nombre + '.');
   });
 
   window.addEventListener('resize', ajustarZoom);

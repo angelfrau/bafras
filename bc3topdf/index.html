@@ -64,17 +64,21 @@
       </form>
 
       <div class="acciones">
-        <button type="button" id="generar" class="boton" disabled>Generar presupuesto</button>
-        <button type="button" id="imprimir" class="boton secundario" hidden>Guardar como PDF</button>
+        <button type="button" id="generar" class="boton" disabled>Vista previa</button>
+        <button type="button" id="descargar" class="boton" hidden>Descargar PDF</button>
+        <button type="button" id="imprimir" class="boton secundario" hidden>Imprimir</button>
         <span id="estado" class="estado"></span>
       </div>
-      <p class="nota">Los precios son los del BC3, que ya trae el margen de venta. En el diálogo de impresión, elige «Guardar como PDF» y tamaño A4.</p>
+      <p class="nota">Los precios son los del BC3, que ya trae el margen de venta. «Descargar PDF» guarda el archivo en tu dispositivo. «Imprimir» abre el diálogo de impresión del navegador.</p>
     </section>
 
     <section id="vista" class="vista"></section>
   </main>
 
   <script src="bc3.js"></script>
+  <script src="vendor/pdf-lib.min.js"></script>
+  <script src="logo-pdf.js"></script>
+  <script src="pdf.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
