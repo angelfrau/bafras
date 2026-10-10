@@ -101,31 +101,35 @@ body {
 .vista { margin-top: 28px; }
 .vista:empty { display: none; }
 
-/* ---------- portada: plantilla de presupuesto BAFRAS (fondo beige, logo, título, datos 2×2) ---------- */
+/* ---------- portada: composición centrada de la plantilla BAFRAS ----------
+   Logo arriba y datos abajo, con márgenes superior e inferior iguales (47,33 mm).
+   El bloque del rótulo y del título queda centrado entre el logo y los datos: la distancia
+   a uno y a otro es la misma con 1, 2, 3 o 4 líneas de título. */
 .portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   width: 210mm;
   height: 297mm;
   margin: 0 auto 24px;
+  padding: 47.33mm 0;
   background: var(--beige);
   color: var(--pino);
   overflow: hidden;
   box-shadow: 0 1px 6px rgba(14, 43, 37, .18);
   break-after: page;
 }
-.p-logo { position: absolute; top: 47.33mm; left: 38mm; width: 134mm; height: auto; display: block; }
+.p-logo { display: block; flex: none; width: 134mm; height: auto; }
 .p-medio {
-  position: absolute;
-  top: 121.55mm;
-  left: 0;
-  right: 0;
-  height: 140.07mm;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 2.05mm;
 }
 .p-etiqueta {
   margin: 0 0 4mm;
@@ -146,15 +150,13 @@ body {
 .p-titulo.t3 { font-size: 35pt; line-height: 1.05; }
 .p-titulo.t4 { font-size: 30pt; line-height: .95; }
 .p-datos {
-  position: absolute;
-  top: 275.52mm;
-  left: 30mm;
+  flex: none;
   width: 150mm;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20mm;
-  row-gap: 2.5mm;
+  row-gap: 16mm;
   font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
 }
 .p-datos div { text-align: center; }
@@ -230,6 +232,11 @@ body {
   margin: 0;
   @bottom-left { content: none; }
   @bottom-right { content: none; }
+}
+
+/* En pantalla, la hoja A4 se reduce al ancho disponible (app.js calcula --zoom). */
+@media screen {
+  .portada, .cuerpo.hoja { zoom: var(--zoom, 1); }
 }
 
 @media print {

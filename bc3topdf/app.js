@@ -5,6 +5,7 @@
 
   var BC3 = window.BC3;
   var LOGO = '../images/BAFRAS_logo_horizontal_deep_corregido.svg';
+  var ANCHO_HOJA = 793.7; // 210 mm en píxeles CSS
   var $ = function (id) { return document.getElementById(id); };
   var datos = null;
 
@@ -25,6 +26,13 @@
   }
 
   function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+  // Coeficiente e IVA del formulario. Precio de venta = precio de la base × coeficiente.
+  function ajustesVenta() {
+    var coef = parseFloat($('coef').value);
+    var iva = parseFloat($('iva').value);
+    return { coef: coef >= 1 ? coef : 1.35, iva: iva >= 0 ? iva : 21 };
+  }
 
   // Cantidad: entero con separador de miles; si no es entero, dos decimales.
   function cantTxt(n) {
@@ -54,7 +62,7 @@
     };
   }
 
-  // ---------- portada: misma composición que la plantilla (logo fijo, bloque central, datos 2×2 fijos) ----------
+  // ---------- portada: misma composición que la plantilla (logo arriba, bloque centrado, datos abajo) ----------
   function portadaHtml(m) {
     return '<section class="portada">' +
       '<img class="p-logo" src="' + LOGO + '" alt="BAFRAS Engineering">' +
@@ -77,6 +85,13 @@
     var lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.05;
     var lineas = Math.max(1, Math.round(el.getBoundingClientRect().height / lh));
     el.className = 'p-titulo t' + Math.min(lineas, 4);
+  }
+
+  // En pantalla, la hoja se reduce si no cabe en el ancho de la página. La impresión no se toca.
+  function ajustarZoom() {
+    var vista = $('vista');
+    var z = vista.clientWidth > 0 ? Math.min(1, vista.clientWidth / ANCHO_HOJA) : 1;
+    vista.style.setProperty('--zoom', String(z));
   }
 
   // ---------- cuerpo ----------
@@ -139,7 +154,7 @@
   }
 
   function cuerpoHtml(r, m) {
-    var meta = 'Revisión ' + esc(m.rev) + ' · ' + esc(m.fecha) + ' · Precios en euros · Cliente: ' + esc(m.cliente);
+    var meta = 'Revisión ' + esc(m.rev) + ' · ' + esc(m.fecha) + ' · Precios de venta en euros · Cliente: ' + esc(m.cliente);
     var html = '<section class="cuerpo hoja"><h1>' + esc(m.titulo) + '</h1><p class="meta">' + meta + '</p>';
     r.capitulos.forEach(function (c) { html += capituloHtml(c, 2); });
     return html + resumenHtml(r) + '</section>';
@@ -156,9 +171,11 @@
       datos = BC3.parsear(BC3.decodificar(buf));
       var raiz = datos.conceptos[datos.raiz];
       if (!$('titulo').value.trim()) $('titulo').value = raiz.resumen || '';
-      var r = BC3.calcular(datos, 1.35, 21);
+      var v = ajustesVenta();
+      var r = BC3.calcular(datos, v.coef, v.iva);
       $('generar').disabled = false;
-      estado('BC3 leído: ' + r.numPartidas + ' partidas, coste ' + BC3.euros(r.coste) + ' €.');
+      estado('BC3 leído: ' + r.numPartidas + ' partidas. Venta sin IVA ' + BC3.euros(r.subtotal) +
+        ' €; con IVA ' + BC3.euros(r.total) + ' €.');
     }).catch(function (e) {
       estado('No se pudo leer el BC3: ' + e.message, true);
     });
@@ -190,12 +207,16 @@
     }
     var r = BC3.calcular(datos, coef, iva);
     var m = leerCampos();
+    $('vista').style.setProperty('--zoom', '1'); // se mide a escala 1 y después se ajusta
     $('vista').innerHTML = portadaHtml(m) + cuerpoHtml(r, m);
     ajustarTitulo();
+    ajustarZoom();
     $('imprimir').hidden = false;
-    estado('Listo: ' + r.numPartidas + ' partidas · total con IVA ' + BC3.euros(r.total) + ' €.');
+    estado('Listo: ' + r.numPartidas + ' partidas. Venta sin IVA ' + BC3.euros(r.subtotal) +
+      ' €; con IVA ' + BC3.euros(r.total) + ' €.');
   });
 
+  window.addEventListener('resize', ajustarZoom);
   $('imprimir').addEventListener('click', function () { window.print(); });
 
   var hoy = new Date();
