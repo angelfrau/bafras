@@ -27,11 +27,10 @@
 
   function pad2(n) { return (n < 10 ? '0' : '') + n; }
 
-  // Coeficiente e IVA del formulario. Precio de venta = precio de la base × coeficiente.
+  // El BC3 ya trae los precios de venta (el margen va dentro del BC3). Aquí solo se toma el IVA.
   function ajustesVenta() {
-    var coef = parseFloat($('coef').value);
     var iva = parseFloat($('iva').value);
-    return { coef: coef >= 1 ? coef : 1.35, iva: iva >= 0 ? iva : 21 };
+    return { iva: iva >= 0 ? iva : 21 };
   }
 
   // Cantidad: entero con separador de miles; si no es entero, dos decimales.
@@ -171,8 +170,7 @@
       datos = BC3.parsear(BC3.decodificar(buf));
       var raiz = datos.conceptos[datos.raiz];
       if (!$('titulo').value.trim()) $('titulo').value = raiz.resumen || '';
-      var v = ajustesVenta();
-      var r = BC3.calcular(datos, v.coef, v.iva);
+      var r = BC3.calcular(datos, 1, ajustesVenta().iva); // precios de venta tal cual vienen en el BC3
       $('generar').disabled = false;
       estado('BC3 leído: ' + r.numPartidas + ' partidas. Venta sin IVA ' + BC3.euros(r.subtotal) +
         ' €; con IVA ' + BC3.euros(r.total) + ' €.');
@@ -199,13 +197,12 @@
   $('generar').addEventListener('click', function () {
     if (!datos) return;
     if (!$('formulario').reportValidity()) return;
-    var coef = parseFloat($('coef').value);
     var iva = parseFloat($('iva').value);
-    if (!(coef >= 1) || !(iva >= 0)) {
-      estado('Revisa el coeficiente y el IVA.', true);
+    if (!(iva >= 0)) {
+      estado('Revisa el IVA.', true);
       return;
     }
-    var r = BC3.calcular(datos, coef, iva);
+    var r = BC3.calcular(datos, 1, iva); // precios de venta tal cual vienen en el BC3
     var m = leerCampos();
     $('vista').style.setProperty('--zoom', '1'); // se mide a escala 1 y después se ajusta
     $('vista').innerHTML = portadaHtml(m) + cuerpoHtml(r, m);
