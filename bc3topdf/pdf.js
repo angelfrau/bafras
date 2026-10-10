@@ -274,8 +274,8 @@
       ctx.y += lhT;
     });
     ctx.y += 1 * MM;
-    // Cabecera del cuerpo: cliente y revisión · fecha, cada uno en su línea (el título va arriba).
-    ['Cliente: ' + m.cliente, 'Revisión ' + m.rev + ' · ' + m.fecha].forEach(function (dato) {
+    // Cabecera del cuerpo: revisión · fecha (el título va arriba).
+    ['Revisión ' + m.rev + ' · ' + m.fecha].forEach(function (dato) {
       envolver(ctx.r, dato, 8.5, ANCHO).forEach(function (l) {
         asegurar(ctx, lhM, null);
         escribir(ctx, l, LAT, bl(ctx.y, lhM, 8.5), ctx.r, 8.5, PAL.gris);

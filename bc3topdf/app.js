@@ -153,7 +153,7 @@
   }
 
   function cuerpoHtml(r, m) {
-    var meta = 'Cliente: ' + esc(m.cliente) + '<br>Revisión ' + esc(m.rev) + ' · ' + esc(m.fecha);
+    var meta = 'Revisión ' + esc(m.rev) + ' · ' + esc(m.fecha);
     var html = '<section class="cuerpo hoja"><h1>' + esc(m.titulo) + '</h1><p class="meta">' + meta + '</p>';
     r.capitulos.forEach(function (c) { html += capituloHtml(c, 2); });
     return html + resumenHtml(r) + '</section>';
