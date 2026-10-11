@@ -26,7 +26,7 @@
     },
     precios2: {
       titulo: 'Cuadro de precios nº 2', archivo: 'Cuadro_precios_2',
-      nota: 'Recursos, rendimientos y precios de cada partida, sin IVA. Cada importe de línea es rendimiento × precio, a céntimo: puede haber 0,01 € de diferencia con el precio de la partida.'
+      nota: 'Recursos, rendimientos y precios de cada partida, sin IVA. Los precios son los del presupuesto, sin redondear. Cada importe es rendimiento × precio, a céntimo; si las líneas no suman el precio de la partida, la diferencia aparece como redondeo.'
     },
     materiales: {
       titulo: 'Cuadro de materiales', archivo: 'Cuadro_materiales', grupo: 'materiales',
@@ -188,8 +188,55 @@
       });
     }
 
+    if (d.redondeo) {
+      filas.push({
+        celdas: [
+          B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[0].w),
+          B.celdaTxt('Redondeo a céntimo', ctx.r, 8, PAL.gris, c[1].w),
+          B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[2].w),
+          B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[3].w),
+          B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[4].w),
+          B.celdaTxt(BC3.euros(d.redondeo), ctx.r, 8.5, PAL.tinta, c[5].w)
+        ],
+        filete: true, fondo: null
+      });
+    }
     filas.push(B.filaSuma(ctx, c, 'Precio de la partida', BC3.euros(d.pvpUd), PAL.beige, false));
     return filas;
+  }
+
+  // Conciliación con el presupuesto, al final del cuadro nº 2: recursos + partidas directas +
+  // redondeos = presupuesto sin IVA. Cada fila es una línea de importe; la última, el total.
+  function filaConciliacion(ctx, etiqueta, importe, negrita, fondo) {
+    var c = COL_DESCOMPOSICION, f = negrita ? ctx.b : ctx.r;
+    var ancho = c.slice(0, -1).reduce(function (s, col) { return s + col.w; }, 0);
+    return {
+      total: true,
+      celdas: [
+        B.celdaTxt(etiqueta, f, 8.5, PAL.tinta, ancho),
+        B.celdaTxt(importe, f, 8.5, PAL.tinta, c[c.length - 1].w)
+      ],
+      fondo: fondo, filete: true
+    };
+  }
+
+  function dibujarConciliacion(ctx, con) {
+    var filas = [
+      filaConciliacion(ctx, 'Materiales', BC3.euros(con.materiales), false, null),
+      filaConciliacion(ctx, 'Maquinaria', BC3.euros(con.maquinaria), false, null),
+      filaConciliacion(ctx, 'Mano de obra', BC3.euros(con.mano), false, null),
+      filaConciliacion(ctx, 'Partidas de precio directo', BC3.euros(con.directas), false, null),
+      filaConciliacion(ctx, 'Redondeo del precio de cada partida', BC3.euros(con.redondeoPartidas), false, null),
+      filaConciliacion(ctx, 'Redondeo a céntimo de los importes', BC3.euros(con.redondeoImportes), false, null),
+      filaConciliacion(ctx, 'Presupuesto sin IVA', BC3.euros(con.total), true, PAL.beige)
+    ];
+    var alto = filas.reduce(function (s, f) { return s + B.alturaDeFila(COL_DESCOMPOSICION, f); }, 0);
+    ctx.y += 6 * MM;
+    B.asegurarBloque(ctx, 14 * MM + alto, null);
+    parrafo(ctx, 'Conciliación con el presupuesto', ctx.b, 10, PAL.pino);
+    parrafo(ctx, 'El presupuesto redondea a céntimo el precio de cada partida; los recursos se valoran con su precio exacto. La diferencia es el redondeo.', ctx.r, 8, PAL.gris);
+    ctx.y += 2 * MM;
+    filas.forEach(function (f) { B.filaTabla(ctx, COL_DESCOMPOSICION, f, null); });
   }
 
   // ---------- contenido de cada documento ----------
@@ -262,7 +309,10 @@
     if (clave === 'mediciones') return dibujarMediciones(ctx, r, false);
     if (clave === 'ciegas') return dibujarMediciones(ctx, r, true);
     if (clave === 'precios1') return dibujarPrecios1(ctx, Datos.cuadroPrecios1(r));
-    if (clave === 'precios2') return dibujarPrecios2(ctx, Datos.cuadroPrecios2(r, datos));
+    if (clave === 'precios2') {
+      dibujarPrecios2(ctx, Datos.cuadroPrecios2(r, datos));
+      return dibujarConciliacion(ctx, Datos.conciliacion(r, datos));
+    }
     return dibujarRecursos(ctx, info, Datos.cuadrosRecursos(r, datos));
   }
 

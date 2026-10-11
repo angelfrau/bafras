@@ -79,14 +79,17 @@ test('cuadro nº 2: líneas de descomposición que suman el precio', () => {
   assert.deepEqual(p1.lineas.map((l) => l.codigo), ['MAT.1', 'MO.01', 'MQ.1']);
   assert.deepEqual(p1.lineas.map((l) => l.importe), [2000, 2000, 1500]);
   assert.equal(p1.lineas.reduce((s, l) => s + l.importe, 0), p1.pvpUd);
+  assert.equal(p1.redondeo, 0);
 
   const p2 = cuadro[1];
   assert.deepEqual(p2.lineas.map((l) => l.importe), [702, 300]);
   assert.equal(p2.lineas.reduce((s, l) => s + l.importe, 0), p2.pvpUd);
+  assert.equal(p2.redondeo, 0);
 
   const p3 = cuadro[2];
   assert.equal(p3.descompuesta, false);
   assert.deepEqual(p3.lineas, []);
+  assert.equal(p3.redondeo, 0);
 });
 
 test('cuadros de recursos: cantidades totales, con P.2 en dos capítulos', () => {
@@ -116,6 +119,46 @@ test('cuadros de recursos suman lo mismo que las partidas descompuestas', () => 
   const total = Docs.totalImporte(rec.mano) + Docs.totalImporte(rec.maquinaria) + Docs.totalImporte(rec.materiales);
   // P.1 × 2 = 11.000 c. · P.2 × 4 = 4.008 c.
   assert.equal(total, 2 * 5500 + 4 * 1002);
+});
+
+test('conciliación: recursos + partidas directas + redondeos = presupuesto', () => {
+  const con = Docs.conciliacion(r, datos);
+  assert.equal(con.materiales, 4000 + 2808);
+  assert.equal(con.mano, 4000 + 1200);
+  assert.equal(con.maquinaria, 3000);
+  assert.equal(con.directas, 5000);
+  // Las partidas de la obra de prueba tienen precios exactos: no hay redondeo.
+  assert.equal(con.redondeoPartidas, 0);
+  assert.equal(con.redondeoImportes, 0);
+  assert.equal(con.total, r.subtotal);
+});
+
+test('cuadro nº 2: si las líneas no suman el precio de la partida, la diferencia es el redondeo', () => {
+  // Tres recursos de 0,333 € por unidad suman 0,999 €; la partida, redondeada, vale 1,00 €.
+  const txt = [
+    '~V|REDONDEO|FIEBDC-3/2016|||ANSI|Redondeo|2|',
+    '~C|RAIZ##||Obra|0|091026|0|',
+    '~C|01#||Capitulo|0|091026|0|',
+    '~C|PR|ud|Partida redondeada|1.00|091026|0|',
+    '~C|A.1|ud|Recurso A|0.333|091026|0|',
+    '~C|A.2|ud|Recurso B|0.333|091026|0|',
+    '~C|A.3|ud|Recurso C|0.333|091026|0|',
+    descomposicion('RAIZ##', [['01#', 1, 1]]),
+    descomposicion('01#', [['PR', 1, 1]]),
+    descomposicion('PR', [['A.1', 1, 1], ['A.2', 1, 1], ['A.3', 1, 1]]),
+  ].join('\r\n');
+  const d = BC3.parsear(txt);
+  const rr = BC3.calcular(d, 1, 21);
+
+  const p = Docs.cuadroPrecios2(rr, d)[0];
+  assert.deepEqual(p.lineas.map((l) => l.importe), [33, 33, 33]);
+  assert.equal(p.redondeo, 1);
+
+  const con = Docs.conciliacion(rr, d);
+  assert.equal(con.total, 100);
+  assert.equal(con.materiales, 99);
+  assert.equal(con.redondeoPartidas, 0);
+  assert.equal(con.redondeoImportes, 1);
 });
 
 test('maquinaria vacía: lista vacía y sin error', () => {
@@ -154,31 +197,22 @@ test('euros: céntimos a texto español', () => {
 
 // ---- BC3 real, si se indica por variable de entorno (no se guarda en el repositorio) ----
 const real = process.env.BC3_PRUEBA;
-test('BC3 real (opcional): cuadros frente al presupuesto', { skip: !real || !fs.existsSync(real) }, () => {
+test('BC3 real (opcional): cuadros y conciliación con el presupuesto', { skip: !real || !fs.existsSync(real) }, () => {
   const d = BC3.parsear(BC3.decodificar(fs.readFileSync(real)));
   const rr = BC3.calcular(d, 1, 21);
-  const rec = Docs.cuadrosRecursos(rr, d);
-  const suma = (lista) => lista.reduce((s, x) => s + x.importe, 0);
   const cuadro2 = Docs.cuadroPrecios2(rr, d);
+  const con = Docs.conciliacion(rr, d);
 
-  // Cada partida descompuesta: sus líneas suman su precio, con un céntimo de tolerancia por redondeo.
+  // Cada partida descompuesta: sus líneas más su redondeo suman su precio.
   cuadro2.filter((p) => p.descompuesta).forEach((p) => {
-    const sumaLineas = p.lineas.reduce((s, l) => s + l.importe, 0);
-    assert.ok(Math.abs(sumaLineas - p.pvpUd) <= 1, 'descomposición de ' + p.codigo);
+    assert.equal(p.lineas.reduce((s, l) => s + l.importe, 0) + p.redondeo, p.pvpUd, 'bloque ' + p.codigo);
   });
 
-  // Partidas sin descomponer: se suman por cada aparición en el árbol.
-  const directas = new Set(cuadro2.filter((p) => !p.descompuesta).map((p) => p.codigo));
-  let importeDirecto = 0;
-  const recorre = (nodos) => nodos.forEach((n) => {
-    if (n.tipo === 'capitulo') recorre(n.hijos);
-    else if (directas.has(n.code)) importeDirecto += n.centimos;
-  });
-  recorre(rr.capitulos);
-
-  // Recursos + precio directo frente al presupuesto: la diferencia es el redondeo de las partidas.
-  const total = suma(rec.mano) + suma(rec.maquinaria) + suma(rec.materiales);
-  assert.ok(Math.abs(rr.subtotal - (total + importeDirecto)) < 500, 'diferencia mayor de 5 €');
-  console.log('  Recursos ' + (total / 100).toFixed(2) + ' € · precio directo ' + (importeDirecto / 100).toFixed(2) +
+  // La conciliación cierra con el presupuesto, y los redondeos son pequeños.
+  assert.equal(con.total, rr.subtotal);
+  assert.ok(Math.abs(con.redondeoPartidas) < 500, 'redondeo de partidas mayor de 5 €');
+  assert.ok(Math.abs(con.redondeoImportes) < 50, 'redondeo de importes mayor de 0,50 €');
+  console.log('  Redondeo de partidas ' + (con.redondeoPartidas / 100).toFixed(2) +
+    ' € · redondeo de importes ' + (con.redondeoImportes / 100).toFixed(2) +
     ' € · presupuesto ' + (rr.subtotal / 100).toFixed(2) + ' €');
 });
