@@ -75,8 +75,8 @@
     return lista.reduce(function (acc, x) { return acc + x[campo]; }, 0);
   }
 
-  // coef: coeficiente sobre coste (1,35). ivaPct: IVA en % (21).
-  // Precio de venta unitario redondeado a céntimo; importe = precio × cantidad, redondeado a céntimo.
+  // coef: se multiplica por el precio del BC3 (1 si el BC3 ya trae precios de venta).
+  // ivaPct: IVA en % (21). Precio unitario redondeado a céntimo; importe = precio × cantidad, a céntimo.
   function calcular(datos, coef, ivaPct) {
     var C = datos.conceptos, partidas = 0;
 
@@ -88,15 +88,14 @@
         var hijos = c.hijos.map(function (x) { return nodo(x, cant); });
         return {
           tipo: 'capitulo', code: h.code, nombre: c.resumen, hijos: hijos,
-          centimos: suma(hijos, 'centimos'), coste: suma(hijos, 'coste')
+          centimos: suma(hijos, 'centimos')
         };
       }
       partidas += 1;
       var pvp = Math.round(c.precio * coef * 100);
       return {
         tipo: 'partida', code: h.code, unidad: c.unidad, resumen: c.resumen, texto: c.texto,
-        cantidad: cant, pvpUd: pvp, centimos: Math.round(pvp * cant),
-        coste: Math.round(c.precio * 100 * cant)
+        cantidad: cant, pvpUd: pvp, centimos: Math.round(pvp * cant)
       };
     }
 
@@ -109,7 +108,6 @@
       subtotal: subtotal,
       iva: Math.round(subtotal * ivaPct / 100),
       total: subtotal + Math.round(subtotal * ivaPct / 100),
-      coste: suma(capitulos, 'coste'),
       numPartidas: partidas,
       coef: coef,
       ivaPct: ivaPct

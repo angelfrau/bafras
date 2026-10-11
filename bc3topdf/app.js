@@ -1,4 +1,4 @@
-/* BAFRAS · BC3 a PDF: formulario, portada (plantilla de presupuesto) y cuerpo A4.
+/* BAFRAS · BC3 a PDF: formulario, portada (plantilla de presupuesto), cuerpo A4 y documentos de trabajo.
    El BC3 se lee en el navegador. Nada se envía a ningún servidor. */
 (function () {
   'use strict';
@@ -7,7 +7,7 @@
   var LOGO = '../images/BAFRAS_logo_horizontal_deep_corregido.svg';
   var ANCHO_HOJA = 793.7; // 210 mm en píxeles CSS
   var $ = function (id) { return document.getElementById(id); };
-  var datos = null;
+  var datos = null;       // BC3 leído (null hasta que se carga un archivo)
 
   // Anchos de columna del cuerpo: código, descripción, ud, cantidad, precio, importe.
   var COLS = '<colgroup><col class="c-cod"><col><col class="c-ud"><col class="c-cant">' +
@@ -167,6 +167,7 @@
     $('descargar').hidden = true;
     listo = null;
     generacion++;
+    invalidarDocs();
     $('archivo').textContent = f.name;
     estado('Leyendo el BC3…');
     f.arrayBuffer().then(function (buf) {
@@ -175,6 +176,7 @@
       if (!$('titulo').value.trim()) $('titulo').value = raiz.resumen || '';
       var r = BC3.calcular(datos, 1, ajustesVenta().iva); // precios de venta tal cual vienen en el BC3
       $('generar').disabled = false;
+      $('preparar-docs').disabled = false;
       estado('BC3 leído: ' + r.numPartidas + ' partidas. Venta sin IVA ' + BC3.euros(r.subtotal) +
         ' €; con IVA ' + BC3.euros(r.total) + ' €.');
     }).catch(function (e) {
@@ -198,7 +200,7 @@
   });
 
   var generacion = 0; // una vista previa antigua no sobrescribe a la nueva
-  var listo = null;   // { bytes, nombre } del último PDF preparado
+  var listo = null;   // { bytes, nombre } del último PDF del presupuesto
 
   function descargarArchivo(bytes, nombre) {
     var url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
@@ -211,12 +213,13 @@
     setTimeout(function () { URL.revokeObjectURL(url); }, 60000);
   }
 
-  // Presupuesto_<cliente>_rev<revisión>.pdf, sin tildes ni espacios.
-  function nombreArchivo(m) {
+  // Prefijo_<cliente>_rev<revisión>.pdf (o título si no hay cliente), sin tildes ni espacios.
+  // El prefijo por defecto es «Presupuesto».
+  function nombreArchivo(m, prefijo) {
     var base = (m.cliente || m.titulo || 'presupuesto').normalize('NFD').replace(/[̀-ͯ]/g, '')
       .replace(/[^A-Za-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
     var rev = (m.rev || '01').replace(/[^A-Za-z0-9]+/g, '');
-    return 'Presupuesto_' + (base || 'presupuesto') + '_rev' + rev + '.pdf';
+    return (prefijo || 'Presupuesto') + '_' + (base || 'presupuesto') + '_rev' + rev + '.pdf';
   }
 
   $('generar').addEventListener('click', function () {
@@ -260,6 +263,74 @@
 
   window.addEventListener('resize', ajustarZoom);
   $('imprimir').addEventListener('click', function () { window.print(); });
+
+  // ---------- documentos de trabajo ----------
+  // Se preparan los siete a la vez y cada uno se descarga con su botón, en el mismo gesto
+  // del usuario (como el presupuesto). Si cambia algún dato de la portada, lo preparado ya no vale.
+  var docsPreparados = {};   // clave → { bytes, nombre }
+  var generacionDocs = 0;    // una preparación antigua no sobrescribe a la nueva
+  var botonPreparar = $('preparar-docs');
+  var botonesDocs = document.querySelectorAll('[data-doc]');
+
+  function estadoDocs(texto, error) {
+    var el = $('estado-docs');
+    el.textContent = texto;
+    el.className = 'estado' + (error ? ' error' : '');
+  }
+
+  function invalidarDocs() {
+    generacionDocs++;
+    docsPreparados = {};
+    botonesDocs.forEach(function (b) { b.disabled = true; });
+    estadoDocs('');
+  }
+
+  $('formulario').addEventListener('input', function () {
+    if (Object.keys(docsPreparados).length === 0) return;
+    invalidarDocs();
+    estadoDocs('Has cambiado algún dato. Vuelve a preparar los documentos.');
+  });
+
+  botonPreparar.addEventListener('click', function () {
+    if (!datos) return;
+    if (!$('formulario').reportValidity()) return;
+    var r = BC3.calcular(datos, 1, ajustesVenta().iva); // precios de venta tal cual vienen en el BC3
+    var m = leerCampos();
+    invalidarDocs();
+    var id = generacionDocs;
+    botonPreparar.disabled = true;
+    estadoDocs('Preparando los documentos…');
+
+    // Uno detrás de otro, para no tener varias copias del BC3 en memoria a la vez.
+    window.BC3PDFDocs.claves.reduce(function (antes, clave) {
+      return antes.then(function () {
+        if (id !== generacionDocs) return null;
+        return window.BC3PDFDocs.generar(clave, datos, r, m).then(function (bytes) {
+          if (id !== generacionDocs) return;
+          docsPreparados[clave] = { bytes: bytes, nombre: nombreArchivo(m, window.BC3PDFDocs.archivo(clave)) };
+          document.querySelector('[data-doc="' + clave + '"]').disabled = false;
+        });
+      });
+    }, Promise.resolve()).then(function () {
+      if (id !== generacionDocs) return;
+      botonPreparar.disabled = false;
+      estadoDocs('Documentos listos para descargar.');
+    }).catch(function (e) {
+      if (id !== generacionDocs) return;
+      botonPreparar.disabled = false;
+      estadoDocs('No se pudieron preparar los documentos: ' + e.message, true);
+    });
+  });
+
+  botonesDocs.forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      var clave = boton.getAttribute('data-doc');
+      var preparado = docsPreparados[clave];
+      if (!preparado) return;
+      descargarArchivo(preparado.bytes, preparado.nombre);
+      estadoDocs('Descarga iniciada: ' + preparado.nombre + '.');
+    });
+  });
 
   var hoy = new Date();
   $('fecha').value = hoy.getFullYear() + '-' + pad2(hoy.getMonth() + 1) + '-' + pad2(hoy.getDate());
