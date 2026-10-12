@@ -57,6 +57,12 @@
 
   // ---------- filas ----------
 
+  // Códigos de presupuesto de una partida, uno debajo de otro en la columna de código. Una partida que
+  // está en dos capítulos (BT.BAN.030, en 04.01 y en 04.02) lleva dos códigos, y los dos salen en su fila.
+  function celdaCodigos(ctx, codigos) {
+    return { bloques: [{ lineas: codigos.slice(), f: ctx.r, tam: 7.5, lh: 7.5 * 1.35, hex: PAL.gris, mt: 0 }] };
+  }
+
   // Partida en las mediciones ciegas: lo mismo, con precio e importe en blanco y más altura.
   // «codigo» es el código de presupuesto de esta aparición de la partida (01.01).
   function filaCiega(ctx, p, codigo) {
@@ -84,7 +90,7 @@
     });
     return {
       celdas: [
-        B.celdaTxt(p.codigo, ctx.r, 7.5, PAL.gris, c[0].w),
+        celdaCodigos(ctx, p.codigos),
         descripcion,
         B.celdaTxt(B.unidadTxt(p.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
         B.celdaTxt(BC3.euros(p.pvpUd), ctx.r, 8.5, PAL.tinta, c[3].w)
@@ -102,7 +108,7 @@
     var c = COL_DESCOMPOSICION;
     var filas = [{
       celdas: [
-        B.celdaTxt(d.codigo, ctx.r, 7.5, PAL.gris, c[0].w),
+        celdaCodigos(ctx, d.codigos),
         B.celdaTxt(d.resumen, ctx.b, 8.5, PAL.pino, c[1].w),
         B.celdaTxt(B.unidadTxt(d.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
         B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[3].w),

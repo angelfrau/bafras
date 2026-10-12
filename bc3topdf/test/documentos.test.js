@@ -70,9 +70,9 @@ test('códigos de presupuesto: capítulo y orden, como en el presupuesto', () =>
   const mapa = Docs.codigosPresupuesto(r);
   assert.deepEqual(r.capitulos[0].hijos.map((x) => mapa.get(x)), ['01.01', '01.02', '01.03']);
   assert.equal(mapa.get(r.capitulos[1].hijos[0]), '02.01');
-  // Cuadros nº 1 y nº 2: cada partida una vez, con el código de su primera aparición.
-  assert.deepEqual(Docs.cuadroPrecios1(r).map((p) => p.codigo), ['01.01', '01.02', '01.03']);
-  assert.deepEqual(Docs.cuadroPrecios2(r, datos).map((p) => p.codigo), ['01.01', '01.02', '01.03']);
+  // Cuadros nº 1 y nº 2: cada partida una vez, con todos sus códigos. P.2 está en 01# y en 02#.
+  assert.deepEqual(Docs.cuadroPrecios1(r).map((p) => p.codigos), [['01.01'], ['01.02', '02.01'], ['01.03']]);
+  assert.deepEqual(Docs.cuadroPrecios2(r, datos).map((p) => p.codigos), [['01.01'], ['01.02', '02.01'], ['01.03']]);
 });
 
 test('códigos de presupuesto en subcapítulos y con partidas repetidas', () => {
@@ -97,8 +97,8 @@ test('códigos de presupuesto en subcapítulos y con partidas repetidas', () => 
   const [sub1, sub2] = rr.capitulos[0].hijos;
   assert.deepEqual(sub1.hijos.map((x) => mapa.get(x)), ['04.01.01', '04.01.02']);
   assert.deepEqual(sub2.hijos.map((x) => mapa.get(x)), ['04.02.01', '04.02.02']);
-  // X.2 aparece en 04.01 y en 04.02: en el cuadro nº 1, una vez, con el código de la primera aparición.
-  assert.deepEqual(Docs.cuadroPrecios1(rr).map((p) => p.codigo), ['04.01.01', '04.01.02', '04.02.02']);
+  // X.2 aparece en 04.01 y en 04.02: en el cuadro nº 1, una vez, con sus dos códigos.
+  assert.deepEqual(Docs.cuadroPrecios1(rr).map((p) => p.codigos), [['04.01.01'], ['04.01.02', '04.02.01'], ['04.02.02']]);
 });
 
 test('cuadro nº 1: precio unitario de cada partida', () => {
@@ -242,15 +242,21 @@ test('BC3 real (opcional): cuadros y conciliación con el presupuesto', { skip: 
   const cuadro2 = Docs.cuadroPrecios2(rr, d);
   const con = Docs.conciliacion(rr, d);
 
-  // Partidas con código de presupuesto (00.01, 01.01...), una vez cada una, en los cuadros nº 1 y nº 2.
-  assert.deepEqual(cuadro1.slice(0, 3).map((p) => p.codigo), ['00.01', '00.02', '01.01']);
-  cuadro1.forEach((p) => assert.match(p.codigo, /^\d{2}(\.\d{2}){1,2}$/, 'código ' + p.codigo));
-  assert.equal(new Set(cuadro1.map((p) => p.codigo)).size, cuadro1.length);
-  cuadro2.forEach((p) => assert.match(p.codigo, /^\d{2}(\.\d{2}){1,2}$/, 'código ' + p.codigo));
+  // Códigos de presupuesto: uno por aparición de cada partida, en los cuadros nº 1 y nº 2.
+  // La bandeja BT.BAN.030 está en 04.01 y en 04.02: tiene dos códigos.
+  assert.deepEqual(cuadro1.slice(0, 3).map((p) => p.codigos), [['00.01'], ['00.02'], ['01.01']]);
+  const porCuadro1 = cuadro1.flatMap((p) => p.codigos);
+  assert.equal(porCuadro1.length, rr.numPartidas);
+  assert.equal(new Set(porCuadro1).size, porCuadro1.length);
+  porCuadro1.forEach((c) => assert.match(c, /^\d{2}(\.\d{2}){1,2}$/, 'código ' + c));
+  assert.equal(cuadro2.flatMap((p) => p.codigos).length, rr.numPartidas);
+  const bandeja = 'Bandeja metálica 60×100 con tapa';
+  assert.deepEqual(cuadro1.find((p) => p.resumen === bandeja).codigos, ['04.01.07', '04.02.09']);
+  assert.deepEqual(cuadro2.find((p) => p.resumen === bandeja).codigos, ['04.01.07', '04.02.09']);
 
   // Cada partida descompuesta: sus líneas más su redondeo suman su precio.
   cuadro2.filter((p) => p.descompuesta).forEach((p) => {
-    assert.equal(p.lineas.reduce((s, l) => s + l.importe, 0) + p.redondeo, p.pvpUd, 'bloque ' + p.codigo);
+    assert.equal(p.lineas.reduce((s, l) => s + l.importe, 0) + p.redondeo, p.pvpUd, 'bloque ' + p.codigos.join(' '));
   });
 
   // La conciliación cierra con el presupuesto, y los redondeos son pequeños.
