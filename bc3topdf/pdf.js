@@ -110,21 +110,29 @@
     });
   }
 
+  // Cabecera del cuerpo, en este orden: título (grande y negro), cliente y revisión · fecha.
+  // El primer capítulo deja su propio margen superior (7 mm), igual que en la web.
   function cuerpo(ctx, r, m) {
-    var lhT = 15 * 1.35, lhM = 8.5 * 1.35;
-    envolver(ctx.b, m.titulo, 15, ANCHO).forEach(function (l) {
+    var tamT = 22, lhT = tamT * 1.1, tamC = 11, lhC = tamC * 1.35, tamM = 8.5, lhM = tamM * 1.35;
+    envolver(ctx.b, m.titulo, tamT, ANCHO).forEach(function (l) {
       asegurar(ctx, lhT, null);
-      escribir(ctx, l, LAT, bl(ctx.y, lhT, 15), ctx.b, 15, PAL.pino);
+      escribir(ctx, l, LAT, bl(ctx.y, lhT, tamT), ctx.b, tamT, PAL.negro);
       ctx.y += lhT;
     });
-    ctx.y += 1 * MM;
-    // Cabecera del cuerpo: revisión · fecha (el título va arriba).
-    envolver(ctx.r, 'Revisión ' + m.rev + ' · ' + m.fecha, 8.5, ANCHO).forEach(function (l) {
+    if (m.cliente) {
+      ctx.y += 2 * MM;
+      envolver(ctx.r, m.cliente, tamC, ANCHO).forEach(function (l) {
+        asegurar(ctx, lhC, null);
+        escribir(ctx, l, LAT, bl(ctx.y, lhC, tamC), ctx.r, tamC, PAL.tinta);
+        ctx.y += lhC;
+      });
+    }
+    ctx.y += 2 * MM;
+    envolver(ctx.r, 'Revisión ' + m.rev + ' · ' + m.fecha, tamM, ANCHO).forEach(function (l) {
       asegurar(ctx, lhM, null);
-      escribir(ctx, l, LAT, bl(ctx.y, lhM, 8.5), ctx.r, 8.5, PAL.gris);
+      escribir(ctx, l, LAT, bl(ctx.y, lhM, tamM), ctx.r, tamM, PAL.gris);
       ctx.y += lhM;
     });
-    ctx.y += 5 * MM;
     r.capitulos.forEach(function (c) { capitulo(ctx, c, 2); });
     bloqueResumen(ctx, r);
   }

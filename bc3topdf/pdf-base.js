@@ -19,7 +19,7 @@
 
   var PAL = {
     beige: '#ECE8DD', papel: '#F7F5F0', pino: '#0E2B25', verde: '#1A7A5A',
-    tinta: '#2A2A2A', gris: '#4A5550', grisSuave: '#7A8580', linea: '#D8D2C3'
+    tinta: '#2A2A2A', gris: '#4A5550', grisSuave: '#7A8580', linea: '#D8D2C3', negro: '#000000'
   };
 
   // Caracteres de Windows-1252 fuera de Latin-1 (la fuente incrustada también los tiene).

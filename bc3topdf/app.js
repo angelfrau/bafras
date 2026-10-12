@@ -61,6 +61,36 @@
     };
   }
 
+  // ---------- memoria de los campos ----------
+  // Los datos de la portada (no el BC3, que el navegador no guarda) se recuerdan en este navegador:
+  // al volver a entrar, cada campo muestra lo último que se escribió o se descargó. Si el navegador
+  // no deja guardar (modo privado, por ejemplo), la página funciona igual, solo que no recuerda nada.
+  var CLAVE_MEMORIA = 'bafras.bc3topdf.campos';
+  var CAMPOS_MEMORIA = ['titulo', 'cliente', 'rev', 'fecha', 'emplazamiento', 'expediente', 'iva'];
+
+  function recordarCampos() {
+    try {
+      var guardar = {};
+      CAMPOS_MEMORIA.forEach(function (id) { guardar[id] = $(id).value; });
+      localStorage.setItem(CLAVE_MEMORIA, JSON.stringify(guardar));
+    } catch (e) { /* sin almacenamiento disponible: no hay nada que guardar */ }
+  }
+
+  function recuperarCampos() {
+    var guardado = null;
+    try { guardado = JSON.parse(localStorage.getItem(CLAVE_MEMORIA)); } catch (e) { guardado = null; }
+    if (!guardado || typeof guardado !== 'object') return;
+    CAMPOS_MEMORIA.forEach(function (id) {
+      var v = guardado[id];
+      if (typeof v !== 'string') return;
+      if (id === 'fecha' && v !== '' && !/^\d{4}-\d{2}-\d{2}$/.test(v)) return;
+      $(id).value = v;
+    });
+  }
+
+  $('formulario').addEventListener('input', recordarCampos);
+  $('formulario').addEventListener('change', recordarCampos);
+
   // ---------- portada: misma composición que la plantilla (logo arriba, bloque centrado, datos abajo) ----------
   function portadaHtml(m) {
     return '<section class="portada">' +
@@ -152,9 +182,12 @@
     return html + '</tbody></table></div>';
   }
 
+  // Cabecera del cuerpo, igual que en el PDF: título, cliente y revisión · fecha.
   function cuerpoHtml(r, m) {
     var meta = 'Revisión ' + esc(m.rev) + ' · ' + esc(m.fecha);
-    var html = '<section class="cuerpo hoja"><h1>' + esc(m.titulo) + '</h1><p class="meta">' + meta + '</p>';
+    var html = '<section class="cuerpo hoja"><h1>' + esc(m.titulo) + '</h1>' +
+      (m.cliente ? '<p class="cliente">' + esc(m.cliente) + '</p>' : '') +
+      '<p class="meta">' + meta + '</p>';
     r.capitulos.forEach(function (c) { html += capituloHtml(c, 2); });
     return html + resumenHtml(r) + '</section>';
   }
@@ -163,7 +196,6 @@
   function cargar(f) {
     datos = null;
     $('generar').disabled = true;
-    $('imprimir').hidden = true;
     $('descargar').hidden = true;
     listo = null;
     generacion++;
@@ -174,6 +206,7 @@
       datos = BC3.parsear(BC3.decodificar(buf));
       var raiz = datos.conceptos[datos.raiz];
       if (!$('titulo').value.trim()) $('titulo').value = raiz.resumen || '';
+      recordarCampos();
       var r = BC3.calcular(datos, 1, ajustesVenta().iva); // precios de venta tal cual vienen en el BC3
       $('generar').disabled = false;
       $('preparar-docs').disabled = false;
@@ -232,6 +265,7 @@
     }
     var r = BC3.calcular(datos, 1, iva); // precios de venta tal cual vienen en el BC3
     var m = leerCampos();
+    recordarCampos(); // lo que se descarga queda guardado para la próxima vez
     var id = ++generacion;
     listo = null;
     $('descargar').hidden = true;
@@ -239,7 +273,6 @@
     $('vista').innerHTML = portadaHtml(m) + cuerpoHtml(r, m);
     ajustarTitulo();
     ajustarZoom();
-    $('imprimir').hidden = false;
     var resumen = 'Listo: ' + r.numPartidas + ' partidas. Venta sin IVA ' + BC3.euros(r.subtotal) +
       ' €; con IVA ' + BC3.euros(r.total) + ' €.';
     estado(resumen + ' Preparando el PDF…');
@@ -262,7 +295,6 @@
   });
 
   window.addEventListener('resize', ajustarZoom);
-  $('imprimir').addEventListener('click', function () { window.print(); });
 
   // ---------- documentos de trabajo ----------
   // Se preparan los siete a la vez y cada uno se descarga con su botón, en el mismo gesto
@@ -296,6 +328,7 @@
     if (!$('formulario').reportValidity()) return;
     var r = BC3.calcular(datos, 1, ajustesVenta().iva); // precios de venta tal cual vienen en el BC3
     var m = leerCampos();
+    recordarCampos();
     invalidarDocs();
     var id = generacionDocs;
     botonPreparar.disabled = true;
@@ -332,6 +365,10 @@
     });
   });
 
-  var hoy = new Date();
-  $('fecha').value = hoy.getFullYear() + '-' + pad2(hoy.getMonth() + 1) + '-' + pad2(hoy.getDate());
+  // Al entrar, cada campo recupera lo último que se escribió o se descargó en este navegador.
+  recuperarCampos();
+  if (!$('fecha').value) {
+    var hoy = new Date();
+    $('fecha').value = hoy.getFullYear() + '-' + pad2(hoy.getMonth() + 1) + '-' + pad2(hoy.getDate());
+  }
 })();
