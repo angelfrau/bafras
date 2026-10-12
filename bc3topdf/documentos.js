@@ -62,6 +62,27 @@
     return lista;
   }
 
+  // Código de presupuesto de cada partida, igual que en el presupuesto: capítulo y orden (01.01) o
+  // subcapítulo y orden (04.01.01). El código sale del capítulo (01# → 01) y del orden de la partida
+  // entre las de su capítulo. Devuelve un Map de cada partida del árbol a su código: una partida que
+  // está en dos capítulos tiene un código en cada uno; partidasUnicas da el de la primera aparición.
+  function codigosPresupuesto(r) {
+    var mapa = new Map();
+    function capitulo(c) {
+      var base = c.code.replace('#', ''), orden = 0;
+      c.hijos.forEach(function (x) {
+        if (x.tipo === 'capitulo') {
+          capitulo(x);
+        } else {
+          orden += 1;
+          mapa.set(x, base + '.' + (orden < 10 ? '0' : '') + orden);
+        }
+      });
+    }
+    r.capitulos.forEach(function (c) { capitulo(c); });
+    return mapa;
+  }
+
   // Tipo de un recurso según su código. En estos BC3 el campo «tipo» viene a 0 en todos los
   // conceptos, así que se mira el código: REF.MO.010 es mano de obra; MQ o MAQ, maquinaria;
   // PRU (pruebas y ensayos, servicios de empresa especializada), otros; el resto, materiales.
@@ -73,10 +94,11 @@
     return 'materiales';
   }
 
-  // Cuadro nº 1: una línea por partida, con su precio unitario.
+  // Cuadro nº 1: una línea por partida, con su código de presupuesto y su precio unitario.
   function cuadroPrecios1(r) {
+    var codigos = codigosPresupuesto(r);
     return partidasUnicas(r).map(function (p) {
-      return { codigo: p.code, unidad: p.unidad, resumen: p.resumen, texto: p.texto, pvpUd: p.pvpUd };
+      return { codigo: codigos.get(p), unidad: p.unidad, resumen: p.resumen, texto: p.texto, pvpUd: p.pvpUd };
     });
   }
 
@@ -94,15 +116,17 @@
     });
   }
 
-  // Cuadro nº 2: cada partida (sin repetir) con las líneas de su descomposición.
+  // Cuadro nº 2: cada partida (sin repetir) con las líneas de su descomposición. La partida lleva su
+  // código de presupuesto (01.01); sus líneas, el código del recurso (REF.MO.020...).
   // «redondeo» es lo que falta para que las líneas sumen el precio de la partida (céntimos).
   function cuadroPrecios2(r, datos) {
+    var codigos = codigosPresupuesto(r);
     return partidasUnicas(r).map(function (p) {
       var descompuesta = tieneDescomposicion(datos, p.code);
       var lineas = descompuesta ? lineasDescomposicion(datos, p.code, r.coef) : [];
       var suma = lineas.reduce(function (s, l) { return s + l.importe; }, 0);
       return {
-        codigo: p.code, unidad: p.unidad, resumen: p.resumen, pvpUd: p.pvpUd,
+        codigo: codigos.get(p), unidad: p.unidad, resumen: p.resumen, pvpUd: p.pvpUd,
         descompuesta: descompuesta, lineas: lineas,
         redondeo: descompuesta ? p.pvpUd - suma : 0
       };
@@ -243,6 +267,7 @@
 
   return {
     partidasUnicas: partidasUnicas,
+    codigosPresupuesto: codigosPresupuesto,
     tipoRecurso: tipoRecurso,
     cuadroPrecios1: cuadroPrecios1,
     cuadroPrecios2: cuadroPrecios2,

@@ -58,11 +58,12 @@
   // ---------- filas ----------
 
   // Partida en las mediciones ciegas: lo mismo, con precio e importe en blanco y más altura.
-  function filaCiega(ctx, p) {
+  // «codigo» es el código de presupuesto de esta aparición de la partida (01.01).
+  function filaCiega(ctx, p, codigo) {
     var c = COL_CIEGAS;
     return {
       celdas: [
-        B.celdaTxt(p.code, ctx.r, 7.5, PAL.gris, c[0].w),
+        B.celdaTxt(codigo, ctx.r, 7.5, PAL.gris, c[0].w),
         B.celdaDescripcion(ctx, p.resumen, p.texto, c[1].w),
         B.celdaTxt(B.unidadTxt(p.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
         B.celdaTxt(B.formatoNumero(p.cantidad, 0, 2), ctx.r, 8.5, PAL.tinta, c[3].w),
@@ -226,8 +227,10 @@
 
   // Mediciones ciegas: capítulos con su tabla y, al final, el total para que el proveedor lo rellene.
   function dibujarCiegas(ctx, r) {
-    var cols = COL_CIEGAS;
-    r.capitulos.forEach(function (c) { capituloConTabla(ctx, c, 2, cols, function (p) { return filaCiega(ctx, p); }); });
+    var cols = COL_CIEGAS, codigos = Datos.codigosPresupuesto(r);
+    r.capitulos.forEach(function (c) {
+      capituloConTabla(ctx, c, 2, cols, function (p) { return filaCiega(ctx, p, codigos.get(p)); });
+    });
     var total = B.filaSuma(ctx, cols, 'Total sin IVA', '', PAL.beige, false);
     total.minAlto = 7 * MM;
     B.filaTabla(ctx, cols, total, function () { B.cabecera(ctx, LAT, cols); });

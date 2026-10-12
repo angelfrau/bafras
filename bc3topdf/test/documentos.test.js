@@ -65,6 +65,42 @@ test('partidasUnicas: cada partida una vez, en orden de aparición', () => {
   assert.deepEqual(codigos, ['P.1', 'P.2', 'P.3']);
 });
 
+test('códigos de presupuesto: capítulo y orden, como en el presupuesto', () => {
+  // Capítulo 01#: P.1, P.2 y P.3 → 01.01, 01.02, 01.03. Capítulo 02#: P.2 (otra aparición) → 02.01.
+  const mapa = Docs.codigosPresupuesto(r);
+  assert.deepEqual(r.capitulos[0].hijos.map((x) => mapa.get(x)), ['01.01', '01.02', '01.03']);
+  assert.equal(mapa.get(r.capitulos[1].hijos[0]), '02.01');
+  // Cuadros nº 1 y nº 2: cada partida una vez, con el código de su primera aparición.
+  assert.deepEqual(Docs.cuadroPrecios1(r).map((p) => p.codigo), ['01.01', '01.02', '01.03']);
+  assert.deepEqual(Docs.cuadroPrecios2(r, datos).map((p) => p.codigo), ['01.01', '01.02', '01.03']);
+});
+
+test('códigos de presupuesto en subcapítulos y con partidas repetidas', () => {
+  // 04.01# (X.1, X.2) y 04.02# (X.2 otra vez, Y.1): el subcapítulo añade su código al de la partida.
+  const txt = [
+    '~V|SUB|FIEBDC-3/2016|||ANSI|Subcapitulos|2|',
+    '~C|RAIZ##||Obra|0|091026|0|',
+    '~C|04#||Instalacion|0|091026|0|',
+    '~C|04.01#||Subcapitulo uno|0|091026|0|',
+    '~C|04.02#||Subcapitulo dos|0|091026|0|',
+    '~C|X.1|ud|Partida X1|10.00|091026|0|',
+    '~C|X.2|ud|Partida X2|20.00|091026|0|',
+    '~C|Y.1|ud|Partida Y1|30.00|091026|0|',
+    descomposicion('RAIZ##', [['04#', 1, 1]]),
+    descomposicion('04#', [['04.01#', 1, 1], ['04.02#', 1, 1]]),
+    descomposicion('04.01#', [['X.1', 1, 1], ['X.2', 1, 1]]),
+    descomposicion('04.02#', [['X.2', 1, 1], ['Y.1', 1, 1]]),
+  ].join('\r\n');
+  const d = BC3.parsear(txt);
+  const rr = BC3.calcular(d, 1, 21);
+  const mapa = Docs.codigosPresupuesto(rr);
+  const [sub1, sub2] = rr.capitulos[0].hijos;
+  assert.deepEqual(sub1.hijos.map((x) => mapa.get(x)), ['04.01.01', '04.01.02']);
+  assert.deepEqual(sub2.hijos.map((x) => mapa.get(x)), ['04.02.01', '04.02.02']);
+  // X.2 aparece en 04.01 y en 04.02: en el cuadro nº 1, una vez, con el código de la primera aparición.
+  assert.deepEqual(Docs.cuadroPrecios1(rr).map((p) => p.codigo), ['04.01.01', '04.01.02', '04.02.02']);
+});
+
 test('cuadro nº 1: precio unitario de cada partida', () => {
   const lista = Docs.cuadroPrecios1(r);
   assert.deepEqual(lista.map((p) => p.pvpUd), [5500, 1002, 5000]);
@@ -202,8 +238,15 @@ const real = process.env.BC3_PRUEBA;
 test('BC3 real (opcional): cuadros y conciliación con el presupuesto', { skip: !real || !fs.existsSync(real) }, () => {
   const d = BC3.parsear(BC3.decodificar(fs.readFileSync(real)));
   const rr = BC3.calcular(d, 1, 21);
+  const cuadro1 = Docs.cuadroPrecios1(rr);
   const cuadro2 = Docs.cuadroPrecios2(rr, d);
   const con = Docs.conciliacion(rr, d);
+
+  // Partidas con código de presupuesto (00.01, 01.01...), una vez cada una, en los cuadros nº 1 y nº 2.
+  assert.deepEqual(cuadro1.slice(0, 3).map((p) => p.codigo), ['00.01', '00.02', '01.01']);
+  cuadro1.forEach((p) => assert.match(p.codigo, /^\d{2}(\.\d{2}){1,2}$/, 'código ' + p.codigo));
+  assert.equal(new Set(cuadro1.map((p) => p.codigo)).size, cuadro1.length);
+  cuadro2.forEach((p) => assert.match(p.codigo, /^\d{2}(\.\d{2}){1,2}$/, 'código ' + p.codigo));
 
   // Cada partida descompuesta: sus líneas más su redondeo suman su precio.
   cuadro2.filter((p) => p.descompuesta).forEach((p) => {
