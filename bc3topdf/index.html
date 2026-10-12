@@ -71,40 +71,28 @@
       <p class="nota">Los precios son los del BC3, que ya trae el margen de venta. «Descargar PDF» guarda el archivo en tu dispositivo.</p>
 
       <div class="docs">
-        <h2>Documentos de trabajo</h2>
-        <p class="nota">Mediciones, cuadros de precios y cuadros de recursos, con los mismos datos de portada. Cada documento es un PDF aparte.</p>
+        <h2>Documentos</h2>
+        <p class="nota">Presupuesto, mediciones ciegas y cuadros de precios nº 1 y nº 2, con los mismos datos de portada. Cada documento es un PDF aparte.</p>
         <div class="acciones">
           <button type="button" id="preparar-docs" class="boton" disabled>Preparar documentos</button>
           <span id="estado-docs" class="estado"></span>
         </div>
         <ul class="lista-docs">
           <li>
-            <div><strong>Mediciones</strong><span>Cantidad de cada partida, sin precios.</span></div>
-            <button type="button" class="boton pequeno" data-doc="mediciones" disabled>Descargar PDF</button>
+            <div><strong>Presupuesto para el cliente</strong><span>Portada y presupuesto completo, con IVA.</span></div>
+            <button type="button" class="boton pequeno" data-doc="presupuesto" disabled>Descargar PDF</button>
           </li>
           <li>
             <div><strong>Mediciones ciegas</strong><span>Para pedir ofertas, con precio e importe en blanco.</span></div>
             <button type="button" class="boton pequeno" data-doc="ciegas" disabled>Descargar PDF</button>
           </li>
           <li>
-            <div><strong>Cuadro de precios nº 1</strong><span>Precio unitario de cada partida.</span></div>
+            <div><strong>Cuadro de precios nº 1</strong><span>Precio unitario de cada partida, en cifra y en letra.</span></div>
             <button type="button" class="boton pequeno" data-doc="precios1" disabled>Descargar PDF</button>
           </li>
           <li>
-            <div><strong>Cuadro de precios nº 2</strong><span>Descomposición de cada partida en recursos.</span></div>
+            <div><strong>Cuadro de precios nº 2</strong><span>Descomposición de cada partida en materiales, mano de obra, maquinaria y otros servicios.</span></div>
             <button type="button" class="boton pequeno" data-doc="precios2" disabled>Descargar PDF</button>
-          </li>
-          <li>
-            <div><strong>Cuadro de materiales</strong><span>Cantidad total y precio de cada material.</span></div>
-            <button type="button" class="boton pequeno" data-doc="materiales" disabled>Descargar PDF</button>
-          </li>
-          <li>
-            <div><strong>Cuadro de maquinaria</strong><span>Cantidad total y precio de cada máquina.</span></div>
-            <button type="button" class="boton pequeno" data-doc="maquinaria" disabled>Descargar PDF</button>
-          </li>
-          <li>
-            <div><strong>Cuadro de mano de obra</strong><span>Horas totales y precio de cada categoría.</span></div>
-            <button type="button" class="boton pequeno" data-doc="mano" disabled>Descargar PDF</button>
           </li>
         </ul>
       </div>

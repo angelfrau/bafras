@@ -1,5 +1,4 @@
-/* BAFRAS · documentos de trabajo en PDF: mediciones, mediciones ciegas, cuadros de precios
-   nº 1 y nº 2, y cuadros de materiales, maquinaria y mano de obra.
+/* BAFRAS · documentos de trabajo en PDF: mediciones ciegas y cuadros de precios nº 1 y nº 2.
    Los datos salen de documentos.js (BC3Docs); el dibujo, de pdf-base.js (BC3PDFBase).
    Cada documento es un PDF aparte, con la misma letra, colores y tablas que el presupuesto. */
 (function () {
@@ -12,36 +11,17 @@
 
   // Título, nombre de archivo y texto de cada documento.
   var DOCUMENTOS = {
-    mediciones: {
-      titulo: 'Mediciones', archivo: 'Mediciones',
-      nota: 'Cantidad de cada partida en el presupuesto, sin precios.'
-    },
     ciegas: {
       titulo: 'Mediciones ciegas', archivo: 'Mediciones_ciegas',
       nota: 'Para pedir ofertas: rellene el precio unitario y el importe de cada partida. Las cantidades son las del presupuesto.'
     },
     precios1: {
       titulo: 'Cuadro de precios nº 1', archivo: 'Cuadro_precios_1',
-      nota: 'Precio unitario de venta de cada partida, sin IVA.'
+      nota: 'Precio unitario de venta de cada unidad de obra, sin IVA, en cifra y en letra.'
     },
     precios2: {
       titulo: 'Cuadro de precios nº 2', archivo: 'Cuadro_precios_2',
-      nota: 'Recursos, rendimientos y precios de cada partida, sin IVA. Los precios son los del presupuesto, sin redondear. Cada importe es rendimiento × precio, a céntimo; si las líneas no suman el precio de la partida, la diferencia aparece como redondeo.'
-    },
-    materiales: {
-      titulo: 'Cuadro de materiales', archivo: 'Cuadro_materiales', grupo: 'materiales',
-      total: 'Total materiales',
-      nota: 'Cantidad total y precio de venta de cada material, sin IVA.'
-    },
-    maquinaria: {
-      titulo: 'Cuadro de maquinaria', archivo: 'Cuadro_maquinaria', grupo: 'maquinaria',
-      total: 'Total maquinaria', vacio: 'En este presupuesto no hay maquinaria.',
-      nota: 'Cantidad total y precio de venta de cada máquina, sin IVA.'
-    },
-    mano: {
-      titulo: 'Cuadro de mano de obra', archivo: 'Cuadro_mano_de_obra', grupo: 'mano',
-      total: 'Total mano de obra',
-      nota: 'Horas totales y precio de venta de cada categoría, sin IVA.'
+      nota: 'Descomposición de cada partida en materiales, mano de obra, maquinaria y otros servicios, con su rendimiento y su precio por unidad, sin IVA. Cada importe es rendimiento × precio, a céntimo; si los recursos no suman el precio de la partida, la diferencia aparece como redondeo.'
     }
   };
 
@@ -49,11 +29,9 @@
   function columnas(defs) {
     return defs.map(function (d) { return { w: d[0] * MM, alin: d[1], t: d[2] }; });
   }
-  var COL_MEDICIONES = columnas([[22, 'L', 'Código'], [110, 'L', 'Descripción'], [11, 'C', 'Ud'], [35, 'C', 'Cantidad']]);
   var COL_PRECIOS1 = columnas([[22, 'L', 'Código'], [110, 'L', 'Descripción'], [11, 'C', 'Ud'], [35, 'C', 'Precio (€)']]);
   var COL_CIEGAS = columnas([[22, 'L', 'Código'], [66, 'L', 'Descripción'], [11, 'C', 'Ud'], [19, 'C', 'Cant.'], [28, 'C', 'Precio (€)'], [32, 'C', 'Importe (€)']]);
   var COL_DESCOMPOSICION = columnas([[22, 'L', 'Código'], [78, 'L', 'Descripción'], [11, 'C', 'Ud'], [19, 'C', 'Rend.'], [22, 'C', 'Precio (€)'], [26, 'C', 'Importe (€)']]);
-  var COL_RECURSOS = columnas([[22, 'L', 'Código'], [78, 'L', 'Descripción'], [11, 'C', 'Ud'], [19, 'C', 'Cantidad'], [22, 'C', 'Precio (€)'], [26, 'C', 'Importe (€)']]);
 
   // ---------- texto ----------
 
@@ -77,26 +55,7 @@
     ctx.y += 6 * MM;
   }
 
-  function sinDescomponerTxt(n) {
-    var txt = n === 1 ? '1 partida sin descomposición' : n + ' partidas sin descomposición';
-    return 'No incluye ' + txt + ' (precio directo), que no tienen recursos.';
-  }
-
   // ---------- filas ----------
-
-  // Partida en las mediciones: código, descripción y cantidad.
-  function filaMedicion(ctx, p) {
-    var c = COL_MEDICIONES;
-    return {
-      celdas: [
-        B.celdaTxt(p.code, ctx.r, 7.5, PAL.gris, c[0].w),
-        B.celdaDescripcion(ctx, p.resumen, p.texto, c[1].w),
-        B.celdaTxt(B.unidadTxt(p.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
-        B.celdaTxt(B.formatoNumero(p.cantidad, 0, 2), ctx.r, 8.5, PAL.tinta, c[3].w)
-      ],
-      filete: true, fondo: null
-    };
-  }
 
   // Partida en las mediciones ciegas: lo mismo, con precio e importe en blanco y más altura.
   function filaCiega(ctx, p) {
@@ -114,13 +73,18 @@
     };
   }
 
-  // Partida en el cuadro nº 1: código, descripción, unidad y precio.
+  // Partida en el cuadro nº 1: código, descripción (con el precio en letra), unidad y precio.
   function filaPrecio1(ctx, p) {
     var c = COL_PRECIOS1;
+    var descripcion = B.celdaDescripcion(ctx, p.resumen, p.texto, c[1].w);
+    descripcion.bloques.push({
+      lineas: B.envolver(ctx.r, 'Precio en letra: ' + Datos.importeEnLetra(p.pvpUd), 8, c[1].w - 2 * B.PAD_H),
+      f: ctx.r, tam: 8, lh: 8 * 1.35, hex: PAL.gris, mt: 0.6 * MM
+    });
     return {
       celdas: [
         B.celdaTxt(p.codigo, ctx.r, 7.5, PAL.gris, c[0].w),
-        B.celdaDescripcion(ctx, p.resumen, p.texto, c[1].w),
+        descripcion,
         B.celdaTxt(B.unidadTxt(p.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
         B.celdaTxt(BC3.euros(p.pvpUd), ctx.r, 8.5, PAL.tinta, c[3].w)
       ],
@@ -128,24 +92,11 @@
     };
   }
 
-  // Recurso en un cuadro de recursos: cantidad total, precio e importe.
-  function filaRecurso(ctx, x) {
-    var c = COL_RECURSOS;
-    return {
-      celdas: [
-        B.celdaTxt(x.codigo, ctx.r, 7.5, PAL.gris, c[0].w),
-        B.celdaTxt(x.resumen, ctx.r, 8.5, PAL.tinta, c[1].w),
-        B.celdaTxt(B.unidadTxt(x.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
-        B.celdaTxt(B.formatoNumero(x.cantidad, 0, 4), ctx.r, 8.5, PAL.tinta, c[3].w),
-        B.celdaTxt(B.formatoNumero(x.precio, 2, 4), ctx.r, 8.5, PAL.tinta, c[4].w),
-        B.celdaTxt(BC3.euros(x.importe), ctx.r, 8.5, PAL.tinta, c[5].w)
-      ],
-      filete: true, fondo: null
-    };
-  }
+  // Grupos de recursos de una partida del cuadro nº 2, en el orden del pliego: [tipo, rótulo].
+  var GRUPOS_RECURSOS = [['materiales', 'Materiales'], ['mano', 'Mano de obra'], ['maquinaria', 'Maquinaria'], ['otros', 'Otros (servicios)']];
 
-  // Bloque de una partida en el cuadro nº 2: cabecera de la partida, sus líneas y su precio total.
-  // Devuelve la lista de filas del bloque.
+  // Bloque de una partida en el cuadro nº 2: cabecera de la partida, sus recursos agrupados por tipo
+  // (con el subtotal de cada grupo), el redondeo y su precio total. Devuelve la lista de filas del bloque.
   function filasDescomposicion(ctx, d) {
     var c = COL_DESCOMPOSICION;
     var filas = [{
@@ -161,17 +112,33 @@
     }];
 
     if (d.descompuesta) {
-      d.lineas.forEach(function (l) {
+      GRUPOS_RECURSOS.forEach(function (g) {
+        var lineas = d.lineas.filter(function (l) { return l.tipo === g[0]; });
+        if (!lineas.length) return;
+        var subtotal = lineas.reduce(function (s, l) { return s + l.importe; }, 0);
         filas.push({
           celdas: [
-            B.celdaTxt(l.codigo, ctx.r, 7.5, PAL.gris, c[0].w),
-            B.celdaTxt(l.resumen, ctx.r, 8.5, PAL.tinta, c[1].w),
-            B.celdaTxt(B.unidadTxt(l.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
-            B.celdaTxt(B.formatoNumero(l.rendimiento, 0, 4), ctx.r, 8.5, PAL.tinta, c[3].w),
-            B.celdaTxt(B.formatoNumero(l.precio, 2, 4), ctx.r, 8.5, PAL.tinta, c[4].w),
-            B.celdaTxt(BC3.euros(l.importe), ctx.r, 8.5, PAL.tinta, c[5].w)
+            B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[0].w),
+            B.celdaTxt(g[1], ctx.b, 8.5, PAL.pino, c[1].w),
+            B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[2].w),
+            B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[3].w),
+            B.celdaTxt('', ctx.r, 8.5, PAL.tinta, c[4].w),
+            B.celdaTxt(BC3.euros(subtotal), ctx.b, 8.5, PAL.pino, c[5].w)
           ],
-          filete: true, fondo: null
+          filete: false, fondo: null
+        });
+        lineas.forEach(function (l) {
+          filas.push({
+            celdas: [
+              B.celdaTxt(l.codigo, ctx.r, 7.5, PAL.gris, c[0].w),
+              B.celdaTxt(l.resumen, ctx.r, 8.5, PAL.tinta, c[1].w),
+              B.celdaTxt(B.unidadTxt(l.unidad), ctx.r, 8.5, PAL.tinta, c[2].w),
+              B.celdaTxt(B.formatoNumero(l.rendimiento, 0, 4), ctx.r, 8.5, PAL.tinta, c[3].w),
+              B.celdaTxt(B.formatoNumero(l.precio, 2, 4), ctx.r, 8.5, PAL.tinta, c[4].w),
+              B.celdaTxt(BC3.euros(l.importe), ctx.r, 8.5, PAL.tinta, c[5].w)
+            ],
+            filete: true, fondo: null
+          });
         });
       });
     } else {
@@ -223,8 +190,9 @@
   function dibujarConciliacion(ctx, con) {
     var filas = [
       filaConciliacion(ctx, 'Materiales', BC3.euros(con.materiales), false, null),
-      filaConciliacion(ctx, 'Maquinaria', BC3.euros(con.maquinaria), false, null),
       filaConciliacion(ctx, 'Mano de obra', BC3.euros(con.mano), false, null),
+      filaConciliacion(ctx, 'Maquinaria', BC3.euros(con.maquinaria), false, null),
+      filaConciliacion(ctx, 'Otros (servicios)', BC3.euros(con.otros), false, null),
       filaConciliacion(ctx, 'Partidas de precio directo', BC3.euros(con.directas), false, null),
       filaConciliacion(ctx, 'Redondeo del precio de cada partida', BC3.euros(con.redondeoPartidas), false, null),
       filaConciliacion(ctx, 'Redondeo a céntimo de los importes', BC3.euros(con.redondeoImportes), false, null),
@@ -256,16 +224,13 @@
     subs.forEach(function (s) { capituloConTabla(ctx, s, nivel + 1, cols, filaDe); });
   }
 
-  function dibujarMediciones(ctx, r, ciega) {
-    var cols = ciega ? COL_CIEGAS : COL_MEDICIONES;
-    var filaDe = function (p) { return ciega ? filaCiega(ctx, p) : filaMedicion(ctx, p); };
-    r.capitulos.forEach(function (c) { capituloConTabla(ctx, c, 2, cols, filaDe); });
-    if (ciega) {
-      // Total para que el proveedor lo rellene.
-      var total = B.filaSuma(ctx, cols, 'Total sin IVA', '', PAL.beige, false);
-      total.minAlto = 7 * MM;
-      B.filaTabla(ctx, cols, total, function () { B.cabecera(ctx, LAT, cols); });
-    }
+  // Mediciones ciegas: capítulos con su tabla y, al final, el total para que el proveedor lo rellene.
+  function dibujarCiegas(ctx, r) {
+    var cols = COL_CIEGAS;
+    r.capitulos.forEach(function (c) { capituloConTabla(ctx, c, 2, cols, function (p) { return filaCiega(ctx, p); }); });
+    var total = B.filaSuma(ctx, cols, 'Total sin IVA', '', PAL.beige, false);
+    total.minAlto = 7 * MM;
+    B.filaTabla(ctx, cols, total, function () { B.cabecera(ctx, LAT, cols); });
   }
 
   function dibujarPrecios1(ctx, lista) {
@@ -284,36 +249,13 @@
     });
   }
 
-  // Cuadro de materiales, maquinaria o mano de obra. lista: recursos de ese tipo.
-  function dibujarRecursos(ctx, info, rec) {
-    var lista = rec[info.grupo];
-    if (!lista.length) {
-      parrafo(ctx, info.vacio || 'No hay recursos de este tipo en el presupuesto.', ctx.r, 9, PAL.tinta);
-    } else {
-      var repetir = function () { B.cabecera(ctx, LAT, COL_RECURSOS); };
-      repetir();
-      lista.forEach(function (x) { B.filaTabla(ctx, COL_RECURSOS, filaRecurso(ctx, x), repetir); });
-      var total = B.filaSuma(ctx, COL_RECURSOS, info.total, BC3.euros(Datos.totalImporte(lista)), PAL.beige, false);
-      B.filaTabla(ctx, COL_RECURSOS, total, repetir);
-    }
-    if (rec.numSinDescomponer) {
-      ctx.y += 4 * MM;
-      parrafo(ctx, sinDescomponerTxt(rec.numSinDescomponer), ctx.r, 8, PAL.gris);
-    }
-  }
-
   // ---------- generación ----------
 
   function contenido(ctx, clave, datos, r) {
-    var info = DOCUMENTOS[clave];
-    if (clave === 'mediciones') return dibujarMediciones(ctx, r, false);
-    if (clave === 'ciegas') return dibujarMediciones(ctx, r, true);
+    if (clave === 'ciegas') return dibujarCiegas(ctx, r);
     if (clave === 'precios1') return dibujarPrecios1(ctx, Datos.cuadroPrecios1(r));
-    if (clave === 'precios2') {
-      dibujarPrecios2(ctx, Datos.cuadroPrecios2(r, datos));
-      return dibujarConciliacion(ctx, Datos.conciliacion(r, datos));
-    }
-    return dibujarRecursos(ctx, info, Datos.cuadrosRecursos(r, datos));
+    dibujarPrecios2(ctx, Datos.cuadroPrecios2(r, datos));
+    return dibujarConciliacion(ctx, Datos.conciliacion(r, datos));
   }
 
   // Devuelve una promesa con los bytes del PDF del documento «clave».
@@ -331,9 +273,8 @@
   }
 
   window.BC3PDFDocs = {
-    claves: ['mediciones', 'ciegas', 'precios1', 'precios2', 'materiales', 'maquinaria', 'mano'],
+    claves: ['ciegas', 'precios1', 'precios2'],
     generar: generar,
-    titulo: function (clave) { return DOCUMENTOS[clave].titulo; },
     archivo: function (clave) { return DOCUMENTOS[clave].archivo; }
   };
 })();

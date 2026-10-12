@@ -116,7 +116,7 @@ test('cuadros de recursos: cantidades totales, con P.2 en dos capítulos', () =>
 
 test('cuadros de recursos suman lo mismo que las partidas descompuestas', () => {
   const rec = Docs.cuadrosRecursos(r, datos);
-  const total = Docs.totalImporte(rec.mano) + Docs.totalImporte(rec.maquinaria) + Docs.totalImporte(rec.materiales);
+  const total = Docs.totalImporte(rec.mano) + Docs.totalImporte(rec.maquinaria) + Docs.totalImporte(rec.materiales) + Docs.totalImporte(rec.otros);
   // P.1 × 2 = 11.000 c. · P.2 × 4 = 4.008 c.
   assert.equal(total, 2 * 5500 + 4 * 1002);
 });
@@ -177,6 +177,8 @@ test('tipoRecurso: mano de obra, maquinaria y materiales según el código', () 
   assert.equal(Docs.tipoRecurso('GEN.MAQ.7'), 'maquinaria');
   assert.equal(Docs.tipoRecurso('FV.PAN.031'), 'materiales');
   assert.equal(Docs.tipoRecurso('BT.CCA.010'), 'materiales');
+  assert.equal(Docs.tipoRecurso('ACT.PRU.011'), 'otros');
+  assert.equal(Docs.tipoRecurso('ACT.IMP.011'), 'materiales');
 });
 
 test('formato de números: coma, miles, decimales mínimos y máximos', () => {

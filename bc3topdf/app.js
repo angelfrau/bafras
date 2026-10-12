@@ -297,8 +297,8 @@
   window.addEventListener('resize', ajustarZoom);
 
   // ---------- documentos de trabajo ----------
-  // Se preparan los siete a la vez y cada uno se descarga con su botón, en el mismo gesto
-  // del usuario (como el presupuesto). Si cambia algún dato de la portada, lo preparado ya no vale.
+  // Se preparan el presupuesto para el cliente y los documentos de trabajo, y cada uno se descarga
+  // con su botón, en el mismo gesto del usuario. Si cambia algún dato de la portada, lo preparado ya no vale.
   var docsPreparados = {};   // clave → { bytes, nombre }
   var generacionDocs = 0;    // una preparación antigua no sobrescribe a la nueva
   var botonPreparar = $('preparar-docs');
@@ -335,12 +335,16 @@
     estadoDocs('Preparando los documentos…');
 
     // Uno detrás de otro, para no tener varias copias del BC3 en memoria a la vez.
-    window.BC3PDFDocs.claves.reduce(function (antes, clave) {
+    // El presupuesto para el cliente va primero; luego, los documentos de trabajo.
+    ['presupuesto'].concat(window.BC3PDFDocs.claves).reduce(function (antes, clave) {
       return antes.then(function () {
         if (id !== generacionDocs) return null;
-        return window.BC3PDFDocs.generar(clave, datos, r, m).then(function (bytes) {
+        var esPresupuesto = clave === 'presupuesto';
+        var pdf = esPresupuesto ? window.BC3PDF.generar(r, m) : window.BC3PDFDocs.generar(clave, datos, r, m);
+        var prefijo = esPresupuesto ? 'Presupuesto' : window.BC3PDFDocs.archivo(clave);
+        return pdf.then(function (bytes) {
           if (id !== generacionDocs) return;
-          docsPreparados[clave] = { bytes: bytes, nombre: nombreArchivo(m, window.BC3PDFDocs.archivo(clave)) };
+          docsPreparados[clave] = { bytes: bytes, nombre: nombreArchivo(m, prefijo) };
           document.querySelector('[data-doc="' + clave + '"]').disabled = false;
         });
       });

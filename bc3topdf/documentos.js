@@ -1,5 +1,5 @@
-/* BAFRAS · datos de los documentos de trabajo: cuadros de precios, cuadros de recursos
-   y mediciones. Parte del árbol que devuelve BC3.calcular y del BC3 leído (datos.conceptos).
+/* BAFRAS · datos de los documentos de trabajo: cuadros de precios nº 1 y nº 2, recursos totales
+   y conciliación con el presupuesto. Parte del árbol que devuelve BC3.calcular y del BC3 leído (datos.conceptos).
    No dibuja nada: así se puede probar en Node (test/documentos.test.js).
 
    Importes en céntimos (enteros), igual que bc3.js. */
@@ -64,11 +64,12 @@
 
   // Tipo de un recurso según su código. En estos BC3 el campo «tipo» viene a 0 en todos los
   // conceptos, así que se mira el código: REF.MO.010 es mano de obra; MQ o MAQ, maquinaria;
-  // el resto, materiales.
+  // PRU (pruebas y ensayos, servicios de empresa especializada), otros; el resto, materiales.
   function tipoRecurso(codigo) {
     var partes = codigo.toUpperCase().split('.');
     if (partes.indexOf('MO') !== -1) return 'mano';
     if (partes.indexOf('MQ') !== -1 || partes.indexOf('MAQ') !== -1) return 'maquinaria';
+    if (partes.indexOf('PRU') !== -1) return 'otros';
     return 'materiales';
   }
 
@@ -80,14 +81,14 @@
   }
 
   // Líneas de la descomposición de una partida, por unidad de partida. Cada línea lleva el
-  // rendimiento, el precio del recurso y el importe (rendimiento × precio, a céntimo).
+  // tipo de recurso, el rendimiento, el precio del recurso y el importe (rendimiento × precio, a céntimo).
   function lineasDescomposicion(datos, codigo, coef) {
     return concepto(datos, codigo).hijos.map(function (h) {
       var hijo = concepto(datos, h.code);
       var rendimiento = h.factor * h.cantidad;
       var precio = precioVenta(datos, h.code, coef);
       return {
-        codigo: h.code, unidad: hijo.unidad, resumen: hijo.resumen,
+        codigo: h.code, unidad: hijo.unidad, resumen: hijo.resumen, tipo: tipoRecurso(h.code),
         rendimiento: rendimiento, precio: precio, importe: aCentimos(rendimiento * precio)
       };
     });
@@ -130,7 +131,7 @@
       else sinDescomponer[p.code] = true;
     });
 
-    var grupos = { mano: [], maquinaria: [], materiales: [] };
+    var grupos = { mano: [], maquinaria: [], materiales: [], otros: [] };
     Object.keys(acum).sort().forEach(function (codigo) {
       var c = concepto(datos, codigo);
       var precio = precioVenta(datos, codigo, r.coef);
@@ -145,6 +146,7 @@
       mano: grupos.mano,
       maquinaria: grupos.maquinaria,
       materiales: grupos.materiales,
+      otros: grupos.otros,
       numSinDescomponer: Object.keys(sinDescomponer).length
     };
   }
@@ -174,18 +176,69 @@
       if (!tieneDescomposicion(datos, p.code)) directas += p.centimos;
     });
     var materiales = totalImporte(rec.materiales);
-    var maquinaria = totalImporte(rec.maquinaria);
     var mano = totalImporte(rec.mano);
+    var maquinaria = totalImporte(rec.maquinaria);
+    var otros = totalImporte(rec.otros);
     var rPartidas = redondeoPartidas(r, datos);
     return {
       materiales: materiales,
-      maquinaria: maquinaria,
       mano: mano,
+      maquinaria: maquinaria,
+      otros: otros,
       directas: directas,
       redondeoPartidas: rPartidas,
-      redondeoImportes: r.subtotal - (materiales + maquinaria + mano + directas + rPartidas),
+      redondeoImportes: r.subtotal - (materiales + mano + maquinaria + otros + directas + rPartidas),
       total: r.subtotal
     };
+  }
+
+  // ---------- importes en letra (cuadro nº 1) ----------
+  // Español: «Mil novecientos cuarenta y cuatro euros con cincuenta céntimos». Hasta 999.999.999 €.
+  var UNIDADES = ['', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve'];
+  var DIEZ_A_DIECINUEVE = ['diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve'];
+  var VEINTE_A_VEINTINUEVE = ['veinte', 'veintiuno', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco', 'veintiséis', 'veintisiete', 'veintiocho', 'veintinueve'];
+  var DECENAS = ['', '', 'veinte', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
+  var CENTENAS = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
+
+  // De 1 a 999, sin apócope.
+  function hastaMil(n) {
+    if (n === 100) return 'cien';
+    var partes = [], c = Math.floor(n / 100), r = n % 100;
+    if (c) partes.push(CENTENAS[c]);
+    if (r >= 30) partes.push(DECENAS[Math.floor(r / 10)] + (r % 10 ? ' y ' + UNIDADES[r % 10] : ''));
+    else if (r >= 20) partes.push(VEINTE_A_VEINTINUEVE[r - 20]);
+    else if (r >= 10) partes.push(DIEZ_A_DIECINUEVE[r - 10]);
+    else if (r > 0) partes.push(UNIDADES[r]);
+    return partes.join(' ');
+  }
+
+  // Delante de un sustantivo masculino, «uno» pasa a «un» y «veintiuno», a «veintiún».
+  function apocope(texto) {
+    return texto.replace(/veintiuno$/, 'veintiún').replace(/uno$/, 'un');
+  }
+
+  // Entero de 0 a 999.999.999, sin apócope.
+  function enteroEnLetras(n) {
+    if (n === 0) return 'cero';
+    var partes = [], millones = Math.floor(n / 1e6), resto = n % 1e6;
+    if (millones === 1) partes.push('un millón');
+    else if (millones) partes.push(apocope(hastaMil(millones)) + ' millones');
+    var miles = Math.floor(resto / 1000), cientos = resto % 1000;
+    if (miles === 1) partes.push('mil');
+    else if (miles) partes.push(apocope(hastaMil(miles)) + ' mil');
+    if (cientos) partes.push(hastaMil(cientos));
+    return partes.join(' ');
+  }
+
+  // Importe en céntimos → texto: «Un euro», «Veintiún euros con cinco céntimos», «Un millón de euros».
+  function importeEnLetra(centimos) {
+    var euros = Math.floor(centimos / 100), cent = centimos % 100;
+    if (euros > 999999999) return (centimos / 100).toFixed(2).replace('.', ',') + ' €';
+    var txt = apocope(enteroEnLetras(euros));
+    if (euros === 1) txt += ' euro';
+    else txt += (euros >= 1e6 && euros % 1e6 === 0) ? ' de euros' : ' euros';
+    if (cent) txt += ' con ' + apocope(enteroEnLetras(cent)) + (cent === 1 ? ' céntimo' : ' céntimos');
+    return txt.charAt(0).toUpperCase() + txt.slice(1);
   }
 
   return {
@@ -195,6 +248,7 @@
     cuadroPrecios2: cuadroPrecios2,
     cuadrosRecursos: cuadrosRecursos,
     totalImporte: totalImporte,
-    conciliacion: conciliacion
+    conciliacion: conciliacion,
+    importeEnLetra: importeEnLetra
   };
 });
