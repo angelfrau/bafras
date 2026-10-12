@@ -17,11 +17,11 @@
     },
     precios1: {
       titulo: 'Cuadro de precios nº 1', archivo: 'Cuadro_precios_1',
-      nota: 'Precio unitario de venta de cada unidad de obra, sin IVA, en cifra y en letra.'
+      nota: 'Precio unitario de venta de cada unidad de obra, sin IVA, en cifra y en letra. Tiene carácter contractual.'
     },
     precios2: {
       titulo: 'Cuadro de precios nº 2', archivo: 'Cuadro_precios_2',
-      nota: 'Descomposición de cada partida en materiales, mano de obra, maquinaria y otros servicios, con su rendimiento y su precio por unidad, sin IVA. Cada importe es rendimiento × precio, a céntimo; si los recursos no suman el precio de la partida, la diferencia aparece como redondeo.'
+      nota: 'Descomposición de cada partida en materiales, mano de obra, maquinaria y otros servicios, con su rendimiento y su precio por unidad, sin IVA. Sirve para calcular y abonar partes de obra en caso de rescisión o de contratos incompletos. Cada importe es rendimiento × precio, a céntimo; si los recursos no suman el precio de la partida, la diferencia aparece como redondeo.'
     }
   };
 
