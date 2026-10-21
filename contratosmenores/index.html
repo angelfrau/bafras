@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contratos menores abiertos · BAFRAS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Contratos menores abiertos en Baleares con fecha máxima de presentación de documentación. Se revisan cada lunes.">
+<style>
+:root{
+  --pino:#0E2B25;
+  --verde:#1A7A5A;
+  --beige:#F7F5F0;
+  --linea:#D8D2C3;
+  --gris:#4A5550;
+  --blanco:#FFFFFF;
+  --urgente:#8A4B00;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--beige);
+  color:var(--pino);
+  font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.wrap{max-width:1180px;margin:0 auto;padding-block:24px 56px}
+a{color:var(--verde)}
+a:focus-visible{outline:2px solid var(--verde);outline-offset:3px;border-radius:2px}
+
+header.top{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  padding-bottom:18px;border-bottom:1px solid var(--linea);
+}
+.marca{font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:14px;color:var(--pino);text-decoration:none}
+.volver{font-size:14px;color:var(--gris)}
+
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:28px 0 8px;font-weight:600;text-wrap:balance}
+.lead{margin:0;color:var(--gris);max-width:60ch}
+.estado{display:flex;flex-wrap:wrap;gap:6px 18px;margin:18px 0 0;font-size:14px;color:var(--gris)}
+.estado strong{color:var(--pino);font-weight:600}
+.aviso{margin-top:14px;padding:10px 12px;border:1px solid var(--urgente);border-radius:8px;color:var(--urgente);background:var(--blanco);font-size:14px}
+
+.vacio{margin-top:24px;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:20px}
+.vacio h2{margin:0 0 6px;font-size:18px;font-weight:600}
+.vacio p{margin:0;color:var(--gris)}
+
+.cab{
+  display:none;margin-top:24px;padding:0 16px;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--gris);
+  grid-template-columns:170px minmax(0,1fr) 180px 200px;gap:20px;
+}
+.lista{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px}
+.item{
+  background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:16px;
+  display:grid;gap:10px;grid-template-columns:minmax(0,1fr);
+}
+.item > *{min-width:0}
+.dia{font-weight:600;font-size:17px;font-variant-numeric:tabular-nums}
+.hora{display:block;color:var(--gris);font-size:14px;font-variant-numeric:tabular-nums}
+.quedan{display:inline-block;margin-top:4px;font-size:13px;font-weight:600;color:var(--verde)}
+.quedan.urg{color:var(--urgente)}
+.asunto{margin:0;font-size:17px;line-height:1.35;font-weight:600;overflow-wrap:anywhere}
+.desc{margin:4px 0 0;color:var(--gris);font-size:15px;overflow-wrap:anywhere}
+.campo{font-size:15px;overflow-wrap:anywhere}
+.etiqueta{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:2px}
+.ver{font-weight:600}
+
+@media (min-width:760px){
+  .cab{display:grid}
+  .item{grid-template-columns:170px minmax(0,1fr) 180px 200px;gap:20px;align-items:start}
+  .etiqueta{display:none}
+}
+
+.bloque{margin-top:44px;padding-top:20px;border-top:1px solid var(--linea)}
+.bloque h2{font-size:18px;margin:0 0 10px;font-weight:600}
+.bloque ul{margin:0;padding-left:20px;color:var(--gris)}
+.bloque li{margin:6px 0}
+.bloque .portales{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.portales li{
+  background:var(--blanco);border:1px solid var(--linea);border-radius:10px;padding:12px 14px;
+  display:grid;gap:4px;
+}
+.portales .pest{font-size:14px;color:var(--gris)}
+.pie{margin-top:36px;font-size:13px;color:var(--gris)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a class="marca" href="/">BAFRAS</a>
+    <a class="volver" href="/">← Volver a bafras.com</a>
+  </header>
+
+  <h1>Contratos menores abiertos</h1>
+  <p class="lead">Convocatorias de contratos menores en Baleares con plazo de presentación vigente, ordenadas por la fecha máxima para presentar documentación.</p>
+
+  <div class="estado" id="estado"></div>
+  <div id="aviso"></div>
+
+  <div id="vacio" class="vacio" hidden>
+    <h2 id="vacio-titulo">No hay convocatorias abiertas con fecha verificada</h2>
+    <p id="vacio-texto"></p>
+  </div>
+
+  <div class="cab" aria-hidden="true">
+    <span>Fecha máxima</span><span>Asunto y descripción</span><span>Cliente</span><span>Portal</span>
+  </div>
+  <ul class="lista" id="lista"></ul>
+
+  <section class="bloque">
+    <h2>Qué entra y qué no</h2>
+    <ul>
+      <li>Entra: contratos menores de servicios de ingeniería, energía, instalaciones y arquitectura técnica que BAFRAS puede ejecutar, con fecha de presentación publicada y vigente.</li>
+      <li>No entra: obras, suministros y servicios fuera de nuestro perfil, adjudicaciones ya hechas y convocatorias sin fecha de presentación.</li>
+      <li>La mayoría de contratos menores se adjudican sin convocatoria pública. Esta lista recoge lo que las entidades publican, así que no es exhaustiva.</li>
+    </ul>
+  </section>
+
+  <section class="bloque">
+    <h2>Portales revisados</h2>
+    <ul class="portales" id="portales"></ul>
+  </section>
+
+  <p class="pie">Se revisa cada lunes: se retiran las convocatorias cerradas y se añaden las nuevas que cumplan los criterios. BAFRAS Engineering · Mallorca.</p>
+</div>
+
+<script>
+/* DATOS:INICIO. Lista semanal. Solo convocatorias abiertas con fecha máxima de presentación verificada. */
+window.CONTRATOS_MENORES = {
+  actualizado: "2026-10-21",
+  convocatorias: [],
+  portales: [
+    { nombre: "Ajuntament de Palma · perfil del contratante (contratos menores)", url: "https://perfilcontractant.palma.es/ca/contractes-menors", estado: "Pendiente: sus anuncios no muestran la fecha de presentación en el listado", revisado: "2026-10-21" },
+    { nombre: "Ajuntament de Manacor · contractes.manacor.org", url: "https://contractes.manacor.org", estado: "Sin contratos menores abiertos", revisado: "2026-10-21" },
+    { nombre: "IBISEC · contratación y preselección", url: "https://www.caib.es/sites/ibisec/ca", estado: "Página principal sin convocatorias. Pendiente de revisión manual: licitaciones en curso", revisado: "2026-10-21" },
+    { nombre: "Consell de Mallorca · tauler de contractes menors", url: "https://cim.secimallorca.net/tablondeanuncios/default.aspx?ar=601", estado: "Pendiente de revisión manual", revisado: null },
+    { nombre: "Gobierto Contratación · Illes Balears", url: "https://contratos.gobierto.es/licitaciones-en/islas-baleares", estado: "Sin contratos menores identificados entre las licitaciones listadas", revisado: "2026-10-21" },
+    { nombre: "Plataforma de Contratación del Sector Público", url: "https://contrataciondelestado.es", estado: "No se revisa para convocatorias: los menores se publican tras adjudicar", revisado: null }
+  ]
+};
+/* DATOS:FIN */
+</script>
+
+<script>
+(function () {
+  var D = window.CONTRATOS_MENORES || { convocatorias: [], portales: [] };
+  var ahora = new Date();
+  var MS_DIA = 86400000;
+  var MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  var DIAS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+
+  function pad(n) { return String(n).padStart(2, "0"); }
+  function fmtDia(d) { return pad(d.getDate()) + "/" + pad(d.getMonth() + 1) + "/" + d.getFullYear(); }
+  function fmtLargo(d) { return d.getDate() + " de " + MESES[d.getMonth()] + " de " + d.getFullYear(); }
+  function el(tag, cls, texto) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (texto !== undefined && texto !== null) e.textContent = texto;
+    return e;
+  }
+  function diasHasta(d) {
+    var a = new Date(ahora.getFullYear(), ahora.getMonth(), ahora.getDate());
+    var b = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    return Math.round((b - a) / MS_DIA);
+  }
+  function leerLimite(s) {
+    if (!s) return null;
+    var con = s.indexOf("T") > -1;
+    var d = new Date(con ? s : s + "T23:59");
+    if (isNaN(d.getTime())) return null;
+    return { fecha: d, hora: con ? s.slice(s.indexOf("T") + 1, s.indexOf("T") + 6) : null };
+  }
+
+  var actualizado = new Date((D.actualizado || "2026-01-01") + "T12:00");
+  var diasDesdeAct = Math.floor((ahora - actualizado) / MS_DIA);
+  var proximoLunes = new Date(actualizado);
+  proximoLunes.setDate(proximoLunes.getDate() + (((1 - actualizado.getDay() + 7) % 7) || 7));
+
+  var abiertas = (D.convocatorias || [])
+    .map(function (c) { return { c: c, p: leerLimite(c.fecha_maxima_documentacion) }; })
+    .filter(function (x) { return x.p && x.p.fecha.getTime() >= ahora.getTime(); })
+    .sort(function (a, b) { return a.p.fecha - b.p.fecha; });
+
+  // Resumen
+  var estado = document.getElementById("estado");
+  estado.appendChild(el("span", null, "Actualizado el " + fmtLargo(actualizado)));
+  estado.appendChild(el("span", null, "Próxima revisión: " + DIAS[proximoLunes.getDay()] + " " + fmtLargo(proximoLunes)));
+  var total = el("span", null, null);
+  total.appendChild(el("strong", null, String(abiertas.length)));
+  total.appendChild(document.createTextNode(abiertas.length === 1 ? " convocatoria abierta" : " convocatorias abiertas"));
+  estado.appendChild(total);
+
+  if (diasDesdeAct > 8) {
+    document.getElementById("aviso").appendChild(
+      el("p", "aviso", "Esta lista no se ha actualizado desde el " + fmtLargo(actualizado) + ". Puede faltar alguna convocatoria.")
+    );
+  }
+
+  // Lista o estado vacío
+  var lista = document.getElementById("lista");
+  if (abiertas.length === 0) {
+    document.getElementById("vacio").hidden = false;
+    document.getElementById("vacio-texto").textContent =
+      "Revisamos los portales de la lista de abajo el " + fmtLargo(actualizado) +
+      ". Cuando una entidad publique un contrato menor con fecha máxima de presentación, aparecerá aquí.";
+  } else {
+    abiertas.forEach(function (x) {
+      var c = x.c, p = x.p;
+      var li = el("li", "item");
+
+      var f = el("div", "fecha");
+      var dias = diasHasta(p.fecha);
+      f.appendChild(el("span", "etiqueta", "Fecha máxima"));
+      f.appendChild(el("span", "dia", fmtDia(p.fecha)));
+      f.appendChild(el("span", "hora", p.hora ? p.hora + " h" : "hora no indicada"));
+      var quedan = dias === 0 ? "Último día hoy" : dias === 1 ? "Queda 1 día" : "Quedan " + dias + " días";
+      f.appendChild(el("span", "quedan" + (dias <= 3 ? " urg" : ""), quedan));
+      li.appendChild(f);
+
+      var cuerpo = el("div", "cuerpo");
+      cuerpo.appendChild(el("h3", "asunto", c.asunto));
+      if (c.descripcion) cuerpo.appendChild(el("p", "desc", c.descripcion));
+      li.appendChild(cuerpo);
+
+      var cli = el("div", "campo");
+      cli.appendChild(el("span", "etiqueta", "Cliente"));
+      cli.appendChild(document.createTextNode(c.cliente || ""));
+      li.appendChild(cli);
+
+      var por = el("div", "campo");
+      por.appendChild(el("span", "etiqueta", "Portal"));
+      var a = el("a", "ver", c.portal || "Ver convocatoria");
+      a.href = c.url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      por.appendChild(a);
+      li.appendChild(por);
+
+      lista.appendChild(li);
+    });
+  }
+
+  // Portales revisados
+  var ul = document.getElementById("portales");
+  (D.portales || []).forEach(function (pt) {
+    var li = el("li");
+    var a = el("a", null, pt.nombre);
+    a.href = pt.url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    li.appendChild(a);
+    var t = pt.estado + (pt.revisado ? " · revisado el " + pt.revisado.split("-").reverse().join("/") : "");
+    li.appendChild(el("span", "pest", t));
+    ul.appendChild(li);
+  });
+})();
+</script>
+</body>
+</html>
