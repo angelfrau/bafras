@@ -1,0 +1,79 @@
+BAFRAS Engineering - Evidencias de auditoría B01
+Fecha de referencia: 03/11/2026 (Europe/Madrid)
+Base: copia local de bafras/, incluidos cambios previos sin confirmar.
+
+1. Comprobaciones existentes, ejecutadas desde bafras/
+
+Comando: python -B tools/validate.py
+Resultado, código de salida 0:
+WARNING: placeholders: 33 item(s)
+WARNING: verify flags: 10 item(s)
+Validation passed.
+
+Comando: python -B -m pytest -p no:cacheprovider -q
+Resultado, código de salida 0:
+..................                                                       [100%]
+18 passed in 0.23s
+
+No se instalaron dependencias. -B evita generar bytecode y se desactivó el
+proveedor de caché de pytest. No se envió el formulario.
+
+2. Inventario suplementario
+
+inventario_estatico.json se obtuvo mediante Python estándar/HTMLParser y
+expresiones regulares leyendo index.html y los cuatro CSS. Contiene las 13
+vistas, H1/H2 y líneas de origen, estados de contenido, HEX y umbrales CSS.
+
+Resultados:
+- 13 vistas virtuales (9 objetivo + 3 fichas + Conocimiento).
+- 30 elementos cuya lista de clases incluye exactamente asset-slot.
+- 21 elementos data-content-status=placeholder.
+- 6 elementos data-content-status=verify.
+- No se encontraron IDs duplicados.
+- No se encontraron enlaces #/ruta@ancla con ancla ausente en su propia vista.
+- Los avisos 33/10 del validador cuentan coincidencias de regex, no elementos.
+
+Contraste: luminancia relativa sRGB, canales normalizados; linealización
+c/12.92 si c<=0.04045, o ((c+0.055)/1.055)^2.4; ponderaciones
+0.2126/0.7152/0.0722; ratio (Lmayor+0.05)/(Lmenor+0.05).
+Solo colores sólidos; no mide contraste sobre fotografía, opacidades ni
+renderizado. Las parejas y ratios figuran en el JSON.
+
+Pillow, ya instalado, se utilizó para leer dimensiones, formatos y pesos.
+Se encontraron 33 imágenes y el archivo misc/a de dos bytes.
+No hubo pares de recursos de assets/ idénticos por SHA-256.
+Se inspeccionó visualmente el WebP conceptual de visión de sistema.
+No equivale a una captura del sitio ni acredita permisos.
+
+3. Intentos de comprobación visual
+
+No había herramienta de navegador conectada ni módulos Playwright/Selenium.
+Se localizaron Chrome y Edge instalados. Se intentó una sesión Chrome headless
+con perfil temporal aislado y puerto de depuración local 19381. No se obtuvo
+una sesión utilizable; la consulta local posterior agotó el tiempo de espera.
+
+Se intentó captura Edge headless del index.html local a 1440x1000 con perfil
+temporal aislado y salida dentro de evidencias_B01/inicio_escritorio.png.
+Resultado: exit code 2147483651; screenshot_exists False.
+Registro relevante:
+- Failed to create IAppCapability: Acceso denegado (0x80070005).
+- GPU process exited unexpectedly: exit_code=-1073741790.
+- FATAL: GPU process isn't usable. Goodbye.
+
+No hay captura de navegador válida. No se acreditan renderizado, teclado,
+zoom, lector de pantalla, overflow, envío o recepción real. No se instalaron
+herramientas para suplir esta limitación y no se alteró el sitio.
+
+4. Control de integridad
+
+Se guardaron en memoria hashes SHA-256 de 76 archivos existentes de la copia
+antes de escribir el informe; se excluyeron .git, __pycache__ y .pytest_cache.
+La comprobación final contrastó esos archivos y las adiciones de esta auditoría.
+Resultado final: 76 archivos previos sin cambios ni eliminaciones.
+Únicas adiciones: BAFRAS_WEB_B01_AUDITORIA_REPOSITORIO.md,
+evidencias_B01/comprobaciones.txt y evidencias_B01/inventario_estatico.json.
+Verificada estructura de 13 secciones y existencia de los enlaces de evidencia.
+
+Git detectó diferencia de propietario. Solo se usó -c safe.directory limitado
+a comandos de lectura; no se cambió configuración global. El estado inicial
+ya incluía modificaciones productivas y documentación sin seguimiento.

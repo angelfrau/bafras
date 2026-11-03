@@ -1,0 +1,211 @@
+{
+ "capacidades.html": [
+  {
+   "txt": "/ 03",
+   "cr": 2.8,
+   "need": 4.5,
+   "px": 12,
+   "wt": 600,
+   "fg": "rgb(141, 150, 142)",
+   "bg": "rgb(247,245,240)"
+  },
+  {
+   "txt": "C03 / INTEGRACIÓN",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 750,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "contacto.html": [
+  {
+   "txt": "CO-03 / CONTACTO DIRECTO",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "info@bafras.com",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 22,
+   "wt": 600,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "automatizacion_control_v1.html": [
+  {
+   "txt": "Cuándo podemos ayudarte",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 750,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "01",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 13,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "sistemas_energeticos_v2.html": [
+  {
+   "txt": "Cuándo podemos ayudarte",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 750,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "01",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 12,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "infraestructuras_v2.html": [
+  {
+   "txt": "Cuándo podemos ayudarte",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 750,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "01",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 13,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "inicio_v3.html": [
+  {
+   "txt": "EL PUNTO DE PARTIDA",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "01",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 13,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "plantilla-ficha-proyecto.html": [
+  {
+   "txt": "Proyectos y experiencia / Ficha individu",
+   "cr": 2.54,
+   "need": 4.5,
+   "px": 12,
+   "wt": 400,
+   "fg": "rgb(89, 103, 95)",
+   "bg": "rgb(14,43,37)"
+  },
+  {
+   "txt": "Tipo de referencia",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 750,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "Fotografía autorizada",
+   "cr": 4.15,
+   "need": 4.5,
+   "px": 12,
+   "wt": 400,
+   "fg": "rgb(99, 114, 104)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "proyectos-experiencia.html": [
+  {
+   "txt": "PE-03 / CRITERIO DOCUMENTAL",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 750,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "sobre-bafras.html": [
+  {
+   "txt": "SB-02 / EL EQUIPO",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "Ver proyectos y experiencia ↗",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 13,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  }
+ ],
+ "sectores_v3.html": [
+  {
+   "txt": "Seleccionar actividad",
+   "cr": 4.48,
+   "need": 4.5,
+   "px": 11,
+   "wt": 400,
+   "fg": "rgb(102, 120, 107)",
+   "bg": "rgb(248,250,247)"
+  },
+  {
+   "txt": "02 / NECESIDADES TRANSVERSALES",
+   "cr": 4.31,
+   "need": 4.5,
+   "px": 11,
+   "wt": 700,
+   "fg": "rgb(26, 122, 90)",
+   "bg": "rgb(236,232,221)"
+  },
+  {
+   "txt": "Prototipo aislado C04 · Los enlaces de n",
+   "cr": 4.38,
+   "need": 4.5,
+   "px": 12,
+   "wt": 400,
+   "fg": "rgb(104, 118, 109)",
+   "bg": "rgb(247,245,240)"
+  }
+ ]
+}

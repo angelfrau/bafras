@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-03",
+  "image_paths_existing_and_hashes_match": 55,
+  "contact_sheets": 5,
+  "thumbnail_checks": [
+    {
+      "id": "R01",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 3.352,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R02",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 1.303,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R03",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 2.024,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R04",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 2.146,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R05",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 2.251,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R06",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 1.276,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R07",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 3.562,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R08",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 3.563,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R09",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 1.99,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R10",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 3.042,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R11",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 1.956,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R12",
+      "sheet": "contactos_01.jpg",
+      "mean_absolute_rgb_error": 2.065,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R13",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 2.174,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R14",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 2.047,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R15",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 2.078,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R16",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 1.999,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R17",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 4.168,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R18",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 3.1,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R19",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 3.6,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R20",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 2.443,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R21",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 3.132,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R22",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 2.602,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R23",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 2.118,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R24",
+      "sheet": "contactos_02.jpg",
+      "mean_absolute_rgb_error": 3.941,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R25",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 2.625,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R26",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 3.29,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R27",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 3.393,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R28",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 4.056,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R29",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 2.862,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R30",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 3.398,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R31",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 2.089,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R32",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 2.281,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R33",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 2.145,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R34",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 3.246,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R35",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 2.097,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R36",
+      "sheet": "contactos_03.jpg",
+      "mean_absolute_rgb_error": 2.074,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R37",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 3.986,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R38",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 3.638,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R39",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 3.793,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R40",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 2.106,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R41",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 2.624,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R42",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 3.127,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R43",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 2.173,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R44",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 4.31,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R45",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 3.158,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R46",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 2.416,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R47",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 3.788,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R48",
+      "sheet": "contactos_04.jpg",
+      "mean_absolute_rgb_error": 1.475,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R49",
+      "sheet": "contactos_05.jpg",
+      "mean_absolute_rgb_error": 2.052,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R50",
+      "sheet": "contactos_05.jpg",
+      "mean_absolute_rgb_error": 2.137,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R51",
+      "sheet": "contactos_05.jpg",
+      "mean_absolute_rgb_error": 2.785,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R52",
+      "sheet": "contactos_05.jpg",
+      "mean_absolute_rgb_error": 3.623,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R53",
+      "sheet": "contactos_05.jpg",
+      "mean_absolute_rgb_error": 4.264,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R54",
+      "sheet": "contactos_05.jpg",
+      "mean_absolute_rgb_error": 2.96,
+      "thumbnail_correspondence_ok": true
+    },
+    {
+      "id": "R55",
+      "sheet": "contactos_05.jpg",
+      "mean_absolute_rgb_error": 3.594,
+      "thumbnail_correspondence_ok": true
+    }
+  ],
+  "all_thumbnail_correspondences_ok": true,
+  "report_has_required_10_sections": true,
+  "local_report_links_checked": 94,
+  "webp_dimensions_and_sizes_match_manifest": 29,
+  "original_sha1_records_match": 26,
+  "dependencies_installed": false,
+  "design_or_integration_started": false,
+  "G1_started_or_completed": false,
+  "workspace_integrity": {
+    "baseline_files": 170,
+    "changed": [
+      "bafras\\docs\\project_v02\\04_arquitectura_software.md",
+      "bafras\\docs\\project_v02\\05_sistema_visual.md"
+    ],
+    "added": [
+      "bafras\\docs\\project_v02\\B02_PREP_01_INVENTARIO_RECURSOS_VISUALES.md",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\cambios_documentales.diff",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\contactos_01.jpg",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\contactos_02.jpg",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\contactos_03.jpg",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\contactos_04.jpg",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\contactos_05.jpg",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\inventario_tecnico.json",
+      "bafras\\docs\\project_v02\\evidencias_B02_recursos\\validacion_ejecucion.json"
+    ],
+    "deleted": [],
+    "document_checks": {
+      "04_arquitectura_software.md": {
+        "baseline_reconstruction_sha256_matches": true,
+        "baseline_line_endings": "LF",
+        "only_section_8_changed": true
+      },
+      "05_sistema_visual.md": {
+        "baseline_reconstruction_sha256_matches": true,
+        "baseline_line_endings": "LF",
+        "only_section_8_changed": true
+      }
+    }
+  },
+  "protected_files_unchanged": {
+    "D02": true,
+    "D03": true,
+    "B01": true,
+    "HTML_CSS_JS_tests": true,
+    "image_library_all_91_files": true
+  },
+  "G1_contract_review": {
+    "nine_complete_wireframes_desktop_mobile_D03": true,
+    "three_complete_high_fidelity_home_infrastructure_contact": true,
+    "detailed_singular_modules_other_six": true,
+    "approved_catalog_variants_states": true,
+    "visual_specification": true,
+    "global_review_no_fundamental_aesthetic_decisions_pending": true,
+    "express_documented_direction_approval": true,
+    "nine_independent_full_high_fidelity_not_required": true,
+    "planning_not_publication_readiness": true
+  }
+}

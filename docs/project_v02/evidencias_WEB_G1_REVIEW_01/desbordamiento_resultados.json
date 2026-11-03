@@ -1,0 +1,302 @@
+[
+ {
+  "file": "C04_CAP_V1_BAFRAS/C04_CAP_V1/capacidades.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CAP_V1_BAFRAS/C04_CAP_V1/capacidades.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CAP_V1_BAFRAS/C04_CAP_V1/capacidades.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CAP_V1_BAFRAS/C04_CAP_V1/capacidades.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CAP_V1_BAFRAS/C04_CAP_V1/capacidades.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CAP_V1_BAFRAS/C04_CAP_V1/capacidades.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CO_V2_BAFRAS/contacto.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CO_V2_BAFRAS/contacto.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CO_V2_BAFRAS/contacto.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CO_V2_BAFRAS/contacto.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CO_V2_BAFRAS/contacto.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_CO_V2_BAFRAS/contacto.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_DIG_V1_BAFRAS/C04_DIG_V1/automatizacion_control_v1.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_DIG_V1_BAFRAS/C04_DIG_V1/automatizacion_control_v1.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_DIG_V1_BAFRAS/C04_DIG_V1/automatizacion_control_v1.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_DIG_V1_BAFRAS/C04_DIG_V1/automatizacion_control_v1.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_DIG_V1_BAFRAS/C04_DIG_V1/automatizacion_control_v1.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_DIG_V1_BAFRAS/C04_DIG_V1/automatizacion_control_v1.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_ENE_V2_BAFRAS/C04_ENE_V2/sistemas_energeticos_v2.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_ENE_V2_BAFRAS/C04_ENE_V2/sistemas_energeticos_v2.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_ENE_V2_BAFRAS/C04_ENE_V2/sistemas_energeticos_v2.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_ENE_V2_BAFRAS/C04_ENE_V2/sistemas_energeticos_v2.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_ENE_V2_BAFRAS/C04_ENE_V2/sistemas_energeticos_v2.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_ENE_V2_BAFRAS/C04_ENE_V2/sistemas_energeticos_v2.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_INF_V2_revision/C04_INF_V2/infraestructuras_v2.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_INF_V2_revision/C04_INF_V2/infraestructuras_v2.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_INF_V2_revision/C04_INF_V2/infraestructuras_v2.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_INF_V2_revision/C04_INF_V2/infraestructuras_v2.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_INF_V2_revision/C04_INF_V2/infraestructuras_v2.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_INF_V2_revision/C04_INF_V2/infraestructuras_v2.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_Inicio_V3_BAFRAS/C04_Inicio_V3/inicio_v3.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_Inicio_V3_BAFRAS/C04_Inicio_V3/inicio_v3.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_Inicio_V3_BAFRAS/C04_Inicio_V3/inicio_v3.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_Inicio_V3_BAFRAS/C04_Inicio_V3/inicio_v3.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_Inicio_V3_BAFRAS/C04_Inicio_V3/inicio_v3.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_Inicio_V3_BAFRAS/C04_Inicio_V3/inicio_v3.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/plantilla-ficha-proyecto.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/plantilla-ficha-proyecto.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/plantilla-ficha-proyecto.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/plantilla-ficha-proyecto.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/plantilla-ficha-proyecto.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/plantilla-ficha-proyecto.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/proyectos-experiencia.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/proyectos-experiencia.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/proyectos-experiencia.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/proyectos-experiencia.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/proyectos-experiencia.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_PE_V1_BAFRAS/C04_PE_V1/proyectos-experiencia.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SB_V1_BAFRAS/C04_SB_V1/sobre-bafras.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":347,\"n\":5,\"off\":[\"DIV.@347\",\"DIV.eyebrow@347\",\"H1.@347\",\"DIV.hero-copy@347\",\"P.@347\"]}"
+ },
+ {
+  "file": "C04_SB_V1_BAFRAS/C04_SB_V1/sobre-bafras.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SB_V1_BAFRAS/C04_SB_V1/sobre-bafras.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SB_V1_BAFRAS/C04_SB_V1/sobre-bafras.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SB_V1_BAFRAS/C04_SB_V1/sobre-bafras.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SB_V1_BAFRAS/C04_SB_V1/sobre-bafras.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SEC_V3_aprobado_BAFRAS/C04_SEC_V3_aprobado/sectores_v3.html",
+  "width": 320,
+  "result": "{\"iw\":320,\"cw\":320,\"sw\":320,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SEC_V3_aprobado_BAFRAS/C04_SEC_V3_aprobado/sectores_v3.html",
+  "width": 375,
+  "result": "{\"iw\":375,\"cw\":375,\"sw\":375,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SEC_V3_aprobado_BAFRAS/C04_SEC_V3_aprobado/sectores_v3.html",
+  "width": 390,
+  "result": "{\"iw\":390,\"cw\":390,\"sw\":390,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SEC_V3_aprobado_BAFRAS/C04_SEC_V3_aprobado/sectores_v3.html",
+  "width": 768,
+  "result": "{\"iw\":768,\"cw\":768,\"sw\":768,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SEC_V3_aprobado_BAFRAS/C04_SEC_V3_aprobado/sectores_v3.html",
+  "width": 1024,
+  "result": "{\"iw\":1024,\"cw\":1024,\"sw\":1024,\"n\":0,\"off\":[]}"
+ },
+ {
+  "file": "C04_SEC_V3_aprobado_BAFRAS/C04_SEC_V3_aprobado/sectores_v3.html",
+  "width": 1440,
+  "result": "{\"iw\":1440,\"cw\":1440,\"sw\":1440,\"n\":0,\"off\":[]}"
+ }
+]

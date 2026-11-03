@@ -1,0 +1,552 @@
+{
+  "routes": [
+    {
+      "route": "",
+      "line": 121,
+      "headings": [
+        [
+          "h1",
+          127,
+          "Ingeniería para activos e instalaciones que integran infraestructura, energía y sistemas digitales."
+        ],
+        [
+          "h2",
+          140,
+          "Los activos funcionan como sistemas. La ingeniería también debería hacerlo."
+        ],
+        [
+          "h2",
+          152,
+          "¿Qué necesitas resolver?"
+        ],
+        [
+          "h2",
+          166,
+          "Tres áreas técnicas para intervenir sobre un mismo sistema."
+        ],
+        [
+          "h2",
+          201,
+          "Cómo trabajamos"
+        ],
+        [
+          "h2",
+          210,
+          "Experiencia del equipo"
+        ],
+        [
+          "h2",
+          252,
+          "También podemos formar parte de tu equipo."
+        ],
+        [
+          "h2",
+          262,
+          "Cuéntanos qué necesitas resolver."
+        ]
+      ]
+    },
+    {
+      "route": "capacidades",
+      "line": 272,
+      "headings": [
+        [
+          "h1",
+          277,
+          "Ingeniería para intervenir sobre el sistema completo."
+        ],
+        [
+          "h2",
+          291,
+          "Tres áreas técnicas. Una visión integrada del activo."
+        ],
+        [
+          "h2",
+          342,
+          "Un problema técnico rara vez termina en una única disciplina."
+        ],
+        [
+          "h2",
+          360,
+          "Desde el diagnóstico hasta la verificación."
+        ],
+        [
+          "h2",
+          373,
+          "¿Tienes un proyecto o una necesidad técnica?"
+        ]
+      ]
+    },
+    {
+      "route": "capacidades/infrastructure",
+      "line": 379,
+      "headings": [
+        [
+          "h1",
+          385,
+          "Instalaciones diseñadas para funcionar, integrarse y construirse."
+        ],
+        [
+          "h2",
+          399,
+          "Ingeniería a lo largo de todo el desarrollo de una instalación."
+        ],
+        [
+          "h2",
+          413,
+          "Ingeniería para las instalaciones del activo."
+        ],
+        [
+          "h2",
+          435,
+          "Del proyecto a la obra, y de la obra a la instalación verificada."
+        ],
+        [
+          "h2",
+          454,
+          "Documentación para diseñar, ejecutar y verificar."
+        ],
+        [
+          "h2",
+          466,
+          "La infraestructura no funciona de forma aislada."
+        ],
+        [
+          "h2",
+          479,
+          "Ingeniería conectada con la realidad de obra."
+        ],
+        [
+          "h2",
+          493,
+          "Diseño y obra bajo una misma perspectiva técnica."
+        ],
+        [
+          "h2",
+          499,
+          "Esta área se integra con"
+        ],
+        [
+          "h2",
+          506,
+          "¿Tienes una instalación que diseñar, reformar o ejecutar?"
+        ]
+      ]
+    },
+    {
+      "route": "capacidades/energy-systems",
+      "line": 512,
+      "headings": [
+        [
+          "h1",
+          518,
+          "Ingeniería para conocer, transformar y gestionar la energía de un activo."
+        ],
+        [
+          "h2",
+          532,
+          "Del dato energético a la decisión técnica."
+        ],
+        [
+          "h2",
+          550,
+          "Sistemas energéticos entendidos como sistema completo."
+        ],
+        [
+          "h2",
+          592,
+          "Documentación para diagnosticar, decidir e implantar."
+        ],
+        [
+          "h2",
+          604,
+          "La energía depende de la infraestructura y de los datos."
+        ],
+        [
+          "h2",
+          617,
+          "Programa de transición energética del campus de la Universitat de les Illes Balears."
+        ],
+        [
+          "h2",
+          630,
+          "Criterio energético conectado con ingeniería y operación."
+        ],
+        [
+          "h2",
+          636,
+          "¿Tienes un activo o proyecto energético que analizar?"
+        ]
+      ]
+    },
+    {
+      "route": "capacidades/digital-systems",
+      "line": 642,
+      "headings": [
+        [
+          "h1",
+          647,
+          "Sistemas Digitales y Automatización"
+        ],
+        [
+          "h2",
+          661,
+          "Medir → controlar → supervisar → integrar → explotar → verificar"
+        ],
+        [
+          "h2",
+          674,
+          "Capacidades técnicas"
+        ],
+        [
+          "h2",
+          685,
+          "Qué entregamos"
+        ],
+        [
+          "h2",
+          696,
+          "Integración con el activo"
+        ],
+        [
+          "h2",
+          702,
+          "Experiencia y evidencia"
+        ],
+        [
+          "h2",
+          713,
+          "Responsable de capacidad"
+        ],
+        [
+          "h2",
+          722,
+          "Esta capacidad se integra con"
+        ],
+        [
+          "h2",
+          729,
+          "Hablemos de tu proyecto."
+        ]
+      ]
+    },
+    {
+      "route": "sectores",
+      "line": 734,
+      "headings": [
+        [
+          "h1",
+          738,
+          "Sectores"
+        ],
+        [
+          "h2",
+          745,
+          "Hoteles y turismo"
+        ],
+        [
+          "h2",
+          753,
+          "Industria"
+        ],
+        [
+          "h2",
+          761,
+          "Centros deportivos"
+        ],
+        [
+          "h2",
+          769,
+          "Edificios y sector terciario"
+        ],
+        [
+          "h2",
+          777,
+          "Infraestructuras"
+        ],
+        [
+          "h2",
+          785,
+          "Sector público"
+        ],
+        [
+          "h2",
+          793,
+          "Otros sectores"
+        ],
+        [
+          "h2",
+          805,
+          "Cuéntanos qué necesitas."
+        ]
+      ]
+    },
+    {
+      "route": "proyectos",
+      "line": 810,
+      "headings": [
+        [
+          "h1",
+          814,
+          "Proyectos"
+        ],
+        [
+          "h2",
+          820,
+          "Proyectos del equipo"
+        ],
+        [
+          "h2",
+          853,
+          "Cuéntanos qué necesitas."
+        ]
+      ]
+    },
+    {
+      "route": "proyectos/experiencia-del-equipo/campus-universitario",
+      "line": 858,
+      "headings": [
+        [
+          "h1",
+          862,
+          "Campus universitario · Solar fotovoltaica y almacenamiento"
+        ],
+        [
+          "h2",
+          879,
+          "El proyecto"
+        ],
+        [
+          "h2",
+          890,
+          "Capacidades y equipo"
+        ],
+        [
+          "h2",
+          901,
+          "Cuéntanos qué necesitas."
+        ]
+      ]
+    },
+    {
+      "route": "proyectos/experiencia-del-equipo/mep-hoteles-colegios-residencial",
+      "line": 906,
+      "headings": [
+        [
+          "h1",
+          910,
+          "Hoteles, colegios y residencial de alto nivel"
+        ],
+        [
+          "h2",
+          927,
+          "El proyecto"
+        ],
+        [
+          "h2",
+          938,
+          "Capacidades y equipo"
+        ],
+        [
+          "h2",
+          949,
+          "Cuéntanos qué necesitas."
+        ]
+      ]
+    },
+    {
+      "route": "proyectos/experiencia-del-equipo/energia-offshore-internacional",
+      "line": 954,
+      "headings": [
+        [
+          "h1",
+          958,
+          "Proyecto energético internacional"
+        ],
+        [
+          "h2",
+          975,
+          "El proyecto"
+        ],
+        [
+          "h2",
+          986,
+          "Capacidades y equipo"
+        ],
+        [
+          "h2",
+          997,
+          "Cuéntanos qué necesitas."
+        ]
+      ]
+    },
+    {
+      "route": "conocimiento",
+      "line": 1002,
+      "headings": [
+        [
+          "h1",
+          1006,
+          "Conocimiento"
+        ],
+        [
+          "h2",
+          1012,
+          "Artículos técnicos"
+        ],
+        [
+          "h2",
+          1016,
+          "Casos de estudio"
+        ],
+        [
+          "h2",
+          1020,
+          "Guías técnicas"
+        ],
+        [
+          "h2",
+          1024,
+          "Innovación"
+        ],
+        [
+          "h2",
+          1031,
+          "¿Tienes una duda técnica sobre tu instalación?"
+        ]
+      ]
+    },
+    {
+      "route": "sobre-bafras",
+      "line": 1036,
+      "headings": [
+        [
+          "h1",
+          1040,
+          "Sobre BAFRAS"
+        ],
+        [
+          "h2",
+          1046,
+          "Quiénes somos"
+        ],
+        [
+          "h2",
+          1055,
+          "Equipo"
+        ],
+        [
+          "h2",
+          1089,
+          "Filosofía y valores"
+        ],
+        [
+          "h2",
+          1101,
+          "Cuéntanos qué necesitas."
+        ]
+      ]
+    },
+    {
+      "route": "contacto",
+      "line": 1106,
+      "headings": [
+        [
+          "h1",
+          1110,
+          "Contacto"
+        ],
+        [
+          "h2",
+          1118,
+          "Contacto directo"
+        ],
+        [
+          "h2",
+          1126,
+          "Hablemos de tu proyecto"
+        ],
+        [
+          "h2",
+          1168,
+          "También podemos formar parte de tu equipo."
+        ]
+      ]
+    }
+  ],
+  "counts": {
+    "asset_slot": 30,
+    "placeholder": 21,
+    "verify": 6
+  },
+  "duplicate_ids": {},
+  "bad_route_anchors": [],
+  "css_hex": [
+    "#0E2B25",
+    "#1A7A5A",
+    "#2A2A2A",
+    "#4A5550",
+    "#4F7B6E",
+    "#D8D2C3",
+    "#E6E6E6",
+    "#ECE8DD",
+    "#F7F5F0",
+    "#FFFFFF",
+    "#f4f2eb",
+    "#f6f4ee",
+    "#fff"
+  ],
+  "breakpoints_px": [
+    280,
+    380,
+    430,
+    520,
+    560,
+    600,
+    700,
+    760,
+    820,
+    860,
+    900,
+    1000,
+    1024,
+    1100
+  ],
+  "contrast_solid_srgb": [
+    {
+      "foreground": "#1A7A5A",
+      "background": "#FFFFFF",
+      "ratio": 5.28
+    },
+    {
+      "foreground": "#1A7A5A",
+      "background": "#F7F5F0",
+      "ratio": 4.85
+    },
+    {
+      "foreground": "#4F7B6E",
+      "background": "#FFFFFF",
+      "ratio": 4.78
+    },
+    {
+      "foreground": "#4F7B6E",
+      "background": "#F7F5F0",
+      "ratio": 4.39
+    },
+    {
+      "foreground": "#4A5550",
+      "background": "#F7F5F0",
+      "ratio": 7.12
+    },
+    {
+      "foreground": "#E6E6E6",
+      "background": "#0E2B25",
+      "ratio": 12.1
+    },
+    {
+      "foreground": "#2A2A2A",
+      "background": "#F7F5F0",
+      "ratio": 13.17
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+
+######### C04_CAP_V1_BAFRAS\C04_CAP_V1\capacidades.html 16516 bytes
+TITLE: Capacidades — BAFRAS Engineering · C04
+LANG: es
+LANDMARKS header/nav/main/footer: 1 2 1 1 scripts: 1 ext css/js: []
+HEX: ['#09211C', '#0E2B25', '#1A7A5A', '#2A2A2A', '#4A5550', '#5C6861', '#8D968E', '#9AD6BC', '#A2C3B2', '#B4C9C0', '#B9C4B8', '#C9C4B7', '#D6E6DE', '#D8D2C3', '#E8E5DC', '#ECE8DD', '#F7F5F0', '#FFF']
+FONTS: []
+MEDIA: ['@media(max-width:1100px)', '@media(max-width:390px)', '@media(max-width:760px)']
+MAXW: ['1100px', '1210px', '1440px', '390px', '520px', '610px', '710px', '760px', '770px', '790px', '820px', '850px']
+IDS: ['mobile-menu', 'contenido', 'cabecera', 'especialidades', 'integracion', 'colaboracion', 'contacto']
+   BUTTON : Menú
+   h1 : Tres especialidades de ingeniería. Soluciones ajustadas a cada proyecto.
+   h2 : Encuentra la especialidad que necesita tu proyecto.
+   h3 : Infraestructuras e instalaciones
+   h3 : Sistemas energéticos
+   h3 : Automatización y control
+   h2 : Cuando las instalaciones, la energía y el control están relacionados.
+   h3 : Modernización de una instalación térmica.
+   h3 : Autoconsumo y almacenamiento.
+   h3 : Problemas de funcionamiento en una instalación.
+   h2 : Ingeniería en distintas fases de un proyecto.
+   h3 : Diagnóstico y estudios.
+   h3 : Diseño y proyecto.
+   h3 : Asistencia y coordinación.
+   h3 : Programación, integración y verificación.
+   h2 : ¿Qué necesitas resolver o desarrollar?
+LINKS:
+    ('Saltar al contenido', '#contenido', 'skip')
+    ('BAFRASENGINEERING', 'index.html', 'brand')
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', 'nav-contact')
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('Explorar las especialidades ↓', '#especialidades', 'orientation')
+    ('Ver infraestructuras e instalaciones ↗', 'infraestructuras.html', 'textlink')
+    ('Ver sistemas energéticos ↗', 'sistemas-energeticos.html', 'textlink')
+    ('Ver automatización y control ↗', 'automatizacion-control.html', 'textlink')
+    ('Infraestructuras e instalaciones', 'infraestructuras.html', None)
+    ('Sistemas energéticos', 'sistemas-energeticos.html', None)
+    ('Automatización y control', 'automatizacion-control.html', None)
+    ('Sistemas energéticos', 'sistemas-energeticos.html', None)
+    ('Infraestructuras e instalaciones', 'infraestructuras.html', None)
+    ('Automatización y control', 'automatizacion-control.html', None)
+    ('Infraestructuras e instalaciones', 'infraestructuras.html', None)
+    ('Automatización y control', 'automatizacion-control.html', None)
+    ('Sistemas energéticos', 'sistemas-energeticos.html', None)
+    ('Cuéntanos tu proyecto ↗', 'contacto.html', 'button')
+    ('Conoce nuestros proyectos y experiencia ↗', 'proyectos-experiencia.html', 'secondary-link')
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Contacto', 'contacto.html', None)
+IMGS: []
+FORM: []
+MARKERS: ['demos']
+
+######### C04_CO_V2_BAFRAS\contacto.html 9132 bytes
+TITLE: Contacto | BAFRAS Engineering
+LANG: es
+LANDMARKS header/nav/main/footer: 1 2 1 1 scripts: 1 ext css/js: []
+HEX: ['#0E2B25', '#1A7A5A', '#59675F', '#BDBFB4', '#D8D2C3', '#DCE5DF', '#ECE8DD', '#F5E5B4', '#F7F5F0', '#FFF']
+FONTS: []
+MEDIA: ['@media(max-width:350px)', '@media(max-width:760px)', '@media(max-width:960px)']
+MAXW: ['1280px', '350px', '760px', '960px']
+IDS: ['mobile-nav', 'main', 'name', 'company', 'email', 'message', 'message-help', 'form-state']
+   BUTTON : Menú
+   h1 : Hablemos de tu proyecto.
+   h2 : Envíanos tu consulta.
+   LABEL : Nombre *
+   LABEL : Empresa u organización (opcional)
+   LABEL : Correo electrónico *
+   LABEL : Cuéntanos qué necesitas *
+   BUTTON : Enviar consulta
+   h2 : ¿Prefieres contactar directamente?
+   h2 : No necesitas tenerlo todo definido.
+LINKS:
+    ('Saltar al contenido', '#main', 'skip')
+    ('BAFRASENGINEERING', 'index.html', 'brand')
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('info@bafras.com', 'mailto:info@bafras.com', 'email')
+    ('+34 610 903 179', 'tel:+34610903179', 'email')
+    ('info@bafras.com', 'mailto:info@bafras.com', None)
+    ('+34 610 903 179', 'tel:+34610903179', None)
+IMGS: []
+FORM: [('FORM', None, None, None, False), ('input', 'name', None, True, True), ('input', 'company', None, False, True), ('input', 'email', 'email', True, True), ('textarea', 'message', None, True, True)]
+MARKERS: ['demos', 'demostración', 'maqueta', 'no publicable', 'prototipo']
+
+######### C04_DIG_V1_BAFRAS\C04_DIG_V1\automatizacion_control_v1.html 18183 bytes
+TITLE: Automatización y control de instalaciones y procesos | BAFRAS Engineering
+LANG: es
+LANDMARKS header/nav/main/footer: 1 2 1 1 scripts: 1 ext css/js: []
+HEX: ['#0E2B25', '#1A7A5A', '#285B48', '#2A2A2A', '#46574D', '#4A5550', '#A9D5C3', '#ACD7C3', '#C9C4B8', '#CBD8D1', '#CFC9BD', '#D8D2C3', '#DBE6DF', '#E0EAE5', '#E4E1D9', '#E9E6DD', '#ECE8DD', '#F7F5F0', '#FFF']
+FONTS: []
+MEDIA: ['@media(max-width:1000px)', '@media(max-width:360px)', '@media(max-width:760px)']
+MAXW: ['1000px', '1200px', '1440px', '360px', '760px', '840px']
+IDS: ['mobilemenu', 'dig01', 'necesidades', 'ambitos', 'entregables', 'integracion', 'dig06', 'dig07']
+   BUTTON : Menú
+   h1 : Ingeniería de automatización y control para instalaciones y procesos.
+   h2 : Cuando necesitas comprender, controlar o conectar mejor tus sistemas.
+   h3 : Faltan datos para saber qué ocurre.
+   h3 : El control es manual, inestable o difícil de ajustar.
+   h3 : Los equipos no intercambian información.
+   h3 : La automatización existente necesita modernizarse.
+   h3 : Los datos no se traducen en decisiones.
+   h2 : Del dato al control: seis ámbitos de ingeniería conectados.
+   h3 : Instrumentación, adquisición de datos y telemetría
+   h3 : Ingeniería de automatización y programación de control
+   h3 : Supervisión y control técnico de instalaciones
+   h3 : Integración de equipos, comunicaciones y arquitectura OT
+   h3 : Software técnico, datos y aplicaciones de ingeniería
+   h3 : Control e integración de activos energéticos
+   h3 : Diagnóstico, pruebas y evolución de sistemas
+   h2 : De los requisitos funcionales a la verificación del sistema.
+   h2 : El control debe responder a la instalación y a sus objetivos.
+   h2 : Experiencia técnica en control, integración y sistemas digitales.
+   h2 : ¿Necesitas revisar, automatizar o integrar un sistema?
+LINKS:
+    ('BAFRASENGINEERING', '#dig01', 'logo')
+    ('Inicio', '#dig01', None)
+    ('Capacidades', '#ambitos', 'current')
+    ('Integración', '#integracion', None)
+    ('Experiencia', '#dig06', None)
+    ('Contacto', '#dig07', 'contact')
+    ('Inicio', '#dig01', None)
+    ('Necesidades', '#necesidades', None)
+    ('Ámbitos', '#ambitos', None)
+    ('Entregables', '#entregables', None)
+    ('Integración', '#integracion', None)
+    ('Contacto', '#dig07', None)
+    ('Cuéntanos tu proyecto', '#dig07', 'btn')
+    ('Explorar ámbitos de actuación', '#ambitos', 'btn ghost')
+    ('Inicio', '#dig01', None)
+    ('Ámbitos', '#ambitos', None)
+    ('Contacto', '#dig07', None)
+IMGS: [('assets/R01.webp', 'Cuadro de automatización con componentes de control industrial'), ('assets/R03.webp', 'Instrumentación técnica instalada en equipos industriales, imagen contextual')]
+FORM: []
+MARKERS: ['demos', 'maqueta', 'pendiente o coordinarlos cuando el proyecto lo re', 'provisional']
+
+######### C04_ENE_V2_BAFRAS\C04_ENE_V2\sistemas_energeticos_v2.html 25503 bytes
+TITLE: Sistemas energéticos | BAFRAS Engineering · C04 ENE V2
+LANG: es
+LANDMARKS header/nav/main/footer: 1 2 1 1 scripts: 1 ext css/js: []
+HEX: ['#0E2B25', '#1A7A5A', '#234B3E', '#2A2A2A', '#46574D', '#4A5550', '#547168', '#A9D5C3', '#ACD7C3', '#C4D4C7', '#C7C1B5', '#C9C4B8', '#CFC9BD', '#D8D2C3', '#D9E4DE', '#DBE6DF', '#E0EAE5', '#E4E1D9', '#E9E6DD', '#E9EFE9', '#ECE8DD', '#F1EFE8', '#F7F5F0', '#FFF']
+FONTS: []
+MEDIA: ['@media(max-width:1000px)', '@media(max-width:1050px)', '@media(max-width:360px)', '@media(max-width:420px)', '@media(max-width:480px)', '@media(max-width:760px)', '@media(max-width:767px)', '@media(prefers-reduced-motion:reduce)']
+MAXW: ['1000px', '1050px', '1200px', '1440px', '360px', '400px', '420px', '480px', '560px', '600px', '610px', '750px']
+IDS: ['mobilemenu', 'contenido', 'ene01', 'ene02', 'ambitos', 'ene04', 'ene05', 'ene06', 'ene07']
+   BUTTON : Menú ☰
+   h1 : Ingeniería para comprender, mejorar y transformar sistemas energéticos.
+   h2 : ¿Qué decisión energética necesitas tomar?
+   h3 : Entender y reducir consumos.
+   h3 : Producir o almacenar energía.
+   h3 : Electrificar instalaciones o procesos.
+   h3 : Incorporar recarga o coordinar varios activos.
+   h3 : Controlar costes y mejorar el seguimiento.
+   h3 : Planificar la descarbonización.
+   h2 : Seis ámbitos de ingeniería energética.
+   h3 : Diagnóstico y eficiencia energética
+   h3 : Generación renovable y almacenamiento
+   h3 : Electrificación y sistemas térmicos
+   h3 : Movilidad eléctrica y sistemas energéticos integrados
+   h3 : Gestión, monitorización y costes energéticos
+   h3 : Descarbonización y sostenibilidad energética
+   h2 : Estudios, proyectos y asistencia técnica adaptados a cada encargo.
+   h2 : Energía, instalaciones y control: especialidades coordinadas.
+   h2 : Experiencia técnica en sistemas energéticos.
+   h2 : ¿Tienes una decisión energética que estudiar?
+LINKS:
+    ('Saltar al contenido', '#contenido', 'skip')
+    ('BAFRASENGINEERING', '#ene01', 'logo')
+    ('Inicio', '#ene01', None)
+    ('Capacidades', '#ambitos', 'current')
+    ('Integración', '#ene05', None)
+    ('Experiencia', '#ene06', None)
+    ('Contacto', '#ene07', 'contact')
+    ('Inicio', '#ene01', None)
+    ('Ámbitos', '#ambitos', None)
+    ('Integración', '#ene05', None)
+    ('Contacto', '#ene07', None)
+    ('Cuéntanos tu proyecto', '#ene07', 'btn')
+    ('Explorar ámbitos de actuación', '#ambitos', 'btn ghost')
+    ('Infraestructuras e instalaciones ↗', '#ene05', 'relation-link')
+    ('Automatización y control ↗', '#ene05', 'relation-link')
+    ('Conocer proyectos y experiencia', '#ene06', 'link')
+    ('Cuéntanos tu proyecto', '#ene07', 'btn')
+    ('Inicio', '#ene01', None)
+    ('Ámbitos', '#ambitos', None)
+    ('Contacto', '#ene07', None)
+IMGS: [('assets/R10.webp', 'Instalación fotovoltaica sobre una cubierta, imagen contextual de ingeniería energética'), ('assets/R08.webp', 'Equipos e instalación térmica utilizados como imagen contextual de sistemas energéticos')]
+FORM: []
+MARKERS: ['data-preview-link', 'demos', 'maqueta', 'pendiente', 'pendiente de validación']
+
+######### C04_INF_V2_revision\C04_INF_V2\infraestructuras_v2.html 18373 bytes
+TITLE: BAFRAS — Infraestructuras e instalaciones · C04
+LANG: es
+LANDMARKS header/nav/main/footer: 1 2 1 1 scripts: 2 ext css/js: []
+HEX: ['#0E2B25', '#1A7A5A', '#2A2A2A', '#46574D', '#4A5550', '#A9D5C3', '#ACD7C3', '#C9C4B8', '#CFC9BD', '#D8D2C3', '#DBE6DF', '#E0EAE5', '#E4E1D9', '#E9E6DD', '#ECE8DD', '#F7F5F0', '#FFF']
+FONTS: []
+MEDIA: ['@media(max-width:1000px)', '@media(max-width:360px)', '@media(max-width:420px)', '@media(max-width:760px)', '@media(prefers-reduced-motion:reduce)']
+MAXW: ['1000px', '1200px', '1440px', '360px', '400px', '420px', '560px', '610px', '750px', '760px', '840px']
+IDS: ['mobilemenu', 'contenido', 'inf01', 'inf02', 'ambitos', 'inf04', 'inf05', 'inf06', 'contacto']
+   BUTTON : Menú
+   h1 : Ingeniería de instalaciones para edificios, infraestructuras y procesos.
+   h2 : Desde el diseño inicial hasta la revisión de una instalación existente.
+   h3 : Nueva instalación, reforma o ampliación.
+   h3 : Funcionamiento deficiente o incidencias recurrentes.
+   h3 : Infraestructura técnica con requisitos específicos.
+   h3 : Adecuación técnica y seguridad.
+   h3 : Decisiones de reforma, compra o inversión.
+   h2 : Instalaciones y sistemas que podemos estudiar y desarrollar.
+   h3 : Electricidad e infraestructura eléctrica
+   h3 : Climatización, ventilación y refrigeración
+   h3 : Agua, hidráulica y servicios auxiliares
+   h3 : Protección y condiciones técnicas de las instalaciones
+   h3 : Diagnóstico, coordinación y gestión técnica de activos
+   h2 : Del diagnóstico a la documentación de proyecto y la asistencia técnica.
+   h2 : Instalaciones que se relacionan con la energía y el control.
+   h2 : Experiencia técnica aplicada a instalaciones reales.
+   h2 : ¿Necesitas diseñar, revisar o mejorar una instalación?
+LINKS:
+    ('BAFRASENGINEERING', '#inf01', 'logo')
+    ('Inicio', '#inf01', None)
+    ('Capacidades', '#ambitos', 'current')
+    ('Sectores', '#inf01', None)
+    ('Proyectos y experiencia', '#inf01', None)
+    ('Sobre BAFRAS', '#inf01', None)
+    ('Contacto', '#inf01', 'contact')
+    ('Inicio de página', '#inf01', None)
+    ('Necesidades', '#inf02', None)
+    ('Ámbitos', '#ambitos', None)
+    ('Entregables', '#inf04', None)
+    ('Relación con otras capacidades', '#inf05', None)
+    ('Experiencia', '#inf06', None)
+    ('Contacto', '#contacto', None)
+    ('Cuéntanos tu proyecto', '#contacto', 'btn')
+    ('Ver ámbitos de ingeniería', '#ambitos', 'btn ghost')
+    ('Sistemas energéticos ↗', '#inf01', 'relation-link')
+    ('Automatización y control ↗', '#inf01', 'relation-link')
+    ('Conocer proyectos y experiencia', '#inf01', 'link')
+    ('Cuéntanos tu proyecto', '#contacto', 'btn')
+    ('Inicio', '#inf01', None)
+    ('Ámbitos', '#ambitos', None)
+    ('Contacto', '#contacto', None)
+IMGS: [('assets/R18.webp', 'Instalación técnica de ventilación y tratamiento de aire')]
+FORM: []
+MARKERS: ['data-preview-link', 'demos', 'demostración']
+
+######### C04_Inicio_V3_BAFRAS\C04_Inicio_V3\inicio_v3.html 20957 bytes
+TITLE: BAFRAS · C04 Wireframe Inicio H01–H07
+LANG: es
+LANDMARKS header/nav/main/footer: 1 1 1 1 scripts: 0 ext css/js: []
+HEX: ['#0E2B25', '#1A7A5A', '#2A2A2A', '#4A5550', '#4F7B6E', '#5C786C', '#76BCA3', '#8A978F', '#8C9C93', '#D0DCD4', '#D8D2C3', '#E6E6E6', '#ECE8DD', '#F7F5F0', '#FFF', '#FFFFFF']
+FONTS: []
+MEDIA: ['@media(max-width:1000px)', '@media(max-width:360px)', '@media(max-width:560px)', '@media(max-width:760px)', '@media(max-width:850px)']
+MAXW: ['1000px', '1440px', '200px', '350px', '360px', '470px', '490px', '530px', '560px', '600px', '620px', '650px']
+IDS: ['inicio', 'h1', 'capacidades', 'necesidades', 'filosofia', 'sectores', 'experiencia', 'contacto']
+   BUTTON : Menú ☰
+   h1 : Ingeniería para instalaciones, energía y automatización.
+   h2 : Tres áreas de ingeniería. Un criterio común.
+   h3 : Infraestructuras e instalaciones
+   h3 : Sistemas energéticos
+   h3 : Automatización y control
+   h2 : Partimos de lo que necesita tu instalación o proyecto.
+   h3 : Una instalación que no funciona como debería.
+   h3 : Una decisión energética que necesita fundamento.
+   h3 : Equipos y datos que no trabajan de forma coordinada.
+   h3 : Un proyecto que requiere varias especialidades.
+   h2 : Primero comprender. Después decidir cómo intervenir.
+   h3 : Comprender
+   h3 : Evaluar
+   h3 : Desarrollar
+   h3 : Verificar
+   h2 : Ingeniería aplicada a distintos entornos.
+   h2 : Experiencia técnica que respalda nuestro trabajo.
+   h2 : ¿Tienes un proyecto o una necesidad técnica que estudiar?
+LINKS:
+    ('BAFRASENGINEERING', '#inicio', 'brand')
+    ('Capacidades', '#capacidades', None)
+    ('Sectores', '#sectores', None)
+    ('Proyectos y experiencia', '#experiencia', None)
+    ('Sobre BAFRAS', '#filosofia', None)
+    ('Contacto', '/contacto/', 'contact')
+    ('Cuéntanos tu proyecto', '#contacto', 'btn')
+    ('Explorar capacidades', '#capacidades', 'btn outline')
+    ('Ver infraestructuras e instalaciones →', '#necesidades', 'link')
+    ('Ver sistemas energéticos →', '#necesidades', 'link')
+    ('Ver automatización y control →', '#necesidades', 'link')
+    ('Todas nuestras capacidades →', '/capacidades/', 'link')
+    ('Infraestructuras e instalaciones →', '/infraestructuras-e-instalaciones/', 'link')
+    ('Sistemas energéticos →', '/sistemas-energeticos/', 'link')
+    ('Automatización y control →', '/automatizacion-y-control/', 'link')
+    ('Capacidades →', '#capacidades', 'link')
+    ('Conoce nuestra forma de trabajar →', '/sobre-bafras/', 'link')
+    ('Explorar sectores →', '/sectores/', 'link')
+    ('Conocer proyectos y experiencia →', '/proyectos-y-experiencia/', 'link')
+    ('Hablemos de tu proyecto →', '/contacto/', 'btn')
+    ('info@bafras.com', 'mailto:info@bafras.com', None)
+    ('Capacidades', '#capacidades', None)
+    ('Sectores', '#sectores', None)
+    ('Experiencia', '#experiencia', None)
+    ('Contacto', '#contacto', None)
+IMGS: [('assets/R24.webp', 'Sala técnica industrial con bombas y tuberías rojas'), ('assets/R23.webp', 'Instalaciones técnicas con tuberías y equipos'), ('assets/R22.webp', 'Paneles fotovoltaicos en una cubierta'), ('assets/R21.webp', 'Módulos y conexiones de un sistema de control'), ('assets/R03.webp', 'Detalle de instrumentación industrial y conexiones de medida')]
+FORM: []
+MARKERS: ['demos', 'pendientes de contenido jurídico)']
+
+######### C04_PE_V1_BAFRAS\C04_PE_V1\plantilla-ficha-proyecto.html 12571 bytes
+TITLE: Plantilla de ficha de proyecto | BAFRAS Engineering
+LANG: es
+LANDMARKS header/nav/main/footer: 1 2 1 1 scripts: 1 ext css/js: []
+HEX: ['#09211C', '#0E2B25', '#162E27', '#1A7A5A', '#26A77A', '#29463A', '#59675F', '#5D471D', '#637268', '#64766B', '#735C3E', '#8BB49D', '#9BD6BB', '#A0D3B9', '#A2B9AD', '#B4C9C0', '#C2BDAF', '#C4D0C5', '#D0E0D6', '#D5E4DC', '#D8BC80', '#D8D2C3', '#E9E7DF', '#E9F0E8', '#ECE8DD', '#F5F2E9', '#F7F5F0', '#FDFDFB', '#FFF', '#FFF4D9']
+FONTS: ['Inter,Arial,sans-serif']
+MEDIA: ['@media(max-width:360px)', '@media(max-width:760px)', '@media(max-width:980px)']
+MAXW: ['1000px', '1250px', '360px', '490px', '730px', '760px', '790px', '800px', '980px']
+IDS: ['mobile-nav', 'main']
+   BUTTON : Menú
+   h1 : [Título autorizado del proyecto]
+   h2 : El proyecto y su reto técnico
+   h3 : Ficha técnica
+   h2 : Sistemas e interfaces
+   h2 : Trabajo realizado
+   h2 : Documentación y evidencias
+   h2 : Resultados documentados
+   h2 : Análisis e informes
+   h2 : ¿Tu proyecto plantea retos similares?
+LINKS:
+    ('Saltar al contenido', '#main', 'skip')
+    ('BAFRASENGINEERING', 'index.html', 'brand')
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('← Volver a Proyectos y experiencia', 'proyectos-experiencia.html', 'return')
+    ('Cuéntanos tu proyecto ↗', 'contacto.html', 'button')
+    ('Explorar capacidades ↗', 'capacidades.html', 'secondary')
+IMGS: []
+FORM: []
+MARKERS: ['maqueta', 'no publicable', 'prototipo', 'provisional']
+
+######### C04_PE_V1_BAFRAS\C04_PE_V1\proyectos-experiencia.html 16334 bytes
+TITLE: Proyectos y experiencia | BAFRAS Engineering
+LANG: es
+LANDMARKS header/nav/main/footer: 1 3 1 1 scripts: 1 ext css/js: []
+HEX: ['#09211C', '#0E2B25', '#162E27', '#1A7A5A', '#26A77A', '#29463A', '#59675F', '#5D471D', '#637268', '#64766B', '#735C3E', '#8BB49D', '#9BD6BB', '#A0D3B9', '#A2B9AD', '#B4C9C0', '#C2BDAF', '#C4D0C5', '#D0E0D6', '#D5E4DC', '#D8BC80', '#D8D2C3', '#E9E7DF', '#E9F0E8', '#ECE8DD', '#F5F2E9', '#F7F5F0', '#FDFDFB', '#FFF', '#FFF4D9']
+FONTS: ['Inter,Arial,sans-serif']
+MEDIA: ['@media(max-width:360px)', '@media(max-width:760px)', '@media(max-width:980px)']
+MAXW: ['1000px', '1250px', '360px', '490px', '730px', '760px', '790px', '800px', '980px']
+IDS: ['mobile-nav', 'main', 'referencias', 'instalaciones', 'automatizacion', 'energia']
+   BUTTON : Menú
+   h1 : Experiencia aplicada a instalaciones, energía y sistemas de control.
+   h2 : Experiencia en proyectos de distinta naturaleza.
+   h3 : Infraestructuras e instalaciones
+   h3 : Complejo hotelero · Formentor, Mallorca
+   h3 : Centro educativo · Mallorca
+   h3 : Residencia de alta gama · Ibiza
+   h3 : Automatización y control
+   h3 : Control y software para sistemas eólicos
+   h3 : Diagnóstico de control HVAC · UIB
+   h3 : Sistemas energéticos
+   h3 : Transformación energética del campus · UIB
+   h2 : La intervención concreta importa.
+   h2 : ¿Tu proyecto plantea retos similares?
+LINKS:
+    ('Saltar al contenido', '#main', 'skip')
+    ('BAFRASENGINEERING', 'index.html', 'brand')
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('Explorar referencias ↓', '#referencias', 'anchor')
+    ('Instalaciones', '#instalaciones', None)
+    ('Automatización y control', '#automatizacion', None)
+    ('Sistemas energéticos', '#energia', None)
+    ('Cuéntanos tu proyecto ↗', 'contacto.html', 'button')
+    ('Explorar capacidades ↗', 'capacidades.html', 'secondary')
+IMGS: []
+FORM: []
+MARKERS: ['maqueta', 'no publicable', 'pendiente de acreditación', 'pendiente de confirmar instalaciones, función y f', 'pendiente de confirmar sistemas, alcance y fases', 'pendientes · sin enlace a proyecto', 'prototipo', 'provisional']
+
+######### C04_SB_V1_BAFRAS\C04_SB_V1\sobre-bafras.html 13402 bytes
+TITLE: Sobre BAFRAS | Equipo e ingeniería multidisciplinar
+LANG: es
+LANDMARKS header/nav/main/footer: 1 2 1 1 scripts: 1 ext css/js: []
+HEX: ['#0E2B25', '#162E27', '#1A7A5A', '#35A879', '#473B18', '#59675F', '#64726B', '#A0D3B9', '#D1DFD7', '#D6D8CE', '#D8D2C3', '#E9E7DC', '#ECE8DD', '#F6E9B8', '#F7F5F0']
+FONTS: ['Inter,Arial,sans-serif']
+MEDIA: ['@media(max-width:360px)', '@media(max-width:760px)', '@media(max-width:950px)']
+MAXW: ['1280px', '360px', '650px', '760px', '950px']
+IDS: ['mobile-nav', 'main', 'sb01', 'sb02', 'sb03', 'sb04', 'sb05']
+   BUTTON : Menú
+   h1 : Ingeniería con visión técnica y disciplinas complementarias.
+   h2 : Profesionales con experiencias que se complementan.
+   h3 : Murti
+   h3 : Àngel
+   h3 : Amin
+   h2 : Primero entender. Después definir la actuación.
+   h3 : Entender el contexto.
+   h3 : Evaluar alternativas.
+   h3 : Desarrollar el alcance.
+   h3 : Verificar y documentar.
+   h2 : Experiencia profesional aplicada a proyectos reales.
+   h2 : Hablemos de tu proyecto.
+LINKS:
+    ('Saltar al contenido', '#main', 'skip')
+    ('BAFRASENGINEERING', 'index.html', 'brand')
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('Inicio', 'index.html', None)
+    ('Capacidades', 'capacidades.html', None)
+    ('Sectores', 'sectores.html', None)
+    ('Proyectos y experiencia', 'proyectos-experiencia.html', None)
+    ('Sobre BAFRAS', 'sobre-bafras.html', None)
+    ('Contacto', 'contacto.html', None)
+    ('Conoce nuestra experiencia ↗', 'proyectos-experiencia.html', 'text-link')
+    ('Ver proyectos y experiencia ↗', 'proyectos-experiencia.html', 'text-link')
+    ('Cuéntanos tu proyecto ↗', 'contacto.html', 'button')
+    ('Explorar capacidades ↗', 'capacidades.html', 'secondary')
+IMGS: []
+FORM: []
+MARKERS: ['demos', 'maqueta', 'no publicable', 'pendiente', 'pendientes de publicación', 'pendientes de validación', 'pendientes de validar', 'pendientes de verificación', 'prototipo']
+
+######### C04_SEC_V3_aprobado_BAFRAS\C04_SEC_V3_aprobado\sectores_v3.html 17001 bytes
+TITLE: BAFRAS — Sectores · Propuesta C04 V2
+LANG: es
+LANDMARKS header/nav/main/footer: 1 1 1 1 scripts: 0 ext css/js: []
+HEX: ['#0E2B25', '#1A7A5A', '#202A25', '#23332B', '#44534A', '#46544C', '#4A5A51', '#516058', '#526258', '#54635A', '#57665E', '#63736A', '#63746A', '#64766A', '#664F2E', '#66786B', '#68766D', '#6A786E', '#7C8D7F', '#8B7560', '#8EAAA0', '#A8C7B8', '#AAB7AA', '#B9C8BE', '#C9D8CC', '#CBD9D2', '#D1A468', '#D4DFD6', '#D8D2C3', '#D8DFD8', '#E1E6E0', '#E3E9E3', '#E9E2D3', '#ECE8DD', '#F0E4CC', '#F7F5F0', '#F8FAF7', '#FFF']
+FONTS: ['Inter,Arial,sans-serif']
+MEDIA: ['@media(max-width:350px)', '@media(max-width:760px)']
+MAXW: ['1020px', '1200px', '1260px', '350px', '400px', '430px', '450px', '710px', '750px', '760px', '800px', '850px']
+IDS: ['sectores', 'sector-1', 'sector-2', 'sector-3', 'sector-4', 'sector-5', 'sector-6', 'colaboracion', 'contacto', 'demo-navegacion']
+   h1 : Ingeniería para edificios, industria e infraestructuras.
+   h2 : Entendemos el entorno antes de definir la actuación.
+   h3 : Turismo, comercio y edificios terciarios
+   h3 : Industria, logística y agroindustria
+   SUMMARY : ↓Catálogos de servicios Seleccionar actividad⌄
+   h3 : Infraestructuras y servicios públicos
+   h3 : Salud, educación y equipamientos
+   h3 : Edificación, rehabilitación y activos inmobiliarios
+   h3 : Comunidades energéticas e infraestructuras tecnológicas
+   h2 : ¿Tu necesidad no encaja en una categoría?
+   h2 : Ingeniería también para equipos de proyecto.
+   h2 : Cuéntanos qué necesitas resolver.
+LINKS:
+    ('Sectores', '#sectores', None)
+    ('Colaboración', '#colaboracion', None)
+    ('Contacto', '#contacto', None)
+    ('Explorar sectores ↓', '#sectores', 'action primary')
+    ('Cuéntanos tu proyecto ↗', '#contacto', 'action')
+    ('Explorar Sistemas energéticos ↗', '#demo-navegacion', 'cap-link')
+    ('Explorar Automatización y control ↗', '#demo-navegacion', 'cap-link')
+    ('Explorar Infraestructuras e instalaciones ↗', '#demo-navegacion', 'cap-link')
+    ('Explorar Infraestructuras e instalaciones ↗', '#demo-navegacion', 'cap-link')
+    ('Explorar Infraestructuras e instalaciones ↗', '#demo-navegacion', 'cap-link')
+    ('Explorar Sistemas energéticos ↗', '#demo-navegacion', 'cap-link')
+    ('Ver nuestras capacidades ↗', '#demo-navegacion', None)
+    ('Conoce BAFRAS ↗', '#demo-navegacion', None)
+    ('Cuéntanos tu proyecto ↗', '#demo-navegacion', 'primary')
+IMGS: []
+FORM: []
+MARKERS: ['demo', 'demos', 'demostración', 'demostrativos', 'prototipo', 'provisional']

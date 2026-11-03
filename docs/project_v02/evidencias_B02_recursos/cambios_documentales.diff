@@ -1,0 +1,34 @@
+--- 04_arquitectura_software.md (antes B02-PREP-01)
++++ 04_arquitectura_software.md (después B02-PREP-01)
+@@ -100,7 +100,9 @@
+ 
+ **Gate G0 — Baseline:** repositorio real inventariado, rutas, CSS, paleta, fuentes, assets, JS y comportamiento actuales; captura de escritorio/móvil.
+ 
+-**Gate G1 — Diseño aprobado (OBLIGATORIO ANTES DEL REFACTOR):** Documento 05 completado con tokens reales, biblioteca mínima, wireframes y maquetas responsive de **las nueve páginas**, diagramas clave, estados de navegación y formulario; comprobación de fidelidad al Documento 03. Validar visualmente tres páginas patrón (Inicio, una capacidad y Contacto) y confirmar que las otras seis usan el sistema coherentemente.
++**Gate G1 — Diseño aprobado (OBLIGATORIO ANTES DEL REFACTOR):** conforme a la decisión de dirección B02-PREP-01, requiere nueve wireframes completos, uno por página, en escritorio y móvil y con trazabilidad de todos los bloques editoriales del Documento 03; tres maquetas completas de alta fidelidad de **Inicio, Infraestructuras e instalaciones y Contacto**; y maquetas detalladas de los módulos visuales singulares de las otras seis páginas. Requiere además catálogo aprobado de componentes y sus variantes/estados, especificación del sistema visual, revisión visual global de las nueve páginas sin decisiones estéticas fundamentales pendientes y aprobación expresa de dirección registrada documentalmente. El Documento 05, §8, concreta los entregables y criterios visuales de este mismo contrato.
++
++No se exigen nueve prototipos completos e independientes de alta fidelidad cuando las páginas puedan reconstruirse inequívocamente mediante los patrones y variantes aprobados. La aprobación G1 autoriza planificar la implementación; cualquier intervención productiva requiere su autorización correspondiente y sigue sujeta a los gates posteriores. G1 no acredita por sí mismo recursos gráficos, referencias profesionales, datos técnicos, formulario ni requisitos legales preparados para publicación. Esta consolidación documental no inicia G1 ni lo declara completado.
+ 
+ **Gate G2 — Arquitectura lista:** contratos de contenido y rutas, build de prueba, tests de validación, plan de migración incremental y estrategia de rollback.
+ 
+--- 05_sistema_visual.md (antes B02-PREP-01)
++++ 05_sistema_visual.md (después B02-PREP-01)
+@@ -60,12 +60,14 @@
+ ## 8. Entregables obligatorios del diseño ANTES del refactor
+ 
+ 1. **Inventario de marca real:** paleta HEX, tipografías/licencias, logo, CSS y elementos gráficos, con tabla de tokens actuales → tokens normalizados; capturas de baseline.
+-2. **Especificación de componentes:** catálogo mínimo, variantes reales, tamaños, estados y reglas responsive; no una biblioteca ficticia extensa.
+-3. **Wireframes de las nueve páginas:** escritorio y móvil, cada sección identificada con IDs del Documento 03; revisar densidad y recorridos.
+-4. **Maquetas de alta fidelidad de tres páginas patrón:** Inicio, Infraestructuras y Contacto; validar que la misma gramática cubre las otras seis mediante wireframes y fragmentos visuales críticos.
++2. **Catálogo aprobado de componentes:** catálogo mínimo, variantes reales, tamaños, estados y reglas responsive de navegación, botones, tarjetas, diagramas, módulos de evidencia, formularios y CTA; no una biblioteca ficticia extensa.
++3. **Nueve wireframes completos:** uno por página, tanto en escritorio como en móvil, con cobertura y trazabilidad de todos los bloques editoriales del Documento 03; revisar densidad y recorridos.
++4. **Tres maquetas completas de alta fidelidad:** Inicio, Infraestructuras e instalaciones y Contacto. Añadir **maquetas detalladas de los módulos visuales singulares de las seis páginas restantes**: Sistemas energéticos, Automatización y control, Sectores, Proyectos y experiencia, Sobre BAFRAS y Capacidades. Deben resolver sus particularidades y permitir reconstruir inequívocamente cada página mediante los patrones y variantes aprobados; no se exigen nueve prototipos completos e independientes de alta fidelidad si se cumple este criterio.
+ 5. **Diagramas conceptuales:** INF, ENE y DIG con lenguaje visual común y versiones móviles.
+ 6. **Especificación de estudios:** tarjeta, ficha y módulo de resultados, demostrados con **muestras anonimizadas** de los dos estudios cuando estén disponibles; la falta de estas muestras no bloquea G1 de la web corporativa.
+-7. **Acta de aprobación G1:** diseño y contenido concordantes, sin decisiones de identidad pendientes para el refactor, y lista de excepciones explícitas.
++7. **Especificación del sistema visual:** colores, tipografía, retículas, espaciados, componentes, comportamiento responsive y accesibilidad, con valores reales contrastados contra el repositorio.
++8. **Revisión visual global:** demostrar que las nueve páginas, concordantes con el Documento 03, pueden implementarse sin decisiones estéticas fundamentales pendientes; documentar patrones, variantes y excepciones explícitas sin dejar decisiones fundamentales abiertas.
++9. **Acta de aprobación expresa de dirección:** registrar documentalmente la aprobación del paquete completo anterior, conforme al contrato G1 del Documento 04, §8, unificado por la decisión B02-PREP-01. La aprobación autoriza planificar la implementación; cualquier intervención productiva requiere su autorización correspondiente y sigue sujeta a los gates posteriores. No acredita por sí misma que recursos gráficos, referencias profesionales, datos técnicos, formulario o requisitos legales estén preparados para publicación. Esta consolidación documental no inicia G1 ni lo declara completado.
+ 
+ ## 9. Evaluación multidisciplinar tras consolidación
+ 
