@@ -38,6 +38,21 @@ JS_SCRIPTS = [
     "js/form.js",
 ]
 
+MOJIBAKE_PATTERNS = [
+    "\u00c3\u00a2",
+    "\u00e2",
+    "\u00c3",
+    "\u00c3\u0192",
+    "\u00c3\u201a",
+    "\u00c2",
+    "\u00c3\u00b0",
+    "\u00ef\u00bf\u00bd",
+    "\u00e2\u2020",
+    "\u00e2\u20ac\u201d",
+    "\u00e2\u20ac\u2122",
+    "\u00e2\u20ac\u0153",
+]
+
 
 class SiteParser(HTMLParser):
     def __init__(self) -> None:
@@ -107,6 +122,17 @@ def collect_css_urls() -> list[tuple[str, Path]]:
     return found
 
 
+def route_fragment(html: str, route: str) -> str:
+    marker = f'<div class="pagina" data-pagina="{route}">'
+    start = html.find(marker)
+    if start == -1:
+        return ""
+    next_page = html.find('<div class="pagina"', start + len(marker))
+    if next_page == -1:
+        next_page = html.find("</main>", start)
+    return html[start:next_page]
+
+
 def validate() -> list[str]:
     errors: list[str] = []
 
@@ -117,6 +143,20 @@ def validate() -> list[str]:
     html = INDEX.read_text(encoding="utf-8")
     parser = SiteParser()
     parser.feed(html)
+
+    nav_start = html.find('<nav class="nav"')
+    nav_end = html.find("</nav>", nav_start)
+    nav_html = html[nav_start:nav_end] if nav_start != -1 and nav_end != -1 else ""
+    if ">Capacidades<" in nav_html:
+        errors.append("Global navigation still uses obsolete public label: Capacidades")
+    if ">Áreas técnicas<" not in nav_html:
+        errors.append("Global navigation is missing public label: Áreas técnicas")
+    if "Tres capacidades" in html:
+        errors.append("Obsolete public technical-area terminology remains: Tres capacidades")
+
+    capabilities_html = route_fragment(html, "capacidades")
+    if "Tres capacidades" in capabilities_html:
+        errors.append("Obsolete public capabilities terminology remains: Tres capacidades")
 
     css_links = [link.get("href", "") for link in parser.links if link.get("rel") == "stylesheet"]
     local_css = [href for href in css_links if href.startswith("css/")]
@@ -164,6 +204,9 @@ def validate() -> list[str]:
         content = file_path.read_text(encoding="utf-8")
         if re.search(r'(?<!assets)/images/', content):
             errors.append(f"Legacy /images/ reference remains in {file_path.relative_to(ROOT)}")
+        for pattern in MOJIBAKE_PATTERNS:
+            if pattern in content:
+                errors.append(f"Possible mojibake sequence {pattern!r} in {file_path.relative_to(ROOT)}")
 
     data_fotos = re.findall(r'data-foto="([^"]+)"', html)
     for value in data_fotos:
@@ -174,12 +217,28 @@ def validate() -> list[str]:
     return errors
 
 
+def publication_warnings() -> list[str]:
+    warnings: list[str] = []
+    html = INDEX.read_text(encoding="utf-8")
+    checks = {
+        "placeholders": r'data-content-status="placeholder"|ASSET REQUIRED|DELIVERABLES TO DEFINE',
+        "verify flags": r'data-content-status="verify"|VERIFY BEFORE PUBLISHING|EVIDENCE REQUIRED',
+    }
+    for label, pattern in checks.items():
+        count = len(re.findall(pattern, html))
+        if count:
+            warnings.append(f"{label}: {count} item(s)")
+    return warnings
+
+
 def main() -> int:
     errors = validate()
     if errors:
         for error in errors:
             print(f"ERROR: {error}")
         return 1
+    for warning in publication_warnings():
+        print(f"WARNING: {warning}")
     print("Validation passed.")
     return 0
 

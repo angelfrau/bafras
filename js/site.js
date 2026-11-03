@@ -6,7 +6,7 @@
   });
   document.querySelectorAll('[data-foto]').forEach(function(caja){
     var nombres = caja.getAttribute('data-foto').split(','), exts = ['png', 'jpg', 'jpeg', 'webp', 'PNG', 'JPG', 'JPEG'], cand = [];
-    nombres.forEach(function(n){ exts.forEach(function(e){ cand.push('/assets/images/team/' + n + '.' + e); }); });
+    nombres.forEach(function(n){ exts.forEach(function(e){ cand.push('assets/images/team/' + n + '.' + e); }); });
     var i = 0;
     (function probar(){
       if (i >= cand.length) return;

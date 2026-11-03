@@ -5,16 +5,16 @@
       d: "Ingeniería multidisciplinar en Mallorca: infraestructura, sistemas energéticos, sistemas digitales y automatización."
     },
     "capacidades": {
-      t: "Capacidades: Infraestructura e Ingeniería, Sistemas Energéticos y Sistemas Digitales y Automatización · BAFRAS Engineering",
-      d: "Infraestructura e instalaciones, sistemas energéticos, sistemas digitales y automatización en un mismo despacho de ingeniería en Mallorca."
+      t: "Áreas técnicas: Infraestructura e Ingeniería, Sistemas Energéticos y Sistemas Digitales y Automatización · BAFRAS Engineering",
+      d: "Áreas técnicas de BAFRAS Engineering: infraestructura e instalaciones, sistemas energéticos, sistemas digitales y automatización."
     },
     "capacidades/infrastructure": {
-      t: "Infraestructura e Ingeniería: instalaciones MEP y dirección de obra en Mallorca · BAFRAS Engineering",
-      d: "Diseño, coordinación y dirección de instalaciones eléctricas y térmicas, reformas y ampliaciones en Mallorca. Ingeniería con experiencia real en obra."
+      t: "Infraestructura e Ingeniería: instalaciones, proyecto y obra en Mallorca · BAFRAS Engineering",
+      d: "Diseño y desarrollo de instalaciones, coordinación, proyecto, dirección de obra, puesta en marcha y verificación."
     },
     "capacidades/energy-systems": {
       t: "Sistemas Energéticos: fotovoltaica, almacenamiento y eficiencia energética en Mallorca · BAFRAS Engineering",
-      d: "Estudio, diseño y optimización de sistemas energéticos: generación fotovoltaica, almacenamiento BESS, electrificación y eficiencia para edificios e industria en Mallorca."
+      d: "Ingeniería de sistemas energéticos: monitorización, eficiencia, generación fotovoltaica, almacenamiento energético, electrificación, recarga y planificación."
     },
     "capacidades/digital-systems": {
       t: "Sistemas Digitales y Automatización: control y datos para edificios e industria · BAFRAS Engineering",
