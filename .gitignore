@@ -6,3 +6,13 @@ htmlcov/
 Thumbs.db
 .vscode/
 .idea/
+
+# WEB-00: entornos, compilados y configuración local (no versionar secretos)
+.venv/
+venv/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
