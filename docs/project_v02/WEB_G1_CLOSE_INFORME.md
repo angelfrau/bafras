@@ -1,4 +1,12 @@
 # BAFRAS WEB — WEB-G1-CLOSE · Informe de consolidación y cierre documental G1
+
+> **Actualización WEB-00 FINAL (03/11/2026).**
+> - Dirección ha comunicado las decisiones A.1–A.9, registradas en el acta (apartado A) **sin firma formal**.
+> - Contacto y atribución quedan resueltos por la adenda 03.G1-02 de D03. Se corrigen dos recomendaciones de este informe: en CO-03 rige el H2 de D03, y la etiqueta es «Experiencia profesional del equipo».
+> - D02 V1.0-R está reconstruido e incorporado, pendiente de ratificación.
+> - La excepción de diagramas (§4.1) está aceptada por dirección.
+> - Estado vigente de las incidencias en `WEB_G1_CLOSE_MATRIZ.md`: 17 resueltas, 1 excepción aceptada, 9 pendientes de decisión y ninguna P0 que bloquee WEB-G2-00.
+> - Decisiones que siguen pendientes: `WEB_G1_CLOSE_DECISIONES.md` y acta, apartado B.
 **Fecha:** 03/11/2026 · **Estado:** COMPLETADO CON DECISIONES PENDIENTES. G1 **no** está cerrado: el acta queda preparada y pendiente de ratificación.
 **Documentos asociados:** `WEB_G1_CLOSE_MATRIZ.md` (estado vigente de las 71 incidencias) · `WEB_G1_CLOSE_DECISIONES.md` (16 decisiones) · `02_Acta_Propuesta_Cierre_G1.md` · `WEB_00_*` (repositorio).
 

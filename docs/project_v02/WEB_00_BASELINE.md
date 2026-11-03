@@ -1,5 +1,5 @@
 # BAFRAS WEB — WEB-00 · Línea base
-**Fecha:** 03/11/2026 · **Estado:** línea base **local** documentada y respaldada. **No existe todavía una línea base Git recuperable de todo el trabajo**: la documentación G1, la biblioteca de medios y los cambios de septiembre no están confirmados. Quedan protegidos por el respaldo externo de §3 hasta que se ejecuten los commits A–C de `WEB_00_PLAN_SANEAMIENTO.md`.
+**Fecha:** 03/11/2026 · **Estado (WEB-00 FINAL):** **existe línea base Git** en `feat/contingut-v2` (§8). Los apartados 1–7 describen el estado inicial anterior al saneamiento. Texto original: línea base **local** documentada y respaldada. **No existe todavía una línea base Git recuperable de todo el trabajo**: la documentación G1, la biblioteca de medios y los cambios de septiembre no están confirmados. Quedan protegidos por el respaldo externo de §3 hasta que se ejecuten los commits A–C de `WEB_00_PLAN_SANEAMIENTO.md`.
 
 ## 1. Referencia Git
 | Elemento | Valor |
@@ -56,3 +56,62 @@ Resumen de `WEB_00_PLAN_SANEAMIENTO.md` §4: `main` = producción intacta, con e
 
 ## 7. Condición para declarar la línea base Git
 Commits A–C ejecutados, `git fetch` realizado, `origin/main` inspeccionado, etiqueta `prod-pre-v2` creada y estas pruebas repetidas con el mismo resultado. Hasta entonces, la línea base es **local y respaldada**, no versionada.
+
+## 8. Resultado WEB-00 FINAL (03/11/2026)
+
+**Estrategia (decisión de dirección):** `main` (`04c92c8` local) es producción y no se ha modificado. La única rama de desarrollo es `feat/contingut-v2`. No se ha hecho `push`, `fetch` ni reescritura de historial, y no se han creado ramas.
+
+| Commit | Contenido | Pruebas |
+|---|---|---|
+| `601eec4` A | Trabajo de septiembre: 7 archivos productivos y 11 documentos | 18 passed |
+| `88b17af` B | D02 V1.0-R, D03 + adenda 03.G1-02, D04, D05, acta, maquetas, auditorías, evidencias, `docs/audits` | — (solo documentación) |
+| `c5156ec` C | `misc/a`, 5 logos duplicados y 15 documentos heredados superados eliminados; `.gitignore`; `.gitattributes` | 18 passed |
+| `bf56666` D | Biblioteca reorganizada en `assets/images/` + `media-library/`; rutas actualizadas | 18 passed; 107 enlaces OK |
+| E | Informes WEB-00/G1-CLOSE actualizados y manifiesto | ver §9 |
+
+**Eliminados y por qué** (todos recuperables desde el historial o el respaldo):
+
+| Elemento | Motivo | Comprobación previa |
+|---|---|---|
+| `assets/images/misc/a` | Residuo de 2 bytes | Sin referencias |
+| `brand/logos/logo_h_blanco.png`, `logo_h_deep.png`, `logo_v_blanco.png`; `brand/symbols/simbolo_blanco.png`, `simbolo_deep.png` | Copias a media resolución de los maestros `BAFRAS_*` | Diferencia media < 1 tras reescalar; sin referencias |
+| `docs/home-v2-1-structure-closeout.md`, `home-v2-visual-evidence.md`, `language-audit-es.md`, `terminology-es.md`, `website-visual-assets.md` | Documentación del sitio heredado superada por D03/D05 (`terminology-es` contradice la nomenclatura de D03) | Sin referencias desde código, pruebas ni enlaces |
+| 10 documentos de septiembre (`capabilities-*`, `content-review-backlog`, `energy-*`, `infrastructure-*`, `visual-component-inventory`, `visual-evidence-map`, `content/*`) | Superados por D03 V1.22/D05 V4.12; preservados en el commit A | Igual |
+| 2 copias de `demo_graphics.py` | Idénticas (mismo MD5) | Se conserva una en `media-library/generators/` |
+| `tests/__pycache__`, `tools/__pycache__` | Cachés | Ignoradas |
+
+**Conservados a propósito:**
+- `docs/architecture.md` y `docs/visual-system-v1.md`, que las pruebas del sitio heredado leen.
+- `docs/audits/`, antecedente de la decisión de arquitectura.
+- `experience/mep/*`, fotografías propias pendientes de autorización.
+- Los dos logotipos SVG `*_deep` / `*_deep_corregido`, hasta decidir el maestro (DEC-10).
+
+**Estructura final de recursos visuales:**
+```
+assets/images/                 publicables (versionados, 8 MB)
+  brand/{logos,symbols,favicon,social}   logos maestros y exportaciones
+  team/*.png                     retratos usados por el sitio
+  home/{hero,capabilities,vision}  ·  capabilities/{infrastructure,energy,digital}/…  ·  sectors/…
+  experience/mep/                fotografías propias (pendientes de autorización)
+media-library/                 fuentes no publicables
+  README.md                      integración, recuperación y verificación de originales
+  manifests/                     media-manifest.yaml (fuente de verdad), assets-inventory.csv, attribution.md
+  reports/                       acquisition-report, missing-assets, contact-sheet.pdf
+  generators/demo_graphics.py    gráficos sintéticos E01/E07/D06
+  originals/<ID>/source.json     procedencia + SHA-1 (versionado)
+  originals/<ID>/<ID>_original.* Commons, ≈95 MB: SOLO LOCAL (.gitignore), SHA-1 26/26 OK
+  originals/team/, originals/diagrams/  originales propios (versionados)
+assets/downloads/              (previsto para catálogos PDF; aún no existe)
+```
+
+**Residuo local no eliminable:** `.pytest_cache/` (permisos del sistema; ignorado por Git).
+
+**Riesgos residuales:**
+1. Los originales de Commons dependen de la copia local, Wikimedia Commons y el respaldo. No están en Git.
+2. `origin/main` (`4af79e0`) y las ramas remotas `contratos-menores` y `presupuesto-pdf` no se han inspeccionado; habrá que hacerlo antes de cualquier integración futura.
+3. El resto del repositorio sigue con `autocrlf` sin normalizar.
+4. D02 es una reconstrucción pendiente de ratificar.
+5. El sitio heredado y sus pruebas siguen en la rama hasta que WEB-01/02 los sustituyan.
+
+## 9. Validación final
+Ver el resumen del commit E: pruebas, validador, enlaces, manifiesto, maquetas, originales y estado Git.

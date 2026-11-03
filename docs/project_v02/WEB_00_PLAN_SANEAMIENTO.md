@@ -1,4 +1,18 @@
 # BAFRAS WEB — WEB-00 · Plan de saneamiento
+
+> **Estado (WEB-00 FINAL, 03/11/2026): EJECUTADO con la estrategia de dirección.** Las §3–§5 de este plan (rama `v2/desarrollo`, etiqueta `prod-pre-v2`, `fetch`) quedan **sustituidas**: la única rama de desarrollo es `feat/contingut-v2` y `main` no se modifica. Ejecutado:
+> - **A** `601eec4`: trabajo de septiembre.
+> - **B** `88b17af`: documentación.
+> - **C** `c5156ec`: saneamiento.
+> - **D** `bf56666`: recursos.
+>
+> El commit **E** contiene los informes. Diferencias respecto a la tabla de §1:
+> - Se eliminaron también los 5 logos duplicados y la documentación heredada superada.
+> - Los originales de Commons quedan solo en local y los propios se versionan (DEC-12).
+> - La biblioteca anidada se ha desmontado.
+>
+> Detalle en `WEB_00_BASELINE.md` §8.
+
 **Fecha:** 03/11/2026 · **Base:** `WEB_00_AUDITORIA_REPOSITORIO.md` · **Regla:** nada de esta tabla se ha ejecutado salvo lo marcado «HECHO». Todas las demás acciones requieren autorización expresa.
 
 Clases: `KEEP` conservar · `REORGANIZE` reorganizar · `ARCHIVE` preservar como histórico · `REMOVE` residuo prescindible · `REVIEW` decisión humana.

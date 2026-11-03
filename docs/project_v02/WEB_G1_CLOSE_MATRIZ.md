@@ -1,11 +1,26 @@
 # BAFRAS WEB — WEB-G1-CLOSE · Matriz de incidencias
 **Fecha:** 03/11/2026 · **Vigencia:** esta matriz es el **registro de estado vigente** de las incidencias. `WEB_G1_REVIEW_01_INCIDENCIAS.csv` conserva la evidencia, la descripción y la acción originales. Su columna `estado` queda como histórica (estado al cierre de REVIEW-01) y no se ha modificado, para no duplicar fuentes de estado.
 
-**Estados:** `RESOLVED` resuelta con evidencia · `PARTIAL` parcialmente resuelta · `OPEN` abierta, con autoridad suficiente para resolverla en su fase · `DEFERRED` diferida a una fase posterior por una regla documental explícita (no está resuelta) · `ACCEPTED_EXCEPTION` excepción con autorización documentada (**ninguna hoy**: las excepciones propuestas siguen en `BLOCKED_DECISION` hasta que se firme el acta) · `BLOCKED_DECISION` requiere decisión de dirección (ver `WEB_G1_CLOSE_DECISIONES.md`).
+**Estados:** `RESOLVED` resuelta con evidencia · `PARTIAL` parcialmente resuelta · `OPEN` abierta, con autoridad suficiente para resolverla en su fase · `DEFERRED` diferida a una fase posterior por una regla documental explícita (no está resuelta) · `ACCEPTED_EXCEPTION` excepción con autorización documentada (WGR-050, por instrucción escrita de dirección en WEB-00 FINAL; la firma formal del acta sigue pendiente) · `BLOCKED_DECISION` requiere decisión de dirección (ver `WEB_G1_CLOSE_DECISIONES.md`).
 
 **Tipo de bloqueo:** `GOB` gobierno/gate · `IMPL` impide construir correctamente el sistema · `INTEG` impide cerrar una página o funcionalidad · `PUBL` permite desarrollar, pero no desplegar · `DOC` documental, sin efecto en el código · `—` ninguno.
 
-## Resumen
+## Actualización WEB-00 FINAL (03/11/2026) — estado vigente
+- Estados: **RESOLVED 17 · PARTIAL 8 · OPEN 17 · DEFERRED 19 · BLOCKED_DECISION 9 · ACCEPTED_EXCEPTION 1** (71 en total).
+- No resueltas por severidad: P0 7 · P1 22 · P2 25. P0 abiertas:
+  - WGR-090: falta la ratificación formal del acta.
+  - WGR-050: excepción aceptada por dirección, pendiente de que se firme el acta.
+  - WGR-080…084: solo bloquean la publicación.
+- **Ninguna P0 bloquea WEB-G2-00.**
+- No resueltas por bloqueo: GOB 6 · IMPL 19 · INTEG 12 · PUBL 11 · DOC 4 · ninguno 2.
+- Cambios aplicados:
+  - Contacto y atribución se resuelven por la adenda 03.G1-02 de D03: WGR-020, 021, 023 y 026 quedan RESOLVED y WGR-022 queda PARTIAL.
+  - Las decisiones de dirección A.2–A.4 del acta cambian WGR-050, 051, 052, 063 y 072.
+  - Los commits A–D cambian WGR-036, 092, 094, 097, 099 y 100.
+  - El D02 reconstruido cambia WGR-002 y 091.
+  - El detalle está en la columna «Autoridad» de cada fila.
+
+## Resumen (estado al cierre de WEB-G1-CLOSE, histórico)
 - 71 incidencias: 61 de REVIEW-01 y 10 nuevas (WGR-091…100).
 - Estados: RESOLVED 9 · PARTIAL 5 · OPEN 19 · DEFERRED 15 · BLOCKED_DECISION 23 · ACCEPTED_EXCEPTION 0.
 - No resueltas por severidad: **P0 8** · P1 27 · P2 27.
@@ -31,7 +46,7 @@
 | ID | Sev. | Bloqueo | Estado | Fase | Responsable | Autoridad | Depende de | Criterio de cierre |
 |---|---|---|---|---|---|---|---|---|
 | WGR-001 | P1 | DOC | RESOLVED | G1 | Arquitectura documental | D03 L2; D04 L2; D05 L2 | — | Cabeceras D03/D04/D05 muestran V1.22/V2.4/V4.12 y remiten a la vigencia correcta |
-| WGR-002 | P1 | GOB | BLOCKED_DECISION | Antes de WEB-01 (D02) / G4 (D01) | Dirección + Editorial | D04 §1; D03 L17 | DEC-03; WGR-091 | D02 y D01 accesibles desde project_v02 con versión identificada y hash en manifiesto |
+| WGR-002 | P1 | GOB | PARTIAL | Antes de WEB-01 (D02) / G4 (D01) | Dirección + Editorial | D04 §1; D03 L17 · **WEB-00 FINAL:** D02 V1.0-R reconstruido e incorporado (pendiente de ratificación); D01 sigue ausente | DEC-03; WGR-091 | D02 y D01 accesibles desde project_v02 con versión identificada y hash en manifiesto |
 | WGR-003 | P2 | DOC | PARTIAL | G2-00 | Responsable de auditorías G1 | D04 §14 (nota) | — | Artefactos incorporados con hash o retirados de la lista de evidencias disponibles |
 | WGR-004 | P2 | DOC | RESOLVED | G1 | Arquitectura documental | B02_PREP L45–46 | — | Comprobador de enlaces: 0 rotos en project_v02 |
 | WGR-005 | P2 | DOC | RESOLVED | G1 | Arquitectura documental | D03 L33; D05 L6 | — | Notas de vigencia presentes en D03 y D05; ninguna decisión alterada |
@@ -42,13 +57,13 @@
 | WGR-010 | P2 | IMPL | PARTIAL | G2-01 | Arquitectura + Editorial | D03 L36; TRAZABILIDAD | WGR-030 | Contenido ES estructurado con IDs H01…CO-04 validado por Pydantic y cotejado con D03 |
 | WGR-011 | P2 | DOC | RESOLVED | G1 | Arquitectura documental | D04 §1 (Astro excluido) | — | Nota presente en D03; D04 sin alternativas activas |
 | WGR-012 | P2 | DOC | RESOLVED | — | Diseño | D03 03.G1-01: el texto de prototipo no se copia | — | El title productivo procede de D03 L767 |
-| WGR-020 | P1 | INTEG | BLOCKED_DECISION | Antes de G3-01a | Editorial (propietario D03) | Adenda 03.CO-02; 03.K.2 | DEC-04 | Adenda D03 con un único texto de éxito y de error |
-| WGR-021 | P1 | INTEG | BLOCKED_DECISION | Antes de G3-01a | Editorial | Adenda 03.CO-02 | DEC-04 | Un único texto CO-01 y ayuda CO-02 en D03 |
-| WGR-022 | P1 | INTEG | BLOCKED_DECISION | Antes de G3-01a | Editorial + Dirección | Adenda 03.CO-02 | DEC-04 | Copy CO-03 aprobado en D03 y coherente con correo + teléfono |
-| WGR-023 | P1 | INTEG | BLOCKED_DECISION | Antes de G3-02 | Editorial | D03 L868; 03.K §2 | DEC-06 | Dos etiquetas únicas en D03 usadas en Inicio, especialidades, PE y fichas |
+| WGR-020 | P1 | INTEG | RESOLVED | Antes de G3-01a | Editorial (propietario D03) | Adenda 03.CO-02; 03.K.2 · **WEB-00 FINAL:** Adenda 03.G1-02: mensajes de estado de 03.K.2 | DEC-04 | Adenda D03 con un único texto de éxito y de error |
+| WGR-021 | P1 | INTEG | RESOLVED | Antes de G3-01a | Editorial | Adenda 03.CO-02 · **WEB-00 FINAL:** Adenda 03.G1-02: introducción y ayuda de CO-01/CO-02 V1.1 | DEC-04 | Un único texto CO-01 y ayuda CO-02 en D03 |
+| WGR-022 | P1 | INTEG | PARTIAL | Antes de G3-01a | Editorial + Dirección | Adenda 03.CO-02 · **WEB-00 FINAL:** Adenda 03.G1-02: CO-03 de D03 más datos de contacto; adaptación del copy al teléfono, opcional y pendiente | DEC-04 | Copy CO-03 aprobado en D03 y coherente con correo + teléfono |
+| WGR-023 | P1 | INTEG | RESOLVED | Antes de G3-02 | Editorial | D03 L868; 03.K §2 · **WEB-00 FINAL:** Adenda 03.G1-02: «Experiencia profesional del equipo» / «Proyecto BAFRAS» | DEC-06 | Dos etiquetas únicas en D03 usadas en Inicio, especialidades, PE y fichas |
 | WGR-024 | P1 | INTEG | OPEN | G3-02 | Desarrollo + Fundadores | 03.K §1 (prevalece sobre la maqueta, 03.G1-01) | — | SB-02 renderizado cumple 03.K; especialidades confirmadas por escrito |
 | WGR-025 | P2 | INTEG | BLOCKED_DECISION | Antes de G3-01a | Editorial | D03 H05 | DEC-15 | D03 sin marca «pendiente de cotejo» en H05 |
-| WGR-026 | P1 | PUBL | BLOCKED_DECISION | Antes de G3-02 / G4 | Dirección + Editorial | 03.K §2 | DEC-07 | Variante aprobada y probada en build con 0 referencias publicadas |
+| WGR-026 | P1 | PUBL | RESOLVED | Antes de G3-02 / G4 | Dirección + Editorial | 03.K §2 · **WEB-00 FINAL:** Adenda 03.G1-02: regla de UX de 03.K §2; se mantiene la entrada de menú | DEC-07 | Variante aprobada y probada en build con 0 referencias publicadas |
 | WGR-027 | P2 | INTEG | OPEN | G3-01/G3-02 | Desarrollo + QA | D03 03.G1-01 | — | Prueba de paridad: dist contiene solo cadenas D03 + catálogo aprobado de etiquetas de interfaz |
 | WGR-028 | P2 | INTEG | OPEN | G3-02 | Frontend | D03 C03; D05 L1283 | — | C03 renderizado con la etiqueta y sin rótulos internos |
 | WGR-030 | P1 | IMPL | OPEN | G2-01 | Arquitectura | D04 §4 | G1-CLOSE INFORME §5 | Modelos Pydantic v2 + tests que cargan las nueve páginas ES |
@@ -56,16 +71,16 @@
 | WGR-032 | P1 | PUBL | BLOCKED_DECISION | Antes de G4-01 | Dirección | D04 §3 | DEC-14 | Decisión registrada; selector y sitemap acordes |
 | WGR-033 | P1 | INTEG | BLOCKED_DECISION | Antes de cerrar G3-01b | Dirección + Operaciones | D04 §7, §9; 03.K.2 | DEC-11 | Proveedor elegido, credenciales solo en servidor, prueba E2E superada |
 | WGR-034 | P1 | IMPL | OPEN | G2-01 | Arquitectura | D04 §4 Media; 03.K §5 | G1-CLOSE INFORME §7 | Validación Pydantic de créditos + test con imagen CC BY-SA |
-| WGR-035 | P2 | IMPL | OPEN | G2-01 | Arquitectura | D04 §5 | DEC-12; WGR-099 | Assets publicables versionados, con hash y sin originales en dist |
-| WGR-036 | P1 | IMPL | PARTIAL | Antes de WEB-01 | Usuario + Arquitectura | D04 §8 G2; WEB_00_BASELINE | DEC-13 | Árbol limpio o rama de baseline; plan de rollback aprobado |
+| WGR-035 | P2 | IMPL | PARTIAL | G2-01 | Arquitectura | D04 §5 · **WEB-00 FINAL:** Estructura aplicada (assets/images + media-library); el pipeline queda para G2-01 | DEC-12; WGR-099 | Assets publicables versionados, con hash y sin originales en dist |
+| WGR-036 | P1 | IMPL | RESOLVED | Antes de WEB-01 | Usuario + Arquitectura | D04 §8 G2; WEB_00_BASELINE · **WEB-00 FINAL:** Commit A 601eec4 | DEC-13 | Árbol limpio o rama de baseline; plan de rollback aprobado |
 | WGR-037 | P2 | IMPL | OPEN | WEB-01/G2-01 | Desarrollo | D04 §8 G2 | — | Build en entorno limpio idéntico byte a byte en dos ejecuciones |
 | WGR-038 | P2 | IMPL | OPEN | WEB-02/G2-01 | Desarrollo | D03 V1.22 (terminología «Capacidades») | — | Suite nueva verde sobre dist; sin aserciones de copy antiguo |
 | WGR-039 | P2 | PUBL | BLOCKED_DECISION | Antes de G4-01 | Dirección + Operaciones | D04 §9 | DEC-11 | Canonical, redirecciones y HTTPS verificados en staging |
 | WGR-040 | P1 | INTEG | BLOCKED_DECISION | Antes de G3-01a | Editorial + SEO | D03 §4 (L1111) | DEC-05 | Registro SEO de nueve páginas sin duplicados |
 | WGR-041 | P2 | — | DEFERRED | G5 (posterior al lanzamiento) | Responsables de estudios | D04 §8 G5: no bloquea el sitio | — | Paquete real validado en G5 |
-| WGR-050 | P0 | GOB | BLOCKED_DECISION | G1 (acta) | Dirección + Diseño | D05 §8.5 (L66), L576 frente a L1049/L1218/L1250 | DEC-02 | Acta G1 firmada con la excepción o diagramas aprobados |
-| WGR-051 | P1 | IMPL | BLOCKED_DECISION | G1 (acta) → G2-02 | Diseño + Frontend | D05 §8.1, §8.7 | DEC-09 | Tokens aprobados; plantillas sin valores fuera de tokens |
-| WGR-052 | P1 | IMPL | BLOCKED_DECISION | G1 (acta) → G2-02 | Diseño | WCAG 2.2 AA (D03 §5; D04 §8 G4) | DEC-08 | Prueba automática de contraste sin fallos sobre fondos sólidos en dist |
+| WGR-050 | P0 | GOB | ACCEPTED_EXCEPTION | G1 (acta) | Dirección + Diseño | D05 §8.5 (L66), L576 frente a L1049/L1218/L1250 · **WEB-00 FINAL:** Instrucción de dirección WEB-00 FINAL §5 (03/11/2026); acta, apartado 4; firma formal pendiente (acta §12) | DEC-02 | Acta G1 firmada con la excepción o diagramas aprobados |
+| WGR-051 | P1 | IMPL | DEFERRED | G1 (acta) → G2-02 | Diseño + Frontend | D05 §8.1, §8.7 · **WEB-00 FINAL:** Decisión de dirección A.3: se consolida en G2-02 | DEC-09 | Tokens aprobados; plantillas sin valores fuera de tokens |
+| WGR-052 | P1 | IMPL | OPEN | G1 (acta) → G2-02 | Diseño | WCAG 2.2 AA (D03 §5; D04 §8 G4) · **WEB-00 FINAL:** Decisión de dirección A.4 (WCAG AA sin alterar la identidad); regla concreta en G2-02 | DEC-08 | Prueba automática de contraste sin fallos sobre fondos sólidos en dist |
 | WGR-053 | P2 | IMPL | OPEN | G2-02 | Frontend | D05 tokens | WGR-052 | Sin colores fuera de tokens; test de contraste verde |
 | WGR-054 | P1 | INTEG | OPEN | G2-02 | Diseño + Frontend | D05 §12; AUD-G1-02 | — | Pie aprobado e implementado una sola vez |
 | WGR-055 | P2 | IMPL | OPEN | G2-02 | Diseño | D05 §12.3 / VIS-020 | — | Cabecera única conforme a CA-01…CA-07 |
@@ -76,10 +91,10 @@
 | WGR-060 | P1 | IMPL | BLOCKED_DECISION | Antes de G2-02 | Dirección + Diseño | D05 §8.1 | DEC-10 | Logo maestro identificado con hash |
 | WGR-061 | P1 | PUBL | BLOCKED_DECISION | G2-02 | Diseño + Legal | attribution.md; 03.K §5 | DEC-10 | Créditos visibles conformes a cada licencia |
 | WGR-062 | P2 | IMPL | OPEN | G2-02 | Diseño | D04 §3 | DEC-14 | Regla aplicada y probada |
-| WGR-063 | P2 | GOB | BLOCKED_DECISION | G1 (acta) → G2-02 | Diseño + Arquitectura | D05 §8.2 | DEC-09 | Catálogo + complemento aceptados y cubiertos por plantillas |
+| WGR-063 | P2 | GOB | DEFERRED | G1 (acta) → G2-02 | Diseño + Arquitectura | D05 §8.2 · **WEB-00 FINAL:** Decisión de dirección A.3 | DEC-09 | Catálogo + complemento aceptados y cubiertos por plantillas |
 | WGR-070 | P1 | INTEG | DEFERRED | G2-02/G3-01 | Frontend + QA | D04 §14 (criterios diferidos) | — | Cero enlaces rotos en dist; menú operable por teclado; Escape cierra |
 | WGR-071 | P1 | INTEG | DEFERRED | G3/G4 | QA | D04 §14; D05 §12.5 | WGR-059 | Matriz completa en dist con capturas archivadas y revisión humana |
-| WGR-072 | P1 | GOB | BLOCKED_DECISION | G1 (acta) | Dirección | D04 §8 G1 | DEC-01 | Acta firmada |
+| WGR-072 | P1 | GOB | DEFERRED | G1 (acta) | Dirección | D04 §8 G1 · **WEB-00 FINAL:** Decisión de dirección A.3 | DEC-01 | Acta firmada |
 | WGR-073 | P1 | INTEG | DEFERRED | G3-01/G3-02 | QA + Editorial | D03 03.G1-01; D04 §14 | DEC-04; DEC-05 | Test de paridad sin diferencias no justificadas |
 | WGR-074 | P2 | PUBL | DEFERRED | G4-01 | QA | D04 §8 G4 | — | Checklist WCAG 2.2 AA documentado |
 | WGR-075 | P2 | DOC | OPEN | G2-00 | Arquitectura documental | D04 §8 G0 | — | Baseline G0 referenciado con hash |
@@ -91,13 +106,13 @@
 | WGR-085 | P1 | PUBL | DEFERRED | G4-01 o posterior | Editorial + revisores | D04 §3 | DEC-14 | Traducciones revisadas por humano o fuera de alcance |
 | WGR-086 | P2 | — | DEFERRED | Posterior | Dirección | D03 03.SEC.CAT-01: sin PDF no hay CTA | — | Build con 0 catálogos sin controles vacíos |
 | WGR-090 | P0 | GOB | BLOCKED_DECISION | G1 | Dirección | D04 §8, §14 | DEC-01; DEC-02; DEC-08; DEC-09 | Acta firmada con fecha y responsable |
-| WGR-091 | P1 | GOB | BLOCKED_DECISION | Antes de WEB-01 | — | B01 L5/L36 | DEC-03 | D02 reincorporado o retirado formalmente |
-| WGR-092 | P0 | GOB | PARTIAL | Antes de WEB-01 | — | WEB_00_AUDITORIA §6 R2 | DEC-13 | Commits A–C ejecutados y verificados (respaldo externo ya creado) |
-| WGR-093 | P1 | IMPL | BLOCKED_DECISION | Antes de WEB-01 | — | `git ls-remote` | DEC-13 | `fetch` hecho, contenido inspeccionado, fuente de Pages documentada |
-| WGR-094 | P2 | IMPL | OPEN | WEB-01 | — | `git ls-files --eol` | — | `.gitattributes` en commit aislado, sin diffs de archivo completo |
+| WGR-091 | P1 | GOB | PARTIAL | Antes de WEB-01 | — | B01 L5/L36 · **WEB-00 FINAL:** 02_posicionamiento.md V1.0-R incorporado en el commit B; pendiente de ratificación | DEC-03 | D02 reincorporado o retirado formalmente |
+| WGR-092 | P0 | GOB | RESOLVED | Antes de WEB-01 | — | WEB_00_AUDITORIA §6 R2 · **WEB-00 FINAL:** Commits A–D (601eec4, 88b17af, c5156ec, bf56666) | DEC-13 | Commits A–C ejecutados y verificados (respaldo externo ya creado) |
+| WGR-093 | P1 | IMPL | DEFERRED | Antes de WEB-01 | — | `git ls-remote` · **WEB-00 FINAL:** Dirección: main no se modifica ni se integra; inspección de origin/main antes de integrar (G4) | DEC-13 | `fetch` hecho, contenido inspeccionado, fuente de Pages documentada |
+| WGR-094 | P2 | IMPL | PARTIAL | WEB-01 | — | `git ls-files --eol` · **WEB-00 FINAL:** .gitattributes para docs/project_v02 (commit C); el resto del repositorio sigue sin normalizar | — | `.gitattributes` en commit aislado, sin diffs de archivo completo |
 | WGR-095 | P2 | DOC | RESOLVED | G1 | — | D05 §12.5 | — | Corregido en G1-CLOSE |
 | WGR-096 | P2 | DOC | DEFERRED | G2-01 | — | assets-inventory.csv | WGR-008 | Contrato de asset con prefijo inequívoco y tabla de correspondencia |
-| WGR-097 | P2 | IMPL | OPEN | Commit D | — | grep sin resultados | DEC-13 | `git rm` autorizado |
+| WGR-097 | P2 | IMPL | RESOLVED | Commit D | — | grep sin resultados · **WEB-00 FINAL:** Commit C | DEC-13 | `git rm` autorizado |
 | WGR-098 | P2 | PUBL | DEFERRED | G4-01 | — | evidencias_B02_recursos/contactos_01.jpg | DEC-10 | Decisión de uso o sustitución registrada |
-| WGR-099 | P2 | IMPL | BLOCKED_DECISION | Commit C | — | WEB_00_PLAN_SANEAMIENTO §1 | DEC-12 | Política aplicada |
-| WGR-100 | P2 | IMPL | PARTIAL | WEB-01 | — | `.gitignore` | — | Entradas añadidas (hecho); `dist/` decidido con el método de despliegue |
+| WGR-099 | P2 | IMPL | RESOLVED | Commit C | — | WEB_00_PLAN_SANEAMIENTO §1 · **WEB-00 FINAL:** Commit D: originales de Commons solo en local (verificados por SHA-1); originales propios versionados | DEC-12 | Política aplicada |
+| WGR-100 | P2 | IMPL | PARTIAL | WEB-01 | — | `.gitignore` · **WEB-00 FINAL:** Commits C/D; dist/ pendiente | — | Entradas añadidas (hecho); `dist/` decidido con el método de despliegue |

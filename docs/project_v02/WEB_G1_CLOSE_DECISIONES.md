@@ -3,7 +3,29 @@
 
 Urgencia: **A** antes de WEB-01/G2 · **B** antes de la vertical G3 · **C** antes de publicar (G4).
 
-## Resumen priorizado
+## Estado tras WEB-00 FINAL (03/11/2026)
+Dirección comunicó por escrito las decisiones recogidas en el apartado A del acta. Las demás siguen pendientes. Ninguna decisión se ha marcado como aprobada sin esa comunicación.
+
+| ID | Estado | Resolución |
+|---|---|---|
+| DEC-01 | **Pendiente** | Acta actualizada con el apartado A; falta la ratificación formal (§12) |
+| DEC-02 | **Decidida** (A.2) | Diagramas no obligatorios para el lanzamiento; incorporación futura posible |
+| DEC-03 | **Parcial** | D02 V1.0-R reconstruido e incorporado (`02_posicionamiento.md`, §17); pendiente de ratificación. D01 sigue pendiente (G4) |
+| DEC-04 | **Resuelta** por criterio de dirección (A.7) | Adenda 03.G1-02 de D03. Difiere de la propuesta inicial en CO-03: rige el H2 de D03, no el de la maqueta (03.G1-01). Adaptar CO-03 al teléfono queda como opción editorial |
+| DEC-05 | **Pendiente** | Las propuestas de title y meta no se han incorporado |
+| DEC-06 | **Resuelta** (A.7) | «Experiencia profesional del equipo» (03.K §2, la más reciente) y «Proyecto BAFRAS». Sustituye la recomendación inicial («previa del equipo») |
+| DEC-07 | **Resuelta** (A.7) | Regla de UX de 03.K §2: variante sin tarjetas; se mantiene la entrada de menú |
+| DEC-08 | **Principio decidido** (A.4) | WCAG AA sin alterar innecesariamente la identidad; la regla concreta se valida en G2-02 |
+| DEC-09 | **Decidida** (A.3) | Tokens y componentes se consolidan en la implementación |
+| DEC-10 | **Pendiente** | Logo maestro y créditos |
+| DEC-11 | **Pendiente** | Formulario, hosting y dominio |
+| DEC-12 | **Decidida y aplicada** | Originales de Commons solo en local, verificados por SHA-1 y recuperables; originales propios versionados (commit D) |
+| DEC-13 | **Sustituida** por la estrategia de dirección | Única rama de desarrollo `feat/contingut-v2`; `main` intacta; sin `v2/desarrollo`; sin `push`. Commits A–D ejecutados |
+| DEC-14 | **Pendiente** | Idiomas de lanzamiento |
+| DEC-15 | **Pendiente** | Etiquetas H05 |
+| DEC-16 | **Pendiente** | Rutas ES (WEB-G2-00) |
+
+## Resumen priorizado (propuesta original de WEB-G1-CLOSE)
 
 | ID | Decisión | Incidencias | Urgencia | Límite |
 |---|---|---|---|---|

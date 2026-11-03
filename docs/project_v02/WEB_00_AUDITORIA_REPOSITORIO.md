@@ -1,4 +1,7 @@
 # BAFRAS WEB — WEB-00 · Auditoría del repositorio
+
+> **Nota (WEB-00 FINAL, 03/11/2026):** esta auditoría describe el estado **inicial**. El saneamiento ya está ejecutado: commits A–E en `feat/contingut-v2`, con `main` intacta. Resultado en `WEB_00_BASELINE.md` §8. Riesgos R1 y R2 resueltos (D02 reconstruido; todo bajo control de versiones). R3 diferido (sin integración en `main`). R5 parcial (`.gitattributes` para `docs/project_v02`). R6 resuelto (originales pesados fuera de Git).
+
 **Fecha:** 03/11/2026 · **Ámbito:** repositorio `bafras/` (raíz Git real) · **Naturaleza:** inspección de solo lectura. No se ha cambiado de rama, ni hecho commits, ni descartado o borrado nada.
 
 Comandos usados: `git rev-parse`, `branch -vv -a`, `remote -v`, `status --porcelain -uall [--ignored]`, `log --graph --all`, `diff --stat`, `diff HEAD`, `ls-files [--eol]`, `tag`, `stash list`, `ls-remote origin` y `fetch --dry-run`. Este último consulta el remoto sin actualizar referencias. Las cifras siguientes se pueden reproducir con esos comandos.
