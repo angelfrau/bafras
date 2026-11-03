@@ -1,0 +1,41 @@
+{
+ "id": "D03",
+ "commons": {
+  "title": "Freer Water Control and Improvement District - Diana Adame.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Freer_Water_Control_and_Improvement_District_-_Diana_Adame.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Freer_Water_Control_and_Improvement_District_-_Diana_Adame.jpg",
+  "w": 4288,
+  "h": 2848,
+  "size": 2761081,
+  "sha1": "71139a6f73f2ae3ee32903352ac21606b9823e28",
+  "mime": "image/jpeg",
+  "Artist": "U.S. Department of Agriculture",
+  "Credit": "Flickr: 20130618-RD-LSC-0278",
+  "LicenseShortName": "Public domain",
+  "UsageTerms": "Public domain",
+  "AttributionRequired": "false",
+  "Restrictions": "",
+  "Copyrighted": "False",
+  "DateTimeOriginal": "2013-06-18",
+  "ImageDescription": "Freer Water Control and Improvement District (FWCID) Manager Diana Adame checks the status of the Arsenic Removal System Absorber vessels by using a graphical computer interface in the operations office, on Tuesday June 18, 2013, in Freer Texas."
+ },
+ "processing": {
+  "src_used": "D03__Freer_Water_Control_and_Improvement_District_-_Diana_Adame.jpg",
+  "src_dims": [
+   4288,
+   2848
+  ],
+  "crop_box": [
+   0,
+   0,
+   3797,
+   2848
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 112550,
+  "path": "capabilities/digital/scada/digital-scada-screen.webp"
+ }
+}

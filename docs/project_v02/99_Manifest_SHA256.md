@@ -10,7 +10,7 @@
 | `02_Acta_Propuesta_Cierre_G1.md` | `12910f77a3b99bb6763357beb7665ce0f5ca3a61130e6ca9409d44886e57a1f8` |
 | `03_contenido_editorial_V1_22_baseline_G1.md` | `68fda002aa75db3779976f66aec773cf1cc5582775cbaaa4d0f5301100f0814b` |
 | `04_arquitectura_software_V2_4_handoff_G1.md` | `90896553e2fb091cfb2dca808b0488d26723ea53f5c27351e95175e3db4d8d66` |
-| `05_sistema_visual_V4_12_baseline_G1.md` | `dbd8c3258991136ac2c6c33224a6861b1787880de044e07d1e1829ed33f73a3f` |
+| `05_sistema_visual_V4_12_baseline_G1.md` | `bb1b30664e638d41d43a930db440c69762e390895f1d58e86a2a66b6f8beffb7` |
 | `maquetas_aprobadas/C04_CAP_V1_BAFRAS.zip` | `e34f3088a9358f17116d73f109336f93ae58315c1f57f5f38f73754762236eb2` |
 | `maquetas_aprobadas/C04_CO_V2_BAFRAS.zip` | `ef5a67379d36c4f64396a4d3694bb06d640a94a33250cc2d12270a7dd9d7beca` |
 | `maquetas_aprobadas/C04_DIG_V1_BAFRAS.zip` | `707673d6a00d6eb0bf2139ca9f93f56f5af37d799fdab0d6b251e61a074a60fd` |
@@ -35,7 +35,7 @@ Los hashes de la tabla anterior se recalcularon tras las correcciones documental
 | `WEB_G1_REVIEW_01_INCIDENCIAS.csv` | `d68efbaedb3a2336e09df7d34c9a99e4916944549baca2a029edb4a95eae8159` |
 | `WEB_G1_REVIEW_01_TRAZABILIDAD.md` | `5ecf276d384fc2ca945674124862f9639ecf9e2f7d820289a3a0beaa40330bd5` |
 | `WEB_G1_REVIEW_01_PLAN_IMPLEMENTACION.md` | `51e80b60c6148ecbefcbcca44a225b1a4cb1fbd6ddf1805df812f38186ccc63a` |
-| `B02_PREP_01_INVENTARIO_RECURSOS_VISUALES.md` | `9efd3f5feb862f52bd22d8eda56c1a266f72678c2e0a4f627dc487b2e966fb4b` |
+| `B02_PREP_01_INVENTARIO_RECURSOS_VISUALES.md` | `4ad007b0466dd392a96755447729964a9f302b97b9f3370ad40be25164d9cc5f` |
 | `evidencias_WEB_G1_REVIEW_01/contraste_resultados.json` | `5f48b8cb81c93010fa2743c9cb733122673ab4d6fc49afcd6e3cebde95cfe9ee` |
 | `evidencias_WEB_G1_REVIEW_01/desbordamiento_resultados.json` | `b0ffca7fb5968b315536699214e18363a45e17a84c817f3dbc9afbf3167dd573` |
 | `evidencias_WEB_G1_REVIEW_01/inventariar_maquetas.py` | `e96dbab494dcb61ba54800da77c614abda0a6e6f83267fbc6939ec5a4bb6e1e6` |

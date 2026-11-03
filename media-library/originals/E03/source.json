@@ -1,0 +1,42 @@
+{
+ "id": "E03",
+ "commons": {
+  "title": "World’s 1st Low-Emission Hybrid Battery Storage, Gas Turbine Peaker System.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/World%E2%80%99s_1st_Low-Emission_Hybrid_Battery_Storage%2C_Gas_Turbine_Peaker_System.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:World%E2%80%99s_1st_Low-Emission_Hybrid_Battery_Storage,_Gas_Turbine_Peaker_System.jpg",
+  "w": 5312,
+  "h": 2988,
+  "size": 7218882,
+  "sha1": "4782c5d24df6f8c19c585426a0f916ee52d6e5f0",
+  "mime": "image/jpeg",
+  "Artist": "Ysc usc",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "UsageTerms": "Creative Commons Attribution 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2017-10-13 10:52:46",
+  "ImageDescription": "Hybrid Battery Storage, Gas Turbine"
+ },
+ "processing": {
+  "src_used": "E03__World_s_1st_Low-Emission_Hybrid_Battery_Storage__Gas_Turbine_Peaker_System.jpg",
+  "src_dims": [
+   5312,
+   2988
+  ],
+  "crop_box": [
+   1195,
+   0,
+   5179,
+   2988
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 111842,
+  "path": "capabilities/energy/storage/energy-battery-storage.webp"
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "id": "H04",
+ "commons": {
+  "title": "Battle Command Training Center (8047332263).jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Battle_Command_Training_Center_%288047332263%29.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Battle_Command_Training_Center_(8047332263).jpg",
+  "w": 4192,
+  "h": 2256,
+  "size": 3805537,
+  "sha1": "5ed210b0cb63addba8352176f216d54fbca850f9",
+  "mime": "image/jpeg",
+  "Artist": "U.S. Army Corps of Engineers Savannah District",
+  "Credit": "Battle Command Training Center",
+  "LicenseShortName": "Public domain",
+  "UsageTerms": "Public domain",
+  "AttributionRequired": "false",
+  "Restrictions": "",
+  "Copyrighted": "False",
+  "DateTimeOriginal": "Taken on 12 September 2012, 10:51",
+  "ImageDescription": "FORT BRAGG, N.C. – Fort Bragg’s newest Battle Command Training Center was constructed by the U.S. Army Corps of Engineers Savannah District and prime contractor W.G. Yates and Sons of Biloxi, Miss. The $28 million, 148,000-square foot facility (pictu"
+ },
+ "processing": {
+  "src_used": "H04__Battle_Command_Training_Center_(8047332263).jpg",
+  "src_dims": [
+   4192,
+   2256
+  ],
+  "crop_box": [
+   173,
+   0,
+   3181,
+   2256
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 136302,
+  "path": "home/capabilities/home-cap-energy.webp"
+ }
+}

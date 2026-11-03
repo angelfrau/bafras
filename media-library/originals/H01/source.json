@@ -1,0 +1,42 @@
+{
+ "id": "H01",
+ "commons": {
+  "title": "Big Pipes at Stanford's New Central Energy Facility (37851013542).jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Big_Pipes_at_Stanford%27s_New_Central_Energy_Facility_%2837851013542%29.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Big_Pipes_at_Stanford%27s_New_Central_Energy_Facility_(37851013542).jpg",
+  "w": 3676,
+  "h": 2635,
+  "size": 2091326,
+  "sha1": "f75932f4efd21e973e6be40da72fc7501130960d",
+  "mime": "image/jpeg",
+  "Artist": "Steve Jurvetson from Los Altos, USA",
+  "Credit": "Big Pipes at Stanford's New Central Energy Facility",
+  "LicenseShortName": "CC BY 2.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "UsageTerms": "Creative Commons Attribution 2.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2017-10-19 13:01",
+  "ImageDescription": "By shifting from a cogen plant, Stanford achieved a 68% reduction in greenhouse gas emissions and a 67% reduction in water use (saving 127 million gallons in the first year). 90% of the campus’ heating needs are met by waste heat recovery. The facili"
+ },
+ "processing": {
+  "src_used": "H01__Big_Pipes_at_Stanford_s_New_Central_Energy_Facility_(37851013542).jpg",
+  "src_dims": [
+   3676,
+   2635
+  ],
+  "crop_box": [
+   0,
+   152,
+   3676,
+   2220
+  ],
+  "output_dims": [
+   1920,
+   1080
+  ],
+  "bytes": 223034,
+  "path": "home/hero/home-hero-engineering.webp"
+ }
+}

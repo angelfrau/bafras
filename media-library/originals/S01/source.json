@@ -1,0 +1,42 @@
+{
+ "id": "S01",
+ "commons": {
+  "title": "Mallorca hotel 2.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Mallorca_hotel_2.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mallorca_hotel_2.jpg",
+  "w": 8032,
+  "h": 2490,
+  "size": 5126858,
+  "sha1": "6dbf8ae46b208a3fa7f47ac09cba87ea73b1d06a",
+  "mime": "image/jpeg",
+  "Artist": "Killarnee",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2016-03-22 18:07:55",
+  "ImageDescription": "Mallorca hotel"
+ },
+ "processing": {
+  "src_used": "_work/S01_crop_work.jpg",
+  "src_dims": [
+   3200,
+   2000
+  ],
+  "crop_box": [
+   0,
+   300,
+   2720,
+   2000
+  ],
+  "output_dims": [
+   1600,
+   1000
+  ],
+  "bytes": 171164,
+  "path": "sectors/hospitality/sector-hospitality.webp"
+ }
+}

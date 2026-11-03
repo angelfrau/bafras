@@ -1,0 +1,1070 @@
+package: BAFRAS_Website_Visual_Assets_V1
+generated: '2026-11-02'
+root: assets/images/
+status_values:
+- READY
+- PENDING_LICENSE
+- PENDING_ORIGINAL
+- NEEDS_CREATION
+- NOT_FOUND
+assets:
+- id: H01
+  filename: home-hero-engineering.webp
+  relative_path: assets/images/home/hero/home-hero-engineering.webp
+  page: Home
+  section: Hero
+  role: 'Imagen principal: infraestructura técnica compleja e integrada'
+  priority: P1
+  target_aspect_ratio: '16:9'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Big_Pipes_at_Stanford%27s_New_Central_Energy_Facility_(37851013542).jpg
+  source_provider: Wikimedia Commons
+  author: Steve Jurvetson from Los Altos, USA
+  license: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Big Pipes at Stanford's New Central Energy Facility (37851013542).jpg» — Steve Jurvetson from Los Altos, USA, Wikimedia Commons, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0).
+    Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Big Pipes at Stanford's New Central Energy Facility (37851013542).jpg
+  original_dimensions: 3676x2635
+  output_dimensions: 1920x1080
+  output_size_bytes: 223034
+  alt_es: Sala de producción térmica de una central energética con grandes bombas y tuberías de impulsión pintadas en rojo
+  replacement_required: false
+  notes: Central Energy Facility (universidad de Stanford, EE. UU.). Recorte 16:9 sin deformación. No es un proyecto de BAFRAS.
+  retrieved: '2026-11-02'
+  original_sha1: f75932f4efd21e973e6be40da72fc7501130960d
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Big_Pipes_at_Stanford%27s_New_Central_Energy_Facility_%2837851013542%29.jpg
+- id: H02
+  filename: home-vision-system.svg
+  relative_path: assets/images/home/vision/home-vision-system.svg
+  page: Home
+  section: Visión
+  role: Diagrama conceptual Infraestructura–Energía–Sistemas digitales
+  priority: P1
+  target_aspect_ratio: SVG
+  status: PENDING_ORIGINAL
+  source_url: null
+  source_provider: null
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: false
+  attribution_required: null
+  attribution_text: null
+  original_filename: null
+  original_dimensions: null
+  output_dimensions: null
+  output_size_bytes: null
+  alt_es: Diagrama de integración entre infraestructura, sistemas energéticos y sistemas digitales
+  replacement_required: true
+  notes: Debe recuperarse del repositorio web actual. No se ha recreado. En la carpeta Descargas solo hay referencias de logotipo/fondos (BAFRAS_Visual_Assets_Reference_v1.zip), no este diagrama.
+  retrieved: null
+  original_sha1: null
+  original_in_package: null
+- id: H03
+  filename: home-cap-infrastructure.webp
+  relative_path: assets/images/home/capabilities/home-cap-infrastructure.webp
+  page: Home
+  section: Capacidades
+  role: Tarjeta Infraestructura e Ingeniería
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Teknisk_rom_(School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit)_Hovedfordeler_Varmeanlegg_Ventilasjon_Aggregat_Isol._r%C3%B8r_kanaler_elkabler_stige_Varmegjenvinner_Avtrekksvifte_luftfilter_lager_vas.jpg
+  source_provider: Wikimedia Commons
+  author: Wolfmann
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Teknisk rom (School build. Lilleh. Norway 2024-09. Mechan. room Air ventil. Hot water Heat recov. unit) Hovedfordeler Varmeanlegg Ventilasjon Aggregat Isol. rør kanaler elkabler stige
+    Varmegjenvinner Avtrekksvifte luftfilter lager vas.jpg» — Wolfmann, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado y WebP) distribuida
+    bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Teknisk rom (School build. Lilleh. Norway 2024-09. Mechan. room Air ventil. Hot water Heat recov. unit) Hovedfordeler Varmeanlegg Ventilasjon Aggregat Isol. rør kanaler elkabler stige
+    Varmegjenvinner Avtrekksvifte luftfilter lager vas.jpg
+  original_dimensions: 4032x3024
+  output_dimensions: 1600x1200
+  output_size_bytes: 188780
+  alt_es: Sala técnica de un edificio con unidad de tratamiento de aire, conductos aislados, cuadro de control y tuberías
+  replacement_required: false
+  notes: Sala técnica de un edificio escolar (Noruega, 2024). Fotografía actual, limpia y representativa de MEP integrado.
+  retrieved: '2026-11-02'
+  original_sha1: c76866d043642b3c73b6203ee96e62306c2528f4
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Teknisk_rom_%28School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit%29_Hovedfordeler_Varmeanlegg_Ventilasjon_Aggregat_Isol._r%C3%B8r_kanaler_elkabler_stige_Varmegjenvinner_Avtrekksvifte_luftfilter_lager_vas.jpg
+- id: H04
+  filename: home-cap-energy.webp
+  relative_path: assets/images/home/capabilities/home-cap-energy.webp
+  page: Home
+  section: Capacidades
+  role: Tarjeta Sistemas Energéticos
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Battle_Command_Training_Center_(8047332263).jpg
+  source_provider: Wikimedia Commons
+  author: U.S. Army Corps of Engineers Savannah District
+  license: Public domain
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: 'Imagen: U.S. Army Corps of Engineers Savannah District (Public domain), vía Wikimedia Commons. Crédito voluntario.'
+  original_filename: Battle Command Training Center (8047332263).jpg
+  original_dimensions: 4192x2256
+  output_dimensions: 1600x1200
+  output_size_bytes: 136302
+  alt_es: Campo fotovoltaico sobre cubierta plana de un edificio institucional
+  replacement_required: false
+  notes: Dominio público (USACE). El recorte 4:3 elimina a la persona situada en el borde derecho.
+  retrieved: '2026-11-02'
+  original_sha1: 5ed210b0cb63addba8352176f216d54fbca850f9
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/9/92/Battle_Command_Training_Center_%288047332263%29.jpg
+- id: H05
+  filename: home-cap-digital.webp
+  relative_path: assets/images/home/capabilities/home-cap-digital.webp
+  page: Home
+  section: Capacidades
+  role: Tarjeta Sistemas Digitales y Automatización
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Automate_industriel_WAGO_pour_un_syst%C3%A8me_de_monitoring_en_industrie_pharmaceutique.jpg
+  source_provider: Wikimedia Commons
+  author: Pierre75000
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Automate industriel WAGO pour un système de monitoring en industrie pharmaceutique.jpg» — Pierre75000, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0).
+    Obra derivada (recorte, redimensionado y WebP) distribuida bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Automate industriel WAGO pour un système de monitoring en industrie pharmaceutique.jpg
+  original_dimensions: 4912x3264
+  output_dimensions: 1600x1200
+  output_size_bytes: 162320
+  alt_es: Detalle de un armario de automatización con controladores modulares y cableado de señales identificado
+  replacement_required: false
+  notes: Sistema de monitorización industrial (sector farmacéutico). El fabricante del controlador es visible pero no protagonista.
+  retrieved: '2026-11-02'
+  original_sha1: b47aa18033b33297b331dacbbdaad3171b7842c6
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Automate_industriel_WAGO_pour_un_syst%C3%A8me_de_monitoring_en_industrie_pharmaceutique.jpg
+- id: I01
+  filename: infra-electrical-distribution.webp
+  relative_path: assets/images/capabilities/infrastructure/electrical/infra-electrical-distribution.webp
+  page: Infraestructura e Ingeniería
+  section: Instalaciones eléctricas
+  role: Sala eléctrica / distribución
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Mcc_room.jpg
+  source_provider: Wikimedia Commons
+  author: Achim Hering
+  license: CC BY 3.0
+  license_url: https://creativecommons.org/licenses/by/3.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Mcc room.jpg» — Achim Hering, Wikimedia Commons, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0). Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Mcc room.jpg
+  original_dimensions: 4574x3136
+  output_dimensions: 1600x1200
+  output_size_bytes: 81562
+  alt_es: Pasillo de una sala eléctrica con filas de cuadros de distribución y centros de control de motores
+  replacement_required: true
+  notes: Sala de CCM/cuadros de distribución. Sustituir por sala eléctrica de proyecto propio cuando esté disponible.
+  retrieved: '2026-11-02'
+  original_sha1: d4c83a38273e971ac5cb81beaeae8694823f9b31
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/b/b6/Mcc_room.jpg
+- id: I02
+  filename: infra-hvac-plant.webp
+  relative_path: assets/images/capabilities/infrastructure/mechanical/infra-hvac-plant.webp
+  page: Infraestructura e Ingeniería
+  section: Climatización
+  role: Sala técnica de producción térmica
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Katri_vala_lampopumppu.jpg
+  source_provider: Wikimedia Commons
+  author: Helen Ltd (mediabank)
+  license: CC BY-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-sa/3.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Katri vala lampopumppu.jpg» — Helen Ltd (mediabank), Wikimedia Commons, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Obra derivada (recorte, redimensionado y WebP)
+    distribuida bajo la misma licencia CC BY-SA 3.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Katri vala lampopumppu.jpg
+  original_dimensions: 3504x2336
+  output_dimensions: 1600x1200
+  output_size_bytes: 283864
+  alt_es: Sala de máquinas con bombas de calor de gran potencia, intercambiadores y colectores de tuberías
+  replacement_required: true
+  notes: 'Planta de bombas de calor Katri Vala (Helsinki). Aparece un técnico de pie junto al equipo, sin posar de forma artificial. Crédito: Helen Ltd.'
+  retrieved: '2026-11-02'
+  original_sha1: 5e22ccafc4cc2283e30de3210d26d4a8519d023f
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/a/a2/Katri_vala_lampopumppu.jpg
+- id: I03
+  filename: infra-ventilation-ductwork.webp
+  relative_path: assets/images/capabilities/infrastructure/mechanical/infra-ventilation-ductwork.webp
+  page: Infraestructura e Ingeniería
+  section: Ventilación
+  role: Unidades de tratamiento de aire
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:HVAC_Air_Handler_Unit,_pic2.JPG
+  source_provider: Wikimedia Commons
+  author: Alf van Beem
+  license: CC0
+  license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: 'Imagen: Alf van Beem (CC0), vía Wikimedia Commons. Crédito voluntario.'
+  original_filename: HVAC Air Handler Unit, pic2.JPG
+  original_dimensions: 4608x3456
+  output_dimensions: 1600x1200
+  output_size_bytes: 174722
+  alt_es: Batería de unidades de tratamiento de aire en una sala de máquinas con conductos en el techo
+  replacement_required: false
+  notes: CC0. Sin obligación de atribución.
+  retrieved: '2026-11-02'
+  original_sha1: 06fc4c21106b76012634cc99d9436e09171b0f9c
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/b/be/HVAC_Air_Handler_Unit%2C_pic2.JPG
+- id: I04
+  filename: infra-plumbing-piping.webp
+  relative_path: assets/images/capabilities/infrastructure/plumbing-fire/infra-plumbing-piping.webp
+  page: Infraestructura e Ingeniería
+  section: Fontanería e hidráulica
+  role: Red hidráulica / distribución
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Teknisk_rom_(School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit)_varmtvann_isolerte_r%C3%B8r_m%C3%A5lere_termometere_sirkulasjonspumpe_strupeventil_radiatorer_gulvvarme_elkabler_vannkran_etc_IMG_0306.jpg
+  source_provider: Wikimedia Commons
+  author: Wolfmann
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Teknisk rom (School build. Lilleh. Norway 2024-09. Mechan. room Air ventil. Hot water Heat recov. unit) varmtvann isolerte rør målere termometere sirkulasjonspumpe strupeventil radiatorer
+    gulvvarme elkabler vannkran etc IMG 0306.jpg» — Wolfmann, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado y WebP) distribuida
+    bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Teknisk rom (School build. Lilleh. Norway 2024-09. Mechan. room Air ventil. Hot water Heat recov. unit) varmtvann isolerte rør målere termometere sirkulasjonspumpe strupeventil radiatorer
+    gulvvarme elkabler vannkran etc IMG 0306.jpg
+  original_dimensions: 7432x5573
+  output_dimensions: 1600x1200
+  output_size_bytes: 218930
+  alt_es: Colectores de agua caliente con tuberías aisladas, válvulas, manómetros y termómetros en una sala técnica
+  replacement_required: false
+  notes: 'Misma sala técnica que H03 (mismo autor): coherencia visual entre las dos imágenes.'
+  retrieved: '2026-11-02'
+  original_sha1: b570dff4e9bac0fb346e7ea8f0cb7c477600a16e
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/8/8c/Teknisk_rom_%28School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit%29_varmtvann_isolerte_r%C3%B8r_m%C3%A5lere_termometere_sirkulasjonspumpe_strupeventil_radiatorer_gulvvarme_elkabler_vannkran_etc_IMG_0306.jpg
+- id: I05
+  filename: infra-fire-protection.webp
+  relative_path: assets/images/capabilities/infrastructure/plumbing-fire/infra-fire-protection.webp
+  page: Infraestructura e Ingeniería
+  section: Protección contra incendios
+  role: Instalación PCI
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Objekt_17_5001_brandblusinstallatie_03.JPG
+  source_provider: Wikimedia Commons
+  author: Vincent de Groot - http://www.videgro.net
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Objekt 17 5001 brandblusinstallatie 03.JPG» — Vincent de Groot - http://www.videgro.net, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada
+    (recorte, redimensionado y WebP) distribuida bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Objekt 17 5001 brandblusinstallatie 03.JPG
+  original_dimensions: 2288x1712
+  output_dimensions: 1600x1200
+  output_size_bytes: 187166
+  alt_es: Sala de control de una instalación de extinción con colectores, válvulas y puestos de control identificados
+  replacement_required: true
+  notes: 'Instalación fija de extinción (Países Bajos). Resolución de origen 2288×1712: suficiente para 1600×1200.'
+  retrieved: '2026-11-02'
+  original_sha1: 48b303ae94d031456b693b7a8afa7fbd3faad369
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/9/9a/Objekt_17_5001_brandblusinstallatie_03.JPG
+- id: I06
+  filename: infra-technical-plans.webp
+  relative_path: assets/images/capabilities/infrastructure/engineering/infra-technical-plans.webp
+  page: Infraestructura e Ingeniería
+  section: Ingeniería y proyectos
+  role: Plano técnico de instalaciones
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Renovation_of_Building_107_First_Floor_HVAC_Plan,_March_28,_1994_-_DPLA_-_08bb6ced59585de1fa4dbc2a15d93a99.tiff
+  source_provider: Wikimedia Commons
+  author: Department of Homeland Security. U.S. Coast Guard. 3/1/2003
+  license: Public domain
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: 'Imagen: Department of Homeland Security. U.S. Coast Guard. 3/1/2003 (Public domain), vía Wikimedia Commons. Crédito voluntario.'
+  original_filename: Renovation of Building 107 First Floor HVAC Plan, March 28, 1994 - DPLA - 08bb6ced59585de1fa4dbc2a15d93a99.tiff
+  original_dimensions: 7200x4802
+  output_dimensions: 1600x1200
+  output_size_bytes: 253560
+  alt_es: Detalle de un plano de climatización con trazado de conductos, unidades terminales y anotaciones técnicas
+  replacement_required: true
+  notes: Plano HVAC de 1994 de la Guardia Costera de EE. UU. (dominio público, NARA/DPLA). Recorte de detalle para que el plano sea legible. No es documentación de BAFRAS.
+  retrieved: '2026-11-02'
+  original_sha1: e201bc5c0392f615af0e3599f390460b737a52c0
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/c/cc/Renovation_of_Building_107_First_Floor_HVAC_Plan%2C_March_28%2C_1994_-_DPLA_-_08bb6ced59585de1fa4dbc2a15d93a99.tiff
+- id: I07
+  filename: infra-construction-site.webp
+  relative_path: assets/images/capabilities/infrastructure/construction/infra-construction-site.webp
+  page: Infraestructura e Ingeniería
+  section: Ejecución y dirección de obra
+  role: Montaje de instalaciones en obra
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Installing_supports_for_HVAC_duct_work_in_the_ceiling_above_the_future_LIRR_Concourse._11-20-2019_(49106351078).jpg
+  source_provider: Wikimedia Commons
+  author: MTA Capital Construction Mega Projects
+  license: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Installing supports for HVAC duct work in the ceiling above the future LIRR Concourse. 11-20-2019 (49106351078).jpg» — MTA Capital Construction Mega Projects, Wikimedia Commons, CC
+    BY 2.0 (https://creativecommons.org/licenses/by/2.0). Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Installing supports for HVAC duct work in the ceiling above the future LIRR Concourse. 11-20-2019 (49106351078).jpg
+  original_dimensions: 3264x2448
+  output_dimensions: 1600x1200
+  output_size_bytes: 129048
+  alt_es: Operarios instalando soportes de conductos de climatización en el techo de una obra
+  replacement_required: true
+  notes: 'Imagen algo oscura. Es la candidata con menos calidad del P1: conviene sustituirla pronto por una foto de obra propia.'
+  retrieved: '2026-11-02'
+  original_sha1: d0b13074142f521b147c1db123ca0150860d0395
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/e/ed/Installing_supports_for_HVAC_duct_work_in_the_ceiling_above_the_future_LIRR_Concourse._11-20-2019_%2849106351078%29.jpg
+- id: I08
+  filename: infra-commissioning-testing.webp
+  relative_path: assets/images/capabilities/infrastructure/construction/infra-commissioning-testing.webp
+  page: Infraestructura e Ingeniería
+  section: Pruebas y puesta en marcha
+  role: Ensayos y verificación
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Systems_testing_in_the_service_switchgear_room_of_a_power_substation_located_in_Queens._(CS179,_08-13-2018)_(44048210052).jpg
+  source_provider: Wikimedia Commons
+  author: MTA Capital Construction Mega Projects
+  license: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Systems testing in the service switchgear room of a power substation located in Queens. (CS179, 08-13-2018) (44048210052).jpg» — MTA Capital Construction Mega Projects, Wikimedia Commons,
+    CC BY 2.0 (https://creativecommons.org/licenses/by/2.0). Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Systems testing in the service switchgear room of a power substation located in Queens. (CS179, 08-13-2018) (44048210052).jpg
+  original_dimensions: 4608x3456
+  output_dimensions: 1600x1200
+  output_size_bytes: 141678
+  alt_es: Técnico realizando pruebas con un equipo de ensayo conectado a una celda de una sala eléctrica
+  replacement_required: true
+  notes: El recorte elimina la fecha impresa en la esquina inferior derecha del original (modificación permitida por CC BY 2.0).
+  retrieved: '2026-11-02'
+  original_sha1: b753fac4962c0eacec78d8612a76b7cb7c44bba5
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Systems_testing_in_the_service_switchgear_room_of_a_power_substation_located_in_Queens._%28CS179%2C_08-13-2018%29_%2844048210052%29.jpg
+- id: E01
+  filename: energy-demand-analysis.webp
+  relative_path: assets/images/capabilities/energy/analysis/energy-demand-analysis.webp
+  page: Sistemas Energéticos
+  section: 'Conocer: análisis de demanda'
+  role: Curva de carga y balance energético
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: null
+  source_provider: BAFRAS Engineering (generado para esta entrega)
+  author: BAFRAS Engineering
+  license: Propio (BAFRAS Engineering)
+  license_url: null
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: No requiere atribución. Mantener el sello «datos sintéticos».
+  original_filename: demo_graphics.py (script generador, datos sintéticos semilla 42)
+  original_dimensions: 1600x1200 (generado)
+  output_dimensions: 1600x1200
+  output_size_bytes: 64146
+  alt_es: Gráfico demostrativo de una curva de carga diaria con generación fotovoltaica, autoconsumo y excedentes; datos sintéticos
+  replacement_required: true
+  notes: GENERADO por el equipo con datos sintéticos y sello visible «DATOS SINTÉTICOS · GRÁFICO DEMOSTRATIVO». No presentar como resultado real.
+  retrieved: '2026-11-02'
+  original_sha1: null
+  original_in_package: true
+- id: E02
+  filename: energy-pv-rooftop.webp
+  relative_path: assets/images/capabilities/energy/generation/energy-pv-rooftop.webp
+  page: Sistemas Energéticos
+  section: 'Generar: fotovoltaica'
+  role: FV sobre cubierta industrial
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Dornbirn-Rhombergs_Fabrik-photovoltaic_systems-01ASD.jpg
+  source_provider: Wikimedia Commons
+  author: Asurnipal
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Dornbirn-Rhombergs Fabrik-photovoltaic systems-01ASD.jpg» — Asurnipal, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado
+    y WebP) distribuida bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Dornbirn-Rhombergs Fabrik-photovoltaic systems-01ASD.jpg
+  original_dimensions: 4032x2268
+  output_dimensions: 1600x1200
+  output_size_bytes: 377636
+  alt_es: Instalación fotovoltaica sobre la cubierta de una nave industrial con montañas al fondo
+  replacement_required: true
+  notes: Rhomberg Fabrik, Dornbirn (Austria).
+  retrieved: '2026-11-02'
+  original_sha1: e6392c77e97b0c1c17e9719de1db0d11483ebf3b
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/8/8d/Dornbirn-Rhombergs_Fabrik-photovoltaic_systems-01ASD.jpg
+- id: E03
+  filename: energy-battery-storage.webp
+  relative_path: assets/images/capabilities/energy/storage/energy-battery-storage.webp
+  page: Sistemas Energéticos
+  section: Almacenar
+  role: Almacenamiento estacionario C&I
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:World%E2%80%99s_1st_Low-Emission_Hybrid_Battery_Storage,_Gas_Turbine_Peaker_System.jpg
+  source_provider: Wikimedia Commons
+  author: Ysc usc
+  license: CC BY 4.0
+  license_url: https://creativecommons.org/licenses/by/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «World’s 1st Low-Emission Hybrid Battery Storage, Gas Turbine Peaker System.jpg» — Ysc usc, Wikimedia Commons, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0). Recortada y convertida
+    a WebP por BAFRAS Engineering.
+  original_filename: World’s 1st Low-Emission Hybrid Battery Storage, Gas Turbine Peaker System.jpg
+  original_dimensions: 5312x2988
+  output_dimensions: 1600x1200
+  output_size_bytes: 111842
+  alt_es: Sistema de almacenamiento en baterías en contenedores con equipos de potencia y climatización
+  replacement_required: true
+  notes: Sistema híbrido de baterías asociado a una turbina de punta (EE. UU.). Se ve un logotipo pequeño del fabricante, que no es protagonista.
+  retrieved: '2026-11-02'
+  original_sha1: 4782c5d24df6f8c19c585426a0f916ee52d6e5f0
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/e/e4/World%E2%80%99s_1st_Low-Emission_Hybrid_Battery_Storage%2C_Gas_Turbine_Peaker_System.jpg
+- id: E04
+  filename: energy-electrical-infrastructure.webp
+  relative_path: assets/images/capabilities/energy/generation/energy-electrical-infrastructure.webp
+  page: Sistemas Energéticos
+  section: Infraestructura eléctrica
+  role: Centro de transformación
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:11-Transformateur_%C3%A9lectrique_et_cellules_de_20_kV.jpg
+  source_provider: Wikimedia Commons
+  author: Cjp24
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «11-Transformateur électrique et cellules de 20 kV.jpg» — Cjp24, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado
+    y WebP) distribuida bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: 11-Transformateur électrique et cellules de 20 kV.jpg
+  original_dimensions: 4608x3456
+  output_dimensions: 1600x1200
+  output_size_bytes: 113288
+  alt_es: Centro de transformación con transformador de potencia y celdas de media tensión de 20 kV
+  replacement_required: true
+  notes: 'La sala tiene algún elemento ajeno (sillas, cartón). Prioridad P2: aceptable hasta tener una foto propia.'
+  retrieved: '2026-11-02'
+  original_sha1: 36973be188fb5d10226f86c94046008f3a5a302c
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/f/f1/11-Transformateur_%C3%A9lectrique_et_cellules_de_20_kV.jpg
+- id: E05
+  filename: energy-ev-charging.webp
+  relative_path: assets/images/capabilities/energy/electrification/energy-ev-charging.webp
+  page: Sistemas Energéticos
+  section: Electrificar
+  role: Recarga de vehículo eléctrico
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:EV_parking_lot_Oslo_10_2018_3774.jpg
+  source_provider: Wikimedia Commons
+  author: Mariordo (Mario Roberto Durán Ortiz)
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «EV parking lot Oslo 10 2018 3774.jpg» — Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte,
+    redimensionado y WebP) distribuida bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: EV parking lot Oslo 10 2018 3774.jpg
+  original_dimensions: 3000x2400
+  output_dimensions: 1600x1200
+  output_size_bytes: 250206
+  alt_es: Aparcamiento colectivo con puntos de recarga para vehículos eléctricos en uso
+  replacement_required: true
+  notes: Oslo (Noruega). El recorte elimina una pancarta publicitaria de la parte superior.
+  retrieved: '2026-11-02'
+  original_sha1: 547716f1be35480b0ceee403adbd45b5d7688d1c
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/4/4a/EV_parking_lot_Oslo_10_2018_3774.jpg
+- id: E06
+  filename: energy-heat-pumps.webp
+  relative_path: assets/images/capabilities/energy/electrification/energy-heat-pumps.webp
+  page: Sistemas Energéticos
+  section: 'Electrificar: producción térmica'
+  role: Bombas de calor industriales
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Heat_Pump-QQ.jpg
+  source_provider: Wikimedia Commons
+  author: Dfpearson
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Heat Pump-QQ.jpg» — Dfpearson, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado y WebP) distribuida bajo la misma
+    licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Heat Pump-QQ.jpg
+  original_dimensions: 2048x1536
+  output_dimensions: 1600x1200
+  output_size_bytes: 245716
+  alt_es: Planta de bombas de calor industriales con intercambiadores y tuberías aisladas
+  replacement_required: true
+  notes: Resolución de origen 2048×1536.
+  retrieved: '2026-11-02'
+  original_sha1: f6bce7f3bd05c4ece88d3819345493b6d24793cc
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Heat_Pump-QQ.jpg
+- id: E07
+  filename: energy-management-dashboard.webp
+  relative_path: assets/images/capabilities/energy/management/energy-management-dashboard.webp
+  page: Sistemas Energéticos
+  section: Gestionar
+  role: Dashboard de gestión energética
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: null
+  source_provider: BAFRAS Engineering (generado para esta entrega)
+  author: BAFRAS Engineering
+  license: Propio (BAFRAS Engineering)
+  license_url: null
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: No requiere atribución. Mantener el sello «datos sintéticos».
+  original_filename: demo_graphics.py (script generador, datos sintéticos semilla 42)
+  original_dimensions: 1600x1200 (generado)
+  output_dimensions: 1600x1200
+  output_size_bytes: 69252
+  alt_es: Panel demostrativo de gestión energética con indicadores, potencia por origen y desglose por usos; valores ficticios
+  replacement_required: true
+  notes: 'GENERADO: interfaz de demostración con valores ficticios y sello visible. Sustituir por una captura real de una plataforma BAFRAS cuando exista.'
+  retrieved: '2026-11-02'
+  original_sha1: null
+  original_in_package: true
+- id: E08
+  filename: energy-system-diagram.svg
+  relative_path: assets/images/capabilities/energy/management/energy-system-diagram.svg
+  page: Sistemas Energéticos
+  section: Decidir / arquitectura
+  role: Diagrama de arquitectura energética
+  priority: P2
+  target_aspect_ratio: SVG
+  status: NEEDS_CREATION
+  source_url: null
+  source_provider: null
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: false
+  attribution_required: null
+  attribution_text: null
+  original_filename: null
+  original_dimensions: null
+  output_dimensions: null
+  output_size_bytes: null
+  alt_es: 'Diagrama de arquitectura energética: generación, almacenamiento, demanda, red, medida y control'
+  replacement_required: true
+  notes: No hay fuente externa adecuada. Queda pendiente de creación técnica interna, con la misma línea gráfica que H02.
+  retrieved: null
+  original_sha1: null
+  original_in_package: null
+- id: D01
+  filename: digital-plc-control-panel.webp
+  relative_path: assets/images/capabilities/digital/automation/digital-plc-control-panel.webp
+  page: Sistemas Digitales y Automatización
+  section: Automatización
+  role: Armario PLC
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:MITSIBISHI_PLC_Panel.jpg
+  source_provider: Wikimedia Commons
+  author: Mixabest
+  license: CC BY-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-sa/3.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «MITSIBISHI PLC Panel.jpg» — Mixabest, Wikimedia Commons, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Obra derivada (recorte, redimensionado y WebP) distribuida bajo
+    la misma licencia CC BY-SA 3.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: MITSIBISHI PLC Panel.jpg
+  original_dimensions: 3264x2448
+  output_dimensions: 1600x1200
+  output_size_bytes: 205578
+  alt_es: Armario de automatización con PLC, protecciones, relés, fuente de alimentación y regletas de bornas
+  replacement_required: true
+  notes: Marca del PLC visible a pequeña escala.
+  retrieved: '2026-11-02'
+  original_sha1: 6d9fc4396fa9ba26b0b88ffd2a00b037a9309286
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/5/52/MITSIBISHI_PLC_Panel.jpg
+- id: D02
+  filename: digital-industrial-instrumentation.webp
+  relative_path: assets/images/capabilities/digital/instrumentation/digital-industrial-instrumentation.webp
+  page: Sistemas Digitales y Automatización
+  section: Instrumentación
+  role: Transmisor de presión diferencial
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Flow_measurement_with_dP_cell.jpg
+  source_provider: Wikimedia Commons
+  author: Bitjungle
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Flow measurement with dP cell.jpg» — Bitjungle, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado y WebP) distribuida
+    bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Flow measurement with dP cell.jpg
+  original_dimensions: 3264x2448
+  output_dimensions: 1600x1200
+  output_size_bytes: 111866
+  alt_es: Transmisor de presión diferencial con manifold de válvulas instalado en una tubería de proceso
+  replacement_required: true
+  notes: Fondo sobreexpuesto. Candidata prioritaria a sustitución por foto propia.
+  retrieved: '2026-11-02'
+  original_sha1: 4bd66d2ad7a08ca68ffb239af0afd88987b4fc11
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/Flow_measurement_with_dP_cell.jpg
+- id: D03
+  filename: digital-scada-screen.webp
+  relative_path: assets/images/capabilities/digital/scada/digital-scada-screen.webp
+  page: Sistemas Digitales y Automatización
+  section: Supervisión SCADA
+  role: Interfaz SCADA real
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Freer_Water_Control_and_Improvement_District_-_Diana_Adame.jpg
+  source_provider: Wikimedia Commons
+  author: U.S. Department of Agriculture
+  license: Public domain
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: 'Imagen: U.S. Department of Agriculture (Public domain), vía Wikimedia Commons. Crédito voluntario.'
+  original_filename: Freer Water Control and Improvement District - Diana Adame.jpg
+  original_dimensions: 4288x2848
+  output_dimensions: 1600x1200
+  output_size_bytes: 112550
+  alt_es: Operadora supervisando en pantalla el sinóptico SCADA de una planta de tratamiento de agua
+  replacement_required: true
+  notes: Dominio público (USDA). Interfaz SCADA real de una planta de agua.
+  retrieved: '2026-11-02'
+  original_sha1: 71139a6f73f2ae3ee32903352ac21606b9823e28
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/f/fb/Freer_Water_Control_and_Improvement_District_-_Diana_Adame.jpg
+- id: D04
+  filename: digital-building-management.webp
+  relative_path: assets/images/capabilities/digital/scada/digital-building-management.webp
+  page: Sistemas Digitales y Automatización
+  section: BMS / gestión técnica
+  role: Panel BMS de instalaciones
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Renovations_at_APS-2_Zutendaal_(8095456).jpg
+  source_provider: Wikimedia Commons
+  author: U.S. Army photo by Sandra Wilson
+  license: Public domain
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: 'Imagen: U.S. Army photo by Sandra Wilson (Public domain), vía Wikimedia Commons. Crédito voluntario.'
+  original_filename: Renovations at APS-2 Zutendaal (8095456).jpg
+  original_dimensions: 6000x4000
+  output_dimensions: 1600x1200
+  output_size_bytes: 102908
+  alt_es: Técnico consultando en un panel táctil mural el esquema de control de las instalaciones de un edificio
+  replacement_required: true
+  notes: Dominio público (U.S. Army).
+  retrieved: '2026-11-02'
+  original_sha1: eb808cf6c5e8a43acba005e3264c12b0f4c61d67
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Renovations_at_APS-2_Zutendaal_%288095456%29.jpg
+- id: D05
+  filename: digital-industrial-network.webp
+  relative_path: assets/images/capabilities/digital/integration/digital-industrial-network.webp
+  page: Sistemas Digitales y Automatización
+  section: Integración y comunicaciones
+  role: Red industrial / pasarelas
+  priority: P2
+  target_aspect_ratio: '4:3'
+  status: NOT_FOUND
+  source_url: null
+  source_provider: null
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: false
+  attribution_required: null
+  attribution_text: null
+  original_filename: null
+  original_dimensions: null
+  output_dimensions: null
+  output_size_bytes: null
+  alt_es: Switches industriales y pasarelas de comunicación en un armario de control
+  replacement_required: true
+  notes: 'NO ENCONTRADO: los candidatos con licencia libre eran equipos informáticos o de oficina, o fotografías de producto sobre una mesa. No se incorpora nada antes que una imagen no pertinente.'
+  retrieved: null
+  original_sha1: null
+  original_in_package: null
+- id: D06
+  filename: digital-data-analysis.webp
+  relative_path: assets/images/capabilities/digital/data/digital-data-analysis.webp
+  page: Sistemas Digitales y Automatización
+  section: Datos y analítica
+  role: Tendencias y alarmas
+  priority: P1
+  target_aspect_ratio: '4:3'
+  status: READY
+  source_url: null
+  source_provider: BAFRAS Engineering (generado para esta entrega)
+  author: BAFRAS Engineering
+  license: Propio (BAFRAS Engineering)
+  license_url: null
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: No requiere atribución. Mantener el sello «datos sintéticos».
+  original_filename: demo_graphics.py (script generador, datos sintéticos semilla 42)
+  original_dimensions: 1600x1200 (generado)
+  output_dimensions: 1600x1200
+  output_size_bytes: 93806
+  alt_es: Gráfico demostrativo de tendencias de temperatura y COP con detección de una alarma; datos sintéticos
+  replacement_required: true
+  notes: GENERADO con datos sintéticos y sello visible. Sustituir por una visualización real anonimizada.
+  retrieved: '2026-11-02'
+  original_sha1: null
+  original_in_package: true
+- id: D07
+  filename: digital-control-architecture.svg
+  relative_path: assets/images/capabilities/digital/integration/digital-control-architecture.svg
+  page: Sistemas Digitales y Automatización
+  section: Arquitectura de control
+  role: Diagrama de arquitectura de automatización
+  priority: P2
+  target_aspect_ratio: SVG
+  status: NEEDS_CREATION
+  source_url: null
+  source_provider: null
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: false
+  attribution_required: null
+  attribution_text: null
+  original_filename: null
+  original_dimensions: null
+  output_dimensions: null
+  output_size_bytes: null
+  alt_es: 'Diagrama de arquitectura de automatización: instrumentación, controladores, comunicaciones, supervisión y operación'
+  replacement_required: true
+  notes: Pendiente de creación técnica interna, con la misma línea gráfica que H02 y E08.
+  retrieved: null
+  original_sha1: null
+  original_in_package: null
+- id: S01
+  filename: sector-hospitality.webp
+  relative_path: assets/images/sectors/hospitality/sector-hospitality.webp
+  page: Sectores
+  section: Hoteles y turismo
+  role: Hotel mediterráneo
+  priority: P1
+  target_aspect_ratio: '16:10'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Mallorca_hotel_2.jpg
+  source_provider: Wikimedia Commons
+  author: Killarnee
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Mallorca hotel 2.jpg» — Killarnee, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado y WebP) distribuida bajo
+    la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Mallorca hotel 2.jpg
+  original_dimensions: 8032x2490
+  output_dimensions: 1600x1000
+  output_size_bytes: 171164
+  alt_es: Complejo hotelero mediterráneo con piscina exterior, palmeras y bloque de habitaciones
+  replacement_required: false
+  notes: 'Mallorca. El recorte elimina el rótulo comercial del hotel y un logotipo de restauración. No es un cliente ni un proyecto de BAFRAS: no asociarlo en la web a ningún proyecto.'
+  retrieved: '2026-11-02'
+  original_sha1: 6dbf8ae46b208a3fa7f47ac09cba87ea73b1d06a
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/2/2e/Mallorca_hotel_2.jpg
+- id: S02
+  filename: sector-industry.webp
+  relative_path: assets/images/sectors/industry/sector-industry.webp
+  page: Sectores
+  section: Industria
+  role: Proceso productivo
+  priority: P1
+  target_aspect_ratio: '16:10'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:APMC_Linie_2.jpg
+  source_provider: Wikimedia Commons
+  author: Laempe
+  license: CC BY-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-sa/3.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «APMC Linie 2.jpg» — Laempe, Wikimedia Commons, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Obra derivada (recorte, redimensionado y WebP) distribuida bajo la misma
+    licencia CC BY-SA 3.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: APMC Linie 2.jpg
+  original_dimensions: 2048x1536
+  output_dimensions: 1600x1000
+  output_size_bytes: 175066
+  alt_es: Línea de producción automatizada en una nave industrial
+  replacement_required: false
+  notes: La marca del fabricante de la línea aparece pequeña en los equipos.
+  retrieved: '2026-11-02'
+  original_sha1: bd2b367be6d19593b121e2f76dc98449e8b19f4a
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/APMC_Linie_2.jpg
+- id: S03
+  filename: sector-sports.webp
+  relative_path: assets/images/sectors/sports/sector-sports.webp
+  page: Sectores
+  section: Instalaciones deportivas
+  role: Piscina climatizada
+  priority: P2
+  target_aspect_ratio: '16:10'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Kuopion_uusi_uimahalli.jpg
+  source_provider: Wikimedia Commons
+  author: kallerna
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Kuopion uusi uimahalli.jpg» — kallerna, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado y WebP) distribuida
+    bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Kuopion uusi uimahalli.jpg
+  original_dimensions: 3000x2000
+  output_dimensions: 1600x1000
+  output_size_bytes: 235298
+  alt_es: Piscina cubierta climatizada de 50 m con estructura metálica de cubierta
+  replacement_required: false
+  notes: Kuopio (Finlandia). Aparecen bañistas a pequeña escala, no identificables.
+  retrieved: '2026-11-02'
+  original_sha1: 1e833fa6dd06fb36ff5504f91fa2434fafe703ab
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/8/85/Kuopion_uusi_uimahalli.jpg
+- id: S04
+  filename: sector-tertiary.webp
+  relative_path: assets/images/sectors/tertiary/sector-tertiary.webp
+  page: Sectores
+  section: Terciario
+  role: Edificio de oficinas / tecnológico
+  priority: P2
+  target_aspect_ratio: '16:10'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:Edifici_Parc_Bit.JPG
+  source_provider: Wikimedia Commons
+  author: Chixoy
+  license: Public domain
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: 'Imagen: Chixoy (Public domain), vía Wikimedia Commons. Crédito voluntario.'
+  original_filename: Edifici Parc Bit.JPG
+  original_dimensions: 2048x1536
+  output_dimensions: 1600x1000
+  output_size_bytes: 197356
+  alt_es: Edificio de oficinas de fachada acristalada con estructura metálica en un parque tecnológico
+  replacement_required: false
+  notes: Edificio del ParcBIT (Palma, 2003), dominio público. Se descartó una alternativa con logotipos corporativos visibles.
+  retrieved: '2026-11-02'
+  original_sha1: 3b03e99b8692f0624767e56c2426b2d074957f66
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/9/9a/Edifici_Parc_Bit.JPG
+- id: S05
+  filename: sector-infrastructure.webp
+  relative_path: assets/images/sectors/infrastructure/sector-infrastructure.webp
+  page: Sectores
+  section: Infraestructuras
+  role: Infraestructura técnica
+  priority: P2
+  target_aspect_ratio: '16:10'
+  status: READY
+  source_url: https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Kl%C3%A4ranlage_--_2014_--_0001.jpg
+  source_provider: Wikimedia Commons
+  author: Dietmar Rabich
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  commercial_use_verified: true
+  modification_allowed: true
+  attribution_required: true
+  attribution_text: «Dülmen, Kläranlage -- 2014 -- 0001.jpg» — Dietmar Rabich, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Obra derivada (recorte, redimensionado y
+    WebP) distribuida bajo la misma licencia CC BY-SA 4.0. Recortada y convertida a WebP por BAFRAS Engineering.
+  original_filename: Dülmen, Kläranlage -- 2014 -- 0001.jpg
+  original_dimensions: 5070x3380
+  output_dimensions: 1600x1000
+  output_size_bytes: 311942
+  alt_es: Vista aérea de una estación depuradora con decantadores, edificios técnicos y obras de ampliación
+  replacement_required: false
+  notes: EDAR de Dülmen (Alemania).
+  retrieved: '2026-11-02'
+  original_sha1: 99d8685c1c9aa5fb15e6e13d0ea78b7cb83fd47d
+  original_in_package: true
+  original_download_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/D%C3%BClmen%2C_Kl%C3%A4ranlage_--_2014_--_0001.jpg
+- id: X01
+  filename: experience-uib-campus.webp
+  relative_path: assets/images/experience/uib/experience-uib-campus.webp
+  page: Experiencia
+  section: UIB – transición energética
+  role: Evidencia de experiencia previa
+  priority: —
+  target_aspect_ratio: '16:9'
+  status: PENDING_ORIGINAL
+  source_url: null
+  source_provider: null
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: false
+  attribution_required: null
+  attribution_text: null
+  original_filename: null
+  original_dimensions: null
+  output_dimensions: null
+  output_size_bytes: null
+  alt_es: Instalación energética del campus de la Universitat de les Illes Balears
+  replacement_required: true
+  notes: 'Requiere material auténtico y autorizado. Fuentes potenciales en Commons (sin descargar): «Col·lectors solars de tub de buit.JPG» (CC BY-SA 3.0, Chixoy) y «Biblioteca edifici Anselm Turmeda (UIB).jpg»
+    (CC BY-SA 4.0, Kuranes). Solo valdrían como imagen del campus, nunca como evidencia de la intervención del equipo.'
+  retrieved: null
+  original_sha1: null
+  original_in_package: null
+- id: X02
+  filename: experience-hotel-formentor.webp
+  relative_path: assets/images/experience/mep-buildings/experience-hotel-formentor.webp
+  page: Experiencia
+  section: Edificios e instalaciones – Hotel Formentor
+  role: Evidencia de experiencia previa
+  priority: —
+  target_aspect_ratio: '16:9'
+  status: PENDING_ORIGINAL
+  source_url: null
+  source_provider: null
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: false
+  attribution_required: null
+  attribution_text: null
+  original_filename: null
+  original_dimensions: null
+  output_dimensions: null
+  output_size_bytes: null
+  alt_es: Instalaciones del Hotel Formentor
+  replacement_required: true
+  notes: 'Requiere material auténtico y autorizado (propiedad u operador del hotel). En Commons existen «HotelFormentor2004.jpg» y «HotelFormentorStrand2004.jpg» (CC BY-SA 3.0, Joergsam, 1600×1200, de 2004):
+    son fotos turísticas, no material técnico, y no deben usarse como evidencia.'
+  retrieved: null
+  original_sha1: null
+  original_in_package: null
+- id: X03
+  filename: experience-offshore-wind.webp
+  relative_path: assets/images/experience/offshore/experience-offshore-wind.webp
+  page: Experiencia
+  section: Eólica internacional
+  role: Evidencia de experiencia previa
+  priority: —
+  target_aspect_ratio: '16:9'
+  status: PENDING_ORIGINAL
+  source_url: null
+  source_provider: null
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: false
+  attribution_required: null
+  attribution_text: null
+  original_filename: null
+  original_dimensions: null
+  output_dimensions: null
+  output_size_bytes: null
+  alt_es: Infraestructura eléctrica de un parque eólico marino
+  replacement_required: true
+  notes: 'Requiere material del proyecto real con autorización del promotor. Candidatos genéricos en Commons: «HGÜ Offshore platform.jpg» (CC BY 3.0, Dirk Hochhaus), «Offshore Transformator Plattform BARD
+    1.JPG» (CC BY-SA 3.0) y «HornsRev Blavandshuk.jpg» (CC BY-SA 3.0). No deben presentarse como el proyecto del equipo.'
+  retrieved: null
+  original_sha1: null
+  original_in_package: null

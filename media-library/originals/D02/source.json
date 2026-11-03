@@ -1,0 +1,42 @@
+{
+ "id": "D02",
+ "commons": {
+  "title": "Flow measurement with dP cell.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Flow_measurement_with_dP_cell.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flow_measurement_with_dP_cell.jpg",
+  "w": 3264,
+  "h": 2448,
+  "size": 943097,
+  "sha1": "4bd66d2ad7a08ca68ffb239af0afd88987b4fc11",
+  "mime": "image/jpeg",
+  "Artist": "Bitjungle",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2015-06-19 13:09:48",
+  "ImageDescription": "A differential pressure transmitter connected to a orifice plate."
+ },
+ "processing": {
+  "src_used": "D02__Flow_measurement_with_dP_cell.jpg",
+  "src_dims": [
+   3264,
+   2448
+  ],
+  "crop_box": [
+   0,
+   0,
+   3264,
+   2448
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 111866,
+  "path": "capabilities/digital/instrumentation/digital-industrial-instrumentation.webp"
+ }
+}

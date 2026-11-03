@@ -1,0 +1,41 @@
+{
+ "id": "I06",
+ "commons": {
+  "title": "Renovation of Building 107 First Floor HVAC Plan, March 28, 1994 - DPLA - 08bb6ced59585de1fa4dbc2a15d93a99.tiff",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Renovation_of_Building_107_First_Floor_HVAC_Plan%2C_March_28%2C_1994_-_DPLA_-_08bb6ced59585de1fa4dbc2a15d93a99.tiff",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Renovation_of_Building_107_First_Floor_HVAC_Plan,_March_28,_1994_-_DPLA_-_08bb6ced59585de1fa4dbc2a15d93a99.tiff",
+  "w": 7200,
+  "h": 4802,
+  "size": 553806,
+  "sha1": "e201bc5c0392f615af0e3599f390460b737a52c0",
+  "mime": "image/tiff",
+  "Artist": "Department of Homeland Security. U.S. Coast Guard. 3/1/2003",
+  "Credit": "This file was contributed to Wikimedia Commons by National Archives and Records Administration as part of a cooperation project. The donation was facilitated by the Digital Public Library of America, via its partner Digital Public Library of America. Record in source catalog DPLA identifier: 08bb6ced59585de1fa4dbc2a15d93a99 National Archives Identifier: 167064389",
+  "LicenseShortName": "Public domain",
+  "UsageTerms": "Public domain",
+  "AttributionRequired": "false",
+  "Restrictions": "",
+  "Copyrighted": "False",
+  "DateTimeOriginal": "2004-01-01/2004-12-31",
+  "ImageDescription": ""
+ },
+ "processing": {
+  "src_used": "I06__Renovation_of_Building_107_First_Floor_HVAC_Plan__March_28__1994_-_DPLA_-_08bb6ced59585de1fa4dbc2a15d93a99.tiff",
+  "src_dims": [
+   7200,
+   4802
+  ],
+  "crop_box": [
+   1983,
+   696,
+   5505,
+   3337
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 253560,
+  "path": "capabilities/infrastructure/engineering/infra-technical-plans.webp"
+ }
+}

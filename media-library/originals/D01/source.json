@@ -1,0 +1,42 @@
+{
+ "id": "D01",
+ "commons": {
+  "title": "MITSIBISHI PLC Panel.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/MITSIBISHI_PLC_Panel.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:MITSIBISHI_PLC_Panel.jpg",
+  "w": 3264,
+  "h": 2448,
+  "size": 4021036,
+  "sha1": "6d9fc4396fa9ba26b0b88ffd2a00b037a9309286",
+  "mime": "image/jpeg",
+  "Artist": "Mixabest",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 3.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2008-03-07 05:01:35",
+  "ImageDescription": "Шкаф системы управления на базе ПЛК MITSUBISHI"
+ },
+ "processing": {
+  "src_used": "D01__MITSIBISHI_PLC_Panel.jpg",
+  "src_dims": [
+   3264,
+   2448
+  ],
+  "crop_box": [
+   0,
+   0,
+   3264,
+   2448
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 205578,
+  "path": "capabilities/digital/automation/digital-plc-control-panel.webp"
+ }
+}

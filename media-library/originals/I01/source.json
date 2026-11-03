@@ -1,0 +1,42 @@
+{
+ "id": "I01",
+ "commons": {
+  "title": "Mcc room.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Mcc_room.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mcc_room.jpg",
+  "w": 4574,
+  "h": 3136,
+  "size": 887160,
+  "sha1": "d4c83a38273e971ac5cb81beaeae8694823f9b31",
+  "mime": "image/jpeg",
+  "Artist": "Achim Hering",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY 3.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "UsageTerms": "Creative Commons Attribution 3.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "1989",
+  "ImageDescription": "Motor control centre (MCC) Room in a pulp and paper mill in Canada. Typically, these cabinets have holes underneath, going through the concrete floor, which match the footprint of the cabinets. These openings must be firestopped. Cable changes must b"
+ },
+ "processing": {
+  "src_used": "I01__Mcc_room.jpg",
+  "src_dims": [
+   4574,
+   3136
+  ],
+  "crop_box": [
+   196,
+   0,
+   4378,
+   3136
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 81562,
+  "path": "capabilities/infrastructure/electrical/infra-electrical-distribution.webp"
+ }
+}

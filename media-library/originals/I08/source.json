@@ -1,0 +1,42 @@
+{
+ "id": "I08",
+ "commons": {
+  "title": "Systems testing in the service switchgear room of a power substation located in Queens. (CS179, 08-13-2018) (44048210052).jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Systems_testing_in_the_service_switchgear_room_of_a_power_substation_located_in_Queens._%28CS179%2C_08-13-2018%29_%2844048210052%29.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Systems_testing_in_the_service_switchgear_room_of_a_power_substation_located_in_Queens._(CS179,_08-13-2018)_(44048210052).jpg",
+  "w": 4608,
+  "h": 3456,
+  "size": 2532809,
+  "sha1": "b753fac4962c0eacec78d8612a76b7cb7c44bba5",
+  "mime": "image/jpeg",
+  "Artist": "MTA Capital Construction Mega Projects",
+  "Credit": "Systems testing in the service switchgear room of a power substation located in Queens. (CS179, 08-13-2018)",
+  "LicenseShortName": "CC BY 2.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "UsageTerms": "Creative Commons Attribution 2.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2018-08-13 09:29",
+  "ImageDescription": "Systems testing in the service switchgear room of a power substation located in Queens. (CS179, 08-13-2018)"
+ },
+ "processing": {
+  "src_used": "_work/I08_work.jpg",
+  "src_dims": [
+   3200,
+   2400
+  ],
+  "crop_box": [
+   0,
+   0,
+   2560,
+   1920
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 141678,
+  "path": "capabilities/infrastructure/construction/infra-commissioning-testing.webp"
+ }
+}

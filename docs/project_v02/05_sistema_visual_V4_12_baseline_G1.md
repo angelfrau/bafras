@@ -647,7 +647,7 @@ La auditoría B01 documenta 33 imágenes en `assets/images/`: logo/símbolo y va
 
 Este apartado desarrolla y precisa §15. Es **la propuesta operativa vigente de C03**; §14 es antecedente no aprobado. Fuente factual: `B02_PREP_01_INVENTARIO_RECURSOS_VISUALES.md` (03/11/2026), inventario de la biblioteca `assets/images/BAFRAS_Website_Visual_Assets_V1/` (LIB). La inspección del informe acredita 55 archivos de imagen: 26 fotografías con original y WebP, más 3 gráficos DEMO WebP. **No se ha accedido en esta revisión a los propios archivos binarios de LIB ni a sus hojas de contacto**; la selección es razonada a partir de las descripciones y observaciones del informe, no aprobación de recortes. Los ID `Rxx` pertenecen al inventario, no a D03; `lib:H01` tampoco significa el bloque editorial H01. D03 conserva autoridad sobre contenido y orden; C01/C02 sobre composición; C04 cierra las maquetas.
 
-Rutas de las imágenes WebP: prefijar a cada ruta de la tabla el directorio `assets/images/BAFRAS_Website_Visual_Assets_V1/`. No son todavía rutas públicas ni recursos enlazados. No mover/copiar archivos ni editar HTML en esta fase.
+Rutas de las imágenes WebP: las rutas de la tabla son relativas a la raíz del repositorio (biblioteca reorganizada en WEB-00 FINAL; fuentes y manifiestos en `media-library/`; antes se prefijaba `assets/images/BAFRAS_Website_Visual_Assets_V1/`). No son todavía rutas públicas ni recursos enlazados. No mover/copiar archivos ni editar HTML en esta fase.
 
 **Selección visual ≠ autorización de publicación.** Las licencias CC BY/CC BY-SA, CC0, dominio público y «Propio» son declaraciones del paquete; deben contrastarse por recurso, incluida atribución, modificaciones, personas y marcas. Ninguna fotografía de tercero prueba un proyecto BAFRAS.
 
@@ -751,7 +751,7 @@ Se generaron dos láminas de **bocetos de integración** con las imágenes reale
 
 ### 17.2 Matriz individual — selección y emplazamiento
 
-Las rutas son relativas a `assets/images/BAFRAS_Website_Visual_Assets_V1/` en el repositorio; son rutas de biblioteca, **no URLs de producción**. Los IDs R proceden de la auditoría B02-PREP-01. El formato de todas las imágenes es WebP; salvo R24 (16:9) y R25–R29 (8:5), las preparadas son 4:3.
+Las rutas son relativas a la raíz del repositorio (antes de WEB-00 FINAL, a `assets/images/BAFRAS_Website_Visual_Assets_V1/`); son rutas de biblioteca, **no URLs de producción**. Los IDs R proceden de la auditoría B02-PREP-01. El formato de todas las imágenes es WebP; salvo R24 (16:9) y R25–R29 (8:5), las preparadas son 4:3.
 
 | ID | Archivo WebP relativo a LIB | Bloque D03 | Decisión tras ver imagen | Integración, ratio y tratamiento | Alternativa |
 |---|---|---|---|---|---|
@@ -842,7 +842,7 @@ El promotor indica que las imágenes son libres para utilizar. Se acepta como **
 |---|---|
 | Página y bloque D03 | Inicio · **H01**, edición D03 02/11/2026 |
 | Imagen aprobada | **R24 / lib:H01** — `home-hero-engineering.webp` |
-| Ruta de biblioteca | `assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/home/hero/home-hero-engineering.webp` (relativa a `bafras/`) |
+| Ruta de biblioteca | `assets/images/home/hero/home-hero-engineering.webp` (relativa a `bafras/`) |
 | Archivo preparado | WebP, **1920 × 1080 (16:9)**, sin transparencia; fotografía de sala industrial con bombas y tuberías rojas |
 | Composición | **Hero asimétrico ya aprobado**: texto y CTA en zona independiente; fotografía en región visual lateral de escritorio; en móvil, texto antes de imagen |
 | Tratamiento | Sin texto superpuesto, sin recoloración corporativa, sin afirmar que la instalación pertenece a BAFRAS; recorte con bombas y perspectiva reconocibles |

@@ -1,0 +1,42 @@
+{
+ "id": "S02",
+ "commons": {
+  "title": "APMC Linie 2.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/APMC_Linie_2.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:APMC_Linie_2.jpg",
+  "w": 2048,
+  "h": 1536,
+  "size": 467988,
+  "sha1": "bd2b367be6d19593b121e2f76dc98449e8b19f4a",
+  "mime": "image/jpeg",
+  "Artist": "Laempe",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 3.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2007",
+  "ImageDescription": "Laempe &amp; Mössner GmbH The pictures shows a typical Product of the company."
+ },
+ "processing": {
+  "src_used": "_work/S02_work.jpg",
+  "src_dims": [
+   2048,
+   1536
+  ],
+  "crop_box": [
+   0,
+   205,
+   2048,
+   1485
+  ],
+  "output_dims": [
+   1600,
+   1000
+  ],
+  "bytes": 175066,
+  "path": "sectors/industry/sector-industry.webp"
+ }
+}

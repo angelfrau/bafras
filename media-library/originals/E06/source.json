@@ -1,0 +1,42 @@
+{
+ "id": "E06",
+ "commons": {
+  "title": "Heat Pump-QQ.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Heat_Pump-QQ.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Heat_Pump-QQ.jpg",
+  "w": 2048,
+  "h": 1536,
+  "size": 861269,
+  "sha1": "f6bce7f3bd05c4ece88d3819345493b6d24793cc",
+  "mime": "image/jpeg",
+  "Artist": "Dfpearson",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2020-11-06",
+  "ImageDescription": "Heat Pump-QQ"
+ },
+ "processing": {
+  "src_used": "E06__Heat_Pump-QQ.jpg",
+  "src_dims": [
+   2048,
+   1536
+  ],
+  "crop_box": [
+   0,
+   0,
+   2048,
+   1536
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 245716,
+  "path": "capabilities/energy/electrification/energy-heat-pumps.webp"
+ }
+}

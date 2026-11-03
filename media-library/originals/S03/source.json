@@ -1,0 +1,42 @@
+{
+ "id": "S03",
+ "commons": {
+  "title": "Kuopion uusi uimahalli.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Kuopion_uusi_uimahalli.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kuopion_uusi_uimahalli.jpg",
+  "w": 3000,
+  "h": 2000,
+  "size": 1211558,
+  "sha1": "1e833fa6dd06fb36ff5504f91fa2434fafe703ab",
+  "mime": "image/jpeg",
+  "Artist": "kallerna",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2020-09-16 17:51:29",
+  "ImageDescription": "Kuopio swimming hall."
+ },
+ "processing": {
+  "src_used": "_work/S03_work.jpg",
+  "src_dims": [
+   3000,
+   2000
+  ],
+  "crop_box": [
+   0,
+   62,
+   3000,
+   1938
+  ],
+  "output_dims": [
+   1600,
+   1000
+  ],
+  "bytes": 235298,
+  "path": "sectors/sports/sector-sports.webp"
+ }
+}

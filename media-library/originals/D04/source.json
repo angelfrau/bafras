@@ -1,0 +1,41 @@
+{
+ "id": "D04",
+ "commons": {
+  "title": "Renovations at APS-2 Zutendaal (8095456).jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Renovations_at_APS-2_Zutendaal_%288095456%29.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Renovations_at_APS-2_Zutendaal_(8095456).jpg",
+  "w": 6000,
+  "h": 4000,
+  "size": 5307099,
+  "sha1": "eb808cf6c5e8a43acba005e3264c12b0f4c61d67",
+  "mime": "image/jpeg",
+  "Artist": "U.S. Army photo by Sandra Wilson",
+  "Credit": "This image was released by the United States Army with the ID 231013-A-PJ134-6098 (next). This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing. العربية ∙ বাংলা ∙ Bahasa Indonesia ∙ Bahaso Jambi ∙ Deutsch ∙ Deutsch (Sie-Form) ∙ English ∙ español ∙ euskara ∙ فارسی ∙ français ∙ italiano ∙ 日本語 ∙ 한국어 ∙ македонски ∙ മലയാളം ",
+  "LicenseShortName": "Public domain",
+  "UsageTerms": "Public domain",
+  "AttributionRequired": "false",
+  "Restrictions": "",
+  "Copyrighted": "False",
+  "DateTimeOriginal": "Taken on 13 October 2023",
+  "ImageDescription": "A contract worker scans the screen display of the new building management system for the freshly renovated warehouse 50039 at Army Prepositioned Stocks-2 Zutendaal, Belgium, Oct. 13, 2023. The management system aids in rapid detection of potential me"
+ },
+ "processing": {
+  "src_used": "D04__Renovations_at_APS-2_Zutendaal_(8095456).jpg",
+  "src_dims": [
+   6000,
+   4000
+  ],
+  "crop_box": [
+   33,
+   0,
+   5367,
+   4000
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 102908,
+  "path": "capabilities/digital/scada/digital-building-management.webp"
+ }
+}

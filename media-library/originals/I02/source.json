@@ -1,0 +1,41 @@
+{
+ "id": "I02",
+ "commons": {
+  "title": "Katri vala lampopumppu.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Katri_vala_lampopumppu.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Katri_vala_lampopumppu.jpg",
+  "w": 3504,
+  "h": 2336,
+  "size": 6439994,
+  "sha1": "5e22ccafc4cc2283e30de3210d26d4a8519d023f",
+  "mime": "image/jpeg",
+  "Credit": "Helen Ltd mediabank",
+  "LicenseShortName": "CC BY-SA 3.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2007-03-20",
+  "ImageDescription": "Katri Vala Heating and Cooling plant, Helsinki, Finland"
+ },
+ "processing": {
+  "src_used": "I02__Katri_vala_lampopumppu.jpg",
+  "src_dims": [
+   3504,
+   2336
+  ],
+  "crop_box": [
+   370,
+   0,
+   3485,
+   2336
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 283864,
+  "path": "capabilities/infrastructure/mechanical/infra-hvac-plant.webp"
+ }
+}

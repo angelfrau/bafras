@@ -16,3 +16,7 @@ venv/
 .env
 .env.*
 !.env.example
+
+# Originales fotográficos de terceros (≈95 MB): copia local verificada por SHA-1 (originals/<ID>/source.json)
+# y recuperables desde original_download_url del manifiesto. Los originales propios (team/, diagrams/) sí se versionan.
+media-library/originals/*/*_original.*

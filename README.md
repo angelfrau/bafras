@@ -37,7 +37,9 @@ No existe backend, framework frontend, build system ni generacion de HTML en est
 │   └── validate.py
 ├── tests/
 │   └── test_structure.py
+├── media-library/        # fuentes de imagen no publicables: manifiestos, originales, generadores
 ├── docs/
+│   └── project_v02/      # documentación vigente V2 (D02–D05, acta G1, maquetas, auditorías)
 ├── CNAME
 ├── pyproject.toml
 └── README.md
@@ -73,7 +75,10 @@ En V0.5 gran parte del contenido comercial todavia vive directamente en `index.h
 
 ## Visual Assets
 
-Los assets estan organizados bajo `assets/images/` por uso: marca, home, experiencia, equipo y miscelanea. No se optimizan ni convierten imagenes en este pase.
+- `assets/images/`: imágenes publicables optimizadas para web: `brand/` (logos, símbolos, favicon, avatar), `team/` (retratos usados por el sitio), `home/`, `capabilities/`, `sectors/` (derivados WebP de la biblioteca V1, en las rutas `relative_path` de `media-library/manifests/media-manifest.yaml`) y `experience/` (fotografías propias pendientes de autorización).
+- `media-library/`: fuentes no publicables. Contiene `manifests/` (procedencia, licencia, autor y atribución), `reports/`, `originals/<ID>/source.json`, `originals/team/` y `originals/diagrams/` (originales propios) y `generators/` (gráficos sintéticos). Los originales de terceros (`originals/<ID>/<ID>_original.*`) se guardan solo en local y se recuperan y verifican según `media-library/README.md`.
+- Los documentos descargables, como los catálogos PDF sectoriales, irán en `assets/downloads/` cuando existan (D03 03.SEC.CAT-01; D04 §11).
+- Para sustituir una fotografía: actualizar el derivado y su entrada del manifiesto, manteniendo el identificador estable.
 
 ## Deployment
 

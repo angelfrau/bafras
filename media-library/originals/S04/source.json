@@ -1,0 +1,40 @@
+{
+ "id": "S04",
+ "commons": {
+  "title": "Edifici Parc Bit.JPG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Edifici_Parc_Bit.JPG",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Edifici_Parc_Bit.JPG",
+  "w": 2048,
+  "h": 1536,
+  "size": 1107075,
+  "sha1": "3b03e99b8692f0624767e56c2426b2d074957f66",
+  "mime": "image/jpeg",
+  "Artist": "Chixoy",
+  "Credit": "Self-photographed",
+  "LicenseShortName": "Public domain",
+  "UsageTerms": "Public domain",
+  "AttributionRequired": "false",
+  "Restrictions": "",
+  "ImageDescription": "Parc Bit builiding",
+  "DateTimeOriginal": "2003-01-11"
+ },
+ "processing": {
+  "src_used": "S04__Edifici_Parc_Bit.jpg",
+  "src_dims": [
+   2048,
+   1536
+  ],
+  "crop_box": [
+   0,
+   128,
+   2048,
+   1408
+  ],
+  "output_dims": [
+   1600,
+   1000
+  ],
+  "bytes": 197356,
+  "path": "sectors/tertiary/sector-tertiary.webp"
+ }
+}

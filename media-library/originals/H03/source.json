@@ -1,0 +1,42 @@
+{
+ "id": "H03",
+ "commons": {
+  "title": "Teknisk rom (School build. Lilleh. Norway 2024-09. Mechan. room Air ventil. Hot water Heat recov. unit) Hovedfordeler Varmeanlegg Ventilasjon Aggregat Isol. rør kanaler elkabler stige Varmegjenvinner Avtrekksvifte luftfilter lager vas.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Teknisk_rom_%28School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit%29_Hovedfordeler_Varmeanlegg_Ventilasjon_Aggregat_Isol._r%C3%B8r_kanaler_elkabler_stige_Varmegjenvinner_Avtrekksvifte_luftfilter_lager_vas.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Teknisk_rom_(School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit)_Hovedfordeler_Varmeanlegg_Ventilasjon_Aggregat_Isol._r%C3%B8r_kanaler_elkabler_stige_Varmegjenvinner_Avtrekksvifte_luftfilter_lager_vas.jpg",
+  "w": 4032,
+  "h": 3024,
+  "size": 2843702,
+  "sha1": "c76866d043642b3c73b6203ee96e62306c2528f4",
+  "mime": "image/jpeg",
+  "Artist": "Wolfmann",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2024-09-24 09:45:48",
+  "ImageDescription": "Machines and equipment in the mechanical room (machine room) of a school building in Lillehammer, Norway, with a generator for the heating system, ventilation and air conditioning. The room contains the following, among other things: Main distributor"
+ },
+ "processing": {
+  "src_used": "H03__Teknisk_rom_Lillehammer_Wolfmann.jpg",
+  "src_dims": [
+   4032,
+   3024
+  ],
+  "crop_box": [
+   0,
+   0,
+   4032,
+   3024
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 188780,
+  "path": "home/capabilities/home-cap-infrastructure.webp"
+ }
+}

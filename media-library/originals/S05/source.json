@@ -1,0 +1,42 @@
+{
+ "id": "S05",
+ "commons": {
+  "title": "Dülmen, Kläranlage -- 2014 -- 0001.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/D%C3%BClmen%2C_Kl%C3%A4ranlage_--_2014_--_0001.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Kl%C3%A4ranlage_--_2014_--_0001.jpg",
+  "w": 5070,
+  "h": 3380,
+  "size": 13111694,
+  "sha1": "99d8685c1c9aa5fb15e6e13d0ea78b7cb83fd47d",
+  "mime": "image/jpeg",
+  "Artist": "Dietmar Rabich",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "Taken on 7 June 2014, 12:49",
+  "ImageDescription": "Wastewater treatment plant, Dülmen, North Rhine-Westphalia, Germany"
+ },
+ "processing": {
+  "src_used": "_work/S05_work.jpg",
+  "src_dims": [
+   3200,
+   2133
+  ],
+  "crop_box": [
+   0,
+   66,
+   3200,
+   2066
+  ],
+  "output_dims": [
+   1600,
+   1000
+  ],
+  "bytes": 311942,
+  "path": "sectors/infrastructure/sector-infrastructure.webp"
+ }
+}

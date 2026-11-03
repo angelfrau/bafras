@@ -2,7 +2,7 @@
 
 Fecha: **03/11/2026**, Europe/Madrid. Alcance autorizado: documentación e inspección. **G1 no iniciado ni completado. No se han diseñado páginas, integrado imágenes ni avanzado a B02.1.**
 
-Las rutas se expresan respecto a `bafras/`. Biblioteca inspeccionada: `assets/images/BAFRAS_Website_Visual_Assets_V1/`, abreviada **LIB**. Los identificadores `R01…R55` son de esta inspección; `lib:H01`, `lib:I01`, etc. pertenecen al paquete y **no son los IDs de bloques editoriales D03**. La coincidencia entre algunos nombres no establece equivalencia editorial.
+Las rutas se expresan respecto a `bafras/`. Biblioteca inspeccionada: `media-library/`, abreviada **LIB**. Los identificadores `R01…R55` son de esta inspección; `lib:H01`, `lib:I01`, etc. pertenecen al paquete y **no son los IDs de bloques editoriales D03**. La coincidencia entre algunos nombres no establece equivalencia editorial.
 
 Clasificación de conclusiones: **VERIFICADO** = lectura, inspección visual o comprobación local; **INFERIDO** = deducción razonada; **NO VERIFICADO** = requiere comprobación adicional; **RECOMENDACIÓN** = propuesta posterior. La calidad visual se valora de forma aparente en las hojas de contactos, sin certificar nitidez de cada original al 100 %.
 
@@ -57,61 +57,61 @@ El siguiente inventario contiene **los 55 archivos existentes**, no las 36 entra
 
 | ID / paquete | Ruta relativa a LIB (incluye nombre) | Formato | Dimensiones / aspecto | Tamaño | Orient. / alfa | Meta autoría/licencia potencial |
 |---|---|---|---|---|---|---|
-| R01 / D01 | [assets/images/capabilities/digital/automation/digital-plc-control-panel.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/digital/automation/digital-plc-control-panel.webp) | WEBP | 1600×1200 · 4:3 | 200.8 KiB | H / no | No embebidos detectados |
-| R02 / D06 | [assets/images/capabilities/digital/data/digital-data-analysis.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/digital/data/digital-data-analysis.webp) | WEBP | 1600×1200 · 4:3 | 91.6 KiB | H / no | No embebidos detectados |
-| R03 / D02 | [assets/images/capabilities/digital/instrumentation/digital-industrial-instrumentation.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/digital/instrumentation/digital-industrial-instrumentation.webp) | WEBP | 1600×1200 · 4:3 | 109.2 KiB | H / no | No embebidos detectados |
-| R04 / D04 | [assets/images/capabilities/digital/scada/digital-building-management.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/digital/scada/digital-building-management.webp) | WEBP | 1600×1200 · 4:3 | 100.5 KiB | H / no | No embebidos detectados |
-| R05 / D03 | [assets/images/capabilities/digital/scada/digital-scada-screen.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/digital/scada/digital-scada-screen.webp) | WEBP | 1600×1200 · 4:3 | 109.9 KiB | H / no | No embebidos detectados |
-| R06 / E01 | [assets/images/capabilities/energy/analysis/energy-demand-analysis.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/energy/analysis/energy-demand-analysis.webp) | WEBP | 1600×1200 · 4:3 | 62.6 KiB | H / no | No embebidos detectados |
-| R07 / E05 | [assets/images/capabilities/energy/electrification/energy-ev-charging.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/energy/electrification/energy-ev-charging.webp) | WEBP | 1600×1200 · 4:3 | 244.3 KiB | H / no | No embebidos detectados |
-| R08 / E06 | [assets/images/capabilities/energy/electrification/energy-heat-pumps.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/energy/electrification/energy-heat-pumps.webp) | WEBP | 1600×1200 · 4:3 | 240.0 KiB | H / no | No embebidos detectados |
-| R09 / E04 | [assets/images/capabilities/energy/generation/energy-electrical-infrastructure.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/energy/generation/energy-electrical-infrastructure.webp) | WEBP | 1600×1200 · 4:3 | 110.6 KiB | H / no | No embebidos detectados |
-| R10 / E02 | [assets/images/capabilities/energy/generation/energy-pv-rooftop.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/energy/generation/energy-pv-rooftop.webp) | WEBP | 1600×1200 · 4:3 | 368.8 KiB | H / no | No embebidos detectados |
-| R11 / E07 | [assets/images/capabilities/energy/management/energy-management-dashboard.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/energy/management/energy-management-dashboard.webp) | WEBP | 1600×1200 · 4:3 | 67.6 KiB | H / no | No embebidos detectados |
-| R12 / E03 | [assets/images/capabilities/energy/storage/energy-battery-storage.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/energy/storage/energy-battery-storage.webp) | WEBP | 1600×1200 · 4:3 | 109.2 KiB | H / no | No embebidos detectados |
-| R13 / I08 | [assets/images/capabilities/infrastructure/construction/infra-commissioning-testing.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/construction/infra-commissioning-testing.webp) | WEBP | 1600×1200 · 4:3 | 138.4 KiB | H / no | No embebidos detectados |
-| R14 / I07 | [assets/images/capabilities/infrastructure/construction/infra-construction-site.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/construction/infra-construction-site.webp) | WEBP | 1600×1200 · 4:3 | 126.0 KiB | H / no | No embebidos detectados |
-| R15 / I01 | [assets/images/capabilities/infrastructure/electrical/infra-electrical-distribution.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/electrical/infra-electrical-distribution.webp) | WEBP | 1600×1200 · 4:3 | 79.7 KiB | H / no | No embebidos detectados |
-| R16 / I06 | [assets/images/capabilities/infrastructure/engineering/infra-technical-plans.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/engineering/infra-technical-plans.webp) | WEBP | 1600×1200 · 4:3 | 247.6 KiB | H / no | No embebidos detectados |
-| R17 / I02 | [assets/images/capabilities/infrastructure/mechanical/infra-hvac-plant.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/mechanical/infra-hvac-plant.webp) | WEBP | 1600×1200 · 4:3 | 277.2 KiB | H / no | No embebidos detectados |
-| R18 / I03 | [assets/images/capabilities/infrastructure/mechanical/infra-ventilation-ductwork.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/mechanical/infra-ventilation-ductwork.webp) | WEBP | 1600×1200 · 4:3 | 170.6 KiB | H / no | No embebidos detectados |
-| R19 / I05 | [assets/images/capabilities/infrastructure/plumbing-fire/infra-fire-protection.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/plumbing-fire/infra-fire-protection.webp) | WEBP | 1600×1200 · 4:3 | 182.8 KiB | H / no | No embebidos detectados |
-| R20 / I04 | [assets/images/capabilities/infrastructure/plumbing-fire/infra-plumbing-piping.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/capabilities/infrastructure/plumbing-fire/infra-plumbing-piping.webp) | WEBP | 1600×1200 · 4:3 | 213.8 KiB | H / no | No embebidos detectados |
-| R21 / H05 | [assets/images/home/capabilities/home-cap-digital.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/home/capabilities/home-cap-digital.webp) | WEBP | 1600×1200 · 4:3 | 158.5 KiB | H / no | No embebidos detectados |
-| R22 / H04 | [assets/images/home/capabilities/home-cap-energy.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/home/capabilities/home-cap-energy.webp) | WEBP | 1600×1200 · 4:3 | 133.1 KiB | H / no | No embebidos detectados |
-| R23 / H03 | [assets/images/home/capabilities/home-cap-infrastructure.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/home/capabilities/home-cap-infrastructure.webp) | WEBP | 1600×1200 · 4:3 | 184.4 KiB | H / no | No embebidos detectados |
-| R24 / H01 | [assets/images/home/hero/home-hero-engineering.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/home/hero/home-hero-engineering.webp) | WEBP | 1920×1080 · 16:9 | 217.8 KiB | H / no | No embebidos detectados |
-| R25 / S01 | [assets/images/sectors/hospitality/sector-hospitality.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/sectors/hospitality/sector-hospitality.webp) | WEBP | 1600×1000 · 8:5 | 167.2 KiB | H / no | No embebidos detectados |
-| R26 / S02 | [assets/images/sectors/industry/sector-industry.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/sectors/industry/sector-industry.webp) | WEBP | 1600×1000 · 8:5 | 171.0 KiB | H / no | No embebidos detectados |
-| R27 / S05 | [assets/images/sectors/infrastructure/sector-infrastructure.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/sectors/infrastructure/sector-infrastructure.webp) | WEBP | 1600×1000 · 8:5 | 304.6 KiB | H / no | No embebidos detectados |
-| R28 / S03 | [assets/images/sectors/sports/sector-sports.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/sectors/sports/sector-sports.webp) | WEBP | 1600×1000 · 8:5 | 229.8 KiB | H / no | No embebidos detectados |
-| R29 / S04 | [assets/images/sectors/tertiary/sector-tertiary.webp](../../assets/images/BAFRAS_Website_Visual_Assets_V1/assets/images/sectors/tertiary/sector-tertiary.webp) | WEBP | 1600×1000 · 8:5 | 192.7 KiB | H / no | No embebidos detectados |
-| R30 / D01 | [originals/D01/D01_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D01/D01_original.jpg) | JPEG | 3264×2448 · 4:3 | 3.83 MiB | H / no | No embebidos detectados |
-| R31 / D02 | [originals/D02/D02_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D02/D02_original.jpg) | JPEG | 3264×2448 · 4:3 | 921.0 KiB | H / no | No embebidos detectados |
-| R32 / D03 | [originals/D03/D03_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D03/D03_original.jpg) | JPEG | 4288×2848 · 134:89 | 2.63 MiB | H / no | Sí |
-| R33 / D04 | [originals/D04/D04_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D04/D04_original.jpg) | JPEG | 6000×4000 · 3:2 | 5.06 MiB | H / no | Sí |
-| R34 / E02 | [originals/E02/E02_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E02/E02_original.jpg) | JPEG | 4032×2268 · 16:9 | 3.85 MiB | H / no | No embebidos detectados |
-| R35 / E03 | [originals/E03/E03_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E03/E03_original.jpg) | JPEG | 5312×2988 · 16:9 | 6.88 MiB | H / no | Sí |
-| R36 / E04 | [originals/E04/E04_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E04/E04_original.jpg) | JPEG | 4608×3456 · 4:3 | 4.00 MiB | H / no | Sí |
-| R37 / E05 | [originals/E05/E05_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E05/E05_original.jpg) | JPEG | 3000×2400 · 5:4 | 6.44 MiB | H / no | Sí |
-| R38 / E06 | [originals/E06/E06_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E06/E06_original.jpg) | JPEG | 2048×1536 · 4:3 | 841.1 KiB | H / no | No embebidos detectados |
-| R39 / H01 | [originals/H01/H01_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H01/H01_original.jpg) | JPEG | 3676×2635 · 3676:2635 | 1.99 MiB | H / no | Sí |
-| R40 / H03 | [originals/H03/H03_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H03/H03_original.jpg) | MPO | 4032×3024 · 4:3 | 2.71 MiB | H / no | Sí |
-| R41 / H04 | [originals/H04/H04_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H04/H04_original.jpg) | JPEG | 4192×2256 · 262:141 | 3.63 MiB | H / no | Sí |
-| R42 / H05 | [originals/H05/H05_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H05/H05_original.jpg) | JPEG | 4912×3264 · 307:204 | 7.89 MiB | H / no | Sí |
-| R43 / I01 | [originals/I01/I01_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I01/I01_original.jpg) | JPEG | 4574×3136 · 2287:1568 | 866.4 KiB | H / no | Sí |
-| R44 / I02 | [originals/I02/I02_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I02/I02_original.jpg) | JPEG | 3504×2336 · 3:2 | 6.14 MiB | H / no | Sí |
-| R45 / I03 | [originals/I03/I03_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I03/I03_original.jpg) | JPEG | 4608×3456 · 4:3 | 3.22 MiB | H / no | Sí |
-| R46 / I04 | [originals/I04/I04_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I04/I04_original.jpg) | MPO | 7432×5573 · 7432:5573 | 8.85 MiB | H / no | Sí |
-| R47 / I05 | [originals/I05/I05_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I05/I05_original.jpg) | JPEG | 2288×1712 · 143:107 | 808.4 KiB | H / no | Sí |
-| R48 / I06 | [originals/I06/I06_original.tiff](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I06/I06_original.tiff) | TIFF | 7200×4802 · 3600:2401 | 540.8 KiB | H / no | Sí |
-| R49 / I07 | [originals/I07/I07_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I07/I07_original.jpg) | JPEG | 3264×2448 · 4:3 | 1.43 MiB | H / no | No embebidos detectados |
-| R50 / I08 | [originals/I08/I08_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I08/I08_original.jpg) | JPEG | 4608×3456 · 4:3 | 2.42 MiB | H / no | Sí |
-| R51 / S01 | [originals/S01/S01_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S01/S01_original.jpg) | JPEG | 8032×2490 · 4016:1245 | 4.89 MiB | H / no | No embebidos detectados |
-| R52 / S02 | [originals/S02/S02_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S02/S02_original.jpg) | JPEG | 2048×1536 · 4:3 | 457.0 KiB | H / no | Sí |
-| R53 / S03 | [originals/S03/S03_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S03/S03_original.jpg) | JPEG | 3000×2000 · 3:2 | 1.16 MiB | H / no | Sí |
-| R54 / S04 | [originals/S04/S04_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S04/S04_original.jpg) | JPEG | 2048×1536 · 4:3 | 1.06 MiB | H / no | Sí |
-| R55 / S05 | [originals/S05/S05_original.jpg](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S05/S05_original.jpg) | JPEG | 5070×3380 · 3:2 | 12.50 MiB | H / no | Sí |
+| R01 / D01 | [assets/images/capabilities/digital/automation/digital-plc-control-panel.webp](../../assets/images/capabilities/digital/automation/digital-plc-control-panel.webp) | WEBP | 1600×1200 · 4:3 | 200.8 KiB | H / no | No embebidos detectados |
+| R02 / D06 | [assets/images/capabilities/digital/data/digital-data-analysis.webp](../../assets/images/capabilities/digital/data/digital-data-analysis.webp) | WEBP | 1600×1200 · 4:3 | 91.6 KiB | H / no | No embebidos detectados |
+| R03 / D02 | [assets/images/capabilities/digital/instrumentation/digital-industrial-instrumentation.webp](../../assets/images/capabilities/digital/instrumentation/digital-industrial-instrumentation.webp) | WEBP | 1600×1200 · 4:3 | 109.2 KiB | H / no | No embebidos detectados |
+| R04 / D04 | [assets/images/capabilities/digital/scada/digital-building-management.webp](../../assets/images/capabilities/digital/scada/digital-building-management.webp) | WEBP | 1600×1200 · 4:3 | 100.5 KiB | H / no | No embebidos detectados |
+| R05 / D03 | [assets/images/capabilities/digital/scada/digital-scada-screen.webp](../../assets/images/capabilities/digital/scada/digital-scada-screen.webp) | WEBP | 1600×1200 · 4:3 | 109.9 KiB | H / no | No embebidos detectados |
+| R06 / E01 | [assets/images/capabilities/energy/analysis/energy-demand-analysis.webp](../../assets/images/capabilities/energy/analysis/energy-demand-analysis.webp) | WEBP | 1600×1200 · 4:3 | 62.6 KiB | H / no | No embebidos detectados |
+| R07 / E05 | [assets/images/capabilities/energy/electrification/energy-ev-charging.webp](../../assets/images/capabilities/energy/electrification/energy-ev-charging.webp) | WEBP | 1600×1200 · 4:3 | 244.3 KiB | H / no | No embebidos detectados |
+| R08 / E06 | [assets/images/capabilities/energy/electrification/energy-heat-pumps.webp](../../assets/images/capabilities/energy/electrification/energy-heat-pumps.webp) | WEBP | 1600×1200 · 4:3 | 240.0 KiB | H / no | No embebidos detectados |
+| R09 / E04 | [assets/images/capabilities/energy/generation/energy-electrical-infrastructure.webp](../../assets/images/capabilities/energy/generation/energy-electrical-infrastructure.webp) | WEBP | 1600×1200 · 4:3 | 110.6 KiB | H / no | No embebidos detectados |
+| R10 / E02 | [assets/images/capabilities/energy/generation/energy-pv-rooftop.webp](../../assets/images/capabilities/energy/generation/energy-pv-rooftop.webp) | WEBP | 1600×1200 · 4:3 | 368.8 KiB | H / no | No embebidos detectados |
+| R11 / E07 | [assets/images/capabilities/energy/management/energy-management-dashboard.webp](../../assets/images/capabilities/energy/management/energy-management-dashboard.webp) | WEBP | 1600×1200 · 4:3 | 67.6 KiB | H / no | No embebidos detectados |
+| R12 / E03 | [assets/images/capabilities/energy/storage/energy-battery-storage.webp](../../assets/images/capabilities/energy/storage/energy-battery-storage.webp) | WEBP | 1600×1200 · 4:3 | 109.2 KiB | H / no | No embebidos detectados |
+| R13 / I08 | [assets/images/capabilities/infrastructure/construction/infra-commissioning-testing.webp](../../assets/images/capabilities/infrastructure/construction/infra-commissioning-testing.webp) | WEBP | 1600×1200 · 4:3 | 138.4 KiB | H / no | No embebidos detectados |
+| R14 / I07 | [assets/images/capabilities/infrastructure/construction/infra-construction-site.webp](../../assets/images/capabilities/infrastructure/construction/infra-construction-site.webp) | WEBP | 1600×1200 · 4:3 | 126.0 KiB | H / no | No embebidos detectados |
+| R15 / I01 | [assets/images/capabilities/infrastructure/electrical/infra-electrical-distribution.webp](../../assets/images/capabilities/infrastructure/electrical/infra-electrical-distribution.webp) | WEBP | 1600×1200 · 4:3 | 79.7 KiB | H / no | No embebidos detectados |
+| R16 / I06 | [assets/images/capabilities/infrastructure/engineering/infra-technical-plans.webp](../../assets/images/capabilities/infrastructure/engineering/infra-technical-plans.webp) | WEBP | 1600×1200 · 4:3 | 247.6 KiB | H / no | No embebidos detectados |
+| R17 / I02 | [assets/images/capabilities/infrastructure/mechanical/infra-hvac-plant.webp](../../assets/images/capabilities/infrastructure/mechanical/infra-hvac-plant.webp) | WEBP | 1600×1200 · 4:3 | 277.2 KiB | H / no | No embebidos detectados |
+| R18 / I03 | [assets/images/capabilities/infrastructure/mechanical/infra-ventilation-ductwork.webp](../../assets/images/capabilities/infrastructure/mechanical/infra-ventilation-ductwork.webp) | WEBP | 1600×1200 · 4:3 | 170.6 KiB | H / no | No embebidos detectados |
+| R19 / I05 | [assets/images/capabilities/infrastructure/plumbing-fire/infra-fire-protection.webp](../../assets/images/capabilities/infrastructure/plumbing-fire/infra-fire-protection.webp) | WEBP | 1600×1200 · 4:3 | 182.8 KiB | H / no | No embebidos detectados |
+| R20 / I04 | [assets/images/capabilities/infrastructure/plumbing-fire/infra-plumbing-piping.webp](../../assets/images/capabilities/infrastructure/plumbing-fire/infra-plumbing-piping.webp) | WEBP | 1600×1200 · 4:3 | 213.8 KiB | H / no | No embebidos detectados |
+| R21 / H05 | [assets/images/home/capabilities/home-cap-digital.webp](../../assets/images/home/capabilities/home-cap-digital.webp) | WEBP | 1600×1200 · 4:3 | 158.5 KiB | H / no | No embebidos detectados |
+| R22 / H04 | [assets/images/home/capabilities/home-cap-energy.webp](../../assets/images/home/capabilities/home-cap-energy.webp) | WEBP | 1600×1200 · 4:3 | 133.1 KiB | H / no | No embebidos detectados |
+| R23 / H03 | [assets/images/home/capabilities/home-cap-infrastructure.webp](../../assets/images/home/capabilities/home-cap-infrastructure.webp) | WEBP | 1600×1200 · 4:3 | 184.4 KiB | H / no | No embebidos detectados |
+| R24 / H01 | [assets/images/home/hero/home-hero-engineering.webp](../../assets/images/home/hero/home-hero-engineering.webp) | WEBP | 1920×1080 · 16:9 | 217.8 KiB | H / no | No embebidos detectados |
+| R25 / S01 | [assets/images/sectors/hospitality/sector-hospitality.webp](../../assets/images/sectors/hospitality/sector-hospitality.webp) | WEBP | 1600×1000 · 8:5 | 167.2 KiB | H / no | No embebidos detectados |
+| R26 / S02 | [assets/images/sectors/industry/sector-industry.webp](../../assets/images/sectors/industry/sector-industry.webp) | WEBP | 1600×1000 · 8:5 | 171.0 KiB | H / no | No embebidos detectados |
+| R27 / S05 | [assets/images/sectors/infrastructure/sector-infrastructure.webp](../../assets/images/sectors/infrastructure/sector-infrastructure.webp) | WEBP | 1600×1000 · 8:5 | 304.6 KiB | H / no | No embebidos detectados |
+| R28 / S03 | [assets/images/sectors/sports/sector-sports.webp](../../assets/images/sectors/sports/sector-sports.webp) | WEBP | 1600×1000 · 8:5 | 229.8 KiB | H / no | No embebidos detectados |
+| R29 / S04 | [assets/images/sectors/tertiary/sector-tertiary.webp](../../assets/images/sectors/tertiary/sector-tertiary.webp) | WEBP | 1600×1000 · 8:5 | 192.7 KiB | H / no | No embebidos detectados |
+| R30 / D01 | [originals/D01/D01_original.jpg](../../media-library/originals/D01/D01_original.jpg) | JPEG | 3264×2448 · 4:3 | 3.83 MiB | H / no | No embebidos detectados |
+| R31 / D02 | [originals/D02/D02_original.jpg](../../media-library/originals/D02/D02_original.jpg) | JPEG | 3264×2448 · 4:3 | 921.0 KiB | H / no | No embebidos detectados |
+| R32 / D03 | [originals/D03/D03_original.jpg](../../media-library/originals/D03/D03_original.jpg) | JPEG | 4288×2848 · 134:89 | 2.63 MiB | H / no | Sí |
+| R33 / D04 | [originals/D04/D04_original.jpg](../../media-library/originals/D04/D04_original.jpg) | JPEG | 6000×4000 · 3:2 | 5.06 MiB | H / no | Sí |
+| R34 / E02 | [originals/E02/E02_original.jpg](../../media-library/originals/E02/E02_original.jpg) | JPEG | 4032×2268 · 16:9 | 3.85 MiB | H / no | No embebidos detectados |
+| R35 / E03 | [originals/E03/E03_original.jpg](../../media-library/originals/E03/E03_original.jpg) | JPEG | 5312×2988 · 16:9 | 6.88 MiB | H / no | Sí |
+| R36 / E04 | [originals/E04/E04_original.jpg](../../media-library/originals/E04/E04_original.jpg) | JPEG | 4608×3456 · 4:3 | 4.00 MiB | H / no | Sí |
+| R37 / E05 | [originals/E05/E05_original.jpg](../../media-library/originals/E05/E05_original.jpg) | JPEG | 3000×2400 · 5:4 | 6.44 MiB | H / no | Sí |
+| R38 / E06 | [originals/E06/E06_original.jpg](../../media-library/originals/E06/E06_original.jpg) | JPEG | 2048×1536 · 4:3 | 841.1 KiB | H / no | No embebidos detectados |
+| R39 / H01 | [originals/H01/H01_original.jpg](../../media-library/originals/H01/H01_original.jpg) | JPEG | 3676×2635 · 3676:2635 | 1.99 MiB | H / no | Sí |
+| R40 / H03 | [originals/H03/H03_original.jpg](../../media-library/originals/H03/H03_original.jpg) | MPO | 4032×3024 · 4:3 | 2.71 MiB | H / no | Sí |
+| R41 / H04 | [originals/H04/H04_original.jpg](../../media-library/originals/H04/H04_original.jpg) | JPEG | 4192×2256 · 262:141 | 3.63 MiB | H / no | Sí |
+| R42 / H05 | [originals/H05/H05_original.jpg](../../media-library/originals/H05/H05_original.jpg) | JPEG | 4912×3264 · 307:204 | 7.89 MiB | H / no | Sí |
+| R43 / I01 | [originals/I01/I01_original.jpg](../../media-library/originals/I01/I01_original.jpg) | JPEG | 4574×3136 · 2287:1568 | 866.4 KiB | H / no | Sí |
+| R44 / I02 | [originals/I02/I02_original.jpg](../../media-library/originals/I02/I02_original.jpg) | JPEG | 3504×2336 · 3:2 | 6.14 MiB | H / no | Sí |
+| R45 / I03 | [originals/I03/I03_original.jpg](../../media-library/originals/I03/I03_original.jpg) | JPEG | 4608×3456 · 4:3 | 3.22 MiB | H / no | Sí |
+| R46 / I04 | [originals/I04/I04_original.jpg](../../media-library/originals/I04/I04_original.jpg) | MPO | 7432×5573 · 7432:5573 | 8.85 MiB | H / no | Sí |
+| R47 / I05 | [originals/I05/I05_original.jpg](../../media-library/originals/I05/I05_original.jpg) | JPEG | 2288×1712 · 143:107 | 808.4 KiB | H / no | Sí |
+| R48 / I06 | [originals/I06/I06_original.tiff](../../media-library/originals/I06/I06_original.tiff) | TIFF | 7200×4802 · 3600:2401 | 540.8 KiB | H / no | Sí |
+| R49 / I07 | [originals/I07/I07_original.jpg](../../media-library/originals/I07/I07_original.jpg) | JPEG | 3264×2448 · 4:3 | 1.43 MiB | H / no | No embebidos detectados |
+| R50 / I08 | [originals/I08/I08_original.jpg](../../media-library/originals/I08/I08_original.jpg) | JPEG | 4608×3456 · 4:3 | 2.42 MiB | H / no | Sí |
+| R51 / S01 | [originals/S01/S01_original.jpg](../../media-library/originals/S01/S01_original.jpg) | JPEG | 8032×2490 · 4016:1245 | 4.89 MiB | H / no | No embebidos detectados |
+| R52 / S02 | [originals/S02/S02_original.jpg](../../media-library/originals/S02/S02_original.jpg) | JPEG | 2048×1536 · 4:3 | 457.0 KiB | H / no | Sí |
+| R53 / S03 | [originals/S03/S03_original.jpg](../../media-library/originals/S03/S03_original.jpg) | JPEG | 3000×2000 · 3:2 | 1.16 MiB | H / no | Sí |
+| R54 / S04 | [originals/S04/S04_original.jpg](../../media-library/originals/S04/S04_original.jpg) | JPEG | 2048×1536 · 4:3 | 1.06 MiB | H / no | Sí |
+| R55 / S05 | [originals/S05/S05_original.jpg](../../media-library/originals/S05/S05_original.jpg) | JPEG | 5070×3380 · 3:2 | 12.50 MiB | H / no | Sí |
 
 ### 3.2. Integridad, formatos y variantes
 
@@ -148,7 +148,7 @@ El siguiente inventario contiene **los 55 archivos existentes**, no las 36 entra
 
 **VERIFICADO.** Los dos originales MPO son R40 (`originals/H03/H03_original.jpg`, 4032×3024) y R46 (`originals/I04/I04_original.jpg`, 7432×5573), ambos con dos fotogramas. No se han convertido; la extensión `.jpg` no describe por sí sola el contenedor. El TIFF R48 mide 7200×4802, con dibujo de alto detalle y trazos muy finos: su legibilidad no se puede juzgar solo por una miniatura.
 
-**VERIFICADO.** Las dimensiones y pesos de los 29 WebP coinciden con el manifiesto. Sus rutas `relative_path` son relativas a la raíz **del paquete**: `LIB/assets/images/…`. En el repositorio actual la biblioteca está anidada bajo `assets/images/BAFRAS_Website_Visual_Assets_V1/`; esas rutas no equivalen a imágenes ya integradas en la raíz web. No se han copiado ni enlazado desde el HTML.
+**VERIFICADO.** Las dimensiones y pesos de los 29 WebP coinciden con el manifiesto. Sus rutas `relative_path` son relativas a la raíz **del paquete**: `LIB/assets/images/…`. En el repositorio actual la biblioteca está anidada bajo `media-library/`; esas rutas no equivalen a imágenes ya integradas en la raíz web. No se han copiado ni enlazado desde el HTML.
 
 ### 3.3. Entradas sin archivo y auxiliares
 
@@ -285,35 +285,35 @@ No se inventan autores, licencias o URLs: los valores siguientes se transcriben 
 
 | Recurso preparado / paquete | Autor declarado | Licencia declarada | Soporte local de procedencia | Verificación independiente / comercial |
 |---|---|---|---|---|
-| R01 / D01 | Mixabest | CC BY-SA 3.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D01/source.json) | No realizada / pendiente |
-| R02 / D06 | BAFRAS Engineering | Propio (BAFRAS Engineering) | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/manifests/media-manifest.yaml) | No realizada / pendiente |
-| R03 / D02 | Bitjungle | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D02/source.json) | No realizada / pendiente |
-| R04 / D04 | U.S. Army photo by Sandra Wilson | Public domain | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D04/source.json) | No realizada / pendiente |
-| R05 / D03 | U.S. Department of Agriculture | Public domain | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/D03/source.json) | No realizada / pendiente |
-| R06 / E01 | BAFRAS Engineering | Propio (BAFRAS Engineering) | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/manifests/media-manifest.yaml) | No realizada / pendiente |
-| R07 / E05 | Mariordo (Mario Roberto Durán Ortiz) | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E05/source.json) | No realizada / pendiente |
-| R08 / E06 | Dfpearson | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E06/source.json) | No realizada / pendiente |
-| R09 / E04 | Cjp24 | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E04/source.json) | No realizada / pendiente |
-| R10 / E02 | Asurnipal | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E02/source.json) | No realizada / pendiente |
-| R11 / E07 | BAFRAS Engineering | Propio (BAFRAS Engineering) | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/manifests/media-manifest.yaml) | No realizada / pendiente |
-| R12 / E03 | Ysc usc | CC BY 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/E03/source.json) | No realizada / pendiente |
-| R13 / I08 | MTA Capital Construction Mega Projects | CC BY 2.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I08/source.json) | No realizada / pendiente |
-| R14 / I07 | MTA Capital Construction Mega Projects | CC BY 2.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I07/source.json) | No realizada / pendiente |
-| R15 / I01 | Achim Hering | CC BY 3.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I01/source.json) | No realizada / pendiente |
-| R16 / I06 | Department of Homeland Security. U.S. Coast Guard. 3/1/2003 | Public domain | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I06/source.json) | No realizada / pendiente |
-| R17 / I02 | Helen Ltd (mediabank) | CC BY-SA 3.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I02/source.json) | No realizada / pendiente |
-| R18 / I03 | Alf van Beem | CC0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I03/source.json) | No realizada / pendiente |
-| R19 / I05 | Vincent de Groot - http://www.videgro.net | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I05/source.json) | No realizada / pendiente |
-| R20 / I04 | Wolfmann | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/I04/source.json) | No realizada / pendiente |
-| R21 / H05 | Pierre75000 | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H05/source.json) | No realizada / pendiente |
-| R22 / H04 | U.S. Army Corps of Engineers Savannah District | Public domain | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H04/source.json) | No realizada / pendiente |
-| R23 / H03 | Wolfmann | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H03/source.json) | No realizada / pendiente |
-| R24 / H01 | Steve Jurvetson from Los Altos, USA | CC BY 2.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/H01/source.json) | No realizada / pendiente |
-| R25 / S01 | Killarnee | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S01/source.json) | No realizada / pendiente |
-| R26 / S02 | Laempe | CC BY-SA 3.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S02/source.json) | No realizada / pendiente |
-| R27 / S05 | Dietmar Rabich | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S05/source.json) | No realizada / pendiente |
-| R28 / S03 | kallerna | CC BY-SA 4.0 | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S03/source.json) | No realizada / pendiente |
-| R29 / S04 | Chixoy | Public domain | [Ficha local](../../assets/images/BAFRAS_Website_Visual_Assets_V1/originals/S04/source.json) | No realizada / pendiente |
+| R01 / D01 | Mixabest | CC BY-SA 3.0 | [Ficha local](../../media-library/originals/D01/source.json) | No realizada / pendiente |
+| R02 / D06 | BAFRAS Engineering | Propio (BAFRAS Engineering) | [Ficha local](../../media-library/manifests/media-manifest.yaml) | No realizada / pendiente |
+| R03 / D02 | Bitjungle | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/D02/source.json) | No realizada / pendiente |
+| R04 / D04 | U.S. Army photo by Sandra Wilson | Public domain | [Ficha local](../../media-library/originals/D04/source.json) | No realizada / pendiente |
+| R05 / D03 | U.S. Department of Agriculture | Public domain | [Ficha local](../../media-library/originals/D03/source.json) | No realizada / pendiente |
+| R06 / E01 | BAFRAS Engineering | Propio (BAFRAS Engineering) | [Ficha local](../../media-library/manifests/media-manifest.yaml) | No realizada / pendiente |
+| R07 / E05 | Mariordo (Mario Roberto Durán Ortiz) | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/E05/source.json) | No realizada / pendiente |
+| R08 / E06 | Dfpearson | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/E06/source.json) | No realizada / pendiente |
+| R09 / E04 | Cjp24 | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/E04/source.json) | No realizada / pendiente |
+| R10 / E02 | Asurnipal | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/E02/source.json) | No realizada / pendiente |
+| R11 / E07 | BAFRAS Engineering | Propio (BAFRAS Engineering) | [Ficha local](../../media-library/manifests/media-manifest.yaml) | No realizada / pendiente |
+| R12 / E03 | Ysc usc | CC BY 4.0 | [Ficha local](../../media-library/originals/E03/source.json) | No realizada / pendiente |
+| R13 / I08 | MTA Capital Construction Mega Projects | CC BY 2.0 | [Ficha local](../../media-library/originals/I08/source.json) | No realizada / pendiente |
+| R14 / I07 | MTA Capital Construction Mega Projects | CC BY 2.0 | [Ficha local](../../media-library/originals/I07/source.json) | No realizada / pendiente |
+| R15 / I01 | Achim Hering | CC BY 3.0 | [Ficha local](../../media-library/originals/I01/source.json) | No realizada / pendiente |
+| R16 / I06 | Department of Homeland Security. U.S. Coast Guard. 3/1/2003 | Public domain | [Ficha local](../../media-library/originals/I06/source.json) | No realizada / pendiente |
+| R17 / I02 | Helen Ltd (mediabank) | CC BY-SA 3.0 | [Ficha local](../../media-library/originals/I02/source.json) | No realizada / pendiente |
+| R18 / I03 | Alf van Beem | CC0 | [Ficha local](../../media-library/originals/I03/source.json) | No realizada / pendiente |
+| R19 / I05 | Vincent de Groot - http://www.videgro.net | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/I05/source.json) | No realizada / pendiente |
+| R20 / I04 | Wolfmann | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/I04/source.json) | No realizada / pendiente |
+| R21 / H05 | Pierre75000 | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/H05/source.json) | No realizada / pendiente |
+| R22 / H04 | U.S. Army Corps of Engineers Savannah District | Public domain | [Ficha local](../../media-library/originals/H04/source.json) | No realizada / pendiente |
+| R23 / H03 | Wolfmann | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/H03/source.json) | No realizada / pendiente |
+| R24 / H01 | Steve Jurvetson from Los Altos, USA | CC BY 2.0 | [Ficha local](../../media-library/originals/H01/source.json) | No realizada / pendiente |
+| R25 / S01 | Killarnee | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/S01/source.json) | No realizada / pendiente |
+| R26 / S02 | Laempe | CC BY-SA 3.0 | [Ficha local](../../media-library/originals/S02/source.json) | No realizada / pendiente |
+| R27 / S05 | Dietmar Rabich | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/S05/source.json) | No realizada / pendiente |
+| R28 / S03 | kallerna | CC BY-SA 4.0 | [Ficha local](../../media-library/originals/S03/source.json) | No realizada / pendiente |
+| R29 / S04 | Chixoy | Public domain | [Ficha local](../../media-library/originals/S04/source.json) | No realizada / pendiente |
 
 ### 7.2. Límites y conflictos documentales del paquete
 

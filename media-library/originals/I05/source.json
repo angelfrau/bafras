@@ -1,0 +1,42 @@
+{
+ "id": "I05",
+ "commons": {
+  "title": "Objekt 17 5001 brandblusinstallatie 03.JPG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Objekt_17_5001_brandblusinstallatie_03.JPG",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Objekt_17_5001_brandblusinstallatie_03.JPG",
+  "w": 2288,
+  "h": 1712,
+  "size": 827769,
+  "sha1": "48b303ae94d031456b693b7a8afa7fbd3faad369",
+  "mime": "image/jpeg",
+  "Artist": "Vincent de Groot - http://www.videgro.net",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2008-12-14",
+  "ImageDescription": "Object 17/5001 shelter in Prenden, Germany - Firefighting system"
+ },
+ "processing": {
+  "src_used": "I05__Objekt_17_5001_brandblusinstallatie_03.JPG",
+  "src_dims": [
+   2288,
+   1712
+  ],
+  "crop_box": [
+   3,
+   0,
+   2285,
+   1712
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 187166,
+  "path": "capabilities/infrastructure/plumbing-fire/infra-fire-protection.webp"
+ }
+}

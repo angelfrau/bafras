@@ -1,0 +1,42 @@
+{
+ "id": "E02",
+ "commons": {
+  "title": "Dornbirn-Rhombergs Fabrik-photovoltaic systems-01ASD.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Dornbirn-Rhombergs_Fabrik-photovoltaic_systems-01ASD.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dornbirn-Rhombergs_Fabrik-photovoltaic_systems-01ASD.jpg",
+  "w": 4032,
+  "h": 2268,
+  "size": 4036506,
+  "sha1": "e6392c77e97b0c1c17e9719de1db0d11483ebf3b",
+  "mime": "image/jpeg",
+  "Artist": "Asurnipal",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2019-09-12",
+  "ImageDescription": "Office building from the 1950s, former \"Rhomberg Fabrik\" (factory) in Dornbirn, Vorarlberg. Now a business and commercial park. Photovoltaic system. Year of construction 10/2013. Maximum total power: 216.09 kWp, bottleneck power: 193.20 kWAC. Total m"
+ },
+ "processing": {
+  "src_used": "E02__Dornbirn-Rhombergs_Fabrik-photovoltaic_systems-01ASD.jpg",
+  "src_dims": [
+   4032,
+   2268
+  ],
+  "crop_box": [
+   504,
+   0,
+   3528,
+   2268
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 377636,
+  "path": "capabilities/energy/generation/energy-pv-rooftop.webp"
+ }
+}

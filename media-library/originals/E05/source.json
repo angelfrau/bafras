@@ -1,0 +1,42 @@
+{
+ "id": "E05",
+ "commons": {
+  "title": "EV parking lot Oslo 10 2018 3774.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/EV_parking_lot_Oslo_10_2018_3774.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:EV_parking_lot_Oslo_10_2018_3774.jpg",
+  "w": 3000,
+  "h": 2400,
+  "size": 6747834,
+  "sha1": "547716f1be35480b0ceee403adbd45b5d7688d1c",
+  "mime": "image/jpeg",
+  "Artist": "Mariordo (Mario Roberto Durán Ortiz)",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2018-10-05 07:43:25",
+  "ImageDescription": "Electric cars charging at a free parking lot exclusive for all-electric vehicles in Oslo, Norway."
+ },
+ "processing": {
+  "src_used": "E05__EV_parking_lot_Oslo_10_2018_3774.jpg",
+  "src_dims": [
+   3000,
+   2400
+  ],
+  "crop_box": [
+   450,
+   600,
+   2850,
+   2400
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 250206,
+  "path": "capabilities/energy/electrification/energy-ev-charging.webp"
+ }
+}

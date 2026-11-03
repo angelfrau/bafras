@@ -1,0 +1,42 @@
+{
+ "id": "I07",
+ "commons": {
+  "title": "Installing supports for HVAC duct work in the ceiling above the future LIRR Concourse. 11-20-2019 (49106351078).jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Installing_supports_for_HVAC_duct_work_in_the_ceiling_above_the_future_LIRR_Concourse._11-20-2019_%2849106351078%29.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Installing_supports_for_HVAC_duct_work_in_the_ceiling_above_the_future_LIRR_Concourse._11-20-2019_(49106351078).jpg",
+  "w": 3264,
+  "h": 2448,
+  "size": 1497957,
+  "sha1": "d0b13074142f521b147c1db123ca0150860d0395",
+  "mime": "image/jpeg",
+  "Artist": "MTA Capital Construction Mega Projects",
+  "Credit": "Installing supports for HVAC duct work in the ceiling above the future LIRR Concourse. 11-20-2019",
+  "LicenseShortName": "CC BY 2.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "UsageTerms": "Creative Commons Attribution 2.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2019-11-20 09:15",
+  "ImageDescription": "Installing supports for HVAC duct work in the ceiling above the future LIRR Concourse. 11-20-2019"
+ },
+ "processing": {
+  "src_used": "_work/I07_work.jpg",
+  "src_dims": [
+   3200,
+   2400
+  ],
+  "crop_box": [
+   0,
+   0,
+   3200,
+   2400
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 129048,
+  "path": "capabilities/infrastructure/construction/infra-construction-site.webp"
+ }
+}

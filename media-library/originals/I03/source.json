@@ -1,0 +1,42 @@
+{
+ "id": "I03",
+ "commons": {
+  "title": "HVAC Air Handler Unit, pic2.JPG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/HVAC_Air_Handler_Unit%2C_pic2.JPG",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:HVAC_Air_Handler_Unit,_pic2.JPG",
+  "w": 4608,
+  "h": 3456,
+  "size": 3374969,
+  "sha1": "06fc4c21106b76012634cc99d9436e09171b0f9c",
+  "mime": "image/jpeg",
+  "Artist": "Alf van Beem",
+  "Credit": "Own work",
+  "LicenseShortName": "CC0",
+  "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+  "AttributionRequired": "false",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2015-01-02 12:57:12",
+  "ImageDescription": "HVAC Air Handler Unit"
+ },
+ "processing": {
+  "src_used": "I03__HVAC_Air_Handler_Unit__pic2.JPG",
+  "src_dims": [
+   4608,
+   3456
+  ],
+  "crop_box": [
+   0,
+   0,
+   4608,
+   3456
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 174722,
+  "path": "capabilities/infrastructure/mechanical/infra-ventilation-ductwork.webp"
+ }
+}

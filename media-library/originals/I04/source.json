@@ -1,0 +1,42 @@
+{
+ "id": "I04",
+ "commons": {
+  "title": "Teknisk rom (School build. Lilleh. Norway 2024-09. Mechan. room Air ventil. Hot water Heat recov. unit) varmtvann isolerte rør målere termometere sirkulasjonspumpe strupeventil radiatorer gulvvarme elkabler vannkran etc IMG 0306.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Teknisk_rom_%28School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit%29_varmtvann_isolerte_r%C3%B8r_m%C3%A5lere_termometere_sirkulasjonspumpe_strupeventil_radiatorer_gulvvarme_elkabler_vannkran_etc_IMG_0306.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Teknisk_rom_(School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit)_varmtvann_isolerte_r%C3%B8r_m%C3%A5lere_termometere_sirkulasjonspumpe_strupeventil_radiatorer_gulvvarme_elkabler_vannkran_etc_IMG_0306.jpg",
+  "w": 7432,
+  "h": 5573,
+  "size": 9280767,
+  "sha1": "b570dff4e9bac0fb346e7ea8f0cb7c477600a16e",
+  "mime": "image/jpeg",
+  "Artist": "Wolfmann",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2024-09-24 09:42:30",
+  "ImageDescription": "Machines and equipment in the mechanical room (machine room) of a school building in Lillehammer, Norway, with a generator for the heating system, ventilation and air conditioning. The room contains the following, among other things: Main distributor"
+ },
+ "processing": {
+  "src_used": "_work/I04_work.jpg",
+  "src_dims": [
+   3200,
+   2400
+  ],
+  "crop_box": [
+   0,
+   0,
+   3200,
+   2400
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 218930,
+  "path": "capabilities/infrastructure/plumbing-fire/infra-plumbing-piping.webp"
+ }
+}

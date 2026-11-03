@@ -1,0 +1,42 @@
+{
+ "id": "H05",
+ "commons": {
+  "title": "Automate industriel WAGO pour un système de monitoring en industrie pharmaceutique.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Automate_industriel_WAGO_pour_un_syst%C3%A8me_de_monitoring_en_industrie_pharmaceutique.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Automate_industriel_WAGO_pour_un_syst%C3%A8me_de_monitoring_en_industrie_pharmaceutique.jpg",
+  "w": 4912,
+  "h": 3264,
+  "size": 8273744,
+  "sha1": "b47aa18033b33297b331dacbbdaad3171b7842c6",
+  "mime": "image/jpeg",
+  "Artist": "Pierre75000",
+  "Credit": "Own work",
+  "LicenseShortName": "CC BY-SA 4.0",
+  "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+  "AttributionRequired": "true",
+  "Restrictions": "",
+  "Copyrighted": "True",
+  "DateTimeOriginal": "2016-11-09",
+  "ImageDescription": "Automate industriel WAGO pour un système de monitoring en industrie pharmaceutique"
+ },
+ "processing": {
+  "src_used": "H05__Automate_industriel_WAGO_pour_un_syst_me_de_monitoring_en_industrie_pharmaceutique.jpg",
+  "src_dims": [
+   4912,
+   3264
+  ],
+  "crop_box": [
+   526,
+   0,
+   4878,
+   3264
+  ],
+  "output_dims": [
+   1600,
+   1200
+  ],
+  "bytes": 162320,
+  "path": "home/capabilities/home-cap-digital.webp"
+ }
+}
