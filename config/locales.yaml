@@ -1,0 +1,18 @@
+# DEC-14 — Idiomas de BAFRAS WEB V2 (docs/architecture.md §11).
+# default_locale es también el idioma fuente del contenido y se publica sin prefijo de URL.
+# Un idioma solo se marca published: true cuando su traducción está completa y aprobada (sin fallback).
+schema_version: 1
+default_locale: es
+locales:
+  - code: es
+    name: Español
+    published: true
+  - code: ca
+    name: Català
+    published: false
+  - code: en
+    name: English
+    published: false
+  - code: de
+    name: Deutsch
+    published: false

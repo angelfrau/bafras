@@ -1,0 +1,28 @@
+# DEC-16 — Fuente única de rutas (docs/architecture.md §11).
+# Clave = identificador estable de página, independiente del idioma; también nombra content/<idioma>/pages/<id>.yaml.
+# slugs = un segmento de URL por idioma; la URL completa encadena los segmentos de las páginas padre.
+# Español sin prefijo (/capacidades/); ca, en y de con prefijo (/ca/…). Slugs ES: D03 V1.22 §3.1, sin el prefijo /es/.
+# Los slugs ca/en/de se añaden junto con sus traducciones.
+schema_version: 1
+pages:
+  inicio:
+    slugs: {es: ""}
+  capacidades:
+    slugs: {es: capacidades}
+  infraestructuras:
+    parent: capacidades
+    slugs: {es: infraestructuras-instalaciones}
+  sistemas_energeticos:
+    parent: capacidades
+    slugs: {es: sistemas-energeticos}
+  automatizacion_control:
+    parent: capacidades
+    slugs: {es: automatizacion-control}
+  sectores:
+    slugs: {es: sectores}
+  proyectos_experiencia:
+    slugs: {es: proyectos-experiencia}
+  sobre_bafras:
+    slugs: {es: sobre-bafras}
+  contacto:
+    slugs: {es: contacto}
