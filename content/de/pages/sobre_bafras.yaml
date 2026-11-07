@@ -1,0 +1,121 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sobre_bafras
+review:
+  status: draft
+  source_ref: D03 V1.22 · SB-01–SB-05 · 03.K/03.G1-01/02
+seo:
+  title: Über BAFRAS | Team und multidisziplinäres Ingenieurwesen
+  description: Lernen Sie das Team und die Arbeitsweise von BAFRAS Engineering in den Bereichen
+    technische Anlagen, Energiesysteme sowie Automatisierung und Steuerungstechnik kennen.
+pending: []
+sections:
+- id: sb-01
+  source_block: SB-01
+  kind: hero
+  title: Ingenieurleistungen mit technischem Blick und sich ergänzenden Disziplinen.
+  eyebrow: ÜBER BAFRAS
+  paragraphs:
+  - id: description
+    text: BAFRAS Engineering vereint Fachprofile aus den Bereichen technische Anlagen und Infrastruktur,
+      Energiesysteme sowie Automatisierung und Steuerungstechnik. Wir gehen jeden Auftrag von seinen
+      tatsächlichen Anforderungen aus an und achten dabei auf die Funktionsweise der Anlagen, die
+      Randbedingungen des Projekts und die Koordination zwischen den Fachbereichen.
+  actions:
+  - id: experience
+    label: Unsere Erfahrung kennenlernen
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-02
+  source_block: SB-02
+  kind: team
+  title: Fachleute mit sich ergänzender Erfahrung.
+  introduction:
+  - id: introduction
+    text: Die Kombination von Werdegängen in der Gebäudetechnik, der Energieinfrastruktur und der
+      Steuerungstechnik ermöglicht es, Probleme aus verschiedenen Perspektiven zu betrachten. Für jedes
+      Projekt ist festzulegen, wer beteiligt ist, mit welchen Zuständigkeiten und welche Fachbereiche
+      koordiniert werden müssen.
+  corporate_presentation:
+  - id: description
+    text: BAFRAS Engineering vereint zwei Industrieingenieure und einen technischen Ingenieur für
+      Elektronik mit sich ergänzenden Profilen in den Bereichen Infrastruktur und technische Anlagen,
+      Energiesysteme sowie Automatisierung und Steuerungstechnik. Wir verbinden diese Perspektiven, um
+      jedes Projekt zu untersuchen und den Umfang an Ingenieurleistungen zu entwickeln, den es benötigt.
+  person_refs:
+  - murti
+  - angel
+  - amin
+- id: sb-03
+  source_block: SB-03
+  kind: process
+  title: Erst verstehen. Dann die Maßnahme festlegen.
+  purpose: principles
+  introduction:
+  - id: introduction
+    text: Ein und dasselbe Symptom kann unterschiedliche Ursachen haben, und eine technisch mögliche
+      Lösung ist nicht immer die geeignetste für eine Anlage. Wir prüfen den Kontext, gleichen die
+      verfügbaren Daten ab und legen einen Leistungsumfang fest, der dem Ziel des Kunden angemessen ist.
+  items:
+  - id: understand
+    title: Den Kontext verstehen.
+    paragraphs:
+    - id: description
+      text: Anforderungen, Funktionsweise und Einschränkungen ermitteln.
+  - id: evaluate
+    title: Alternativen bewerten.
+    paragraphs:
+    - id: description
+      text: Technische Kriterien und realisierbare Optionen gegenüberstellen, sofern zutreffend.
+  - id: develop
+    title: Den Leistungsumfang ausarbeiten.
+    paragraphs:
+    - id: description
+      text: Die beauftragten Studien, Projekte, Spezifikationen oder Integrationen erstellen.
+  - id: verify
+    title: Prüfen und dokumentieren.
+    paragraphs:
+    - id: description
+      text: Die im Auftrag enthaltenen Aspekte prüfen und verwendbare Dokumentation übergeben.
+  closing:
+  - id: scope
+    text: Nicht alle diese Schritte sind Bestandteil jedes Vertrags.
+- id: sb-04
+  source_block: SB-04
+  kind: text
+  title: Berufserfahrung aus realen Projekten.
+  paragraphs:
+  - id: description
+    text: Der Werdegang des Teams umfasst Erfahrungen mit Anlagen im Hochbau, industriellen
+      Steuerungssystemen und Energieinfrastrukturen. Die Referenzen werden mit ihrem Kontext dargestellt
+      und, sofern sie verifiziert sind, mit den konkreten Funktionen der einzelnen Fachleute.
+  - id: collaboration
+    text: Wir arbeiten auch mit Bauherren und Projektentwicklern, technischen Verantwortlichen,
+      Ingenieurbüros, Architekturbüros, Bauunternehmen und Installationsbetrieben zusammen und grenzen
+      dabei die Schnittstellen und Zuständigkeiten jeder Beteiligung ab.
+  actions:
+  - id: experience
+    label: Projekte und Erfahrung ansehen
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-05
+  source_block: SB-05
+  kind: text
+  title: Sprechen wir über Ihr Projekt.
+  paragraphs:
+  - id: description
+    text: Wenn Sie eine Anlage untersuchen, eine technische Maßnahme ausarbeiten oder verschiedene
+      Fachbereiche koordinieren müssen, können wir gemeinsam mit Ihnen den Leistungsumfang bewerten.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto
+  - id: capabilities
+    label: Kompetenzen entdecken
+    target:
+      kind: internal
+      page_id: capacidades

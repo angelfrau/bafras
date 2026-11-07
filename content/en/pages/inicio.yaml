@@ -1,0 +1,317 @@
+# CONTENT-ES-01 / A2 — Copy de D03 V1.22, Parte A, H01–H07.
+# El contexto de carga aporta locale; las rutas pertenecen a config/routes.yaml.
+# Borrador de integración: no acredita publicación ni disponibilidad de medios.
+page_id: inicio
+review:
+  status: draft
+  source_ref: D03 V1.22 · Parte A · H01–H07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+  - field: seo.title
+    reason_code: approval_required
+    source_ref: DEC-05
+  - field: seo.description
+    reason_code: approval_required
+    source_ref: DEC-05
+  - field: sections/h05/items
+    reason_code: approval_required
+    source_ref: D03 H05 · DEC-15
+  - field: sections/h01/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R24 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/infrastructure/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R23 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/energy/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R22 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/automation/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R21 · contrato MediaRef pendiente de WEB
+  - field: sections/h03/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R03 · contrato MediaRef pendiente de WEB
+sections:
+  - id: h01
+    source_block: H01
+    kind: hero
+    eyebrow: BAFRAS ENGINEERING · MULTIDISCIPLINARY ENGINEERING
+    title: Engineering for technical installations, energy and automation.
+    subtitle: Understand each challenge. Develop the right solution.
+    paragraphs:
+      - id: introduction
+        text: >-
+          We analyse needs, evaluate alternatives and develop engineering solutions tailored to each project.
+          We bring different specialisms together when the challenge calls for it.
+    actions:
+      - id: contact
+        label: Tell us about your project
+        target:
+          kind: internal
+          page_id: contacto
+      - id: capabilities
+        label: Explore capabilities
+        target:
+          kind: internal
+          page_id: capacidades
+
+  - id: h02
+    source_block: H02
+    kind: cards
+    purpose: capabilities
+    title: Three areas of engineering. One common approach.
+    introduction:
+      - id: introduction
+        text: >-
+          We work on technical installations and infrastructure, energy systems, and automation and control.
+          Each specialism can address a specific need or be integrated with the others when the project requires
+          it.
+    items:
+      - id: infrastructure
+        kind: capability
+        title: Infrastructure and technical installations
+        paragraphs:
+          - id: description
+            text: >-
+              Design, analysis and technical assistance for electrical and mechanical installations and auxiliary
+              systems in buildings and infrastructure.
+        examples:
+          - id: electrical
+            text: electrical installations
+          - id: hvac
+            text: heating, cooling and ventilation
+          - id: coordination
+            text: technical coordination and supervision.
+        actions:
+          - id: detail
+            label: View infrastructure and technical installations
+            target:
+              kind: internal
+              page_id: infraestructuras
+      - id: energy
+        kind: capability
+        title: Energy systems
+        paragraphs:
+          - id: description
+            text: >-
+              Studies and projects to understand demand, evaluate alternatives and develop energy generation,
+              storage and management systems.
+        examples:
+          - id: analysis
+            text: energy analysis
+          - id: renewables
+            text: renewable energy installations
+          - id: storage
+            text: energy storage and integration.
+        actions:
+          - id: detail
+            label: View energy systems
+            target:
+              kind: internal
+              page_id: sistemas_energeticos
+      - id: automation
+        kind: capability
+        title: Automation and control
+        paragraphs:
+          - id: description
+            text: >-
+              Instrumentation, supervision and control engineering to improve the operation of installations
+              and processes and the information available about them.
+        examples:
+          - id: automation
+            text: automation of installations
+          - id: supervision
+            text: supervisory systems
+          - id: integration
+            text: data and equipment integration.
+        actions:
+          - id: detail
+            label: View automation and control
+            target:
+              kind: internal
+              page_id: automatizacion_control
+    actions:
+      - id: all-capabilities
+        label: All our capabilities
+        target:
+          kind: internal
+          page_id: capacidades
+
+  - id: h03
+    source_block: H03
+    kind: item_list
+    purpose: needs
+    title: We start from what your installation or project needs.
+    introduction:
+      - id: introduction
+        text: >-
+          Not every assignment requires a new solution. Sometimes the first step is to understand how a system
+          works, identify its limitations or compare options before investing.
+    items:
+      - id: installation-performance
+        kind: need
+        title: An installation that is not performing as it should.
+        paragraphs:
+          - id: description
+            text: >-
+              We analyse its operation and constraints to identify possible causes and define justified measures.
+        actions:
+          - id: detail
+            label: Infrastructure and technical installations.
+            target:
+              kind: internal
+              page_id: infraestructuras
+      - id: energy-decision
+        kind: need
+        title: An energy decision that needs a sound basis.
+        paragraphs:
+          - id: description
+            text: >-
+              We study consumption, needs and technical alternatives before an investment or a system modification
+              is defined.
+        actions:
+          - id: detail
+            label: Energy systems.
+            target:
+              kind: internal
+              page_id: sistemas_energeticos
+      - id: equipment-integration
+        kind: need
+        title: Equipment and data that do not work in a coordinated way.
+        paragraphs:
+          - id: description
+            text: >-
+              We assess instrumentation, communication, supervision and control needs in order to propose
+              a proportionate integration.
+        actions:
+          - id: detail
+            label: Automation and control.
+            target:
+              kind: internal
+              page_id: automatizacion_control
+      - id: multidisciplinary-project
+        kind: need
+        title: A project that requires several specialisms.
+        paragraphs:
+          - id: description
+            text: >-
+              We define technical interfaces and responsibilities to coordinate the disciplines involved.
+        actions:
+          - id: detail
+            label: Capabilities.
+            target:
+              kind: internal
+              page_id: capacidades
+
+  - id: h04
+    source_block: H04
+    kind: process
+    purpose: workflow
+    title: Understand first. Then decide how to intervene.
+    introduction:
+      - id: introduction
+        text: >-
+          An engineering solution must respond to the problem, the context of use and the project constraints.
+          That is why we define the scope, compare alternatives and set out the design and verification criteria
+          appropriate to each assignment.
+    items:
+      - id: understand
+        title: Understand
+        paragraphs:
+          - id: description
+            text: needs, operation and constraints.
+      - id: evaluate
+        title: Evaluate
+        paragraphs:
+          - id: description
+            text: causes, options and their technical and economic implications, where appropriate.
+      - id: develop
+        title: Develop
+        paragraphs:
+          - id: description
+            text: studies, projects, integration or technical assistance within the contracted scope.
+      - id: verify
+        title: Verify
+        paragraphs:
+          - id: description
+            text: verification criteria and documentation of results, as relevant to the work.
+    closing:
+      - id: contracted-scope
+        text: >-
+          Not every assignment requires all three specialisms or every phase: the scope is defined for each
+          project.
+    actions:
+      - id: about
+        label: Discover how we work
+        target:
+          kind: internal
+          page_id: sobre_bafras
+
+  - id: h05
+    source_block: H05
+    kind: cards
+    purpose: sector_preview
+    title: Engineering applied to different environments.
+    introduction:
+      - id: introduction
+        text: >-
+          Needs vary with the use of the building, operational continuity, the equipment involved and the
+          project requirements. We adapt the analysis and the technical scope to each context.
+    items:
+      - id: hospitality
+        kind: sector_preview
+        title: Hotels and tourist accommodation.
+      - id: industry
+        kind: sector_preview
+        title: Industry and processes.
+      - id: tertiary
+        kind: sector_preview
+        title: Service-sector and commercial buildings.
+      - id: public-facilities
+        kind: sector_preview
+        title: Public facilities and installations.
+    actions:
+      - id: sectors
+        label: Explore sectors
+        target:
+          kind: internal
+          page_id: sectores
+
+  - id: h06
+    source_block: H06
+    kind: text
+    title: Technical experience behind our work.
+    paragraphs:
+      - id: introduction
+        text: >-
+          BAFRAS brings together professionals with experience in installation, energy and technical systems
+          projects. We present our references stating the work carried out, the responsibility assumed and
+          whether they stem from previous professional experience or from an assignment undertaken by BAFRAS
+          itself.
+    actions:
+      - id: experience
+        label: Explore projects and experience
+        target:
+          kind: internal
+          page_id: proyectos_experiencia
+
+  - id: h07
+    source_block: H07
+    kind: text
+    title: Do you have a project or a technical need to look into?
+    paragraphs:
+      - id: introduction
+        text: >-
+          Tell us what you need, what stage the project is at and what questions you want to resolve. We will
+          consider how we can help and what information is needed to define the next step.
+    actions:
+      - id: contact
+        label: Let's talk about your project
+        target:
+          kind: internal
+          page_id: contacto
+    notes:
+      - id: collaboration
+        text: We also collaborate with other engineering firms, installers and technical teams.

@@ -1,0 +1,309 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: automatizacion_control
+review:
+  status: draft
+  source_ref: D03 V1.22 · DIG-W01–DIG-W07 · 03.G1-01/02
+seo:
+  title: Automatisierung und Steuerungstechnik für Anlagen und Prozesse | BAFRAS Engineering
+  description: Ingenieurleistungen für Instrumentierung, PLC/DDC, SCADA, BMS, OT-Integration und
+    technische Software für Anlagen und Prozesse.
+pending:
+- field: sections/dig-w01/media
+  reason_code: integration_pending
+  source_ref: D05 §31 · R01 · contrato MediaRef pendiente de WEB
+- field: sections/ambitos/media
+  reason_code: integration_pending
+  source_ref: D05 §31 · R03 · contrato MediaRef pendiente de WEB
+sections:
+- id: dig-w01
+  source_block: DIG-W01
+  kind: hero
+  title: Automatisierungs- und Steuerungstechnik für Anlagen und Prozesse.
+  eyebrow: KOMPETENZEN / AUTOMATISIERUNG UND STEUERUNGSTECHNIK
+  paragraphs:
+  - id: main
+    text: Wir analysieren die Funktionsweise von Geräten und Anlagen, um festzulegen, was
+      sinnvollerweise gemessen, automatisiert, überwacht oder integriert werden sollte. Wir entwickeln
+      Lösungen für Instrumentierung, Steuerung, Kommunikation und technische Software, die auf die
+      Anforderungen des jeweiligen Projekts zugeschnitten sind.
+  - id: support
+    text: Wir arbeiten sowohl an bestehenden Systemen als auch an neuen Vorhaben und legen Funktionen,
+      Schnittstellen und Prüfkriterien fest, bevor wir eingreifen.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Tätigkeitsbereiche entdecken
+    target:
+      kind: internal
+      page_id: automatizacion_control
+      section_id: ambitos
+- id: necesidades
+  source_block: DIG-W02
+  kind: item_list
+  title: Wenn Sie Ihre Systeme besser verstehen, steuern oder vernetzen müssen.
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Nicht immer ist es notwendig, Geräte auszutauschen oder eine neue Plattform einzuführen.
+      Zunächst gilt es zu verstehen, wie die Anlage funktioniert und welche Einschränkungen sie
+      aufweist.
+  items:
+  - kind: need
+    id: missing-data
+    title: Es fehlen Daten, um zu wissen, was passiert.
+    paragraphs:
+    - id: description
+      text: Wir untersuchen, welche Größen gemessen werden sollten, wie sie erfasst werden und wie sich
+        nützliche Informationen darstellen lassen.
+  - kind: need
+    id: unstable-control
+    title: Die Steuerung ist manuell, instabil oder schwer einzustellen.
+    paragraphs:
+    - id: description
+      text: Wir überprüfen Signale, Sequenzen und Betriebsarten, um Verbesserungen festzulegen.
+  - kind: need
+    id: disconnected-equipment
+    title: Die Geräte tauschen keine Informationen aus.
+    paragraphs:
+    - id: description
+      text: Wir analysieren Protokolle, Kompatibilitäten und Schnittstellen, um ihre Integration zu
+        bewerten.
+  - kind: need
+    id: modernization
+    title: Die bestehende Automatisierung muss modernisiert werden.
+    paragraphs:
+    - id: description
+      text: Wir bewerten Einschränkungen und Alternativen und berücksichtigen dabei, welche Geräte
+        erhalten bleiben können.
+  - kind: need
+    id: data-decisions
+    title: Daten führen nicht zu Entscheidungen.
+    paragraphs:
+    - id: description
+      text: Wir entwickeln Analysen, Werkzeuge und technische Modelle, wenn sie einen klar definierten
+        Nutzen bringen.
+- id: ambitos
+  source_block: DIG-W03
+  kind: cards
+  title: 'Von den Daten zur Steuerung: sechs vernetzte Ingenieurbereiche.'
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Jeder Bereich erfüllt eine andere Funktion. Wir können sie unabhängig voneinander bearbeiten
+      oder koordinieren, wenn das Projekt es erfordert.
+  items:
+  - kind: technical_area
+    id: instrumentation
+    title: Instrumentierung, Datenerfassung und Telemetrie
+    paragraphs:
+    - id: description
+      text: Wir legen die zu messenden Größen, die Sensorik und die Signalerfassung fest, um
+        verlässliche Informationen über Geräte und Anlagen zu gewinnen. Außerdem befassen wir uns mit
+        der Aufzeichnung und Fernübertragung von Daten, ohne Monitoring mit der Steuerung von Geräten
+        gleichzusetzen.
+    tags:
+    - id: tags-1
+      text: Sensorik
+    - id: tags-2
+      text: Signale
+    - id: tags-3
+      text: Telemetrie
+    - id: tags-4
+      text: Remote-Monitoring.
+  - kind: technical_area
+    id: automation-programming
+    title: Automatisierungstechnik und Steuerungsprogrammierung
+    paragraphs:
+    - id: description
+      text: Wir definieren Betriebsfunktionen und -sequenzen, Steuerungsarchitekturen, Verriegelungen
+        und Betriebskriterien. Die Programmierung und Parametrierung von PLC oder DDC erfolgt
+        entsprechend den eingesetzten Controllern und dem vertraglich vereinbarten Umfang.
+    tags:
+    - id: tags-1
+      text: Steuerungslogik
+    - id: tags-2
+      text: PLC/DDC
+    - id: tags-3
+      text: Sequenzen
+    - id: tags-4
+      text: Automatikfunktionen.
+  - kind: technical_area
+    id: supervision
+    title: Überwachung und technische Steuerung von Anlagen
+    paragraphs:
+    - id: description
+      text: Wir gestalten Bedienoberflächen, Alarme, Trends und Überwachungsfunktionen mit HMI, SCADA
+        oder BMS. In Gebäuden stimmen wir die technische Steuerung auf die Eigenschaften der jeweiligen
+        Anlagen ab; die Überwachung ersetzt nicht die Logik der Controller.
+    tags:
+    - id: tags-1
+      text: SCADA/HMI
+    - id: tags-2
+      text: BMS
+    - id: tags-3
+      text: Alarme
+    - id: tags-4
+      text: Betrieb.
+  - kind: technical_area
+    id: ot-integration
+    title: Geräteintegration, Kommunikation und OT-Architektur
+    paragraphs:
+    - id: description
+      text: Wir untersuchen die Interoperabilität zwischen Geräten, Industrieprotokollen und
+        Betriebsnetzen. Wir legen Schnittstellen und Kommunikationsanforderungen fest und
+        berücksichtigen dabei Segmentierung und OT-Sicherheit in der Planung, ohne spezialisierte Audits
+        oder Cybersecurity-Zertifizierungen anzubieten.
+    tags:
+    - id: tags-1
+      text: Protokolle
+    - id: tags-2
+      text: OT-Netze
+    - id: tags-3
+      text: Interoperabilität
+    - id: tags-4
+      text: Schnittstellen.
+  - kind: technical_area
+    id: technical-software
+    title: Technische Software, Daten und Engineering-Anwendungen
+    paragraphs:
+    - id: description
+      text: Wir entwickeln Werkzeuge, um Daten zu verarbeiten und zu analysieren, Berechnungen zu
+        automatisieren und Anwendungen über APIs zu integrieren. Außerdem befassen wir uns mit
+        physikalischen Modellen, Simulationen und Optimierungsalgorithmen, wenn Daten und Zielsetzung
+        dies zulassen, ohne sie automatisch mit künstlicher Intelligenz oder operativen digitalen
+        Zwillingen gleichzusetzen.
+    tags:
+    - id: tags-1
+      text: Analytik
+    - id: tags-2
+      text: Technische Software
+    - id: tags-3
+      text: API
+    - id: tags-4
+      text: Simulation
+    - id: tags-5
+      text: Optimierung.
+  - kind: technical_area
+    id: energy-assets
+    title: Steuerung und Integration von Energie-Assets
+    paragraphs:
+    - id: description
+      text: Wir entwickeln Überwachungs- und Steuerungsfunktionen für Erzeugung, Speicherung und
+        Energiemanagement, gegebenenfalls einschließlich EMS- oder PPC-Integration. Betriebsstrategien
+        und energetische Dimensionierung werden im Bereich Energiesysteme festgelegt; hier geht es um
+        ihre technische Umsetzung.
+    tags:
+    - id: tags-1
+      text: EMS
+    - id: tags-2
+      text: PPC
+    - id: tags-3
+      text: Sollwerte
+    - id: tags-4
+      text: Asset-Integration.
+  transversal:
+    id: transversal
+    title: Diagnose, Tests und Weiterentwicklung von Systemen
+    paragraphs:
+    - id: description
+      text: Wir überprüfen bestehende Automatisierungen, dokumentieren Schnittstellen und führen
+        Integrationstests sowie die funktionale Inbetriebnahme durch, sofern diese Teil des Auftrags
+        sind. Die Unterstützung bei der Weiterentwicklung wird über gesonderte Bedingungen festgelegt;
+        sie umfasst weder eine laufende Wartung noch eine 24/7-Verfügbarkeit.
+- id: entregables
+  source_block: DIG-W04
+  kind: item_list
+  title: Von den funktionalen Anforderungen zur Systemprüfung.
+  purpose: deliverables
+  items:
+  - kind: delivery
+    id: diagnosis-definition
+    title: Diagnose und Definition
+    paragraphs:
+    - id: description
+      text: Geräte- und Signalinventare, Funktionsanalyse und Anforderungen.
+  - kind: delivery
+    id: design
+    title: Planung
+    paragraphs:
+    - id: description
+      text: Architekturen, Diagramme, Signallisten und Steuerungssequenzen.
+  - kind: delivery
+    id: development-integration
+    title: Entwicklung und Integration
+    paragraphs:
+    - id: description
+      text: Programmierung, Parametrierung, Schnittstellen und Anwendungen je nach Leistungsumfang.
+  - kind: delivery
+    id: testing-documentation
+    title: Tests und Dokumentation
+    paragraphs:
+    - id: description
+      text: Protokolle, Ergebnisaufzeichnungen und Abnahmekriterien.
+  notes:
+  - id: scope
+    text: Leistungen und Arbeitsergebnisse richten sich nach dem vertraglich vereinbarten Umfang.
+- id: integracion
+  source_block: DIG-W05
+  kind: cards
+  title: Die Steuerung muss der Anlage und ihren Zielen gerecht werden.
+  purpose: discipline_relations
+  items:
+  - kind: discipline_relation
+    id: infrastructure
+    title: Infrastruktur und technische Anlagen
+    description:
+    - id: description
+      text: Planung und physische Gegebenheiten von Geräten, Netzen sowie elektrischen oder mechanischen
+        Anlagen.
+    discipline:
+      kind: internal
+      page_id: infraestructuras
+  - kind: discipline_relation
+    id: energy
+    title: Energiesysteme
+    description:
+    - id: description
+      text: Bedarfsanalyse, Effizienzstrategien und Betrieb von Erzeugung oder Speicherung.
+    discipline:
+      kind: internal
+      page_id: sistemas_energeticos
+  closing:
+  - id: closing
+    text: Wir koordinieren diese Fachbereiche, wenn eine Maßnahme Entscheidungen zu Geräten, Energie und
+      Automatisierung erfordert.
+- id: dig-w06
+  source_block: DIG-W06
+  kind: text
+  title: Technische Erfahrung in Steuerung, Integration und digitalen Systemen.
+  paragraphs:
+  - id: description
+    text: Unter „Projekte und Erfahrung“ stellen wir dokumentierte Leistungen und die konkrete
+      Beteiligung der Fachleute unseres Teams vor und unterscheiden dabei ihre frühere Laufbahn von den
+      Projekten, mit denen BAFRAS beauftragt wurde.
+  actions:
+  - id: experience
+    label: Projekte und Erfahrung ansehen
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: dig-w07
+  source_block: DIG-W07
+  kind: text
+  title: Möchten Sie ein System überprüfen, automatisieren oder integrieren?
+  paragraphs:
+  - id: description
+    text: Schildern Sie uns, welche Geräte oder Prozesse beteiligt sind, wie sie derzeit funktionieren
+      und was Sie lösen möchten. Wir bewerten die ersten Informationen, um den möglichen technischen
+      Leistungsumfang und die nächsten Schritte festzulegen.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto

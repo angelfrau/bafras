@@ -1,0 +1,320 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: sistemas_energeticos
+review:
+  status: draft
+  source_ref: D03 V1.22 · ENE-01–ENE-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/ene-01/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R10 · contrato MediaRef pendiente de WEB
+- field: sections/ambitos/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R08 · contrato MediaRef pendiente de WEB
+sections:
+- id: ene-01
+  source_block: ENE-01
+  kind: hero
+  title: Ingeniería para comprender, mejorar y transformar sistemas energéticos.
+  eyebrow: CAPACIDADES / SISTEMAS ENERGÉTICOS
+  paragraphs:
+  - id: main
+    text: Analizamos consumos, evaluamos alternativas y desarrollamos proyectos de eficiencia energética,
+      generación renovable, almacenamiento, electrificación y gestión de la energía. Trabajamos con datos
+      y criterios técnicos para adaptar cada actuación a las necesidades y condiciones de operación de
+      la instalación.
+  - id: support
+    text: Podemos intervenir en el diagnóstico de sistemas existentes, el estudio de nuevas inversiones
+      y la definición de estrategias de operación y seguimiento.
+  actions:
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Explorar ámbitos de actuación
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+      section_id: ambitos
+- id: necesidades
+  source_block: ENE-02
+  kind: item_list
+  title: ¿Qué decisión energética necesitas tomar?
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Antes de invertir o modificar una instalación, conviene conocer cómo se utiliza la energía,
+      qué condicionantes existen y qué resultados pueden esperarse de cada alternativa.
+  items:
+  - kind: need
+    id: reduce-consumption
+    title: Entender y reducir consumos.
+    paragraphs:
+    - id: description
+      text: Analizamos demanda, funcionamiento y oportunidades de eficiencia.
+  - kind: need
+    id: generation-storage
+    title: Producir o almacenar energía.
+    paragraphs:
+    - id: description
+      text: Estudiamos generación renovable, autoconsumo, baterías y su integración.
+  - kind: need
+    id: electrification
+    title: Electrificar instalaciones o procesos.
+    paragraphs:
+    - id: description
+      text: Comparamos alternativas de suministro, producción térmica y recuperación energética.
+  - kind: need
+    id: charging-assets
+    title: Incorporar recarga o coordinar varios activos.
+    paragraphs:
+    - id: description
+      text: Evaluamos necesidades de potencia, operación y flexibilidad.
+  - kind: need
+    id: cost-monitoring
+    title: Controlar costes y mejorar el seguimiento.
+    paragraphs:
+    - id: description
+      text: Revisamos suministros, indicadores, previsiones y estrategias de gestión.
+  - kind: need
+    id: decarbonization
+    title: Planificar la descarbonización.
+    paragraphs:
+    - id: description
+      text: Cuantificamos consumos y emisiones y estudiamos actuaciones de reducción.
+- id: ambitos
+  source_block: ENE-03
+  kind: cards
+  title: Seis ámbitos de ingeniería energética.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Desde la caracterización de la demanda hasta la integración de nuevos activos, abordamos los
+      sistemas energéticos desde las especialidades que requiere cada proyecto.
+  items:
+  - kind: technical_area
+    id: diagnosis-efficiency
+    title: Diagnóstico y eficiencia energética
+    paragraphs:
+    - id: description
+      text: Caracterizamos consumos, curvas de demanda y balances energéticos para comprender el funcionamiento
+        de edificios, instalaciones y procesos. Evaluamos rendimientos, oportunidades de mejora y medidas
+        de eficiencia, con estimaciones basadas en datos e hipótesis identificadas.
+    included:
+    - id: included-1
+      text: auditorías energéticas
+    - id: included-2
+      text: análisis de demanda
+    - id: included-3
+      text: eficiencia y optimización
+    - id: included-4
+      text: estudios de potencia y calidad de energía
+    - id: included-5
+      text: diagnóstico de rendimiento de plantas fotovoltaicas y baterías.
+  - kind: technical_area
+    id: renewables-storage
+    title: Generación renovable y almacenamiento
+    paragraphs:
+    - id: description
+      text: Estudiamos y desarrollamos sistemas fotovoltaicos, autoconsumo y almacenamiento electroquímico.
+        Analizamos producción, demanda, dimensionamiento, conexión e integración, incluidos autoconsumo
+        colectivo, soluciones híbridas y configuraciones técnicas para comunidades energéticas cuando
+        proceda.
+    included:
+    - id: included-1
+      text: fotovoltaica
+    - id: included-2
+      text: autoconsumo individual y colectivo
+    - id: included-3
+      text: BESS
+    - id: included-4
+      text: hibridación
+    - id: included-5
+      text: estudios de producción y rendimiento.
+  - kind: technical_area
+    id: electrification-thermal
+    title: Electrificación y sistemas térmicos
+    paragraphs:
+    - id: description
+      text: Evaluamos la sustitución de combustibles y las alternativas para producir, distribuir y aprovechar
+        energía térmica. Estudiamos electrificación, recuperación de calor, almacenamiento térmico y redes
+        de calor y frío, coordinando el diseño de equipos y circuitos con Infraestructuras e instalaciones.
+    included:
+    - id: included-1
+      text: electrificación térmica
+    - id: included-2
+      text: recuperación de calor
+    - id: included-3
+      text: almacenamiento térmico
+    - id: included-4
+      text: sistemas centralizados y redes térmicas.
+  - kind: technical_area
+    id: mobility-integrated
+    title: Movilidad eléctrica y sistemas energéticos integrados
+    paragraphs:
+    - id: description
+      text: Estudiamos infraestructuras de recarga y su relación con la potencia disponible, la demanda
+        y los demás activos energéticos. También definimos criterios de coordinación para microredes,
+        sistemas híbridos y estrategias de flexibilidad, incluyendo interfaces de medida y control cuando
+        corresponda.
+    included:
+    - id: included-1
+      text: recarga de vehículos eléctricos
+    - id: included-2
+      text: potencia y simultaneidad
+    - id: included-3
+      text: microredes
+    - id: included-4
+      text: coordinación de generación, baterías y cargas
+    - id: included-5
+      text: flexibilidad.
+  - kind: technical_area
+    id: management-costs
+    title: Gestión, monitorización y costes energéticos
+    paragraphs:
+    - id: description
+      text: Definimos indicadores y criterios de seguimiento para conocer el comportamiento energético
+        a lo largo del tiempo. Analizamos suministros, facturación y contratos, presupuestos y previsiones
+        de demanda o generación, y planteamos estrategias de operación y gestión energética según el alcance
+        acordado.
+    included:
+    - id: included-1
+      text: medida y monitorización
+    - id: included-2
+      text: seguimiento energético
+    - id: included-3
+      text: auditoría de suministros
+    - id: included-4
+      text: optimización de costes y contratos
+    - id: included-5
+      text: previsiones
+    - id: included-6
+      text: gestión energética recurrente.
+  - kind: technical_area
+    id: decarbonization
+    title: Descarbonización y sostenibilidad energética
+    paragraphs:
+    - id: description
+      text: Estudiamos escenarios de reducción de emisiones y hojas de ruta para transformar el uso de
+        la energía en edificios, instalaciones y organizaciones. Elaboramos inventarios y análisis de
+        huella de carbono dentro de límites y metodologías definidos, diferenciando las estimaciones de
+        una verificación independiente.
+    included:
+    - id: included-1
+      text: planes de descarbonización
+    - id: included-2
+      text: escenarios energéticos
+    - id: included-3
+      text: huella de carbono
+    - id: included-4
+      text: contabilidad de emisiones
+    - id: included-5
+      text: priorización de actuaciones.
+  transversal:
+    id: transversal
+    title: Nota de alcance — eficiencia hídrica
+    paragraphs:
+    - id: description
+      text: La auditoría y eficiencia hídrica (ENE-23) permanece en la oferta técnica y puede mencionarse
+        como servicio complementario en proyectos de eficiencia de recursos. No se presenta como séptimo
+        ámbito energético ni se confunde con el diseño de redes hidráulicas, propio de Infraestructuras
+        e instalaciones.
+- id: entregables
+  source_block: ENE-04
+  kind: item_list
+  title: Estudios, proyectos y asistencia técnica adaptados a cada encargo.
+  purpose: deliverables
+  items:
+  - kind: delivery
+    id: diagnosis-audit
+    title: Diagnóstico y auditoría
+    paragraphs:
+    - id: description
+      text: caracterización de consumos, líneas base, balances, informes y oportunidades de mejora.
+  - kind: delivery
+    id: feasibility-alternatives
+    title: Viabilidad y alternativas
+    paragraphs:
+    - id: description
+      text: dimensionamiento, simulaciones, escenarios operativos y comparativas técnico-económicas con
+        hipótesis explícitas.
+  - kind: delivery
+    id: engineering-project
+    title: Ingeniería y proyecto
+    paragraphs:
+    - id: description
+      text: cálculos, memorias, esquemas, planos, especificaciones y documentación técnica.
+  - kind: delivery
+    id: integration-monitoring
+    title: Integración y seguimiento
+    paragraphs:
+    - id: description
+      text: requisitos de medida y control, protocolos de pruebas, indicadores y seguimiento de resultados
+        cuando proceda.
+  notes:
+  - id: scope
+    text: viabilidad y planificación son modalidades transversales, no un área de ingeniería separada.
+      No se garantizan ahorros, retornos, subvenciones o resultados de previsión. Dirección facultativa,
+      ejecución, tramitación, inspección reglamentaria y operación recurrente se acuerdan expresamente
+      cuando correspondan.
+- id: integracion
+  source_block: ENE-05
+  kind: text
+  title: 'Energía, instalaciones y control: especialidades coordinadas.'
+  paragraphs:
+  - id: description
+    text: Un sistema de autoconsumo o almacenamiento necesita una infraestructura eléctrica adecuada y
+      puede requerir estrategias de supervisión. La electrificación térmica puede implicar modificaciones
+      mecánicas y de regulación. Definimos los límites y responsabilidades de cada disciplina según el
+      proyecto.
+  actions:
+  - id: infrastructure
+    label: Infraestructuras e instalaciones
+    target:
+      kind: internal
+      page_id: infraestructuras
+  - id: automation
+    label: Automatización y control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: ene-06
+  source_block: ENE-06
+  kind: text
+  title: Experiencia técnica en sistemas energéticos.
+  paragraphs:
+  - id: description
+    text: El equipo de BAFRAS reúne experiencia profesional en el estudio y desarrollo de sistemas energéticos.
+      En «Proyectos y experiencia» presentamos referencias documentadas, diferenciando la participación
+      profesional previa de los fundadores de los proyectos contratados directamente por BAFRAS.
+  actions:
+  - id: experience
+    label: Conocer proyectos y experiencia.
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: ene-07
+  source_block: ENE-07
+  kind: text
+  title: ¿Tienes una decisión energética que estudiar?
+  paragraphs:
+  - id: description
+    text: Cuéntanos qué instalación o activo quieres analizar, qué información tienes disponible y qué
+      objetivo persigues. Valoraremos el punto de partida y el alcance técnico necesario para avanzar.
+  actions:
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto

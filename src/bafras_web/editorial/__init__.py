@@ -1,12 +1,19 @@
-"""Dominio editorial (responsable: CONTENT-ES-01).
+"""Public editorial API (A1): in-memory values, no I/O or publication policy."""
 
-Responsabilidad:
-Modelos Pydantic v2 de páginas, secciones tipadas, entidades compartidas, CTA y
-metadatos editoriales; validación semántica; identificadores estables; versión del
-esquema; detección de cambios editoriales.
+from .entities import DownloadableResource, Experience, Person, Sector
+from .pages import CommonContent, EditorialBundle, PageContent, SeoMeta
+from .primitives import EditorialId, EditorialReview, Paragraph, PendingField, PublicText, TextItem
+from .references import CallToAction, ContactLink, ExternalLink, InternalLink, ResourceLink, SharedActionRef
+from .sections import (
+    CardsSection, ContactFormSection, ExperienceIndexSection, HeroSection,
+    ItemListSection, ProcessSection, Section, SectorIndexSection, TeamSection, TextSection,
+)
 
-Dependencias (comprobadas en tests/contracts/test_architecture.py):
-Puede importar: bafras_web.media.
-No puede importar: yaml, jinja2, sistema de archivos (os, pathlib, shutil, io),
-bafras_web.localization, site, application, adapters, cli.
-"""
+__all__ = [
+    "CallToAction", "CardsSection", "CommonContent", "ContactFormSection", "ContactLink",
+    "DownloadableResource", "EditorialBundle", "EditorialId", "EditorialReview", "Experience",
+    "ExperienceIndexSection", "ExternalLink", "HeroSection", "InternalLink", "ItemListSection",
+    "PageContent", "Paragraph", "PendingField", "Person", "ProcessSection", "PublicText",
+    "ResourceLink", "Section", "Sector", "SectorIndexSection", "SeoMeta", "SharedActionRef",
+    "TeamSection", "TextItem", "TextSection",
+]

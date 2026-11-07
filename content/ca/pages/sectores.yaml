@@ -1,0 +1,93 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sectores
+review:
+  status: draft
+  source_ref: D03 V1.22 · SEC-01–SEC-05 · 03.K/03.G1-01/02
+seo:
+  title: Sectors d'enginyeria | Edificis, indústria i energia | BAFRAS.
+  description: Enginyeria d'instal·lacions, sistemes energètics i automatització per a hotels,
+    indústria, serveis públics, equipaments i edificis.
+pending: []
+sections:
+- id: sec-01
+  source_block: SEC-01
+  kind: hero
+  title: Enginyeria per a edificis, indústria i infraestructures.
+  eyebrow: SECTORS
+  paragraphs:
+  - id: description
+    text: Cada activitat planteja condicions diferents d'ús, operació i manteniment. Aplicam les nostres
+      capacitats en instal·lacions, energia i automatització per estudiar necessitats concretes i
+      definir solucions ajustades al context de cada projecte.
+  actions:
+  - id: explore
+    label: Explorar sectors
+    target:
+      kind: internal
+      page_id: sectores
+      section_id: sectores
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto
+- id: sectores
+  source_block: SEC-02
+  kind: sector_index
+  title: Entenem l'entorn abans de definir l'actuació.
+  introduction:
+  - id: introduction
+    text: Aquests són alguns dels àmbits en què podem aportar enginyeria. Els exemples descriuen
+      necessitats que podem estudiar; no són referències de projectes executats.
+  sector_refs:
+  - turismo-terciario
+  - industria-logistica-agroindustria
+  - infraestructuras-servicios-publicos
+  - salud-educacion-equipamientos
+  - edificacion-rehabilitacion-activos
+  - comunidades-energeticas-infraestructuras-tecnologicas
+- id: sec-03
+  source_block: SEC-03
+  kind: text
+  title: La teva necessitat no encaixa en cap categoria?
+  paragraphs:
+  - id: description
+    text: Una instal·lació que no rendeix com caldria, una inversió energètica per avaluar o diversos
+      equips que no intercanvien dades poden aparèixer en activitats molt diferents. Partim del problema
+      tècnic i definim quines especialitats calen.
+  actions:
+  - id: capabilities
+    label: Veure les nostres capacitats
+    target:
+      kind: internal
+      page_id: capacidades
+- id: sec-04
+  source_block: SEC-04
+  kind: text
+  title: Enginyeria també per a equips de projecte.
+  paragraphs:
+  - id: description
+    text: Col·laboram amb promotors, gestors d'instal·lacions, estudis d'arquitectura i enginyeria,
+      constructores i instal·ladores en treballs concrets d'estudi, projecte, diagnosi i assistència
+      tècnica. Acordam lliurables, coordinació i responsabilitats per a cada col·laboració.
+  actions:
+  - id: about
+    label: Coneix BAFRAS
+    target:
+      kind: internal
+      page_id: sobre_bafras
+- id: sec-05
+  source_block: SEC-05
+  kind: text
+  title: Explica'ns què necessites resoldre.
+  paragraphs:
+  - id: description
+    text: Indica'ns el tipus d'activitat o instal·lació, l'estat del projecte i la decisió o el problema
+      que vols abordar. Valorarem quina informació necessitam per concretar el pas següent.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto

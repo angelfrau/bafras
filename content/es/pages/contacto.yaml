@@ -1,0 +1,77 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: contacto
+review:
+  status: draft
+  source_ref: D03 V1.22 · CO-01–CO-04 · 03.K/03.G1-01/02
+seo:
+  title: Contacto | BAFRAS Engineering
+  description: Contacta con BAFRAS Engineering para plantear un proyecto de instalaciones, energía o automatización.
+    Cuéntanos qué necesitas resolver.
+pending:
+- field: sections/co-02/privacy_text
+  reason_code: source_missing
+  source_ref: D03 CO-02 · 03.K §4 · política real pendiente de revisión legal
+sections:
+- id: co-01
+  source_block: CO-01
+  kind: hero
+  title: Hablemos de tu proyecto.
+  eyebrow: CONTACTO
+  paragraphs:
+  - id: description
+    text: Explícanos brevemente qué necesitas resolver, tanto si estás definiendo una actuación como si
+      ya dispones de planos, datos o documentación técnica. Revisaremos tu consulta para valorar si podemos
+      ayudarte y qué información convendría analizar a continuación.
+- id: co-02
+  source_block: CO-02
+  kind: form
+  title: Envíanos tu consulta.
+  fields:
+  - id: name
+    label: Nombre *
+    required: true
+  - id: company
+    label: Empresa u organización
+    required: false
+  - id: email
+    label: Correo electrónico *
+    required: true
+  - id: message
+    label: Cuéntanos qué necesitas *
+    required: true
+    help: Puedes indicar el tipo de instalación o actividad, el problema o actuación prevista, la ubicación
+      y la fase del proyecto. No necesitas tener todos los datos.
+  submit_label: Enviar consulta.
+  messages:
+    success: Tu consulta se ha enviado correctamente.
+    error: No hemos podido enviar tu consulta. Escríbenos a info@bafras.com.
+- id: co-03
+  source_block: CO-03
+  kind: text
+  title: ¿Prefieres escribirnos directamente?
+  paragraphs:
+  - id: description
+    text: Puedes contactar por correo electrónico y describir el proyecto con el nivel de detalle que
+      tengas disponible.
+  contact_channels:
+  - id: email
+    label: Correo electrónico
+    value: info@bafras.com
+    target:
+      kind: contact
+      channel: email
+  - id: phone
+    label: Teléfono
+    value: +34 610 903 179
+    target:
+      kind: contact
+      channel: phone
+- id: co-04
+  source_block: CO-04
+  kind: text
+  title: No necesitas tenerlo todo definido.
+  paragraphs:
+  - id: description
+    text: Una descripción inicial puede ser suficiente para identificar la especialidad adecuada y determinar
+      qué información habría que revisar antes de concretar un alcance.

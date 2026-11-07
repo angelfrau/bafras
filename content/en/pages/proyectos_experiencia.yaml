@@ -1,0 +1,89 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: proyectos_experiencia
+review:
+  status: draft
+  source_ref: D03 V1.22 · PE-01–PE-04 · 03.K/03.G1-01/02
+seo:
+  title: Engineering projects and experience | BAFRAS Engineering
+  description: null
+pending:
+- field: seo.description
+  reason_code: source_missing
+  source_ref: 'D03 PE · UX y SEO: intención sin descripción literal'
+- field: sections/pe-02/groups
+  reason_code: verification_required
+  source_ref: D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni
+    autorización
+sections:
+- id: pe-01
+  source_block: PE-01
+  kind: hero
+  title: Experience applied to installations, energy and control systems.
+  eyebrow: PROJECTS AND EXPERIENCE
+  paragraphs:
+  - id: description
+    text: We bring together references from the team's professional careers in buildings, energy
+      infrastructure and automation systems. Every project poses different challenges, which is why we
+      focus on the technical context, the work carried out and the specific involvement of our
+      professionals.
+  attribution: References from previous professional experience are distinguished from assignments
+    carried out directly by BAFRAS.
+- id: pe-02
+  source_block: PE-02
+  kind: experience_index
+  title: Experience in projects of different kinds.
+  introduction:
+  - id: introduction
+    text: We select work that helps to explain the types of systems and technical challenges the team
+      has been involved in.
+  groups:
+  - id: infrastructure
+    title: Infrastructure and technical installations
+    introduction:
+    - id: introduction
+      text: Electrical and mechanical installations in buildings with differing requirements for
+        comfort, operation and site coordination.
+    entries: []
+  - id: automation
+    title: Automation and control
+    introduction:
+    - id: introduction
+      text: Communications, regulation, supervision and technical software for systems that need to
+        operate in a coordinated way.
+    entries: []
+  - id: energy
+    title: Energy systems
+    introduction:
+    - id: introduction
+      text: Studies, engineering and technical documentation to integrate generation, storage and new
+        energy infrastructure.
+    entries: []
+- id: pe-03
+  source_block: PE-03
+  kind: text
+  title: The specific contribution matters.
+  paragraphs:
+  - id: description
+    text: For each reference we will identify the project context, the role performed, the systems
+      involved and the phases of participation. Where verified data is available, we will add
+      deliverables, results and authorised images.
+- id: pe-04
+  source_block: PE-04
+  kind: text
+  title: Does your project involve similar challenges?
+  paragraphs:
+  - id: description
+    text: Tell us which installation or system you need to develop, review or integrate. We will assess
+      which experience and capabilities may be relevant to your assignment.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto
+  - id: capabilities
+    label: Explore capabilities
+    target:
+      kind: internal
+      page_id: capacidades

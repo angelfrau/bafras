@@ -1,0 +1,258 @@
+# CONTENT-ES-01 / A3 — D03 V1.22 C01–C05; composición D05 §35.
+# Borrador de integración. Locale aportado por el contexto; SEO pendiente DEC-05.
+# Sin fotografías por decisión aprobada; enlaces contextuales según C04_CAP_V1.
+page_id: capacidades
+review:
+  status: draft
+  source_ref: D03 V1.22 · C01–C05 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+sections:
+- id: c01
+  source_block: C01
+  kind: hero
+  eyebrow: UNSERE KOMPETENZEN
+  title: Drei Ingenieurdisziplinen. Lösungen, die zu jedem Projekt passen.
+  paragraphs:
+  - id: description
+    text: Wir erbringen Studien, Planungsleistungen und technische Begleitung in den Bereichen
+      Infrastruktur und technische Anlagen, Energiesysteme sowie Automatisierung und Steuerungstechnik.
+      Jeder Auftrag kann von einem einzelnen Fachbereich aus bearbeitet werden oder – je nach
+      Anforderungen und Randbedingungen – die Koordination mehrerer Fachbereiche erfordern.
+  actions:
+  - id: explore
+    label: Fachbereiche entdecken
+    target:
+      kind: internal
+      page_id: capacidades
+      section_id: especialidades
+- id: especialidades
+  source_block: C02
+  kind: cards
+  purpose: capabilities
+  title: Finden Sie den Fachbereich, den Ihr Projekt braucht.
+  introduction:
+  - id: description
+    text: Erfahren Sie mehr über den Umfang jedes Bereichs und die Leistungen, die wir untersuchen oder
+      entwickeln können.
+  items:
+  - kind: capability
+    id: infrastructure
+    title: Infrastruktur und technische Anlagen
+    paragraphs:
+    - id: description
+      text: Ingenieurleistungen für Planung, Analyse und Verbesserung elektrischer, mechanischer und
+        Hilfsanlagen in Gebäuden und Infrastrukturen. Wir sind bei neuen Vorhaben ebenso tätig wie bei
+        der Überprüfung oder Anpassung bestehender Systeme, jeweils mit dem für den Auftrag definierten
+        technischen Leistungsumfang.
+    examples:
+    - id: scope-1
+      text: Elektrische Anlagen in Nieder- und Mittelspannung
+    - id: scope-2
+      text: Heizung, Klima, Lüftung und thermische Systeme
+    - id: scope-3
+      text: Sanitär- und Abwasseranlagen
+    - id: scope-4
+      text: Koordination und technische Begleitung.
+    actions:
+    - id: explore
+      label: Mehr zu Infrastruktur und technischen Anlagen
+      target:
+        kind: internal
+        page_id: infraestructuras
+  - kind: capability
+    id: energy
+    title: Energiesysteme
+    paragraphs:
+    - id: description
+      text: Wir analysieren den Energiebedarf und das energetische Verhalten von Anlagen, um
+        Alternativen für Effizienz, Erzeugung, Speicherung und Energiemanagement zu bewerten. Unsere
+        Studien und Projekte berücksichtigen die verfügbaren Daten, die Betriebsbedingungen und die
+        Umsetzbarkeit der Lösungen.
+    examples:
+    - id: scope-1
+      text: Energieanalyse und Energieaudit
+    - id: scope-2
+      text: Effizienz und Optimierung
+    - id: scope-3
+      text: Photovoltaik und Eigenverbrauch
+    - id: scope-4
+      text: Energiespeicherung und Energiemanagement.
+    actions:
+    - id: explore
+      label: Mehr zu Energiesystemen
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+  - kind: capability
+    id: automation
+    title: Automatisierung und Steuerungstechnik
+    paragraphs:
+    - id: description
+      text: Wir planen und entwickeln Lösungen für Instrumentierung, Steuerung, Überwachung und
+        Integration von Anlagen und Prozessen. Dazu gehören die Datenerfassung, die Kommunikation
+        zwischen Geräten und die Automatisierungsfunktionen, die für Betrieb und Nachverfolgung
+        erforderlich sind.
+    examples:
+    - id: scope-1
+      text: Instrumentierung und Datenerfassung
+    - id: scope-2
+      text: PLC und DDC-Controller
+    - id: scope-3
+      text: BMS und SCADA
+    - id: scope-4
+      text: Kommunikation, Integration und technische Software.
+    actions:
+    - id: explore
+      label: Mehr zu Automatisierung und Steuerungstechnik
+      target:
+        kind: internal
+        page_id: automatizacion_control
+- id: c03
+  source_block: C03
+  kind: cards
+  purpose: application_examples
+  eyebrow: Anwendungsbeispiele
+  title: Wenn Anlagen, Energie und Steuerung zusammenhängen.
+  introduction:
+  - id: description
+    text: In bestimmten Projekten betrifft eine technische Entscheidung mehrere Fachbereiche. Wir
+      analysieren diese Zusammenhänge, um die erforderlichen Maßnahmen und Zuständigkeiten festzulegen,
+      ohne Disziplinen oder Technologien einzubeziehen, die das Projekt nicht benötigt.
+  items:
+  - kind: application_example
+    id: thermal-modernization
+    title: Modernisierung einer thermischen Anlage.
+    description:
+    - id: description
+      text: Es kann erforderlich sein, Geräte und Kreisläufe zu untersuchen, den Energiebedarf zu
+        überprüfen und die Regelungs- und Steuerungsstrategien anzupassen.
+    disciplines:
+    - id: infrastructure
+      label: Infrastruktur und technische Anlagen
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: energy
+      label: Energiesysteme
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: automation
+      label: Automatisierung und Steuerungstechnik
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: self-consumption-storage
+    title: Eigenverbrauch und Speicherung.
+    description:
+    - id: description
+      text: Die Einbindung von Photovoltaik oder Batteriespeichern kann es erfordern, das Energieprofil
+        zu untersuchen, die elektrische Anlage auszuarbeiten und Messung, Überwachung und Steuerung zu
+        integrieren.
+    disciplines:
+    - id: energy
+      label: Energiesysteme
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: infrastructure
+      label: Infrastruktur und technische Anlagen
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automatisierung und Steuerungstechnik
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: installation-performance
+    title: Funktionsstörungen in einer Anlage.
+    description:
+    - id: description
+      text: Bevor über eine Sanierung entschieden wird, kann es sinnvoll sein, die Betriebsbedingungen,
+        den Zustand der Geräte und die Steuersignale oder -sequenzen zu überprüfen.
+    disciplines:
+    - id: infrastructure
+      label: Infrastruktur und technische Anlagen
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automatisierung und Steuerungstechnik
+      target:
+        kind: internal
+        page_id: automatizacion_control
+    - id: energy
+      label: Energiesysteme
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+- id: c04
+  source_block: C04
+  kind: item_list
+  purpose: modalities
+  title: Ingenieurleistungen in verschiedenen Projektphasen.
+  introduction:
+  - id: description
+    text: Wir können eine einzelne Maßnahme übernehmen oder mehrere Phasen begleiten – mit einem für
+      jeden Auftrag festgelegten Leistungsumfang und definierten Arbeitsergebnissen.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnose und Studien.
+    paragraphs:
+    - id: description
+      text: Technische Begehung im vertraglich vereinbarten Umfang, Datenanalyse, Messungen und
+        Bewertung von Alternativen.
+  - kind: delivery
+    id: design-project
+    title: Planung und Projektierung.
+    paragraphs:
+    - id: description
+      text: Ausarbeitung von Lösungen, Berechnungen, Plänen, Spezifikationen und technischer
+        Dokumentation.
+  - kind: delivery
+    id: assistance-coordination
+    title: Begleitung und Koordination.
+    paragraphs:
+    - id: description
+      text: Unterstützung bei der Planung, Prüfung von Schnittstellen, technische Begleitung und
+        Koordination mit den Projektbeteiligten.
+  - kind: delivery
+    id: programming-integration-verification
+    title: Programmierung, Integration und Prüfung.
+    paragraphs:
+    - id: description
+      text: Konfiguration von Systemen, Tests und Dokumentation der Ergebnisse, sofern diese Leistungen
+        Teil des Auftrags sind.
+- id: c05
+  source_block: C05
+  kind: text
+  title: Was möchten Sie lösen oder entwickeln?
+  paragraphs:
+  - id: description
+    text: Schildern Sie uns den Kontext Ihrer Anlage oder Ihres Projekts und Ihr Ziel. Wir prüfen die
+      ersten Informationen, um einzuschätzen, wie wir zusammenarbeiten können und welcher technische
+      Leistungsumfang untersucht werden sollte.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto
+  - id: experience
+    label: Unsere Projekte und Erfahrung kennenlernen
+    target:
+      kind: internal
+      page_id: proyectos_experiencia

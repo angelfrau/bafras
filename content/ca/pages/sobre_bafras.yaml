@@ -1,0 +1,122 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sobre_bafras
+review:
+  status: draft
+  source_ref: D03 V1.22 · SB-01–SB-05 · 03.K/03.G1-01/02
+seo:
+  title: Sobre BAFRAS | Equip i enginyeria multidisciplinària
+  description: Coneix l'equip i la manera de treballar de BAFRAS Engineering en instal·lacions, sistemes
+    energètics i automatització i control.
+pending: []
+sections:
+- id: sb-01
+  source_block: SB-01
+  kind: hero
+  title: Enginyeria amb visió tècnica i disciplines complementàries.
+  eyebrow: SOBRE BAFRAS
+  paragraphs:
+  - id: description
+    text: BAFRAS Engineering reuneix perfils professionals vinculats a les instal·lacions i
+      infraestructures, els sistemes energètics i l'automatització i control. Abordam cada encàrrec des
+      de les seves necessitats reals, amb atenció al funcionament de les instal·lacions, els
+      condicionants del projecte i la coordinació entre especialitats.
+  actions:
+  - id: experience
+    label: Coneix la nostra experiència
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-02
+  source_block: SB-02
+  kind: team
+  title: Professionals amb experiències que es complementen.
+  introduction:
+  - id: introduction
+    text: La combinació de trajectòries en instal·lacions d'edificis, infraestructures energètiques i
+      sistemes de control permet estudiar els problemes des de perspectives diferents. Cada projecte
+      requereix definir qui hi intervé, amb quines responsabilitats i quines especialitats s'han de
+      coordinar.
+  corporate_presentation:
+  - id: description
+    text: BAFRAS Engineering reuneix dos enginyers industrials i un enginyer tècnic electrònic, amb
+      perfils complementaris en infraestructures i instal·lacions, sistemes energètics i automatització
+      i control. Combinam aquestes perspectives per estudiar cada projecte i desenvolupar l'abast
+      d'enginyeria que necessita.
+  person_refs:
+  - murti
+  - angel
+  - amin
+- id: sb-03
+  source_block: SB-03
+  kind: process
+  title: Primer, entendre. Després, definir l'actuació.
+  purpose: principles
+  introduction:
+  - id: introduction
+    text: Un mateix símptoma pot tenir causes diferents, i una solució tècnicament possible no sempre és
+      la més adequada per a una instal·lació. Revisam el context, contrastam les dades disponibles i
+      definim un abast proporcionat a l'objectiu del client.
+  items:
+  - id: understand
+    title: Entendre el context.
+    paragraphs:
+    - id: description
+      text: Identificar necessitats, funcionament i restriccions.
+  - id: evaluate
+    title: Avaluar alternatives.
+    paragraphs:
+    - id: description
+      text: Contrastar criteris tècnics i opcions viables quan correspongui.
+  - id: develop
+    title: Desenvolupar l'abast.
+    paragraphs:
+    - id: description
+      text: Preparar els estudis, projectes, especificacions o integracions contractats.
+  - id: verify
+    title: Verificar i documentar.
+    paragraphs:
+    - id: description
+      text: Comprovar els aspectes inclosos en l'encàrrec i lliurar documentació utilitzable.
+  closing:
+  - id: scope
+    text: No totes aquestes etapes formen part de tots els contractes.
+- id: sb-04
+  source_block: SB-04
+  kind: text
+  title: Experiència professional aplicada a projectes reals.
+  paragraphs:
+  - id: description
+    text: La trajectòria de l'equip inclou experiències relacionades amb instal·lacions en edificació,
+      sistemes de control industrial i infraestructures energètiques. Les referències es presenten amb
+      el seu context i, quan estiguin verificades, amb les funcions concretes que hi ha exercit cada
+      professional.
+  - id: collaboration
+    text: També col·laboram amb promotors, responsables tècnics, enginyeries, estudis d'arquitectura,
+      constructores i instal·ladores, i delimitam les interfícies i responsabilitats de cada
+      participació.
+  actions:
+  - id: experience
+    label: Veure projectes i experiència
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-05
+  source_block: SB-05
+  kind: text
+  title: Parlem del teu projecte.
+  paragraphs:
+  - id: description
+    text: Si necessites estudiar una instal·lació, desenvolupar una actuació tècnica o coordinar
+      diferents especialitats, podem valorar amb tu l'abast de la feina.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto
+  - id: capabilities
+    label: Explorar capacitats
+    target:
+      kind: internal
+      page_id: capacidades

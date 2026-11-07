@@ -1,0 +1,98 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sectores
+review:
+  status: draft
+  source_ref: D03 V1.22 · SEC-01–SEC-05 · 03.K/03.G1-01/02
+seo:
+  title: Ingenieurleistungen nach Branchen | Gebäude, Industrie und Energie | BAFRAS.
+  description: Ingenieurleistungen für technische Anlagen, Energiesysteme und Automatisierung für
+    Hotels, Industrie, öffentliche Dienste, Einrichtungen und Gebäude.
+pending: []
+sections:
+- id: sec-01
+  source_block: SEC-01
+  kind: hero
+  title: Ingenieurleistungen für Gebäude, Industrie und Infrastrukturen.
+  eyebrow: BRANCHEN
+  paragraphs:
+  - id: description
+    text: Jede Tätigkeit stellt unterschiedliche Anforderungen an Nutzung, Betrieb und Wartung. Wir
+      setzen unsere Kompetenzen in technischen Anlagen, Energie und Automatisierung ein, um konkrete
+      Anforderungen zu untersuchen und Lösungen festzulegen, die auf den Kontext des jeweiligen Projekts
+      abgestimmt sind.
+  actions:
+  - id: explore
+    label: Branchen entdecken
+    target:
+      kind: internal
+      page_id: sectores
+      section_id: sectores
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto
+- id: sectores
+  source_block: SEC-02
+  kind: sector_index
+  title: Wir verstehen das Umfeld, bevor wir die Maßnahme festlegen.
+  introduction:
+  - id: introduction
+    text: Dies sind einige der Bereiche, in denen wir Ingenieurleistungen einbringen können. Die
+      Beispiele beschreiben Anforderungen, die wir untersuchen können; es handelt sich nicht um
+      Referenzen ausgeführter Projekte.
+  sector_refs:
+  - turismo-terciario
+  - industria-logistica-agroindustria
+  - infraestructuras-servicios-publicos
+  - salud-educacion-equipamientos
+  - edificacion-rehabilitacion-activos
+  - comunidades-energeticas-infraestructuras-tecnologicas
+- id: sec-03
+  source_block: SEC-03
+  kind: text
+  title: Ihr Anliegen passt in keine Kategorie?
+  paragraphs:
+  - id: description
+    text: Eine Anlage, die nicht die erwartete Leistung bringt, eine zu bewertende Energieinvestition
+      oder mehrere Geräte, die keine Daten austauschen, können in ganz unterschiedlichen
+      Tätigkeitsfeldern auftreten. Wir gehen vom technischen Problem aus und legen fest, welche
+      Fachbereiche erforderlich sind.
+  actions:
+  - id: capabilities
+    label: Unsere Kompetenzen ansehen
+    target:
+      kind: internal
+      page_id: capacidades
+- id: sec-04
+  source_block: SEC-04
+  kind: text
+  title: Ingenieurleistungen auch für Projektteams.
+  paragraphs:
+  - id: description
+    text: Wir arbeiten mit Bauherren und Projektentwicklern, Facility-Managern, Architektur- und
+      Ingenieurbüros, Bauunternehmen und Installationsbetrieben bei konkreten Studien-, Planungs-,
+      Diagnose- und Begleitungsleistungen zusammen. Für jede Zusammenarbeit vereinbaren wir
+      Arbeitsergebnisse, Koordination und Zuständigkeiten.
+  actions:
+  - id: about
+    label: BAFRAS kennenlernen
+    target:
+      kind: internal
+      page_id: sobre_bafras
+- id: sec-05
+  source_block: SEC-05
+  kind: text
+  title: Schildern Sie uns, was Sie lösen möchten.
+  paragraphs:
+  - id: description
+    text: Nennen Sie uns die Art der Tätigkeit oder Anlage, den Projektstand und die Entscheidung oder
+      das Problem, das Sie angehen möchten. Wir prüfen, welche Informationen wir benötigen, um den
+      nächsten Schritt festzulegen.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto

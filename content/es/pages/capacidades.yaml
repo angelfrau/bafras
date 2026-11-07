@@ -1,0 +1,250 @@
+# CONTENT-ES-01 / A3 — D03 V1.22 C01–C05; composición D05 §35.
+# Borrador de integración. Locale aportado por el contexto; SEO pendiente DEC-05.
+# Sin fotografías por decisión aprobada; enlaces contextuales según C04_CAP_V1.
+page_id: capacidades
+review:
+  status: draft
+  source_ref: D03 V1.22 · C01–C05 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+sections:
+- id: c01
+  source_block: C01
+  kind: hero
+  eyebrow: NUESTRAS CAPACIDADES
+  title: Tres especialidades de ingeniería. Soluciones ajustadas a cada proyecto.
+  paragraphs:
+  - id: description
+    text: Desarrollamos estudios, proyectos y asistencia técnica en infraestructuras e instalaciones,
+      sistemas energéticos y automatización y control. Cada encargo puede abordarse desde una especialidad
+      o requerir la coordinación de varias, según sus necesidades y condicionantes.
+  actions:
+  - id: explore
+    label: Explorar las especialidades
+    target:
+      kind: internal
+      page_id: capacidades
+      section_id: especialidades
+- id: especialidades
+  source_block: C02
+  kind: cards
+  purpose: capabilities
+  title: Encuentra la especialidad que necesita tu proyecto.
+  introduction:
+  - id: description
+    text: Conoce el alcance de cada área y las actuaciones que podemos estudiar o desarrollar.
+  items:
+  - kind: capability
+    id: infrastructure
+    title: Infraestructuras e instalaciones
+    paragraphs:
+    - id: description
+      text: Ingeniería para el diseño, análisis y mejora de instalaciones eléctricas, mecánicas y auxiliares
+        en edificios e infraestructuras. Intervenimos en nuevas actuaciones y en la revisión o adaptación
+        de sistemas existentes, con el alcance técnico definido en cada encargo.
+    examples:
+    - id: scope-1
+      text: Instalaciones eléctricas de baja y media tensión
+    - id: scope-2
+      text: Climatización, ventilación y sistemas térmicos
+    - id: scope-3
+      text: Instalaciones hidráulicas y saneamiento
+    - id: scope-4
+      text: Coordinación y asistencia técnica.
+    actions:
+    - id: explore
+      label: Ver infraestructuras e instalaciones
+      target:
+        kind: internal
+        page_id: infraestructuras
+  - kind: capability
+    id: energy
+    title: Sistemas energéticos
+    paragraphs:
+    - id: description
+      text: Analizamos la demanda y el funcionamiento energético de instalaciones para evaluar alternativas
+        de eficiencia, generación, almacenamiento y gestión de energía. Desarrollamos estudios y proyectos
+        considerando los datos disponibles, las condiciones de operación y la viabilidad de las soluciones.
+    examples:
+    - id: scope-1
+      text: Análisis y auditoría energética
+    - id: scope-2
+      text: Eficiencia y optimización
+    - id: scope-3
+      text: Fotovoltaica y autoconsumo
+    - id: scope-4
+      text: Almacenamiento y gestión energética.
+    actions:
+    - id: explore
+      label: Ver sistemas energéticos
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+  - kind: capability
+    id: automation
+    title: Automatización y control
+    paragraphs:
+    - id: description
+      text: Diseñamos y desarrollamos soluciones de instrumentación, control, supervisión e integración
+        para instalaciones y procesos. Abordamos la adquisición de datos, la comunicación entre equipos
+        y las funciones de automatización necesarias para su operación y seguimiento.
+    examples:
+    - id: scope-1
+      text: Instrumentación y adquisición de datos
+    - id: scope-2
+      text: PLC y controladores DDC
+    - id: scope-3
+      text: BMS y SCADA
+    - id: scope-4
+      text: Comunicaciones, integración y software técnico.
+    actions:
+    - id: explore
+      label: Ver automatización y control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+- id: c03
+  source_block: C03
+  kind: cards
+  purpose: application_examples
+  eyebrow: Ejemplos de aplicación
+  title: Cuando las instalaciones, la energía y el control están relacionados.
+  introduction:
+  - id: description
+    text: En determinados proyectos, una decisión técnica afecta a varias especialidades. Analizamos esas
+      relaciones para definir las actuaciones y responsabilidades necesarias, sin incorporar disciplinas
+      o tecnologías que el proyecto no requiera.
+  items:
+  - kind: application_example
+    id: thermal-modernization
+    title: Modernización de una instalación térmica.
+    description:
+    - id: description
+      text: Puede ser necesario estudiar los equipos y circuitos, revisar la demanda energética y adaptar
+        las estrategias de regulación y control.
+    disciplines:
+    - id: infrastructure
+      label: Infraestructuras e instalaciones
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: energy
+      label: Sistemas energéticos
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: automation
+      label: Automatización y control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: self-consumption-storage
+    title: Autoconsumo y almacenamiento.
+    description:
+    - id: description
+      text: La incorporación de generación fotovoltaica o baterías puede requerir estudiar el perfil energético,
+        desarrollar la instalación eléctrica e integrar medida, supervisión y control.
+    disciplines:
+    - id: energy
+      label: Sistemas energéticos
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: infrastructure
+      label: Infraestructuras e instalaciones
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automatización y control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: installation-performance
+    title: Problemas de funcionamiento en una instalación.
+    description:
+    - id: description
+      text: Antes de decidir una reforma, puede ser conveniente comprobar las condiciones de operación,
+        el estado de los equipos y las señales o secuencias de control.
+    disciplines:
+    - id: infrastructure
+      label: Infraestructuras e instalaciones
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automatización y control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+    - id: energy
+      label: Sistemas energéticos
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+- id: c04
+  source_block: C04
+  kind: item_list
+  purpose: modalities
+  title: Ingeniería en distintas fases de un proyecto.
+  introduction:
+  - id: description
+    text: Podemos intervenir en una actuación concreta o acompañar varias fases, con un alcance y unos
+      entregables definidos para cada encargo.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnóstico y estudios.
+    paragraphs:
+    - id: description
+      text: Inspección técnica dentro del alcance contratado, análisis de datos, mediciones y evaluación
+        de alternativas.
+  - kind: delivery
+    id: design-project
+    title: Diseño y proyecto.
+    paragraphs:
+    - id: description
+      text: Definición de soluciones, cálculos, planos, especificaciones y documentación técnica.
+  - kind: delivery
+    id: assistance-coordination
+    title: Asistencia y coordinación.
+    paragraphs:
+    - id: description
+      text: Apoyo a la planificación, revisión de interfaces, seguimiento técnico y coordinación con los
+        agentes del proyecto.
+  - kind: delivery
+    id: programming-integration-verification
+    title: Programación, integración y verificación.
+    paragraphs:
+    - id: description
+      text: Configuración de sistemas, pruebas y documentación de resultados cuando estas actuaciones
+        formen parte del encargo.
+- id: c05
+  source_block: C05
+  kind: text
+  title: ¿Qué necesitas resolver o desarrollar?
+  paragraphs:
+  - id: description
+    text: Cuéntanos el contexto de tu instalación o proyecto y qué objetivo persigues. Revisaremos la
+      información inicial para valorar cómo podemos colaborar y qué alcance técnico conviene estudiar.
+  actions:
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto
+  - id: experience
+    label: Conoce nuestros proyectos y experiencia
+    target:
+      kind: internal
+      page_id: proyectos_experiencia

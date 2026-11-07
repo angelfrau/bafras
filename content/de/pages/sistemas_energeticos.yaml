@@ -1,0 +1,327 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: sistemas_energeticos
+review:
+  status: draft
+  source_ref: D03 V1.22 · ENE-01–ENE-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/ene-01/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R10 · contrato MediaRef pendiente de WEB
+- field: sections/ambitos/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R08 · contrato MediaRef pendiente de WEB
+sections:
+- id: ene-01
+  source_block: ENE-01
+  kind: hero
+  title: Ingenieurleistungen, um Energiesysteme zu verstehen, zu verbessern und zu transformieren.
+  eyebrow: KOMPETENZEN / ENERGIESYSTEME
+  paragraphs:
+  - id: main
+    text: Wir analysieren Verbräuche, bewerten Alternativen und entwickeln Projekte für
+      Energieeffizienz, erneuerbare Erzeugung, Speicherung, Elektrifizierung und Energiemanagement. Mit
+      Daten und technischen Kriterien passen wir jede Maßnahme an die Anforderungen und
+      Betriebsbedingungen der Anlage an.
+  - id: support
+    text: Wir können bei der Diagnose bestehender Systeme, der Untersuchung neuer Investitionen und der
+      Festlegung von Strategien für Betrieb und Nachverfolgung mitwirken.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Tätigkeitsbereiche entdecken
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+      section_id: ambitos
+- id: necesidades
+  source_block: ENE-02
+  kind: item_list
+  title: Welche Energieentscheidung steht bei Ihnen an?
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Bevor Sie investieren oder eine Anlage ändern, sollten Sie wissen, wie Energie genutzt wird,
+      welche Randbedingungen bestehen und welche Ergebnisse von jeder Alternative zu erwarten sind.
+  items:
+  - kind: need
+    id: reduce-consumption
+    title: Verbräuche verstehen und senken.
+    paragraphs:
+    - id: description
+      text: Wir analysieren Bedarf, Betriebsweise und Effizienzpotenziale.
+  - kind: need
+    id: generation-storage
+    title: Energie erzeugen oder speichern.
+    paragraphs:
+    - id: description
+      text: Wir untersuchen erneuerbare Erzeugung, Eigenverbrauch, Batteriespeicher und deren
+        Integration.
+  - kind: need
+    id: electrification
+    title: Anlagen oder Prozesse elektrifizieren.
+    paragraphs:
+    - id: description
+      text: Wir vergleichen Alternativen für Energieversorgung, Wärmeerzeugung und Energierückgewinnung.
+  - kind: need
+    id: charging-assets
+    title: Ladeinfrastruktur einbinden oder mehrere Assets koordinieren.
+    paragraphs:
+    - id: description
+      text: Wir bewerten den Bedarf an Leistung, Betrieb und Flexibilität.
+  - kind: need
+    id: cost-monitoring
+    title: Kosten kontrollieren und die Nachverfolgung verbessern.
+    paragraphs:
+    - id: description
+      text: Wir überprüfen Energiebezug, Kennzahlen, Prognosen und Managementstrategien.
+  - kind: need
+    id: decarbonization
+    title: Die Dekarbonisierung planen.
+    paragraphs:
+    - id: description
+      text: Wir quantifizieren Verbräuche und Emissionen und untersuchen Reduktionsmaßnahmen.
+- id: ambitos
+  source_block: ENE-03
+  kind: cards
+  title: Sechs Bereiche der Energietechnik.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Von der Charakterisierung des Bedarfs bis zur Integration neuer Assets betrachten wir
+      Energiesysteme aus den Fachrichtungen, die das jeweilige Projekt erfordert.
+  items:
+  - kind: technical_area
+    id: diagnosis-efficiency
+    title: Diagnose und Energieeffizienz
+    paragraphs:
+    - id: description
+      text: Wir charakterisieren Verbräuche, Lastgänge und Energiebilanzen, um die Funktionsweise von
+        Gebäuden, Anlagen und Prozessen zu verstehen. Wir bewerten Wirkungsgrade,
+        Verbesserungspotenziale und Effizienzmaßnahmen – mit Schätzungen auf Basis von Daten und klar
+        benannten Annahmen.
+    included:
+    - id: included-1
+      text: Energieaudits
+    - id: included-2
+      text: Bedarfsanalyse
+    - id: included-3
+      text: Effizienz und Optimierung
+    - id: included-4
+      text: Untersuchungen zu Leistung und Spannungsqualität
+    - id: included-5
+      text: Leistungsdiagnose von Photovoltaikanlagen und Batteriespeichern.
+  - kind: technical_area
+    id: renewables-storage
+    title: Erneuerbare Erzeugung und Speicherung
+    paragraphs:
+    - id: description
+      text: Wir untersuchen und entwickeln Photovoltaiksysteme, Eigenverbrauchslösungen und
+        elektrochemische Speicher. Wir analysieren Erzeugung, Bedarf, Dimensionierung, Anschluss und
+        Integration – einschließlich gemeinschaftlichem Eigenverbrauch, Hybridlösungen und technischer
+        Konfigurationen für Energiegemeinschaften, sofern zutreffend.
+    included:
+    - id: included-1
+      text: Photovoltaik
+    - id: included-2
+      text: individueller und gemeinschaftlicher Eigenverbrauch
+    - id: included-3
+      text: BESS
+    - id: included-4
+      text: Hybridisierung
+    - id: included-5
+      text: Ertrags- und Leistungsstudien.
+  - kind: technical_area
+    id: electrification-thermal
+    title: Elektrifizierung und thermische Systeme
+    paragraphs:
+    - id: description
+      text: Wir bewerten die Substitution von Brennstoffen und die Alternativen zur Erzeugung,
+        Verteilung und Nutzung thermischer Energie. Wir untersuchen Elektrifizierung,
+        Wärmerückgewinnung, thermische Speicherung sowie Wärme- und Kältenetze und stimmen die Planung
+        von Geräten und Kreisläufen mit dem Bereich Infrastruktur und technische Anlagen ab.
+    included:
+    - id: included-1
+      text: Elektrifizierung der Wärmeversorgung
+    - id: included-2
+      text: Wärmerückgewinnung
+    - id: included-3
+      text: thermische Speicherung
+    - id: included-4
+      text: zentrale Systeme und thermische Netze.
+  - kind: technical_area
+    id: mobility-integrated
+    title: Elektromobilität und integrierte Energiesysteme
+    paragraphs:
+    - id: description
+      text: Wir untersuchen Ladeinfrastrukturen und ihr Zusammenspiel mit der verfügbaren Leistung, dem
+        Bedarf und den übrigen Energie-Assets. Außerdem legen wir Koordinationskriterien für Microgrids,
+        Hybridsysteme und Flexibilitätsstrategien fest, gegebenenfalls einschließlich Mess- und
+        Steuerungsschnittstellen.
+    included:
+    - id: included-1
+      text: Laden von Elektrofahrzeugen
+    - id: included-2
+      text: Leistung und Gleichzeitigkeit
+    - id: included-3
+      text: Microgrids
+    - id: included-4
+      text: Koordination von Erzeugung, Batterien und Verbrauchern
+    - id: included-5
+      text: Flexibilität.
+  - kind: technical_area
+    id: management-costs
+    title: Energiemanagement, Monitoring und Energiekosten
+    paragraphs:
+    - id: description
+      text: Wir definieren Kennzahlen und Kriterien für die Nachverfolgung, um das energetische
+        Verhalten im Zeitverlauf zu erfassen. Wir analysieren Energiebezug, Abrechnung und Verträge,
+        Budgets sowie Bedarfs- oder Erzeugungsprognosen und entwickeln Betriebs- und
+        Energiemanagementstrategien im vereinbarten Umfang.
+    included:
+    - id: included-1
+      text: Messung und Monitoring
+    - id: included-2
+      text: Energiecontrolling
+    - id: included-3
+      text: Audit des Energiebezugs
+    - id: included-4
+      text: Kosten- und Vertragsoptimierung
+    - id: included-5
+      text: Prognosen
+    - id: included-6
+      text: laufendes Energiemanagement.
+  - kind: technical_area
+    id: decarbonization
+    title: Dekarbonisierung und energetische Nachhaltigkeit
+    paragraphs:
+    - id: description
+      text: Wir untersuchen Szenarien zur Emissionsminderung und Roadmaps, um die Energienutzung in
+        Gebäuden, Anlagen und Organisationen zu transformieren. Wir erstellen Inventare und Analysen des
+        CO₂-Fußabdrucks innerhalb definierter Systemgrenzen und Methoden und unterscheiden dabei
+        Schätzungen von einer unabhängigen Verifizierung.
+    included:
+    - id: included-1
+      text: Dekarbonisierungspläne
+    - id: included-2
+      text: Energieszenarien
+    - id: included-3
+      text: CO₂-Fußabdruck
+    - id: included-4
+      text: Emissionsbilanzierung
+    - id: included-5
+      text: Priorisierung von Maßnahmen.
+  transversal:
+    id: transversal
+    title: Hinweis zum Leistungsumfang – Wassereffizienz
+    paragraphs:
+    - id: description
+      text: Audit und Effizienz im Wasserbereich (ENE-23) bleiben Teil des technischen Angebots und
+        können in Projekten zur Ressourceneffizienz als ergänzende Leistung genannt werden. Sie werden
+        weder als siebter Energiebereich dargestellt noch mit der Planung hydraulischer Netze
+        verwechselt, die zum Bereich Infrastruktur und technische Anlagen gehört.
+- id: entregables
+  source_block: ENE-04
+  kind: item_list
+  title: Studien, Projekte und technische Begleitung, abgestimmt auf jeden Auftrag.
+  purpose: deliverables
+  items:
+  - kind: delivery
+    id: diagnosis-audit
+    title: Diagnose und Audit
+    paragraphs:
+    - id: description
+      text: Charakterisierung von Verbräuchen, Baselines, Bilanzen, Berichte und
+        Verbesserungspotenziale.
+  - kind: delivery
+    id: feasibility-alternatives
+    title: Machbarkeit und Alternativen
+    paragraphs:
+    - id: description
+      text: Dimensionierung, Simulationen, Betriebsszenarien und technisch-wirtschaftliche Vergleiche
+        mit expliziten Annahmen.
+  - kind: delivery
+    id: engineering-project
+    title: Engineering und Projektierung
+    paragraphs:
+    - id: description
+      text: Berechnungen, Erläuterungsberichte, Schemata, Pläne, Spezifikationen und technische
+        Dokumentation.
+  - kind: delivery
+    id: integration-monitoring
+    title: Integration und Nachverfolgung
+    paragraphs:
+    - id: description
+      text: Anforderungen an Messung und Steuerung, Prüfprotokolle, Kennzahlen und Nachverfolgung der
+        Ergebnisse, sofern zutreffend.
+  notes:
+  - id: scope
+    text: Machbarkeit und Planung sind übergreifende Leistungsformen, kein eigener Ingenieurbereich.
+      Einsparungen, Renditen, Fördermittel oder Prognoseergebnisse werden nicht garantiert.
+      Bauüberwachung (dirección facultativa), Ausführung, Genehmigungsverfahren, behördliche Prüfungen
+      und laufender Betrieb werden, sofern zutreffend, ausdrücklich vereinbart.
+- id: integracion
+  source_block: ENE-05
+  kind: text
+  title: 'Energie, Anlagen und Steuerung: koordinierte Fachbereiche.'
+  paragraphs:
+  - id: description
+    text: Eine Eigenverbrauchs- oder Speicheranlage benötigt eine geeignete elektrische Infrastruktur
+      und kann Überwachungsstrategien erfordern. Die Elektrifizierung der Wärmeversorgung kann
+      mechanische und regelungstechnische Änderungen mit sich bringen. Wir legen die Grenzen und
+      Zuständigkeiten jeder Disziplin projektbezogen fest.
+  actions:
+  - id: infrastructure
+    label: Infrastruktur und technische Anlagen
+    target:
+      kind: internal
+      page_id: infraestructuras
+  - id: automation
+    label: Automatisierung und Steuerungstechnik
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: ene-06
+  source_block: ENE-06
+  kind: text
+  title: Technische Erfahrung mit Energiesystemen.
+  paragraphs:
+  - id: description
+    text: Das Team von BAFRAS verfügt über Berufserfahrung in der Untersuchung und Entwicklung von
+      Energiesystemen. Unter „Projekte und Erfahrung“ stellen wir dokumentierte Referenzen vor und
+      unterscheiden dabei die frühere berufliche Beteiligung der Gründer von Projekten, mit denen BAFRAS
+      direkt beauftragt wurde.
+  actions:
+  - id: experience
+    label: Projekte und Erfahrung ansehen.
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: ene-07
+  source_block: ENE-07
+  kind: text
+  title: Steht bei Ihnen eine Energieentscheidung an?
+  paragraphs:
+  - id: description
+    text: Schildern Sie uns, welche Anlage oder welches Asset Sie analysieren möchten, welche
+      Informationen vorliegen und welches Ziel Sie verfolgen. Wir bewerten die Ausgangslage und den
+      technischen Leistungsumfang, der für die nächsten Schritte erforderlich ist.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto

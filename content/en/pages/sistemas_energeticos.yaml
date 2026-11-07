@@ -1,0 +1,319 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: sistemas_energeticos
+review:
+  status: draft
+  source_ref: D03 V1.22 · ENE-01–ENE-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/ene-01/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R10 · contrato MediaRef pendiente de WEB
+- field: sections/ambitos/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R08 · contrato MediaRef pendiente de WEB
+sections:
+- id: ene-01
+  source_block: ENE-01
+  kind: hero
+  title: Engineering to understand, improve and transform energy systems.
+  eyebrow: CAPABILITIES / ENERGY SYSTEMS
+  paragraphs:
+  - id: main
+    text: We analyse consumption, evaluate alternatives and develop projects for energy efficiency,
+      renewable generation, storage, electrification and energy management. We work with data and
+      technical criteria to adapt each measure to the needs and operating conditions of the
+      installation.
+  - id: support
+    text: We can contribute to the diagnostic assessment of existing systems, the study of new
+      investments and the definition of operating and performance-tracking strategies.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Explore areas of work
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+      section_id: ambitos
+- id: necesidades
+  source_block: ENE-02
+  kind: item_list
+  title: What energy decision do you need to make?
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Before investing in or modifying an installation, it is worth understanding how energy is
+      used, what constraints exist and what results can be expected from each alternative.
+  items:
+  - kind: need
+    id: reduce-consumption
+    title: Understand and reduce consumption.
+    paragraphs:
+    - id: description
+      text: We analyse demand, operation and efficiency opportunities.
+  - kind: need
+    id: generation-storage
+    title: Generate or store energy.
+    paragraphs:
+    - id: description
+      text: We study renewable generation, self-consumption, batteries and their integration.
+  - kind: need
+    id: electrification
+    title: Electrify installations or processes.
+    paragraphs:
+    - id: description
+      text: We compare alternatives for energy supply, heat generation and energy recovery.
+  - kind: need
+    id: charging-assets
+    title: Add charging infrastructure or coordinate multiple assets.
+    paragraphs:
+    - id: description
+      text: We assess power, operating and flexibility requirements.
+  - kind: need
+    id: cost-monitoring
+    title: Control costs and improve tracking.
+    paragraphs:
+    - id: description
+      text: We review energy supplies, indicators, forecasts and management strategies.
+  - kind: need
+    id: decarbonization
+    title: Plan decarbonisation.
+    paragraphs:
+    - id: description
+      text: We quantify consumption and emissions and study reduction measures.
+- id: ambitos
+  source_block: ENE-03
+  kind: cards
+  title: Six areas of energy engineering.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: From demand characterisation to the integration of new assets, we approach energy systems
+      through the specialisms each project requires.
+  items:
+  - kind: technical_area
+    id: diagnosis-efficiency
+    title: Energy diagnostics and efficiency
+    paragraphs:
+    - id: description
+      text: We characterise consumption, demand profiles and energy balances to understand how
+        buildings, installations and processes operate. We assess performance, improvement opportunities
+        and efficiency measures, with estimates based on data and clearly identified assumptions.
+    included:
+    - id: included-1
+      text: energy audits
+    - id: included-2
+      text: demand analysis
+    - id: included-3
+      text: efficiency and optimisation
+    - id: included-4
+      text: power and power quality studies
+    - id: included-5
+      text: performance diagnostics for photovoltaic plants and batteries.
+  - kind: technical_area
+    id: renewables-storage
+    title: Renewable generation and storage
+    paragraphs:
+    - id: description
+      text: We study and develop photovoltaic systems, self-consumption and electrochemical storage. We
+        analyse generation, demand, sizing, connection and integration, including collective
+        self-consumption, hybrid solutions and technical configurations for energy communities where
+        appropriate.
+    included:
+    - id: included-1
+      text: photovoltaics
+    - id: included-2
+      text: individual and collective self-consumption
+    - id: included-3
+      text: BESS
+    - id: included-4
+      text: hybridisation
+    - id: included-5
+      text: generation and performance studies.
+  - kind: technical_area
+    id: electrification-thermal
+    title: Electrification and thermal systems
+    paragraphs:
+    - id: description
+      text: We assess fuel substitution and the alternatives for generating, distributing and making use
+        of thermal energy. We study electrification, heat recovery, thermal storage and heating and
+        cooling networks, coordinating the design of equipment and circuits with Infrastructure and
+        technical installations.
+    included:
+    - id: included-1
+      text: electrification of heat
+    - id: included-2
+      text: heat recovery
+    - id: included-3
+      text: thermal storage
+    - id: included-4
+      text: centralised systems and thermal networks.
+  - kind: technical_area
+    id: mobility-integrated
+    title: Electric mobility and integrated energy systems
+    paragraphs:
+    - id: description
+      text: We study charging infrastructure and its relationship with available power, demand and other
+        energy assets. We also define coordination criteria for microgrids, hybrid systems and
+        flexibility strategies, including metering and control interfaces where relevant.
+    included:
+    - id: included-1
+      text: electric vehicle charging
+    - id: included-2
+      text: power and load diversity
+    - id: included-3
+      text: microgrids
+    - id: included-4
+      text: coordination of generation, batteries and loads
+    - id: included-5
+      text: flexibility.
+  - kind: technical_area
+    id: management-costs
+    title: Energy management, monitoring and costs
+    paragraphs:
+    - id: description
+      text: We define indicators and tracking criteria to understand energy performance over time. We
+        analyse supplies, billing and contracts, budgets and demand or generation forecasts, and propose
+        operating and energy management strategies within the agreed scope.
+    included:
+    - id: included-1
+      text: metering and monitoring
+    - id: included-2
+      text: energy performance tracking
+    - id: included-3
+      text: supply audits
+    - id: included-4
+      text: cost and contract optimisation
+    - id: included-5
+      text: forecasting
+    - id: included-6
+      text: ongoing energy management.
+  - kind: technical_area
+    id: decarbonization
+    title: Decarbonisation and energy sustainability
+    paragraphs:
+    - id: description
+      text: We study emission reduction scenarios and roadmaps to transform energy use in buildings,
+        installations and organisations. We prepare carbon footprint inventories and analyses within
+        defined boundaries and methodologies, distinguishing estimates from independent verification.
+    included:
+    - id: included-1
+      text: decarbonisation plans
+    - id: included-2
+      text: energy scenarios
+    - id: included-3
+      text: carbon footprint
+    - id: included-4
+      text: emissions accounting
+    - id: included-5
+      text: prioritisation of measures.
+  transversal:
+    id: transversal
+    title: Scope note — water efficiency
+    paragraphs:
+    - id: description
+      text: Water auditing and efficiency (ENE-23) remains part of the technical offering and may be
+        mentioned as a complementary service in resource efficiency projects. It is not presented as a
+        seventh energy area, nor confused with the design of hydraulic networks, which belongs to
+        Infrastructure and technical installations.
+- id: entregables
+  source_block: ENE-04
+  kind: item_list
+  title: Studies, projects and technical assistance tailored to each assignment.
+  purpose: deliverables
+  items:
+  - kind: delivery
+    id: diagnosis-audit
+    title: Diagnostics and audit
+    paragraphs:
+    - id: description
+      text: consumption characterisation, baselines, balances, reports and improvement opportunities.
+  - kind: delivery
+    id: feasibility-alternatives
+    title: Feasibility and alternatives
+    paragraphs:
+    - id: description
+      text: sizing, simulations, operating scenarios and techno-economic comparisons with explicit
+        assumptions.
+  - kind: delivery
+    id: engineering-project
+    title: Engineering and project documentation
+    paragraphs:
+    - id: description
+      text: calculations, technical reports, schematics, drawings, specifications and technical
+        documentation.
+  - kind: delivery
+    id: integration-monitoring
+    title: Integration and tracking
+    paragraphs:
+    - id: description
+      text: metering and control requirements, test protocols, indicators and tracking of results where
+        applicable.
+  notes:
+  - id: scope
+    text: feasibility and planning are cross-cutting service modes, not a separate engineering area.
+      Savings, returns, grants or forecast outcomes are not guaranteed. Statutory site supervision
+      (dirección facultativa), construction, permitting, regulatory inspection and ongoing operation are
+      agreed explicitly where applicable.
+- id: integracion
+  source_block: ENE-05
+  kind: text
+  title: 'Energy, installations and control: coordinated specialisms.'
+  paragraphs:
+  - id: description
+    text: A self-consumption or storage system needs suitable electrical infrastructure and may require
+      supervision strategies. Electrification of heat may involve mechanical and control modifications.
+      We define the boundaries and responsibilities of each discipline according to the project.
+  actions:
+  - id: infrastructure
+    label: Infrastructure and technical installations
+    target:
+      kind: internal
+      page_id: infraestructuras
+  - id: automation
+    label: Automation and control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: ene-06
+  source_block: ENE-06
+  kind: text
+  title: Technical experience in energy systems.
+  paragraphs:
+  - id: description
+    text: The BAFRAS team brings professional experience in the study and development of energy systems.
+      In ‘Projects and experience’ we present documented references, distinguishing the founders'
+      previous professional involvement from projects contracted directly by BAFRAS.
+  actions:
+  - id: experience
+    label: Explore projects and experience.
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: ene-07
+  source_block: ENE-07
+  kind: text
+  title: Do you have an energy decision to look into?
+  paragraphs:
+  - id: description
+    text: Tell us which installation or asset you want to analyse, what information you have available
+      and what objective you are pursuing. We will assess the starting point and the technical scope
+      needed to move forward.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto

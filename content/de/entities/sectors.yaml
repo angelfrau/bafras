@@ -1,0 +1,123 @@
+# CONTENT-ES-01 / A5 — D03 V1.22; catálogo editorial, sin publicación implícita.
+- id: turismo-terciario
+  title: Tourismus, Handel und Dienstleistungsgebäude
+  description:
+  - id: description
+    text: Hotels, Unterkünfte, Büros und Geschäfte müssen Komfort und laufenden Betrieb sicherstellen
+      und zugleich ihre Anlagen und Betriebskosten im Griff behalten. Wir untersuchen zum Beispiel die
+      Funktionsweise der Klimatisierung, Sanierungen in genutzten Gebäuden und Potenziale für
+      energetische Verbesserungen.
+  examples:
+  - id: example-1
+    text: Klimatisierung und Trinkwarmwasser
+  - id: example-2
+    text: Verbräuche und Eigenverbrauch
+  - id: example-3
+    text: Anlagenüberwachung.
+  contextual_actions:
+  - id: explore
+    label: Energiesysteme entdecken
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+- id: industria-logistica-agroindustria
+  title: Industrie, Logistik und Agrar- und Ernährungswirtschaft
+  description:
+  - id: description
+    text: In Produktionsbetrieben, Lagern und agrarindustriellen Betrieben wirken sich Entscheidungen
+      über Anlagen und Steuerung auf den Prozess aus. Wir können Verbräuche, Nebenanlagen, Kältetechnik,
+      Pumpanlagen sowie den Bedarf an Instrumentierung oder Automatisierung analysieren.
+  examples:
+  - id: example-1
+    text: Lastspitzen
+  - id: example-2
+    text: Kälte und Pumpen
+  - id: example-3
+    text: Geräteintegration.
+  contextual_actions:
+  - id: explore
+    label: Automatisierung und Steuerungstechnik entdecken
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: infraestructuras-servicios-publicos
+  title: Infrastruktur und öffentliche Dienste
+  description:
+  - id: description
+    text: Kommunale Anlagen, Wassernetze und städtische Dienste erfordern Kriterien für Betrieb, Wartung
+      und Erneuerung. Wir erstellen Studien und Projekte für Anlagen, Energie und Fernwirktechnik und
+      berücksichtigen dabei die Bedingungen der jeweiligen Behörde oder des Betreibers.
+  examples:
+  - id: example-1
+    text: Beleuchtung
+  - id: example-2
+    text: Hydraulische Netze
+  - id: example-3
+    text: Telemetrie und Fernwirktechnik.
+  contextual_actions:
+  - id: explore
+    label: Infrastruktur und technische Anlagen entdecken
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: salud-educacion-equipamientos
+  title: Gesundheit, Bildung und Einrichtungen
+  description:
+  - id: description
+    text: Gesundheitszentren, Pflegeheime, Campusanlagen sowie Sport- und Kultureinrichtungen verbinden
+      wechselnde Belegung, Komfortanforderungen und Nutzungskontinuität. Wir untersuchen thermische und
+      elektrische Anlagen, den Energieverbrauch und Überwachungssysteme.
+  examples:
+  - id: example-1
+    text: Lüftung
+  - id: example-2
+    text: Wärme- und Kälteerzeugung
+  - id: example-3
+    text: Erneuerung in Etappen.
+  contextual_actions:
+  - id: explore
+    label: Infrastruktur und technische Anlagen entdecken
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: edificacion-rehabilitacion-activos
+  title: Hochbau, Sanierung und Immobilien
+  description:
+  - id: description
+    text: Bei Neubau, Sanierung, bewirtschafteten Gebäuden und Wohngebäuden ist es wichtig, die Anlagen
+      mit Nutzung, Budget und baulichen Einschränkungen abzustimmen. Wir wirken an Studien, Planung und
+      technischer Überprüfung von Anlagen und Energielösungen mit.
+  examples:
+  - id: example-1
+    text: Koordination der Anlagen
+  - id: example-2
+    text: Sanierungen
+  - id: example-3
+    text: Photovoltaik und Elektrifizierung.
+  contextual_actions:
+  - id: explore
+    label: Infrastruktur und technische Anlagen entdecken
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: comunidades-energeticas-infraestructuras-tecnologicas
+  title: Energiegemeinschaften und technologische Infrastrukturen
+  description:
+  - id: description
+    text: Energiegemeinschaften und technologische Anlagen stellen unterschiedliche Herausforderungen,
+      erfordern aber beide fundierte Entscheidungen zu Versorgung, Messung und Integration. Je nach Fall
+      können wir gemeinschaftlichen Eigenverbrauch und Speicherung oder den Bedarf an Stromversorgung,
+      Kühlung und Überwachung kritischer Geräte untersuchen.
+  examples:
+  - id: example-1
+    text: Gemeinschaftlicher Eigenverbrauch
+  - id: example-2
+    text: Versorgungskontinuität
+  - id: example-3
+    text: Monitoring.
+  contextual_actions:
+  - id: explore
+    label: Energiesysteme entdecken
+    target:
+      kind: internal
+      page_id: sistemas_energeticos

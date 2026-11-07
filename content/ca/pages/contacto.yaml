@@ -1,0 +1,77 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: contacto
+review:
+  status: draft
+  source_ref: D03 V1.22 · CO-01–CO-04 · 03.K/03.G1-01/02
+seo:
+  title: Contacte | BAFRAS Engineering
+  description: Contacta amb BAFRAS Engineering per plantejar un projecte d'instal·lacions, energia o
+    automatització. Explica'ns què necessites resoldre.
+pending:
+- field: sections/co-02/privacy_text
+  reason_code: source_missing
+  source_ref: D03 CO-02 · 03.K §4 · política real pendiente de revisión legal
+sections:
+- id: co-01
+  source_block: CO-01
+  kind: hero
+  title: Parlem del teu projecte.
+  eyebrow: CONTACTE
+  paragraphs:
+  - id: description
+    text: Explica'ns breument què necessites resoldre, tant si estàs definint una actuació com si ja
+      disposes de plànols, dades o documentació tècnica. Revisarem la teva consulta per valorar si et
+      podem ajudar i quina informació convindria analitzar a continuació.
+- id: co-02
+  source_block: CO-02
+  kind: form
+  title: Envia'ns la teva consulta.
+  fields:
+  - id: name
+    label: Nom *
+    required: true
+  - id: company
+    label: Empresa o organització
+    required: false
+  - id: email
+    label: Correu electrònic *
+    required: true
+  - id: message
+    label: Explica'ns què necessites *
+    required: true
+    help: Pots indicar el tipus d'instal·lació o activitat, el problema o l'actuació prevista, la
+      ubicació i la fase del projecte. No cal tenir totes les dades.
+  submit_label: Enviar consulta.
+  messages:
+    success: La teva consulta s'ha enviat correctament.
+    error: No hem pogut enviar la teva consulta. Escriu-nos a info@bafras.com.
+- id: co-03
+  source_block: CO-03
+  kind: text
+  title: Prefereixes escriure'ns directament?
+  paragraphs:
+  - id: description
+    text: Pots contactar per correu electrònic i descriure el projecte amb el nivell de detall de què
+      disposis.
+  contact_channels:
+  - id: email
+    label: Correu electrònic
+    value: info@bafras.com
+    target:
+      kind: contact
+      channel: email
+  - id: phone
+    label: Telèfon
+    value: +34 610 903 179
+    target:
+      kind: contact
+      channel: phone
+- id: co-04
+  source_block: CO-04
+  kind: text
+  title: No cal tenir-ho tot definit.
+  paragraphs:
+  - id: description
+    text: Una descripció inicial pot ser suficient per identificar l'especialitat adequada i determinar
+      quina informació caldria revisar abans de concretar un abast.

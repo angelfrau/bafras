@@ -1,0 +1,228 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: infraestructuras
+review:
+  status: draft
+  source_ref: D03 V1.22 · INF-01–INF-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/inf-01/media
+  reason_code: integration_pending
+  source_ref: D05 §26 · R18 · contrato MediaRef pendiente de WEB
+sections:
+- id: inf-01
+  source_block: INF-01
+  kind: hero
+  title: Installation engineering for buildings, infrastructure and processes.
+  eyebrow: CAPABILITIES / INFRASTRUCTURE AND TECHNICAL INSTALLATIONS
+  subtitle: We design, analyse and review electrical, mechanical and hydraulic installations, taking
+    into account the conditions of use, operation and maintenance of each project.
+  paragraphs:
+  - id: support
+    text: We work on new projects and refurbishments as well as on diagnostic assessments of existing
+      installations. We define the technical scope, study the relevant alternatives and coordinate
+      interfaces between disciplines when the project requires it.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: View engineering areas
+    target:
+      kind: internal
+      page_id: infraestructuras
+      section_id: ambitos
+- id: necesidades
+  source_block: INF-02
+  kind: item_list
+  title: From initial design to the review of an existing installation.
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Every assignment starts from a different need. Before defining any work, we identify what
+      information exists, which constraints need to be checked and what technical outcome the client
+      needs.
+  items:
+  - kind: need
+    id: new-installation
+    title: New installation, refurbishment or extension.
+    paragraphs:
+    - id: description
+      text: We define needs, loads and usage requirements in order to develop the engineering and
+        coordinate the installations involved.
+  - kind: need
+    id: operating-incidents
+    title: Poor performance or recurring faults.
+    paragraphs:
+    - id: description
+      text: We review the behaviour of equipment and networks to identify possible causes, limitations
+        and justified measures.
+  - kind: need
+    id: technical-infrastructure
+    title: Technical infrastructure with specific requirements.
+    paragraphs:
+    - id: description
+      text: We study electrical or hydraulic networks or auxiliary services, considering capacity,
+        operation and interfaces.
+  - kind: need
+    id: technical-safety
+    title: Technical suitability and safety.
+    paragraphs:
+    - id: description
+      text: We assess the requirements applicable to the project scope and the documentation needed to
+        define the work.
+  - kind: need
+    id: investment-decisions
+    title: Refurbishment, purchase or investment decisions.
+    paragraphs:
+    - id: description
+      text: We analyse the technical condition of installations and assets to inform priorities and
+        intervention estimates.
+- id: ambitos
+  source_block: INF-03
+  kind: cards
+  title: Installations and systems we can study and develop.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: We work across four technical areas of installations, with diagnostic and coordination
+      services that can be applied to any of them. The scope is defined for each assignment.
+  items:
+  - kind: technical_area
+    id: electrical
+    title: Electrical power and infrastructure
+    paragraphs:
+    - id: description
+      text: Design and review of low-voltage installations, medium-voltage networks and transformer
+        substations, including power distribution, switchboards, protection, earthing and lighting.
+  - kind: technical_area
+    id: thermal
+    title: Heating and cooling, ventilation and refrigeration
+    paragraphs:
+    - id: description
+      text: HVAC and thermal plant engineering, ventilation and extraction, distribution networks and
+        commercial or industrial refrigeration, taking into account the conditions of use and operation.
+  - kind: technical_area
+    id: hydraulic
+    title: Water, hydraulics and auxiliary services
+    paragraphs:
+    - id: description
+      text: Design and review of plumbing, domestic hot water, sanitation and drainage installations,
+        hydraulic networks, pumping systems, tanks and industrial auxiliary services.
+  - kind: technical_area
+    id: protection
+    title: Protection and technical conditions of installations
+    paragraphs:
+    - id: description
+      text: Engineering of active fire protection installations, and acoustic and vibration studies
+        related to equipment and installations.
+  transversal:
+    id: transversal
+    title: Diagnostics, coordination and technical asset management
+    paragraphs:
+    - id: description
+      text: In addition to installation design, we carry out technical diagnostic assessments of
+        existing systems, coordination between specialisms, asset condition assessments and planning of
+        works. These tasks can be applied to any of the areas above.
+- id: entregables
+  source_block: INF-04
+  kind: item_list
+  title: From diagnostics to project documentation and technical assistance.
+  purpose: deliverables
+  introduction:
+  - id: introduction
+    text: The outcome is agreed for each assignment. These are typical service modes and deliverables,
+      not mandatory phases or a fixed package.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnostics and studies
+    paragraphs:
+    - id: description
+      text: condition reports, measurements and analyses, preliminary calculations, alternatives and
+        intervention criteria.
+  - kind: delivery
+    id: design-project
+    title: Design and project documentation
+    paragraphs:
+    - id: description
+      text: technical reports, supporting calculations, schematics, drawings, specifications, bills of
+        quantities and tender documentation where applicable.
+  - kind: delivery
+    id: assistance-coordination
+    title: Technical assistance and coordination
+    paragraphs:
+    - id: description
+      text: documentation review, interface management, technical support and follow-up in line with the
+        contracted responsibilities.
+  - kind: delivery
+    id: testing-verification
+    title: Testing and verification
+    paragraphs:
+    - id: description
+      text: protocols, results, issues and verification documentation when part of the scope.
+  notes:
+  - id: scope
+    text: statutory site supervision (dirección facultativa), permitting procedures, physical
+      construction work and regulatory inspections carry specific requirements and responsibilities;
+      they are not automatically included in every assignment.
+- id: integracion
+  source_block: INF-05
+  kind: text
+  title: Installations linked to energy and control.
+  paragraphs:
+  - id: description
+    text: A thermal refurbishment may require a demand and controls study; an electrical infrastructure
+      may form part of a self-consumption installation; and an operational fault may be related to
+      sensors or control sequences. When these relationships are relevant, we coordinate the work with
+      the other BAFRAS specialisms, defining the boundaries of each piece of work.
+  actions:
+  - id: energy
+    label: Energy systems
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+  - id: automation
+    label: Automation and control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: inf-06
+  source_block: INF-06
+  kind: text
+  title: Technical experience applied to real installations.
+  paragraphs:
+  - id: description
+    text: The BAFRAS team brings professional experience in the engineering and review of installations
+      in buildings and infrastructure. In ‘Projects and experience’ we detail the documented work, the
+      participation of each professional and the context in which it was carried out.
+  actions:
+  - id: experience
+    label: Explore projects and experience
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: inf-07
+  source_block: INF-07
+  kind: text
+  title: Do you need to design, review or improve an installation?
+  paragraphs:
+  - id: description
+    text: Tell us what type of installation you have, what stage the project is at and what you need to
+      resolve. We will review the initial information to assess the engineering scope and the next step.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto

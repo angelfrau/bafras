@@ -1,0 +1,322 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: sistemas_energeticos
+review:
+  status: draft
+  source_ref: D03 V1.22 · ENE-01–ENE-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/ene-01/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R10 · contrato MediaRef pendiente de WEB
+- field: sections/ambitos/media
+  reason_code: integration_pending
+  source_ref: D05 §29 · R08 · contrato MediaRef pendiente de WEB
+sections:
+- id: ene-01
+  source_block: ENE-01
+  kind: hero
+  title: Enginyeria per comprendre, millorar i transformar sistemes energètics.
+  eyebrow: CAPACITATS / SISTEMES ENERGÈTICS
+  paragraphs:
+  - id: main
+    text: Analitzam consums, avaluam alternatives i desenvolupam projectes d'eficiència energètica,
+      generació renovable, emmagatzematge, electrificació i gestió de l'energia. Treballam amb dades i
+      criteris tècnics per adaptar cada actuació a les necessitats i condicions d'operació de la
+      instal·lació.
+  - id: support
+    text: Podem intervenir en la diagnosi de sistemes existents, l'estudi de noves inversions i la
+      definició d'estratègies d'operació i seguiment.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Explorar àmbits d'actuació
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+      section_id: ambitos
+- id: necesidades
+  source_block: ENE-02
+  kind: item_list
+  title: Quina decisió energètica has de prendre?
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Abans d'invertir o modificar una instal·lació, convé conèixer com s'utilitza l'energia, quins
+      condicionants hi ha i quins resultats es poden esperar de cada alternativa.
+  items:
+  - kind: need
+    id: reduce-consumption
+    title: Entendre i reduir consums.
+    paragraphs:
+    - id: description
+      text: Analitzam la demanda, el funcionament i les oportunitats d'eficiència.
+  - kind: need
+    id: generation-storage
+    title: Produir o emmagatzemar energia.
+    paragraphs:
+    - id: description
+      text: Estudiam generació renovable, autoconsum, bateries i la seva integració.
+  - kind: need
+    id: electrification
+    title: Electrificar instal·lacions o processos.
+    paragraphs:
+    - id: description
+      text: Comparam alternatives de subministrament, producció tèrmica i recuperació energètica.
+  - kind: need
+    id: charging-assets
+    title: Incorporar recàrrega o coordinar diversos actius.
+    paragraphs:
+    - id: description
+      text: Avaluam necessitats de potència, operació i flexibilitat.
+  - kind: need
+    id: cost-monitoring
+    title: Controlar costos i millorar el seguiment.
+    paragraphs:
+    - id: description
+      text: Revisam subministraments, indicadors, previsions i estratègies de gestió.
+  - kind: need
+    id: decarbonization
+    title: Planificar la descarbonització.
+    paragraphs:
+    - id: description
+      text: Quantificam consums i emissions i estudiam actuacions de reducció.
+- id: ambitos
+  source_block: ENE-03
+  kind: cards
+  title: Sis àmbits d'enginyeria energètica.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Des de la caracterització de la demanda fins a la integració de nous actius, abordam els
+      sistemes energètics des de les especialitats que requereix cada projecte.
+  items:
+  - kind: technical_area
+    id: diagnosis-efficiency
+    title: Diagnosi i eficiència energètica
+    paragraphs:
+    - id: description
+      text: Caracteritzam consums, corbes de demanda i balanços energètics per comprendre el
+        funcionament d'edificis, instal·lacions i processos. Avaluam rendiments, oportunitats de millora
+        i mesures d'eficiència, amb estimacions basades en dades i hipòtesis identificades.
+    included:
+    - id: included-1
+      text: auditories energètiques
+    - id: included-2
+      text: anàlisi de demanda
+    - id: included-3
+      text: eficiència i optimització
+    - id: included-4
+      text: estudis de potència i qualitat de l'energia
+    - id: included-5
+      text: diagnosi del rendiment de plantes fotovoltaiques i bateries.
+  - kind: technical_area
+    id: renewables-storage
+    title: Generació renovable i emmagatzematge
+    paragraphs:
+    - id: description
+      text: Estudiam i desenvolupam sistemes fotovoltaics, autoconsum i emmagatzematge electroquímic.
+        Analitzam producció, demanda, dimensionament, connexió i integració, inclosos l'autoconsum
+        col·lectiu, les solucions híbrides i les configuracions tècniques per a comunitats energètiques
+        quan escaigui.
+    included:
+    - id: included-1
+      text: fotovoltaica
+    - id: included-2
+      text: autoconsum individual i col·lectiu
+    - id: included-3
+      text: BESS
+    - id: included-4
+      text: hibridació
+    - id: included-5
+      text: estudis de producció i rendiment.
+  - kind: technical_area
+    id: electrification-thermal
+    title: Electrificació i sistemes tèrmics
+    paragraphs:
+    - id: description
+      text: Avaluam la substitució de combustibles i les alternatives per produir, distribuir i
+        aprofitar energia tèrmica. Estudiam electrificació, recuperació de calor, emmagatzematge tèrmic
+        i xarxes de calor i fred, i coordinam el disseny d'equips i circuits amb Infraestructures i
+        instal·lacions.
+    included:
+    - id: included-1
+      text: electrificació tèrmica
+    - id: included-2
+      text: recuperació de calor
+    - id: included-3
+      text: emmagatzematge tèrmic
+    - id: included-4
+      text: sistemes centralitzats i xarxes tèrmiques.
+  - kind: technical_area
+    id: mobility-integrated
+    title: Mobilitat elèctrica i sistemes energètics integrats
+    paragraphs:
+    - id: description
+      text: Estudiam infraestructures de recàrrega i la seva relació amb la potència disponible, la
+        demanda i els altres actius energètics. També definim criteris de coordinació per a microxarxes,
+        sistemes híbrids i estratègies de flexibilitat, incloent-hi interfícies de mesura i control quan
+        correspongui.
+    included:
+    - id: included-1
+      text: recàrrega de vehicles elèctrics
+    - id: included-2
+      text: potència i simultaneïtat
+    - id: included-3
+      text: microxarxes
+    - id: included-4
+      text: coordinació de generació, bateries i càrregues
+    - id: included-5
+      text: flexibilitat.
+  - kind: technical_area
+    id: management-costs
+    title: Gestió, monitoratge i costos energètics
+    paragraphs:
+    - id: description
+      text: Definim indicadors i criteris de seguiment per conèixer el comportament energètic al llarg
+        del temps. Analitzam subministraments, facturació i contractes, pressuposts i previsions de
+        demanda o generació, i plantejam estratègies d'operació i gestió energètica segons l'abast
+        acordat.
+    included:
+    - id: included-1
+      text: mesura i monitoratge
+    - id: included-2
+      text: seguiment energètic
+    - id: included-3
+      text: auditoria de subministraments
+    - id: included-4
+      text: optimització de costos i contractes
+    - id: included-5
+      text: previsions
+    - id: included-6
+      text: gestió energètica recurrent.
+  - kind: technical_area
+    id: decarbonization
+    title: Descarbonització i sostenibilitat energètica
+    paragraphs:
+    - id: description
+      text: Estudiam escenaris de reducció d'emissions i fulls de ruta per transformar l'ús de l'energia
+        en edificis, instal·lacions i organitzacions. Elaboram inventaris i anàlisis de petjada de
+        carboni dins de límits i metodologies definits, diferenciant les estimacions d'una verificació
+        independent.
+    included:
+    - id: included-1
+      text: plans de descarbonització
+    - id: included-2
+      text: escenaris energètics
+    - id: included-3
+      text: petjada de carboni
+    - id: included-4
+      text: comptabilitat d'emissions
+    - id: included-5
+      text: priorització d'actuacions.
+  transversal:
+    id: transversal
+    title: Nota d'abast — eficiència hídrica
+    paragraphs:
+    - id: description
+      text: L'auditoria i l'eficiència hídrica (ENE-23) continuen dins l'oferta tècnica i es poden
+        esmentar com a servei complementari en projectes d'eficiència de recursos. No es presenten com
+        un setè àmbit energètic ni es confonen amb el disseny de xarxes hidràuliques, propi
+        d'Infraestructures i instal·lacions.
+- id: entregables
+  source_block: ENE-04
+  kind: item_list
+  title: Estudis, projectes i assistència tècnica adaptats a cada encàrrec.
+  purpose: deliverables
+  items:
+  - kind: delivery
+    id: diagnosis-audit
+    title: Diagnosi i auditoria
+    paragraphs:
+    - id: description
+      text: caracterització de consums, línies de base, balanços, informes i oportunitats de millora.
+  - kind: delivery
+    id: feasibility-alternatives
+    title: Viabilitat i alternatives
+    paragraphs:
+    - id: description
+      text: dimensionament, simulacions, escenaris operatius i comparatives tecnicoeconòmiques amb
+        hipòtesis explícites.
+  - kind: delivery
+    id: engineering-project
+    title: Enginyeria i projecte
+    paragraphs:
+    - id: description
+      text: càlculs, memòries, esquemes, plànols, especificacions i documentació tècnica.
+  - kind: delivery
+    id: integration-monitoring
+    title: Integració i seguiment
+    paragraphs:
+    - id: description
+      text: requisits de mesura i control, protocols de proves, indicadors i seguiment de resultats quan
+        escaigui.
+  notes:
+  - id: scope
+    text: la viabilitat i la planificació són modalitats transversals, no una àrea d'enginyeria
+      separada. No es garanteixen estalvis, retorns, subvencions ni resultats de previsió. La direcció
+      facultativa, l'execució, la tramitació, la inspecció reglamentària i l'operació recurrent
+      s'acorden expressament quan correspongui.
+- id: integracion
+  source_block: ENE-05
+  kind: text
+  title: 'Energia, instal·lacions i control: especialitats coordinades.'
+  paragraphs:
+  - id: description
+    text: Un sistema d'autoconsum o emmagatzematge necessita una infraestructura elèctrica adequada i
+      pot requerir estratègies de supervisió. L'electrificació tèrmica pot implicar modificacions
+      mecàniques i de regulació. Definim els límits i les responsabilitats de cada disciplina segons el
+      projecte.
+  actions:
+  - id: infrastructure
+    label: Infraestructures i instal·lacions
+    target:
+      kind: internal
+      page_id: infraestructuras
+  - id: automation
+    label: Automatització i control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: ene-06
+  source_block: ENE-06
+  kind: text
+  title: Experiència tècnica en sistemes energètics.
+  paragraphs:
+  - id: description
+    text: L'equip de BAFRAS reuneix experiència professional en l'estudi i el desenvolupament de
+      sistemes energètics. A «Projectes i experiència» presentam referències documentades, diferenciant
+      la participació professional prèvia dels fundadors dels projectes contractats directament per
+      BAFRAS.
+  actions:
+  - id: experience
+    label: Conèixer projectes i experiència.
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: ene-07
+  source_block: ENE-07
+  kind: text
+  title: Tens una decisió energètica per estudiar?
+  paragraphs:
+  - id: description
+    text: Explica'ns quina instal·lació o actiu vols analitzar, quina informació tens disponible i quin
+      objectiu persegueixes. Valorarem el punt de partida i l'abast tècnic necessari per avançar.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto

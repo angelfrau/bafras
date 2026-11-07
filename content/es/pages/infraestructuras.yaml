@@ -1,0 +1,230 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: infraestructuras
+review:
+  status: draft
+  source_ref: D03 V1.22 · INF-01–INF-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/inf-01/media
+  reason_code: integration_pending
+  source_ref: D05 §26 · R18 · contrato MediaRef pendiente de WEB
+sections:
+- id: inf-01
+  source_block: INF-01
+  kind: hero
+  title: Ingeniería de instalaciones para edificios, infraestructuras y procesos.
+  eyebrow: CAPACIDADES / INFRAESTRUCTURAS E INSTALACIONES
+  subtitle: Diseñamos, analizamos y revisamos instalaciones eléctricas, mecánicas e hidráulicas, atendiendo
+    a las condiciones de uso, funcionamiento y mantenimiento de cada proyecto.
+  paragraphs:
+  - id: support
+    text: Trabajamos tanto en nuevas actuaciones y reformas como en el diagnóstico de instalaciones existentes.
+      Definimos el alcance técnico, estudiamos las alternativas que procedan y coordinamos las interfaces
+      entre disciplinas cuando el proyecto lo requiere.
+  actions:
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Ver ámbitos de ingeniería
+    target:
+      kind: internal
+      page_id: infraestructuras
+      section_id: ambitos
+- id: necesidades
+  source_block: INF-02
+  kind: item_list
+  title: Desde el diseño inicial hasta la revisión de una instalación existente.
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Cada encargo parte de una necesidad distinta. Antes de definir una actuación, identificamos
+      qué información existe, qué condicionantes deben comprobarse y qué resultado técnico necesita el
+      cliente.
+  items:
+  - kind: need
+    id: new-installation
+    title: Nueva instalación, reforma o ampliación.
+    paragraphs:
+    - id: description
+      text: Definimos necesidades, cargas y requisitos de uso para desarrollar la ingeniería y coordinar
+        las instalaciones implicadas.
+  - kind: need
+    id: operating-incidents
+    title: Funcionamiento deficiente o incidencias recurrentes.
+    paragraphs:
+    - id: description
+      text: Revisamos el comportamiento de equipos y redes para identificar posibles causas, limitaciones
+        y actuaciones justificadas.
+  - kind: need
+    id: technical-infrastructure
+    title: Infraestructura técnica con requisitos específicos.
+    paragraphs:
+    - id: description
+      text: Estudiamos redes eléctricas, hidráulicas o servicios auxiliares atendiendo a capacidad, operación
+        e interfaces.
+  - kind: need
+    id: technical-safety
+    title: Adecuación técnica y seguridad.
+    paragraphs:
+    - id: description
+      text: Evaluamos los requisitos aplicables al alcance del proyecto y la documentación necesaria para
+        definir las actuaciones.
+  - kind: need
+    id: investment-decisions
+    title: Decisiones de reforma, compra o inversión.
+    paragraphs:
+    - id: description
+      text: Analizamos el estado técnico de instalaciones y activos para orientar prioridades y estimaciones
+        de intervención.
+- id: ambitos
+  source_block: INF-03
+  kind: cards
+  title: Instalaciones y sistemas que podemos estudiar y desarrollar.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Trabajamos en cuatro ámbitos técnicos de instalaciones, con servicios de diagnóstico y coordinación
+      que pueden aplicarse a cualquiera de ellos. El alcance se define para cada encargo.
+  items:
+  - kind: technical_area
+    id: electrical
+    title: Electricidad e infraestructura eléctrica
+    paragraphs:
+    - id: description
+      text: Diseño y revisión de instalaciones de baja tensión, redes de media tensión y centros de transformación,
+        incluyendo distribución eléctrica, cuadros, protecciones, puesta a tierra e iluminación.
+  - kind: technical_area
+    id: thermal
+    title: Climatización, ventilación y refrigeración
+    paragraphs:
+    - id: description
+      text: Ingeniería de climatización y producción térmica, ventilación y extracción, redes de distribución
+        y refrigeración comercial o industrial, considerando las condiciones de uso y operación.
+  - kind: technical_area
+    id: hydraulic
+    title: Agua, hidráulica y servicios auxiliares
+    paragraphs:
+    - id: description
+      text: Diseño y revisión de instalaciones de fontanería, agua caliente sanitaria, saneamiento y drenaje,
+        redes hidráulicas, bombeos, depósitos y servicios auxiliares industriales.
+  - kind: technical_area
+    id: protection
+    title: Protección y condiciones técnicas de las instalaciones
+    paragraphs:
+    - id: description
+      text: Ingeniería de instalaciones activas de protección contra incendios y estudios de acústica
+        y vibraciones relacionados con equipos e instalaciones.
+  transversal:
+    id: transversal
+    title: Diagnóstico, coordinación y gestión técnica de activos
+    paragraphs:
+    - id: description
+      text: Además del diseño de instalaciones, realizamos diagnósticos técnicos de sistemas existentes,
+        coordinación entre especialidades, evaluación del estado de activos y planificación de actuaciones.
+        Estas tareas pueden aplicarse a cualquiera de los ámbitos anteriores.
+- id: entregables
+  source_block: INF-04
+  kind: item_list
+  title: Del diagnóstico a la documentación de proyecto y la asistencia técnica.
+  purpose: deliverables
+  introduction:
+  - id: introduction
+    text: El resultado se acuerda en cada encargo. Estas son modalidades y entregables habituales, no
+      fases obligatorias ni un paquete cerrado.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnóstico y estudios
+    paragraphs:
+    - id: description
+      text: informes de estado, mediciones y análisis, cálculos preliminares, alternativas y criterios
+        de intervención.
+  - kind: delivery
+    id: design-project
+    title: Diseño y proyecto
+    paragraphs:
+    - id: description
+      text: memorias, cálculos justificativos, esquemas, planos, especificaciones, mediciones y documentación
+        de contratación cuando proceda.
+  - kind: delivery
+    id: assistance-coordination
+    title: Asistencia técnica y coordinación
+    paragraphs:
+    - id: description
+      text: revisión de documentación, gestión de interfaces, soporte técnico y seguimiento según responsabilidades
+        contratadas.
+  - kind: delivery
+    id: testing-verification
+    title: Pruebas y verificación
+    paragraphs:
+    - id: description
+      text: protocolos, resultados, incidencias y documentación de comprobación cuando formen parte del
+        alcance.
+  notes:
+  - id: scope
+    text: la dirección facultativa, la tramitación, la ejecución material y las verificaciones reglamentarias
+      tienen requisitos y responsabilidades específicos; no están incluidas automáticamente en cualquier
+      encargo.
+- id: integracion
+  source_block: INF-05
+  kind: text
+  title: Instalaciones que se relacionan con la energía y el control.
+  paragraphs:
+  - id: description
+    text: Una reforma térmica puede requerir un estudio de demanda y regulación; una infraestructura eléctrica
+      puede formar parte de una instalación de autoconsumo; y una incidencia operativa puede estar relacionada
+      con sensores o secuencias de control. Cuando estas relaciones son relevantes, coordinamos el trabajo
+      con las otras especialidades de BAFRAS, definiendo los límites de cada actuación.
+  actions:
+  - id: energy
+    label: Sistemas energéticos
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+  - id: automation
+    label: Automatización y control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: inf-06
+  source_block: INF-06
+  kind: text
+  title: Experiencia técnica aplicada a instalaciones reales.
+  paragraphs:
+  - id: description
+    text: El equipo de BAFRAS reúne experiencia profesional en ingeniería y revisión de instalaciones
+      de edificios e infraestructuras. En «Proyectos y experiencia» detallamos las actuaciones documentadas,
+      la participación de cada profesional y el contexto en el que se realizaron.
+  actions:
+  - id: experience
+    label: Conocer proyectos y experiencia
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: inf-07
+  source_block: INF-07
+  kind: text
+  title: ¿Necesitas diseñar, revisar o mejorar una instalación?
+  paragraphs:
+  - id: description
+    text: Cuéntanos qué tipo de instalación tienes, en qué fase se encuentra el proyecto y qué necesitas
+      resolver. Revisaremos la información inicial para valorar el alcance de ingeniería y el siguiente
+      paso.
+  actions:
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto

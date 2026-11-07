@@ -1,0 +1,93 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sectores
+review:
+  status: draft
+  source_ref: D03 V1.22 · SEC-01–SEC-05 · 03.K/03.G1-01/02
+seo:
+  title: Engineering sectors | Buildings, industry and energy | BAFRAS.
+  description: Engineering for technical installations, energy systems and automation for hotels,
+    industry, public services, facilities and buildings.
+pending: []
+sections:
+- id: sec-01
+  source_block: SEC-01
+  kind: hero
+  title: Engineering for buildings, industry and infrastructure.
+  eyebrow: SECTORS
+  paragraphs:
+  - id: description
+    text: Each activity brings different conditions of use, operation and maintenance. We apply our
+      capabilities in installations, energy and automation to study specific needs and define solutions
+      suited to the context of each project.
+  actions:
+  - id: explore
+    label: Explore sectors
+    target:
+      kind: internal
+      page_id: sectores
+      section_id: sectores
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto
+- id: sectores
+  source_block: SEC-02
+  kind: sector_index
+  title: We understand the environment before defining the work.
+  introduction:
+  - id: introduction
+    text: These are some of the areas in which we can contribute engineering. The examples describe
+      needs we can study; they are not references to completed projects.
+  sector_refs:
+  - turismo-terciario
+  - industria-logistica-agroindustria
+  - infraestructuras-servicios-publicos
+  - salud-educacion-equipamientos
+  - edificacion-rehabilitacion-activos
+  - comunidades-energeticas-infraestructuras-tecnologicas
+- id: sec-03
+  source_block: SEC-03
+  kind: text
+  title: Does your need fall outside these categories?
+  paragraphs:
+  - id: description
+    text: An installation that underperforms, an energy investment to be evaluated or several pieces of
+      equipment that do not exchange data can arise in very different activities. We start from the
+      technical problem and define which specialisms are needed.
+  actions:
+  - id: capabilities
+    label: View our capabilities
+    target:
+      kind: internal
+      page_id: capacidades
+- id: sec-04
+  source_block: SEC-04
+  kind: text
+  title: Engineering for project teams too.
+  paragraphs:
+  - id: description
+    text: We collaborate with developers, facility managers, architecture and engineering practices,
+      contractors and installers on specific study, design, diagnostic and technical assistance work. We
+      agree deliverables, coordination and responsibilities for each collaboration.
+  actions:
+  - id: about
+    label: Get to know BAFRAS
+    target:
+      kind: internal
+      page_id: sobre_bafras
+- id: sec-05
+  source_block: SEC-05
+  kind: text
+  title: Tell us what you need to resolve.
+  paragraphs:
+  - id: description
+    text: Let us know the type of activity or installation, the status of the project and the decision
+      or problem you want to address. We will consider what information we need to define the next step.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto

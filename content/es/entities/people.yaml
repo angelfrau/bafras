@@ -1,0 +1,43 @@
+# CONTENT-ES-01 / A5 — D03 V1.22; catálogo editorial, sin publicación implícita.
+- id: murti
+  public_name: Murti
+  qualification: ingeniero industrial
+  specialty: sistemas energéticos, análisis e integración energética.
+  review:
+    status: draft
+    source_ref: D03 03.K §1
+  pending:
+  - field: public_name
+    reason_code: verification_required
+    source_ref: D03 03.K §1 · confirmar grafía pública y consentimiento
+  - field: biography
+    reason_code: verification_required
+    source_ref: D03 03.K §1 · biografía contrastada no disponible
+- id: angel
+  public_name: Àngel
+  qualification: ingeniero industrial
+  specialty: infraestructuras e instalaciones.
+  review:
+    status: draft
+    source_ref: D03 03.K §1
+  pending:
+  - field: public_name
+    reason_code: verification_required
+    source_ref: D03 03.K §1 · confirmar grafía pública y consentimiento
+  - field: biography
+    reason_code: verification_required
+    source_ref: D03 03.K §1 · biografía contrastada no disponible
+- id: amin
+  public_name: Amin
+  qualification: ingeniero técnico electrónico
+  specialty: automatización, control y software técnico.
+  review:
+    status: draft
+    source_ref: D03 03.K §1
+  pending:
+  - field: public_name
+    reason_code: verification_required
+    source_ref: D03 03.K §1 · confirmar grafía pública y consentimiento
+  - field: biography
+    reason_code: verification_required
+    source_ref: D03 03.K §1 · biografía contrastada no disponible

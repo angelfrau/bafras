@@ -1,0 +1,93 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sectores
+review:
+  status: draft
+  source_ref: D03 V1.22 · SEC-01–SEC-05 · 03.K/03.G1-01/02
+seo:
+  title: Sectores de ingeniería | Edificios, industria y energía | BAFRAS.
+  description: Ingeniería de instalaciones, sistemas energéticos y automatización para hoteles, industria,
+    servicios públicos, equipamientos y edificios.
+pending: []
+sections:
+- id: sec-01
+  source_block: SEC-01
+  kind: hero
+  title: Ingeniería para edificios, industria e infraestructuras.
+  eyebrow: SECTORES
+  paragraphs:
+  - id: description
+    text: Cada actividad plantea condiciones distintas de uso, operación y mantenimiento. Aplicamos nuestras
+      capacidades en instalaciones, energía y automatización para estudiar necesidades concretas y definir
+      soluciones ajustadas al contexto de cada proyecto.
+  actions:
+  - id: explore
+    label: Explorar sectores
+    target:
+      kind: internal
+      page_id: sectores
+      section_id: sectores
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto
+- id: sectores
+  source_block: SEC-02
+  kind: sector_index
+  title: Entendemos el entorno antes de definir la actuación.
+  introduction:
+  - id: introduction
+    text: Estos son algunos de los ámbitos en los que podemos aportar ingeniería. Los ejemplos describen
+      necesidades que podemos estudiar; no son referencias de proyectos ejecutados.
+  sector_refs:
+  - turismo-terciario
+  - industria-logistica-agroindustria
+  - infraestructuras-servicios-publicos
+  - salud-educacion-equipamientos
+  - edificacion-rehabilitacion-activos
+  - comunidades-energeticas-infraestructuras-tecnologicas
+- id: sec-03
+  source_block: SEC-03
+  kind: text
+  title: ¿Tu necesidad no encaja en una categoría?
+  paragraphs:
+  - id: description
+    text: Una instalación que no rinde como debería, una inversión energética por evaluar o varios equipos
+      que no intercambian datos pueden aparecer en actividades muy distintas. Partimos del problema técnico
+      y definimos qué especialidades hacen falta.
+  actions:
+  - id: capabilities
+    label: Ver nuestras capacidades
+    target:
+      kind: internal
+      page_id: capacidades
+- id: sec-04
+  source_block: SEC-04
+  kind: text
+  title: Ingeniería también para equipos de proyecto.
+  paragraphs:
+  - id: description
+    text: Colaboramos con promotores, gestores de instalaciones, estudios de arquitectura e ingeniería,
+      constructoras e instaladoras en trabajos concretos de estudio, proyecto, diagnóstico y asistencia
+      técnica. Acordamos entregables, coordinación y responsabilidades para cada colaboración.
+  actions:
+  - id: about
+    label: Conoce BAFRAS
+    target:
+      kind: internal
+      page_id: sobre_bafras
+- id: sec-05
+  source_block: SEC-05
+  kind: text
+  title: Cuéntanos qué necesitas resolver.
+  paragraphs:
+  - id: description
+    text: Indícanos el tipo de actividad o instalación, el estado del proyecto y la decisión o problema
+      que quieres abordar. Valoraremos qué información necesitamos para concretar el siguiente paso.
+  actions:
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto

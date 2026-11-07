@@ -1,0 +1,253 @@
+# CONTENT-ES-01 / A3 — D03 V1.22 C01–C05; composición D05 §35.
+# Borrador de integración. Locale aportado por el contexto; SEO pendiente DEC-05.
+# Sin fotografías por decisión aprobada; enlaces contextuales según C04_CAP_V1.
+page_id: capacidades
+review:
+  status: draft
+  source_ref: D03 V1.22 · C01–C05 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+sections:
+- id: c01
+  source_block: C01
+  kind: hero
+  eyebrow: LES NOSTRES CAPACITATS
+  title: Tres especialitats d'enginyeria. Solucions ajustades a cada projecte.
+  paragraphs:
+  - id: description
+    text: Desenvolupam estudis, projectes i assistència tècnica en infraestructures i instal·lacions,
+      sistemes energètics i automatització i control. Cada encàrrec es pot abordar des d'una
+      especialitat o pot requerir la coordinació de diverses, segons les seves necessitats i
+      condicionants.
+  actions:
+  - id: explore
+    label: Explorar les especialitats
+    target:
+      kind: internal
+      page_id: capacidades
+      section_id: especialidades
+- id: especialidades
+  source_block: C02
+  kind: cards
+  purpose: capabilities
+  title: Troba l'especialitat que necessita el teu projecte.
+  introduction:
+  - id: description
+    text: Coneix l'abast de cada àrea i les actuacions que podem estudiar o desenvolupar.
+  items:
+  - kind: capability
+    id: infrastructure
+    title: Infraestructures i instal·lacions
+    paragraphs:
+    - id: description
+      text: Enginyeria per al disseny, l'anàlisi i la millora d'instal·lacions elèctriques, mecàniques i
+        auxiliars en edificis i infraestructures. Intervenim en actuacions noves i en la revisió o
+        adaptació de sistemes existents, amb l'abast tècnic definit a cada encàrrec.
+    examples:
+    - id: scope-1
+      text: Instal·lacions elèctriques de baixa i mitjana tensió
+    - id: scope-2
+      text: Climatització, ventilació i sistemes tèrmics
+    - id: scope-3
+      text: Instal·lacions hidràuliques i sanejament
+    - id: scope-4
+      text: Coordinació i assistència tècnica.
+    actions:
+    - id: explore
+      label: Veure infraestructures i instal·lacions
+      target:
+        kind: internal
+        page_id: infraestructuras
+  - kind: capability
+    id: energy
+    title: Sistemes energètics
+    paragraphs:
+    - id: description
+      text: Analitzam la demanda i el funcionament energètic d'instal·lacions per avaluar alternatives
+        d'eficiència, generació, emmagatzematge i gestió de l'energia. Desenvolupam estudis i projectes
+        tenint en compte les dades disponibles, les condicions d'operació i la viabilitat de les
+        solucions.
+    examples:
+    - id: scope-1
+      text: Anàlisi i auditoria energètica
+    - id: scope-2
+      text: Eficiència i optimització
+    - id: scope-3
+      text: Fotovoltaica i autoconsum
+    - id: scope-4
+      text: Emmagatzematge i gestió energètica.
+    actions:
+    - id: explore
+      label: Veure sistemes energètics
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+  - kind: capability
+    id: automation
+    title: Automatització i control
+    paragraphs:
+    - id: description
+      text: Dissenyam i desenvolupam solucions d'instrumentació, control, supervisió i integració per a
+        instal·lacions i processos. Abordam l'adquisició de dades, la comunicació entre equips i les
+        funcions d'automatització necessàries per a la seva operació i seguiment.
+    examples:
+    - id: scope-1
+      text: Instrumentació i adquisició de dades
+    - id: scope-2
+      text: PLC i controladors DDC
+    - id: scope-3
+      text: BMS i SCADA
+    - id: scope-4
+      text: Comunicacions, integració i programari tècnic.
+    actions:
+    - id: explore
+      label: Veure automatització i control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+- id: c03
+  source_block: C03
+  kind: cards
+  purpose: application_examples
+  eyebrow: Exemples d'aplicació
+  title: Quan les instal·lacions, l'energia i el control estan relacionats.
+  introduction:
+  - id: description
+    text: En determinats projectes, una decisió tècnica afecta diverses especialitats. Analitzam
+      aquestes relacions per definir les actuacions i responsabilitats necessàries, sense incorporar
+      disciplines o tecnologies que el projecte no requereixi.
+  items:
+  - kind: application_example
+    id: thermal-modernization
+    title: Modernització d'una instal·lació tèrmica.
+    description:
+    - id: description
+      text: Pot ser necessari estudiar els equips i circuits, revisar la demanda energètica i adaptar
+        les estratègies de regulació i control.
+    disciplines:
+    - id: infrastructure
+      label: Infraestructures i instal·lacions
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: energy
+      label: Sistemes energètics
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: automation
+      label: Automatització i control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: self-consumption-storage
+    title: Autoconsum i emmagatzematge.
+    description:
+    - id: description
+      text: La incorporació de generació fotovoltaica o bateries pot requerir estudiar el perfil
+        energètic, desenvolupar la instal·lació elèctrica i integrar mesura, supervisió i control.
+    disciplines:
+    - id: energy
+      label: Sistemes energètics
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: infrastructure
+      label: Infraestructures i instal·lacions
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automatització i control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: installation-performance
+    title: Problemes de funcionament en una instal·lació.
+    description:
+    - id: description
+      text: Abans de decidir una reforma, pot ser convenient comprovar les condicions d'operació,
+        l'estat dels equips i els senyals o seqüències de control.
+    disciplines:
+    - id: infrastructure
+      label: Infraestructures i instal·lacions
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automatització i control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+    - id: energy
+      label: Sistemes energètics
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+- id: c04
+  source_block: C04
+  kind: item_list
+  purpose: modalities
+  title: Enginyeria en diferents fases d'un projecte.
+  introduction:
+  - id: description
+    text: Podem intervenir en una actuació concreta o acompanyar diverses fases, amb un abast i uns
+      lliurables definits per a cada encàrrec.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnosi i estudis.
+    paragraphs:
+    - id: description
+      text: Inspecció tècnica dins l'abast contractat, anàlisi de dades, mesuraments i avaluació
+        d'alternatives.
+  - kind: delivery
+    id: design-project
+    title: Disseny i projecte.
+    paragraphs:
+    - id: description
+      text: Definició de solucions, càlculs, plànols, especificacions i documentació tècnica.
+  - kind: delivery
+    id: assistance-coordination
+    title: Assistència i coordinació.
+    paragraphs:
+    - id: description
+      text: Suport a la planificació, revisió d'interfícies, seguiment tècnic i coordinació amb els
+        agents del projecte.
+  - kind: delivery
+    id: programming-integration-verification
+    title: Programació, integració i verificació.
+    paragraphs:
+    - id: description
+      text: Configuració de sistemes, proves i documentació de resultats quan aquestes actuacions formin
+        part de l'encàrrec.
+- id: c05
+  source_block: C05
+  kind: text
+  title: Què necessites resoldre o desenvolupar?
+  paragraphs:
+  - id: description
+    text: Explica'ns el context de la teva instal·lació o projecte i quin objectiu persegueixes.
+      Revisarem la informació inicial per valorar com podem col·laborar i quin abast tècnic convé
+      estudiar.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto
+  - id: experience
+    label: Coneix els nostres projectes i experiència
+    target:
+      kind: internal
+      page_id: proyectos_experiencia

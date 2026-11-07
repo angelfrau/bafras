@@ -1,0 +1,299 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: automatizacion_control
+review:
+  status: draft
+  source_ref: D03 V1.22 · DIG-W01–DIG-W07 · 03.G1-01/02
+seo:
+  title: Automation and control for installations and processes | BAFRAS Engineering
+  description: Instrumentation, PLC/DDC, SCADA, BMS, OT integration and technical software engineering
+    for installations and processes.
+pending:
+- field: sections/dig-w01/media
+  reason_code: integration_pending
+  source_ref: D05 §31 · R01 · contrato MediaRef pendiente de WEB
+- field: sections/ambitos/media
+  reason_code: integration_pending
+  source_ref: D05 §31 · R03 · contrato MediaRef pendiente de WEB
+sections:
+- id: dig-w01
+  source_block: DIG-W01
+  kind: hero
+  title: Automation and control engineering for installations and processes.
+  eyebrow: CAPABILITIES / AUTOMATION AND CONTROL
+  paragraphs:
+  - id: main
+    text: We analyse how equipment and installations operate to define what should be measured,
+      automated, supervised or integrated. We develop instrumentation, control, communications and
+      technical software solutions tailored to the requirements of each project.
+  - id: support
+    text: We work on both existing systems and new projects, defining functions, interfaces and
+      verification criteria before intervening.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Explore areas of work
+    target:
+      kind: internal
+      page_id: automatizacion_control
+      section_id: ambitos
+- id: necesidades
+  source_block: DIG-W02
+  kind: item_list
+  title: When you need to understand, control or connect your systems better.
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Replacing equipment or deploying a new platform is not always necessary. First, it is worth
+      understanding how the installation works and what limitations it has.
+  items:
+  - kind: need
+    id: missing-data
+    title: There is not enough data to know what is happening.
+    paragraphs:
+    - id: description
+      text: We study which variables to measure, how to acquire them and how to present useful
+        information.
+  - kind: need
+    id: unstable-control
+    title: Control is manual, unstable or difficult to tune.
+    paragraphs:
+    - id: description
+      text: We review signals, sequences and operating modes to define improvements.
+  - kind: need
+    id: disconnected-equipment
+    title: Equipment does not exchange information.
+    paragraphs:
+    - id: description
+      text: We analyse protocols, compatibility and interfaces to assess integration.
+  - kind: need
+    id: modernization
+    title: Existing automation needs modernising.
+    paragraphs:
+    - id: description
+      text: We assess limitations and alternatives, taking into account which equipment can be retained.
+  - kind: need
+    id: data-decisions
+    title: Data is not being turned into decisions.
+    paragraphs:
+    - id: description
+      text: We develop analyses, tools and technical models where they provide a defined benefit.
+- id: ambitos
+  source_block: DIG-W03
+  kind: cards
+  title: 'From data to control: six connected engineering areas.'
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Each area serves a different function. We can address them independently or coordinate them
+      when the project requires it.
+  items:
+  - kind: technical_area
+    id: instrumentation
+    title: Instrumentation, data acquisition and telemetry
+    paragraphs:
+    - id: description
+      text: We define the variables to be measured, the sensors and the signal acquisition needed to
+        obtain reliable information from equipment and installations. We also study data logging and
+        remote transmission, without confusing monitoring with equipment control.
+    tags:
+    - id: tags-1
+      text: Sensors
+    - id: tags-2
+      text: Signals
+    - id: tags-3
+      text: Telemetry
+    - id: tags-4
+      text: Remote monitoring.
+  - kind: technical_area
+    id: automation-programming
+    title: Automation engineering and control programming
+    paragraphs:
+    - id: description
+      text: We define operating functions and sequences, control architectures, interlocks and operating
+        criteria. We carry out PLC or DDC programming and parameterisation according to the controllers
+        and the contracted scope.
+    tags:
+    - id: tags-1
+      text: Control logic
+    - id: tags-2
+      text: PLC/DDC
+    - id: tags-3
+      text: Sequences
+    - id: tags-4
+      text: Automatic controls.
+  - kind: technical_area
+    id: supervision
+    title: Supervision and technical control of installations
+    paragraphs:
+    - id: description
+      text: We design operator interfaces, alarms, trends and supervisory functions using HMI, SCADA or
+        BMS. In buildings, we coordinate technical control with the characteristics of their
+        installations; supervision does not replace controller logic.
+    tags:
+    - id: tags-1
+      text: SCADA/HMI
+    - id: tags-2
+      text: BMS
+    - id: tags-3
+      text: Alarms
+    - id: tags-4
+      text: Operation.
+  - kind: technical_area
+    id: ot-integration
+    title: Equipment integration, communications and OT architecture
+    paragraphs:
+    - id: description
+      text: We study interoperability between equipment, industrial protocols and operational networks.
+        We define interfaces and communication requirements, including segmentation and OT security
+        considerations in the design, without offering specialist audits or cybersecurity
+        certifications.
+    tags:
+    - id: tags-1
+      text: Protocols
+    - id: tags-2
+      text: OT networks
+    - id: tags-3
+      text: Interoperability
+    - id: tags-4
+      text: Interfaces.
+  - kind: technical_area
+    id: technical-software
+    title: Technical software, data and engineering applications
+    paragraphs:
+    - id: description
+      text: We develop tools to process and analyse data, automate calculations and integrate
+        applications via APIs. We also work with physical models, simulations and optimisation
+        algorithms when the data and the objective allow, without automatically equating them with
+        artificial intelligence or operational digital twins.
+    tags:
+    - id: tags-1
+      text: Analytics
+    - id: tags-2
+      text: Technical software
+    - id: tags-3
+      text: API
+    - id: tags-4
+      text: Simulation
+    - id: tags-5
+      text: Optimisation.
+  - kind: technical_area
+    id: energy-assets
+    title: Control and integration of energy assets
+    paragraphs:
+    - id: description
+      text: We develop supervision and control functions for generation, storage and energy management,
+        including EMS or PPC integration where relevant. Operating strategies and energy sizing are
+        defined within Energy systems; here we address their technical implementation.
+    tags:
+    - id: tags-1
+      text: EMS
+    - id: tags-2
+      text: PPC
+    - id: tags-3
+      text: Setpoints
+    - id: tags-4
+      text: Asset integration.
+  transversal:
+    id: transversal
+    title: Diagnostics, testing and system evolution
+    paragraphs:
+    - id: description
+      text: We review existing automation, document interfaces, and carry out integration testing and
+        functional commissioning when these form part of the assignment. Support for system evolution is
+        defined under specific terms; it does not imply ongoing maintenance or 24/7 availability.
+- id: entregables
+  source_block: DIG-W04
+  kind: item_list
+  title: From functional requirements to system verification.
+  purpose: deliverables
+  items:
+  - kind: delivery
+    id: diagnosis-definition
+    title: Diagnostics and definition
+    paragraphs:
+    - id: description
+      text: equipment and signal inventories, functional analysis and requirements.
+  - kind: delivery
+    id: design
+    title: Design
+    paragraphs:
+    - id: description
+      text: architectures, diagrams, signal lists and control sequences.
+  - kind: delivery
+    id: development-integration
+    title: Development and integration
+    paragraphs:
+    - id: description
+      text: programming, parameterisation, interfaces and applications according to scope.
+  - kind: delivery
+    id: testing-documentation
+    title: Testing and documentation
+    paragraphs:
+    - id: description
+      text: protocols, test result records and acceptance criteria.
+  notes:
+  - id: scope
+    text: The work and deliverables depend on the contracted scope.
+- id: integracion
+  source_block: DIG-W05
+  kind: cards
+  title: Control must respond to the installation and its objectives.
+  purpose: discipline_relations
+  items:
+  - kind: discipline_relation
+    id: infrastructure
+    title: Infrastructure and technical installations
+    description:
+    - id: description
+      text: design and physical conditions of equipment, networks and electrical or mechanical
+        installations.
+    discipline:
+      kind: internal
+      page_id: infraestructuras
+  - kind: discipline_relation
+    id: energy
+    title: Energy systems
+    description:
+    - id: description
+      text: demand analysis, efficiency strategies and operation of generation or storage.
+    discipline:
+      kind: internal
+      page_id: sistemas_energeticos
+  closing:
+  - id: closing
+    text: We coordinate these specialisms when a project requires decisions on equipment, energy and
+      automation.
+- id: dig-w06
+  source_block: DIG-W06
+  kind: text
+  title: Technical experience in control, integration and digital systems.
+  paragraphs:
+  - id: description
+    text: In ‘Projects and experience’ we present documented work and the specific involvement of the
+      team's professionals, distinguishing their previous careers from projects contracted by BAFRAS.
+  actions:
+  - id: experience
+    label: Explore projects and experience
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: dig-w07
+  source_block: DIG-W07
+  kind: text
+  title: Do you need to review, automate or integrate a system?
+  paragraphs:
+  - id: description
+    text: Tell us which equipment or processes are involved, how they currently operate and what you
+      need to resolve. We will assess the initial information to define the possible technical scope and
+      next steps.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto

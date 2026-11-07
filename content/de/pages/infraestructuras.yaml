@@ -1,0 +1,235 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: infraestructuras
+review:
+  status: draft
+  source_ref: D03 V1.22 · INF-01–INF-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/inf-01/media
+  reason_code: integration_pending
+  source_ref: D05 §26 · R18 · contrato MediaRef pendiente de WEB
+sections:
+- id: inf-01
+  source_block: INF-01
+  kind: hero
+  title: Anlagenplanung für Gebäude, Infrastrukturen und Prozesse.
+  eyebrow: KOMPETENZEN / INFRASTRUKTUR UND TECHNISCHE ANLAGEN
+  subtitle: Wir planen, analysieren und überprüfen elektrische, mechanische und hydraulische Anlagen und
+    berücksichtigen dabei die Nutzungs-, Betriebs- und Wartungsbedingungen des jeweiligen Projekts.
+  paragraphs:
+  - id: support
+    text: Wir sind bei Neubau- und Sanierungsvorhaben ebenso tätig wie bei der Diagnose bestehender
+      Anlagen. Wir legen den technischen Leistungsumfang fest, untersuchen die in Frage kommenden
+      Alternativen und koordinieren die Schnittstellen zwischen den Disziplinen, wenn das Projekt es
+      erfordert.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Ingenieurbereiche ansehen
+    target:
+      kind: internal
+      page_id: infraestructuras
+      section_id: ambitos
+- id: necesidades
+  source_block: INF-02
+  kind: item_list
+  title: Von der Erstplanung bis zur Überprüfung einer bestehenden Anlage.
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Jeder Auftrag geht von einem anderen Bedarf aus. Bevor wir eine Maßnahme festlegen, ermitteln
+      wir, welche Informationen vorliegen, welche Randbedingungen zu prüfen sind und welches technische
+      Ergebnis der Kunde benötigt.
+  items:
+  - kind: need
+    id: new-installation
+    title: Neue Anlage, Sanierung oder Erweiterung.
+    paragraphs:
+    - id: description
+      text: Wir definieren Anforderungen, Lasten und Nutzungsvorgaben, um die Planung auszuarbeiten und
+        die betroffenen Anlagen zu koordinieren.
+  - kind: need
+    id: operating-incidents
+    title: Mangelhafte Funktion oder wiederkehrende Störungen.
+    paragraphs:
+    - id: description
+      text: Wir überprüfen das Verhalten von Geräten und Netzen, um mögliche Ursachen, Einschränkungen
+        und begründete Maßnahmen zu ermitteln.
+  - kind: need
+    id: technical-infrastructure
+    title: Technische Infrastruktur mit besonderen Anforderungen.
+    paragraphs:
+    - id: description
+      text: Wir untersuchen elektrische oder hydraulische Netze und Nebenanlagen unter Berücksichtigung
+        von Kapazität, Betrieb und Schnittstellen.
+  - kind: need
+    id: technical-safety
+    title: Technische Eignung und Sicherheit.
+    paragraphs:
+    - id: description
+      text: Wir bewerten die für den Projektumfang geltenden Anforderungen und die zur Festlegung der
+        Maßnahmen erforderliche Dokumentation.
+  - kind: need
+    id: investment-decisions
+    title: Entscheidungen über Sanierung, Kauf oder Investition.
+    paragraphs:
+    - id: description
+      text: Wir analysieren den technischen Zustand von Anlagen und technischen Assets, um Prioritäten
+        und Aufwandsschätzungen für Maßnahmen abzuleiten.
+- id: ambitos
+  source_block: INF-03
+  kind: cards
+  title: Anlagen und Systeme, die wir untersuchen und entwickeln können.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Wir arbeiten in vier technischen Anlagenbereichen, ergänzt durch Diagnose- und
+      Koordinationsleistungen, die sich auf jeden dieser Bereiche anwenden lassen. Der Leistungsumfang
+      wird für jeden Auftrag festgelegt.
+  items:
+  - kind: technical_area
+    id: electrical
+    title: Elektrotechnik und elektrische Infrastruktur
+    paragraphs:
+    - id: description
+      text: Planung und Überprüfung von Niederspannungsanlagen, Mittelspannungsnetzen und
+        Transformatorstationen, einschließlich Energieverteilung, Schaltanlagen und Verteilungen,
+        Schutzeinrichtungen, Erdung und Beleuchtung.
+  - kind: technical_area
+    id: thermal
+    title: Klimatisierung, Lüftung und Kältetechnik
+    paragraphs:
+    - id: description
+      text: Planung von Klimaanlagen sowie Wärme- und Kälteerzeugung, Lüftung und Absaugung,
+        Verteilnetzen und gewerblicher oder industrieller Kältetechnik unter Berücksichtigung der
+        Nutzungs- und Betriebsbedingungen.
+  - kind: technical_area
+    id: hydraulic
+    title: Wasser, Hydraulik und Nebenanlagen
+    paragraphs:
+    - id: description
+      text: Planung und Überprüfung von Sanitärinstallationen, Trinkwarmwasser, Abwasser und
+        Entwässerung, hydraulischen Netzen, Pumpanlagen, Behältern und industriellen Nebenanlagen.
+  - kind: technical_area
+    id: protection
+    title: Schutz und technische Bedingungen der Anlagen
+    paragraphs:
+    - id: description
+      text: Planung aktiver Brandschutzanlagen sowie Untersuchungen zu Akustik und Schwingungen im
+        Zusammenhang mit Geräten und Anlagen.
+  transversal:
+    id: transversal
+    title: Diagnose, Koordination und technisches Asset-Management
+    paragraphs:
+    - id: description
+      text: Neben der Anlagenplanung führen wir technische Diagnosen bestehender Systeme, die
+        Koordination zwischen den Fachbereichen, Zustandsbewertungen von Assets und die Planung von
+        Maßnahmen durch. Diese Leistungen lassen sich auf jeden der genannten Bereiche anwenden.
+- id: entregables
+  source_block: INF-04
+  kind: item_list
+  title: Von der Diagnose bis zur Projektdokumentation und technischen Begleitung.
+  purpose: deliverables
+  introduction:
+  - id: introduction
+    text: Das Ergebnis wird für jeden Auftrag vereinbart. Es handelt sich um übliche Leistungsformen und
+      Arbeitsergebnisse, nicht um verpflichtende Phasen oder ein festes Leistungspaket.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnose und Studien
+    paragraphs:
+    - id: description
+      text: Zustandsberichte, Messungen und Analysen, Vorberechnungen, Alternativen und Kriterien für
+        Maßnahmen.
+  - kind: delivery
+    id: design-project
+    title: Planung und Projektierung
+    paragraphs:
+    - id: description
+      text: Erläuterungsberichte, Nachweisberechnungen, Schemata, Pläne, Spezifikationen,
+        Mengenermittlungen und gegebenenfalls Ausschreibungsunterlagen.
+  - kind: delivery
+    id: assistance-coordination
+    title: Technische Begleitung und Koordination
+    paragraphs:
+    - id: description
+      text: Prüfung von Unterlagen, Schnittstellenmanagement, technische Unterstützung und
+        Nachverfolgung entsprechend den vertraglich vereinbarten Zuständigkeiten.
+  - kind: delivery
+    id: testing-verification
+    title: Tests und Prüfung
+    paragraphs:
+    - id: description
+      text: Protokolle, Ergebnisse, Abweichungen und Prüfdokumentation, sofern Teil des
+        Leistungsumfangs.
+  notes:
+  - id: scope
+    text: Bauüberwachung (dirección facultativa), Genehmigungsverfahren, Bauausführung und gesetzlich
+      vorgeschriebene Prüfungen unterliegen besonderen Anforderungen und Verantwortlichkeiten; sie sind
+      nicht automatisch in jedem Auftrag enthalten.
+- id: integracion
+  source_block: INF-05
+  kind: text
+  title: Anlagen im Zusammenspiel mit Energie und Steuerung.
+  paragraphs:
+  - id: description
+    text: Eine thermische Sanierung kann eine Bedarfs- und Regelungsstudie erfordern; eine elektrische
+      Infrastruktur kann Teil einer Eigenverbrauchsanlage sein; und eine Betriebsstörung kann mit
+      Sensoren oder Steuerungssequenzen zusammenhängen. Wenn diese Zusammenhänge relevant sind,
+      koordinieren wir die Arbeit mit den anderen Fachbereichen von BAFRAS und legen die Grenzen jeder
+      Maßnahme fest.
+  actions:
+  - id: energy
+    label: Energiesysteme
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+  - id: automation
+    label: Automatisierung und Steuerungstechnik
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: inf-06
+  source_block: INF-06
+  kind: text
+  title: Technische Erfahrung an realen Anlagen.
+  paragraphs:
+  - id: description
+    text: Das Team von BAFRAS verfügt über Berufserfahrung in der Planung und Überprüfung von Anlagen in
+      Gebäuden und Infrastrukturen. Unter „Projekte und Erfahrung“ stellen wir die dokumentierten
+      Leistungen, die Beteiligung der einzelnen Fachleute und den jeweiligen Kontext dar.
+  actions:
+  - id: experience
+    label: Projekte und Erfahrung ansehen
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: inf-07
+  source_block: INF-07
+  kind: text
+  title: Möchten Sie eine Anlage planen, überprüfen oder verbessern?
+  paragraphs:
+  - id: description
+    text: Schildern Sie uns, um welche Art von Anlage es sich handelt, in welcher Phase sich das Projekt
+      befindet und was Sie lösen möchten. Wir prüfen die ersten Informationen, um den Planungsumfang und
+      den nächsten Schritt einzuschätzen.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto

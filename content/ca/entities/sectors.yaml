@@ -1,0 +1,122 @@
+# CONTENT-ES-01 / A5 — D03 V1.22; catálogo editorial, sin publicación implícita.
+- id: turismo-terciario
+  title: Turisme, comerç i edificis terciaris
+  description:
+  - id: description
+    text: Hotels, allotjaments, oficines i comerços han de mantenir el confort i l'activitat mentre
+      gestionen instal·lacions i costos operatius. Estudiam, per exemple, el funcionament de la
+      climatització, les reformes en edificis en ús i les oportunitats de millora energètica.
+  examples:
+  - id: example-1
+    text: Climatització i ACS
+  - id: example-2
+    text: Consums i autoconsum
+  - id: example-3
+    text: Supervisió d'instal·lacions.
+  contextual_actions:
+  - id: explore
+    label: Explorar Sistemes energètics
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+- id: industria-logistica-agroindustria
+  title: Indústria, logística i agroindústria
+  description:
+  - id: description
+    text: En plantes productives, magatzems i activitats agroindustrials, les decisions sobre
+      instal·lacions i control afecten el procés. Podem analitzar consums, serveis auxiliars,
+      refrigeració, bombaments i necessitats d'instrumentació o automatització.
+  examples:
+  - id: example-1
+    text: Pics de demanda
+  - id: example-2
+    text: Fred i bombaments
+  - id: example-3
+    text: Integració d'equips.
+  contextual_actions:
+  - id: explore
+    label: Explorar Automatització i control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: infraestructuras-servicios-publicos
+  title: Infraestructures i serveis públics
+  description:
+  - id: description
+    text: Les instal·lacions municipals, les xarxes d'aigua i els serveis urbans requereixen criteris
+      d'operació, manteniment i renovació. Abordam estudis i projectes d'instal·lacions, energia i
+      telecontrol, tenint en compte les condicions de cada organisme o gestor.
+  examples:
+  - id: example-1
+    text: Enllumenat
+  - id: example-2
+    text: Xarxes hidràuliques
+  - id: example-3
+    text: Telemetria i telecontrol.
+  contextual_actions:
+  - id: explore
+    label: Explorar Infraestructures i instal·lacions
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: salud-educacion-equipamientos
+  title: Salut, educació i equipaments
+  description:
+  - id: description
+    text: Centres sanitaris, residències, campus i espais esportius o culturals combinen una ocupació
+      variable, exigències de confort i continuïtat d'ús. Estudiam instal·lacions tèrmiques i
+      elèctriques, consum energètic i sistemes de supervisió.
+  examples:
+  - id: example-1
+    text: Ventilació
+  - id: example-2
+    text: Producció tèrmica
+  - id: example-3
+    text: Renovació per fases.
+  contextual_actions:
+  - id: explore
+    label: Explorar Infraestructures i instal·lacions
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: edificacion-rehabilitacion-activos
+  title: Edificació, rehabilitació i actius immobiliaris
+  description:
+  - id: description
+    text: En obra nova, rehabilitació, edificis gestionats i habitatge residencial, és important
+      coordinar les instal·lacions amb l'ús, el pressupost i les restriccions d'execució. Col·laboram en
+      estudis, disseny i revisió tècnica d'instal·lacions i solucions energètiques.
+  examples:
+  - id: example-1
+    text: Coordinació d'instal·lacions
+  - id: example-2
+    text: Reformes
+  - id: example-3
+    text: Fotovoltaica i electrificació.
+  contextual_actions:
+  - id: explore
+    label: Explorar Infraestructures i instal·lacions
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: comunidades-energeticas-infraestructuras-tecnologicas
+  title: Comunitats energètiques i infraestructures tecnològiques
+  description:
+  - id: description
+    text: Les comunitats energètiques i les instal·lacions tecnològiques plantegen reptes diferents,
+      però totes dues requereixen decisions rigoroses sobre subministrament, mesura i integració. Podem
+      estudiar autoconsum compartit i emmagatzematge, o necessitats d'alimentació, refrigeració i
+      supervisió d'equips crítics, segons el cas.
+  examples:
+  - id: example-1
+    text: Autoconsum col·lectiu
+  - id: example-2
+    text: Continuïtat elèctrica
+  - id: example-3
+    text: Monitoratge.
+  contextual_actions:
+  - id: explore
+    label: Explorar Sistemes energètics
+    target:
+      kind: internal
+      page_id: sistemas_energeticos

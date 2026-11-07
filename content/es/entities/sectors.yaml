@@ -1,0 +1,122 @@
+# CONTENT-ES-01 / A5 — D03 V1.22; catálogo editorial, sin publicación implícita.
+- id: turismo-terciario
+  title: Turismo, comercio y edificios terciarios
+  description:
+  - id: description
+    text: Hoteles, alojamientos, oficinas y comercios necesitan mantener el confort y la actividad mientras
+      gestionan instalaciones y costes operativos. Estudiamos, por ejemplo, el funcionamiento de la climatización,
+      las reformas en edificios en uso y las oportunidades de mejora energética.
+  examples:
+  - id: example-1
+    text: Climatización y ACS
+  - id: example-2
+    text: Consumos y autoconsumo
+  - id: example-3
+    text: Supervisión de instalaciones.
+  contextual_actions:
+  - id: explore
+    label: Explorar Sistemas energéticos
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+- id: industria-logistica-agroindustria
+  title: Industria, logística y agroindustria
+  description:
+  - id: description
+    text: En plantas productivas, almacenes y actividades agroindustriales, las decisiones sobre instalaciones
+      y control afectan al proceso. Podemos analizar consumos, servicios auxiliares, refrigeración, bombeos
+      y necesidades de instrumentación o automatización.
+  examples:
+  - id: example-1
+    text: Picos de demanda
+  - id: example-2
+    text: Frío y bombeos
+  - id: example-3
+    text: Integración de equipos.
+  contextual_actions:
+  - id: explore
+    label: Explorar Automatización y control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: infraestructuras-servicios-publicos
+  title: Infraestructuras y servicios públicos
+  description:
+  - id: description
+    text: Las instalaciones municipales, las redes de agua y los servicios urbanos requieren criterios
+      de operación, mantenimiento y renovación. Abordamos estudios y proyectos de instalaciones, energía
+      y telecontrol, considerando las condiciones de cada organismo o gestor.
+  examples:
+  - id: example-1
+    text: Alumbrado
+  - id: example-2
+    text: Redes hidráulicas
+  - id: example-3
+    text: Telemetría y telecontrol.
+  contextual_actions:
+  - id: explore
+    label: Explorar Infraestructuras e instalaciones
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: salud-educacion-equipamientos
+  title: Salud, educación y equipamientos
+  description:
+  - id: description
+    text: Centros sanitarios, residencias, campus y espacios deportivos o culturales combinan ocupación
+      variable, exigencias de confort y continuidad de uso. Estudiamos instalaciones térmicas y eléctricas,
+      consumo energético y sistemas de supervisión.
+  examples:
+  - id: example-1
+    text: Ventilación
+  - id: example-2
+    text: Producción térmica
+  - id: example-3
+    text: Renovación por fases.
+  contextual_actions:
+  - id: explore
+    label: Explorar Infraestructuras e instalaciones
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: edificacion-rehabilitacion-activos
+  title: Edificación, rehabilitación y activos inmobiliarios
+  description:
+  - id: description
+    text: En obra nueva, rehabilitación, edificios gestionados y vivienda residencial, es importante coordinar
+      las instalaciones con el uso, el presupuesto y las restricciones de ejecución. Colaboramos en estudios,
+      diseño y revisión técnica de instalaciones y soluciones energéticas.
+  examples:
+  - id: example-1
+    text: Coordinación de instalaciones
+  - id: example-2
+    text: Reformas
+  - id: example-3
+    text: Fotovoltaica y electrificación.
+  contextual_actions:
+  - id: explore
+    label: Explorar Infraestructuras e instalaciones
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: comunidades-energeticas-infraestructuras-tecnologicas
+  title: Comunidades energéticas e infraestructuras tecnológicas
+  description:
+  - id: description
+    text: Las comunidades energéticas y las instalaciones tecnológicas plantean retos diferentes, pero
+      ambas requieren decisiones rigurosas sobre suministro, medida e integración. Podemos estudiar autoconsumo
+      compartido y almacenamiento, o necesidades de alimentación, refrigeración y supervisión de equipos
+      críticos, según el caso.
+  examples:
+  - id: example-1
+    text: Autoconsumo colectivo
+  - id: example-2
+    text: Continuidad eléctrica
+  - id: example-3
+    text: Monitorización.
+  contextual_actions:
+  - id: explore
+    label: Explorar Sistemas energéticos
+    target:
+      kind: internal
+      page_id: sistemas_energeticos

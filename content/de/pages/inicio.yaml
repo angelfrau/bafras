@@ -1,0 +1,325 @@
+# CONTENT-ES-01 / A2 — Copy de D03 V1.22, Parte A, H01–H07.
+# El contexto de carga aporta locale; las rutas pertenecen a config/routes.yaml.
+# Borrador de integración: no acredita publicación ni disponibilidad de medios.
+page_id: inicio
+review:
+  status: draft
+  source_ref: D03 V1.22 · Parte A · H01–H07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+  - field: seo.title
+    reason_code: approval_required
+    source_ref: DEC-05
+  - field: seo.description
+    reason_code: approval_required
+    source_ref: DEC-05
+  - field: sections/h05/items
+    reason_code: approval_required
+    source_ref: D03 H05 · DEC-15
+  - field: sections/h01/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R24 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/infrastructure/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R23 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/energy/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R22 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/automation/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R21 · contrato MediaRef pendiente de WEB
+  - field: sections/h03/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R03 · contrato MediaRef pendiente de WEB
+sections:
+  - id: h01
+    source_block: H01
+    kind: hero
+    eyebrow: BAFRAS ENGINEERING · MULTIDISZIPLINÄRES INGENIEURWESEN
+    title: Ingenieurleistungen für technische Anlagen, Energie und Automatisierung.
+    subtitle: Jede Aufgabe verstehen. Die passende Lösung entwickeln.
+    paragraphs:
+      - id: introduction
+        text: >-
+          Wir analysieren Anforderungen, bewerten Alternativen und entwickeln auf jedes Projekt zugeschnittene
+          Ingenieurlösungen. Wenn die Aufgabe es erfordert, verbinden wir verschiedene Fachbereiche.
+    actions:
+      - id: contact
+        label: Schildern Sie uns Ihr Projekt
+        target:
+          kind: internal
+          page_id: contacto
+      - id: capabilities
+        label: Kompetenzen entdecken
+        target:
+          kind: internal
+          page_id: capacidades
+
+  - id: h02
+    source_block: H02
+    kind: cards
+    purpose: capabilities
+    title: Drei Ingenieurbereiche. Ein gemeinsamer Maßstab.
+    introduction:
+      - id: introduction
+        text: >-
+          Wir sind in den Bereichen technische Anlagen und Infrastruktur, Energiesysteme sowie Automatisierung
+          und Steuerungstechnik tätig. Jeder Fachbereich kann eine konkrete Anforderung abdecken oder, wenn
+          das Projekt es erfordert, mit den anderen zusammenwirken.
+    items:
+      - id: infrastructure
+        kind: capability
+        title: Infrastruktur und technische Anlagen
+        paragraphs:
+          - id: description
+            text: >-
+              Planung, Analyse und technische Begleitung für elektrische und mechanische Anlagen sowie Hilfssysteme
+              in Gebäuden und Infrastrukturen.
+        examples:
+          - id: electrical
+            text: elektrische Anlagen
+          - id: hvac
+            text: Heizung, Klima und Lüftung
+          - id: coordination
+            text: technische Koordination und Überwachung.
+        actions:
+          - id: detail
+            label: Mehr zu Infrastruktur und technischen Anlagen
+            target:
+              kind: internal
+              page_id: infraestructuras
+      - id: energy
+        kind: capability
+        title: Energiesysteme
+        paragraphs:
+          - id: description
+            text: >-
+              Studien und Projekte, um den Energiebedarf zu verstehen, Alternativen zu bewerten und Systeme
+              für Erzeugung, Speicherung und Management von Energie zu entwickeln.
+        examples:
+          - id: analysis
+            text: Energieanalyse
+          - id: renewables
+            text: Anlagen für erneuerbare Energien
+          - id: storage
+            text: Energiespeicherung und -integration.
+        actions:
+          - id: detail
+            label: Mehr zu Energiesystemen
+            target:
+              kind: internal
+              page_id: sistemas_energeticos
+      - id: automation
+        kind: capability
+        title: Automatisierung und Steuerungstechnik
+        paragraphs:
+          - id: description
+            text: >-
+              Ingenieurleistungen in Instrumentierung, Überwachung und Steuerung, um den Betrieb von Anlagen
+              und Prozessen sowie die verfügbaren Informationen darüber zu verbessern.
+        examples:
+          - id: automation
+            text: Anlagenautomatisierung
+          - id: supervision
+            text: Überwachungssysteme
+          - id: integration
+            text: Integration von Daten und Geräten.
+        actions:
+          - id: detail
+            label: Mehr zu Automatisierung und Steuerungstechnik
+            target:
+              kind: internal
+              page_id: automatizacion_control
+    actions:
+      - id: all-capabilities
+        label: Alle unsere Kompetenzen
+        target:
+          kind: internal
+          page_id: capacidades
+
+  - id: h03
+    source_block: H03
+    kind: item_list
+    purpose: needs
+    title: Wir gehen von dem aus, was Ihre Anlage oder Ihr Projekt braucht.
+    introduction:
+      - id: introduction
+        text: >-
+          Nicht jeder Auftrag erfordert eine neue Lösung. Manchmal besteht der erste Schritt darin, zu verstehen,
+          wie ein System funktioniert, seine Grenzen zu erkennen oder Optionen zu vergleichen, bevor investiert
+          wird.
+    items:
+      - id: installation-performance
+        kind: need
+        title: Eine Anlage, die nicht so funktioniert, wie sie sollte.
+        paragraphs:
+          - id: description
+            text: >-
+              Wir analysieren Betriebsweise und Randbedingungen, um mögliche Ursachen zu ermitteln und begründete
+              Maßnahmen festzulegen.
+        actions:
+          - id: detail
+            label: Infrastruktur und technische Anlagen.
+            target:
+              kind: internal
+              page_id: infraestructuras
+      - id: energy-decision
+        kind: need
+        title: Eine Energieentscheidung, die eine fundierte Grundlage braucht.
+        paragraphs:
+          - id: description
+            text: >-
+              Wir untersuchen Verbräuche, Anforderungen und technische Alternativen, bevor eine Investition
+              oder eine Systemänderung festgelegt wird.
+        actions:
+          - id: detail
+            label: Energiesysteme.
+            target:
+              kind: internal
+              page_id: sistemas_energeticos
+      - id: equipment-integration
+        kind: need
+        title: Geräte und Daten, die nicht aufeinander abgestimmt arbeiten.
+        paragraphs:
+          - id: description
+            text: >-
+              Wir bewerten den Bedarf an Instrumentierung, Kommunikation, Überwachung und Steuerung, um eine
+              angemessene Integration zu konzipieren.
+        actions:
+          - id: detail
+            label: Automatisierung und Steuerungstechnik.
+            target:
+              kind: internal
+              page_id: automatizacion_control
+      - id: multidisciplinary-project
+        kind: need
+        title: Ein Projekt, das mehrere Fachbereiche erfordert.
+        paragraphs:
+          - id: description
+            text: >-
+              Wir definieren technische Schnittstellen und Zuständigkeiten, um die beteiligten Disziplinen
+              zu koordinieren.
+        actions:
+          - id: detail
+            label: Kompetenzen.
+            target:
+              kind: internal
+              page_id: capacidades
+
+  - id: h04
+    source_block: H04
+    kind: process
+    purpose: workflow
+    title: Erst verstehen. Dann entscheiden, wie wir eingreifen.
+    introduction:
+      - id: introduction
+        text: >-
+          Eine Ingenieurlösung muss dem Problem, dem Nutzungskontext und den Randbedingungen des Projekts
+          gerecht werden. Deshalb definieren wir den Leistungsumfang, vergleichen Alternativen und legen die
+          Planungs- und Prüfkriterien fest, die dem jeweiligen Auftrag entsprechen.
+    items:
+      - id: understand
+        title: Verstehen
+        paragraphs:
+          - id: description
+            text: Anforderungen, Funktionsweise und Einschränkungen.
+      - id: evaluate
+        title: Bewerten
+        paragraphs:
+          - id: description
+            text: Ursachen, Optionen und deren technische und wirtschaftliche Auswirkungen, sofern
+              zutreffend.
+      - id: develop
+        title: Entwickeln
+        paragraphs:
+          - id: description
+            text: Studien, Projekte, Integration oder technische Begleitung im vertraglich vereinbarten
+              Umfang.
+      - id: verify
+        title: Prüfen
+        paragraphs:
+          - id: description
+            text: Prüfkriterien und Dokumentation der Ergebnisse, die der jeweiligen Leistung
+              entsprechen.
+    closing:
+      - id: contracted-scope
+        text: >-
+          Nicht jede Maßnahme erfordert alle drei Fachbereiche oder alle Phasen: Der Leistungsumfang wird
+          für jedes Projekt festgelegt.
+    actions:
+      - id: about
+        label: Unsere Arbeitsweise kennenlernen
+        target:
+          kind: internal
+          page_id: sobre_bafras
+
+  - id: h05
+    source_block: H05
+    kind: cards
+    purpose: sector_preview
+    title: Ingenieurleistungen für unterschiedliche Umgebungen.
+    introduction:
+      - id: introduction
+        text: >-
+          Die Anforderungen ändern sich je nach Gebäudenutzung, betrieblicher Kontinuität, Ausstattung und
+          Projektvorgaben. Wir passen Analyse und technischen Leistungsumfang an den jeweiligen Kontext an.
+    items:
+      - id: hospitality
+        kind: sector_preview
+        title: Hotels und touristische Unterkünfte.
+      - id: industry
+        kind: sector_preview
+        title: Industrie und Prozesse.
+      - id: tertiary
+        kind: sector_preview
+        title: Büro- und Geschäftsgebäude.
+      - id: public-facilities
+        kind: sector_preview
+        title: Öffentliche Einrichtungen und Anlagen.
+    actions:
+      - id: sectors
+        label: Branchen entdecken
+        target:
+          kind: internal
+          page_id: sectores
+
+  - id: h06
+    source_block: H06
+    kind: text
+    title: Technische Erfahrung als Grundlage unserer Arbeit.
+    paragraphs:
+      - id: introduction
+        text: >-
+          BAFRAS vereint Fachleute mit Erfahrung in Projekten für technische Anlagen, Energie und technische
+          Systeme. Unsere Referenzen geben jeweils an, welche Leistungen erbracht wurden, welche Verantwortung
+          übernommen wurde und ob sie aus einer früheren beruflichen Tätigkeit oder aus einem eigenen Auftrag
+          von BAFRAS stammen.
+    actions:
+      - id: experience
+        label: Projekte und Erfahrung ansehen
+        target:
+          kind: internal
+          page_id: proyectos_experiencia
+
+  - id: h07
+    source_block: H07
+    kind: text
+    title: Haben Sie ein Projekt oder eine technische Fragestellung, die untersucht werden soll?
+    paragraphs:
+      - id: introduction
+        text: >-
+          Schildern Sie uns, was Sie benötigen, in welcher Phase sich das Projekt befindet und welche Fragen
+          Sie klären möchten. Wir prüfen, wie wir Sie unterstützen können und welche Informationen für die
+          Festlegung des nächsten Schritts erforderlich sind.
+    actions:
+      - id: contact
+        label: Sprechen wir über Ihr Projekt
+        target:
+          kind: internal
+          page_id: contacto
+    notes:
+      - id: collaboration
+        text: Wir arbeiten auch mit anderen Ingenieurbüros, Installationsbetrieben und technischen Teams
+          zusammen.

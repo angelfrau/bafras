@@ -1,0 +1,299 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: automatizacion_control
+review:
+  status: draft
+  source_ref: D03 V1.22 · DIG-W01–DIG-W07 · 03.G1-01/02
+seo:
+  title: Automatització i control d'instal·lacions i processos | BAFRAS Engineering
+  description: Enginyeria d'instrumentació, PLC/DDC, SCADA, BMS, integració OT i programari tècnic per a
+    instal·lacions i processos.
+pending:
+- field: sections/dig-w01/media
+  reason_code: integration_pending
+  source_ref: D05 §31 · R01 · contrato MediaRef pendiente de WEB
+- field: sections/ambitos/media
+  reason_code: integration_pending
+  source_ref: D05 §31 · R03 · contrato MediaRef pendiente de WEB
+sections:
+- id: dig-w01
+  source_block: DIG-W01
+  kind: hero
+  title: Enginyeria d'automatització i control per a instal·lacions i processos.
+  eyebrow: CAPACITATS / AUTOMATITZACIÓ I CONTROL
+  paragraphs:
+  - id: main
+    text: Analitzam el funcionament d'equips i instal·lacions per definir què convé mesurar,
+      automatitzar, supervisar o integrar. Desenvolupam solucions d'instrumentació, control,
+      comunicacions i programari tècnic adaptades als requisits de cada projecte.
+  - id: support
+    text: Treballam tant en sistemes existents com en actuacions noves, i definim funcions, interfícies
+      i criteris de verificació abans d'intervenir.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Explorar àmbits d'actuació
+    target:
+      kind: internal
+      page_id: automatizacion_control
+      section_id: ambitos
+- id: necesidades
+  source_block: DIG-W02
+  kind: item_list
+  title: Quan necessites comprendre, controlar o connectar millor els teus sistemes.
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: No sempre cal substituir equips o implantar una plataforma nova. Primer convé entendre com
+      funciona la instal·lació i quines limitacions presenta.
+  items:
+  - kind: need
+    id: missing-data
+    title: Falten dades per saber què passa.
+    paragraphs:
+    - id: description
+      text: Estudiam quines variables cal mesurar, com adquirir-les i com presentar informació útil.
+  - kind: need
+    id: unstable-control
+    title: El control és manual, inestable o difícil d'ajustar.
+    paragraphs:
+    - id: description
+      text: Revisam senyals, seqüències i modes de funcionament per definir millores.
+  - kind: need
+    id: disconnected-equipment
+    title: Els equips no intercanvien informació.
+    paragraphs:
+    - id: description
+      text: Analitzam protocols, compatibilitats i interfícies per valorar-ne la integració.
+  - kind: need
+    id: modernization
+    title: L'automatització existent s'ha de modernitzar.
+    paragraphs:
+    - id: description
+      text: Avaluam limitacions i alternatives, tenint en compte els equips que es poden conservar.
+  - kind: need
+    id: data-decisions
+    title: Les dades no es tradueixen en decisions.
+    paragraphs:
+    - id: description
+      text: Desenvolupam anàlisis, eines i models tècnics quan aporten una utilitat definida.
+- id: ambitos
+  source_block: DIG-W03
+  kind: cards
+  title: 'De la dada al control: sis àmbits d''enginyeria connectats.'
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Cada àmbit respon a una funció diferent. Els podem abordar de manera independent o
+      coordinar-los quan el projecte ho requereix.
+  items:
+  - kind: technical_area
+    id: instrumentation
+    title: Instrumentació, adquisició de dades i telemetria
+    paragraphs:
+    - id: description
+      text: Definim les variables que cal mesurar, els sensors i l'adquisició de senyals per obtenir
+        informació fiable d'equips i instal·lacions. També estudiam el registre i la transmissió remota
+        de dades, sense confondre el monitoratge amb el control d'equips.
+    tags:
+    - id: tags-1
+      text: Sensors
+    - id: tags-2
+      text: Senyals
+    - id: tags-3
+      text: Telemetria
+    - id: tags-4
+      text: Monitoratge remot.
+  - kind: technical_area
+    id: automation-programming
+    title: Enginyeria d'automatització i programació de control
+    paragraphs:
+    - id: description
+      text: Definim funcions i seqüències d'operació, arquitectures de control, enclavaments i criteris
+        de funcionament. Desenvolupam la programació i parametrització de PLC o DDC segons els
+        controladors i l'abast contractat.
+    tags:
+    - id: tags-1
+      text: Lògica de control
+    - id: tags-2
+      text: PLC/DDC
+    - id: tags-3
+      text: Seqüències
+    - id: tags-4
+      text: Automatismes.
+  - kind: technical_area
+    id: supervision
+    title: Supervisió i control tècnic d'instal·lacions
+    paragraphs:
+    - id: description
+      text: Dissenyam interfícies d'operació, alarmes, tendències i funcions de supervisió mitjançant
+        HMI, SCADA o BMS. En edificis, coordinam el control tècnic amb les característiques de les seves
+        instal·lacions; la supervisió no substitueix la lògica dels controladors.
+    tags:
+    - id: tags-1
+      text: SCADA/HMI
+    - id: tags-2
+      text: BMS
+    - id: tags-3
+      text: Alarmes
+    - id: tags-4
+      text: Operació.
+  - kind: technical_area
+    id: ot-integration
+    title: Integració d'equips, comunicacions i arquitectura OT
+    paragraphs:
+    - id: description
+      text: Estudiam la interoperabilitat entre equips, protocols industrials i xarxes d'operació.
+        Definim interfícies i requisits de comunicació, incloent-hi consideracions de segmentació i
+        seguretat OT en el disseny, sense oferir auditories especialitzades ni certificacions de
+        ciberseguretat.
+    tags:
+    - id: tags-1
+      text: Protocols
+    - id: tags-2
+      text: Xarxes OT
+    - id: tags-3
+      text: Interoperabilitat
+    - id: tags-4
+      text: Interfícies.
+  - kind: technical_area
+    id: technical-software
+    title: Programari tècnic, dades i aplicacions d'enginyeria
+    paragraphs:
+    - id: description
+      text: Desenvolupam eines per processar i analitzar dades, automatitzar càlculs i integrar
+        aplicacions mitjançant API. També abordam models físics, simulacions i algorismes d'optimització
+        quan les dades i l'objectiu ho permeten, sense equiparar-los automàticament a intel·ligència
+        artificial o a bessons digitals operatius.
+    tags:
+    - id: tags-1
+      text: Analítica
+    - id: tags-2
+      text: Programari tècnic
+    - id: tags-3
+      text: API
+    - id: tags-4
+      text: Simulació
+    - id: tags-5
+      text: Optimització.
+  - kind: technical_area
+    id: energy-assets
+    title: Control i integració d'actius energètics
+    paragraphs:
+    - id: description
+      text: Desenvolupam funcions de supervisió i control per a generació, emmagatzematge i gestió
+        energètica, incloent-hi la integració EMS o PPC quan correspongui. Les estratègies d'explotació
+        i el dimensionament energètic es defineixen des de Sistemes energètics; aquí n'abordam la
+        implementació tècnica.
+    tags:
+    - id: tags-1
+      text: EMS
+    - id: tags-2
+      text: PPC
+    - id: tags-3
+      text: Consignes
+    - id: tags-4
+      text: Integració d'actius.
+  transversal:
+    id: transversal
+    title: Diagnosi, proves i evolució de sistemes
+    paragraphs:
+    - id: description
+      text: Revisam automatismes existents, documentam interfícies i realitzam proves d'integració i
+        posada en marxa funcional quan formen part de l'encàrrec. El suport evolutiu es defineix
+        mitjançant condicions específiques; no implica manteniment continu ni disponibilitat 24/7.
+- id: entregables
+  source_block: DIG-W04
+  kind: item_list
+  title: Dels requisits funcionals a la verificació del sistema.
+  purpose: deliverables
+  items:
+  - kind: delivery
+    id: diagnosis-definition
+    title: Diagnosi i definició
+    paragraphs:
+    - id: description
+      text: inventaris d'equips i senyals, anàlisi funcional i requisits.
+  - kind: delivery
+    id: design
+    title: Disseny
+    paragraphs:
+    - id: description
+      text: arquitectures, diagrames, llistes de senyals i seqüències de control.
+  - kind: delivery
+    id: development-integration
+    title: Desenvolupament i integració
+    paragraphs:
+    - id: description
+      text: programació, parametrització, interfícies i aplicacions segons l'abast.
+  - kind: delivery
+    id: testing-documentation
+    title: Proves i documentació
+    paragraphs:
+    - id: description
+      text: protocols, registres de resultats i criteris d'acceptació.
+  notes:
+  - id: scope
+    text: Les actuacions i els lliurables depenen de l'abast contractat.
+- id: integracion
+  source_block: DIG-W05
+  kind: cards
+  title: El control ha de respondre a la instal·lació i als seus objectius.
+  purpose: discipline_relations
+  items:
+  - kind: discipline_relation
+    id: infrastructure
+    title: Infraestructures i instal·lacions
+    description:
+    - id: description
+      text: disseny i condicions físiques d'equips, xarxes i instal·lacions elèctriques o mecàniques.
+    discipline:
+      kind: internal
+      page_id: infraestructuras
+  - kind: discipline_relation
+    id: energy
+    title: Sistemes energètics
+    description:
+    - id: description
+      text: anàlisi de demanda, estratègies d'eficiència i operació de generació o emmagatzematge.
+    discipline:
+      kind: internal
+      page_id: sistemas_energeticos
+  closing:
+  - id: closing
+    text: Coordinam aquestes especialitats quan una actuació requereix decisions sobre equips, energia i
+      automatització.
+- id: dig-w06
+  source_block: DIG-W06
+  kind: text
+  title: Experiència tècnica en control, integració i sistemes digitals.
+  paragraphs:
+  - id: description
+    text: A «Projectes i experiència» presentam actuacions documentades i la participació concreta dels
+      professionals de l'equip, diferenciant-ne la trajectòria anterior dels projectes contractats per
+      BAFRAS.
+  actions:
+  - id: experience
+    label: Conèixer projectes i experiència
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: dig-w07
+  source_block: DIG-W07
+  kind: text
+  title: Necessites revisar, automatitzar o integrar un sistema?
+  paragraphs:
+  - id: description
+    text: Explica'ns quins equips o processos hi intervenen, com funcionen actualment i què necessites
+      resoldre. Valorarem la informació inicial per definir el possible abast tècnic i els passos
+      següents.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto

@@ -1,0 +1,119 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sobre_bafras
+review:
+  status: draft
+  source_ref: D03 V1.22 · SB-01–SB-05 · 03.K/03.G1-01/02
+seo:
+  title: Sobre BAFRAS | Equipo e ingeniería multidisciplinar
+  description: Conoce el equipo y la forma de trabajar de BAFRAS Engineering en instalaciones, sistemas
+    energéticos y automatización y control.
+pending: []
+sections:
+- id: sb-01
+  source_block: SB-01
+  kind: hero
+  title: Ingeniería con visión técnica y disciplinas complementarias.
+  eyebrow: SOBRE BAFRAS
+  paragraphs:
+  - id: description
+    text: BAFRAS Engineering reúne perfiles profesionales vinculados a las instalaciones e infraestructuras,
+      los sistemas energéticos y la automatización y control. Abordamos cada encargo desde sus necesidades
+      reales, con atención al funcionamiento de las instalaciones, los condicionantes del proyecto y la
+      coordinación entre especialidades.
+  actions:
+  - id: experience
+    label: Conoce nuestra experiencia
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-02
+  source_block: SB-02
+  kind: team
+  title: Profesionales con experiencias que se complementan.
+  introduction:
+  - id: introduction
+    text: La combinación de trayectorias en instalaciones de edificios, infraestructuras energéticas y
+      sistemas de control permite estudiar problemas desde diferentes perspectivas. Cada proyecto requiere
+      definir quién interviene, con qué responsabilidades y qué especialidades deben coordinarse.
+  corporate_presentation:
+  - id: description
+    text: BAFRAS Engineering reúne a dos ingenieros industriales y un ingeniero técnico electrónico, con
+      perfiles complementarios en infraestructuras e instalaciones, sistemas energéticos y automatización
+      y control. Combinamos estas perspectivas para estudiar cada proyecto y desarrollar el alcance de
+      ingeniería que necesita.
+  person_refs:
+  - murti
+  - angel
+  - amin
+- id: sb-03
+  source_block: SB-03
+  kind: process
+  title: Primero entender. Después definir la actuación.
+  purpose: principles
+  introduction:
+  - id: introduction
+    text: Un mismo síntoma puede tener distintas causas, y una solución técnicamente posible no siempre
+      es la más adecuada para una instalación. Revisamos el contexto, contrastamos los datos disponibles
+      y definimos un alcance proporcionado al objetivo del cliente.
+  items:
+  - id: understand
+    title: Entender el contexto.
+    paragraphs:
+    - id: description
+      text: Identificar necesidades, funcionamiento y restricciones.
+  - id: evaluate
+    title: Evaluar alternativas.
+    paragraphs:
+    - id: description
+      text: Contrastar criterios técnicos y opciones viables cuando corresponda.
+  - id: develop
+    title: Desarrollar el alcance.
+    paragraphs:
+    - id: description
+      text: Preparar los estudios, proyectos, especificaciones o integraciones contratados.
+  - id: verify
+    title: Verificar y documentar.
+    paragraphs:
+    - id: description
+      text: Comprobar los aspectos incluidos en el encargo y entregar documentación utilizable.
+  closing:
+  - id: scope
+    text: No todas estas etapas forman parte de todos los contratos.
+- id: sb-04
+  source_block: SB-04
+  kind: text
+  title: Experiencia profesional aplicada a proyectos reales.
+  paragraphs:
+  - id: description
+    text: La trayectoria del equipo incluye experiencias relacionadas con instalaciones en edificación,
+      sistemas de control industrial e infraestructuras energéticas. Las referencias se presentan con
+      su contexto y, cuando estén verificadas, con las funciones concretas desempeñadas por cada profesional.
+  - id: collaboration
+    text: También colaboramos con promotores, responsables técnicos, ingenierías, estudios de arquitectura,
+      constructoras e instaladoras, delimitando las interfaces y responsabilidades de cada participación.
+  actions:
+  - id: experience
+    label: Ver proyectos y experiencia
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-05
+  source_block: SB-05
+  kind: text
+  title: Hablemos de tu proyecto.
+  paragraphs:
+  - id: description
+    text: Si necesitas estudiar una instalación, desarrollar una actuación técnica o coordinar distintas
+      especialidades, podemos valorar contigo el alcance del trabajo.
+  actions:
+  - id: contact
+    label: Cuéntanos tu proyecto
+    target:
+      kind: internal
+      page_id: contacto
+  - id: capabilities
+    label: Explorar capacidades
+    target:
+      kind: internal
+      page_id: capacidades

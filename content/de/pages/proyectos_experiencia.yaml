@@ -1,0 +1,90 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: proyectos_experiencia
+review:
+  status: draft
+  source_ref: D03 V1.22 · PE-01–PE-04 · 03.K/03.G1-01/02
+seo:
+  title: Projekte und Erfahrung im Ingenieurwesen | BAFRAS Engineering
+  description: null
+pending:
+- field: seo.description
+  reason_code: source_missing
+  source_ref: 'D03 PE · UX y SEO: intención sin descripción literal'
+- field: sections/pe-02/groups
+  reason_code: verification_required
+  source_ref: D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni
+    autorización
+sections:
+- id: pe-01
+  source_block: PE-01
+  kind: hero
+  title: Erfahrung mit technischen Anlagen, Energie und Steuerungssystemen.
+  eyebrow: PROJEKTE UND ERFAHRUNG
+  paragraphs:
+  - id: description
+    text: Wir stellen Referenzen aus dem beruflichen Werdegang des Teams in den Bereichen Gebäude,
+      Energieinfrastruktur und Automatisierungssysteme zusammen. Jedes Projekt bringt andere
+      Herausforderungen mit sich; deshalb legen wir den Schwerpunkt auf den technischen Kontext, die
+      erbrachten Leistungen und die konkrete Beteiligung unserer Fachleute.
+  attribution: Referenzen aus früherer beruflicher Tätigkeit werden von Aufträgen unterschieden, die
+    BAFRAS direkt ausgeführt hat.
+- id: pe-02
+  source_block: PE-02
+  kind: experience_index
+  title: Erfahrung in Projekten unterschiedlicher Art.
+  introduction:
+  - id: introduction
+    text: Wir wählen Leistungen aus, die verdeutlichen, an welchen Arten von Systemen und technischen
+      Herausforderungen das Team beteiligt war.
+  groups:
+  - id: infrastructure
+    title: Infrastruktur und technische Anlagen
+    introduction:
+    - id: introduction
+      text: Elektrische und mechanische Anlagen in Gebäuden mit unterschiedlichen Anforderungen an
+        Komfort, Betrieb und Baustellenkoordination.
+    entries: []
+  - id: automation
+    title: Automatisierung und Steuerungstechnik
+    introduction:
+    - id: introduction
+      text: Kommunikation, Regelung, Überwachung und technische Software für Systeme, die koordiniert
+        zusammenwirken müssen.
+    entries: []
+  - id: energy
+    title: Energiesysteme
+    introduction:
+    - id: introduction
+      text: Studien, Engineering und technische Dokumentation zur Integration von Erzeugung, Speicherung
+        und neuen Energieinfrastrukturen.
+    entries: []
+- id: pe-03
+  source_block: PE-03
+  kind: text
+  title: Auf den konkreten Beitrag kommt es an.
+  paragraphs:
+  - id: description
+    text: Für jede Referenz werden wir den Projektkontext, die ausgeübte Funktion, die behandelten
+      Systeme und die Phasen der Beteiligung angeben. Sofern belastbare Daten vorliegen, ergänzen wir
+      Arbeitsergebnisse, Resultate und freigegebenes Bildmaterial.
+- id: pe-04
+  source_block: PE-04
+  kind: text
+  title: Stellt Ihr Projekt ähnliche Anforderungen?
+  paragraphs:
+  - id: description
+    text: Schildern Sie uns, welche Anlage oder welches System Sie entwickeln, überprüfen oder
+      integrieren möchten. Wir prüfen, welche Erfahrung und welche Kompetenzen für Ihren Auftrag
+      relevant sein können.
+  actions:
+  - id: contact
+    label: Schildern Sie uns Ihr Projekt
+    target:
+      kind: internal
+      page_id: contacto
+  - id: capabilities
+    label: Kompetenzen entdecken
+    target:
+      kind: internal
+      page_id: capacidades

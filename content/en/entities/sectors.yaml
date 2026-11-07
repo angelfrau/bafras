@@ -1,0 +1,122 @@
+# CONTENT-ES-01 / A5 — D03 V1.22; catálogo editorial, sin publicación implícita.
+- id: turismo-terciario
+  title: Tourism, retail and service-sector buildings
+  description:
+  - id: description
+    text: Hotels, other accommodation, offices and shops need to maintain comfort and keep operating
+      while managing their installations and operating costs. We study, for example, how HVAC systems
+      perform, refurbishments in occupied buildings and opportunities for energy improvement.
+  examples:
+  - id: example-1
+    text: HVAC and domestic hot water
+  - id: example-2
+    text: Consumption and self-consumption
+  - id: example-3
+    text: Installation supervision.
+  contextual_actions:
+  - id: explore
+    label: Explore Energy systems
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+- id: industria-logistica-agroindustria
+  title: Industry, logistics and agri-food
+  description:
+  - id: description
+    text: In production plants, warehouses and agri-food operations, decisions about installations and
+      control affect the process. We can analyse consumption, auxiliary services, refrigeration, pumping
+      and instrumentation or automation needs.
+  examples:
+  - id: example-1
+    text: Demand peaks
+  - id: example-2
+    text: Refrigeration and pumping
+  - id: example-3
+    text: Equipment integration.
+  contextual_actions:
+  - id: explore
+    label: Explore Automation and control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: infraestructuras-servicios-publicos
+  title: Infrastructure and public services
+  description:
+  - id: description
+    text: Municipal installations, water networks and urban services require criteria for operation,
+      maintenance and renewal. We undertake studies and projects for installations, energy and remote
+      control, taking into account the conditions of each public body or operator.
+  examples:
+  - id: example-1
+    text: Lighting
+  - id: example-2
+    text: Hydraulic networks
+  - id: example-3
+    text: Telemetry and remote control.
+  contextual_actions:
+  - id: explore
+    label: Explore Infrastructure and technical installations
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: salud-educacion-equipamientos
+  title: Healthcare, education and facilities
+  description:
+  - id: description
+    text: Healthcare centres, care homes, campuses and sports or cultural venues combine variable
+      occupancy, comfort requirements and continuity of use. We study thermal and electrical
+      installations, energy consumption and supervisory systems.
+  examples:
+  - id: example-1
+    text: Ventilation
+  - id: example-2
+    text: Heating and cooling generation
+  - id: example-3
+    text: Phased renewal.
+  contextual_actions:
+  - id: explore
+    label: Explore Infrastructure and technical installations
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: edificacion-rehabilitacion-activos
+  title: Building, refurbishment and real estate assets
+  description:
+  - id: description
+    text: In new construction, refurbishment, managed buildings and residential housing, it is important
+      to coordinate installations with use, budget and construction constraints. We contribute to
+      studies, design and technical review of installations and energy solutions.
+  examples:
+  - id: example-1
+    text: Installation coordination
+  - id: example-2
+    text: Refurbishments
+  - id: example-3
+    text: Photovoltaics and electrification.
+  contextual_actions:
+  - id: explore
+    label: Explore Infrastructure and technical installations
+    target:
+      kind: internal
+      page_id: infraestructuras
+- id: comunidades-energeticas-infraestructuras-tecnologicas
+  title: Energy communities and technology infrastructure
+  description:
+  - id: description
+    text: Energy communities and technology facilities pose different challenges, but both require
+      rigorous decisions on supply, metering and integration. Depending on the case, we can study shared
+      self-consumption and storage, or the power supply, cooling and supervision needs of critical
+      equipment.
+  examples:
+  - id: example-1
+    text: Collective self-consumption
+  - id: example-2
+    text: Power continuity
+  - id: example-3
+    text: Monitoring.
+  contextual_actions:
+  - id: explore
+    label: Explore Energy systems
+    target:
+      kind: internal
+      page_id: sistemas_energeticos

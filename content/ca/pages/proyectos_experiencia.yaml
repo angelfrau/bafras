@@ -1,0 +1,89 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: proyectos_experiencia
+review:
+  status: draft
+  source_ref: D03 V1.22 · PE-01–PE-04 · 03.K/03.G1-01/02
+seo:
+  title: Projectes i experiència en enginyeria | BAFRAS Engineering
+  description: null
+pending:
+- field: seo.description
+  reason_code: source_missing
+  source_ref: 'D03 PE · UX y SEO: intención sin descripción literal'
+- field: sections/pe-02/groups
+  reason_code: verification_required
+  source_ref: D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni
+    autorización
+sections:
+- id: pe-01
+  source_block: PE-01
+  kind: hero
+  title: Experiència aplicada a instal·lacions, energia i sistemes de control.
+  eyebrow: PROJECTES I EXPERIÈNCIA
+  paragraphs:
+  - id: description
+    text: Reunim referències de la trajectòria professional de l'equip en edificis, infraestructures
+      energètiques i sistemes d'automatització. Cada projecte planteja reptes diferents; per això posam
+      el focus en el context tècnic, la feina feta i la participació concreta dels nostres
+      professionals.
+  attribution: Les referències d'experiència professional prèvia es distingeixen dels encàrrecs
+    desenvolupats directament per BAFRAS.
+- id: pe-02
+  source_block: PE-02
+  kind: experience_index
+  title: Experiència en projectes de naturalesa diversa.
+  introduction:
+  - id: introduction
+    text: Seleccionam actuacions que ajuden a comprendre el tipus de sistemes i reptes tècnics en què ha
+      participat l'equip.
+  groups:
+  - id: infrastructure
+    title: Infraestructures i instal·lacions
+    introduction:
+    - id: introduction
+      text: Instal·lacions elèctriques i mecàniques en edificis amb exigències diferents de confort,
+        operació i coordinació d'obra.
+    entries: []
+  - id: automation
+    title: Automatització i control
+    introduction:
+    - id: introduction
+      text: Comunicacions, regulació, supervisió i programari tècnic per a sistemes que necessiten
+        operar de manera coordinada.
+    entries: []
+  - id: energy
+    title: Sistemes energètics
+    introduction:
+    - id: introduction
+      text: Estudis, enginyeria i documentació tècnica per integrar generació, emmagatzematge i noves
+        infraestructures energètiques.
+    entries: []
+- id: pe-03
+  source_block: PE-03
+  kind: text
+  title: La intervenció concreta importa.
+  paragraphs:
+  - id: description
+    text: A cada referència identificarem el context del projecte, la funció exercida, els sistemes
+      abordats i les fases de participació. Quan hi hagi dades contrastades, hi incorporarem lliurables,
+      resultats i material gràfic autoritzat.
+- id: pe-04
+  source_block: PE-04
+  kind: text
+  title: El teu projecte planteja reptes similars?
+  paragraphs:
+  - id: description
+    text: Explica'ns quina instal·lació o sistema necessites desenvolupar, revisar o integrar. Valorarem
+      quina experiència i quines capacitats poden ser rellevants per al teu encàrrec.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto
+  - id: capabilities
+    label: Explorar capacitats
+    target:
+      kind: internal
+      page_id: capacidades

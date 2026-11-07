@@ -1,0 +1,230 @@
+# CONTENT-ES-01 / A4 — Texto D03 V1.22; locale aportado por contexto.
+# Borrador de integración; medios aprobados pendientes del contrato MediaRef.
+page_id: infraestructuras
+review:
+  status: draft
+  source_ref: D03 V1.22 · INF-01–INF-07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: sections/inf-01/media
+  reason_code: integration_pending
+  source_ref: D05 §26 · R18 · contrato MediaRef pendiente de WEB
+sections:
+- id: inf-01
+  source_block: INF-01
+  kind: hero
+  title: Enginyeria d'instal·lacions per a edificis, infraestructures i processos.
+  eyebrow: CAPACITATS / INFRAESTRUCTURES I INSTAL·LACIONS
+  subtitle: Dissenyam, analitzam i revisam instal·lacions elèctriques, mecàniques i hidràuliques, tenint
+    en compte les condicions d'ús, funcionament i manteniment de cada projecte.
+  paragraphs:
+  - id: support
+    text: Treballam tant en actuacions noves i reformes com en la diagnosi d'instal·lacions existents.
+      Definim l'abast tècnic, estudiam les alternatives que escaiguin i coordinam les interfícies entre
+      disciplines quan el projecte ho requereix.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto
+  - id: explore
+    label: Veure àmbits d'enginyeria
+    target:
+      kind: internal
+      page_id: infraestructuras
+      section_id: ambitos
+- id: necesidades
+  source_block: INF-02
+  kind: item_list
+  title: Des del disseny inicial fins a la revisió d'una instal·lació existent.
+  purpose: needs
+  introduction:
+  - id: introduction
+    text: Cada encàrrec parteix d'una necessitat diferent. Abans de definir una actuació, identificam
+      quina informació hi ha, quins condicionants s'han de comprovar i quin resultat tècnic necessita el
+      client.
+  items:
+  - kind: need
+    id: new-installation
+    title: Instal·lació nova, reforma o ampliació.
+    paragraphs:
+    - id: description
+      text: Definim necessitats, càrregues i requisits d'ús per desenvolupar l'enginyeria i coordinar
+        les instal·lacions implicades.
+  - kind: need
+    id: operating-incidents
+    title: Funcionament deficient o incidències recurrents.
+    paragraphs:
+    - id: description
+      text: Revisam el comportament d'equips i xarxes per identificar possibles causes, limitacions i
+        actuacions justificades.
+  - kind: need
+    id: technical-infrastructure
+    title: Infraestructura tècnica amb requisits específics.
+    paragraphs:
+    - id: description
+      text: Estudiam xarxes elèctriques, hidràuliques o serveis auxiliars tenint en compte la capacitat,
+        l'operació i les interfícies.
+  - kind: need
+    id: technical-safety
+    title: Adequació tècnica i seguretat.
+    paragraphs:
+    - id: description
+      text: Avaluam els requisits aplicables a l'abast del projecte i la documentació necessària per
+        definir les actuacions.
+  - kind: need
+    id: investment-decisions
+    title: Decisions de reforma, compra o inversió.
+    paragraphs:
+    - id: description
+      text: Analitzam l'estat tècnic d'instal·lacions i actius per orientar prioritats i estimacions
+        d'intervenció.
+- id: ambitos
+  source_block: INF-03
+  kind: cards
+  title: Instal·lacions i sistemes que podem estudiar i desenvolupar.
+  purpose: technical_areas
+  introduction:
+  - id: introduction
+    text: Treballam en quatre àmbits tècnics d'instal·lacions, amb serveis de diagnosi i coordinació que
+      es poden aplicar a qualsevol d'aquests àmbits. L'abast es defineix per a cada encàrrec.
+  items:
+  - kind: technical_area
+    id: electrical
+    title: Electricitat i infraestructura elèctrica
+    paragraphs:
+    - id: description
+      text: Disseny i revisió d'instal·lacions de baixa tensió, xarxes de mitjana tensió i centres de
+        transformació, incloent-hi distribució elèctrica, quadres, proteccions, posada a terra i
+        enllumenat.
+  - kind: technical_area
+    id: thermal
+    title: Climatització, ventilació i refrigeració
+    paragraphs:
+    - id: description
+      text: Enginyeria de climatització i producció tèrmica, ventilació i extracció, xarxes de
+        distribució i refrigeració comercial o industrial, tenint en compte les condicions d'ús i
+        operació.
+  - kind: technical_area
+    id: hydraulic
+    title: Aigua, hidràulica i serveis auxiliars
+    paragraphs:
+    - id: description
+      text: Disseny i revisió d'instal·lacions de fontaneria, aigua calenta sanitària, sanejament i
+        drenatge, xarxes hidràuliques, bombaments, dipòsits i serveis auxiliars industrials.
+  - kind: technical_area
+    id: protection
+    title: Protecció i condicions tècniques de les instal·lacions
+    paragraphs:
+    - id: description
+      text: Enginyeria d'instal·lacions actives de protecció contra incendis i estudis d'acústica i
+        vibracions relacionats amb equips i instal·lacions.
+  transversal:
+    id: transversal
+    title: Diagnosi, coordinació i gestió tècnica d'actius
+    paragraphs:
+    - id: description
+      text: A més del disseny d'instal·lacions, realitzam diagnosis tècniques de sistemes existents,
+        coordinació entre especialitats, avaluació de l'estat d'actius i planificació d'actuacions.
+        Aquestes tasques es poden aplicar a qualsevol dels àmbits anteriors.
+- id: entregables
+  source_block: INF-04
+  kind: item_list
+  title: De la diagnosi a la documentació de projecte i l'assistència tècnica.
+  purpose: deliverables
+  introduction:
+  - id: introduction
+    text: El resultat s'acorda a cada encàrrec. Aquestes són modalitats i lliurables habituals, no fases
+      obligatòries ni un paquet tancat.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnosi i estudis
+    paragraphs:
+    - id: description
+      text: informes d'estat, mesuraments i anàlisis, càlculs preliminars, alternatives i criteris
+        d'intervenció.
+  - kind: delivery
+    id: design-project
+    title: Disseny i projecte
+    paragraphs:
+    - id: description
+      text: memòries, càlculs justificatius, esquemes, plànols, especificacions, amidaments i
+        documentació de contractació quan escaigui.
+  - kind: delivery
+    id: assistance-coordination
+    title: Assistència tècnica i coordinació
+    paragraphs:
+    - id: description
+      text: revisió de documentació, gestió d'interfícies, suport tècnic i seguiment segons les
+        responsabilitats contractades.
+  - kind: delivery
+    id: testing-verification
+    title: Proves i verificació
+    paragraphs:
+    - id: description
+      text: protocols, resultats, incidències i documentació de comprovació quan formin part de l'abast.
+  notes:
+  - id: scope
+    text: la direcció facultativa, la tramitació, l'execució material i les verificacions reglamentàries
+      tenen requisits i responsabilitats específics; no estan incloses automàticament en qualsevol
+      encàrrec.
+- id: integracion
+  source_block: INF-05
+  kind: text
+  title: Instal·lacions que es relacionen amb l'energia i el control.
+  paragraphs:
+  - id: description
+    text: Una reforma tèrmica pot requerir un estudi de demanda i regulació; una infraestructura
+      elèctrica pot formar part d'una instal·lació d'autoconsum; i una incidència operativa pot estar
+      relacionada amb sensors o seqüències de control. Quan aquestes relacions són rellevants, coordinam
+      la feina amb les altres especialitats de BAFRAS i definim els límits de cada actuació.
+  actions:
+  - id: energy
+    label: Sistemes energètics
+    target:
+      kind: internal
+      page_id: sistemas_energeticos
+  - id: automation
+    label: Automatització i control
+    target:
+      kind: internal
+      page_id: automatizacion_control
+- id: inf-06
+  source_block: INF-06
+  kind: text
+  title: Experiència tècnica aplicada a instal·lacions reals.
+  paragraphs:
+  - id: description
+    text: L'equip de BAFRAS reuneix experiència professional en enginyeria i revisió d'instal·lacions
+      d'edificis i infraestructures. A «Projectes i experiència» detallam les actuacions documentades,
+      la participació de cada professional i el context en què es varen dur a terme.
+  actions:
+  - id: experience
+    label: Conèixer projectes i experiència
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: inf-07
+  source_block: INF-07
+  kind: text
+  title: Necessites dissenyar, revisar o millorar una instal·lació?
+  paragraphs:
+  - id: description
+    text: Explica'ns quin tipus d'instal·lació tens, en quina fase es troba el projecte i què necessites
+      resoldre. Revisarem la informació inicial per valorar l'abast d'enginyeria i el pas següent.
+  actions:
+  - id: contact
+    label: Explica'ns el teu projecte
+    target:
+      kind: internal
+      page_id: contacto

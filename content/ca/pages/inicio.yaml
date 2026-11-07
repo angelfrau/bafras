@@ -1,0 +1,317 @@
+# CONTENT-ES-01 / A2 — Copy de D03 V1.22, Parte A, H01–H07.
+# El contexto de carga aporta locale; las rutas pertenecen a config/routes.yaml.
+# Borrador de integración: no acredita publicación ni disponibilidad de medios.
+page_id: inicio
+review:
+  status: draft
+  source_ref: D03 V1.22 · Parte A · H01–H07 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+  - field: seo.title
+    reason_code: approval_required
+    source_ref: DEC-05
+  - field: seo.description
+    reason_code: approval_required
+    source_ref: DEC-05
+  - field: sections/h05/items
+    reason_code: approval_required
+    source_ref: D03 H05 · DEC-15
+  - field: sections/h01/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R24 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/infrastructure/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R23 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/energy/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R22 · contrato MediaRef pendiente de WEB
+  - field: sections/h02/items/automation/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R21 · contrato MediaRef pendiente de WEB
+  - field: sections/h03/media
+    reason_code: integration_pending
+    source_ref: D05 §23/§26 · R03 · contrato MediaRef pendiente de WEB
+sections:
+  - id: h01
+    source_block: H01
+    kind: hero
+    eyebrow: BAFRAS ENGINEERING · ENGINYERIA MULTIDISCIPLINÀRIA
+    title: Enginyeria per a instal·lacions, energia i automatització.
+    subtitle: Comprendre cada repte. Desenvolupar la solució adequada.
+    paragraphs:
+      - id: introduction
+        text: >-
+          Analitzam necessitats, avaluam alternatives i desenvolupam solucions d'enginyeria adaptades a cada
+          projecte. Integram diferents especialitats quan el repte ho requereix.
+    actions:
+      - id: contact
+        label: Explica'ns el teu projecte
+        target:
+          kind: internal
+          page_id: contacto
+      - id: capabilities
+        label: Explorar capacitats
+        target:
+          kind: internal
+          page_id: capacidades
+
+  - id: h02
+    source_block: H02
+    kind: cards
+    purpose: capabilities
+    title: Tres àrees d'enginyeria. Un criteri comú.
+    introduction:
+      - id: introduction
+        text: >-
+          Treballam en instal·lacions i infraestructures, sistemes energètics i automatització i control.
+          Cada especialitat pot respondre a una necessitat concreta o integrar-se amb les altres quan el projecte
+          ho requereix.
+    items:
+      - id: infrastructure
+        kind: capability
+        title: Infraestructures i instal·lacions
+        paragraphs:
+          - id: description
+            text: >-
+              Disseny, anàlisi i assistència tècnica per a instal·lacions elèctriques, mecàniques i sistemes
+              auxiliars en edificis i infraestructures.
+        examples:
+          - id: electrical
+            text: instal·lacions elèctriques
+          - id: hvac
+            text: climatització i ventilació
+          - id: coordination
+            text: coordinació i supervisió tècnica.
+        actions:
+          - id: detail
+            label: Veure infraestructures i instal·lacions
+            target:
+              kind: internal
+              page_id: infraestructuras
+      - id: energy
+        kind: capability
+        title: Sistemes energètics
+        paragraphs:
+          - id: description
+            text: >-
+              Estudis i projectes per comprendre la demanda, avaluar alternatives i desenvolupar sistemes
+              de generació, emmagatzematge i gestió de l'energia.
+        examples:
+          - id: analysis
+            text: anàlisi energètica
+          - id: renewables
+            text: instal·lacions renovables
+          - id: storage
+            text: emmagatzematge i integració energètica.
+        actions:
+          - id: detail
+            label: Veure sistemes energètics
+            target:
+              kind: internal
+              page_id: sistemas_energeticos
+      - id: automation
+        kind: capability
+        title: Automatització i control
+        paragraphs:
+          - id: description
+            text: >-
+              Enginyeria d'instrumentació, supervisió i control per millorar l'operació i la informació disponible
+              sobre instal·lacions i processos.
+        examples:
+          - id: automation
+            text: automatització d'instal·lacions
+          - id: supervision
+            text: sistemes de supervisió
+          - id: integration
+            text: integració de dades i equips.
+        actions:
+          - id: detail
+            label: Veure automatització i control
+            target:
+              kind: internal
+              page_id: automatizacion_control
+    actions:
+      - id: all-capabilities
+        label: Totes les nostres capacitats
+        target:
+          kind: internal
+          page_id: capacidades
+
+  - id: h03
+    source_block: H03
+    kind: item_list
+    purpose: needs
+    title: Partim del que necessita la teva instal·lació o el teu projecte.
+    introduction:
+      - id: introduction
+        text: >-
+          No tots els encàrrecs requereixen una solució nova. De vegades, el primer pas és entendre com funciona
+          un sistema, identificar-ne les limitacions o comparar opcions abans d'invertir.
+    items:
+      - id: installation-performance
+        kind: need
+        title: Una instal·lació que no funciona com caldria.
+        paragraphs:
+          - id: description
+            text: >-
+              Analitzam el funcionament i els condicionants per identificar possibles causes i definir actuacions
+              justificades.
+        actions:
+          - id: detail
+            label: Infraestructures i instal·lacions.
+            target:
+              kind: internal
+              page_id: infraestructuras
+      - id: energy-decision
+        kind: need
+        title: Una decisió energètica que necessita fonament.
+        paragraphs:
+          - id: description
+            text: >-
+              Estudiam consums, necessitats i alternatives tècniques abans de definir una inversió o una modificació
+              del sistema.
+        actions:
+          - id: detail
+            label: Sistemes energètics.
+            target:
+              kind: internal
+              page_id: sistemas_energeticos
+      - id: equipment-integration
+        kind: need
+        title: Equips i dades que no treballen de manera coordinada.
+        paragraphs:
+          - id: description
+            text: >-
+              Avaluam necessitats d'instrumentació, comunicació, supervisió i control per plantejar una integració
+              proporcionada.
+        actions:
+          - id: detail
+            label: Automatització i control.
+            target:
+              kind: internal
+              page_id: automatizacion_control
+      - id: multidisciplinary-project
+        kind: need
+        title: Un projecte que requereix diverses especialitats.
+        paragraphs:
+          - id: description
+            text: >-
+              Definim interfícies i responsabilitats tècniques per coordinar les disciplines que hi intervenen.
+        actions:
+          - id: detail
+            label: Capacitats.
+            target:
+              kind: internal
+              page_id: capacidades
+
+  - id: h04
+    source_block: H04
+    kind: process
+    purpose: workflow
+    title: Primer, comprendre. Després, decidir com intervenir.
+    introduction:
+      - id: introduction
+        text: >-
+          Una solució d'enginyeria ha de respondre al problema, al context d'ús i als condicionants del projecte.
+          Per això definim l'abast, contrastam alternatives i concretam els criteris de disseny i comprovació
+          que corresponguin a cada encàrrec.
+    items:
+      - id: understand
+        title: Comprendre
+        paragraphs:
+          - id: description
+            text: necessitats, funcionament i restriccions.
+      - id: evaluate
+        title: Avaluar
+        paragraphs:
+          - id: description
+            text: causes, opcions i les seves implicacions tècniques i econòmiques, quan escaigui.
+      - id: develop
+        title: Desenvolupar
+        paragraphs:
+          - id: description
+            text: estudis, projectes, integració o assistència tècnica segons l'abast contractat.
+      - id: verify
+        title: Verificar
+        paragraphs:
+          - id: description
+            text: criteris de comprovació i documentació dels resultats que corresponguin a la feina.
+    closing:
+      - id: contracted-scope
+        text: >-
+          No totes les actuacions requereixen les tres especialitats ni totes les fases: l'abast es defineix
+          per a cada projecte.
+    actions:
+      - id: about
+        label: Coneix la nostra manera de treballar
+        target:
+          kind: internal
+          page_id: sobre_bafras
+
+  - id: h05
+    source_block: H05
+    kind: cards
+    purpose: sector_preview
+    title: Enginyeria aplicada a entorns diversos.
+    introduction:
+      - id: introduction
+        text: >-
+          Les necessitats canvien segons l'ús de l'edifici, la continuïtat operativa, els equips i les exigències
+          del projecte. Adaptam l'anàlisi i l'abast tècnic a cada context.
+    items:
+      - id: hospitality
+        kind: sector_preview
+        title: Hotels i allotjaments turístics.
+      - id: industry
+        kind: sector_preview
+        title: Indústria i processos.
+      - id: tertiary
+        kind: sector_preview
+        title: Edificis terciaris i comercials.
+      - id: public-facilities
+        kind: sector_preview
+        title: Equipaments i instal·lacions públiques.
+    actions:
+      - id: sectors
+        label: Explorar sectors
+        target:
+          kind: internal
+          page_id: sectores
+
+  - id: h06
+    source_block: H06
+    kind: text
+    title: Experiència tècnica que avala la nostra feina.
+    paragraphs:
+      - id: introduction
+        text: >-
+          BAFRAS reuneix professionals amb experiència en projectes d'instal·lacions, energia i sistemes tècnics.
+          Presentam les referències indicant la feina feta, la responsabilitat assumida i si corresponen a
+          una trajectòria professional prèvia o a un encàrrec propi de BAFRAS.
+    actions:
+      - id: experience
+        label: Conèixer projectes i experiència
+        target:
+          kind: internal
+          page_id: proyectos_experiencia
+
+  - id: h07
+    source_block: H07
+    kind: text
+    title: Tens un projecte o una necessitat tècnica per estudiar?
+    paragraphs:
+      - id: introduction
+        text: >-
+          Explica'ns què necessites, en quina fase es troba el projecte i quines qüestions vols resoldre.
+          Valorarem com et podem ajudar i quina informació cal per definir el pas següent.
+    actions:
+      - id: contact
+        label: Parlem del teu projecte
+        target:
+          kind: internal
+          page_id: contacto
+    notes:
+      - id: collaboration
+        text: També col·laboram amb altres enginyeries, instal·ladors i equips tècnics.

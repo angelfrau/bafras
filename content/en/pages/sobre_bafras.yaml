@@ -1,0 +1,120 @@
+# CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
+page_id: sobre_bafras
+review:
+  status: draft
+  source_ref: D03 V1.22 · SB-01–SB-05 · 03.K/03.G1-01/02
+seo:
+  title: About BAFRAS | Team and multidisciplinary engineering
+  description: Get to know the team and working approach of BAFRAS Engineering in technical
+    installations, energy systems, and automation and control.
+pending: []
+sections:
+- id: sb-01
+  source_block: SB-01
+  kind: hero
+  title: Engineering with technical insight and complementary disciplines.
+  eyebrow: ABOUT BAFRAS
+  paragraphs:
+  - id: description
+    text: BAFRAS Engineering brings together professional profiles in technical installations and
+      infrastructure, energy systems, and automation and control. We approach each assignment from its
+      real needs, paying attention to how the installations operate, the project constraints and
+      coordination between specialisms.
+  actions:
+  - id: experience
+    label: Discover our experience
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-02
+  source_block: SB-02
+  kind: team
+  title: Professionals with complementary experience.
+  introduction:
+  - id: introduction
+    text: Combining backgrounds in building installations, energy infrastructure and control systems
+      allows problems to be studied from different perspectives. Each project requires defining who is
+      involved, with what responsibilities and which specialisms need to be coordinated.
+  corporate_presentation:
+  - id: description
+    text: BAFRAS Engineering brings together two industrial engineers and one technical engineer in
+      electronics, with complementary profiles in infrastructure and technical installations, energy
+      systems, and automation and control. We combine these perspectives to study each project and
+      develop the engineering scope it needs.
+  person_refs:
+  - murti
+  - angel
+  - amin
+- id: sb-03
+  source_block: SB-03
+  kind: process
+  title: Understand first. Then define the work.
+  purpose: principles
+  introduction:
+  - id: introduction
+    text: The same symptom can have different causes, and a technically feasible solution is not always
+      the most suitable one for an installation. We review the context, cross-check the available data
+      and define a scope proportionate to the client's objective.
+  items:
+  - id: understand
+    title: Understand the context.
+    paragraphs:
+    - id: description
+      text: Identify needs, operation and constraints.
+  - id: evaluate
+    title: Evaluate alternatives.
+    paragraphs:
+    - id: description
+      text: Compare technical criteria and viable options where appropriate.
+  - id: develop
+    title: Develop the scope.
+    paragraphs:
+    - id: description
+      text: Prepare the contracted studies, projects, specifications or integrations.
+  - id: verify
+    title: Verify and document.
+    paragraphs:
+    - id: description
+      text: Check the aspects included in the assignment and deliver usable documentation.
+  closing:
+  - id: scope
+    text: Not all of these stages form part of every contract.
+- id: sb-04
+  source_block: SB-04
+  kind: text
+  title: Professional experience applied to real projects.
+  paragraphs:
+  - id: description
+    text: The team's track record includes experience with building installations, industrial control
+      systems and energy infrastructure. References are presented with their context and, once verified,
+      with the specific roles performed by each professional.
+  - id: collaboration
+    text: We also collaborate with developers, technical managers, engineering firms, architecture
+      practices, contractors and installers, defining the interfaces and responsibilities of each
+      party's involvement.
+  actions:
+  - id: experience
+    label: View projects and experience
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
+- id: sb-05
+  source_block: SB-05
+  kind: text
+  title: Let's talk about your project.
+  paragraphs:
+  - id: description
+    text: If you need to study an installation, develop a technical project or coordinate different
+      specialisms, we can assess the scope of the work with you.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto
+  - id: capabilities
+    label: Explore capabilities
+    target:
+      kind: internal
+      page_id: capacidades

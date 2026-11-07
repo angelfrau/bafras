@@ -1,0 +1,252 @@
+# CONTENT-ES-01 / A3 — D03 V1.22 C01–C05; composición D05 §35.
+# Borrador de integración. Locale aportado por el contexto; SEO pendiente DEC-05.
+# Sin fotografías por decisión aprobada; enlaces contextuales según C04_CAP_V1.
+page_id: capacidades
+review:
+  status: draft
+  source_ref: D03 V1.22 · C01–C05 · 03.G1-01/02
+seo:
+  title: null
+  description: null
+pending:
+- field: seo.title
+  reason_code: approval_required
+  source_ref: DEC-05
+- field: seo.description
+  reason_code: approval_required
+  source_ref: DEC-05
+sections:
+- id: c01
+  source_block: C01
+  kind: hero
+  eyebrow: OUR CAPABILITIES
+  title: Three engineering specialisms. Solutions matched to each project.
+  paragraphs:
+  - id: description
+    text: We provide studies, projects and technical assistance in infrastructure and technical
+      installations, energy systems, and automation and control. Each assignment can be approached from
+      a single specialism or may require several to be coordinated, depending on its needs and
+      constraints.
+  actions:
+  - id: explore
+    label: Explore the specialisms
+    target:
+      kind: internal
+      page_id: capacidades
+      section_id: especialidades
+- id: especialidades
+  source_block: C02
+  kind: cards
+  purpose: capabilities
+  title: Find the specialism your project needs.
+  introduction:
+  - id: description
+    text: Discover the scope of each area and the work we can study or develop.
+  items:
+  - kind: capability
+    id: infrastructure
+    title: Infrastructure and technical installations
+    paragraphs:
+    - id: description
+      text: Engineering for the design, analysis and improvement of electrical, mechanical and auxiliary
+        installations in buildings and infrastructure. We work on new projects and on the review or
+        adaptation of existing systems, with the technical scope defined for each assignment.
+    examples:
+    - id: scope-1
+      text: Low- and medium-voltage electrical installations
+    - id: scope-2
+      text: Heating and cooling, ventilation and thermal systems
+    - id: scope-3
+      text: Hydraulic and drainage installations
+    - id: scope-4
+      text: Coordination and technical assistance.
+    actions:
+    - id: explore
+      label: View infrastructure and technical installations
+      target:
+        kind: internal
+        page_id: infraestructuras
+  - kind: capability
+    id: energy
+    title: Energy systems
+    paragraphs:
+    - id: description
+      text: We analyse the energy demand and performance of installations to evaluate alternatives for
+        efficiency, generation, storage and energy management. We carry out studies and projects taking
+        into account the available data, the operating conditions and the feasibility of the solutions.
+    examples:
+    - id: scope-1
+      text: Energy analysis and auditing
+    - id: scope-2
+      text: Efficiency and optimisation
+    - id: scope-3
+      text: Photovoltaics and self-consumption
+    - id: scope-4
+      text: Energy storage and management.
+    actions:
+    - id: explore
+      label: View energy systems
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+  - kind: capability
+    id: automation
+    title: Automation and control
+    paragraphs:
+    - id: description
+      text: We design and develop instrumentation, control, supervision and integration solutions for
+        installations and processes. We address data acquisition, communication between devices and the
+        automation functions needed to operate and track them.
+    examples:
+    - id: scope-1
+      text: Instrumentation and data acquisition
+    - id: scope-2
+      text: PLCs and DDC controllers
+    - id: scope-3
+      text: BMS and SCADA
+    - id: scope-4
+      text: Communications, integration and technical software.
+    actions:
+    - id: explore
+      label: View automation and control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+- id: c03
+  source_block: C03
+  kind: cards
+  purpose: application_examples
+  eyebrow: Application examples
+  title: When installations, energy and control are interrelated.
+  introduction:
+  - id: description
+    text: In certain projects, a technical decision affects several specialisms. We analyse these
+      relationships to define the necessary work and responsibilities, without adding disciplines or
+      technologies the project does not need.
+  items:
+  - kind: application_example
+    id: thermal-modernization
+    title: Upgrading a thermal installation.
+    description:
+    - id: description
+      text: It may be necessary to study the equipment and circuits, review the energy demand and adapt
+        the regulation and control strategies.
+    disciplines:
+    - id: infrastructure
+      label: Infrastructure and technical installations
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: energy
+      label: Energy systems
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: automation
+      label: Automation and control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: self-consumption-storage
+    title: Self-consumption and storage.
+    description:
+    - id: description
+      text: Adding photovoltaic generation or batteries may require studying the energy profile,
+        developing the electrical installation and integrating metering, supervision and control.
+    disciplines:
+    - id: energy
+      label: Energy systems
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+    - id: infrastructure
+      label: Infrastructure and technical installations
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automation and control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+  - kind: application_example
+    id: installation-performance
+    title: Operating problems in an installation.
+    description:
+    - id: description
+      text: Before deciding on a refurbishment, it may be advisable to check the operating conditions,
+        the condition of the equipment and the control signals or sequences.
+    disciplines:
+    - id: infrastructure
+      label: Infrastructure and technical installations
+      target:
+        kind: internal
+        page_id: infraestructuras
+    - id: automation
+      label: Automation and control
+      target:
+        kind: internal
+        page_id: automatizacion_control
+    - id: energy
+      label: Energy systems
+      target:
+        kind: internal
+        page_id: sistemas_energeticos
+- id: c04
+  source_block: C04
+  kind: item_list
+  purpose: modalities
+  title: Engineering at different stages of a project.
+  introduction:
+  - id: description
+    text: We can take on a specific task or support several phases, with a scope and deliverables
+      defined for each assignment.
+  items:
+  - kind: delivery
+    id: diagnosis-studies
+    title: Diagnostics and studies.
+    paragraphs:
+    - id: description
+      text: Technical inspection within the contracted scope, data analysis, measurements and evaluation
+        of alternatives.
+  - kind: delivery
+    id: design-project
+    title: Design and project documentation.
+    paragraphs:
+    - id: description
+      text: Definition of solutions, calculations, drawings, specifications and technical documentation.
+  - kind: delivery
+    id: assistance-coordination
+    title: Assistance and coordination.
+    paragraphs:
+    - id: description
+      text: Planning support, interface review, technical follow-up and coordination with the project
+        stakeholders.
+  - kind: delivery
+    id: programming-integration-verification
+    title: Programming, integration and verification.
+    paragraphs:
+    - id: description
+      text: System configuration, testing and documentation of results when these tasks form part of the
+        assignment.
+- id: c05
+  source_block: C05
+  kind: text
+  title: What do you need to solve or develop?
+  paragraphs:
+  - id: description
+    text: Tell us about the context of your installation or project and the objective you are pursuing.
+      We will review the initial information to assess how we can work together and which technical
+      scope is worth studying.
+  actions:
+  - id: contact
+    label: Tell us about your project
+    target:
+      kind: internal
+      page_id: contacto
+  - id: experience
+    label: Discover our projects and experience
+    target:
+      kind: internal
+      page_id: proyectos_experiencia
