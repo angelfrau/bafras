@@ -1,0 +1,13 @@
+{% from "components/_macros.html" import paragraphs, section_open with context %}
+{{ section_open(section) }}<div class="container">
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>{{ paragraphs(section.introduction, "intro") }}
+{% for group in section.groups %}<div class="experience-group">
+<h3>{{ group.title }}</h3>{{ paragraphs(group.introduction) }}
+{% for entry in group.entries %}{% set experience = experiences[entry.experience_ref] %}
+<article class="editorial-panel"><h4>{{ experience.title }}</h4>
+{% if experience.attribution %}<p class="attribution">{{ experience.attribution }}</p>{% endif %}
+{{ paragraphs(experience.summary) }}{{ paragraphs(experience.context) }}{{ paragraphs(experience.intervention) }}
+{% for items in [experience.systems, experience.phases, experience.deliverables, experience.results] %}
+{% if items %}<ul>{% for item in items %}<li>{{ item.text }}</li>{% endfor %}</ul>{% endif %}
+{% endfor %}</article>{% endfor %}
+</div>{% endfor %}</div></section>

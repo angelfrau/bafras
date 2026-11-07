@@ -43,7 +43,7 @@ archivos son idénticos a los del preflight A6; no hubo normalización masiva.
 | [entities/sectors.yaml](../../../../content/es/entities/sectors.yaml) | `9a3ee52727f6ddbeb730052580cac74f6685538475f6f4392e2f91621fa1bcfd` |
 | [pages/automatizacion_control.yaml](../../../../content/es/pages/automatizacion_control.yaml) | `12b5d3a0de0267ceea18cc21801e2fc58cde2bcacf92ff74bbd4ed1a7ac9be8a` |
 | [pages/capacidades.yaml](../../../../content/es/pages/capacidades.yaml) | `c87c64f1324cd57041eb889919dae2732abea349259dfec3a94e59fbc7ffd83a` |
-| [pages/contacto.yaml](../../../../content/es/pages/contacto.yaml) | `78feba528dcf9ca3926f0d045009a3c05cfcb03eda955be16cb0ba463d2ead91` |
+| [pages/contacto.yaml](../../../../content/es/pages/contacto.yaml) | `1d04dab1400de87b1ccfe4ebf3f6182a5016833a47d6736c6c193bb4a6e86c41` |
 | [pages/infraestructuras.yaml](../../../../content/es/pages/infraestructuras.yaml) | `074f3578a99a0bcd4df715acf469b57882c444ca3a05740c836a10e1b1252613` |
 | [pages/inicio.yaml](../../../../content/es/pages/inicio.yaml) | `5f9b0f1411ea6b04a8e6205614125e9bb8bf8f47cc2b115ea7d62a5cd65e9713` |
 | [pages/proyectos_experiencia.yaml](../../../../content/es/pages/proyectos_experiencia.yaml) | `d93058a816c092450577d615d8d5580db374bc87387284e9dfd97758bdff4223` |
@@ -85,9 +85,17 @@ solo de proceso para las comprobaciones Git del entorno de ejecución.
 
 Serialización de modelos determinista, con model_dump(mode="json"), claves
 ordenadas, ensure_ascii=False y separadores compactos JSON; listas en su orden
-editorial. Huella del bundle completo antes y después:
+editorial. Huella del bundle completo vigente (renovada en WEB-V01-B, 07/11/2026):
 
-`725e0f2326f9e723253c698fac34afe70ea49bb9b659edad1c8fbc4e55ab0df8`
+`1ec660a628e614dbe9623a8fa9834a3705ab478d6a7af1af283117b8cf3514a9`
+
+> **Renovación WEB-V01-B (07/11/2026).** Se añade `content/es/common.yaml` (CommonContent: navegación
+> aprobada en D03, denominación y textos de interfaz de las maquetas aprobadas; SHA-256
+> `70cfa0f1bb12040c4f00f7c9746574c13f0268736f3efcaef85f07de285f4564`). Los once YAML de la tabla anterior
+> no cambian (bytes verificados), ni páginas, bloques, referencias o pendientes. El bundle incluye ahora
+> `common`, por lo que cambia su huella. Huella A6 anterior, histórica:
+> `725e0f2326f9e723253c698fac34afe70ea49bb9b659edad1c8fbc4e55ab0df8`. `common.yaml` existe solo en `es`
+> (traducción pendiente; sin fallback).
 
 El [informe A6](CONTENT_ES_01_A6.md) registra también la comparación de copy y
 metadatos protegidos y la verificación de los cinco informes movidos y tres
@@ -121,3 +129,14 @@ Para una entrega a IA externa usar el
 [contrato de localización](../localization/LOCALIZATION_CONTRACT.md) y el
 [glosario ES](../localization/TERMINOLOGY_ES.md). No se han generado traducciones.
 
+
+
+## CONTACT-R1 / WEB-V03 R2 — 07/11/2026
+
+La política aprobada de Release 1.0 utiliza solo correo/teléfono. Contacto ES conserva cuatro
+secciones; CO-02 es ahora texto con la ayuda aprobada, se retiran controles/mensajes de envío y
+el pendiente privacy_text del formulario. CO-03 usa datos de SITE y etiquetas/destinos CONTENT.
+La tabla y la huella del bundle vigentes se actualizan; las observaciones A6 anteriores son históricas.
+CA/EN/DE mantienen el contrato anterior y requieren adaptación revisada de Contacto.
+Los otros diez YAML de la tabla y common.yaml no cambian. Revisión draft intacta.
+Decisión y alcance exactos: [CONTACT-R1](../../web/CONTACT_R1.md).

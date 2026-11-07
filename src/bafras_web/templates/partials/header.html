@@ -1,0 +1,23 @@
+{% set brand_name, brand_rest = (layout.brand.split(" ", 1) + [""])[:2] %}
+<a class="skip-link" href="#contenido">{{ layout.messages["skip-link"] }}</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ layout.home_url }}">{{ brand_name }}{% if brand_rest %}<small>{{ brand_rest }}</small>{% endif %}</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>{{ layout.messages["menu"] }}</button>
+    <nav class="site-nav" id="site-nav" aria-label="{{ layout.messages['main-navigation'] }}">
+      <ul class="site-nav__list">
+{% for item in layout.navigation %}
+        <li><a href="{{ item.url }}"{% if item.current %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+{% endfor %}
+        <li><a class="site-nav__cta" href="{{ layout.cta.url }}"{% if layout.cta.current %} aria-current="page"{% endif %}>{{ layout.cta.label }}</a></li>
+      </ul>
+{% if layout.locales %}
+      <ul class="site-nav__locales">
+{% for code in layout.locales %}
+        <li><span lang="{{ code }}">{{ code }}</span></li>
+{% endfor %}
+      </ul>
+{% endif %}
+    </nav>
+  </div>
+</header>

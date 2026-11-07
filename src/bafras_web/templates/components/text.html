@@ -1,0 +1,24 @@
+{#- Variante closing_band (config/composition.yaml): banda de cierre con CTA destacado (D05). -#}
+{% from "components/_macros.html" import paragraphs, actions, section_open with context %}
+{% set band = variants.get(section.id) == "closing_band" %}
+{{ section_open(section) }}
+<div class="container text-block">
+{% if section.title %}
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>
+{% endif %}
+{{ paragraphs(section.paragraphs) }}
+{% if band %}
+{{ actions(section.actions, "button-light") }}
+{{ paragraphs(section.notes, "note") }}
+{% else %}
+{{ paragraphs(section.notes, "note") }}
+{{ actions(section.actions) }}
+{% endif %}
+{% if section.contact_channels %}
+<dl class="contact-channels">
+{% for channel in section.contact_channels %}
+<dt>{{ channel.label }}</dt><dd><a href="{{ links[channel.target] }}">{{ contact_values[channel.target] }}</a></dd>
+{% endfor %}</dl>
+{% endif %}
+</div>
+</section>

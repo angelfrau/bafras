@@ -9,6 +9,9 @@ status_values:
 - NOT_FOUND
 assets:
 - id: H01
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: 93c8fe87cd08f7efb155ff7a4e9ed19e3fb3aa8d31a741ed51f3d4103abaa836
   filename: home-hero-engineering.webp
   relative_path: assets/images/home/hero/home-hero-engineering.webp
   page: Home
@@ -67,6 +70,9 @@ assets:
   original_sha1: null
   original_in_package: null
 - id: H03
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: ea403bdc5ce2609ae4a017585c8ecbaf6c0d425ee188c9e22be0e0bd34298599
   filename: home-cap-infrastructure.webp
   relative_path: assets/images/home/capabilities/home-cap-infrastructure.webp
   page: Home
@@ -99,6 +105,9 @@ assets:
   original_in_package: true
   original_download_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Teknisk_rom_%28School_build._Lilleh._Norway_2024-09._Mechan._room_Air_ventil._Hot_water_Heat_recov._unit%29_Hovedfordeler_Varmeanlegg_Ventilasjon_Aggregat_Isol._r%C3%B8r_kanaler_elkabler_stige_Varmegjenvinner_Avtrekksvifte_luftfilter_lager_vas.jpg
 - id: H04
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: 98e06c24cc602d6a11270a386fb0bffe820fc3b5c739e7f26415ff97b5322fc0
   filename: home-cap-energy.webp
   relative_path: assets/images/home/capabilities/home-cap-energy.webp
   page: Home
@@ -128,6 +137,9 @@ assets:
   original_in_package: true
   original_download_url: https://upload.wikimedia.org/wikipedia/commons/9/92/Battle_Command_Training_Center_%288047332263%29.jpg
 - id: H05
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: cd6b84a583c1b711ce4b9e6cf7014719d78d6641d72b1d6754f165024f73388f
   filename: home-cap-digital.webp
   relative_path: assets/images/home/capabilities/home-cap-digital.webp
   page: Home
@@ -217,6 +229,9 @@ assets:
   original_in_package: true
   original_download_url: https://upload.wikimedia.org/wikipedia/commons/a/a2/Katri_vala_lampopumppu.jpg
 - id: I03
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: 66ace55a84acb1cdc99cb7a10cac165dc5ca28031b048f14cd1173957c5719b2
   filename: infra-ventilation-ductwork.webp
   relative_path: assets/images/capabilities/infrastructure/mechanical/infra-ventilation-ductwork.webp
   page: Infraestructura e Ingeniería
@@ -425,6 +440,9 @@ assets:
   original_sha1: null
   original_in_package: true
 - id: E02
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: 75722d839f77d2d22c1dd58f62ce3abcfaa3f43eb8cf912d04f1ec47f0683682
   filename: energy-pv-rooftop.webp
   relative_path: assets/images/capabilities/energy/generation/energy-pv-rooftop.webp
   page: Sistemas Energéticos
@@ -545,6 +563,9 @@ assets:
   original_in_package: true
   original_download_url: https://upload.wikimedia.org/wikipedia/commons/4/4a/EV_parking_lot_Oslo_10_2018_3774.jpg
 - id: E06
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: 0f2fec0d327472842e88b0bb82e234d8c5d411d52d6d54c2e1338193ad4113ce
   filename: energy-heat-pumps.webp
   relative_path: assets/images/capabilities/energy/electrification/energy-heat-pumps.webp
   page: Sistemas Energéticos
@@ -631,6 +652,9 @@ assets:
   original_sha1: null
   original_in_package: null
 - id: D01
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: 77cc7ddcd4c6f95544220d9b6466eb8a99791a32bd1364920114a57c8602c3dd
   filename: digital-plc-control-panel.webp
   relative_path: assets/images/capabilities/digital/automation/digital-plc-control-panel.webp
   page: Sistemas Digitales y Automatización
@@ -661,6 +685,9 @@ assets:
   original_in_package: true
   original_download_url: https://upload.wikimedia.org/wikipedia/commons/5/52/MITSIBISHI_PLC_Panel.jpg
 - id: D02
+  publication_authorization: declared_by_bafras
+  authorization_ref: DEC-10 / WEB-V02 R2 / 2026-11-07
+  output_sha256: 6e206d950d84a78032fd32b3d3b9fa583651e49df4d2eec45b0f7d9490122472
   filename: digital-industrial-instrumentation.webp
   relative_path: assets/images/capabilities/digital/instrumentation/digital-industrial-instrumentation.webp
   page: Sistemas Digitales y Automatización

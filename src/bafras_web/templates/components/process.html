@@ -1,0 +1,20 @@
+{% from "components/_macros.html" import paragraphs, actions, section_open with context %}
+{{ section_open(section) }}
+<div class="container">
+<div class="lead-in lead-in--split">
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>
+<div>{{ paragraphs(section.introduction, "intro") }}</div>
+</div>
+<{% if section.purpose == "workflow" %}ol{% else %}ul{% endif %} class="steps">
+{% for item in section.items %}
+<li class="step" data-item="{{ item.id }}">
+<span class="num num--large" aria-hidden="true">{{ "%02d" | format(loop.index) }}</span>
+<h3>{{ item.title }}</h3>
+{{ paragraphs(item.paragraphs) }}
+</li>
+{% endfor %}
+</{% if section.purpose == "workflow" %}ol{% else %}ul{% endif %}>
+{{ paragraphs(section.closing, "closing") }}
+{{ actions(section.actions) }}
+</div>
+</section>

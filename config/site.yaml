@@ -1,0 +1,8 @@
+# Datos públicos del sitio (D04 §13): una sola fuente para enlaces mailto:/tel: y su texto visible.
+# Correo: D03 03.K §3 y adenda 03.CO-02. Teléfono: adenda 03.CO-02 (autorizado por el fundador).
+# Operatividad de ambos canales pendiente de comprobar antes de publicar.
+schema_version: 1
+contact:
+  email: info@bafras.com
+  phone_display: "+34 610 903 179"
+  phone_e164: "+34610903179"

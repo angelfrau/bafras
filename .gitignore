@@ -25,3 +25,6 @@ media-library/originals/*/*_original.*
 dist/
 build/
 *.egg-info/
+
+# WEB-V03: dossier visual local, ajeno a la publicación y al commit de código
+artifacts/web-v03/

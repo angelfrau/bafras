@@ -17,6 +17,7 @@ from pathlib import Path
 
 from bafras_web import __version__
 from bafras_web.adapters.filesystem import ProjectPaths, find_project_root, templates_dir
+from bafras_web.application.build import BuildError, BuildRequest, build_page, build_site
 from bafras_web.application.configuration import ConfigurationError, load_site_routing
 
 # Distribuciones de ejecución declaradas en pyproject.toml.
@@ -88,8 +89,44 @@ def _register_diagnostics(subparsers: argparse._SubParsersAction) -> None:
     doctor.set_defaults(handler=_doctor)
 
 
+def _build(args: argparse.Namespace) -> int:
+    """Genera la selección; código 1 con los motivos si el modo solicitado está bloqueado."""
+    root = find_project_root(args.project.resolve())
+    if root is None:
+        print(f"No se encuentra una raíz BAFRAS WEB desde {args.project.resolve()}", file=sys.stderr)
+        return 1
+    try:
+        if args.all:
+            target = build_site(ProjectPaths(root), args.locale, args.mode)
+        else:
+            request = BuildRequest(locale=args.locale, page_id=args.page, mode=args.mode)
+            target = build_page(ProjectPaths(root), request)
+    except (BuildError, ConfigurationError) as error:
+        print(f"build {args.mode} {args.locale}/{args.page}: no generado", file=sys.stderr)
+        for problem in error.problems:
+            print(f"  - {problem}", file=sys.stderr)
+        return 1
+    print("\n".join(str(p) for p in target) if isinstance(target, tuple) else target)
+    return 0
+
+
+def _register_build(subparsers: argparse._SubParsersAction) -> None:
+    build = subparsers.add_parser("build", help="genera páginas en HTML estático")
+    build.add_argument("--locale", required=True, help="código de idioma, p. ej. es")
+    selection = build.add_mutually_exclusive_group(required=True)
+    selection.add_argument("--page", help="identificador de página, p. ej. inicio")
+    selection.add_argument("--all", action="store_true", help="todas las páginas del catálogo SITE")
+    build.add_argument(
+        "--mode", required=True, choices=("preview", "release"),
+        help="preview: build/preview/ con noindex (admite borradores); release: protegido, pendiente de cierre editorial y publicación",
+    )
+    build.add_argument("--project", type=Path, default=Path.cwd(), help="directorio desde el que buscar la raíz")
+    build.set_defaults(handler=_build)
+
+
 _REGISTRARS: tuple[Callable[[argparse._SubParsersAction], None], ...] = (
     _register_diagnostics,
+    _register_build,
 )
 
 

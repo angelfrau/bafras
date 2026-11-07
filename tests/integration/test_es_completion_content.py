@@ -148,24 +148,13 @@ def expected_sections(page_id):
         return [hero, team, process, text(4, [action("experience", marked(blocks[3], "Enlace"), "proyectos_experiencia")]),
                 text(5, [action("contact", marked(blocks[4], "CTA principal"), "contacto"),
                          action("capabilities", marked(blocks[4], "CTA secundario"), "capacidades")])]
-    labels = [marked(blocks[1], f"Campo {i}").split(" — ")[0] for i in range(1, 5)]
-    fields = [{"id": id, "label": label, "required": "*" in label}
-              for id, label in zip(("name", "company", "email", "message"), labels)]
-    fields[-1]["help"] = marked(blocks[1], "Campo 4").split("«", 1)[1].split("»", 1)[0]
-    k2 = document().split("# Decisión 03.K.2", 1)[1].split("## ADENDA", 1)[0]
-    success = k2.split("Éxito: «", 1)[1].split("»", 1)[0]
-    error = k2.split("Error: «", 1)[1].split("»", 1)[0]
-    form = dict(base(2, "form"), fields=fields, submit_label=marked(blocks[1], "Botón"),
-                messages={"success": success, "error": error})
-    ad = document().split("## ADENDA 03.CO-02", 1)[1].split("## ADENDA", 1)[0]
-    email = ad.split("**Correo público:** `", 1)[1].split("`", 1)[0]
-    phone = ad.split("**Teléfono público autorizado:** **", 1)[1].split("**", 1)[0]
+    # CONTACT-R1 / WEB-V03 R2: se conserva la ayuda aprobada de CO-02 como contenido de texto.
+    guidance = marked(blocks[1], "Campo 4").split("«", 1)[1].split("»", 1)[0]
+    consultation = dict(base(2, "text"), paragraphs=p(guidance, "consultation-guidance"))
     direct = text(3)
-    direct["contact_channels"] = [{"id": id, "label": label, "value": value,
-                                   "target": {"kind": "contact", "channel": channel}}
-                                  for id, label, value, channel in (("email", "Correo electrónico", email, "email"),
-                                                                    ("phone", "Teléfono", phone, "phone"))]
-    return [hero, form, direct, text(4)]
+    direct["contact_channels"] = [{"id": id, "label": label, "target": {"kind": "contact", "channel": id}}
+                                  for id, label in (("email", "Correo electrónico"), ("phone", "Teléfono"))]
+    return [hero, consultation, direct, text(4)]
 
 
 def compact(value):
@@ -214,13 +203,14 @@ def test_exact_seo_review_and_pending_metadata(page):
         start = "## UX y SEO Sobre BAFRAS" if page.page_id == "sobre_bafras" else "## Conversión, accesibilidad y tecnología"
         lines = source.split(start, 1)[1].splitlines()
         expected_seo = {"title": marked(lines, "Title"), "description": marked(lines, "Meta description")}
-        pending = [] if page.page_id == "sobre_bafras" else [
-            {"field": "sections/co-02/privacy_text", "reason_code": "source_missing",
-             "source_ref": "D03 CO-02 · 03.K §4 · política real pendiente de revisión legal"}]
+        pending = []  # CONTACT-R1 retira el requisito de privacidad del formulario eliminado.
     assert page.seo.model_dump() == expected_seo
     assert [p.model_dump() for p in page.pending] == pending
     prefix, count = PAGES[page.page_id]
-    assert page.review.source_ref == f"D03 V1.22 · {prefix}-01–{prefix}-{count:02} · 03.K/03.G1-01/02"
+    expected_source = f"D03 V1.22 · {prefix}-01–{prefix}-{count:02} · 03.K/03.G1-01/02"
+    if page.page_id == "contacto":
+        expected_source += " · CONTACT-R1 / WEB-V03 R2"
+    assert page.review.source_ref == expected_source
     assert page.sections[0].media is None
 
 
@@ -243,7 +233,7 @@ def test_valid_mutations_fail_independent_parity(page, case):
     elif case == "order": sections[1], sections[2] = sections[2], sections[1]
     elif case in ("cta", "destination"):
         if page.page_id == "contacto":
-            if case == "cta": sections[1]["submit_label"] = "Solicitar presupuesto"
+            if case == "cta": sections[2]["contact_channels"][0]["label"] = "Solicitar presupuesto"
             else: sections[2]["contact_channels"][0]["target"]["channel"] = "phone"
         else:
             section = next(s for s in reversed(sections) if s.get("actions"))

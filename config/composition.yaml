@@ -1,0 +1,56 @@
+# Composición aprobada por página (D05). D03 delega la selección de imágenes en D05 (§18/§23/§26).
+# media: hueco editorial (mismo selector que el pendiente integration_pending de CONTENT) → activo del
+#   manifiesto media-library/manifests/media-manifest.yaml. Correspondencia R→ID: B02_PREP_01 (L62, L80–L83).
+# variants: variante de presentación de una sección cuando D05 la distingue y el modelo no lo hace.
+schema_version: 1
+pages:
+  inicio:
+    media:
+      sections/h01/media: H01                          # R24 · D05 §23 H01
+      sections/h02/items/infrastructure/media: H03     # R23 · D05 §23 H02
+      sections/h02/items/energy/media: H04             # R22
+      sections/h02/items/automation/media: H05         # R21
+      sections/h03/media: D02                          # R03 · D05 §23 H03
+    variants:
+      h07: closing_band                                # D05 §20.2/§23: banda de cierre con CTA
+
+  capacidades:
+    variants:
+      especialidades: editorial_rows
+      c05: closing_band
+  infraestructuras:
+    media:
+      sections/inf-01/media: I03                       # R18 · D05 §26
+    variants:
+      integracion: sand_band
+      inf-07: closing_band
+  sistemas_energeticos:
+    media:
+      sections/ene-01/media: E02                       # R10 · D05 §29
+      sections/ambitos/media: E06                      # R08
+    variants:
+      necesidades: decision_grid
+      ambitos: technical_chapters
+      entregables: dark_band
+      ene-07: closing_band
+  automatizacion_control:
+    media:
+      sections/dig-w01/media: D01                      # R01 · D05 §31
+      sections/ambitos/media: D02                      # R03
+    variants:
+      integracion: sand_band
+      dig-w07: closing_band
+  sectores:
+    variants:
+      sec-05: closing_band
+  proyectos_experiencia:
+    variants:
+      pe-04: closing_band
+  sobre_bafras:
+    variants:
+      sb-04: sand_band
+      sb-05: closing_band
+
+  contacto:
+    variants:
+      co-03: direct_contact                           # CONTACT-R1 / WEB-V03 R2 · canales sin formulario

@@ -1,0 +1,12 @@
+{% from "components/_macros.html" import paragraphs, section_open with context %}
+{{ section_open(section) }}<div class="container">
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>{{ paragraphs(section.introduction, "intro") }}
+{{ paragraphs(section.corporate_presentation) }}
+<ul class="editorial-grid">
+{% for ref in section.person_refs %}{% set person = people[ref] %}
+<li class="editorial-panel" data-item="{{ person.id }}">
+<h3>{{ person.public_name }}</h3>
+{% if person.qualification %}<p class="qualification">{{ person.qualification }}</p>{% endif %}
+{% if person.specialty %}<p>{{ person.specialty }}</p>{% endif %}
+{{ paragraphs(person.biography) }}
+</li>{% endfor %}</ul></div></section>

@@ -1,0 +1,20 @@
+{% from "components/_macros.html" import paragraphs, actions, figure, section_open with context %}
+{{ section_open(section) }}
+<div class="container hero{% if not images.get((section.id, none)) %} hero--editorial{% endif %}">
+<div class="hero__text">
+{% if section.eyebrow %}
+<p class="eyebrow">{{ section.eyebrow }}</p>
+{% endif %}
+<h1 id="{{ section.id }}-title">{{ section.title }}</h1>
+{% if section.subtitle %}
+<p class="lead">{{ section.subtitle }}</p>
+{% endif %}
+{{ paragraphs(section.paragraphs, "body") }}
+{{ actions(section.actions, "button") }}
+{% if section.attribution %}
+<p class="attribution">{{ section.attribution }}</p>
+{% endif %}
+</div>
+{{ figure(section.id, none, "hero__media") }}
+</div>
+</section>

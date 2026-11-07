@@ -1,6 +1,6 @@
 # Documentación BAFRAS WEB V2
 
-Índice operativo tras A6, 06/11/2026. CONTENT mantiene el baseline ES y sus
+Índice operativo actualizado en WEB-V03 R2, 07/11/2026. CONTENT mantiene el baseline ES y sus
 contratos editoriales; WEB conserva arquitectura, rutas, diseño e integración.
 El contenido sigue en revisión draft: este índice no autoriza publicación.
 
@@ -14,6 +14,8 @@ El contenido sigue en revisión draft: este índice no autoriza publicación.
 | Decisiones / dirección y responsables de cada ámbito | [Registro WEB-G1](WEB_G1_CLOSE_DECISIONES.md), [matriz de cierre](WEB_G1_CLOSE_MATRIZ.md), [acta propuesta](02_Acta_Propuesta_Cierre_G1.md) |
 | QA WEB | [Auditoría G1](WEB_G1_REVIEW_01_INFORME.md), [incidencias](WEB_G1_REVIEW_01_INCIDENCIAS.csv), [trazabilidad](WEB_G1_REVIEW_01_TRAZABILIDAD.md), [plan WEB](WEB_G1_REVIEW_01_PLAN_IMPLEMENTACION.md), [cierre](WEB_G1_CLOSE_INFORME.md) |
 | Repositorio y medios / WEB | [Baseline WEB-00](WEB_00_BASELINE.md), [auditoría WEB-00](WEB_00_AUDITORIA_REPOSITORIO.md), [plan de saneamiento](WEB_00_PLAN_SANEAMIENTO.md), [B01](BAFRAS_WEB_B01_AUDITORIA_REPOSITORIO.md), [inventario visual B02](B02_PREP_01_INVENTARIO_RECURSOS_VISUALES.md) |
+| Cierre del sitio / WEB | [WEB-V02 R2](web/WEB_V02_R2_INFORME.md), [WEB-V03 R2](web/WEB_V03_R2_INFORME.md), [Contacto R1](web/CONTACT_R1.md) |
+| Integración CONTENT → WEB / WEB | [WEB-01: auditoría de integración](web/WEB_01_INFORME.md), [plan ejecutable WEB-V01-A](web/WEB_V01_A_PLAN.md) |
 
 D03 gobierna copy; D04 contratos WEB; D05 composición. Las aprobaciones
 posteriores prevalecen solo en su ámbito. Maquetas y YAML no sustituyen D03.

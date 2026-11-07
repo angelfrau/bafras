@@ -1,0 +1,26 @@
+{#- Documento HTML5 común. Contexto obligatorio: lang, title.
+    Opcional: robots (p. ej. "noindex, nofollow") y preview_notice (aviso técnico de WEB).
+    La decisión de usarlos corresponde a la política de publicación, no a esta plantilla.
+    Bloques: head (recursos), header, main, footer. -#}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+{% if robots is defined and robots %}
+  <meta name="robots" content="{{ robots }}">
+{% endif %}
+{% block head %}{% endblock %}
+</head>
+<body>
+{% block header %}{% endblock %}
+{% if preview_notice is defined and preview_notice %}
+  <p class="preview-notice" role="note">{{ preview_notice }}</p>
+{% endif %}
+  <main id="contenido">
+{% block main %}{% endblock %}
+  </main>
+{% block footer %}{% endblock %}
+</body>
+</html>

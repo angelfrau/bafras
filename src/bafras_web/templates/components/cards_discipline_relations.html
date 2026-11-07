@@ -1,0 +1,10 @@
+{% from "components/_macros.html" import paragraphs, actions, section_open with context %}
+{{ section_open(section) }}<div class="container">
+{% if section.eyebrow %}<p class="eyebrow">{{ section.eyebrow }}</p>{% endif %}
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>{{ paragraphs(section.introduction, "intro") }}
+<ul class="editorial-grid">
+{% for item in section.items %}<li class="editorial-panel" data-item="{{ item.id }}">
+<h3><a class="link" href="{{ links[item.discipline] }}">{{ item.title }}</a></h3>{{ paragraphs(item.description) }}
+</li>{% endfor %}</ul>
+{{ paragraphs(section.closing, "closing") }}{{ actions(section.actions) }}
+</div></section>

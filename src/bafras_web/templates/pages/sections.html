@@ -1,0 +1,7 @@
+{#- Inicio: las secciones se componen en el orden del modelo editorial, una plantilla por `kind`. -#}
+{% extends "layouts/site.html" %}
+{% block main %}
+{% for section in page.sections %}
+{% include components[section.id] %}
+{% endfor %}
+{% endblock %}

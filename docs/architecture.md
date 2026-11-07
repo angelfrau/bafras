@@ -10,7 +10,7 @@ La autoridad editorial es D03 V1.22 y sus adendas; la visual, D05 V4.12 y las nu
 bafras/
 ├── pyproject.toml            único punto de empaquetado, dependencias, CLI y pytest
 ├── README.md · CNAME · .gitignore · .gitattributes
-├── config/                   locales.yaml (DEC-14), routes.yaml (DEC-16); site.yaml pendiente → config/README.md
+├── config/                   locales.yaml (DEC-14), routes.yaml (DEC-16), site.yaml (contacto, D04 §13), composition.yaml (imágenes y variantes, D05)
 ├── content/                  contenido editorial localizado (CONTENT-ES-01)      → content/README.md
 ├── src/bafras_web/
 │   ├── __init__.py           versión (desde los metadatos instalados)
@@ -39,11 +39,11 @@ Solo existen las carpetas con contenido real. `assets/css`, `assets/js`, `assets
 |---|---|---|
 | `editorial` | CONTENT-ES-01 | Modelos Pydantic v2 de páginas, secciones tipadas, entidades, CTA y SEO editorial; validación semántica; ID estables; versión del esquema; detección de cambios |
 | `localization` | CONTENT-ES-01 | Idiomas, correspondencia de unidades entre idiomas, estados de traducción (`pending`, `translated`, `reviewed`, `approved`) y vigencia respecto al español. Reutiliza `editorial`; no hay un segundo modelo |
-| `site` | WEB | Registro de páginas, rutas localizadas (`config/routes.yaml`), navegación, resolución de enlaces internos por ID, política de publicación, canonical/hreflang, metadatos técnicos |
-| `media` | WEB | Recursos e identificadores, referencias desde el contenido, publicabilidad (existencia, licencia, derechos) a partir de `media-library/manifests/media-manifest.yaml`, sin duplicarlo |
-| `application` | WEB | Casos de uso: cargar y validar el sitio, preparar páginas, decidir lo publicable, orquestar el build. Sin reglas editoriales |
-| `adapters` | WEB | Implementados: `yaml_files.py`, el **único** cargador YAML (SafeLoader estricto que rechaza claves duplicadas; CONTENT-ES-01 lo reutiliza para `content/`), y `filesystem.py` (raíz y estructura del proyecto). Previstos: renderizado Jinja2 y escritura de `dist/` |
-| `templates` | WEB | `layouts/`, `partials/`, `components/` (uno por tipo de sección), `pages/` (solo composiciones especiales) |
+| `site` | WEB | Rutas localizadas (`routes.py`), resolución de destinos editoriales a URL (`links.py`, único lugar donde se construye un `href`), elegibilidad preview/release (`publication.py`), composición por página (`composition.py`: imagen por hueco `media` y variantes, autoridad D05) y contacto público (`settings.py`); previstos: canonical/hreflang |
+| `media` | WEB | `assets.py`: contrato de lectura del manifiesto `media-library/manifests/media-manifest.yaml` (sin duplicarlo) y `resolve_image` (estado READY, alt por idioma sin inferencias, dimensiones, crédito, derechos «declarados»). No lee archivos: build_output verifica los derivados con sus metadatos MEDIA |
+| `application` | WEB (excepto `editorial.py`: CONTENT) | Casos de uso: `configuration.py` (carga tipada), `editorial.py` (`inspect_editorial`, CONTENT), `build.py` (coordinación de página/sitio), `presentation.py` (contexto derivado tipado y componentes). Sin reglas editoriales |
+| `adapters` | WEB (excepto `editorial_files.py`: CONTENT) | Implementados: `yaml_files.py`, el **único** cargador YAML (SafeLoader estricto que rechaza claves duplicadas; CONTENT lo reutiliza para `content/`), `filesystem.py` (raíz y estructura del proyecto) `editorial_files.py` (descubrimiento acotado de `content/<idioma>/`, CONTENT) `jinja.py` (`render_html(template_name, context, *, environment=None) -> str`: plantillas del paquete, autoescape HTML, `StrictUndefined`; no conoce modelos editoriales) `build_output.py` (derivados y salida preparada), `site_integrity.py` (HTML físico) y escritura/copia/staging en `filesystem.py` |
+| `templates` | WEB | `layouts/`, `partials/`, `components/` (uno por tipo de sección), `pages/sections.html` (composición general de secciones) |
 | `cli` | WEB (los equipos registran sus comandos) | Composición; sin reglas de dominio |
 
 ## 3. Reglas de dependencia
@@ -82,6 +82,7 @@ Implementado:
 |---|---|
 | `bafras-web --version` | Versión instalada |
 | `bafras-web doctor [--project DIR]` | Dependencias instaladas, plantillas del paquete, estructura obligatoria y validación de `config/locales.yaml` y `config/routes.yaml`; código de salida 1 si hay algún problema |
+| `bafras-web build --locale L (--page P \| --all) --mode preview\|release [--project DIR]` | Página individual o catálogo SITE completo. Preview no indexable en `build/preview/`; release protegido por G4 y estados editoriales, sin salida. Build individual conserva su alias histórico. |
 
 Previstos. Su contrato está aquí, pero no se registran hasta que ejecuten operaciones reales:
 
@@ -90,23 +91,37 @@ Previstos. Su contrato está aquí, pero no se registran hasta que ejecuten oper
 | `content validate` | CONTENT-ES-01 | Carga YAML, validación Pydantic por archivo y validación transversal; errores con `archivo:línea`; salida ≠ 0 si hay errores |
 | `content status` | CONTENT-ES-01 | Estado editorial y de traducción por idioma y unidad |
 | `content diff` | CONTENT-ES-01 | Cambios en el contenido español que afectan a traducciones |
-| `build --mode preview\|release` | WEB | `preview`: incluye borradores, `noindex` y aviso visible. `release`: solo lo publicable; falla ante enlaces, medios o derechos no válidos |
 
 **Cómo añadir comandos:** escribir `_register_<grupo>(subparsers)` en `cli.py`, que crea los subcomandos y asigna
 `handler`, e incluirla en `_REGISTRARS`. El handler llama a casos de uso de `application`. Si `cli.py` crece, se
 convierte en el paquete `bafras_web/cli/`, sin cambiar el punto de entrada.
 
-## 6. Flujo de generación previsto
+## 6. Flujo de generación
 
 ```
 config/*.yaml + content/<idioma>/**.yaml
   → adapters (único cargador YAML; claves duplicadas = error)
   → editorial / localization / site / media (modelos Pydantic v2 y validación transversal)
-  → application (resolución de enlaces, medios y textos compartidos → modelos de vista; cálculo de lo publicable)
-  → adapters (Jinja2, autoescape) → dist/<idioma>/<slug>/index.html + assets usados
+  → application (bundle y referencias tipadas → contexto derivado; política por modo)
+  → adapters (Jinja2, autoescape; staging e integridad) → build/preview/ + assets usados
 ```
 
 Las plantillas nunca leen YAML. «Publicable» es un valor calculado, no un campo editable.
+La salida pública `dist/` requiere implementar y aprobar el cierre release; no se genera en preview.
+
+## 6 bis. Preview de una página (WEB-V01-B)
+
+```bash
+.venv/Scripts/python -m bafras_web build --locale es --page inicio --mode preview
+.venv/Scripts/python -m http.server 8000 -d build/preview      # abrir http://localhost:8000/es/inicio/
+```
+
+- La salida es autónoma: `build/preview/<idioma>/<página>/index.html` y, junto a ella, `build/preview/assets/…` (solo
+  CSS, JS e imágenes que la página usa, copiados desde `assets/`). Las URL de recursos son absolutas respecto a esa
+  raíz (`/assets/…`), así que se sirve por HTTP; `file://` no es un modo soportado.
+- Contenido: bundle editorial (incluido `content/<idioma>/common.yaml` para cabecera y pie), `SiteRouting`,
+  `config/site.yaml` (contacto), `config/composition.yaml` (imágenes y variantes) y el manifiesto de medios.
+- Fuente tipográfica: Inter con alternativas del sistema; no se distribuye ningún archivo de fuente todavía.
 
 ## 7. Política de publicación
 
@@ -120,13 +135,14 @@ Las plantillas nunca leen YAML. «Publicable» es un valor calculado, no un camp
 
 **CONTENT-ES-01 implementa:**
 - `editorial/` y `localization/` (excepto `localization/locales.py`, el contrato de configuración de idiomas que mantiene WEB);
+- `application/editorial.py` y `adapters/editorial_files.py` (API de carga editorial; ver `docs/project_v02/editorial/handoff/CONTENT_TO_WEB_HANDOFF.md`);
 - la carga de `content/` con `adapters/yaml_files.load_yaml` (no se crea otro cargador);
 - `content/es/`;
 - los comandos `content *`;
 - sus pruebas en `tests/{unit,contracts,integration}`.
 
 **El equipo WEB mantiene:**
-- `site/`, `media/`, `application/`;
+- `site/`, `media/`, `application/` (salvo `editorial.py`);
 - el resto de `adapters/`;
 - `templates/`, `assets/`, `config/`;
 - `build`, `cli.py` y `pyproject.toml`.
@@ -162,7 +178,7 @@ Se recuperan con `git show efa5b6f:<ruta>`; el sitio publicado sigue en `main`. 
 
 El resto de la paleta (`#0E2B25`, `#1A7A5A`, `#4F7B6E`, `#2A2A2A`, `#ECE8DD`, `#F7F5F0`, `#D8D2C3`, `#4A5550`) está en D05.
 
-`js/form.js` enviaba el formulario a FormSubmit con un mensaje de éxito no aprobado. No es base para V2: el proveedor está pendiente (DEC-11).
+`js/form.js` enviaba el formulario a FormSubmit con un mensaje de éxito no aprobado. No es base para V2. CONTACT-R1 descarta formulario y proveedor para Release 1.0; DEC-11 conserva hosting/dominio pendientes.
 
 ## 11. Idiomas y rutas: DEC-14 y DEC-16 (dirección técnica, 04/11/2026)
 
@@ -203,3 +219,37 @@ El resto de la paleta (`#0E2B25`, `#1A7A5A`, `#4F7B6E`, `#2A2A2A`, `#ECE8DD`, `#
 La coincidencia con D03 se comprueba en `tests/integration/test_site_config.py`, que lee la tabla del propio D03. La maqueta de Inicio usaba variantes (`/infraestructuras-e-instalaciones/`, `/proyectos-y-experiencia/`) que no son fuente de rutas.
 
 Fuera de este alcance: páginas legales, 404, fichas individuales de proyectos y la redirección de las rutas hash del sitio anterior. Se añadirán a `routes.yaml` cuando tengan contenido y decisión.
+
+
+## WEB-V03 R2 · Generación española y responsabilidades
+
+`application/build.py` reutiliza `render_page` para build individual y `build_site`; carga una sola vez
+el bundle, routing, configuración y manifiesto en `BuildInputs` por ejecución. La selección procede
+de SITE. `application/presentation.py` prepara el contexto Jinja tipado, navegación y entidades originales,
+con un mapeo explícito `(kind, purpose)`. No lee archivos. `site/composition.py` valida selectores y variantes.
+`adapters/build_output.py` verifica archivos MEDIA y materializa URL/HTML/assets ya resueltos; no decide páginas.
+`adapters/site_integrity.py` comprueba HTML y destinos físicos; `adapters/filesystem.py` prepara un
+hermano temporal y promueve con backup/recuperación. No se garantiza atomicidad absoluta de directorios.
+
+`--all` genera las nueve rutas públicas bajo `build/preview/`, con `/` en `index.html`.
+`--page` conserva además el alias histórico `<locale>/<page_id>/index.html` y devuelve ese archivo.
+Cada ejecución sustituye el árbol preview por su selección validada y sus assets actuales; para navegar
+el sitio completo debe usarse `--all`. Los enlaces a páginas conocidas fuera de una selección individual
+se permiten expresamente; la comprobación completa no permite destinos ausentes.
+
+MEDIA separa `publication_authorization` de la licencia de origen y exige referencia documental a la
+autorización declarada. El estado READY no concede permiso por sí solo. DEC-10 / WEB-V02 R2 autoriza
+los nueve activos asignados por D05, sin habilitar los demás ni levantar otros bloqueos de release.
+Contacto R1 utiliza exclusivamente correo/teléfono: sin formulario, campos ni estados de envío.
+El cambio editorial español y la adaptación pendiente de CA/EN/DE se documentan en
+[CONTACT-R1](project_v02/web/CONTACT_R1.md). No hay proveedor de formulario pendiente para R1.
+
+El build conserva las APIs `render_page`, `build_page`, `build_site`, `BuildRequest` y `BuildError`.
+El adaptador devuelve sus errores propios y APPLICATION los contextualiza como BuildError.
+El staging y la política preview/release permanecen protegidos por las pruebas de regresión.
+
+QA independiente: `python scripts/capture_site.py --browser <Chrome/Chromium>` utiliza Playwright
+solo en el entorno de QA, obtiene las páginas de SITE y sirve el build por HTTP loopback.
+Entrega 9 PNG desktop 1440×900 y 9 mobile 390×844, DPR 1, fullPage, junto con manifest y huellas
+en `artifacts/web-v03/visual-review/es/` (ignorado por Git). `--baseline-root <árbol anterior>` permite
+verificar igualdad visual fuera del cambio aprobado de Contacto. No hay dependencias QA en el runtime.

@@ -1,5 +1,11 @@
 # CONTENT → WEB · Handoff del sistema editorial
 
+> **Estado posterior WEB-V03 R2 (07/11/2026):** el inventario histórico de este handoff se conserva.
+> Contacto ES se adapta a [CONTACT-R1](../../web/CONTACT_R1.md): CO-02 es texto, sin formulario;
+> cuatro bloques y revisión draft intactos. CA/EN/DE requieren adaptación revisada de Contacto.
+> CommonContent ES y el motor web ya están implementados; responsabilidades vigentes en
+> [arquitectura](../../../architecture.md). No cargar los datos históricos como configuración de release.
+
 Fecha: 07/11/2026 · Intervención CONTENT-I18N-02 · Rama `feat/contingut-v2`, HEAD `fca65e8`
 (el trabajo CONTENT sigue sin commit). Verificación de esta entrega:
 [CONTENT_I18N_02](../quality/CONTENT_I18N_02.md).

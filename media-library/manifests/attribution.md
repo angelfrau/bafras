@@ -215,3 +215,11 @@ Fecha de consulta de todas las fuentes: **2026-11-02**. Fuente única de las fot
   </ul>
 </section>
 ```
+
+
+## Autorización declarada BAFRAS — WEB-V02 R2, 07/11/2026
+
+DEC-10 autoriza los nueve derivados H01/H03/H04/H05/D02/I03/E02/E06/D01 seleccionados por D05.
+El manifiesto mantiene las licencias y créditos originales y registra la declaración separadamente.
+Ver `docs/project_v02/WEB_G1_CLOSE_DECISIONES.md`, resolución operativa WEB-V02 R2.
+No se ha realizado auditoría jurídica externa. La autorización no se extiende al resto de la biblioteca.

@@ -1,0 +1,37 @@
+{% from "components/_macros.html" import paragraphs, actions, figure, section_open with context %}
+{{ section_open(section) }}
+<div class="container">
+{% if section.eyebrow %}
+<p class="eyebrow">{{ section.eyebrow }}</p>
+{% endif %}
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>
+{{ paragraphs(section.introduction, "intro") }}
+<ul class="cards">
+{% for item in section.items %}
+<li class="card" data-item="{{ item.id }}">
+{{ figure(section.id, item.id, "card__media", caption=false) }}
+<div class="card__body">
+<h3>{{ item.title }}</h3>
+{{ paragraphs(item.paragraphs) }}
+{% if item.examples %}
+<ul class="card__examples">
+{% for example in item.examples %}
+<li>{{ example.text }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{{ actions(item.actions, "link", "card__actions") }}
+</div>
+</li>
+{% endfor %}
+</ul>
+{#- Créditos de las imágenes de las tarjetas, agrupados para no alterar la composición (DEC-10 / WEB-V02 R2). -#}
+{% for item in section.items if images.get((section.id, item.id)) and images.get((section.id, item.id)).credit %}
+{% if loop.first %}<ul class="credits">{% endif %}
+<li><span class="credits__item">{{ item.title }}:</span> {{ images.get((section.id, item.id)).credit }}</li>
+{% if loop.last %}</ul>{% endif %}
+{% endfor %}
+{{ paragraphs(section.closing) }}
+{{ actions(section.actions, "link", "actions actions--end") }}
+</div>
+</section>

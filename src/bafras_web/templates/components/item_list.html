@@ -1,0 +1,26 @@
+{#- purposes: needs (NeedItem con acciones); deliverables / modalities (DeliveryItem). -#}
+{% from "components/_macros.html" import paragraphs, actions, figure, section_open with context %}
+{{ section_open(section) }}
+<div class="container">
+<div class="lead-in{% if images.get((section.id, none)) %} lead-in--media{% endif %}">
+<div>
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>
+{{ paragraphs(section.introduction, "intro") }}
+</div>
+{{ figure(section.id, none, "lead-in__media") }}
+</div>
+<{% if section.purpose == "needs" %}ol{% else %}ul{% endif %} class="numbered numbered--grid">
+{% for item in section.items %}
+<li class="numbered__item" data-item="{{ item.id }}">
+<span class="num" aria-hidden="true">{{ "%02d" | format(loop.index) }}</span>
+<div>
+<h3>{{ item.title }}</h3>
+{{ paragraphs(item.paragraphs) }}
+{% if item.kind == "need" %}{{ actions(item.actions) }}{% endif %}
+</div>
+</li>
+{% endfor %}
+</{% if section.purpose == "needs" %}ol{% else %}ul{% endif %}>
+{{ paragraphs(section.notes, "note") }}
+</div>
+</section>

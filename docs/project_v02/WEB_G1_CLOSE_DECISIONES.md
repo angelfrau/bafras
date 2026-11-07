@@ -17,8 +17,8 @@ Dirección comunicó por escrito las decisiones recogidas en el apartado A del a
 | DEC-07 | **Resuelta** (A.7) | Regla de UX de 03.K §2: variante sin tarjetas; se mantiene la entrada de menú |
 | DEC-08 | **Principio decidido** (A.4) | WCAG AA sin alterar innecesariamente la identidad; la regla concreta se valida en G2-02 |
 | DEC-09 | **Decidida** (A.3) | Tokens y componentes se consolidan en la implementación |
-| DEC-10 | **Pendiente** | Logo maestro y créditos |
-| DEC-11 | **Pendiente** | Formulario, hosting y dominio |
+| DEC-10 | **Autorización gráfica declarada** (WEB-V02 R2, 07/11/2026) | Nueve activos seleccionados; licencia de origen y atribuciones conservadas. Logo maestro sigue pendiente |
+| DEC-11 | **Contacto cerrado para Release 1.0** (WEB-V03 R2) | Solo correo/teléfono; sin formulario ni proveedor de envío. Hosting y dominio pendientes. Ver web/CONTACT_R1.md |
 | DEC-12 | **Decidida y aplicada** | Originales de Commons solo en local, verificados por SHA-1 y recuperables; originales propios versionados (commit D) |
 | DEC-13 | **Sustituida** por la estrategia de dirección | Única rama de desarrollo `feat/contingut-v2`; `main` intacta; sin `v2/desarrollo`; sin `push`. Commits A–D ejecutados |
 | DEC-14 | **Pendiente** | Idiomas de lanzamiento |
@@ -155,3 +155,20 @@ Dirección comunicó por escrito las decisiones recogidas en el apartado A del a
 - **Contexto:** los slugs están «propuestos»; la maqueta Inicio usa `/infraestructuras-e-instalaciones/` y `/proyectos-y-experiencia/`; el sitio heredado usa `#/rutas`.
 - **Recomendación:** ratificar en WEB-G2-00 la tabla 03.J §3.1, con prefijo `/es/`, raíz que redirige a `/es/`, una página 404 y redirección de los enlaces hash heredados mediante un script mínimo en la raíz.
 - **Texto de aprobación:** «Se ratifica el registro de rutas ES de WEB-G2-00 (versión ___).»
+
+## DEC-10 · Resolución operativa WEB-V02 R2 — 07/11/2026
+
+Fuente: encargo expreso WEB-V02 R2 del responsable de BAFRAS ENGINEERING (§3).
+Los recursos gráficos actualmente seleccionados y aprobados se consideran autorizados para uso y publicación.
+Alcance concreto: H01, H03, H04, H05, D02 (Inicio, D05 §23/26); I03 (INF, §26);
+E02 y E06 (ENE, §29); D01 y D02 (DIG, §31). Son nueve archivos únicos.
+
+El manifiesto existente registra `publication_authorization: declared_by_bafras`, la referencia
+`DEC-10 / WEB-V02 R2 / 2026-11-07` y SHA-256 del derivado. Se conservan sin modificación los autores,
+licencias de origen, URLs, atribuciones y trazabilidad. `READY` significa disponibilidad técnica,
+no autorización: los demás activos siguen con autorización pendiente por defecto.
+No se afirma auditoría jurídica externa ni se crean licencias. MEDIA comprueba autorización sin
+excepciones por identificador. Los nuevos activos requieren autorización explícita y trazable.
+
+Esta resolución no designa logo maestro, proveedor de formulario/hosting ni autoriza publicar la web.
+Siguen vigentes revisión editorial, pendientes, SEO, legales, gates y protección general de release.

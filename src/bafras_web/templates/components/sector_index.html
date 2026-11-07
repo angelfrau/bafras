@@ -1,0 +1,11 @@
+{% from "components/_macros.html" import paragraphs, actions, section_open with context %}
+{{ section_open(section) }}<div class="container">
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>{{ paragraphs(section.introduction, "intro") }}
+<ul class="editorial-grid editorial-grid--two">
+{% for ref in section.sector_refs %}{% set sector = sectors[ref] %}
+<li class="editorial-panel" data-item="{{ sector.id }}">
+<h3>{{ sector.title }}</h3>{{ paragraphs(sector.description) }}
+{% if sector.examples %}<ul class="editorial-list">{% for example in sector.examples %}<li>{{ example.text }}</li>{% endfor %}</ul>{% endif %}
+{{ actions(sector.contextual_actions) }}
+{% for resource in sector.catalog_refs %}<a class="link" href="{{ links[resource] }}">{{ resources[resource.catalog_id].title }}</a>{% endfor %}
+</li>{% endfor %}</ul></div></section>

@@ -3,15 +3,12 @@
 page_id: contacto
 review:
   status: draft
-  source_ref: D03 V1.22 · CO-01–CO-04 · 03.K/03.G1-01/02
+  source_ref: D03 V1.22 · CO-01–CO-04 · 03.K/03.G1-01/02 · CONTACT-R1 / WEB-V03 R2
 seo:
   title: Contacto | BAFRAS Engineering
   description: Contacta con BAFRAS Engineering para plantear un proyecto de instalaciones, energía o automatización.
     Cuéntanos qué necesitas resolver.
-pending:
-- field: sections/co-02/privacy_text
-  reason_code: source_missing
-  source_ref: D03 CO-02 · 03.K §4 · política real pendiente de revisión legal
+pending: []
 sections:
 - id: co-01
   source_block: CO-01
@@ -23,29 +20,14 @@ sections:
     text: Explícanos brevemente qué necesitas resolver, tanto si estás definiendo una actuación como si
       ya dispones de planos, datos o documentación técnica. Revisaremos tu consulta para valorar si podemos
       ayudarte y qué información convendría analizar a continuación.
+# WEB-V03 R2 / CONTACT-R1: guía editorial conservada; no hay funcionalidad de envío.
 - id: co-02
   source_block: CO-02
-  kind: form
+  kind: text
   title: Envíanos tu consulta.
-  fields:
-  - id: name
-    label: Nombre *
-    required: true
-  - id: company
-    label: Empresa u organización
-    required: false
-  - id: email
-    label: Correo electrónico *
-    required: true
-  - id: message
-    label: Cuéntanos qué necesitas *
-    required: true
-    help: Puedes indicar el tipo de instalación o actividad, el problema o actuación prevista, la ubicación
-      y la fase del proyecto. No necesitas tener todos los datos.
-  submit_label: Enviar consulta.
-  messages:
-    success: Tu consulta se ha enviado correctamente.
-    error: No hemos podido enviar tu consulta. Escríbenos a info@bafras.com.
+  paragraphs:
+  - id: consultation-guidance
+    text: Puedes indicar el tipo de instalación o actividad, el problema o actuación prevista, la ubicación y la fase del proyecto. No necesitas tener todos los datos.
 - id: co-03
   source_block: CO-03
   kind: text
@@ -57,13 +39,11 @@ sections:
   contact_channels:
   - id: email
     label: Correo electrónico
-    value: info@bafras.com
     target:
       kind: contact
       channel: email
   - id: phone
     label: Teléfono
-    value: +34 610 903 179
     target:
       kind: contact
       channel: phone

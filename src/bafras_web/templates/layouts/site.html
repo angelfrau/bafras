@@ -1,0 +1,8 @@
+{#- Layout público: recursos, cabecera y pie comunes. Contexto adicional: layout, stylesheet, script. -#}
+{% extends "layouts/base.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ stylesheet }}">
+  <script src="{{ script }}" defer></script>
+{% endblock %}
+{% block header %}{% include "partials/header.html" %}{% endblock %}
+{% block footer %}{% include "partials/footer.html" %}{% endblock %}

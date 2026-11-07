@@ -1,0 +1,22 @@
+{% from "components/_macros.html" import paragraphs, actions, section_open with context %}
+{{ section_open(section) }}
+<div class="container split">
+<div class="split__intro">
+{% if section.eyebrow %}
+<p class="eyebrow">{{ section.eyebrow }}</p>
+{% endif %}
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>
+{{ paragraphs(section.introduction, "intro") }}
+{{ actions(section.actions, "link", "actions actions--end") }}
+</div>
+<ul class="tiles">
+{% for item in section.items %}
+<li class="tile" data-item="{{ item.id }}">
+<h3 class="tile__title">{{ item.title }}</h3>
+{{ paragraphs(item.paragraphs) }}
+{% if item.action %}{{ actions([item.action]) }}{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+</section>

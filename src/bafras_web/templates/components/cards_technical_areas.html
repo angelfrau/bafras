@@ -1,0 +1,21 @@
+{% from "components/_macros.html" import paragraphs, actions, figure, section_open with context %}
+{{ section_open(section) }}
+<div class="container">
+<div class="lead-in{% if images.get((section.id, none)) %} lead-in--media{% endif %}"><div>
+{% if section.eyebrow %}<p class="eyebrow">{{ section.eyebrow }}</p>{% endif %}
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>
+{{ paragraphs(section.introduction, "intro") }}</div>{{ figure(section.id, none, "lead-in__media") }}</div>
+<ul class="technical-areas">
+{% for item in section.items %}
+<li class="technical-area" data-item="{{ item.id }}">
+<h3>{{ item.title }}</h3><div>{{ paragraphs(item.paragraphs) }}</div>
+{% if item.included %}<ul class="editorial-list">{% for entry in item.included %}<li>{{ entry.text }}</li>{% endfor %}</ul>{% endif %}
+{% if item.tags %}<ul class="tags">{% for tag in item.tags %}<li>{{ tag.text }}</li>{% endfor %}</ul>{% endif %}
+</li>
+{% endfor %}
+</ul>
+{% if section.transversal %}<aside class="transversal">
+{% if section.transversal.title %}<h3>{{ section.transversal.title }}</h3>{% endif %}
+{{ paragraphs(section.transversal.paragraphs) }}</aside>{% endif %}
+{{ paragraphs(section.closing, "closing") }}{{ actions(section.actions) }}
+</div></section>

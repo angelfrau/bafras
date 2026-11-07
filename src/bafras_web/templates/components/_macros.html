@@ -1,0 +1,39 @@
+{#- Fragmentos comunes. Importar con `with context`: consultan `links` (destino → URL), `images` y `variants`. -#}
+{% macro paragraphs(items, class="") %}
+{% for item in items %}
+<p{% if class %} class="{{ class }}"{% endif %}>{{ item.text }}</p>
+{% endfor %}
+{% endmacro %}
+
+{#- style: "link" (enlace editorial), "button" (primero relleno, resto contorno) o "button-light" (banda oscura). -#}
+{% macro actions(items, style="link", class="actions") %}
+{% if items %}
+<p class="{{ class }}">
+{% for action in items %}
+{% if style == "link" %}
+<a class="link" href="{{ links[action.target] }}">{{ action.label }}</a>
+{% else %}
+<a class="btn{% if style == 'button-light' %} btn--light{% elif not loop.first %} btn--outline{% endif %}" href="{{ links[action.target] }}">{{ action.label }}</a>
+{% endif %}
+{% endfor %}
+</p>
+{% endif %}
+{% endmacro %}
+
+{#- caption=false: el componente muestra el crédito en otro lugar (p. ej. tarjetas). -#}
+{% macro figure(section_id, item_id=none, class="", caption=true) %}
+{% set image = images.get((section_id, item_id)) %}
+{% if image %}
+<figure class="media{% if class %} {{ class }}{% endif %}">
+<img src="{{ image.url }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}"{% if section_id != page.sections[0].id %} loading="lazy"{% endif %}>
+{% if caption and image.credit %}
+<figcaption class="credit">{{ image.credit }}</figcaption>
+{% endif %}
+</figure>
+{% endif %}
+{% endmacro %}
+
+{% macro section_open(section) %}
+{% set variant = variants.get(section.id) %}
+<section id="{{ section.id }}" class="section section--{{ section.kind }}{% if section.purpose is defined %} section--{{ section.purpose | replace('_', '-') }}{% endif %}{% if variant %} section--{{ variant | replace('_', '-') }}{% endif %}"{% if section.title %} aria-labelledby="{{ section.id }}-title"{% endif %}>
+{% endmacro %}

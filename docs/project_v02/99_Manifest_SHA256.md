@@ -53,5 +53,5 @@ Los hashes de las tablas anteriores se recalcularon tras las correcciones de WEB
 | `WEB_00_PLAN_SANEAMIENTO.md` | `c263b4bb76c98fd7afffd59fbb2af06cc38cfe9ae3d5e7b7f3b3b5b73d233dda` |
 | `WEB_00_BASELINE.md` | `9e95cb319b0e2b1262066a40342dfb0cd46bdaecd16a71fb8df16549d4da357a` |
 | `WEB_G1_CLOSE_INFORME.md` | `cb04b0322f79a4009fb97b1c91a377d8fe082d3a4392afcc8167287515792ac7` |
-| `WEB_G1_CLOSE_DECISIONES.md` | `a144d5525c54b0a57cfbed7ff185e1fe69de476e197f0da7fbf468ec05e110e5` |
+| `WEB_G1_CLOSE_DECISIONES.md` | `e1d09cce53a7a3b484b38ab92ff86f69a2c3e3e8c46c0ab057b64a17a37264fe` |
 | `WEB_G1_CLOSE_MATRIZ.md` | `bd7096f8c23de5c69d26e093b1f19bc099a68f88a644080e101f017790156a34` |
