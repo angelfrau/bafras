@@ -186,7 +186,9 @@ def test_build_copies_only_used_assets_and_preserves_sources(project):
     target = build_page(project, PREVIEW, build_root=project.root / "out")
     copied = sorted(p.relative_to(project.root / "out" / "preview").as_posix()
                     for p in (project.root / "out" / "preview" / "assets").rglob("*") if p.is_file())
-    assert len(copied) == 7 and "assets/css/site.css" in copied and "assets/js/site.js" in copied
+    # css, js, logotipo y favicon (WEB-EXPERIENCE-03) + las 5 imágenes de Inicio
+    assert len(copied) == 9 and "assets/css/site.css" in copied and "assets/js/site.js" in copied
+    assert "assets/images/brand/logos/BAFRAS_logo_horizontal_deep.svg" in copied
     assert all(p.read_bytes() == data for p, data in sources.items())
     assert target.is_file()
 
@@ -198,3 +200,16 @@ def test_copy_does_not_rewrite_identical_targets(tmp_path):
     os.utime(target, (1, 1))
     copy_file_atomically(source, target)
     assert target.stat().st_mtime == 1 and target.read_bytes() == b"datos"
+
+
+def test_credit_is_structured_not_the_management_record():
+    """WEB-EXPERIENCE-04 §10: el crédito visible sale de autor/fuente/licencia; attribution_text queda en MEDIA."""
+    asset = _asset(author="Autora", source_provider="Wikimedia Commons", source_url="https://example.org/f",
+                   license_url="https://creativecommons.org/licenses/by/2.0", original_dimensions="4000x3000",
+                   attribution_text="«archivo.jpg» — Autora. Recortada y convertida a WebP por BAFRAS Engineering.")
+    credit = resolve_image(asset, "es").credit
+    assert (credit.author, credit.license, credit.source_provider) == ("Autora", "CC BY 2.0", "Wikimedia Commons")
+    assert credit.adapted and "Recortada" not in repr(credit)
+    assert not resolve_image(_asset(author="A", original_dimensions="1920x1080"), "es").credit.adapted
+    with pytest.raises(MediaError, match="sin autor o licencia"):
+        resolve_image(_asset(author=None), "es")

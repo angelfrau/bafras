@@ -3,6 +3,10 @@
 D03 delega la selección de imágenes en D05 («Documento rector: D05 §18/§26»), así que la
 asignación vive en configuración WEB (config/composition.yaml) y no en el contenido editorial.
 Los selectores son los mismos que los pendientes `integration_pending` de CONTENT.
+
+`experiences` (WEB-EXPERIENCE-03): imagen principal y galería opcional de cada experiencia, por su identificador
+estable. La misma asignación alimenta la tarjeta del índice y la ficha; una experiencia sin entrada se presenta
+sin imagen.
 """
 
 from __future__ import annotations
@@ -21,6 +25,20 @@ SectionId = Annotated[str, StringConstraints(pattern=r"^[a-z][a-z0-9]*(-[a-z0-9]
 SectionVariant = Literal["closing_band", "editorial_rows", "sand_band", "decision_grid", "technical_chapters", "dark_band", "direct_contact"]
 
 
+ExperienceId = Annotated[str, StringConstraints(pattern=r"^[a-z0-9]+(-[a-z0-9]+)*$")]
+
+
+class ExperienceMedia(BaseModel):
+    model_config = ConfigDict(strict=True, extra="forbid", frozen=True)
+
+    main: AssetId
+    gallery: list[AssetId] = Field(default_factory=list)
+
+    @property
+    def assets(self) -> tuple[str, ...]:
+        return (self.main, *self.gallery)
+
+
 class PageComposition(BaseModel):
     model_config = ConfigDict(strict=True, extra="forbid", frozen=True)
 
@@ -33,6 +51,7 @@ class SiteComposition(BaseModel):
 
     schema_version: Literal[1]
     pages: dict[PageId, PageComposition] = Field(default_factory=dict)
+    experiences: dict[ExperienceId, ExperienceMedia] = Field(default_factory=dict)
 
     def for_page(self, page_id: str) -> PageComposition:
         return self.pages.get(page_id, PageComposition())
@@ -47,6 +66,12 @@ def media_key(selector: str) -> tuple[str, str | None]:
 def composition_problems(composition: SiteComposition, bundle: EditorialBundle) -> list[str]:
     """Selectores y variantes coherentes con las secciones CONTENT; no lee archivos ni decide HTML."""
     problems = []
+    known = {experience.id for experience in bundle.experiences}
+    for experience_id, media in composition.experiences.items():
+        if experience_id not in known:
+            problems.append(f"composición: experiencia desconocida {experience_id!r}")
+        if len(set(media.assets)) != len(media.assets):
+            problems.append(f"composición {experience_id}: imagen repetida")
     for page_id, config in composition.pages.items():
         if page_id not in {page.page_id for page in bundle.pages}:
             problems.append(f"composición: página desconocida {page_id!r}")

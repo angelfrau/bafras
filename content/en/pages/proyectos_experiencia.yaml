@@ -11,10 +11,6 @@ pending:
 - field: seo.description
   reason_code: source_missing
   source_ref: 'D03 PE · UX y SEO: intención sin descripción literal'
-- field: sections/pe-02/groups
-  reason_code: verification_required
-  source_ref: D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni
-    autorización
 sections:
 - id: pe-01
   source_block: PE-01
@@ -27,8 +23,6 @@ sections:
       infrastructure and automation systems. Every project poses different challenges, which is why we
       focus on the technical context, the work carried out and the specific involvement of our
       professionals.
-  attribution: References from previous professional experience are distinguished from assignments
-    carried out directly by BAFRAS.
 - id: pe-02
   source_block: PE-02
   kind: experience_index
@@ -44,21 +38,42 @@ sections:
     - id: introduction
       text: Electrical and mechanical installations in buildings with differing requirements for
         comfort, operation and site coordination.
-    entries: []
+    entries:
+    - id: four-seasons-formentor
+      experience_ref: four-seasons-formentor
+      emphasis: featured
+    - id: montesion
+      experience_ref: montesion
+      emphasis: complementary
+    - id: the-n-residences-ibiza
+      experience_ref: the-n-residences-ibiza
+      emphasis: complementary
   - id: automation
     title: Automation and control
     introduction:
     - id: introduction
       text: Communications, regulation, supervision and technical software for systems that need to
         operate in a coordinated way.
-    entries: []
+    entries:
+    - id: dogger-bank-a
+      experience_ref: dogger-bank-a
+      emphasis: featured
+    - id: vineyard-wind-1
+      experience_ref: vineyard-wind-1
+      emphasis: complementary
   - id: energy
-    title: Energy systems
+    title: Energy systems and research
     introduction:
     - id: introduction
       text: Studies, engineering and technical documentation to integrate generation, storage and new
         energy infrastructure.
-    entries: []
+    entries:
+    - id: uib-transicion-energetica
+      experience_ref: uib-transicion-energetica
+      emphasis: featured
+    - id: edge-ai-investigacion
+      experience_ref: edge-ai-investigacion
+      emphasis: complementary
 - id: pe-03
   source_block: PE-03
   kind: text

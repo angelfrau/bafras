@@ -59,14 +59,19 @@ def visible_strings(value, key=None):
 def test_full_site_matches_routing_and_assets(site):
     out, targets, inputs = site
     root = out / "preview"
-    assert len(targets) == len(list(root.rglob("*.html"))) == 9
+    # 9 páginas SITE + 7 fichas de experiencia (WEB-EXPERIENCE-03), todas con URL de routing.
+    assert len(targets) == len(list(root.rglob("*.html"))) == 16
     assert targets[0] == root / "index.html"
-    assert {p.relative_to(root).as_posix() for p in targets} == {
-        (url.lstrip("/") + "index.html") for pid in inputs.routing.routes.pages
-        if (url := inputs.routing.url(pid, "es")) is not None
-    }
-    assert len([p for p in (root / "assets").rglob("*") if p.is_file()]) == 11
-    validate_site_tree(root)
+    pages = {url for pid in inputs.routing.routes.pages if (url := inputs.routing.url(pid, "es")) is not None}
+    fichas = {inputs.routing.entity_url("experience", eid, "es") for eid in build.entity_ids(inputs)}
+    assert len(fichas) == 7 and not pages & fichas
+    assert {p.relative_to(root).as_posix() for p in targets} == {url.lstrip("/") + "index.html" for url in pages | fichas}
+    # css, js, logotipo, favicon, 9 imágenes de páginas (D05) y 11 de experiencias (X01–X11)
+    # 24 de WEB-EXPERIENCE-03 + D03 (Automatización, WEB-EXPERIENCE-04 §11; D02 sigue en Inicio)
+    assert len([p for p in (root / "assets").rglob("*") if p.is_file()]) == 25
+    # Un build de un idioma solo admite como ausentes las URL de otros idiomas (selector de idioma en preview).
+    others = {url for url in build._routable_urls(inputs) if url.split("/")[1] in ("ca", "en", "de")}
+    validate_site_tree(root, allowed_missing_pages=others)
     assert not (out / "dist").exists()
 
 
@@ -197,11 +202,17 @@ def test_unknown_component_is_contextual_and_never_silently_omitted(monkeypatch)
 def test_dec10_scope_and_original_licenses():
     manifest, composition = load_media_manifest(PATHS), load_site_composition(PATHS)
     selected = {asset for config in composition.pages.values() for asset in config.media.values()}
-    assert len(selected) == 9
+    experiences = {asset for media in composition.experiences.values() for asset in media.assets}
+    # DEC-10: nueve activos; WEB-EXPERIENCE-04 V3 §10.3/§11 añade D03 con su propia referencia de autorización.
+    assert len(selected) == 10 and len(experiences) == 11 and not selected & experiences
+    assert {a.id for a in manifest.assets if a.id in selected and a.authorization_ref.startswith("WEB-EXPERIENCE-04")} == {"D03"}
     for asset in manifest.assets:
-        assert bool(media_publication_blockers(asset)) == (asset.id not in selected)
-        if asset.id in selected:
+        assert bool(media_publication_blockers(asset)) == (asset.id not in selected | experiences)
+        if asset.id in selected:  # Wikimedia Commons: licencia y autor de origen
             assert asset.license and asset.author and asset.authorization_ref and asset.output_sha256
+        if asset.id in experiences:  # recursos propios autorizados por el propietario (WEB-EXPERIENCE-03 §6.1)
+            assert asset.authorization_ref and asset.output_sha256 and asset.status == "READY"
+            assert asset.alt_es and asset.alt_ca and asset.alt_en and asset.alt_de
     fresh = MediaAsset(id="Z99", status="READY", relative_path="assets/images/new.webp")
     assert media_publication_blockers(fresh)
 
@@ -209,7 +220,7 @@ def test_dec10_scope_and_original_licenses():
 def test_cli_all_selection_and_release_preserve_output(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr(build.ProjectPaths, "build", property(lambda self: tmp_path))
     assert main(["build", "--locale", "es", "--all", "--mode", "preview", "--project", str(PATHS.root)]) == 0
-    assert len(capsys.readouterr().out.strip().splitlines()) == 9
+    assert len(capsys.readouterr().out.strip().splitlines()) == 16
     before = snapshot(tmp_path)
     assert main(["build", "--locale", "es", "--all", "--mode", "release", "--project", str(PATHS.root)]) == 1
     assert snapshot(tmp_path) == before

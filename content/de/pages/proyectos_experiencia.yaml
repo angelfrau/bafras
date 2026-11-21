@@ -11,10 +11,6 @@ pending:
 - field: seo.description
   reason_code: source_missing
   source_ref: 'D03 PE · UX y SEO: intención sin descripción literal'
-- field: sections/pe-02/groups
-  reason_code: verification_required
-  source_ref: D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni
-    autorización
 sections:
 - id: pe-01
   source_block: PE-01
@@ -27,8 +23,6 @@ sections:
       Energieinfrastruktur und Automatisierungssysteme zusammen. Jedes Projekt bringt andere
       Herausforderungen mit sich; deshalb legen wir den Schwerpunkt auf den technischen Kontext, die
       erbrachten Leistungen und die konkrete Beteiligung unserer Fachleute.
-  attribution: Referenzen aus früherer beruflicher Tätigkeit werden von Aufträgen unterschieden, die
-    BAFRAS direkt ausgeführt hat.
 - id: pe-02
   source_block: PE-02
   kind: experience_index
@@ -44,21 +38,42 @@ sections:
     - id: introduction
       text: Elektrische und mechanische Anlagen in Gebäuden mit unterschiedlichen Anforderungen an
         Komfort, Betrieb und Baustellenkoordination.
-    entries: []
+    entries:
+    - id: four-seasons-formentor
+      experience_ref: four-seasons-formentor
+      emphasis: featured
+    - id: montesion
+      experience_ref: montesion
+      emphasis: complementary
+    - id: the-n-residences-ibiza
+      experience_ref: the-n-residences-ibiza
+      emphasis: complementary
   - id: automation
     title: Automatisierung und Steuerungstechnik
     introduction:
     - id: introduction
       text: Kommunikation, Regelung, Überwachung und technische Software für Systeme, die koordiniert
         zusammenwirken müssen.
-    entries: []
+    entries:
+    - id: dogger-bank-a
+      experience_ref: dogger-bank-a
+      emphasis: featured
+    - id: vineyard-wind-1
+      experience_ref: vineyard-wind-1
+      emphasis: complementary
   - id: energy
-    title: Energiesysteme
+    title: Energiesysteme und Forschung
     introduction:
     - id: introduction
       text: Studien, Engineering und technische Dokumentation zur Integration von Erzeugung, Speicherung
         und neuen Energieinfrastrukturen.
-    entries: []
+    entries:
+    - id: uib-transicion-energetica
+      experience_ref: uib-transicion-energetica
+      emphasis: featured
+    - id: edge-ai-investigacion
+      experience_ref: edge-ai-investigacion
+      emphasis: complementary
 - id: pe-03
   source_block: PE-03
   kind: text

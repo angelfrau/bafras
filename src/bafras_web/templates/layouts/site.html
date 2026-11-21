@@ -1,6 +1,7 @@
 {#- Layout público: recursos, cabecera y pie comunes. Contexto adicional: layout, stylesheet, script. -#}
 {% extends "layouts/base.html" %}
 {% block head %}
+  <link rel="icon" href="{{ layout.favicon_url }}">
   <link rel="stylesheet" href="{{ stylesheet }}">
   <script src="{{ script }}" defer></script>
 {% endblock %}

@@ -13,7 +13,7 @@ from typing import Literal
 
 from pydantic import BaseModel
 
-from bafras_web.editorial.entities import Sector
+from bafras_web.editorial.entities import Experience, Sector
 from bafras_web.editorial.pages import CommonContent, EditorialBundle, PageContent
 from bafras_web.editorial.references import ContactLink, ExternalLink, InternalLink, ResourceLink, SharedActionRef
 
@@ -88,14 +88,14 @@ def contact_href(contact: SiteContact, channel: Literal["email", "phone"]) -> st
 
 
 def resolve_links(
-    bundle: EditorialBundle, source: PageContent | CommonContent | Sector, routing: SiteRouting,
+    bundle: EditorialBundle, source: PageContent | CommonContent | Sector | Experience, routing: SiteRouting,
     contact: SiteContact | None = None,
 ) -> dict[LinkTarget, str]:
-    """URL de cada destino de `source` (una página o el contenido común) en el idioma del bundle.
+    """URL de cada destino de `source` (página, contenido común, sector o experiencia) en el idioma del bundle.
 
     Sin `contact`, los `ContactLink` se rechazan como no soportados. `LinkResolutionError` reúne todos los fallos.
     """
-    origin = source.page_id if isinstance(source, PageContent) else (source.id if isinstance(source, Sector) else "common")
+    origin = source.page_id if isinstance(source, PageContent) else (source.id if isinstance(source, (Sector, Experience)) else "common")
     resolved: dict[LinkTarget, str] = {}
     problems: list[LinkProblem] = []
     for selector, target in iter_link_targets(source):

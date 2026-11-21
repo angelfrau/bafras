@@ -95,12 +95,19 @@ def _build(args: argparse.Namespace) -> int:
     if root is None:
         print(f"No se encuentra una raíz BAFRAS WEB desde {args.project.resolve()}", file=sys.stderr)
         return 1
+    paths = ProjectPaths(root)
+    build_root = None
+    if args.build_root is not None:
+        build_root = (root / args.build_root).resolve() if not args.build_root.is_absolute() else args.build_root.resolve()
+        if not build_root.is_relative_to(paths.build.resolve()):
+            print(f"--build-root debe estar dentro de {paths.build}", file=sys.stderr)
+            return 1
     try:
         if args.all:
-            target = build_site(ProjectPaths(root), args.locale, args.mode)
+            target = build_site(paths, args.locale, args.mode, build_root)
         else:
             request = BuildRequest(locale=args.locale, page_id=args.page, mode=args.mode)
-            target = build_page(ProjectPaths(root), request)
+            target = build_page(paths, request, build_root)
     except (BuildError, ConfigurationError) as error:
         print(f"build {args.mode} {args.locale}/{args.page}: no generado", file=sys.stderr)
         for problem in error.problems:
@@ -121,6 +128,10 @@ def _register_build(subparsers: argparse._SubParsersAction) -> None:
         help="preview: build/preview/ con noindex (admite borradores); release: protegido, pendiente de cierre editorial y publicación",
     )
     build.add_argument("--project", type=Path, default=Path.cwd(), help="directorio desde el que buscar la raíz")
+    build.add_argument(
+        "--build-root", type=Path, default=None,
+        help="raíz de salida dentro de build/ (por defecto build/); la preview se escribe en <raíz>/preview/",
+    )
     build.set_defaults(handler=_build)
 
 

@@ -36,7 +36,7 @@ pages:
   automatizacion_control:
     media:
       sections/dig-w01/media: D01                      # R01 · D05 §31
-      sections/ambitos/media: D02                      # R03
+      sections/ambitos/media: D03                      # WEB-EXPERIENCE-04 V3 §11: sustituye D02 (R03, «Flow measurement»)
     variants:
       integracion: sand_band
       dig-w07: closing_band
@@ -45,6 +45,7 @@ pages:
       sec-05: closing_band
   proyectos_experiencia:
     variants:
+      pe-03: sand_band                                 # C04-PE V1: PE-03 en banda arena
       pe-04: closing_band
   sobre_bafras:
     variants:
@@ -54,3 +55,14 @@ pages:
   contacto:
     variants:
       co-03: direct_contact                           # CONTACT-R1 / WEB-V03 R2 · canales sin formulario
+
+# WEB-EXPERIENCE-03 V2: imagen principal (tarjeta e inicio de ficha) y galería opcional de cada experiencia, por su id
+# estable de content/<idioma>/entities/experiences.yaml. Activos X01–X11 del manifiesto (derivados de los originales
+# de assets/images/experience/, que se conservan). Sin entrada → presentación tipográfica (edge-ai-investigacion).
+experiences:
+  four-seasons-formentor: {main: X02, gallery: [X04]}
+  montesion: {main: X05, gallery: [X06]}
+  the-n-residences-ibiza: {main: X07, gallery: [X08]}
+  dogger-bank-a: {main: X03, gallery: [X09]}
+  vineyard-wind-1: {main: X10, gallery: [X11]}
+  uib-transicion-energetica: {main: X01}

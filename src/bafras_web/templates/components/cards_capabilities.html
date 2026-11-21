@@ -1,4 +1,4 @@
-{% from "components/_macros.html" import paragraphs, actions, figure, section_open with context %}
+{% from "components/_macros.html" import paragraphs, actions, figure, credit_text, section_open with context %}
 {{ section_open(section) }}
 <div class="container">
 {% if section.eyebrow %}
@@ -28,7 +28,7 @@
 {#- Créditos de las imágenes de las tarjetas, agrupados para no alterar la composición (DEC-10 / WEB-V02 R2). -#}
 {% for item in section.items if images.get((section.id, item.id)) and images.get((section.id, item.id)).credit %}
 {% if loop.first %}<ul class="credits">{% endif %}
-<li><span class="credits__item">{{ item.title }}:</span> {{ images.get((section.id, item.id)).credit }}</li>
+<li><span class="credits__item">{{ item.title }}:</span> {{ credit_text(images.get((section.id, item.id)).credit) }}</li>
 {% if loop.last %}</ul>{% endif %}
 {% endfor %}
 {{ paragraphs(section.closing) }}

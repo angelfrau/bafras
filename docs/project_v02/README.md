@@ -14,7 +14,7 @@ El contenido sigue en revisión draft: este índice no autoriza publicación.
 | Decisiones / dirección y responsables de cada ámbito | [Registro WEB-G1](WEB_G1_CLOSE_DECISIONES.md), [matriz de cierre](WEB_G1_CLOSE_MATRIZ.md), [acta propuesta](02_Acta_Propuesta_Cierre_G1.md) |
 | QA WEB | [Auditoría G1](WEB_G1_REVIEW_01_INFORME.md), [incidencias](WEB_G1_REVIEW_01_INCIDENCIAS.csv), [trazabilidad](WEB_G1_REVIEW_01_TRAZABILIDAD.md), [plan WEB](WEB_G1_REVIEW_01_PLAN_IMPLEMENTACION.md), [cierre](WEB_G1_CLOSE_INFORME.md) |
 | Repositorio y medios / WEB | [Baseline WEB-00](WEB_00_BASELINE.md), [auditoría WEB-00](WEB_00_AUDITORIA_REPOSITORIO.md), [plan de saneamiento](WEB_00_PLAN_SANEAMIENTO.md), [B01](BAFRAS_WEB_B01_AUDITORIA_REPOSITORIO.md), [inventario visual B02](B02_PREP_01_INVENTARIO_RECURSOS_VISUALES.md) |
-| Cierre del sitio / WEB | [WEB-V02 R2](web/WEB_V02_R2_INFORME.md), [WEB-V03 R2](web/WEB_V03_R2_INFORME.md), [Contacto R1](web/CONTACT_R1.md) |
+| Cierre del sitio / WEB | [WEB-V02 R2](web/WEB_V02_R2_INFORME.md), [WEB-V03 R2](web/WEB_V03_R2_INFORME.md), [Contacto R1](web/CONTACT_R1.md), [WEB-EXPERIENCE-03 V2](web/WEB_EXPERIENCE_03_INFORME.md) |
 | Integración CONTENT → WEB / WEB | [WEB-01: auditoría de integración](web/WEB_01_INFORME.md), [plan ejecutable WEB-V01-A](web/WEB_V01_A_PLAN.md) |
 
 D03 gobierna copy; D04 contratos WEB; D05 composición. Las aprobaciones
@@ -31,7 +31,8 @@ de otro equipo para imponer simetría al árbol.
 | editorial/migration-es y rutas de entrega conservadas | [A2: Inicio](editorial/migration-es/CONTENT_ES_01_A2_INICIO.md), [A3: Capacidades](CONTENT_ES_01_A3.md), [A4: especialidades](CONTENT_ES_01_A4.md), [A5: cierre ES](CONTENT_ES_01_A5.md) |
 | editorial/quality | [A2.1: paridad y pendientes](editorial/quality/CONTENT_ES_01_A2_1.md), [A6: consolidación](editorial/quality/CONTENT_ES_01_A6.md), [manifiesto ES reproducible](editorial/quality/ES_BASELINE_MANIFEST.md) |
 | editorial/localization | [Contrato para la IA externa](editorial/localization/LOCALIZATION_CONTRACT.md), [terminología española](editorial/localization/TERMINOLOGY_ES.md) |
-| editorial/quality · editorial/handoff | [CONTENT-I18N-02: auditoría multilingüe](editorial/quality/CONTENT_I18N_02.md), [handoff CONTENT → WEB](editorial/handoff/CONTENT_TO_WEB_HANDOFF.md) |
+| editorial/quality · editorial/handoff | [CONTENT-I18N-02: auditoría multilingüe](editorial/quality/CONTENT_I18N_02.md), [handoff CONTENT → WEB](editorial/handoff/CONTENT_TO_WEB_HANDOFF.md), [especificación EXPERIENCE → WEB](editorial/handoff/EXPERIENCE_WEB_SPEC.md) |
+| addenda | [D03 EXPERIENCE: siete referencias](addenda/D03_ADDENDA_EXPERIENCE.md), [D05 EXPERIENCE: composición](addenda/D05_ADDENDA_EXPERIENCE.md) |
 
 Cinco informes se han movido sin cambiar sus bytes. A3, A4 y A5 conservan su
 ruta raíz porque ya tienen enlaces absolutos de entrega en la conversación,

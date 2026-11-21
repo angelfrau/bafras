@@ -1,4 +1,5 @@
 # CONTENT-ES-01 / A5 — D03 V1.22 y decisiones aprobadas; revisión draft.
+# CONTENT-EXPERIENCE-02 V3 — PE-02 con siete referencias (addenda D03_ADDENDA_EXPERIENCE).
 # Locale aportado por el loader. No acredita publicación ni funcionamiento WEB.
 page_id: proyectos_experiencia
 review:
@@ -11,9 +12,6 @@ pending:
 - field: seo.description
   reason_code: source_missing
   source_ref: 'D03 PE · UX y SEO: intención sin descripción literal'
-- field: sections/pe-02/groups
-  reason_code: verification_required
-  source_ref: D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni autorización
 sections:
 - id: pe-01
   source_block: PE-01
@@ -25,8 +23,6 @@ sections:
     text: Reunimos referencias de la trayectoria profesional del equipo en edificios, infraestructuras
       energéticas y sistemas de automatización. Cada proyecto plantea retos distintos; por eso ponemos
       el foco en el contexto técnico, el trabajo realizado y la participación concreta de nuestros profesionales.
-  attribution: Las referencias de experiencia profesional previa se distinguen de los encargos desarrollados
-    directamente por BAFRAS.
 - id: pe-02
   source_block: PE-02
   kind: experience_index
@@ -42,21 +38,42 @@ sections:
     - id: introduction
       text: Instalaciones eléctricas y mecánicas en edificios con exigencias diferentes de confort, operación
         y coordinación de obra.
-    entries: []
+    entries:
+    - id: four-seasons-formentor
+      experience_ref: four-seasons-formentor
+      emphasis: featured
+    - id: montesion
+      experience_ref: montesion
+      emphasis: complementary
+    - id: the-n-residences-ibiza
+      experience_ref: the-n-residences-ibiza
+      emphasis: complementary
   - id: automation
     title: Automatización y control
     introduction:
     - id: introduction
       text: Comunicaciones, regulación, supervisión y software técnico para sistemas que necesitan operar
         de forma coordinada.
-    entries: []
+    entries:
+    - id: dogger-bank-a
+      experience_ref: dogger-bank-a
+      emphasis: featured
+    - id: vineyard-wind-1
+      experience_ref: vineyard-wind-1
+      emphasis: complementary
   - id: energy
-    title: Sistemas energéticos
+    title: Sistemas energéticos e investigación
     introduction:
     - id: introduction
       text: Estudios, ingeniería y documentación técnica para integrar generación, almacenamiento y nuevas
         infraestructuras energéticas.
-    entries: []
+    entries:
+    - id: uib-transicion-energetica
+      experience_ref: uib-transicion-energetica
+      emphasis: featured
+    - id: edge-ai-investigacion
+      experience_ref: edge-ai-investigacion
+      emphasis: complementary
 - id: pe-03
   source_block: PE-03
   kind: text

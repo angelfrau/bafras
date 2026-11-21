@@ -253,3 +253,41 @@ solo en el entorno de QA, obtiene las páginas de SITE y sirve el build por HTTP
 Entrega 9 PNG desktop 1440×900 y 9 mobile 390×844, DPR 1, fullPage, junto con manifest y huellas
 en `artifacts/web-v03/visual-review/es/` (ignorado por Git). `--baseline-root <árbol anterior>` permite
 verificar igualdad visual fuera del cambio aprobado de Contacto. No hay dependencias QA en el runtime.
+
+## WEB-EXPERIENCE-03 V2 · Fichas de entidad, preview multilingüe y salida por idioma (09/11/2026)
+
+Esta sección precisa §11 y WEB-V03 R2; no cambia la política de publicación.
+
+- **Rutas de entidad.** `config/routes.yaml: entities.experience.parent: proyectos_experiencia`. La ficha de una
+  experiencia es `SiteRouting.entity_url("experience", id, idioma)` = URL de la página índice + identificador
+  estable + `/`. Sustituye la nota «fuera de alcance: fichas individuales» de §11. Una experiencia válida enlazada
+  desde el índice obtiene ruta, tarjeta y ficha sin código específico.
+- **Preview de idiomas no publicados.** `SiteRouting.for_preview()` (`include_unpublished=True`) resuelve también
+  `ca`, `en` y `de` cuando tienen slug. Solo lo usa `build --mode preview`. `url()` y `alternates()` sin preview
+  conservan el comportamiento de §11: release y la elegibilidad pública no cambian. El selector de idioma de la
+  preview enlaza los cuatro idiomas sin `hreflang`.
+- **Slugs ca/en/de.** Propuestas para preview, derivadas de la denominación de cada página en su propio contenido.
+  Requieren revisión nativa y aprobación D04 antes de publicar.
+- **Salida por idioma.** Cada `build --locale X --all` conserva el HTML ya generado de los demás idiomas: los copia al
+  staging antes de escribir su selección y valida el árbol completo. `assets/` se regenera siempre. Generar `de` ya
+  no elimina `es`. `--build-root <ruta dentro de build/>` permite una raíz de salida alternativa.
+- **Composición de experiencias.** `config/composition.yaml: experiences.<id>: {main, gallery}` con activos del
+  manifiesto MEDIA. La misma asignación alimenta tarjeta y ficha.
+- **Texto alternativo por idioma.** `alt_es`, `alt_ca`, `alt_en`, `alt_de` en el manifiesto. Sin fallback: si falta
+  el del idioma pedido, el build falla.
+
+## WEB-EXPERIENCE-04 V3 · Cartera BAFRAS, filas de experiencia y créditos de imagen (21/11/2026)
+
+Precisa WEB-EXPERIENCE-03 V2; no cambia rutas, modelos editoriales ni la política de publicación.
+
+- **Clasificación por `kind`.** La sección `experience_index` sigue siendo la única fuente. `presentation.experience_index_view`
+  separa sus entradas en el bloque 01 (`kind: bafras_project`, orden editorial, ámbito como categoría) y el bloque 02
+  (experiencia previa por ámbito; un ámbito sin experiencia previa no se lista). Ningún nombre de proyecto interviene.
+- **Carril de cartera.** 0 proyectos: estado vacío con encabezado (mensaje `experience-portfolio-empty` solo si CONTENT
+  lo aporta). 1: tarjeta estática. 2+: carril `scroll-snap` con controles `experience-portfolio-previous/next`, que se
+  exigen en CommonContent solo en ese caso y se muestran solo si hay desplazamiento efectivo (`assets/js/site.js`).
+- **Filas.** Siete filas uniformes (imagen 45 % a la izquierda, texto 55 %; imagen arriba en móvil). Sin imagen en la
+  composición, la fila reparte el texto en dos columnas, sin marcador. `emphasis` se conserva en el dato y no altera
+  el tamaño.
+- **Créditos.** `ResolvedImage.credit` es un `ImageCredit` (autor, fuente, licencia, `adapted`) construido desde el
+  manifiesto, no el `attribution_text`, que sigue como registro de gestión. «adaptada» es `image-adapted` por idioma.

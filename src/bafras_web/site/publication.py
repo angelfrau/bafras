@@ -31,3 +31,15 @@ def publication_blockers(page: PageContent, locale: str, routing: SiteRouting, m
     # D-W3 pendiente: mientras no se decida qué motivos son admisibles, todo pendiente bloquea.
     blockers.extend(f"pendiente {p.field} ({p.reason_code})" for p in page.pending)
     return blockers
+
+
+def entity_publication_blockers(review_status: str, locale: str, routing: SiteRouting, mode: PublicationMode) -> list[str]:
+    """Fichas de entidad: mismas reglas de idioma y revisión que las páginas. Preview admite borradores."""
+    if mode == "preview":
+        return []
+    blockers = [RELEASE_NOT_AVAILABLE]
+    if locale not in routing.locales.published_codes:
+        blockers.append(f"idioma {locale!r} no publicado (config/locales.yaml)")
+    if review_status != "approved":
+        blockers.append(f"revisión editorial {review_status!r}, se requiere 'approved'")
+    return blockers

@@ -1,0 +1,249 @@
+# LOCALIZATION-EXPERIENCE-01 V2 — deutsche Fassung von content/es/entities/experiences.yaml.
+# Struktur, Kennungen, URLs, Nachweise und Status identisch mit dem Spanischen. Prüfstatus: draft.
+- id: four-seasons-formentor
+  kind: founder_previous
+  title: Four Seasons Formentor
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Techniker für technische Gebäudeausrüstung
+  summary:
+  - id: summary
+    text: Ausführung, Überwachung, Koordination und Inbetriebnahme mechanischer, elektrischer und
+      sondertechnischer Anlagen in einem anspruchsvollen Hotelkomplex, einschließlich Koordination von
+      Nachunternehmern, Störungsbehebung und Prüfungen.
+  systems:
+  - id: mechanical
+    text: Mechanische Anlagen
+  - id: electrical
+    text: Elektrische Anlagen
+  - id: special
+    text: Sondertechnische Anlagen
+  phases:
+  - id: execution
+    text: Ausführung und Überwachung der Anlagen
+  - id: subcontractors
+    text: Koordination von Nachunternehmern
+  - id: incidents
+    text: Störungsbehebung
+  - id: commissioning
+    text: Prüfungen und Inbetriebnahme
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 1 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: montesion
+  kind: founder_previous
+  title: Colegio Nuestra Señora de Montesión
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Bauleiter für technische Gebäudeausrüstung
+  summary:
+  - id: summary
+    text: Bauleitung der technischen Gebäudeausrüstung in einem Schulgebäude mit rund 7.500 m², mit Heizung,
+      Lüftung und Klimatisierung, Elektrotechnik, Sanitär- und Hydraulikanlagen, Brandschutz und
+      Steuerungstechnik.
+  key_figures:
+  - id: surface
+    text: Schulgebäude mit rund 7.500 m²
+  systems:
+  - id: hvac
+    text: Klimatisierung
+  - id: ventilation
+    text: Lüftung
+  - id: electrical
+    text: Elektrotechnik
+  - id: hydraulic
+    text: Sanitär- und Hydraulikanlagen
+  - id: fire-protection
+    text: Brandschutz
+  - id: control
+    text: Steuerungstechnik
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 2 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: the-n-residences-ibiza
+  kind: founder_previous
+  title: The N Residences Ibiza
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Bauleiter für technische Gebäudeausrüstung
+  summary:
+  - id: summary
+    text: War als Bauleiter für technische Gebäudeausrüstung in einer hochwertigen Wohnanlage mit 51 Apartments
+      und vier gastronomischen Betrieben tätig, mit technischer Koordination und Begleitung der
+      Anlagenausführung.
+  key_figures:
+  - id: apartments
+    text: 51 Apartments
+  - id: restaurants
+    text: Vier gastronomische Betriebe
+  phases:
+  - id: coordination
+    text: Technische Koordination der Anlagen
+  - id: execution
+    text: Begleitung der Anlagenausführung
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 3 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: dogger-bank-a
+  kind: founder_previous
+  title: Dogger Bank A
+  person_refs: [amin]
+  attribution: Amin
+  role: Ingenieur für Inbetriebnahme und Regelungssoftware von Windenergieanlagen
+  summary:
+  - id: summary
+    text: Inbetriebnahme von Windenergieanlagen vor Ort, Fehlersuche und Fehlerbehebung sowie Entwicklung von
+      Software für die Pitch- und Yaw-Regelung mit Regelungsalgorithmen und Anomalieerkennung.
+  key_figures:
+  - id: capacity
+    text: 'Nennleistung des Windparks: 1,2 GW'
+  phases:
+  - id: commissioning
+    text: Inbetriebnahme von Windenergieanlagen vor Ort
+  - id: protocols
+    text: Inbetriebnahmeprotokolle für Komponenten und Teilsysteme
+  - id: checklists
+    text: Prüf-Checklisten
+  - id: functional-tests
+    text: Integrierte Funktionsprüfungen
+  - id: fault-diagnosis
+    text: Fehlerdiagnose
+  - id: troubleshooting
+    text: Fehlersuche und Fehlerbehebung vor Ort bei Störungen und Vorfällen
+  - id: pitch-control
+    text: Entwicklung und Programmierung von Systemen zur Pitch-Regelung (Blattverstellung)
+  - id: yaw-control
+    text: Entwicklung und Programmierung von Systemen zur Yaw-Regelung (Gondelnachführung)
+  - id: control-algorithms
+    text: Entwicklung von Regelungsalgorithmen
+  - id: anomaly-detection
+    text: Entwicklung von Algorithmen zur Anomalieerkennung
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 4 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: vineyard-wind-1
+  kind: founder_previous
+  title: Vineyard Wind 1
+  person_refs: [amin]
+  attribution: Amin
+  role: Ingenieur für Inbetriebnahme und Regelungssoftware von Windenergieanlagen
+  summary:
+  - id: summary
+    text: Inbetriebnahme von Windenergieanlagen vor Ort, Fehlersuche und Fehlerbehebung sowie Entwicklung von
+      Software für die Pitch- und Yaw-Regelung mit Regelungsalgorithmen und Anomalieerkennung.
+  key_figures:
+  - id: capacity
+    text: 'Nennleistung des Windparks: 806 MW'
+  phases:
+  - id: commissioning
+    text: Inbetriebnahme von Windenergieanlagen vor Ort
+  - id: protocols
+    text: Inbetriebnahmeprotokolle für Komponenten und Teilsysteme
+  - id: checklists
+    text: Prüf-Checklisten
+  - id: functional-tests
+    text: Integrierte Funktionsprüfungen
+  - id: fault-diagnosis
+    text: Fehlerdiagnose
+  - id: troubleshooting
+    text: Fehlersuche und Fehlerbehebung vor Ort bei Störungen und Vorfällen
+  - id: pitch-control
+    text: Entwicklung und Programmierung von Systemen zur Pitch-Regelung (Blattverstellung)
+  - id: yaw-control
+    text: Entwicklung und Programmierung von Systemen zur Yaw-Regelung (Gondelnachführung)
+  - id: control-algorithms
+    text: Entwicklung von Regelungsalgorithmen
+  - id: anomaly-detection
+    text: Entwicklung von Algorithmen zur Anomalieerkennung
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 5 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: uib-transicion-energetica
+  kind: founder_previous
+  title: Energiewende an der UIB
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Engineering, energetische Studien und technische Begleitung
+  summary:
+  - id: summary
+    text: Energetische Studien, Engineering, Simulation und technische Dokumentation für ein Programm der
+      Universität der Balearen mit Photovoltaik, Batteriespeichern, Ladeinfrastruktur sowie Mess-, Monitoring-
+      und Steuerungssystemen.
+  key_figures:
+  - id: photovoltaic
+    text: 7,6 MWp Photovoltaik im Programm
+  - id: storage
+    text: Über 10 MWh elektrochemische Speicher im Programm
+  systems:
+  - id: photovoltaic
+    text: Photovoltaik
+  - id: storage
+    text: Elektrochemische Speicher
+  - id: charging
+    text: Ladeinfrastruktur für Elektrofahrzeuge
+  - id: monitoring
+    text: Mess-, Monitoring- und Steuerungssysteme
+  intervention:
+  - id: work
+    text: Engineering, energetische Studien, Simulation, technische Dokumentation und Begleitung der Maßnahmen.
+  links:
+  - id: institutional
+    label: Zur Meldung der Universität
+    target: {kind: external, url: 'https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 6 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat
+- id: edge-ai-investigacion
+  kind: founder_previous
+  title: Angewandte Forschung zu KI und Edge AI
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Forschung zu Energieprognosen und zur Optimierung neuronaler Netze
+  summary:
+  - id: summary
+    text: Forschung zu Energieprognosen, zur Optimierung neuronaler Netze und zur effizienten Ausführung auf
+      IoT-Hardware.
+  context:
+  - id: abstract
+    text: Forschung zum Pruning mehrschichtiger neuronaler Netze mithilfe morphologischer Hilfsnetze, die über
+      Pruning-Masken redundante Verbindungen entfernen. Validierung mit MNIST und Fashion-MNIST, Bewertung auf
+      IoT-Hardware und Entwicklung von Softwarewerkzeugen zur Verbesserung der Inferenz auf Edge-Geräten.
+  deliverables:
+  - id: publication
+    text: 'Pruning Dense Neural Networks for Efficient Edge Deployment in Internet of Things Applications. Elsevier,
+      Applied Soft Computing, 23/05/2025.'
+  results:
+  - id: efficiency
+    text: Die Ergebnisse zeigen Verbesserungen bei Energieeffizienz und Verarbeitungsgeschwindigkeit bei
+      gleichzeitig konkurrenzfähiger Vorhersageleistung.
+    evidence_refs: ['https://doi.org/10.1016/j.asoc.2025.114175']
+  links:
+  - id: doi
+    label: Wissenschaftliche Publikation ansehen
+    target: {kind: external, url: 'https://doi.org/10.1016/j.asoc.2025.114175'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 7 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://doi.org/10.1016/j.asoc.2025.114175

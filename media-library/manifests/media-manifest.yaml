@@ -35,6 +35,9 @@ assets:
   output_dimensions: 1920x1080
   output_size_bytes: 223034
   alt_es: Sala de producción térmica de una central energética con grandes bombas y tuberías de impulsión pintadas en rojo
+  alt_ca: 'Sala de producció tèrmica d''una central energètica amb grans bombes i canonades d''impulsió pintades de vermell'
+  alt_en: 'Thermal plant room of an energy facility with large pumps and supply pipes painted red'
+  alt_de: 'Wärmeerzeugungsraum einer Energiezentrale mit großen Pumpen und rot lackierten Vorlaufleitungen'
   replacement_required: false
   notes: Central Energy Facility (universidad de Stanford, EE. UU.). Recorte 16:9 sin deformación. No es un proyecto de BAFRAS.
   retrieved: '2026-11-02'
@@ -98,6 +101,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 188780
   alt_es: Sala técnica de un edificio con unidad de tratamiento de aire, conductos aislados, cuadro de control y tuberías
+  alt_ca: 'Sala tècnica d''un edifici amb unitat de tractament d''aire, conductes aïllats, quadre de control i canonades'
+  alt_en: 'Building plant room with an air handling unit, insulated ducts, a control panel and pipework'
+  alt_de: 'Technikraum eines Gebäudes mit Lüftungsgerät, gedämmten Kanälen, Schaltschrank und Rohrleitungen'
   replacement_required: false
   notes: Sala técnica de un edificio escolar (Noruega, 2024). Fotografía actual, limpia y representativa de MEP integrado.
   retrieved: '2026-11-02'
@@ -130,6 +136,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 136302
   alt_es: Campo fotovoltaico sobre cubierta plana de un edificio institucional
+  alt_ca: 'Camp fotovoltaic sobre la coberta plana d''un edifici institucional'
+  alt_en: 'Photovoltaic array on the flat roof of an institutional building'
+  alt_de: 'Photovoltaikanlage auf dem Flachdach eines öffentlichen Gebäudes'
   replacement_required: false
   notes: Dominio público (USACE). El recorte 4:3 elimina a la persona situada en el borde derecho.
   retrieved: '2026-11-02'
@@ -163,6 +172,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 162320
   alt_es: Detalle de un armario de automatización con controladores modulares y cableado de señales identificado
+  alt_ca: 'Detall d''un armari d''automatització amb controladors modulars i cablatge de senyals identificat'
+  alt_en: 'Detail of an automation cabinet with modular controllers and labelled signal wiring'
+  alt_de: 'Detail eines Automatisierungsschranks mit modularen Steuerungen und gekennzeichneter Signalverdrahtung'
   replacement_required: false
   notes: Sistema de monitorización industrial (sector farmacéutico). El fabricante del controlador es visible pero no protagonista.
   retrieved: '2026-11-02'
@@ -254,6 +266,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 174722
   alt_es: Batería de unidades de tratamiento de aire en una sala de máquinas con conductos en el techo
+  alt_ca: 'Bateria d''unitats de tractament d''aire en una sala de màquines amb conductes al sostre'
+  alt_en: 'Row of air handling units in a plant room with ducts along the ceiling'
+  alt_de: 'Reihe von Lüftungsgeräten in einem Maschinenraum mit Kanälen an der Decke'
   replacement_required: false
   notes: CC0. Sin obligación de atribución.
   retrieved: '2026-11-02'
@@ -466,6 +481,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 377636
   alt_es: Instalación fotovoltaica sobre la cubierta de una nave industrial con montañas al fondo
+  alt_ca: 'Instal·lació fotovoltaica sobre la coberta d''una nau industrial amb muntanyes al fons'
+  alt_en: 'Photovoltaic installation on the roof of an industrial building with mountains in the background'
+  alt_de: 'Photovoltaikanlage auf dem Dach einer Industriehalle mit Bergen im Hintergrund'
   replacement_required: true
   notes: Rhomberg Fabrik, Dornbirn (Austria).
   retrieved: '2026-11-02'
@@ -589,6 +607,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 245716
   alt_es: Planta de bombas de calor industriales con intercambiadores y tuberías aisladas
+  alt_ca: 'Planta de bombes de calor industrials amb intercanviadors i canonades aïllades'
+  alt_en: 'Industrial heat pump plant with heat exchangers and insulated pipework'
+  alt_de: 'Industrielle Wärmepumpenanlage mit Wärmeübertragern und gedämmten Rohrleitungen'
   replacement_required: true
   notes: Resolución de origen 2048×1536.
   retrieved: '2026-11-02'
@@ -678,6 +699,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 205578
   alt_es: Armario de automatización con PLC, protecciones, relés, fuente de alimentación y regletas de bornas
+  alt_ca: 'Armari d''automatització amb PLC, proteccions, relés, font d''alimentació i regletes de borns'
+  alt_en: 'Automation cabinet with PLC, protective devices, relays, power supply and terminal strips'
+  alt_de: 'Automatisierungsschrank mit SPS, Schutzeinrichtungen, Relais, Netzteil und Klemmleisten'
   replacement_required: true
   notes: Marca del PLC visible a pequeña escala.
   retrieved: '2026-11-02'
@@ -711,6 +735,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 111866
   alt_es: Transmisor de presión diferencial con manifold de válvulas instalado en una tubería de proceso
+  alt_ca: 'Transmissor de pressió diferencial amb manifold de vàlvules instal·lat en una canonada de procés'
+  alt_en: 'Differential pressure transmitter with a valve manifold installed on a process pipe'
+  alt_de: 'Differenzdruck-Messumformer mit Ventilblock an einer Prozessrohrleitung'
   replacement_required: true
   notes: Fondo sobreexpuesto. Candidata prioritaria a sustitución por foto propia.
   retrieved: '2026-11-02'
@@ -718,6 +745,9 @@ assets:
   original_in_package: true
   original_download_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/Flow_measurement_with_dP_cell.jpg
 - id: D03
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-04 V3 §10.3 (recursos del repositorio autorizados por dirección) / 2026-11-21
+  output_sha256: eb5ff1169b1b53c97d59c1798ba846f6d9f4eb01b28931e4a2a3387d678d0204
   filename: digital-scada-screen.webp
   relative_path: assets/images/capabilities/digital/scada/digital-scada-screen.webp
   page: Sistemas Digitales y Automatización
@@ -740,6 +770,9 @@ assets:
   output_dimensions: 1600x1200
   output_size_bytes: 112550
   alt_es: Operadora supervisando en pantalla el sinóptico SCADA de una planta de tratamiento de agua
+  alt_ca: Operadora supervisant en pantalla el sinòptic SCADA d'una planta de tractament d'aigua
+  alt_en: Operator monitoring the SCADA synoptic display of a water treatment plant on screen
+  alt_de: Bedienerin überwacht am Bildschirm das SCADA-Prozessbild einer Wasseraufbereitungsanlage
   replacement_required: true
   notes: Dominio público (USDA). Interfaz SCADA real de una planta de agua.
   retrieved: '2026-11-02'
@@ -1009,89 +1042,420 @@ assets:
   original_in_package: true
   original_download_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/D%C3%BClmen%2C_Kl%C3%A4ranlage_--_2014_--_0001.jpg
 - id: X01
-  filename: experience-uib-campus.webp
-  relative_path: assets/images/experience/uib/experience-uib-campus.webp
-  page: Experiencia
-  section: UIB – transición energética
-  role: Evidencia de experiencia previa
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: ae827db9a6e9b6a7d37072458ba5307c559ef571b854b3ef960d6b0500a8c5ec
+  filename: uib-campus-aerial.webp
+  relative_path: assets/images/experience/web/uib-campus-aerial.webp
+  page: Proyectos y experiencia
+  section: experiencia uib-transicion-energetica
+  role: 'Vista aérea del campus'
+  experience_ref: uib-transicion-energetica
+  usage: main
+  image_nature: photograph
   priority: —
-  target_aspect_ratio: '16:9'
-  status: PENDING_ORIGINAL
+  target_aspect_ratio: original
+  status: READY
   source_url: null
-  source_provider: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
   author: null
   license: null
   license_url: null
   commercial_use_verified: false
-  modification_allowed: false
-  attribution_required: null
+  modification_allowed: true
+  attribution_required: false
   attribution_text: null
-  original_filename: null
-  original_dimensions: null
-  output_dimensions: null
-  output_size_bytes: null
-  alt_es: Instalación energética del campus de la Universitat de les Illes Balears
-  replacement_required: true
-  notes: 'Requiere material auténtico y autorizado. Fuentes potenciales en Commons (sin descargar): «Col·lectors solars de tub de buit.JPG» (CC BY-SA 3.0, Chixoy) y «Biblioteca edifici Anselm Turmeda (UIB).jpg»
-    (CC BY-SA 4.0, Kuranes). Solo valdrían como imagen del campus, nunca como evidencia de la intervención del equipo.'
-  retrieved: null
+  original_filename: 'assets/images/experience/Sistemas Energéticos/CAMPUS-UIB-2026.webp'
+  original_sha256: ee8877cb8165296c85a900d5c319317610356f57d6b10114d40cce74c2a9fca4
+  original_dimensions: 1280x960
+  output_dimensions: 1280x960
+  output_size_bytes: 261600
+  alt_es: 'Vista aérea del campus de la Universitat de les Illes Balears con marquesinas y cubiertas fotovoltaicas'
+  alt_ca: 'Vista aèria del campus de la Universitat de les Illes Balears amb pèrgoles i cobertes fotovoltaiques'
+  alt_en: 'Aerial view of the Universitat de les Illes Balears campus with photovoltaic canopies and rooftop arrays'
+  alt_de: 'Luftaufnahme des Campus der Universitat de les Illes Balears mit Photovoltaik-Überdachungen und Dachanlagen'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: fotografía. Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
   original_sha1: null
-  original_in_package: null
+  original_in_package: false
 - id: X02
-  filename: experience-hotel-formentor.webp
-  relative_path: assets/images/experience/mep-buildings/experience-hotel-formentor.webp
-  page: Experiencia
-  section: Edificios e instalaciones – Hotel Formentor
-  role: Evidencia de experiencia previa
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: 63eebe3059515c8588865da1133cc3c5ebb4fdd1f56103c37523bed6b3f17d33
+  filename: formentor-hotel-pool.webp
+  relative_path: assets/images/experience/web/formentor-hotel-pool.webp
+  page: Proyectos y experiencia
+  section: experiencia four-seasons-formentor
+  role: 'Complejo hotelero'
+  experience_ref: four-seasons-formentor
+  usage: main
+  image_nature: undetermined
   priority: —
-  target_aspect_ratio: '16:9'
-  status: PENDING_ORIGINAL
+  target_aspect_ratio: original
+  status: READY
   source_url: null
-  source_provider: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
   author: null
   license: null
   license_url: null
   commercial_use_verified: false
-  modification_allowed: false
-  attribution_required: null
+  modification_allowed: true
+  attribution_required: false
   attribution_text: null
-  original_filename: null
-  original_dimensions: null
-  output_dimensions: null
-  output_size_bytes: null
-  alt_es: Instalaciones del Hotel Formentor
-  replacement_required: true
-  notes: 'Requiere material auténtico y autorizado (propiedad u operador del hotel). En Commons existen «HotelFormentor2004.jpg» y «HotelFormentorStrand2004.jpg» (CC BY-SA 3.0, Joergsam, 1600×1200, de 2004):
-    son fotos turísticas, no material técnico, y no deben usarse como evidencia.'
-  retrieved: null
+  original_filename: 'assets/images/experience/Infraestructura y Instalaciones/formentor_1.jpg'
+  original_sha256: 795d3edaf1bc7c5a93006d4b0a390172472b7143e7dc116309acd56f75cf41b7
+  original_dimensions: 1200x800
+  output_dimensions: 1200x800
+  output_size_bytes: 264124
+  alt_es: 'Complejo hotelero Four Seasons Formentor con piscina, terrazas y edificio principal al pie de la montaña'
+  alt_ca: 'Complex hoteler Four Seasons Formentor amb piscina, terrasses i edifici principal al peu de la muntanya'
+  alt_en: 'Four Seasons Formentor hotel complex with pool, terraces and main building at the foot of the hillside'
+  alt_de: 'Hotelanlage Four Seasons Formentor mit Pool, Terrassen und Hauptgebäude am Fuß des Berghangs'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: imagen del proyecto (fotografía o render sin determinar). Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
   original_sha1: null
-  original_in_package: null
+  original_in_package: false
 - id: X03
-  filename: experience-offshore-wind.webp
-  relative_path: assets/images/experience/offshore/experience-offshore-wind.webp
-  page: Experiencia
-  section: Eólica internacional
-  role: Evidencia de experiencia previa
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: 7411ec77b5088212ca19c051e06cfec201937248413e91f7fe2558b706215da6
+  filename: dogger-bank-a-turbine.webp
+  relative_path: assets/images/experience/web/dogger-bank-a-turbine.webp
+  page: Proyectos y experiencia
+  section: experiencia dogger-bank-a
+  role: 'Aerogenerador marino'
+  experience_ref: dogger-bank-a
+  usage: main
+  image_nature: photograph
   priority: —
-  target_aspect_ratio: '16:9'
-  status: PENDING_ORIGINAL
+  target_aspect_ratio: original
+  status: READY
   source_url: null
-  source_provider: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
   author: null
   license: null
   license_url: null
   commercial_use_verified: false
-  modification_allowed: false
-  attribution_required: null
+  modification_allowed: true
+  attribution_required: false
   attribution_text: null
-  original_filename: null
-  original_dimensions: null
-  output_dimensions: null
-  output_size_bytes: null
-  alt_es: Infraestructura eléctrica de un parque eólico marino
-  replacement_required: true
-  notes: 'Requiere material del proyecto real con autorización del promotor. Candidatos genéricos en Commons: «HGÜ Offshore platform.jpg» (CC BY 3.0, Dirk Hochhaus), «Offshore Transformator Plattform BARD
-    1.JPG» (CC BY-SA 3.0) y «HornsRev Blavandshuk.jpg» (CC BY-SA 3.0). No deben presentarse como el proyecto del equipo.'
-  retrieved: null
+  original_filename: 'assets/images/experience/Sistemas Energéticos/dogger bank 2.jpg'
+  original_sha256: 7a8f9eafc7067899e4f0e20524eb4390ca9cf8507baf75edbd1950e7491c799f
+  original_dimensions: 1290x1439
+  output_dimensions: 1290x1439
+  output_size_bytes: 80776
+  alt_es: 'Aerogenerador marino de Dogger Bank A con pieza de transición amarilla en mar abierto'
+  alt_ca: 'Aerogenerador marí de Dogger Bank A amb peça de transició groga en mar obert'
+  alt_en: 'Dogger Bank A offshore wind turbine with a yellow transition piece in open sea'
+  alt_de: 'Offshore-Windenergieanlage von Dogger Bank A mit gelbem Übergangsstück auf offener See'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: fotografía. Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
   original_sha1: null
-  original_in_package: null
+  original_in_package: false
+- id: X04
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: 1eafcbc63e1ab8d02ac66a8c5b414eb60a526c09250c1ec64eb0613569b59e9b
+  filename: formentor-hotel-aerial.webp
+  relative_path: assets/images/experience/web/formentor-hotel-aerial.webp
+  page: Proyectos y experiencia
+  section: experiencia four-seasons-formentor
+  role: 'Vista aérea'
+  experience_ref: four-seasons-formentor
+  usage: gallery
+  image_nature: undetermined
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Infraestructura y Instalaciones/formentor_2.jpg'
+  original_sha256: 57725fc030d50f4024f57315aa6d87a8d9d901d1afada2225097c07d68d50ed9
+  original_dimensions: 1200x800
+  output_dimensions: 1200x800
+  output_size_bytes: 183748
+  alt_es: 'Vista aérea del hotel Four Seasons Formentor en una bahía rodeada de pinar'
+  alt_ca: 'Vista aèria de l''hotel Four Seasons Formentor en una badia envoltada de pinar'
+  alt_en: 'Aerial view of the Four Seasons Formentor hotel on a bay surrounded by pine forest'
+  alt_de: 'Luftaufnahme des Hotels Four Seasons Formentor an einer von Pinienwald umgebenen Bucht'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: imagen del proyecto (fotografía o render sin determinar). Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false
+- id: X05
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: ea3c63740c5ec9af5801e83830d02fa2b2438127beed4170a4a3618bbee36305
+  filename: montesion-exterior.webp
+  relative_path: assets/images/experience/web/montesion-exterior.webp
+  page: Proyectos y experiencia
+  section: experiencia montesion
+  role: 'Render exterior'
+  experience_ref: montesion
+  usage: main
+  image_nature: render
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Infraestructura y Instalaciones/montesion_1.jpg'
+  original_sha256: 8f1aad5537d5c03d0129a24b5eec720fb7c39e0b8c35ed390e6f3408a06ba3f4
+  original_dimensions: 1200x800
+  output_dimensions: 1200x800
+  output_size_bytes: 121796
+  alt_es: 'Render del exterior del Colegio Nuestra Señora de Montesión, edificio educativo con lamas en fachada'
+  alt_ca: 'Render de l''exterior del Colegio Nuestra Señora de Montesión, edifici educatiu amb lames a la façana'
+  alt_en: 'Rendering of the exterior of Colegio Nuestra Señora de Montesión, a school building with façade louvres'
+  alt_de: 'Visualisierung der Außenansicht des Colegio Nuestra Señora de Montesión, eines Schulgebäudes mit Fassadenlamellen'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: render arquitectónico. Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false
+- id: X06
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: b2c95bea57d4c3c25a0ff06dbee588c82b4c14610bf30848c4525772b2448566
+  filename: montesion-interior.webp
+  relative_path: assets/images/experience/web/montesion-interior.webp
+  page: Proyectos y experiencia
+  section: experiencia montesion
+  role: 'Render interior'
+  experience_ref: montesion
+  usage: gallery
+  image_nature: render
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Infraestructura y Instalaciones/montesion_2.jpg'
+  original_sha256: a340f5807202f05e31b8181b9ef0b88d93bca2d4442148af9f6fc1275c67b029
+  original_dimensions: 1200x800
+  output_dimensions: 1200x800
+  output_size_bytes: 47122
+  alt_es: 'Render del interior del Colegio Nuestra Señora de Montesión con escalera y vestíbulo de doble altura'
+  alt_ca: 'Render de l''interior del Colegio Nuestra Señora de Montesión amb escala i vestíbul de doble alçada'
+  alt_en: 'Rendering of the interior of Colegio Nuestra Señora de Montesión with staircase and double-height lobby'
+  alt_de: 'Visualisierung des Innenraums des Colegio Nuestra Señora de Montesión mit Treppe und zweigeschossiger Eingangshalle'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: render arquitectónico. Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false
+- id: X07
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: a71c6db052d59f25edf8e9e95ee044f47df3d5fa49d8c582b13bc2af931784aa
+  filename: n-residences-waterfront.webp
+  relative_path: assets/images/experience/web/n-residences-waterfront.webp
+  page: Proyectos y experiencia
+  section: experiencia the-n-residences-ibiza
+  role: 'Edificios residenciales'
+  experience_ref: the-n-residences-ibiza
+  usage: main
+  image_nature: undetermined
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Infraestructura y Instalaciones/ibiza_2.jpg'
+  original_sha256: 0c924c764228be874af55a8bbbd6719a525e3eb5c328921eb854a65438c55ac4
+  original_dimensions: 1200x800
+  output_dimensions: 1200x800
+  output_size_bytes: 159356
+  alt_es: 'Edificios residenciales de líneas curvas de The N Residences Ibiza frente al mar'
+  alt_ca: 'Edificis residencials de línies corbes de The N Residences Ibiza davant del mar'
+  alt_en: 'Curved residential buildings of The N Residences Ibiza on the seafront'
+  alt_de: 'Geschwungene Wohngebäude von The N Residences Ibiza am Meer'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: imagen del proyecto (fotografía o render sin determinar). Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false
+- id: X08
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: 6a553b81581a69ac9baa574810c9577694ccaea9be886f8a0fcfb40c6965c6b1
+  filename: n-residences-aerial.webp
+  relative_path: assets/images/experience/web/n-residences-aerial.webp
+  page: Proyectos y experiencia
+  section: experiencia the-n-residences-ibiza
+  role: 'Vista aérea'
+  experience_ref: the-n-residences-ibiza
+  usage: gallery
+  image_nature: undetermined
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Infraestructura y Instalaciones/ibiza_1.jpg'
+  original_sha256: 63c1dd3bb7a72f9b9ae21ae8cb6066eba3393dc4423e592c49ac0276d3998f0d
+  original_dimensions: 1200x800
+  output_dimensions: 1200x800
+  output_size_bytes: 201660
+  alt_es: 'Vista aérea de The N Residences Ibiza junto al puerto, con la ciudad de Ibiza al fondo'
+  alt_ca: 'Vista aèria de The N Residences Ibiza al costat del port, amb la ciutat d''Eivissa al fons'
+  alt_en: 'Aerial view of The N Residences Ibiza next to the harbour, with Ibiza town in the background'
+  alt_de: 'Luftaufnahme von The N Residences Ibiza am Hafen, im Hintergrund die Stadt Ibiza'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: imagen del proyecto (fotografía o render sin determinar). Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false
+- id: X09
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: 12bcbfd9e78e490c0a174646ec42c5ab028659c1483871e64d2c8ad998ec7e33
+  filename: dogger-bank-a-port.webp
+  relative_path: assets/images/experience/web/dogger-bank-a-port.webp
+  page: Proyectos y experiencia
+  section: experiencia dogger-bank-a
+  role: 'Profesional en la zona portuaria'
+  experience_ref: dogger-bank-a
+  usage: gallery
+  image_nature: photograph
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Sistemas Energéticos/amin dogger bank.jpg'
+  original_sha256: 2ad8025dd9ef2366b161a95c7c915ba6c481f06edbda00f11b4d7e4c1a434e69
+  original_dimensions: 1290x1451
+  output_dimensions: 1290x1451
+  output_size_bytes: 396442
+  alt_es: 'Amin, con equipo de protección, en la zona portuaria con góndolas de aerogenerador de Dogger Bank A al fondo'
+  alt_ca: 'L''Amin, amb equip de protecció, a la zona portuària amb góndoles d''aerogenerador de Dogger Bank A al fons'
+  alt_en: 'Amin, wearing protective equipment, in the port area with Dogger Bank A turbine nacelles in the background'
+  alt_de: 'Amin in Schutzausrüstung im Hafengelände, im Hintergrund Gondeln der Windenergieanlagen von Dogger Bank A'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: fotografía. Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false
+- id: X10
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: 317013b2cb465b722e23334e978c88e2b835d2d355f574620ae0f1351fb22c25
+  filename: vineyard-wind-1-nacelle.webp
+  relative_path: assets/images/experience/web/vineyard-wind-1-nacelle.webp
+  page: Proyectos y experiencia
+  section: experiencia vineyard-wind-1
+  role: 'Montaje de góndola'
+  experience_ref: vineyard-wind-1
+  usage: main
+  image_nature: photograph
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Sistemas Energéticos/vinneyatrd turbina.jpg'
+  original_sha256: 608f414aefa753eb30742326d13502a2239986690d801dad4bf146189989c916
+  original_dimensions: 1290x1472
+  output_dimensions: 1290x1472
+  output_size_bytes: 288368
+  alt_es: 'Góndola de aerogenerador de Vineyard Wind 1 suspendida de una grúa durante el montaje'
+  alt_ca: 'Góndola d''aerogenerador de Vineyard Wind 1 suspesa d''una grua durant el muntatge'
+  alt_en: 'Vineyard Wind 1 turbine nacelle suspended from a crane during assembly'
+  alt_de: 'Gondel einer Windenergieanlage von Vineyard Wind 1 beim Montagehub am Kran'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: fotografía. Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false
+- id: X11
+  publication_authorization: declared_by_bafras
+  authorization_ref: WEB-EXPERIENCE-03 V2 §6.1 / propietario de BAFRAS / 2026-11-09
+  output_sha256: 118a083c5463a2fdb83dc960e178be8e33e2052a44784d1a24b739e539e214fd
+  filename: vineyard-wind-1-assembly.webp
+  relative_path: assets/images/experience/web/vineyard-wind-1-assembly.webp
+  page: Proyectos y experiencia
+  section: experiencia vineyard-wind-1
+  role: 'Profesional en nave de montaje'
+  experience_ref: vineyard-wind-1
+  usage: gallery
+  image_nature: photograph
+  priority: —
+  target_aspect_ratio: original
+  status: READY
+  source_url: null
+  source_provider: Recurso incorporado al repositorio por BAFRAS (Editorial)
+  author: null
+  license: null
+  license_url: null
+  commercial_use_verified: false
+  modification_allowed: true
+  attribution_required: false
+  attribution_text: null
+  original_filename: 'assets/images/experience/Sistemas Energéticos/amin vineayrd.jpg'
+  original_sha256: 6f3e70c752c493a1b943b3e7aa449485ad12e6dc1a3679140733fa025976cca8
+  original_dimensions: 1282x1554
+  output_dimensions: 1282x1554
+  output_size_bytes: 128048
+  alt_es: 'Amin junto a una góndola de aerogenerador de Vineyard Wind 1 en una nave de montaje'
+  alt_ca: 'L''Amin al costat d''una góndola d''aerogenerador de Vineyard Wind 1 en una nau de muntatge'
+  alt_en: 'Amin next to a Vineyard Wind 1 turbine nacelle in an assembly hall'
+  alt_de: 'Amin neben einer Gondel einer Windenergieanlage von Vineyard Wind 1 in einer Montagehalle'
+  replacement_required: false
+  notes: 'Derivado WebP (calidad 82, sin metadatos, orientación EXIF aplicada) del original, que se conserva intacto. Naturaleza: fotografía. Autorización operativa del propietario (WEB-EXPERIENCE-03 V2 §6.1); sin licencia de terceros registrada.'
+  retrieved: '2026-11-09'
+  original_sha1: null
+  original_in_package: false

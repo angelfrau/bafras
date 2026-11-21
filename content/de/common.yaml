@@ -1,0 +1,82 @@
+# WEB-EXPERIENCE-03 V2 — traducción (de) de content/es/common.yaml: mismos identificadores, destinos y orden.
+# Etiquetas de navegación tomadas de la denominación de cada página en su propio contenido (eyebrow/título).
+# Revisión draft: revisión lingüística nativa pendiente antes de publicar.
+footer_texts:
+  - id: brand
+    text: BAFRAS Engineering
+actions:
+  - id: inicio
+    label: Startseite
+    target: {kind: internal, page_id: inicio}
+  - id: capacidades
+    label: Kompetenzen
+    target: {kind: internal, page_id: capacidades}
+  - id: infraestructuras
+    label: Infrastruktur und technische Anlagen
+    target: {kind: internal, page_id: infraestructuras}
+  - id: sistemas-energeticos
+    label: Energiesysteme
+    target: {kind: internal, page_id: sistemas_energeticos}
+  - id: automatizacion-control
+    label: Automatisierung und Steuerungstechnik
+    target: {kind: internal, page_id: automatizacion_control}
+  - id: sectores
+    label: Branchen
+    target: {kind: internal, page_id: sectores}
+  - id: proyectos-experiencia
+    label: Projekte und Erfahrung
+    target: {kind: internal, page_id: proyectos_experiencia}
+  - id: sobre-bafras
+    label: Über BAFRAS
+    target: {kind: internal, page_id: sobre_bafras}
+  - id: contacto
+    label: Kontakt
+    target: {kind: internal, page_id: contacto}
+interface_messages:
+  - id: skip-link
+    text: Zum Inhalt springen
+  - id: menu
+    text: Menü
+  - id: main-navigation
+    text: Hauptnavigation
+  - id: language
+    text: Sprache
+  - id: experience-areas
+    text: Erfahrungsbereiche
+  - id: experience-area
+    text: Bereich
+  - id: experience-view
+    text: Projektblatt ansehen
+  - id: experience-facts
+    text: Technisches Datenblatt
+  - id: experience-professional
+    text: Fachperson und Funktion
+  - id: experience-figures
+    text: Kennzahlen
+  - id: experience-context
+    text: Kontext
+  - id: experience-systems
+    text: Systeme und Schnittstellen
+  - id: experience-phases
+    text: Durchgeführte Arbeiten
+  - id: experience-intervention
+    text: Mitwirkung
+  - id: experience-deliverables
+    text: Dokumentation und Nachweise
+  - id: experience-results
+    text: Dokumentierte Ergebnisse
+  - id: experience-links
+    text: Externe Links
+  - id: experience-gallery
+    text: Projektbilder
+  - id: experience-back
+    text: Zurück zu Projekte und Erfahrung
+  - id: external-link
+    text: '(externer Link)'
+  # WEB-EXPERIENCE-04 V3: propuesta draft; validación LOCALIZATION pendiente.
+  - id: experience-portfolio
+    text: BAFRAS-Projekte
+  - id: experience-previous-work
+    text: Berufserfahrung
+  - id: image-adapted
+    text: bearbeitet

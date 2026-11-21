@@ -1,0 +1,252 @@
+# LOCALIZATION-EXPERIENCE-01 V2 — traducció catalana de content/es/entities/experiences.yaml.
+# Estructura, identificadors, URL, evidències i estats idèntics a l'espanyol. Revisió draft.
+- id: four-seasons-formentor
+  kind: founder_previous
+  title: Four Seasons Formentor
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Tècnic d'instal·lacions
+  summary:
+  - id: summary
+    text: Execució, supervisió, coordinació i posada en marxa d'instal·lacions mecàniques, elèctriques i
+      especials en un complex hoteler d'alta exigència, amb coordinació de subcontractes, resolució
+      d'incidències, proves i comissionament.
+  systems:
+  - id: mechanical
+    text: Instal·lacions mecàniques
+  - id: electrical
+    text: Instal·lacions elèctriques
+  - id: special
+    text: Instal·lacions especials
+  phases:
+  - id: execution
+    text: Execució i supervisió d'instal·lacions
+  - id: subcontractors
+    text: Coordinació de subcontractes
+  - id: incidents
+    text: Resolució d'incidències
+  - id: commissioning
+    text: Proves, comissionament i posada en marxa
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 1 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: montesion
+  kind: founder_previous
+  title: Colegio Nuestra Señora de Montesión
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Cap d'obra d'instal·lacions
+  summary:
+  - id: summary
+    text: Funcions de cap d'obra d'instal·lacions en un edifici educatiu d'aproximadament 7.500 m², amb
+      climatització, ventilació, electricitat, instal·lacions hidràuliques, protecció contra
+      incendis i sistemes de control.
+  key_figures:
+  - id: surface
+    text: Edifici educatiu d'aproximadament 7.500 m²
+  systems:
+  - id: hvac
+    text: Climatització
+  - id: ventilation
+    text: Ventilació
+  - id: electrical
+    text: Electricitat
+  - id: hydraulic
+    text: Instal·lacions hidràuliques
+  - id: fire-protection
+    text: Protecció contra incendis
+  - id: control
+    text: Sistemes de control
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 2 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: the-n-residences-ibiza
+  kind: founder_previous
+  title: The N Residences Ibiza
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Cap d'obra d'instal·lacions
+  summary:
+  - id: summary
+    text: Va exercir de cap d'obra d'instal·lacions en un complex residencial d'alta gamma amb 51 apartaments i
+      quatre establiments de restauració, amb coordinació tècnica i seguiment de l'execució de les
+      instal·lacions.
+  key_figures:
+  - id: apartments
+    text: 51 apartaments
+  - id: restaurants
+    text: Quatre establiments de restauració
+  phases:
+  - id: coordination
+    text: Coordinació tècnica de les instal·lacions
+  - id: execution
+    text: Seguiment de l'execució de les instal·lacions
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 3 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: dogger-bank-a
+  kind: founder_previous
+  title: Dogger Bank A
+  person_refs: [amin]
+  attribution: Amin
+  role: Enginyer de posada en marxa i de programari de control d'aerogeneradors
+  summary:
+  - id: summary
+    text: Posada en marxa i comissionament presencial d'aerogeneradors, diagnosi i correcció d'avaries, i
+      desenvolupament de programari de control de pitch i yaw amb algorismes de control i de detecció
+      d'anomalies.
+  key_figures:
+  - id: capacity
+    text: 'Capacitat nominal del parc: 1,2 GW'
+  phases:
+  - id: commissioning
+    text: Posada en marxa presencial d'aerogeneradors
+  - id: protocols
+    text: Protocols de comissionament per components i subsistemes
+  - id: checklists
+    text: Llistes de verificació (checklists)
+  - id: functional-tests
+    text: Proves funcionals integrades
+  - id: fault-diagnosis
+    text: Diagnosi de fallades
+  - id: troubleshooting
+    text: Revisió i correcció presencial d'avaries i incidències
+  - id: pitch-control
+    text: Desenvolupament i programació de sistemes de control de l'angle de pala (pitch)
+  - id: yaw-control
+    text: Desenvolupament i programació de sistemes d'orientació de la góndola (yaw)
+  - id: control-algorithms
+    text: Desenvolupament d'algorismes de control
+  - id: anomaly-detection
+    text: Desenvolupament d'algorismes de detecció d'anomalies
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 4 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: vineyard-wind-1
+  kind: founder_previous
+  title: Vineyard Wind 1
+  person_refs: [amin]
+  attribution: Amin
+  role: Enginyer de posada en marxa i de programari de control d'aerogeneradors
+  summary:
+  - id: summary
+    text: Posada en marxa i comissionament presencial d'aerogeneradors, diagnosi i correcció d'avaries, i
+      desenvolupament de programari de control de pitch i yaw amb algorismes de control i de detecció
+      d'anomalies.
+  key_figures:
+  - id: capacity
+    text: 'Capacitat nominal del parc: 806 MW'
+  phases:
+  - id: commissioning
+    text: Posada en marxa presencial d'aerogeneradors
+  - id: protocols
+    text: Protocols de comissionament per components i subsistemes
+  - id: checklists
+    text: Llistes de verificació (checklists)
+  - id: functional-tests
+    text: Proves funcionals integrades
+  - id: fault-diagnosis
+    text: Diagnosi de fallades
+  - id: troubleshooting
+    text: Revisió i correcció presencial d'avaries i incidències
+  - id: pitch-control
+    text: Desenvolupament i programació de sistemes de control de l'angle de pala (pitch)
+  - id: yaw-control
+    text: Desenvolupament i programació de sistemes d'orientació de la góndola (yaw)
+  - id: control-algorithms
+    text: Desenvolupament d'algorismes de control
+  - id: anomaly-detection
+    text: Desenvolupament d'algorismes de detecció d'anomalies
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 5 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: uib-transicion-energetica
+  kind: founder_previous
+  title: Transició energètica de la UIB
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Enginyeria, estudis energètics i seguiment tècnic
+  summary:
+  - id: summary
+    text: Estudis energètics, enginyeria, simulació i documentació tècnica en un programa de la Universitat de
+      les Illes Balears que integra generació fotovoltaica, emmagatzematge, recàrrega elèctrica i sistemes de
+      mesura, monitoratge i control.
+  key_figures:
+  - id: photovoltaic
+    text: 7,6 MWp de generació fotovoltaica en el programa
+  - id: storage
+    text: Emmagatzematge electroquímic de més de 10 MWh en el programa
+  systems:
+  - id: photovoltaic
+    text: Generació fotovoltaica
+  - id: storage
+    text: Emmagatzematge electroquímic
+  - id: charging
+    text: Infraestructura de recàrrega elèctrica
+  - id: monitoring
+    text: Sistemes de mesura, monitoratge i control
+  intervention:
+  - id: work
+    text: Enginyeria, estudis energètics, simulació, documentació tècnica i seguiment d'actuacions.
+  links:
+  - id: institutional
+    label: Veure la notícia institucional
+    target: {kind: external, url: 'https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 6 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat
+- id: edge-ai-investigacion
+  kind: founder_previous
+  title: Recerca aplicada en IA i Edge AI
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Investigador en predicció energètica i optimització de xarxes neuronals
+  summary:
+  - id: summary
+    text: Recerca en predicció energètica, optimització de xarxes neuronals i execució eficient sobre maquinari
+      IoT.
+  context:
+  - id: abstract
+    text: Recerca sobre la poda de xarxes neuronals multicapa mitjançant xarxes neuronals morfològiques
+      auxiliars, amb màscares de poda per eliminar connexions redundants. Validació amb MNIST i Fashion-MNIST,
+      avaluació sobre maquinari IoT i desenvolupament d'eines de programari per millorar la inferència en
+      dispositius edge.
+  deliverables:
+  - id: publication
+    text: 'Pruning Dense Neural Networks for Efficient Edge Deployment in Internet of Things Applications. Elsevier,
+      Applied Soft Computing, 23/05/2025.'
+  results:
+  - id: efficiency
+    text: Els resultats mostren millores d'eficiència energètica i de velocitat de processament, i mantenen un
+      rendiment predictiu competitiu.
+    evidence_refs: ['https://doi.org/10.1016/j.asoc.2025.114175']
+  links:
+  - id: doi
+    label: Consultar la publicació científica
+    target: {kind: external, url: 'https://doi.org/10.1016/j.asoc.2025.114175'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 7 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://doi.org/10.1016/j.asoc.2025.114175

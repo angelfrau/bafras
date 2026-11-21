@@ -2,27 +2,34 @@
 # Clave = identificador estable de página, independiente del idioma; también nombra content/<idioma>/pages/<id>.yaml.
 # slugs = un segmento de URL por idioma; la URL completa encadena los segmentos de las páginas padre.
 # Español sin prefijo (/capacidades/); ca, en y de con prefijo (/ca/…). Slugs ES: D03 V1.22 §3.1, sin el prefijo /es/.
-# Los slugs ca/en/de se añaden junto con sus traducciones.
+# Slugs ca/en/de (WEB-EXPERIENCE-03 V2, 09/11/2026): transliteración ASCII de la denominación de cada página en su
+# propio contenido (eyebrow/título de content/<idioma>/pages/<id>.yaml), con el mismo criterio que los slugs ES.
+# Son propuestas para preview: ca/en/de siguen sin publicar (config/locales.yaml) y requieren revisión nativa y
+# aprobación de rutas (D04) antes de publicarse.
+# entities: fichas por entidad editorial. Segmento = identificador estable de la entidad, bajo su página índice.
 schema_version: 1
 pages:
   inicio:
-    slugs: {es: ""}
+    slugs: {es: "", ca: "", en: "", de: ""}
   capacidades:
-    slugs: {es: capacidades}
+    slugs: {es: capacidades, ca: capacitats, en: capabilities, de: kompetenzen}
   infraestructuras:
     parent: capacidades
-    slugs: {es: infraestructuras-instalaciones}
+    slugs: {es: infraestructuras-instalaciones, ca: infraestructures-installacions, en: infrastructure-installations, de: infrastruktur-anlagen}
   sistemas_energeticos:
     parent: capacidades
-    slugs: {es: sistemas-energeticos}
+    slugs: {es: sistemas-energeticos, ca: sistemes-energetics, en: energy-systems, de: energiesysteme}
   automatizacion_control:
     parent: capacidades
-    slugs: {es: automatizacion-control}
+    slugs: {es: automatizacion-control, ca: automatitzacio-control, en: automation-control, de: automatisierung-steuerungstechnik}
   sectores:
-    slugs: {es: sectores}
+    slugs: {es: sectores, ca: sectors, en: sectors, de: branchen}
   proyectos_experiencia:
-    slugs: {es: proyectos-experiencia}
+    slugs: {es: proyectos-experiencia, ca: projectes-experiencia, en: projects-experience, de: projekte-erfahrung}
   sobre_bafras:
-    slugs: {es: sobre-bafras}
+    slugs: {es: sobre-bafras, ca: sobre-bafras, en: about-bafras, de: ueber-bafras}
   contacto:
-    slugs: {es: contacto}
+    slugs: {es: contacto, ca: contacte, en: contact, de: kontakt}
+entities:
+  experience:
+    parent: proyectos_experiencia

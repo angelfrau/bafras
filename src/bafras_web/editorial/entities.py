@@ -10,7 +10,7 @@ from .primitives import (
     EditorialId, EditorialModel, EditorialReview, Paragraph, PendingField,
     PublicText, SourceRef, TextItem, Verification,
 )
-from .references import CallToAction, ResourceLink
+from .references import CallToAction, ExternalLink, ResourceLink
 
 SectorId = Literal[
     "turismo-terciario", "industria-logistica-agroindustria",
@@ -69,9 +69,19 @@ class Experience(EditorialModel):
     deliverables: list[TextItem] = Field(default_factory=list)
     results: list[DocumentedResult] = Field(default_factory=list)
     evidence_refs: list[SourceRef] = Field(default_factory=list)
+    # EXPERIENCE-02: datos de tarjeta y ficha técnica (maqueta C04-PE). Opcionales y sin inferencias.
+    role: PublicText | None = None  # responsabilidad breve del profesional («Profesional y rol»)
+    key_figures: list[TextItem] = Field(default_factory=list)  # magnitudes del proyecto, no logros individuales
+    links: list[CallToAction] = Field(default_factory=list)  # solo destinos externos públicos (noticia, DOI)
     review: EditorialReview
     verification: Verification = Field(default_factory=Verification)
     pending: list[PendingField] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def _external_links_only(self) -> Experience:
+        if any(not isinstance(link.target, ExternalLink) for link in self.links):
+            raise ValueError("experience links must be external references")
+        return self
 
 
 class DownloadableResource(EditorialModel):

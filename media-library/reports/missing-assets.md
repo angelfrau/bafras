@@ -12,6 +12,10 @@ De los 36 recursos solicitados, **7 no están listos para publicar**. Este docum
 | X02 | PENDING_ORIGINAL | — | No bloquea el diseño; sí la publicación. |
 | X03 | PENDING_ORIGINAL | — | No bloquea el diseño; sí la publicación. |
 
+> **Actualización WEB-EXPERIENCE-03 V2 (09/11/2026).** X01–X03 están resueltos con material propio incorporado al
+> repositorio y autorizado por el propietario (estado `READY` en el manifiesto), junto con X04–X11. Esta tabla
+> conserva el estado de la entrega original.
+
 ## H02 — Diagrama conceptual Infraestructura–Energía–Sistemas digitales
 
 - **Material necesario:** Diagrama SVG original de integración Infraestructura–Energía–Digital.

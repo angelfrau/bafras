@@ -12,7 +12,7 @@ from pydantic import BaseModel
 from bafras_web.adapters.filesystem import ProjectPaths
 from bafras_web.application import build as build_module
 from bafras_web.application.build import BuildError, BuildRequest, build_page, preview_path
-from bafras_web.application.configuration import load_site_routing
+from bafras_web.application.configuration import load_media_manifest, load_site_routing
 from bafras_web.application.editorial import EditorialLoadRequest, inspect_editorial
 from bafras_web.editorial.integrity import build_editorial_bundle
 from bafras_web.site.links import iter_link_targets, resolve_links
@@ -53,7 +53,13 @@ class DocumentParser(HTMLParser):
             self._region = "otro"
 
     def hrefs(self, region):
-        return [attrs["href"] for where, attrs in self.anchors if where == region]
+        """Destinos editoriales; los enlaces de crédito de imagen (fuente y licencia, WEB-EXPERIENCE-04) van aparte."""
+        return [attrs["href"] for where, attrs in self.anchors
+                if where == region and "credit__link" not in attrs.get("class", "").split()]
+
+    def credit_hrefs(self, region):
+        return [attrs["href"] for where, attrs in self.anchors
+                if where == region and "credit__link" in attrs.get("class", "").split()]
 
     def handle_data(self, data):
         text = " ".join(data.split())
@@ -100,13 +106,17 @@ def test_preview_signals_without_public_seo(built):
     *_, doc = built
     assert {"name": "robots", "content": "noindex, nofollow"} in doc.all("meta")
     assert any(attrs.get("class") == "preview-notice" for _, attrs in doc.tags)
-    assert [link["rel"] for link in doc.all("link")] == ["stylesheet"]
+    assert [link["rel"] for link in doc.all("link")] == ["icon", "stylesheet"]  # favicon de marca (WEB-EXPERIENCE-03)
     assert not any("hreflang" in attrs for _, attrs in doc.tags)
 
 
 def test_images_come_from_composition_and_manifest(built):
     out, *_, doc = built
-    images = doc.all("img")
+    logos = [img for img in doc.all("img") if img.get("class") in {"brand__logo", "site-footer__logo"}]
+    images = [img for img in doc.all("img") if img.get("class") not in {"brand__logo", "site-footer__logo"}]
+    # Logotipo oficial en cabecera y pie (WEB-EXPERIENCE-03), con la marca de CommonContent como alternativa.
+    assert [img["src"] for img in logos] == ["/assets/images/brand/logos/BAFRAS_logo_horizontal_deep.svg"] * 2
+    assert all(img["alt"] == "BAFRAS Engineering" and (out / "preview" / img["src"].lstrip("/")).is_file() for img in logos)
     assert len(images) == 5
     for img in images:
         assert img["src"].startswith("/assets/images/") and img["alt"] and img["width"] and img["height"]
@@ -144,6 +154,9 @@ def test_links_are_the_resolved_destinations_in_order(built):
     hrefs = doc.hrefs("main")
     assert hrefs == [links[target] for _, target in iter_link_targets(page)]
     assert all(href.startswith("/") and href.count("#") <= 1 for href in hrefs)
+    # Créditos CC (WEB-EXPERIENCE-04): fuente y licencia enlazadas, solo hacia destinos externos registrados en MEDIA.
+    credits = doc.credit_hrefs("main")
+    assert credits and all(href.startswith("https://") for href in credits)
 
 
 def test_header_and_footer_use_common_content_routing_and_site_contact(built):
@@ -152,7 +165,8 @@ def test_header_and_footer_use_common_content_routing_and_site_contact(built):
     top_level = [routing.url(pid, "es") for pid, r in routing.routes.pages.items() if r.parent is None and pid != "inicio"]
     nav = [url for url in top_level if url != "/contacto/"] + ["/contacto/"]
     assert doc.anchors[0] == ("otro", {"class": "skip-link", "href": "#contenido"})  # primer elemento enfocable
-    assert doc.hrefs("header") == ["/", *nav]
+    # Preview: selector con los cuatro idiomas (sin hreflang ni publicación); release solo mostrará los publicados.
+    assert doc.hrefs("header") == ["/", *nav, "/", "/ca/", "/en/", "/de/"]
     assert doc.hrefs("footer") == ["mailto:info@bafras.com", "tel:+34610903179", *nav]
     assert {"id": "site-nav", "class": "site-nav", "aria-label": "Navegación principal"} in doc.all("nav")
     toggle = next(attrs for name, attrs in doc.tags if name == "button")
@@ -188,8 +202,6 @@ def test_failed_render_keeps_previous_output(tmp_path, monkeypatch):
 
 @pytest.mark.parametrize("request_, expected", [
     (BuildRequest(locale="es", page_id="noexiste", mode="preview"), "página no configurada"),
-    # ca: el manifiesto no tiene texto alternativo en catalán (y después faltarían URL públicas): sin fallback.
-    (BuildRequest(locale="ca", page_id="inicio", mode="preview"), "sin texto alternativo para 'ca'"),
     (BuildRequest(locale="fr", page_id="inicio", mode="preview"), "LOCALE_UNKNOWN"),
 ])
 def test_unbuildable_requests_fail_explicitly(tmp_path, request_, expected):
@@ -211,3 +223,33 @@ def test_escaped_text_round_trips(built):
     for text in _visible_strings(page):
         if any(ch in text for ch in "<>&\"'"):
             assert html.escape(text, quote=False) in source
+
+
+def test_translated_preview_uses_its_own_alt_text_and_urls(tmp_path):
+    """WEB-EXPERIENCE-03: ca se genera en preview con alt y URL propios; nunca toma el texto español."""
+    target = build_page(PATHS, BuildRequest(locale="ca", page_id="inicio", mode="preview"), build_root=tmp_path)
+    doc = DocumentParser()
+    doc.feed(target.read_text(encoding="utf-8"))
+    assert doc.all("html")[0]["lang"] == "ca"
+    manifest = load_media_manifest(PATHS)
+    content = [img for img in doc.all("img") if img.get("class") not in {"brand__logo", "site-footer__logo"}]
+    assert content and all(img["alt"] in {a.alt_ca for a in manifest.assets} for img in content)
+    assert not {img["alt"] for img in content} & {a.alt_es for a in manifest.assets}
+    internal = [href for href in doc.hrefs("main") + doc.hrefs("header") if href.startswith("/") and not href.startswith("/assets/")]
+    assert internal and all(href.startswith("/ca/") or href in ("/", "/en/", "/de/") for href in internal)
+
+
+def test_missing_alt_text_for_a_locale_still_blocks_the_build(tmp_path, monkeypatch):
+    """Sin texto alternativo en el idioma pedido no hay fallback: el build falla de forma explícita."""
+    from bafras_web.media import assets as media_assets
+
+    original = media_assets.resolve_image
+
+    def without_catalan(asset, locale):
+        return original(asset.model_copy(update={"alt_ca": None}), locale)
+
+    monkeypatch.setattr(build_module, "resolve_image", without_catalan)
+    with pytest.raises(BuildError) as info:
+        build_page(PATHS, BuildRequest(locale="ca", page_id="inicio", mode="preview"), build_root=tmp_path)
+    assert any("sin texto alternativo para 'ca'" in problem for problem in info.value.problems)
+    assert not any(tmp_path.iterdir())

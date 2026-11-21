@@ -5,7 +5,13 @@
 # - footer_texts.brand: denominación «BAFRAS Engineering» (D03, cabecera y 03.K).
 # - interface_messages: textos de interfaz de las maquetas aprobadas (D05): «Menú» y «Navegación principal»
 #   (C04 Inicio V3), «Saltar al contenido» (C04 SB V1 y CO V2).
-# Sin traducción a ca/en/de todavía: no se crean esos archivos (sin fallback).
+# - interface_messages experience-* (WEB-EXPERIENCE-03 V2): etiquetas de interfaz de la maqueta aprobada C04-PE V1
+#   (proyectos-experiencia.html y plantilla-ficha-proyecto.html): «Ámbitos de experiencia», «Ámbito», «Ficha técnica»,
+#   «Profesional y rol», «Sistemas e interfaces», «Trabajo realizado», «Documentación y evidencias», «Resultados
+#   documentados», «Volver a Proyectos y experiencia». Sin texto literal en la maqueta, de la addenda D05 EXPERIENCE
+#   (§2 «acceso a la ficha», §4 magnitudes, enlaces externos, imágenes): «Ver ficha», «Magnitudes», «Contexto»,
+#   «Intervención», «Enlaces externos», «Imágenes del proyecto», «Idioma» y «(enlace externo)».
+# Traducciones ca/en/de: content/<idioma>/common.yaml (draft, LOCALIZATION WEB-EXPERIENCE-03 V2).
 footer_texts:
   - id: brand
     text: BAFRAS Engineering
@@ -44,3 +50,45 @@ interface_messages:
     text: Menú
   - id: main-navigation
     text: Navegación principal
+  - id: language
+    text: Idioma
+  - id: experience-areas
+    text: Ámbitos de experiencia
+  - id: experience-area
+    text: Ámbito
+  - id: experience-view
+    text: Ver ficha
+  - id: experience-facts
+    text: Ficha técnica
+  - id: experience-professional
+    text: Profesional y rol
+  - id: experience-figures
+    text: Magnitudes
+  - id: experience-context
+    text: Contexto
+  - id: experience-systems
+    text: Sistemas e interfaces
+  - id: experience-phases
+    text: Trabajo realizado
+  - id: experience-intervention
+    text: Intervención
+  - id: experience-deliverables
+    text: Documentación y evidencias
+  - id: experience-results
+    text: Resultados documentados
+  - id: experience-links
+    text: Enlaces externos
+  - id: experience-gallery
+    text: Imágenes del proyecto
+  - id: experience-back
+    text: Volver a Proyectos y experiencia
+  - id: external-link
+    text: (enlace externo)
+  # WEB-EXPERIENCE-04 V3: bloques 01/02 del índice (etiquetas canónicas D03 «Proyecto BAFRAS» / «Experiencia
+  # profesional del equipo», en la forma del encargo V2) e indicación de adaptación del crédito CC (attribution.md).
+  - id: experience-portfolio
+    text: Proyectos BAFRAS
+  - id: experience-previous-work
+    text: Experiencia profesional
+  - id: image-adapted
+    text: adaptada

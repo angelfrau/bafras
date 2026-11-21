@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import re
-from collections.abc import Mapping
+from collections.abc import Callable, Mapping
 from pathlib import Path
 
 from bafras_web.media.assets import ResolvedImage
@@ -52,12 +52,28 @@ def _asset_copies(paths: ProjectPaths, output: Path, assets: tuple[str, ...]) ->
     return copies
 
 
+def _carried_over(output: Path, preserve: Callable[[Path], bool] | None) -> list[tuple[Path, Path]]:
+    """Archivos de la salida anterior que la aplicación decide conservar (p. ej. otros idiomas)."""
+    if preserve is None or not output.is_dir():
+        return []
+    root = output.resolve()
+    kept = []
+    for source in sorted(root.rglob("*")):
+        relative = source.relative_to(root)
+        if source.is_file() and not source.is_symlink() and not relative.parts[0].startswith(".") and preserve(relative):
+            kept.append((source, relative))
+    return kept
+
+
 def materialize_preview(paths: ProjectPaths, output: Path, html_by_url: Mapping[str, str], assets: tuple[str, ...],
-                        *, allowed_missing_pages: set[str], legacy_alias: Path | None = None) -> tuple[Path, ...]:
+                        *, allowed_missing_pages: set[str], legacy_alias: Path | None = None,
+                        preserve: Callable[[Path], bool] | None = None) -> tuple[Path, ...]:
     """URL públicas explícitas → HTML físico, assets e integridad antes de promover.
 
     Esta traducción física no es un segundo routing: solo acepta las URL recibidas de SITE.
     El staging y su recuperación permanecen en filesystem.staged_directory.
+    `preserve` (relativa a la salida) selecciona archivos previos que se trasladan al staging antes de escribir la
+    selección actual: generar un idioma no elimina los demás. La integridad se comprueba sobre el árbol completo.
     """
     if output.is_symlink():
         raise OutputError([f"salida no admitida: enlace simbólico {output}"])
@@ -72,8 +88,11 @@ def materialize_preview(paths: ProjectPaths, output: Path, html_by_url: Mapping[
     if legacy_alias is not None and (legacy_alias.is_absolute() or ".." in legacy_alias.parts or len(html_by_url) != 1):
         raise OutputError([f"alias individual no admitido: {legacy_alias}"])
     _asset_copies(paths, output, assets)  # validar antes de crear temporales
+    kept = _carried_over(output, preserve)
     try:
         with staged_directory(output) as staging:
+            for source, relative in kept:
+                copy_file_atomically(source, staging / relative)
             for source, target in _asset_copies(paths, staging, assets):
                 copy_file_atomically(source, target)
             for url, html in html_by_url.items():

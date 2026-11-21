@@ -11,7 +11,6 @@ import hashlib
 import json
 import re
 import shutil
-from copy import deepcopy
 from collections import Counter
 from pathlib import Path
 
@@ -34,18 +33,30 @@ MANIFEST = ROOT / "docs/project_v02/editorial/quality/ES_BASELINE_MANIFEST.md"
 TRANSLATABLE = frozenset({
     "text", "title", "description", "eyebrow", "subtitle", "attribution", "label", "submit_label",
     "success", "error", "privacy_text", "help", "placeholder", "qualification", "specialty",
+    "role",  # Experience.role (CONTENT-EXPERIENCE-02)
 })
 
 
-# Spanish-only documents awaiting a reviewed translation (WEB-V01-B). They must not exist in
-# translated locales until translated: no copy of the Spanish text, no fallback.
-PENDING_TRANSLATION = frozenset({"common.yaml"})
+# Spanish-only documents awaiting a reviewed translation. WEB-EXPERIENCE-03 V2 translated common.yaml (draft),
+# so none remain; the mechanism stays: a pending document must not exist in translated locales (no fallback).
+PENDING_TRANSLATION: frozenset[str] = frozenset()
 
 
 def _sources(locale: str) -> list[str]:
     """Documents that every locale must mirror (pages and entities)."""
     base = ROOT / "content" / locale
     return sorted(s for p in base.rglob("*.yaml") if (s := p.relative_to(base).as_posix()) not in PENDING_TRANSLATION)
+
+
+@pytest.mark.parametrize("locale", TRANSLATED)
+def test_common_content_is_translated_not_copied(locale):
+    """WEB-EXPERIENCE-03: common.yaml existe en cada idioma con sus propios textos (sin copia del español)."""
+    es, tr = load_yaml(ROOT / "content" / SOURCE_LOCALE / "common.yaml"), load_yaml(ROOT / "content" / locale / "common.yaml")
+    assert [a["id"] for a in tr["actions"]] == [a["id"] for a in es["actions"]]
+    assert [m["id"] for m in tr["interface_messages"]] == [m["id"] for m in es["interface_messages"]]
+    changed = [a for a, b in zip(es["actions"], tr["actions"]) if a["label"] != b["label"]]
+    assert len(changed) >= len(es["actions"]) - 1, f"{locale}: etiquetas de navegación sin traducir"
+    assert es["interface_messages"][0]["text"] != tr["interface_messages"][0]["text"]
 
 
 @pytest.mark.parametrize("locale", TRANSLATED)
@@ -84,33 +95,8 @@ def _structure_differences(es, tr, path: str, key: str | None = None):
         yield f"{path}: valor protegido {es!r} → {tr!r}"
 
 
-def _contact_r1_comparison(es, tr):
-    """Proyección de test del cambio autorizado; nunca transforma documentos del loader.
-
-    CA/EN/DE mantienen el contrato anterior, pendiente de adaptación CONTACT-R1.
-    Se comprueba exactamente esa divergencia antes de comparar el resto de su estructura.
-    """
-    es, tr = deepcopy(es), deepcopy(tr)
-    assert es["review"]["source_ref"] == tr["review"]["source_ref"] + " · CONTACT-R1 / WEB-V03 R2"
-    es["review"]["source_ref"] = tr["review"]["source_ref"]
-    assert es["pending"] == []
-    assert tr["pending"] == [{"field": "sections/co-02/privacy_text", "reason_code": "source_missing",
-                              "source_ref": "D03 CO-02 · 03.K §4 · política real pendiente de revisión legal"}]
-    tr["pending"] = []
-    current, previous = es["sections"][1], tr["sections"][1]
-    assert current["kind"] == "text" and previous["kind"] == "form"
-    assert list(previous) == ["id", "source_block", "kind", "title", "fields", "submit_label", "messages"]
-    assert [(f["id"], f["required"]) for f in previous["fields"]] == [
-        ("name", True), ("company", False), ("email", True), ("message", True)]
-    assert all(list(f) == ["id", "label", "required"] for f in previous["fields"][:-1])
-    assert list(previous["fields"][-1]) == ["id", "label", "required", "help"]
-    assert list(previous["messages"]) == ["success", "error"]
-    assert all(isinstance(t, str) and t for t in [previous["submit_label"], *previous["messages"].values()])
-    tr["sections"][1] = {"id": previous["id"], "source_block": previous["source_block"], "kind": "text",
-                         "title": previous["title"], "paragraphs": [{"id": "consultation-guidance", "text": previous["fields"][-1]["help"]}]}
-    for channel, expected in zip(tr["sections"][2]["contact_channels"], ("info@bafras.com", "+34 610 903 179")):
-        assert channel.pop("value") == expected
-    return es, tr
+# WEB-EXPERIENCE-03 V2: CONTACT-R1 (9209efc, solo es) se sincronizó en ca/en/de con sus textos ya traducidos;
+# la proyección de test que toleraba esa divergencia se retira y contacto exige paridad completa.
 
 
 @pytest.fixture(scope="module")
@@ -124,7 +110,8 @@ def test_configured_locales_are_the_content_locales(project):
 
 @pytest.mark.parametrize("locale", TRANSLATED)
 def test_inventory_matches_spanish_baseline(locale):
-    assert len(_sources(SOURCE_LOCALE)) == 11
+    # 9 páginas + sectors, people, experiences y common (WEB-EXPERIENCE-03 V2).
+    assert len(_sources(SOURCE_LOCALE)) == 13
     assert _sources(locale) == _sources(SOURCE_LOCALE), f"{locale}: inventario distinto de es"
 
 
@@ -134,8 +121,6 @@ def test_structure_and_protected_values_match_spanish(locale):
     for source in _sources(SOURCE_LOCALE):
         es = load_yaml(ROOT / "content" / SOURCE_LOCALE / source)
         tr = load_yaml(ROOT / "content" / locale / source)
-        if source == "pages/contacto.yaml":
-            es, tr = _contact_r1_comparison(es, tr)
         problems += [f"{locale}/{source}: {p}" for p in _structure_differences(es, tr, "")]
     assert not problems, "\n".join(problems)
 
@@ -172,11 +157,7 @@ def test_translated_inspection_has_spanish_integrity_profile(project, locale, po
     assert tr.locale == locale and not tr.has_errors, [d for d in tr.diagnostics if d.severity == "error"]
     assert tr.documents_complete and tr.can_build_bundle
     assert all(d.source.startswith(f"{locale}/") for d in tr.documents), f"{locale}: documento de otro idioma"
-    translated_profile = profile(tr)
-    privacy = ("EDITORIAL_PENDING", "info", "page/contacto", "sections/co-02/privacy_text", "source_missing")
-    assert translated_profile[privacy] == 1 and profile(es)[privacy] == 0
-    translated_profile.subtract({privacy: 1})
-    assert +translated_profile == profile(es), f"{locale}/{policy}: diagnósticos distintos fuera de CONTACT-R1"
+    assert profile(tr) == profile(es), f"{locale}/{policy}: diagnósticos distintos del español"
 
 
 @pytest.mark.parametrize("locale", TRANSLATED)
@@ -184,19 +165,18 @@ def test_bundle_serves_the_requested_locale_files(project, locale):
     bundle = build_editorial_bundle(_inspect(project, locale))
     spanish = build_editorial_bundle(_inspect(project, SOURCE_LOCALE))
     assert bundle.locale == locale and len(bundle.pages) == 9 and sum(len(p.sections) for p in bundle.pages) == 51
-    assert len(bundle.sectors) == 6 and len(bundle.people) == 3 and bundle.experiences == bundle.resources == []
+    assert len(bundle.sectors) == 6 and len(bundle.people) == 3 and bundle.resources == []
+    # LOCALIZATION-EXPERIENCE-01: mismas siete referencias, en el mismo orden, con textos del idioma pedido.
+    assert [e.id for e in bundle.experiences] == [e.id for e in spanish.experiences] and len(bundle.experiences) == 7
+    for experience, es_experience in zip(bundle.experiences, spanish.experiences):
+        assert experience.summary[0].text != es_experience.summary[0].text, f"{locale}/{experience.id}: resumen sin traducir"
     assert all(page.review.status == "draft" for page in bundle.pages)
     for page in bundle.pages:
         source = load_yaml(ROOT / "content" / locale / "pages" / f"{page.page_id}.yaml")
         assert page == PageContent.model_validate({**source, "locale": locale}), f"{locale}/{page.page_id}"
         es_page = spanish.get_page(page.page_id)
-        expected_sections = [(s.id, "form" if page.page_id == "contacto" and s.id == "co-02" else s.kind) for s in es_page.sections]
-        assert [(s.id, s.kind) for s in page.sections] == expected_sections
-        if page.page_id == "contacto":
-            assert len(page.pending) == 1 and page.pending[0].field == "sections/co-02/privacy_text"
-            assert es_page.pending == []
-        else:
-            assert page.pending == es_page.pending
+        assert [(s.id, s.kind) for s in page.sections] == [(s.id, s.kind) for s in es_page.sections]
+        assert page.pending == es_page.pending
         assert page.sections[0].title != es_page.sections[0].title, f"{locale}/{page.page_id}: hero sin traducir"
     assert [s.id for s in bundle.sectors] == [s.id for s in spanish.sectors]
     assert [p.public_name for p in bundle.people] == [p.public_name for p in spanish.people]

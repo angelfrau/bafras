@@ -1,13 +1,121 @@
-{% from "components/_macros.html" import paragraphs, section_open with context %}
+{#- Índice de Proyectos y experiencia (WEB-EXPERIENCE-04 V3). Sustituye el mosaico asimétrico de WEB-EXPERIENCE-03.
+    Bloque 01: cartera BAFRAS (`kind: bafras_project`): estado vacío, tarjeta estática (1) o carril con desplazamiento
+    (2+; controles solo si hay desplazamiento efectivo, ver site.js). Bloque 02: experiencia previa del equipo en filas
+    horizontales uniformes por ámbito (imagen a la izquierda; sin imagen, la fila reparte el texto en dos columnas).
+    Clasificación y orden: `experience_index[section.id]` (presentation.py). Sin textos propios: CommonContent. -#}
+{% from "components/_macros.html" import paragraphs, credit_text, section_open with context %}
+{% set m = layout.messages %}
+{% set view = experience_index[section.id] %}
 {{ section_open(section) }}<div class="container">
-<h2 id="{{ section.id }}-title">{{ section.title }}</h2>{{ paragraphs(section.introduction, "intro") }}
-{% for group in section.groups %}<div class="experience-group">
-<h3>{{ group.title }}</h3>{{ paragraphs(group.introduction) }}
-{% for entry in group.entries %}{% set experience = experiences[entry.experience_ref] %}
-<article class="editorial-panel"><h4>{{ experience.title }}</h4>
-{% if experience.attribution %}<p class="attribution">{{ experience.attribution }}</p>{% endif %}
-{{ paragraphs(experience.summary) }}{{ paragraphs(experience.context) }}{{ paragraphs(experience.intervention) }}
-{% for items in [experience.systems, experience.phases, experience.deliverables, experience.results] %}
-{% if items %}<ul>{% for item in items %}<li>{{ item.text }}</li>{% endfor %}</ul>{% endif %}
-{% endfor %}</article>{% endfor %}
-</div>{% endfor %}</div></section>
+{#- ---------- 01 · Proyectos BAFRAS ---------- -#}
+{% set portfolio_title = section.id ~ "-portfolio-title" %}
+<section class="experience-block portfolio{% if not view.portfolio %} portfolio--empty{% endif %}" id="{{ section.id }}-portfolio" aria-labelledby="{{ portfolio_title }}">
+<div class="experience-block__head">
+<p class="experience-block__index">01</p>
+<h2 id="{{ portfolio_title }}">{{ m['experience-portfolio'] }}</h2>
+{% if not view.portfolio and view.empty_message %}
+<p class="portfolio__empty">{{ view.empty_message }}</p>
+{% endif %}
+</div>
+{% if view.portfolio %}
+{% set track_id = section.id ~ "-portfolio-track" %}
+<div class="portfolio__viewport"{% if view.portfolio | length > 1 %} data-portfolio{% endif %}>
+{% if view.portfolio | length > 1 %}
+<div class="portfolio__controls" hidden>
+<button type="button" class="portfolio__control" data-portfolio-prev aria-controls="{{ track_id }}">
+<span aria-hidden="true">←</span><span class="visually-hidden">{{ m['experience-portfolio-previous'] }}</span></button>
+<button type="button" class="portfolio__control" data-portfolio-next aria-controls="{{ track_id }}">
+<span aria-hidden="true">→</span><span class="visually-hidden">{{ m['experience-portfolio-next'] }}</span></button>
+</div>
+{% endif %}
+<ul class="portfolio__track portfolio__track--{{ [view.portfolio | length, 3] | min }}" id="{{ track_id }}"{% if view.portfolio | length > 1 %} tabindex="0" aria-labelledby="{{ portfolio_title }}"{% endif %}>
+{% for item in view.portfolio %}
+{% set e = item.experience %}
+{% set title_id = section.id ~ "-" ~ item.entry.id ~ "-title" %}
+<li class="portfolio-card">
+{% if item.image %}
+<figure class="portfolio-card__media">
+<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" width="{{ item.image.width }}" height="{{ item.image.height }}" loading="lazy">
+{% if item.image.credit %}<figcaption class="credit">{{ credit_text(item.image.credit) }}</figcaption>{% endif %}
+</figure>
+{% endif %}
+<div class="portfolio-card__body">
+<p class="portfolio-card__category">{{ item.group.title }}</p>
+<h3 id="{{ title_id }}">{{ e.title }}</h3>
+{{ paragraphs(e.summary, "portfolio-card__summary") }}
+{% if e.key_figures %}
+<ul class="experience-figures" aria-label="{{ m['experience-figures'] }}">
+{% for figure in e.key_figures[:portfolio_figures] %}
+<li>{{ figure.text }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+<p class="portfolio-card__action"><a class="link" href="{{ item.url }}" aria-describedby="{{ title_id }}">{{ m['experience-view'] }}</a></p>
+</div>
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+</section>
+{#- ---------- 02 · Experiencia profesional ---------- -#}
+{% if view.groups %}
+<section class="experience-block" id="{{ section.id }}-previous" aria-labelledby="{{ section.id }}-title">
+<div class="experience-block__head experience-head">
+<div>
+<p class="experience-block__index">02 · {{ m['experience-previous-work'] }}</p>
+<h2 id="{{ section.id }}-title">{{ section.title }}</h2>
+</div>
+<div class="experience-head__intro">{{ paragraphs(section.introduction, "intro") }}</div>
+</div>
+<nav class="experience-anchors" aria-label="{{ m['experience-areas'] }}">
+<ul>
+{% for item in view.groups %}
+<li><a href="#{{ section.id }}-{{ item.group.id }}">{{ item.group.title }}</a></li>
+{% endfor %}
+</ul>
+</nav>
+{% for item in view.groups %}
+{% set group = item.group %}
+<section class="experience-group" id="{{ section.id }}-{{ group.id }}" aria-labelledby="{{ section.id }}-{{ group.id }}-title">
+<div class="experience-group__head">
+<div>
+<p class="experience-group__index">{{ "%02d" | format(loop.index) }} / {{ m['experience-area'] }}</p>
+<h3 id="{{ section.id }}-{{ group.id }}-title">{{ group.title }}</h3>
+</div>
+<div>{{ paragraphs(group.introduction) }}</div>
+</div>
+<ul class="experience-rows">
+{% for row in item.entries %}
+{% set e = row.experience %}
+{% set title_id = section.id ~ "-" ~ row.entry.id ~ "-title" %}
+<li class="experience-row{% if not row.image %} experience-row--text{% endif %}">
+{% if row.image %}
+<figure class="experience-row__media">
+<img src="{{ row.image.url }}" alt="{{ row.image.alt }}" width="{{ row.image.width }}" height="{{ row.image.height }}" loading="lazy">
+{% if row.image.credit %}<figcaption class="credit">{{ credit_text(row.image.credit) }}</figcaption>{% endif %}
+</figure>
+{% endif %}
+<div class="experience-row__head">
+<h4 id="{{ title_id }}">{{ e.title }}</h4>
+<p class="experience-row__attribution">{{ e.attribution }}{% if e.role %} · {{ e.role }}{% endif %}</p>
+</div>
+<div class="experience-row__body">
+{{ paragraphs(e.summary, "experience-row__summary") }}
+{% if e.key_figures %}
+<ul class="experience-figures" aria-label="{{ m['experience-figures'] }}">
+{% for figure in e.key_figures[:row_figures] %}
+<li>{{ figure.text }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+<p class="experience-row__action"><a class="link" href="{{ row.url }}" aria-describedby="{{ title_id }}">{{ m['experience-view'] }}</a></p>
+</div>
+</li>
+{% endfor %}
+</ul>
+</section>
+{% endfor %}
+</section>
+{% endif %}
+</div></section>

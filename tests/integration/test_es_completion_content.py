@@ -14,7 +14,7 @@ from pydantic import TypeAdapter
 from bafras_web.adapters.filesystem import ProjectPaths
 from bafras_web.adapters.yaml_files import load_yaml
 from bafras_web.application.editorial import EditorialLoadRequest, inspect_editorial
-from bafras_web.editorial.entities import Person, Sector
+from bafras_web.editorial.entities import Experience, Person, Sector
 from bafras_web.editorial.integrity import assess_integrity, build_editorial_bundle
 from bafras_web.editorial.pages import PageContent
 from bafras_web.editorial.pending import validate_pending_fields
@@ -28,8 +28,19 @@ SECTORS = ("turismo-terciario", "industria-logistica-agroindustria", "infraestru
            "comunidades-energeticas-infraestructuras-tecnologicas")
 
 
+EXPERIENCE_ADDENDA = ROOT / "docs/project_v02/addenda/D03_ADDENDA_EXPERIENCE.md"
+
+
 def document():
     return SOURCE.read_text(encoding="utf-8")
+
+
+def experience_table():
+    """Filas de la tabla «Ámbitos y referencias» de la addenda D03 EXPERIENCE (CONTENT-EXPERIENCE-02 V3)."""
+    lines = EXPERIENCE_ADDENDA.read_text(encoding="utf-8").split("## 3. Ámbitos y referencias", 1)[1].splitlines()
+    rows = [[c.strip() for c in line.strip("|").split("|")] for line in lines if re.match(r"^\| \d+ \|", line)]
+    assert [int(r[0]) for r in rows] == list(range(1, 8))
+    return [dict(zip(("order", "group", "group_title", "id", "title", "person", "emphasis"), r)) for r in rows]
 
 
 def block(code):
@@ -123,12 +134,17 @@ def expected_sections(page_id):
                 text(4, [action("about", marked(blocks[3], "Enlace"), "sobre_bafras")]),
                 text(5, [action("contact", marked(blocks[4], "CTA"), "contacto")])]
     if prefix == "PE":
-        hero["attribution"] = marked(blocks[0], "Nota de atribución visible junto al índice")
+        # Addenda D03 EXPERIENCE §8 (CONTENT-EXPERIENCE-03): se retira la nota de atribución general de PE-01.
         starts = [i for i, line in enumerate(blocks[1]) if line.startswith("#### ")]
         assert len(starts) == 3
         groups = [{"id": id, "title": blocks[1][i].removeprefix("#### "),
                    "introduction": p(marked([blocks[1][i + 1]], "Introducción"), "introduction")}
                   for id, i in zip(("infrastructure", "automation", "energy"), starts)]
+        # Addenda D03 EXPERIENCE: título de ámbito y referencias de cada grupo, en el orden de su tabla.
+        for group in groups:
+            rows = [r for r in experience_table() if r["group"] == group["id"]]
+            group["title"] = rows[0]["group_title"]
+            group["entries"] = [{"id": r["id"], "experience_ref": r["id"], "emphasis": r["emphasis"]} for r in rows]
         index = dict(base(2, "experience_index"), introduction=p(marked(blocks[1], "Intro"), "introduction"), groups=groups)
         return [hero, index, text(3), text(4, [
             action("contact", marked(blocks[3], "CTA principal"), "contacto"),
@@ -195,10 +211,9 @@ def test_exact_seo_review_and_pending_metadata(page):
     elif page.page_id == "proyectos_experiencia":
         line = next(line for line in source.splitlines() if line.startswith("- SEO: título «"))
         expected_seo = {"title": line.split("«", 1)[1].split("»", 1)[0], "description": None}
+        # La addenda D03 EXPERIENCE retira el pendiente sections/pe-02/groups (referencias autorizadas).
         pending = [{"field": "seo.description", "reason_code": "source_missing",
-                    "source_ref": "D03 PE · UX y SEO: intención sin descripción literal"},
-                   {"field": "sections/pe-02/groups", "reason_code": "verification_required",
-                    "source_ref": "D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni autorización"}]
+                    "source_ref": "D03 PE · UX y SEO: intención sin descripción literal"}]
     else:
         start = "## UX y SEO Sobre BAFRAS" if page.page_id == "sobre_bafras" else "## Conversión, accesibilidad y tecnología"
         lines = source.split(start, 1)[1].splitlines()
@@ -263,13 +278,24 @@ def test_catalog_mutations_keep_validation_but_lose_fidelity(name, case):
     assert [compact(v.model_dump()) for v in values] != expected()
 
 
-def test_no_unverified_experience_or_optional_pdf_catalogs_are_fabricated():
+def test_experiences_are_authorized_and_no_optional_pdf_catalogs_are_fabricated():
+    """Solo las siete referencias de la addenda: previas a BAFRAS, verificadas y autorizadas con evidencia."""
     page = PageContent.model_validate({**load_yaml(ROOT / "content/es/pages/proyectos_experiencia.yaml"), "locale": "es"})
-    assert [len(g.entries) for g in page.sections[1].groups] == [0, 0, 0]
-    assert not (ROOT / "content/es/entities/experiences.yaml").exists()
+    experiences = TypeAdapter(list[Experience]).validate_python(load_yaml(ROOT / "content/es/entities/experiences.yaml"))
+    table = experience_table()
+    assert [e.id for e in experiences] == [r["id"] for r in table]
+    assert [e.title for e in experiences] == [r["title"] for r in table]
+    assert [e.person_refs for e in experiences] == [[r["person"]] for r in table]
+    assert [entry.experience_ref for g in page.sections[1].groups for entry in g.entries] == [r["id"] for r in table]
+    for experience in experiences:
+        assert experience.kind == "founder_previous" and experience.review.status == "draft"
+        assert experience.verification.verified and experience.verification.authorized
+        # Atribución individual con el profesional; la distinción BAFRAS la garantizan kind y la nota de PE-01.
+        assert experience.verification.evidence_refs and experience.attribution
+        assert experience.summary and experience.role
+    assert not any(p.field == "sections/pe-02/groups" for p in page.pending)
     assert not (ROOT / "content/es/entities/resources.yaml").exists()
     assert all(not s.catalog_refs for s in TypeAdapter(list[Sector]).validate_python(load_yaml(ROOT / "content/es/entities/sectors.yaml")))
-    assert any(p.field == "sections/pe-02/groups" and p.reason_code == "verification_required" for p in page.pending)
 
 
 def reference_inventory(value, path=""):
@@ -277,6 +303,8 @@ def reference_inventory(value, path=""):
     if isinstance(value, dict):
         if value.get("kind") == "internal":
             yield path, (f"page/{value['page_id']}", value.get("section_id") or value["page_id"])
+        elif "experience_ref" in value:
+            yield path, ("catalog/experiences", value["experience_ref"])
         elif value.get("kind") == "contact":
             yield path, (None, None)
         else:
@@ -301,7 +329,7 @@ def test_real_nine_page_bundle_and_all_reference_states(policy):
     assert not result.missing_page_ids and not result.invalid_page_ids
     assert result.documents_complete and result.can_build_bundle and not result.has_errors
     report = assess_integrity(result.documents, result.expected_page_ids, report_resolved=True)
-    assert set(report.required_catalogs) == {"sectors", "people"}
+    assert set(report.required_catalogs) == {"sectors", "people", "experiences"}
     assert not any(d.reference_status == "UNRESOLVED" for d in report.diagnostics)
     assert all(d.reference_status == "RESOLVED" for d in report.diagnostics
                if d.target_document_id is not None)
@@ -310,6 +338,10 @@ def test_real_nine_page_bundle_and_all_reference_states(policy):
             expected = dict(reference_inventory(doc.value.model_dump()))
         elif isinstance(doc.value, tuple) and doc.kind == "sectors":
             expected = dict(reference_inventory([s.model_dump() for s in doc.value], "sectors"))
+        elif isinstance(doc.value, tuple) and doc.kind == "experiences":
+            expected = dict(reference_inventory([e.model_dump() for e in doc.value], "experiences"))
+            # Evidencia declarada: forma validada, comprobación externa fuera de alcance (UNVERIFIABLE).
+            expected.update({f"experiences/{e.id}/evidence_refs": (None, None) for e in doc.value})
         else:
             continue
         actual = {d.selector: d for d in report.diagnostics if d.document_id == doc.document_id and d.reference_status}
@@ -325,5 +357,6 @@ def test_real_nine_page_bundle_and_all_reference_states(policy):
     assert {p.page_id for p in bundle.pages} == set(result.expected_page_ids)
     assert sum(len(p.sections) for p in bundle.pages) == 51
     assert len(bundle.sectors) == 6 and len(bundle.people) == 3
-    assert bundle.experiences == bundle.resources == []
+    assert [e.id for e in bundle.experiences] == [r["id"] for r in experience_table()]
+    assert bundle.resources == []
     assert all(p.review.status == "draft" for p in bundle.pages)

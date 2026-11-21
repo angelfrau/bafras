@@ -1,0 +1,253 @@
+# CONTENT-EXPERIENCE-02 V3 · LOCALIZATION-EXPERIENCE-01 V2 · CONTENT-EXPERIENCE-03 V2 — siete referencias de la
+# trayectoria profesional de los socios. Fuente: EXPERIENCE-01 V2 y addenda docs/project_v02/addenda/D03_ADDENDA_EXPERIENCE.md.
+# Redacción pública afirmativa, sin descargos; la clasificación interna es kind founder_previous. Atribución pública:
+# «attribution · role». Revisión draft. Sin organización, período ni ubicación: la fuente no los aporta.
+# Medios: los asigna WEB (composición D05), no este catálogo.
+- id: four-seasons-formentor
+  kind: founder_previous
+  title: Four Seasons Formentor
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Técnico de instalaciones
+  summary:
+  - id: summary
+    text: Ejecución, supervisión, coordinación y puesta en marcha de instalaciones mecánicas, eléctricas y
+      especiales en un complejo hotelero de alta exigencia, con coordinación de subcontratas, resolución de
+      incidencias, pruebas y comisionado.
+  systems:
+  - id: mechanical
+    text: Instalaciones mecánicas
+  - id: electrical
+    text: Instalaciones eléctricas
+  - id: special
+    text: Instalaciones especiales
+  phases:
+  - id: execution
+    text: Ejecución y supervisión de instalaciones
+  - id: subcontractors
+    text: Coordinación de subcontratas
+  - id: incidents
+    text: Resolución de incidencias
+  - id: commissioning
+    text: Pruebas, comisionado y puesta en marcha
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 1 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: montesion
+  kind: founder_previous
+  title: Colegio Nuestra Señora de Montesión
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Jefe de obra de instalaciones
+  summary:
+  - id: summary
+    text: Jefatura de obra de instalaciones en un edificio educativo de aproximadamente 7.500 m², con
+      climatización, ventilación, electricidad, instalaciones hidráulicas, protección contra incendios y
+      sistemas de control.
+  key_figures:
+  - id: surface
+    text: Edificio educativo de aproximadamente 7.500 m²
+  systems:
+  - id: hvac
+    text: Climatización
+  - id: ventilation
+    text: Ventilación
+  - id: electrical
+    text: Electricidad
+  - id: hydraulic
+    text: Instalaciones hidráulicas
+  - id: fire-protection
+    text: Protección contra incendios
+  - id: control
+    text: Sistemas de control
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 2 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: the-n-residences-ibiza
+  kind: founder_previous
+  title: The N Residences Ibiza
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Jefe de obra de instalaciones
+  summary:
+  - id: summary
+    text: Ejerció la jefatura de obra de instalaciones en un complejo residencial de alta gama con 51
+      apartamentos y cuatro establecimientos de restauración, con coordinación técnica y seguimiento de la
+      ejecución de las instalaciones.
+  key_figures:
+  - id: apartments
+    text: 51 apartamentos
+  - id: restaurants
+    text: Cuatro establecimientos de restauración
+  phases:
+  - id: coordination
+    text: Coordinación técnica de las instalaciones
+  - id: execution
+    text: Seguimiento de la ejecución de las instalaciones
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 3 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: dogger-bank-a
+  kind: founder_previous
+  title: Dogger Bank A
+  person_refs: [amin]
+  attribution: Amin
+  role: Ingeniero de puesta en marcha y de software de control de aerogeneradores
+  summary:
+  - id: summary
+    text: Puesta en marcha y comisionado presencial de aerogeneradores, diagnóstico y corrección de averías, y
+      desarrollo de software de control de pitch y yaw con algoritmos de control y detección de anomalías.
+  key_figures:
+  - id: capacity
+    text: 'Capacidad nominal del parque: 1,2 GW'
+  phases:
+  - id: commissioning
+    text: Puesta en marcha presencial de aerogeneradores
+  - id: protocols
+    text: Protocolos de comisionado por componentes y subsistemas
+  - id: checklists
+    text: Checklists de verificación
+  - id: functional-tests
+    text: Pruebas funcionales integradas
+  - id: fault-diagnosis
+    text: Diagnóstico de fallos
+  - id: troubleshooting
+    text: Revisión y corrección presencial de averías e incidencias
+  - id: pitch-control
+    text: Desarrollo y programación de sistemas de control de paso de pala (pitch)
+  - id: yaw-control
+    text: Desarrollo y programación de sistemas de orientación de góndola (yaw)
+  - id: control-algorithms
+    text: Desarrollo de algoritmos de control
+  - id: anomaly-detection
+    text: Desarrollo de algoritmos de detección de anomalías
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 4 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: vineyard-wind-1
+  kind: founder_previous
+  title: Vineyard Wind 1
+  person_refs: [amin]
+  attribution: Amin
+  role: Ingeniero de puesta en marcha y de software de control de aerogeneradores
+  summary:
+  - id: summary
+    text: Puesta en marcha y comisionado presencial de aerogeneradores, diagnóstico y corrección de averías, y
+      desarrollo de software de control de pitch y yaw con algoritmos de control y detección de anomalías.
+  key_figures:
+  - id: capacity
+    text: 'Capacidad nominal del parque: 806 MW'
+  phases:
+  - id: commissioning
+    text: Puesta en marcha presencial de aerogeneradores
+  - id: protocols
+    text: Protocolos de comisionado por componentes y subsistemas
+  - id: checklists
+    text: Checklists de verificación
+  - id: functional-tests
+    text: Pruebas funcionales integradas
+  - id: fault-diagnosis
+    text: Diagnóstico de fallos
+  - id: troubleshooting
+    text: Revisión y corrección presencial de averías e incidencias
+  - id: pitch-control
+    text: Desarrollo y programación de sistemas de control de paso de pala (pitch)
+  - id: yaw-control
+    text: Desarrollo y programación de sistemas de orientación de góndola (yaw)
+  - id: control-algorithms
+    text: Desarrollo de algoritmos de control
+  - id: anomaly-detection
+    text: Desarrollo de algoritmos de detección de anomalías
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 5 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: uib-transicion-energetica
+  kind: founder_previous
+  title: Transición energética de la UIB
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Ingeniería, estudios energéticos y seguimiento técnico
+  summary:
+  - id: summary
+    text: Estudios energéticos, ingeniería, simulación y documentación técnica en un programa de la Universitat
+      de les Illes Balears que integra generación fotovoltaica, almacenamiento, recarga eléctrica y sistemas de
+      medida, monitorización y control.
+  key_figures:
+  - id: photovoltaic
+    text: 7,6 MWp de generación fotovoltaica en el programa
+  - id: storage
+    text: Almacenamiento electroquímico superior a 10 MWh en el programa
+  systems:
+  - id: photovoltaic
+    text: Generación fotovoltaica
+  - id: storage
+    text: Almacenamiento electroquímico
+  - id: charging
+    text: Infraestructura de recarga eléctrica
+  - id: monitoring
+    text: Sistemas de medida, monitorización y control
+  intervention:
+  - id: work
+    text: Ingeniería, estudios energéticos, simulación, documentación técnica y seguimiento de actuaciones.
+  links:
+  - id: institutional
+    label: Ver noticia institucional
+    target: {kind: external, url: 'https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 6 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat
+- id: edge-ai-investigacion
+  kind: founder_previous
+  title: Investigación aplicada en IA y Edge AI
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Investigador en predicción energética y optimización de redes neuronales
+  summary:
+  - id: summary
+    text: Investigación en predicción energética, optimización de redes neuronales y ejecución eficiente sobre
+      hardware IoT.
+  context:
+  - id: abstract
+    text: Investigación sobre poda de redes neuronales multicapa mediante redes neuronales morfológicas
+      auxiliares, utilizando máscaras de poda para eliminar conexiones redundantes. Validación mediante MNIST y
+      Fashion-MNIST, evaluación sobre hardware IoT y desarrollo de herramientas de software para mejorar la
+      inferencia en dispositivos edge.
+  deliverables:
+  - id: publication
+    text: 'Pruning Dense Neural Networks for Efficient Edge Deployment in Internet of Things Applications. Elsevier,
+      Applied Soft Computing, 23/05/2025.'
+  results:
+  - id: efficiency
+    text: Los resultados muestran mejoras de eficiencia energética y velocidad de procesamiento, manteniendo un
+      rendimiento predictivo competitivo.
+    evidence_refs: ['https://doi.org/10.1016/j.asoc.2025.114175']
+  links:
+  - id: doi
+    label: Consultar publicación científica
+    target: {kind: external, url: 'https://doi.org/10.1016/j.asoc.2025.114175'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 7 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://doi.org/10.1016/j.asoc.2025.114175

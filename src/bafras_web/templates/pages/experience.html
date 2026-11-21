@@ -1,0 +1,106 @@
+{#- Ficha estándar de experiencia (plantilla C04-PE V1 · addenda D05 EXPERIENCE §4). Una sola plantilla para todas.
+    Contexto: view (experience, group, index_url, index_label, images, closing), layout, links, variants.
+    Los módulos sin datos se omiten (sin títulos vacíos); la numeración sigue a los módulos mostrados. -#}
+{% extends "layouts/site.html" %}
+{% from "components/_macros.html" import paragraphs, credit_text with context %}
+{% block main %}
+{% set e = view.experience %}
+{% set m = layout.messages %}
+{% set main_image = view.images[0] if view.images else none %}
+<section class="section ficha-hero" aria-labelledby="ficha-title">
+<div class="container">
+<nav class="breadcrumb" aria-label="{{ view.index_label }}"><a href="{{ view.index_url }}">{{ view.index_label }}</a> <span aria-hidden="true">/</span> <span aria-current="page">{{ e.title }}</span></nav>
+<p class="eyebrow">{{ view.group.title }}</p>
+<h1 id="ficha-title">{{ e.title }}</h1>
+<p class="ficha-hero__attribution">{{ e.attribution }}{% if e.role %} · {{ e.role }}{% endif %}</p>
+{{ paragraphs(e.summary, "ficha-hero__summary") }}
+</div>
+</section>
+{% if main_image %}
+<div class="container ficha-media">
+<figure class="media">
+<img src="{{ main_image.url }}" alt="{{ main_image.alt }}" width="{{ main_image.width }}" height="{{ main_image.height }}">
+{% if main_image.credit %}<figcaption class="credit">{{ credit_text(main_image.credit) }}</figcaption>{% endif %}
+</figure>
+</div>
+{% endif %}
+<div class="container ficha-body">
+{% set n = namespace(i=0) %}
+<div class="ficha-intro{% if not e.context %} ficha-intro--facts{% endif %}">
+{% if e.context %}
+{% set n.i = n.i + 1 %}
+<div>
+<p class="eyebrow">{{ "%02d" | format(n.i) }} / {{ m['experience-context'] }}</p>
+<h2>{{ m['experience-context'] }}</h2>
+{{ paragraphs(e.context) }}
+</div>
+{% endif %}
+<aside class="facts" aria-labelledby="ficha-facts-title">
+<h2 id="ficha-facts-title" class="facts__title">{{ m['experience-facts'] }}</h2>
+<dl>
+<dt>{{ m['experience-professional'] }}</dt>
+<dd>{{ e.attribution }}{% if e.role %} · {{ e.role }}{% endif %}</dd>
+<dt>{{ m['experience-area'] }}</dt>
+<dd>{{ view.group.title }}</dd>
+{% if e.key_figures %}
+<dt>{{ m['experience-figures'] }}</dt>
+{% for figure in e.key_figures %}
+<dd>{{ figure.text }}</dd>
+{% endfor %}
+{% endif %}
+</dl>
+</aside>
+</div>
+{% for key, items in [("systems", e.systems), ("phases", e.phases), ("intervention", e.intervention), ("deliverables", e.deliverables), ("results", e.results)] if items %}
+{% set n.i = n.i + 1 %}
+<section class="module" aria-labelledby="ficha-{{ key }}-title">
+<div>
+<p class="eyebrow">{{ "%02d" | format(n.i) }}</p>
+<h2 id="ficha-{{ key }}-title">{{ m['experience-' ~ key] }}</h2>
+</div>
+{% if key == "intervention" %}
+<div class="module__text">{{ paragraphs(items) }}</div>
+{% else %}
+<ul class="module__list">
+{% for item in items %}
+<li>{{ item.text }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+</section>
+{% endfor %}
+{% if e.links %}
+{% set n.i = n.i + 1 %}
+<section class="module" aria-labelledby="ficha-links-title">
+<div>
+<p class="eyebrow">{{ "%02d" | format(n.i) }}</p>
+<h2 id="ficha-links-title">{{ m['experience-links'] }}</h2>
+</div>
+<ul class="module__links">
+{% for item in e.links %}
+<li><a class="link link--external" href="{{ links[item.target] }}" rel="noopener">{{ item.label }} <span class="visually-hidden">{{ m['external-link'] }}</span></a></li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}
+{% if view.images | length > 1 %}
+{% set n.i = n.i + 1 %}
+<section class="module module--gallery" aria-labelledby="ficha-gallery-title">
+<div>
+<p class="eyebrow">{{ "%02d" | format(n.i) }}</p>
+<h2 id="ficha-gallery-title">{{ m['experience-gallery'] }}</h2>
+</div>
+<ul class="gallery">
+{% for image in view.images[1:] %}
+<li><figure class="media"><img src="{{ image.url }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">{% if image.credit %}<figcaption class="credit">{{ credit_text(image.credit) }}</figcaption>{% endif %}</figure></li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}
+<p class="ficha-return"><a class="return" href="{{ view.index_url }}">{{ m['experience-back'] }}</a></p>
+</div>
+{% if view.closing %}
+{% set section = view.closing %}
+{% include "components/text.html" %}
+{% endif %}
+{% endblock %}

@@ -150,3 +150,38 @@ def test_duplicate_paths_are_rejected():
 def test_spanish_top_level_segments_cannot_shadow_prefixes(segment):
     with pytest.raises(ValidationError, match="está reservado"):
         _routing(routes=_routes(otra={"slugs": {"es": segment}}))
+
+
+# --- WEB-EXPERIENCE-03: rutas de entidad y preview de idiomas no publicados ----------------
+
+
+def _with_entities(**extra):
+    routes = _routes(proyectos={"slugs": {"es": "proyectos-experiencia", "ca": "projectes-experiencia"}}, **extra)
+    routes["entities"] = {"experience": {"parent": "proyectos"}}
+    return routes
+
+
+def test_entity_url_hangs_from_its_index_page_with_the_stable_id():
+    routing = _routing(routes=_with_entities())
+    assert routing.entity_url("experience", "dogger-bank-a", "es") == "/proyectos-experiencia/dogger-bank-a/"
+    assert routing.entity_url("experience", "dogger-bank-a", "ca") is None  # ca no publicado
+    assert routing.entity_url("experience", "Ilegal/../x", "es") is None
+    assert routing.entity_url("project", "x", "es") is None
+
+
+def test_entity_route_requires_an_existing_index_page():
+    routes = _routes()
+    routes["entities"] = {"experience": {"parent": "no_existe"}}
+    with pytest.raises(ValidationError, match="página índice inexistente"):
+        RouteTable.model_validate(routes)
+
+
+def test_preview_resolves_unpublished_locales_without_changing_release():
+    routing = _routing(routes=_with_entities())
+    preview = routing.for_preview()
+    assert routing.url("contacto", "ca") is None and routing.alternates("inicio") == {"es": "/"}
+    assert preview.url("contacto", "ca") == "/ca/contacte/"
+    assert preview.entity_url("experience", "montesion", "ca") == "/ca/projectes-experiencia/montesion/"
+    assert preview.url("infraestructuras", "ca") is None  # sin slug: nunca se inventa
+    assert preview.alternates("inicio") == {"es": "/", "ca": "/ca/"}
+    assert routing.locales.published_codes == preview.locales.published_codes == ["es"]

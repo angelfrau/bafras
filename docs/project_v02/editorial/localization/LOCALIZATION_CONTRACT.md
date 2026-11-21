@@ -64,6 +64,21 @@ ni entradas de esos catálogos en el baseline entregado**: la IA no debe crearlo
 Una futura incorporación necesitará su revisión propia antes de autorizar
 traducción. DocumentedResult.evidence_refs siempre queda protegido.
 
+> **Actualización CONTENT-EXPERIENCE-02 V3 + LOCALIZATION-EXPERIENCE-01 V2 (09/11/2026).**
+> `entities/experiences.yaml` existe en **es, ca, en y de**, con siete referencias de la
+> [addenda D03 EXPERIENCE](../../addenda/D03_ADDENDA_EXPERIENCE.md), y PE-02 tiene las mismas `entries` en los
+> cuatro idiomas. Las pruebas exigen paridad estructural completa (`role` se ha añadido a los campos traducibles).
+> `common.yaml` sigue solo en español.
+> - Campos traducibles de Experience: title (salvo nombres oficiales), attribution, role, summary, context,
+>   intervention, systems, phases, deliverables, key_figures[*].text, results[*].text y links[*].label.
+> - Protegidos: id, kind, person_refs, evidence_refs (también en results), verification, review, las URL y los
+>   valores numéricos de key_figures (solo cambia el separador decimal o de miles del idioma).
+> - CONTENT-EXPERIENCE-03 V2: `attribution` contiene solo el nombre completo del profesional, idéntico en los
+>   cuatro idiomas; PE-01 ya no tiene `attribution`. Ninguna traducción reintroduce notas de alcance o descargos.
+> - WEB-EXPERIENCE-03 V2: `common.yaml` existe ya en ca, en y de (draft), con los mismos identificadores, y
+>   `pages/contacto.yaml` de ca/en/de está sincronizado con CONTACT-R1. La paridad estructural es completa en los
+>   13 documentos por idioma. Los textos alternativos de imagen se localizan en el manifiesto MEDIA (`alt_<idioma>`).
+
 La lista se basa en los módulos existentes
 `src/bafras_web/editorial/{primitives,references,sections,entities,pages}.py`.
 No amplía el dominio ni autoriza a rellenar campos porque el modelo los permita.

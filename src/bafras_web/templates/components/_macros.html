@@ -20,6 +20,12 @@
 {% endif %}
 {% endmacro %}
 
+{#- Crédito exigido por la licencia (MEDIA ImageCredit): autor, fuente y licencia enlazadas; «adaptada» por idioma.
+    Nunca vuelca el registro de gestión del manifiesto (archivo, transformaciones, procedencia). -#}
+{% macro credit_text(credit) -%}
+{{ credit.author }}{% if credit.source_provider %} / {% if credit.source_url %}<a class="credit__link" href="{{ credit.source_url }}" rel="noopener">{{ credit.source_provider }}</a>{% else %}{{ credit.source_provider }}{% endif %}{% endif %} · {% if credit.license_url %}<a class="credit__link" href="{{ credit.license_url }}" rel="license noopener">{{ credit.license }}</a>{% else %}{{ credit.license }}{% endif %}{% if credit.adapted %} · {{ layout.messages['image-adapted'] }}{% endif %}
+{%- endmacro %}
+
 {#- caption=false: el componente muestra el crédito en otro lugar (p. ej. tarjetas). -#}
 {% macro figure(section_id, item_id=none, class="", caption=true) %}
 {% set image = images.get((section_id, item_id)) %}
@@ -27,7 +33,7 @@
 <figure class="media{% if class %} {{ class }}{% endif %}">
 <img src="{{ image.url }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}"{% if section_id != page.sections[0].id %} loading="lazy"{% endif %}>
 {% if caption and image.credit %}
-<figcaption class="credit">{{ image.credit }}</figcaption>
+<figcaption class="credit">{{ credit_text(image.credit) }}</figcaption>
 {% endif %}
 </figure>
 {% endif %}

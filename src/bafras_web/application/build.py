@@ -2,6 +2,10 @@
 
 CONTENT (bundle) + SITE (rutas, enlaces, composición, contacto) + MEDIA (manifiesto) → contexto →
 Jinja2 → archivos. Todo se valida antes de escribir; los recursos se copian antes que el HTML.
+
+Preview resuelve también los idiomas no publicados (`SiteRouting.for_preview`); release no cambia.
+Las fichas de entidad (experiencias) se generan con una única plantilla a partir de las rutas de entidad de SITE.
+Cada idioma se genera por separado y conserva en la salida los resultados ya generados de los demás idiomas.
 """
 
 from __future__ import annotations
@@ -18,13 +22,14 @@ from bafras_web.editorial.pages import EditorialBundle, PageContent
 from bafras_web.editorial.pending import resolve_pending_selector
 from bafras_web.media.assets import MediaError, MediaManifest, ResolvedImage, resolve_image, media_publication_blockers
 from bafras_web.site.composition import PageComposition, SiteComposition, media_key, composition_problems
-from bafras_web.site.publication import PublicationMode, publication_blockers
+from bafras_web.site.publication import PublicationMode, entity_publication_blockers, publication_blockers
 from bafras_web.site.routes import SiteRouting
 from bafras_web.site.settings import SiteContact
 
 from .configuration import load_media_manifest, load_site_composition, load_site_routing, load_site_settings
 from .editorial import EditorialLoadRequest, inspect_editorial
-from .presentation import (PresentationError, SECTION_COMPONENTS, SUPPORTED_SECTIONS, STATIC_ASSETS, prepare_page_context)
+from .presentation import (PresentationError, SECTION_COMPONENTS, SUPPORTED_SECTIONS, STATIC_ASSETS,
+                           prepare_experience_context, prepare_page_context)
 
 _SAFE_LOCALE = re.compile(r"^[a-z]{2}$")
 _SAFE_PAGE_ID = re.compile(r"^[a-z][a-z0-9_]*$")
@@ -96,8 +101,10 @@ class BuildInputs:
     contact: SiteContact
 
 
-def _load_inputs(paths: ProjectPaths, locale: str) -> BuildInputs:
+def _load_inputs(paths: ProjectPaths, locale: str, mode: PublicationMode = "preview") -> BuildInputs:
     routing = load_site_routing(paths)
+    if mode == "preview":
+        routing = routing.for_preview()
     inspection = inspect_editorial(paths, EditorialLoadRequest(locale=locale, policy="COMPLETE"))
     if not inspection.can_build_bundle:
         raise BuildError([
@@ -112,9 +119,78 @@ def _load_inputs(paths: ProjectPaths, locale: str) -> BuildInputs:
     return BuildInputs(routing, bundle, load_media_manifest(paths), composition, load_site_settings(paths).contact)
 
 
+def _experience_images(inputs: BuildInputs, locale: str, paths: ProjectPaths,
+                       experience_ids: list[str]) -> dict[str, tuple[ResolvedImage, ...]]:
+    """Imagen principal y galería asignadas por composición, verificadas contra el archivo real (MEDIA)."""
+    found: dict[str, tuple[ResolvedImage, ...]] = {}
+    problems: list[str] = []
+    for experience_id in experience_ids:
+        media = inputs.composition.experiences.get(experience_id)
+        if media is None:
+            continue
+        resolved = []
+        for asset_id in media.assets:
+            try:
+                asset = inputs.manifest.get(asset_id)
+                image = resolve_image(asset, locale)
+            except MediaError as error:
+                problems.extend(f"experiences/{experience_id}: {problem}" for problem in error.problems)
+                continue
+            file_problems = image_file_problems(paths.root, image, asset.output_sha256)
+            problems.extend(f"experiences/{experience_id}: {problem}" for problem in file_problems)
+            resolved.append(image)
+        found[experience_id] = tuple(resolved)
+    if problems:
+        raise BuildError(problems)
+    return found
+
+
+def _indexed_experiences(page: PageContent) -> list[str]:
+    return [entry.experience_ref for section in page.sections if section.kind == "experience_index"
+            for group in section.groups for entry in group.entries]
+
+
+def _experience_index_page(inputs: BuildInputs) -> str | None:
+    route = inputs.routing.routes.entities.get("experience")
+    return route.parent if route is not None else None
+
+
+def entity_ids(inputs: BuildInputs) -> list[str]:
+    """Experiencias con ficha: las enlazadas desde su página índice, en orden editorial."""
+    parent = _experience_index_page(inputs)
+    if parent is None or parent not in {page.page_id for page in inputs.bundle.pages}:
+        return []
+    return list(dict.fromkeys(_indexed_experiences(inputs.bundle.get_page(parent))))
+
+
+def render_experience(paths: ProjectPaths, locale: str, experience_id: str, mode: PublicationMode, *,
+                      inputs: BuildInputs | None = None) -> RenderedPage:
+    """Ficha estándar: una plantilla para cualquier experiencia válida, sin código por identificador."""
+    inputs = inputs if inputs is not None else _load_inputs(paths, locale, mode)
+    parent = _experience_index_page(inputs)
+    if parent is None:
+        raise BuildError(["config/routes.yaml: sin ruta de entidad 'experience'"])
+    try:
+        experience = inputs.bundle.get_experience(experience_id)
+    except KeyError:
+        raise BuildError([f"experiencia inexistente: {experience_id!r}"]) from None
+    problems = entity_publication_blockers(experience.review.status, locale, inputs.routing, mode)
+    if problems:
+        raise BuildError(problems)
+    images = _experience_images(inputs, locale, paths, [experience_id]).get(experience_id, ())
+    composition = inputs.composition.for_page(parent)
+    try:
+        context = prepare_experience_context(inputs.bundle, inputs.bundle.get_page(parent), experience, inputs.routing,
+                                             inputs.contact, composition, images)
+    except PresentationError as error:
+        raise BuildError(error.problems) from error
+    html = render_html("pages/experience.html", context)
+    return RenderedPage(html=html, assets=(*STATIC_ASSETS, *sorted({i.source_path for i in images})))
+
+
 def render_page(paths: ProjectPaths, request: BuildRequest, *, inputs: BuildInputs | None = None) -> RenderedPage:
     """Mismo renderizado para build individual y multipágina; inputs pertenece solo a esta ejecución."""
-    inputs = inputs if inputs is not None else _load_inputs(paths, request.locale)
+    inputs = inputs if inputs is not None else _load_inputs(paths, request.locale, request.mode)
     routing, bundle = inputs.routing, inputs.bundle
     if bundle.locale != request.locale:
         raise BuildError([f"bundle {bundle.locale!r} incompatible con locale {request.locale!r}"])
@@ -129,32 +205,67 @@ def render_page(paths: ProjectPaths, request: BuildRequest, *, inputs: BuildInpu
     if problems:
         raise BuildError(problems)
     images = _page_images(page, composition, inputs.manifest, bundle.locale, paths)
+    cards = _experience_images(inputs, bundle.locale, paths, _indexed_experiences(page))
+    cards = {ref: found[:1] for ref, found in cards.items()}  # la tarjeta usa solo la imagen principal
     try:
-        context = prepare_page_context(bundle, page, routing, inputs.contact, composition, images)
+        context = prepare_page_context(bundle, page, routing, inputs.contact, composition, images, cards)
     except PresentationError as error:
         raise BuildError(error.problems) from error
     html = render_html("pages/sections.html", context)
-    return RenderedPage(html=html, assets=(*STATIC_ASSETS, *sorted({i.source_path for i in images.values()})))
+    used = {i.source_path for i in images.values()} | {i.source_path for found in cards.values() for i in found}
+    return RenderedPage(html=html, assets=(*STATIC_ASSETS, *sorted(used)))
+
+
+def _routable_urls(inputs: BuildInputs) -> set[str]:
+    """Todas las URL que SITE puede producir (páginas y fichas, todos los idiomas visibles)."""
+    routing = inputs.routing
+    urls = {routing.url(pid, code) for pid in routing.routes.pages for code in routing.visible_codes}
+    urls |= {routing.entity_url("experience", eid, code) for eid in entity_ids(inputs) for code in routing.visible_codes}
+    return {url for url in urls if url}
+
+
+def _preserved_by(locale: str, routing: SiteRouting):
+    """HTML de la salida previa que pertenece a otros idiomas y debe conservarse.
+
+    `assets/` no se traslada: todos los idiomas comparten composición y recursos, y la integridad del árbol
+    completo falla si una página conservada referencia un recurso que la generación actual no aporta.
+    """
+    default = routing.locales.default_locale
+    others = set(routing.locales.codes) - {locale}
+
+    def preserve(relative: Path) -> bool:
+        first = relative.parts[0] if relative.parts else ""
+        if first == "assets":
+            return False
+        return first in others if locale == default else first != locale
+    return preserve
 
 
 def _generate(paths: ProjectPaths, locale: str, mode: PublicationMode, page_id: str | None,
               build_root: Path | None) -> tuple[Path, ...]:
-    inputs = _load_inputs(paths, locale)
+    inputs = _load_inputs(paths, locale, mode)
     selected = (page_id,) if page_id is not None else tuple(inputs.routing.routes.pages)
     try:
         rendered = {pid: render_page(paths, BuildRequest(locale, pid, mode), inputs=inputs) for pid in selected}
+        entities = {eid: render_experience(paths, locale, eid, mode, inputs=inputs)
+                    for eid in (entity_ids(inputs) if page_id is None else ())}
         if mode != "preview":
             raise BuildError(["release no produce salida en WEB-V03"])
         urls = {pid: inputs.routing.url(pid, locale) for pid in inputs.routing.routes.pages}
         if any(urls[pid] is None for pid in selected):
             raise BuildError([f"{locale}: página seleccionada sin URL de routing"])
         html_by_url = {url: rendered[pid].html for pid in selected if (url := urls[pid]) is not None}
-        assets = tuple(sorted({asset for page in rendered.values() for asset in page.assets}))
+        for eid, page in entities.items():
+            url = inputs.routing.entity_url("experience", eid, locale)
+            if url is None or url in html_by_url:
+                raise BuildError([f"{locale}: ficha {eid!r} sin URL propia o en colisión"])
+            html_by_url[url] = page.html
+        assets = tuple(sorted({asset for page in (*rendered.values(), *entities.values()) for asset in page.assets}))
         output = ((build_root if build_root is not None else paths.build) / "preview").absolute()
         alias = preview_path(output.parent, locale, page_id).relative_to(output.resolve()) if page_id else None
         targets = materialize_preview(paths, output, html_by_url, assets,
-                                      allowed_missing_pages={url for pid, url in urls.items() if pid not in selected and url},
-                                      legacy_alias=alias)
+                                      allowed_missing_pages=_routable_urls(inputs) - set(html_by_url),
+                                      legacy_alias=alias, preserve=_preserved_by(locale, inputs.routing))
     except (OutputError, OSError) as error:
         problems = error.problems if isinstance(error, OutputError) else [f"preparación/promoción de {locale}: {error}"]
         raise BuildError(problems) from error

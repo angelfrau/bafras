@@ -1,0 +1,247 @@
+# LOCALIZATION-EXPERIENCE-01 V2 — English translation of content/es/entities/experiences.yaml.
+# Structure, identifiers, URLs, evidence and states identical to Spanish. Review: draft.
+- id: four-seasons-formentor
+  kind: founder_previous
+  title: Four Seasons Formentor
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Building services technician
+  summary:
+  - id: summary
+    text: Installation, supervision, coordination and start-up of mechanical, electrical and special
+      building services at a high-end hotel complex, including subcontractor coordination, issue resolution,
+      testing and commissioning.
+  systems:
+  - id: mechanical
+    text: Mechanical services
+  - id: electrical
+    text: Electrical services
+  - id: special
+    text: Special systems
+  phases:
+  - id: execution
+    text: Installation and supervision of building services
+  - id: subcontractors
+    text: Subcontractor coordination
+  - id: incidents
+    text: Issue resolution
+  - id: commissioning
+    text: Testing, commissioning and start-up
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 1 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: montesion
+  kind: founder_previous
+  title: Colegio Nuestra Señora de Montesión
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Building services site manager
+  summary:
+  - id: summary
+    text: Site management of building services in an educational building of approximately 7,500 m², covering
+      HVAC, ventilation, electrical systems, plumbing and hydraulic systems, fire protection and control
+      systems.
+  key_figures:
+  - id: surface
+    text: Educational building of approximately 7,500 m²
+  systems:
+  - id: hvac
+    text: HVAC
+  - id: ventilation
+    text: Ventilation
+  - id: electrical
+    text: Electrical systems
+  - id: hydraulic
+    text: Plumbing and hydraulic systems
+  - id: fire-protection
+    text: Fire protection
+  - id: control
+    text: Control systems
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 2 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: the-n-residences-ibiza
+  kind: founder_previous
+  title: The N Residences Ibiza
+  person_refs: [angel]
+  attribution: Àngel Frau Salom
+  role: Building services site manager
+  summary:
+  - id: summary
+    text: Served as building services site manager for a luxury residential complex with 51 apartments and four
+      food and beverage outlets, handling technical coordination and follow-up of the services installation.
+  key_figures:
+  - id: apartments
+    text: 51 apartments
+  - id: restaurants
+    text: Four food and beverage outlets
+  phases:
+  - id: coordination
+    text: Technical coordination of building services
+  - id: execution
+    text: Follow-up of the services installation
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 3 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: dogger-bank-a
+  kind: founder_previous
+  title: Dogger Bank A
+  person_refs: [amin]
+  attribution: Amin
+  role: Wind turbine commissioning and control software engineer
+  summary:
+  - id: summary
+    text: On-site wind turbine commissioning, fault diagnosis and troubleshooting, and development of pitch and
+      yaw control software, including control and anomaly detection algorithms.
+  key_figures:
+  - id: capacity
+    text: 'Rated capacity of the wind farm: 1.2 GW'
+  phases:
+  - id: commissioning
+    text: On-site wind turbine commissioning
+  - id: protocols
+    text: Commissioning protocols for components and subsystems
+  - id: checklists
+    text: Verification checklists
+  - id: functional-tests
+    text: Integrated functional testing
+  - id: fault-diagnosis
+    text: Fault diagnosis
+  - id: troubleshooting
+    text: On-site troubleshooting and correction of faults and incidents
+  - id: pitch-control
+    text: Development and programming of blade pitch control systems
+  - id: yaw-control
+    text: Development and programming of nacelle yaw control systems
+  - id: control-algorithms
+    text: Development of control algorithms
+  - id: anomaly-detection
+    text: Development of anomaly detection algorithms
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 4 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: vineyard-wind-1
+  kind: founder_previous
+  title: Vineyard Wind 1
+  person_refs: [amin]
+  attribution: Amin
+  role: Wind turbine commissioning and control software engineer
+  summary:
+  - id: summary
+    text: On-site wind turbine commissioning, fault diagnosis and troubleshooting, and development of pitch and
+      yaw control software, including control and anomaly detection algorithms.
+  key_figures:
+  - id: capacity
+    text: 'Rated capacity of the wind farm: 806 MW'
+  phases:
+  - id: commissioning
+    text: On-site wind turbine commissioning
+  - id: protocols
+    text: Commissioning protocols for components and subsystems
+  - id: checklists
+    text: Verification checklists
+  - id: functional-tests
+    text: Integrated functional testing
+  - id: fault-diagnosis
+    text: Fault diagnosis
+  - id: troubleshooting
+    text: On-site troubleshooting and correction of faults and incidents
+  - id: pitch-control
+    text: Development and programming of blade pitch control systems
+  - id: yaw-control
+    text: Development and programming of nacelle yaw control systems
+  - id: control-algorithms
+    text: Development of control algorithms
+  - id: anomaly-detection
+    text: Development of anomaly detection algorithms
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 5 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+- id: uib-transicion-energetica
+  kind: founder_previous
+  title: UIB energy transition
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Engineering, energy studies and technical follow-up
+  summary:
+  - id: summary
+    text: Energy studies, engineering, simulation and technical documentation for a University of the Balearic
+      Islands programme integrating solar PV generation, storage, EV charging and metering, monitoring and
+      control systems.
+  key_figures:
+  - id: photovoltaic
+    text: 7.6 MWp of solar PV generation in the programme
+  - id: storage
+    text: Over 10 MWh of battery energy storage in the programme
+  systems:
+  - id: photovoltaic
+    text: Solar PV generation
+  - id: storage
+    text: Battery energy storage
+  - id: charging
+    text: EV charging infrastructure
+  - id: monitoring
+    text: Metering, monitoring and control systems
+  intervention:
+  - id: work
+    text: Engineering, energy studies, simulation, technical documentation and follow-up of actions.
+  links:
+  - id: institutional
+    label: Read the institutional news item
+    target: {kind: external, url: 'https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 6 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://diari.uib.cat/w/la-uib-formalitza-un-dels-projectes-d-autoconsum-energetic-mes-grans-de-l-ambit-universitari-de-l-estat
+- id: edge-ai-investigacion
+  kind: founder_previous
+  title: Applied research in AI and Edge AI
+  person_refs: [murti]
+  attribution: Murti Bär
+  role: Researcher in energy forecasting and neural network optimisation
+  summary:
+  - id: summary
+    text: Research in energy forecasting, neural network optimisation and efficient execution on IoT hardware.
+  context:
+  - id: abstract
+    text: Research on pruning multilayer neural networks using auxiliary morphological neural networks, with
+      pruning masks that remove redundant connections. Validation on MNIST and Fashion-MNIST, evaluation on IoT
+      hardware and development of software tools to improve inference on edge devices.
+  deliverables:
+  - id: publication
+    text: 'Pruning Dense Neural Networks for Efficient Edge Deployment in Internet of Things Applications. Elsevier,
+      Applied Soft Computing, 23/05/2025.'
+  results:
+  - id: efficiency
+    text: The results show improvements in energy efficiency and processing speed while maintaining competitive
+      predictive performance.
+    evidence_refs: ['https://doi.org/10.1016/j.asoc.2025.114175']
+  links:
+  - id: doi
+    label: View the scientific publication
+    target: {kind: external, url: 'https://doi.org/10.1016/j.asoc.2025.114175'}
+  review: {status: draft, source_ref: EXPERIENCE-01 V2 · referencia 7 · LOCALIZATION-EXPERIENCE-01 V2}
+  verification:
+    verified: true
+    authorized: true
+    evidence_refs:
+    - EXPERIENCE-01 V2 (CONTENT-EXPERIENCE-02 V3, 09/11/2026) · referencia verificada; nombre e imágenes autorizados por el usuario
+    - https://doi.org/10.1016/j.asoc.2025.114175

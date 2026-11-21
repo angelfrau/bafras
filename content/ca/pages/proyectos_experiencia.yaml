@@ -11,10 +11,6 @@ pending:
 - field: seo.description
   reason_code: source_missing
   source_ref: 'D03 PE · UX y SEO: intención sin descripción literal'
-- field: sections/pe-02/groups
-  reason_code: verification_required
-  source_ref: D03 PE-02 · 03.K §2 · 03.G1-02 · seis referencias candidatas sin confirmación ni
-    autorización
 sections:
 - id: pe-01
   source_block: PE-01
@@ -27,8 +23,6 @@ sections:
       energètiques i sistemes d'automatització. Cada projecte planteja reptes diferents; per això posam
       el focus en el context tècnic, la feina feta i la participació concreta dels nostres
       professionals.
-  attribution: Les referències d'experiència professional prèvia es distingeixen dels encàrrecs
-    desenvolupats directament per BAFRAS.
 - id: pe-02
   source_block: PE-02
   kind: experience_index
@@ -44,21 +38,42 @@ sections:
     - id: introduction
       text: Instal·lacions elèctriques i mecàniques en edificis amb exigències diferents de confort,
         operació i coordinació d'obra.
-    entries: []
+    entries:
+    - id: four-seasons-formentor
+      experience_ref: four-seasons-formentor
+      emphasis: featured
+    - id: montesion
+      experience_ref: montesion
+      emphasis: complementary
+    - id: the-n-residences-ibiza
+      experience_ref: the-n-residences-ibiza
+      emphasis: complementary
   - id: automation
     title: Automatització i control
     introduction:
     - id: introduction
       text: Comunicacions, regulació, supervisió i programari tècnic per a sistemes que necessiten
         operar de manera coordinada.
-    entries: []
+    entries:
+    - id: dogger-bank-a
+      experience_ref: dogger-bank-a
+      emphasis: featured
+    - id: vineyard-wind-1
+      experience_ref: vineyard-wind-1
+      emphasis: complementary
   - id: energy
-    title: Sistemes energètics
+    title: Sistemes energètics i recerca
     introduction:
     - id: introduction
       text: Estudis, enginyeria i documentació tècnica per integrar generació, emmagatzematge i noves
         infraestructures energètiques.
-    entries: []
+    entries:
+    - id: uib-transicion-energetica
+      experience_ref: uib-transicion-energetica
+      emphasis: featured
+    - id: edge-ai-investigacion
+      experience_ref: edge-ai-investigacion
+      emphasis: complementary
 - id: pe-03
   source_block: PE-03
   kind: text
